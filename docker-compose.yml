@@ -1,5 +1,16 @@
 version: "3.8"
 services:
+  db:
+    image: postgres:12
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-postgres-data:/var/lib/postgresql/data/pgdata
+    env_file:
+      - .env
+    environment:
+      - PGDATA=/var/lib/postgresql/data/pgdata
+
   backend:
     # set volume to have changes made locally available in uvicorn localhost:8000/docs (run in container)
     volumes:
