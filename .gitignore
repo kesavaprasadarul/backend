@@ -1,0 +1,18 @@
+# Keep ignore patterns in alphanumerical order starting at the first real character or digit.
+coverage.coverage
+coverage.xml
+dist/
+.envfiles
+.idea/
+.mypy_cache/
+.envrc
+# not used directly anywhere in code, but developers may direct reports and logs into this folder
+# through their environment files:
+outputs/
+__pycache__/
+pytest.ini
+.pytest_cache/
+.scannerwork/
+# used for temporary local files like daemon pid files
+.tmp/
+.vscode/
