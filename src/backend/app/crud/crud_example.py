@@ -19,4 +19,4 @@ class CRUDExample(CRUDBase[ExampleModel]):
         super().__init__(model)
 
 
-CRUD_EXAMPLE = CRUDExample(ExampleModel())
+CRUD_EXAMPLE = CRUDExample(ExampleModel)
