@@ -37,7 +37,8 @@ types-requests = "^2.25.9"
 skip-string-normalization = true
 line-length = 100
 target-version = ['py311']
-extend-exclude = "scripts/install.python-poetry.org.py"
+extend-exclude = "src/alembic/*"
+
 
 [tool.isort]
 profile = "black"
@@ -55,6 +56,7 @@ show_column_numbers = true
 check_untyped_defs = true
 
 [[tool.mypy.overrides]]
+module = "*"
 ignore_missing_imports = true
 
 [[tool.mypy.overrides]]
@@ -83,6 +85,7 @@ disable = [
 ]
 docstring-min-length = 15
 good-names = ["i", "j", "k", "ex", "Run", "_", "_logger", "f", "m", "r", "t", "pr", "gh", "T", "db"]
+ignore-paths = "src/alembic"
 
 [tool.pylint.variables]
 typevar-rgx = "T[A-Z0-9]\\w*"
