@@ -3,4 +3,4 @@
 # (In case we are using alembic later on for versioning our database models)
 from backend.app.db.database import Base  # pylint: disable=unused-import
 from backend.app.models.example_model import ExampleModel  # pylint: disable=unused-import
-from backend.app.models.vorgang_model import VorgangModel, VorgangDeskriptorModel  # pylint: disable=unused-import
+from backend.app.importer.facades.bundestag_dip.vorgang_model import VorgangModel, VorgangDeskriptorModel  # pylint: disable=unused-import

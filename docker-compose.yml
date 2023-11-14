@@ -18,6 +18,8 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
+    environment:
+      - POSTGRES_SERVER=${POSTGRES_SERVER} # required so alembic can connect to db
     depends_on:
       - db
     ports:

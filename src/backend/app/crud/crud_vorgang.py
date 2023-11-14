@@ -2,7 +2,7 @@
 import logging
 
 from backend.app.crud.base import CRUDBase
-from backend.app.models.vorgang_model import VorgangModel
+from backend.app.importer.facades.bundestag_dip.vorgang_model import VorgangModel
 
 _logger = logging.getLogger(__name__)
 

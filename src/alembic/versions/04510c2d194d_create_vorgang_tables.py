@@ -1,8 +1,8 @@
-"""create vorgang table
+"""create_vorgang_tables
 
-Revision ID: d49dfefbae07
+Revision ID: 04510c2d194d
 Revises: 8bae05e2bbd2
-Create Date: 2023-11-13 18:11:35.707442
+Create Date: 2023-11-14 13:04:10.567185
 
 """
 from typing import Sequence, Union
@@ -12,7 +12,7 @@ import sqlalchemy as sa
 from sqlalchemy.dialects import postgresql
 
 # revision identifiers, used by Alembic.
-revision: str = 'd49dfefbae07'
+revision: str = '04510c2d194d'
 down_revision: Union[str, None] = '8bae05e2bbd2'
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
@@ -46,7 +46,7 @@ def upgrade() -> None:
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('vorgang_id', sa.Integer(), nullable=False),
     sa.Column('name', sa.String(), nullable=False),
-    sa.Column('typ', sa.Enum('FREIER_DESKRIPTOR', 'GEOGRAPH', 'BEGRIFFE', 'INSTITUTIONEN', 'PERSONEN', 'RECHTSMATERIALIEN', 'SACHBEGRIFFE', name='vorgangdeskriptortyp'), nullable=False),
+    sa.Column('typ', sa.Enum('FREIER_DESKRIPTOR', 'GEOGRAPH_BEGRIFFE', 'INSTITUTIONEN', 'PERSONEN', 'RECHTSMATERIALIEN', 'SACHBEGRIFFE', name='vorgangdeskriptortyp'), nullable=False),
     sa.Column('fundstelle', sa.Boolean(), nullable=False),
     sa.ForeignKeyConstraint(['vorgang_id'], ['vorgang.id'], ),
     sa.PrimaryKeyConstraint('id')

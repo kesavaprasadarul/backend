@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Mapped, mapped_column, relationship
-from sqlalchemy.dialects.postgresql import ARRAY
-from sqlalchemy import Enum, ForeignKey, String
-
+from sqlalchemy.dialects.postgresql import ARRAY, TIMESTAMP
+from sqlalchemy import Enum, ForeignKey, String, Column
+from sqlalchemy.sql import func
 from backend.app.db.database import Base
 from datetime import date, datetime
 from typing import List
@@ -34,13 +34,17 @@ class VorgangModel(Base):
     # vorgang_verlinkung_id: Mapped[list[int]] = mapped_column(nullable=True)
     sek: Mapped[str] = mapped_column(nullable=True)
 
-    deskriptor: Mapped[List["VorgangDeskriptorModel"]] = relationship()
+    created_at = Column(TIMESTAMP, server_default=func.now())
+    updated_at = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
+
+    deskriptor: Mapped[List["VorgangDeskriptorModel"]] = relationship(
+        cascade='merge, save-update, delete, delete-orphan'
+    )
 
 
 class VorgangDeskriptorTyp(Enum):
     FREIER_DESKRIPTOR = "Freier Deskriptor"
-    GEOGRAPH = "Geograph"
-    BEGRIFFE = "Begriffe"
+    GEOGRAPH_BEGRIFFE = "Geograph. Begriffe"
     INSTITUTIONEN = "Institutionen"
     PERSONEN = "Personen"
     RECHTSMATERIALIEN = "Rechtsmaterialien"
@@ -56,3 +60,6 @@ class VorgangDeskriptorModel(Base):
     name: Mapped[str] = mapped_column(nullable=False)
     typ: Mapped[VorgangDeskriptorTyp] = mapped_column(nullable=False)
     fundstelle: Mapped[bool] = mapped_column(nullable=False)
+
+    created_at = Column(TIMESTAMP, server_default=func.now())
+    updated_at = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
