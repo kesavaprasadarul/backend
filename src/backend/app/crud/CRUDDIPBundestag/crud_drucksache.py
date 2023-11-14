@@ -2,7 +2,7 @@
 import logging
 
 from backend.app.crud.base import CRUDBase
-from backend.app.models.
+from backend.app.models.example_model import ExampleModel
 
 _logger = logging.getLogger(__name__)
 

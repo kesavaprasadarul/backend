@@ -12,10 +12,14 @@ import pydantic as pyd
 import requests
 import requests_toolbelt.adapters.socket_options  # type: ignore # stubs missing for library
 
-from backend.app.facades.util import call_with_retries
 from backend.app.core.config import Settings
+from backend.app.facades.util import call_with_retries
 
 _logger = logging.getLogger(__name__)
+
+
+LIMIT_PAGES = 10
+"""Limit to getting only first 10 pages to not overstrain api of Deutscher Bundestag. Can be overwrriten."""
 
 HTTP_REQUEST_DEFAULT_TIMEOUT_SECS = 600
 """Maximum time before an HTTP request times out."""
@@ -68,10 +72,8 @@ class Auth(pyd.BaseModel):
     token: str | None = None
 
 
-
 class MediaType(enum.Enum):
     JSON = 'application/json'
-
 
 
 class HttpFacade:
@@ -228,7 +230,6 @@ class HttpFacade:
         page_args_dict = kwargs
         for name in page_args_path:
             page_args_dict = page_args_dict.setdefault(name, {})
-
 
         reached_end = False
         while not reached_end:

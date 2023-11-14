@@ -1,12 +1,12 @@
-"""(Jira) Servicedesk facade."""
+"""DIP Bundestag facade."""
 import http
 import logging
 import typing as t
 
 import requests
-from backend.app.core.config import Settings
-from backend.app.facades.deutscherBundestag.model import DIPBundestagApiDrucksache
 
+from backend.app.core.config import Settings
+from backend.app.facades.deutscher_bundestag.model import DIPBundestagApiDrucksache
 from backend.app.facades.facade import (
     PAGINATION_CONTENT_ARGS_REST,
     Auth,
@@ -91,36 +91,37 @@ class DIPBundestagFacade(HttpFacade):
 
     @classmethod
     def get_instance(cls, configuration: Settings) -> t.Self:
-        _logger.info(
-            'connecting to DIP Bundestag: %s', configuration.DIP_BUNDESTAG_BASE_URL
-        )
+        _logger.info('connecting to DIP Bundestag: %s', configuration.DIP_BUNDESTAG_BASE_URL)
 
         auth = Auth(
-            auth_type=AuthType.DIPBUNDESTAG_API_TOKEN,
-            token=configuration.DIP_BUNDESTAG_API_KEY
+            auth_type=AuthType.DIPBUNDESTAG_API_TOKEN, token=configuration.DIP_BUNDESTAG_API_KEY
         )
         return cls(base_url=configuration.DIP_BUNDESTAG_BASE_URL, auth=auth)
 
-    def get_drucksachen(self):
+    def get_drucksachen(self, since_datetime: str):
         """Get Drucksachen.
+
+        Args:
+            since_datetime
+                Updated later than since_date, in format YYYY-MM-DDTHH:mm:ss, e.g.2023-11-14T04:28:00.
+
         Returns:
             drucksachen (list[TServicedeskApiIssueType]):
                 A list of TServicedeskApiIssueType objects.
         """
         _logger.info("Fetching plenarprotokolle.")
 
-
         drucksachen = [
             drucksache
-                for drucksache in self._do_paginated_request(
-                    http.HTTPMethod.GET,
-                    '/api/v1/drucksache-text',
-                    page_args_path=PAGINATION_CONTENT_ARGS_REST,
-                    content_identifier='documents',
-                    params={
-                        "f.aktualisiert.start": "2023-11-14T14:28:00",
-                    }
-                )
-            ]
+            for drucksache in self._do_paginated_request(
+                http.HTTPMethod.GET,
+                '/api/v1/drucksache-text',
+                page_args_path=PAGINATION_CONTENT_ARGS_REST,
+                content_identifier='documents',
+                params={
+                    "f.aktualisiert.start": since_datetime,
+                },
+            )
+        ]
 
         return drucksachen

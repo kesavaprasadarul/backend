@@ -7,7 +7,6 @@ import typing as t
 
 import requests
 
-
 _logger = logging.getLogger(__name__)
 
 ATTEMPT_AFTER_SECONDS = (0, 30, 60)
@@ -74,10 +73,9 @@ def call_with_retries(
     # this is never reached, but make pylint happy:
     raise NotImplementedError()
 
+
 @contextlib.contextmanager
-def catch_and_report_request_exception(
-    error_message, error_type, reporter
-):
+def catch_and_report_request_exception(error_message, error_type, reporter):
     """Context manager that will catch requests' exceptions and report them."""
 
     try:
@@ -96,8 +94,7 @@ def log_response_body(exception: requests.RequestException, log_level: int = log
         _logger.log(log_level, 'HTTP response body: %s', text)
 
 
-
-def get_http_exception_text(exc: Exception) -> str | None:
+def get_http_exception_text(exc: Exception) -> str | None | t.Any:
     """Returns the response text if the given exception contains one."""
     if (response := getattr(exc, 'response', None)) is not None:
         if (text := getattr(response, 'text', None)) is not None:

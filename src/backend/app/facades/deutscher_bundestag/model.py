@@ -1,4 +1,6 @@
+"""Data model used by DIP Bundestag facade."""
 import pydantic as pyd
+
 
 class DIPBundestagApiDrucksache(pyd.BaseModel):
     """Servicedesk internal representation of a Servicedesk Issue."""
