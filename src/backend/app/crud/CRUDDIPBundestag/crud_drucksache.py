@@ -1,13 +1,13 @@
-"""CRUD Operations Example."""
+"""CRUD Operations DIP Bundestag for Drucksache."""
 import logging
 
 from backend.app.crud.base import CRUDBase
-from backend.app.models.example_model import ExampleModel
+from backend.app.models.
 
 _logger = logging.getLogger(__name__)
 
 
-class CRUDExample(CRUDBase[ExampleModel]):
+class CRUDDIPDrucksache(CRUDBase[ExampleModel]):
     """Provides CRUD operations for example_model table."""
 
     def __init__(self, model: type):
@@ -19,4 +19,4 @@ class CRUDExample(CRUDBase[ExampleModel]):
         super().__init__(model)
 
 
-CRUD_EXAMPLE = CRUDExample(ExampleModel)
+CRUD_EXAMPLE = CRUDDIPDrucksache(ExampleModel)

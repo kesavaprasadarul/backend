@@ -15,5 +15,9 @@ class Settings(BaseSettings):
     POSTGRES_SERVER: str = pyd.Field(default="db")
     POSTGRES_USER: str = pyd.Field(default="admin")
 
+    # Deutscher Bundestag
+    DIP_BUNDESTAG_API_KEY: str = pyd.Field(default="DUMMY")
+    DIP_BUNDESTAG_BASE_URL: str = pyd.Field(default="https://search.dip.bundestag.de")
+
 
 settings = Settings()
