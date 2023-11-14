@@ -6,9 +6,24 @@ import numpy as np
 
 # A clas that represents a file and allows querying and analysing its content
 class WordCounter:
-    ressortsText = ["Wirtschaft", "Finanzen", "Innenpolitik", "Außenpolitik", "Justiz", "Arbeit", "Verteidingung",
-                    "Landwirtschaft", "Familie", "Gesundheit", "Digitalisierung", "Verkehr", "Umwelt", "Bildung",
-                    "Forschung", "Wohnungsbau"]
+    ressortsText = [
+        "Wirtschaft",
+        "Finanzen",
+        "Innenpolitik",
+        "Außenpolitik",
+        "Justiz",
+        "Arbeit",
+        "Verteidingung",
+        "Landwirtschaft",
+        "Familie",
+        "Gesundheit",
+        "Digitalisierung",
+        "Verkehr",
+        "Umwelt",
+        "Bildung",
+        "Forschung",
+        "Wohnungsbau",
+    ]
     ft = fasttext.load_model('cc.de.300.bin')  # German vocabulary , trained on Wikipedia
 
     def __init__(self, filename):
@@ -59,8 +74,15 @@ def main():
 
     for word, ressort in bundestag_text.word_families().items():
         if dictionary_counts.get(word) > 10:
-            print(f"Das Wort \"", word, "\" wurde dem Ministerium für ", ressort, " zugeordnet und ",
-                  dictionary_counts.get(word), " mal erwähnt.")
+            print(
+                f"Das Wort \"",
+                word,
+                "\" wurde dem Ministerium für ",
+                ressort,
+                " zugeordnet und ",
+                dictionary_counts.get(word),
+                " mal erwähnt.",
+            )
 
 
 if __name__ == "__main__":

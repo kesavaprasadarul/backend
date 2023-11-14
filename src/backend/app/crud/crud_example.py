@@ -1,4 +1,4 @@
-"""CRUD Operations GitHubOrganization"""
+"""CRUD Operations Example."""
 import logging
 
 from backend.app.crud.base import CRUDBase
