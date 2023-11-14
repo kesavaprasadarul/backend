@@ -195,9 +195,8 @@ class HttpFacade:
         *args,
         unpack_page: t.Callable[[requests.Response], Page],
         get_next_page_cursor: t.Callable[[t.Any], t.Optional[PageCursor]],
-        page_size: t.Optional[PageSize] = None,
         page_args_path: tuple[str, ...] = PAGINATION_ARGS_REST,
-        page_item_key: str = 'name',
+        params,
         **kwargs,
     ) -> collections.abc.Iterator[dict]:
         """Execute paginated http requests to external services.
@@ -220,11 +219,8 @@ class HttpFacade:
             page_args_path:
                 Path into the kwargs dictionary where the page information is stored.
 
-            page_item_key:
-                Some API pagers return a dict instead of a list of the paged items (e.g. Gerrit). To
-                abstract this away from callers, this string is used as a new key into the returned
-                dictionary. E.g. for an item `'team1': <dict>` the value `team1` will be added to
-                the item dictionary under the key defined by this argument.
+            params:
+                params of request
 
         Returns:
             Yields the unpacked content of each page.
@@ -233,25 +229,20 @@ class HttpFacade:
         for name in page_args_path:
             page_args_dict = page_args_dict.setdefault(name, {})
 
-        if page_size:
-            page_args_dict[page_size.name] = page_size.value
 
         reached_end = False
         while not reached_end:
-            response = self.do_request(*args, **kwargs)
+            response = self.do_request(*args, **kwargs, params=params)
             response.raise_for_status()
 
             page = unpack_page(response)
 
             if isinstance(page.content, collections.abc.Sequence):
                 yield from page.content
-            elif isinstance(page.content, collections.abc.Mapping):
-                # return new dicts combining the ones from content and their corresponding keys:
-                yield from (value | {page_item_key: key} for key, value in page.content.items())
             else:
                 raise NotImplementedError(f'Unexpected page content type {type(page.content)}.')
 
             if cursor := get_next_page_cursor(page.page_info):
-                page_args_dict[cursor.name] = cursor.value
+                params[cursor.name] = cursor.value
             else:
                 reached_end = True
