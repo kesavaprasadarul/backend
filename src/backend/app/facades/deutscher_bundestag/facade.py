@@ -98,7 +98,7 @@ class DIPBundestagFacade(HttpFacade):
         )
         return cls(base_url=configuration.DIP_BUNDESTAG_BASE_URL, auth=auth)
 
-    def get_drucksachen(self, since_datetime: str):
+    def get_drucksachen(self, since_datetime: str) -> list[DIPBundestagApiDrucksache]:
         """Get Drucksachen.
 
         Args:
@@ -112,7 +112,7 @@ class DIPBundestagFacade(HttpFacade):
         _logger.info("Fetching plenarprotokolle.")
 
         drucksachen = [
-            drucksache
+            DIPBundestagApiDrucksache.model_validate(drucksache)
             for drucksache in self._do_paginated_request(
                 http.HTTPMethod.GET,
                 '/api/v1/drucksache-text',

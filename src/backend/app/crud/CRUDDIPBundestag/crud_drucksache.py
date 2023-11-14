@@ -2,21 +2,21 @@
 import logging
 
 from backend.app.crud.base import CRUDBase
-from backend.app.models.example_model import ExampleModel
+from backend.app.models.deutscher_bundestag.drucksache_model import DIPDrucksache
 
 _logger = logging.getLogger(__name__)
 
 
-class CRUDDIPDrucksache(CRUDBase[ExampleModel]):
-    """Provides CRUD operations for example_model table."""
+class CRUDDIPDrucksache(CRUDBase[DIPDrucksache]):
+    """Provides CRUD operations for dip_drucksache table."""
 
     def __init__(self, model: type):
         """
-        Initialize CRUDExample.
+        Initialize CRUDDIPDrucksache.
         """
-        test: str = "CrudExample"  # dummy statement
-        _logger.info("test: %s", test)  # dummy statement
+        test: str = "CRUDDIPDrucksache"  # dummy statement
+        _logger.info("Name of the CRUD Class: %s", test)  # dummy statement
         super().__init__(model)
 
 
-CRUD_EXAMPLE = CRUDDIPDrucksache(ExampleModel)
+CRUD_DIP_DRUCKSACHE = CRUDDIPDrucksache(DIPDrucksache)

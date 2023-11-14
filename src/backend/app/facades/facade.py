@@ -10,7 +10,6 @@ import urllib.parse
 
 import pydantic as pyd
 import requests
-import requests_toolbelt.adapters.socket_options  # type: ignore # stubs missing for library
 
 from backend.app.core.config import Settings
 from backend.app.facades.util import call_with_retries
