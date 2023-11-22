@@ -8,7 +8,7 @@ from datetime import date, datetime
 from enum import Enum
 from typing import List, Optional
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, RootModel
 
 
 class ListResponseBase(BaseModel):
@@ -284,10 +284,10 @@ class Bundesland(Enum):
     Thüringen = 'Thüringen'
 
 
-# class Datum(RootModel):
-#     root: date = Field(
-#         ..., description='Liefert das Datum eines Dokuments (Drucksache oder Protokoll).'
-#     )
+class Datum(RootModel):
+    root: date = Field(
+        ..., description='Liefert das Datum eines Dokuments (Drucksache oder Protokoll).'
+    )
 
 
 class Quadrant(Enum):

@@ -115,8 +115,8 @@ class DIPBundestagFacade(HttpFacade):
         """
         _logger.info("Fetching plenarprotokolle.")
 
-        drucksachen_unformatted = [
-            drucksache
+        drucksachen = [
+            Drucksache.model_validate(drucksache)
             for drucksache in self._do_paginated_request(
                 http.HTTPMethod.GET,
                 '/api/v1/drucksache',
@@ -128,25 +128,7 @@ class DIPBundestagFacade(HttpFacade):
             )
         ]
 
-        for drucksache in drucksachen_unformatted:
-            try:
-                Drucksache.model_validate(drucksache)
-            except Exception as e:
-                print(e)
-        # drucksachen = [
-        #     DIPBundestagApiDrucksache.model_validate(drucksache)
-        #     for drucksache in self._do_paginated_request(
-        #         http.HTTPMethod.GET,
-        #         '/api/v1/drucksache-text',
-        #         page_args_path=PAGINATION_CONTENT_ARGS_REST,
-        #         content_identifier='documents',
-        #         params={
-        #             "f.aktualisiert.start": since_datetime,
-        #         },
-        #     )
-        # ]
-
-        return drucksachen_unformatted
+        return drucksachen
 
     def get_vorgang(self) -> list[Vorgang]:
         """Get Vorgang.
