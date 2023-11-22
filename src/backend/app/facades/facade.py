@@ -197,7 +197,7 @@ class HttpFacade:
         unpack_page: t.Callable[[requests.Response], Page],
         get_next_page_cursor: t.Callable[[t.Any], t.Optional[PageCursor]],
         page_args_path: tuple[str, ...] = PAGINATION_ARGS_REST,
-        params,
+        params: t.Optional[dict],
         **kwargs,
     ) -> collections.abc.Iterator[dict]:
         """Execute paginated http requests to external services.
@@ -221,7 +221,7 @@ class HttpFacade:
                 Path into the kwargs dictionary where the page information is stored.
 
             params:
-                params of request
+                Optional params of request
 
         Returns:
             Yields the unpacked content of each page.
@@ -229,6 +229,9 @@ class HttpFacade:
         page_args_dict = kwargs
         for name in page_args_path:
             page_args_dict = page_args_dict.setdefault(name, {})
+
+        if params is None:
+            params = {}
 
         reached_end = False
         while not reached_end:

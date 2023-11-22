@@ -5,8 +5,12 @@ import typing as t
 
 import requests
 
+
 from backend.app.core.config import Settings
-from backend.app.facades.deutscher_bundestag.model import DIPBundestagApiDrucksache
+from backend.app.facades.deutscher_bundestag.model import (
+    Drucksache,
+    Vorgang,
+)
 from backend.app.facades.facade import (
     PAGINATION_CONTENT_ARGS_REST,
     Auth,
@@ -56,7 +60,7 @@ class DIPBundestagFacade(HttpFacade):
         *,
         page_args_path: tuple,
         content_identifier: str,
-        params,
+        params: dict | None = None,
         **kwargs,
     ) -> t.Iterator[dict]:
         """Helper to execute paginated request for REST API."""
@@ -98,7 +102,7 @@ class DIPBundestagFacade(HttpFacade):
         )
         return cls(base_url=configuration.DIP_BUNDESTAG_BASE_URL, auth=auth)
 
-    def get_drucksachen(self, since_datetime: str) -> list[DIPBundestagApiDrucksache]:
+    def get_drucksachen(self, since_datetime: str) -> list[Drucksache]:
         """Get Drucksachen.
 
         Args:
@@ -111,11 +115,11 @@ class DIPBundestagFacade(HttpFacade):
         """
         _logger.info("Fetching plenarprotokolle.")
 
-        drucksachen = [
-            DIPBundestagApiDrucksache.model_validate(drucksache)
+        drucksachen_unformatted = [
+            drucksache
             for drucksache in self._do_paginated_request(
                 http.HTTPMethod.GET,
-                '/api/v1/drucksache-text',
+                '/api/v1/drucksache',
                 page_args_path=PAGINATION_CONTENT_ARGS_REST,
                 content_identifier='documents',
                 params={
@@ -124,4 +128,47 @@ class DIPBundestagFacade(HttpFacade):
             )
         ]
 
-        return drucksachen
+        for drucksache in drucksachen_unformatted:
+            try:
+                Drucksache.model_validate(drucksache)
+            except Exception as e:
+                print(e)
+        # drucksachen = [
+        #     DIPBundestagApiDrucksache.model_validate(drucksache)
+        #     for drucksache in self._do_paginated_request(
+        #         http.HTTPMethod.GET,
+        #         '/api/v1/drucksache-text',
+        #         page_args_path=PAGINATION_CONTENT_ARGS_REST,
+        #         content_identifier='documents',
+        #         params={
+        #             "f.aktualisiert.start": since_datetime,
+        #         },
+        #     )
+        # ]
+
+        return drucksachen_unformatted
+
+    def get_vorgang(self) -> list[Vorgang]:
+        """Get Vorgang.
+
+        Args:
+            since_datetime
+                Updated later than since_date, in format YYYY-MM-DDTHH:mm:ss, e.g.2023-11-14T04:28:00.
+
+        Returns:
+            vorgang (list[DIPBundestagApiVorgang]):
+                A list of DIPBundestagApiVorgang objects.
+        """
+        _logger.info("Fetching vorgang.")
+
+        vorgang = [
+            Vorgang.model_validate(vorgang)
+            for vorgang in self._do_paginated_request(
+                http.HTTPMethod.GET,
+                '/api/v1/vorgang',
+                page_args_path=PAGINATION_CONTENT_ARGS_REST,
+                content_identifier='documents',
+            )
+        ]
+
+        return vorgang
