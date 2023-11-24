@@ -386,8 +386,12 @@ class Fundstelle(BaseModel):
     drucksachetyp: Optional[str] = Field(
         None,
     )
-    herausgeber: Zuordnung
-    urheber: List[str]
+    herausgeber: Zuordnung = Field(
+        ...,
+    )
+    urheber: List[str] = Field(
+        ...,
+    )
     verteildatum: Optional[date] = Field(
         None,
     )
@@ -400,8 +404,12 @@ class Fundstelle(BaseModel):
     endseite: Optional[int] = Field(
         None,
     )
-    anfangsquadrant: Optional[Quadrant] = None
-    endquadrant: Optional[Quadrant] = None
+    anfangsquadrant: Optional[Quadrant] = Field(
+        None,
+    )
+    endquadrant: Optional[Quadrant] = Field(
+        None,
+    )
     frage_nummer: Optional[str] = Field(
         None,
     )

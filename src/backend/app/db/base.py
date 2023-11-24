@@ -3,3 +3,11 @@
 # (In case we are using alembic later on for versioning our database models)
 from backend.app.db.database import Base  # pylint: disable=unused-import
 from backend.app.models.example_model import ExampleModel  # pylint: disable=unused-import
+from backend.app.models.deutscher_bundestag.drucksache_model import (  # pylint: disable=unused-import
+    DIPDrucksache,  # pylint: disable=unused-import
+    DIPRessort,  # pylint: disable=unused-import
+    DIPUrheber,  # pylint: disable=unused-import
+    DIPFundstelle,  # pylint: disable=unused-import
+    DIPVorgangsbezug,  # pylint: disable=unused-import
+    DIPAutor,  # pylint: disable=unused-import
+)  # pylint: disable=unused-import
