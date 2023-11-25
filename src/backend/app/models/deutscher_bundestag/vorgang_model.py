@@ -25,7 +25,7 @@ class DIPVorgang(Base, TimestampMixin, DIPSchema):
     abstract: Mapped[str] = mapped_column(nullable=True)
     sachgebiet: Mapped[list[str]] = mapped_column(ARRAY(Text), nullable=True)
 
-    gesta: Mapped[list[str]] = mapped_column(ARRAY(Text), nullable=True)
+    gesta: Mapped[str] = mapped_column(nullable=True)
     zustimmungsbeduerftigkeit: Mapped[list[str]] = mapped_column(ARRAY(Text), nullable=True)
     kom: Mapped[str] = mapped_column(nullable=True)
     ratsdok: Mapped[str] = mapped_column(nullable=True)

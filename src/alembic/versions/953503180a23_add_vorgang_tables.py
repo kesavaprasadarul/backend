@@ -33,7 +33,7 @@ def upgrade() -> None:
         sa.Column('titel', sa.String(), nullable=False),
         sa.Column('abstract', sa.String(), nullable=True),
         sa.Column('sachgebiet', postgresql.ARRAY(sa.Text()), nullable=True),
-        sa.Column('gesta', postgresql.ARRAY(sa.Text()), nullable=True),
+        sa.Column('gesta', sa.String(), nullable=True),
         sa.Column('zustimmungsbeduerftigkeit', postgresql.ARRAY(sa.Text()), nullable=True),
         sa.Column('kom', sa.String(), nullable=True),
         sa.Column('ratsdok', sa.String(), nullable=True),
