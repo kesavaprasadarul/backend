@@ -198,6 +198,7 @@ class HttpFacade:
         get_next_page_cursor: t.Callable[[t.Any], t.Optional[PageCursor]],
         page_args_path: tuple[str, ...] = PAGINATION_ARGS_REST,
         params: t.Optional[dict],
+        request_limit: t.Optional[int] = None,
         **kwargs,
     ) -> collections.abc.Iterator[dict]:
         """Execute paginated http requests to external services.
@@ -234,7 +235,7 @@ class HttpFacade:
             params = {}
 
         reached_end = False
-        while not reached_end:
+        while not reached_end and (request_limit is None or request_limit > 0):
             response = self.do_request(*args, **kwargs, params=params)
             response.raise_for_status()
 
@@ -249,3 +250,6 @@ class HttpFacade:
                 params[cursor.name] = cursor.value
             else:
                 reached_end = True
+
+            if request_limit is not None:
+                request_limit -= 1

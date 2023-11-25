@@ -11,3 +11,11 @@ from backend.app.models.deutscher_bundestag.drucksache_model import (  # pylint:
     DIPVorgangsbezug,  # pylint: disable=unused-import
     DIPAutor,  # pylint: disable=unused-import
 )  # pylint: disable=unused-import
+
+from backend.app.models.deutscher_bundestag.vorgang_model import (  # pylint: disable=unused-import
+    DIPVorgang,  # pylint: disable=unused-import
+    DIPInkrafttreten,  # pylint: disable=unused-import
+    DIPVerkuendung,  # pylint: disable=unused-import
+    DIPVorgangDeskriptor,  # pylint: disable=unused-import
+    DIPVorgangVerlinkung,  # pylint: disable=unused-import
+)  # pylint: disable=unused-import

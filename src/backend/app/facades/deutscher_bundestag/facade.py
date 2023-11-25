@@ -61,6 +61,7 @@ class DIPBundestagFacade(HttpFacade):
         page_args_path: tuple,
         content_identifier: str,
         params: dict | None = None,
+        request_limit: t.Optional[int] = None,
         **kwargs,
     ) -> t.Iterator[dict]:
         """Helper to execute paginated request for REST API."""
@@ -83,12 +84,13 @@ class DIPBundestagFacade(HttpFacade):
                 return PageCursor('cursor', cursor)
             return None
 
-        return self.do_paginated_request(
+        yield from self.do_paginated_request(
             method,
             url,
             unpack_page=unpack_page,
             get_next_page_cursor=get_next_page_cursor,
             params=params,
+            request_limit=request_limit,
             page_args_path=page_args_path,
             **kwargs,
         )
@@ -102,7 +104,9 @@ class DIPBundestagFacade(HttpFacade):
         )
         return cls(base_url=configuration.DIP_BUNDESTAG_BASE_URL, auth=auth)
 
-    def get_drucksachen(self, since_datetime: str) -> list[Drucksache]:
+    def get_drucksachen(
+        self, since_datetime: str, request_limit: t.Optional[int] = None
+    ) -> list[Drucksache]:
         """Get Drucksachen.
 
         Args:
@@ -125,32 +129,39 @@ class DIPBundestagFacade(HttpFacade):
                 params={
                     "f.aktualisiert.start": since_datetime,
                 },
+                request_limit=request_limit,
             )
         ]
 
         return drucksachen
 
-    def get_vorgang(self) -> list[Vorgang]:
-        """Get Vorgang.
+    def get_vorgange(
+        self, since_datetime: str, request_limit: t.Optional[int] = None
+    ) -> list[Vorgang]:
+        """Get Vorgange.
 
         Args:
             since_datetime
                 Updated later than since_date, in format YYYY-MM-DDTHH:mm:ss, e.g.2023-11-14T04:28:00.
 
         Returns:
-            vorgang (list[DIPBundestagApiVorgang]):
+            vorgange (list[DIPBundestagApiVorgang]):
                 A list of DIPBundestagApiVorgang objects.
         """
-        _logger.info("Fetching vorgang.")
+        _logger.info("Fetching vorgange.")
 
-        vorgang = [
+        vorgange = [
             Vorgang.model_validate(vorgang)
             for vorgang in self._do_paginated_request(
                 http.HTTPMethod.GET,
                 '/api/v1/vorgang',
                 page_args_path=PAGINATION_CONTENT_ARGS_REST,
                 content_identifier='documents',
+                params={
+                    "f.aktualisiert.start": since_datetime,
+                },
+                request_limit=request_limit,
             )
         ]
 
-        return vorgang
+        return vorgange
