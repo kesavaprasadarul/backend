@@ -8,14 +8,12 @@ _logger = logging.getLogger(__name__)
 
 
 class CRUDDIPDrucksache(CRUDBase[DIPDrucksache]):
-    """Provides CRUD operations for dip_drucksache table."""
+    """Provides CRUD operations for dip.drucksache table."""
 
     def __init__(self, model: type):
         """
         Initialize CRUDDIPDrucksache.
         """
-        test: str = "CRUDDIPDrucksache"  # dummy statement
-        _logger.info("Name of the CRUD Class: %s", test)  # dummy statement
         super().__init__(model)
 
 

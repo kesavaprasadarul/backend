@@ -1,7 +1,6 @@
 """Deutscher Bundestag Drucksache SQLAlchemy Models for creating associated tables in database."""
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy import ForeignKey, Text
-from sqlalchemy.sql import func
 from sqlalchemy.dialects.postgresql import ARRAY
 from backend.app.db.database import Base
 from backend.app.models.config import SchemaNames
@@ -15,17 +14,7 @@ from backend.app.facades.deutscher_bundestag.model import (
     Rolle,
 )
 from datetime import date, datetime
-
-
-class DIPSchema:
-    __table_args__ = {"schema": SchemaNames.DEUTSCHER_BUNDESTAG}
-
-
-class TimestampMixin:
-    created_at: Mapped[datetime] = mapped_column(
-        nullable=False, server_default=func.now(), onupdate=func.now()
-    )
-    updated_at: Mapped[datetime] = mapped_column(nullable=False, server_default=func.now())
+from backend.app.models.deutscher_bundestag.common import DIPSchema, TimestampMixin
 
 
 class DIPDrucksache(Base, TimestampMixin, DIPSchema):

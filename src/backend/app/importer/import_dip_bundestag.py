@@ -1,4 +1,5 @@
 from backend.app.crud.CRUDDIPBundestag.crud_drucksache import CRUD_DIP_DRUCKSACHE
+from backend.app.crud.CRUDDIPBundestag.crud_vorgang import CRUD_DIP_VORGANG
 from backend.app.facades.deutscher_bundestag.facade import DIPBundestagFacade
 from backend.app.facades.facade import (
     Auth,
@@ -6,7 +7,7 @@ from backend.app.facades.facade import (
 )
 from backend.app.core.config import settings
 
-from backend.app.facades.deutscher_bundestag.model import Drucksache
+from backend.app.facades.deutscher_bundestag.model import Drucksache, Vorgang
 from backend.app.models.deutscher_bundestag.drucksache_model import (
     DIPDrucksache,
     DIPRessort,
@@ -14,6 +15,14 @@ from backend.app.models.deutscher_bundestag.drucksache_model import (
     DIPFundstelle,
     DIPVorgangsbezug,
     DIPAutor,
+)
+
+from backend.app.models.deutscher_bundestag.vorgang_model import (
+    DIPVorgang,
+    DIPInkrafttreten,
+    DIPVerkuendung,
+    DIPVorgangDeskriptor,
+    DIPVorgangVerlinkung,
 )
 
 
@@ -67,14 +76,68 @@ def import_drucksache(drucksache: Drucksache):
     CRUD_DIP_DRUCKSACHE.create_or_update(drucksache)
 
 
+def import_vorgang(vorgang: Vorgang):
+    dip_inkrafttreten = (
+        [DIPInkrafttreten(**inkrafttreten.model_dump()) for inkrafttreten in vorgang.inkrafttreten]
+        if vorgang.inkrafttreten
+        else []
+    )
+
+    dip_verkuendung = (
+        [DIPVerkuendung(**verkuendung.model_dump()) for verkuendung in vorgang.verkuendung]
+        if vorgang.verkuendung
+        else []
+    )
+
+    dip_vorgang_deskriptor = (
+        [
+            DIPVorgangDeskriptor(**vorgang_deskriptor.model_dump())
+            for vorgang_deskriptor in vorgang.deskriptor
+        ]
+        if vorgang.deskriptor
+        else []
+    )
+
+    dip_vorgang_verlinkung = (
+        [
+            DIPVorgangVerlinkung(**vorgang_verlinkung.model_dump())
+            for vorgang_verlinkung in vorgang.vorgang_verlinkung
+        ]
+        if vorgang.vorgang_verlinkung
+        else []
+    )
+
+    vorgang = DIPVorgang(
+        **vorgang.model_dump(
+            exclude={
+                'inkrafttreten',
+                'verkuendung',
+                'deskriptor',
+                'vorgang_verlinkung',
+            }
+        ),
+        inkrafttreten=dip_inkrafttreten,
+        verkuendung=dip_verkuendung,
+        deskriptor=dip_vorgang_deskriptor,
+        vorgang_verlinkung=dip_vorgang_verlinkung,
+    )
+
+    CRUD_DIP_VORGANG.create_or_update(vorgang)
+
+
 def import_dip_bundestag():
     auth = Auth(auth_type=AuthType.DIPBUNDESTAG_API_TOKEN, token=settings.DIP_BUNDESTAG_API_KEY)
     facade = DIPBundestagFacade(settings.DIP_BUNDESTAG_BASE_URL, auth)
 
-    drucksachen: list[Drucksache] = facade.get_drucksachen('2023-01-01T00:00:00')
+    # drucksachen: list[Drucksache] = facade.get_drucksachen('2023-01-01T00:00:00')
 
-    for drucksache in drucksachen:
-        import_drucksache(drucksache)
+    # for drucksache in drucksachen:
+    #     import_drucksache(drucksache)
+
+    vorgange: list[Vorgang] = facade.get_vorgange('2023-11-21T00:00:00', request_limit=5)
+
+    for vorgang in vorgange:
+        import_vorgang(vorgang)
 
 
 if __name__ == '__main__':

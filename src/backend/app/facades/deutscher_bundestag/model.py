@@ -190,14 +190,14 @@ class Urheber(BaseModel):
 
 
 class Verkuendung(BaseModel):
-    jahrgang: str = Field(
-        ...,
+    jahrgang: Optional[str] = Field(
+        None,
     )
     heftnummer: Optional[str] = Field(
         None,
     )
-    seite: str = Field(
-        ...,
+    seite: Optional[str] = Field(
+        None,
     )
     ausfertigungsdatum: date = Field(
         ...,
@@ -208,9 +208,7 @@ class Verkuendung(BaseModel):
     rubrik_nr: Optional[str] = Field(
         None,
     )
-    einleitungstext: str = Field(
-        ...,
-    )
+    einleitungstext: str = Field(None)
     verkuendungsblatt_bezeichnung: Optional[str] = Field(
         None,
     )
