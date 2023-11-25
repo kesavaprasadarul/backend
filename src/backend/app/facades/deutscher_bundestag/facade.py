@@ -7,10 +7,7 @@ import requests
 
 
 from backend.app.core.config import Settings
-from backend.app.facades.deutscher_bundestag.model import (
-    Drucksache,
-    Vorgang,
-)
+from backend.app.facades.deutscher_bundestag.model import Drucksache, Vorgang, Vorgangsposition
 from backend.app.facades.facade import (
     PAGINATION_CONTENT_ARGS_REST,
     Auth,
@@ -165,3 +162,34 @@ class DIPBundestagFacade(HttpFacade):
         ]
 
         return vorgange
+
+    def get_vorgangspositionen(
+        self, since_datetime: str, request_limit: t.Optional[int] = None
+    ) -> list[Vorgangsposition]:
+        """Get Vorgangspositionen
+
+        Args:
+            since_datetime
+                Updated later than since_date, in format YYYY-MM-DDTHH:mm:ss, e.g.2023-11-14T04:28:00.
+
+        Returns:
+            vorgange (list[DIPBundestagApiVorgang]):
+                A list of DIPBundestagApiVorgang objects.
+        """
+        _logger.info("Fetching vorgange.")
+
+        vorgangspositionen = [
+            Vorgangsposition.model_validate(vorgangsposition)
+            for vorgangsposition in self._do_paginated_request(
+                http.HTTPMethod.GET,
+                '/api/v1/vorgangsposition',
+                page_args_path=PAGINATION_CONTENT_ARGS_REST,
+                content_identifier='documents',
+                params={
+                    "f.aktualisiert.start": since_datetime,
+                },
+                request_limit=request_limit,
+            )
+        ]
+
+        return vorgangspositionen

@@ -1,5 +1,6 @@
 from backend.app.crud.CRUDDIPBundestag.crud_drucksache import CRUD_DIP_DRUCKSACHE
 from backend.app.crud.CRUDDIPBundestag.crud_vorgang import CRUD_DIP_VORGANG
+from backend.app.crud.CRUDDIPBundestag.crud_vorgangsposition import CRUD_DIP_VORGANGSPOSITION
 from backend.app.facades.deutscher_bundestag.facade import DIPBundestagFacade
 from backend.app.facades.facade import (
     Auth,
@@ -7,12 +8,14 @@ from backend.app.facades.facade import (
 )
 from backend.app.core.config import settings
 
-from backend.app.facades.deutscher_bundestag.model import Drucksache, Vorgang
+from backend.app.facades.deutscher_bundestag.model import Drucksache, Vorgang, Vorgangsposition
+
+from backend.app.models.deutscher_bundestag.ressort_model import DIPRessort
+from backend.app.models.deutscher_bundestag.urheber_model import DIPUrheber
+from backend.app.models.deutscher_bundestag.fundstelle_model import DIPFundstelle
+
 from backend.app.models.deutscher_bundestag.drucksache_model import (
     DIPDrucksache,
-    DIPRessort,
-    DIPUrheber,
-    DIPFundstelle,
     DIPVorgangsbezug,
     DIPAutor,
 )
@@ -27,6 +30,10 @@ from backend.app.models.deutscher_bundestag.vorgang_model import (
 
 from backend.app.models.deutscher_bundestag.vorgangsposition_model import (
     DIPVorgangsposition,
+    DIPAktivitaetAnzeige,
+    DIPUeberweisung,
+    DIPVorgangspositionBezug,
+    DIPBeschlussfassung,
 )
 
 
@@ -59,9 +66,6 @@ def import_drucksache(drucksache: Drucksache):
         if drucksache.ressort
         else []
     )
-
-    if len(dip_urheber) > 0 or len(dip_ressort) > 0:
-        print("Debug")
 
     drucksache = DIPDrucksache(
         **drucksache.model_dump(
@@ -132,14 +136,92 @@ def import_vorgang(vorgang: Vorgang):
     CRUD_DIP_VORGANG.create_or_update(vorgang)
 
 
+def import_vorgangsposition(vorgangsposition: Vorgangsposition):
+    dip_aktivitaet_anzeige = (
+        [
+            DIPAktivitaetAnzeige(**aktivitaet_anzeige.model_dump())
+            for aktivitaet_anzeige in vorgangsposition.aktivitaet_anzeige
+        ]
+        if vorgangsposition.aktivitaet_anzeige
+        else []
+    )
+
+    dip_ueberweisung = (
+        [
+            DIPUeberweisung(**ueberweisung.model_dump())
+            for ueberweisung in vorgangsposition.ueberweisung
+        ]
+        if vorgangsposition.ueberweisung
+        else []
+    )
+
+    dip_beschlussfassung = (
+        [
+            DIPBeschlussfassung(**beschlussfassung.model_dump())
+            for beschlussfassung in vorgangsposition.beschlussfassung
+        ]
+        if vorgangsposition.beschlussfassung
+        else []
+    )
+
+    dip_fundstelle = (
+        DIPFundstelle(**vorgangsposition.fundstelle.model_dump(exclude={'fk_id'}))
+        if vorgangsposition.fundstelle
+        else None
+    )
+
+    dip_urheber = (
+        [DIPUrheber(**urheber.model_dump()) for urheber in vorgangsposition.urheber]
+        if vorgangsposition.urheber
+        else []
+    )
+
+    dip_ressort = (
+        [DIPRessort(**ressort.model_dump()) for ressort in vorgangsposition.ressort]
+        if vorgangsposition.ressort
+        else []
+    )
+
+    vorgangsposition = DIPVorgangsposition(
+        **vorgangsposition.model_dump(
+            exclude={
+                'aktivitaet_anzeige',
+                'ueberweisung',
+                'beschlussfassung',
+                'fundstelle',
+                'urheber',
+                'ressort',
+            }
+        ),
+        aktivitaet_anzeige=dip_aktivitaet_anzeige,
+        ueberweisung=dip_ueberweisung,
+        beschlussfassung=dip_beschlussfassung,
+        fundstelle=dip_fundstelle,
+        urheber=dip_urheber,
+        ressort=dip_ressort,
+    )
+
+    CRUD_DIP_VORGANGSPOSITION.create_or_update(vorgangsposition)
+
+
 def import_dip_bundestag():
     auth = Auth(auth_type=AuthType.DIPBUNDESTAG_API_TOKEN, token=settings.DIP_BUNDESTAG_API_KEY)
     facade = DIPBundestagFacade(settings.DIP_BUNDESTAG_BASE_URL, auth)
 
-    drucksachen: list[Drucksache] = facade.get_drucksachen('2023-01-01T00:00:00', request_limit=1)
+    # drucksachen: list[Drucksache] = facade.get_drucksachen('2023-01-01T00:00:00', request_limit=1)
 
-    for drucksache in drucksachen:
-        import_drucksache(drucksache)
+    # for drucksache in drucksachen:
+    #     import_drucksache(drucksache)
+
+    # vorgange = facade.get_vorgange('2023-01-01T00:00:00', request_limit=1)
+
+    # for vorgang in vorgange:
+    #     import_vorgang(vorgang)
+
+    vorgangspositionen = facade.get_vorgangspositionen('2023-01-01T00:00:00', request_limit=1)
+
+    for vorgangsposition in vorgangspositionen:
+        import_vorgangsposition(vorgangsposition)
 
 
 if __name__ == '__main__':

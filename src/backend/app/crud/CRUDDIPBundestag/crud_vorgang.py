@@ -1,4 +1,4 @@
-"""CRUD Operations DIP Bundestag for Drucksache."""
+"""CRUD Operations DIP Bundestag for Vorgang."""
 import logging
 
 from backend.app.crud.base import CRUDBase

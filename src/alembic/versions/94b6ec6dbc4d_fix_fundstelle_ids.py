@@ -53,7 +53,7 @@ def upgrade() -> None:
         sa.Column('gang', sa.Boolean(), nullable=False),
         sa.Column('fortsetzung', sa.Boolean(), nullable=False),
         sa.Column('nachtrag', sa.Boolean(), nullable=False),
-        sa.Column('vorgangstype', sa.String(), nullable=False),
+        sa.Column('vorgangstyp', sa.String(), nullable=False),
         sa.Column('typ', sa.Enum('Vorgangsposition', name='vorgangspositiontyp'), nullable=False),
         sa.Column('titel', sa.String(), nullable=False),
         sa.Column(
@@ -232,10 +232,6 @@ def upgrade() -> None:
         sa.Column('updated_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
         sa.ForeignKeyConstraint(
             ['from_vorgangsposition_id'],
-            ['dip.vorgangsposition.id'],
-        ),
-        sa.ForeignKeyConstraint(
-            ['to_vorgangsposition_id'],
             ['dip.vorgangsposition.id'],
         ),
         sa.PrimaryKeyConstraint('id'),

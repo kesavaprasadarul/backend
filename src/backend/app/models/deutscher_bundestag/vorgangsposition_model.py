@@ -28,7 +28,7 @@ class DIPVorgangsposition(Base, TimestampMixin, DIPSchema):
     gang: Mapped[bool] = mapped_column(nullable=False)
     fortsetzung: Mapped[bool] = mapped_column(nullable=False)
     nachtrag: Mapped[bool] = mapped_column(nullable=False)
-    vorgangstype: Mapped[str] = mapped_column(nullable=False)
+    vorgangstyp: Mapped[str] = mapped_column(nullable=False)
     typ: Mapped[VorgangspositionTyp] = mapped_column(nullable=False)
     titel: Mapped[str] = mapped_column(nullable=False)
     dokumentart: Mapped[Dokumentart] = mapped_column(nullable=False)
@@ -135,9 +135,7 @@ class DIPVorgangspositionBezug(Base, TimestampMixin, DIPSchema):
         ForeignKey("dip.vorgangsposition.id"), nullable=False
     )
 
-    to_vorgangsposition_id: Mapped[int] = mapped_column(
-        ForeignKey("dip.vorgangsposition.id"), nullable=False
-    )
+    to_vorgangsposition_id: Mapped[int] = mapped_column(nullable=False)
 
     titel: Mapped[str] = mapped_column(nullable=False)
     vorgangstyp: Mapped[str] = mapped_column(nullable=False)
