@@ -25,6 +25,10 @@ from backend.app.models.deutscher_bundestag.vorgang_model import (
     DIPVorgangVerlinkung,
 )
 
+from backend.app.models.deutscher_bundestag.vorgangsposition_model import (
+    DIPVorgangsposition,
+)
+
 
 def import_drucksache(drucksache: Drucksache):
     dip_autoren = (
@@ -33,7 +37,7 @@ def import_drucksache(drucksache: Drucksache):
         else []
     )
 
-    dip_fundstelle = DIPFundstelle(**drucksache.fundstelle.model_dump())
+    dip_fundstelle = DIPFundstelle(**drucksache.fundstelle.model_dump(exclude={'fk_id'}))
 
     dip_urheber = (
         [DIPUrheber(**urheber.model_dump()) for urheber in drucksache.urheber]
@@ -55,6 +59,9 @@ def import_drucksache(drucksache: Drucksache):
         if drucksache.ressort
         else []
     )
+
+    if len(dip_urheber) > 0 or len(dip_ressort) > 0:
+        print("Debug")
 
     drucksache = DIPDrucksache(
         **drucksache.model_dump(
@@ -129,15 +136,10 @@ def import_dip_bundestag():
     auth = Auth(auth_type=AuthType.DIPBUNDESTAG_API_TOKEN, token=settings.DIP_BUNDESTAG_API_KEY)
     facade = DIPBundestagFacade(settings.DIP_BUNDESTAG_BASE_URL, auth)
 
-    # drucksachen: list[Drucksache] = facade.get_drucksachen('2023-01-01T00:00:00')
+    drucksachen: list[Drucksache] = facade.get_drucksachen('2023-01-01T00:00:00', request_limit=1)
 
-    # for drucksache in drucksachen:
-    #     import_drucksache(drucksache)
-
-    vorgange: list[Vorgang] = facade.get_vorgange('2023-11-21T00:00:00', request_limit=5)
-
-    for vorgang in vorgange:
-        import_vorgang(vorgang)
+    for drucksache in drucksachen:
+        import_drucksache(drucksache)
 
 
 if __name__ == '__main__':

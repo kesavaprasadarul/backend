@@ -5,9 +5,6 @@ from backend.app.db.database import Base  # pylint: disable=unused-import
 from backend.app.models.example_model import ExampleModel  # pylint: disable=unused-import
 from backend.app.models.deutscher_bundestag.drucksache_model import (  # pylint: disable=unused-import
     DIPDrucksache,  # pylint: disable=unused-import
-    DIPRessort,  # pylint: disable=unused-import
-    DIPUrheber,  # pylint: disable=unused-import
-    DIPFundstelle,  # pylint: disable=unused-import
     DIPVorgangsbezug,  # pylint: disable=unused-import
     DIPAutor,  # pylint: disable=unused-import
 )  # pylint: disable=unused-import
@@ -18,4 +15,24 @@ from backend.app.models.deutscher_bundestag.vorgang_model import (  # pylint: di
     DIPVerkuendung,  # pylint: disable=unused-import
     DIPVorgangDeskriptor,  # pylint: disable=unused-import
     DIPVorgangVerlinkung,  # pylint: disable=unused-import
+)  # pylint: disable=unused-import
+
+from backend.app.models.deutscher_bundestag.vorgangsposition_model import (  # pylint: disable=unused-import
+    DIPVorgangsposition,
+    DIPAktivitaetAnzeige,
+    DIPUeberweisung,
+    DIPVorgangspositionBezug,
+    DIPBeschlussfassung,
+)  # pylint: disable=unused-import
+
+from backend.app.models.deutscher_bundestag.fundstelle_model import (  # pylint: disable=unused-import
+    DIPFundstelle,
+)  # pylint: disable=unused-import
+
+from backend.app.models.deutscher_bundestag.urheber_model import (  # pylint: disable=unused-import
+    DIPUrheber,
+)  # pylint: disable=unused-import
+
+from backend.app.models.deutscher_bundestag.ressort_model import (  # pylint: disable=unused-import
+    DIPRessort,
 )  # pylint: disable=unused-import

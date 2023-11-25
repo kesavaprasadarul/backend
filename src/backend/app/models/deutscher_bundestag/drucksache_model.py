@@ -1,20 +1,18 @@
 """Deutscher Bundestag Drucksache SQLAlchemy Models for creating associated tables in database."""
 from sqlalchemy.orm import Mapped, mapped_column, relationship
-from sqlalchemy import ForeignKey, Text
-from sqlalchemy.dialects.postgresql import ARRAY
+from sqlalchemy import ForeignKey
 from backend.app.db.database import Base
 from backend.app.models.config import SchemaNames
 from backend.app.facades.deutscher_bundestag.model import (
     DokumentTyp,
     DokumentartDrucksache,
     Herausgeber,
-    Dokumentart,
-    Zuordnung,
-    Quadrant,
-    Rolle,
 )
-from datetime import date, datetime
+import datetime as dt
 from backend.app.models.deutscher_bundestag.common import DIPSchema, TimestampMixin
+from backend.app.models.deutscher_bundestag.fundstelle_model import DIPFundstelle
+from backend.app.models.deutscher_bundestag.urheber_model import DIPUrheber
+from backend.app.models.deutscher_bundestag.ressort_model import DIPRessort
 
 
 class DIPDrucksache(Base, TimestampMixin, DIPSchema):
@@ -29,9 +27,8 @@ class DIPDrucksache(Base, TimestampMixin, DIPSchema):
     dokumentnummer: Mapped[str] = mapped_column(nullable=False)
     wahlperiode: Mapped[int] = mapped_column(nullable=True)
     herausgeber: Mapped[Herausgeber] = mapped_column(nullable=False)
-    date: Mapped[str] = mapped_column(nullable=True)
-    datum: Mapped[str] = mapped_column(nullable=False)
-    aktualisiert: Mapped[str] = mapped_column(nullable=False)
+    datum: Mapped[dt.date] = mapped_column(nullable=False)
+    aktualisiert: Mapped[dt.datetime] = mapped_column(nullable=False)
     titel: Mapped[str] = mapped_column(nullable=False)
     autoren_anzahl: Mapped[int] = mapped_column(nullable=False)
     pdf_hash: Mapped[str] = mapped_column(nullable=True)
@@ -43,11 +40,14 @@ class DIPDrucksache(Base, TimestampMixin, DIPSchema):
     )
 
     fundstelle: Mapped["DIPFundstelle"] = relationship(
-        cascade='merge, save-update, delete, delete-orphan'
+        cascade='merge, save-update, delete, delete-orphan',
+        back_populates="drucksache",
+        foreign_keys="DIPFundstelle.drucksache_id",
     )
 
     urheber: Mapped[list["DIPUrheber"]] = relationship(
-        cascade='merge, save-update, delete, delete-orphan'
+        cascade='merge, save-update, delete, delete-orphan',
+        foreign_keys="DIPUrheber.drucksache_id",
     )
 
     vorgangsbezug: Mapped[list["DIPVorgangsbezug"]] = relationship(
@@ -55,19 +55,9 @@ class DIPDrucksache(Base, TimestampMixin, DIPSchema):
     )
 
     ressort: Mapped[list["DIPRessort"]] = relationship(
-        cascade='merge, save-update, delete, delete-orphan'
+        cascade='merge, save-update, delete, delete-orphan',
+        foreign_keys="DIPRessort.drucksache_id",
     )
-
-
-class DIPRessort(Base, TimestampMixin, DIPSchema):
-    __tablename__ = "ressort"
-
-    id: Mapped[int] = mapped_column(primary_key=True)  # database id
-    drucksache_id: Mapped[int] = mapped_column(
-        ForeignKey(f"{SchemaNames.DEUTSCHER_BUNDESTAG}.drucksache.id"), nullable=False
-    )
-    federfuehrend: Mapped[bool] = mapped_column(nullable=False)
-    titel: Mapped[str] = mapped_column(nullable=False)
 
 
 class DIPVorgangsbezug(Base, TimestampMixin, DIPSchema):
@@ -80,51 +70,6 @@ class DIPVorgangsbezug(Base, TimestampMixin, DIPSchema):
 
     titel: Mapped[str] = mapped_column(nullable=False)
     vorgangstyp: Mapped[str] = mapped_column(nullable=False)
-
-
-class DIPUrheber(Base, TimestampMixin, DIPSchema):
-    __tablename__ = "urheber"
-
-    id: Mapped[int] = mapped_column(primary_key=True)  # database id
-    drucksache_id: Mapped[int] = mapped_column(
-        ForeignKey(f"{SchemaNames.DEUTSCHER_BUNDESTAG}.drucksache.id"), nullable=False
-    )
-    einbringer: Mapped[bool] = mapped_column(nullable=True)
-    bezeichnung: Mapped[str] = mapped_column(nullable=False)
-    titel: Mapped[str] = mapped_column(nullable=False)
-    rolle: Mapped[Rolle] = mapped_column(nullable=True)
-
-
-class DIPFundstelle(Base, TimestampMixin, DIPSchema):
-    __tablename__ = "fundstelle"
-
-    id: Mapped[int] = mapped_column(primary_key=True)  # database id
-
-    drucksache_id: Mapped[int] = mapped_column(
-        ForeignKey(f"{SchemaNames.DEUTSCHER_BUNDESTAG}.drucksache.id"), nullable=False
-    )
-
-    dokumentart: Mapped[Dokumentart] = mapped_column(nullable=False)
-    pdf_url: Mapped[str] = mapped_column(nullable=True)
-    dokumentnummer: Mapped[str] = mapped_column(nullable=False)
-    datum: Mapped[date] = mapped_column(nullable=False)
-    drucksachetyp: Mapped[str] = mapped_column(nullable=True)
-    herausgeber: Mapped[Zuordnung] = mapped_column(nullable=False)
-    urheber: Mapped[list[str]] = mapped_column(ARRAY(Text), nullable=False)
-    verteildatum: Mapped[datetime] = mapped_column(nullable=True)
-    seite: Mapped[str] = mapped_column(nullable=True)
-    anfangsseite: Mapped[int] = mapped_column(nullable=True)
-    endseite: Mapped[int] = mapped_column(nullable=True)
-    anfangsquadrant: Mapped[Quadrant] = mapped_column(nullable=True)
-    endquadrant: Mapped[Quadrant] = mapped_column(nullable=True)
-    frage_nummer: Mapped[str] = mapped_column(nullable=True)
-    anlagen: Mapped[str] = mapped_column(nullable=True)
-    top: Mapped[int] = mapped_column(nullable=True)
-    top_zusatz: Mapped[str] = mapped_column(nullable=True)
-
-    drucksache: Mapped["DIPDrucksache"] = relationship(
-        back_populates="fundstelle", single_parent=True
-    )
 
 
 class DIPAutor(Base, TimestampMixin, DIPSchema):
