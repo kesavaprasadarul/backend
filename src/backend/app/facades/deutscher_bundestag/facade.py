@@ -5,13 +5,15 @@ import typing as t
 
 import requests
 
-
 from backend.app.core.config import Settings
-from backend.app.facades.deutscher_bundestag.model import Drucksache, Vorgang, Vorgangsposition
 from backend.app.facades.deutscher_bundestag.model import (
     Drucksache,
     Plenarprotokoll,
     Vorgang,
+    Vorgangsposition,
+)
+from backend.app.facades.deutscher_bundestag.model_plenarprotokoll_vorgangsbezug import (
+    PlenarprotokollVorgangsbezug,
 )
 from backend.app.facades.facade import (
     PAGINATION_CONTENT_ARGS_REST,
@@ -22,6 +24,7 @@ from backend.app.facades.facade import (
     Page,
     PageCursor,
 )
+from backend.app.models.deutscher_bundestag import plenarprotokoll_model
 
 _logger = logging.getLogger(__name__)
 
@@ -168,6 +171,39 @@ class DIPBundestagFacade(HttpFacade):
 
         return vorgange
 
+    def get_vorgangsbezuege_of_plenarprotokoll_by_id(
+        self, plenarprotokoll_id: int
+    ) -> list[PlenarprotokollVorgangsbezug]:
+        """Get vorgangsbezuege of a a given plenarprotokoll (by id).
+
+        Required for getting content of plenarprotokoll, because vorgangsbezuege lists
+        vorgangsbezuege with title and abstract information which will be leveraged for wordcloud
+        analyzer.
+
+        Args:
+            plenarprotokoll_id (int): id of a plenarprotokoll
+
+        Returns:
+            list[PlenarprotokollVorgangsbezug]: list of PlenarprotokollVorgangsbezug objects, reduced to only relevant data needed.
+        """
+
+        _logger.info("Fetching vorgangsbezuege of plenaprotokoll with id %d.", plenarprotokoll_id)
+
+        vorgangsbezuege_of_plenarprotokoll = [
+            PlenarprotokollVorgangsbezug.model_validate(plenarprotokoll_vorgangsbezug)
+            for plenarprotokoll_vorgangsbezug in self._do_paginated_request(
+                http.HTTPMethod.GET,
+                '/api/v1/vorgang',
+                page_args_path=PAGINATION_CONTENT_ARGS_REST,
+                content_identifier='documents',
+                params={
+                    "f.plenarprotokoll": plenarprotokoll_id,
+                },
+            )
+        ]
+
+        return vorgangsbezuege_of_plenarprotokoll
+
     def get_vorgangspositionen(
         self, since_datetime: str, request_limit: t.Optional[int] = None
     ) -> list[Vorgangsposition]:
@@ -199,7 +235,9 @@ class DIPBundestagFacade(HttpFacade):
 
         return vorgangspositionen
 
-    def get_plenarprotokolle(self, wahlperiode: int = 20, zuordnung: str = "BT") -> list[Plenarprotokoll]:
+    def get_plenarprotokolle(
+        self, wahlperiode: int = 20, zuordnung: str = "BT"
+    ) -> list[Plenarprotokoll]:
         """Get Plenarprotokolle.
         https://search.dip.bundestag.de/api/v1/swagger-ui/#/Plenarprotokolle/getPlenarprotokollList
 
