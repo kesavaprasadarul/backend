@@ -24,7 +24,7 @@ from backend.app.facades.facade import (
     Page,
     PageCursor,
 )
-from backend.app.models.deutscher_bundestag import plenarprotokoll_model
+from backend.app.facades.util import ProxyList
 
 _logger = logging.getLogger(__name__)
 
@@ -66,7 +66,8 @@ class DIPBundestagFacade(HttpFacade):
         page_args_path: tuple,
         content_identifier: str,
         params: dict | None = None,
-        request_limit: t.Optional[int] = None,
+        proxy_list: ProxyList | None = None,
+        response_limit: t.Optional[int] = None,
         **kwargs,
     ) -> t.Iterator[dict]:
         """Helper to execute paginated request for REST API."""
@@ -95,7 +96,8 @@ class DIPBundestagFacade(HttpFacade):
             unpack_page=unpack_page,
             get_next_page_cursor=get_next_page_cursor,
             params=params,
-            request_limit=request_limit,
+            proxy_list=proxy_list,
+            response_limit=response_limit,
             page_args_path=page_args_path,
             **kwargs,
         )
@@ -110,8 +112,11 @@ class DIPBundestagFacade(HttpFacade):
         return cls(base_url=configuration.DIP_BUNDESTAG_BASE_URL, auth=auth)
 
     def get_drucksachen(
-        self, since_datetime: str, request_limit: t.Optional[int] = None
-    ) -> list[Drucksache]:
+        self,
+        since_datetime: str,
+        response_limit: t.Optional[int] = None,
+        proxy_list: ProxyList | None = None,
+    ) -> t.Iterator[Drucksache]:
         """Get Drucksachen.
 
         Args:
@@ -124,25 +129,25 @@ class DIPBundestagFacade(HttpFacade):
         """
         _logger.info("Fetching drucksachen.")
 
-        drucksachen = [
-            Drucksache.model_validate(drucksache)
-            for drucksache in self._do_paginated_request(
-                http.HTTPMethod.GET,
-                '/api/v1/drucksache',
-                page_args_path=PAGINATION_CONTENT_ARGS_REST,
-                content_identifier='documents',
-                params={
-                    "f.aktualisiert.start": since_datetime,
-                },
-                request_limit=request_limit,
-            )
-        ]
-
-        return drucksachen
+        for drucksache in self._do_paginated_request(
+            http.HTTPMethod.GET,
+            '/api/v1/drucksache',
+            page_args_path=PAGINATION_CONTENT_ARGS_REST,
+            content_identifier='documents',
+            params={
+                "f.aktualisiert.start": since_datetime,
+            },
+            response_limit=response_limit,
+            proxy_list=proxy_list,
+        ):
+            yield Drucksache.model_validate(drucksache)
 
     def get_vorgange(
-        self, since_datetime: str, request_limit: t.Optional[int] = None
-    ) -> list[Vorgang]:
+        self,
+        since_datetime: str,
+        response_limit: t.Optional[int] = None,
+        proxy_list: ProxyList | None = None,
+    ) -> t.Iterator[Vorgang]:
         """Get Vorgange.
 
         Args:
@@ -155,21 +160,17 @@ class DIPBundestagFacade(HttpFacade):
         """
         _logger.info("Fetching vorgange.")
 
-        vorgange = [
-            Vorgang.model_validate(vorgang)
-            for vorgang in self._do_paginated_request(
-                http.HTTPMethod.GET,
-                '/api/v1/vorgang',
-                page_args_path=PAGINATION_CONTENT_ARGS_REST,
-                content_identifier='documents',
-                params={
-                    "f.aktualisiert.start": since_datetime,
-                },
-                request_limit=request_limit,
-            )
-        ]
-
-        return vorgange
+        for vorgang in self._do_paginated_request(
+            http.HTTPMethod.GET,
+            '/api/v1/vorgang',
+            page_args_path=PAGINATION_CONTENT_ARGS_REST,
+            content_identifier='documents',
+            params={
+                "f.aktualisiert.start": since_datetime,
+            },
+            response_limit=response_limit,
+        ):
+            yield Vorgang.model_validate(vorgang)
 
     def get_vorgangsbezuege_of_plenarprotokoll_by_id(
         self, plenarprotokoll_id: int
@@ -205,8 +206,11 @@ class DIPBundestagFacade(HttpFacade):
         return vorgangsbezuege_of_plenarprotokoll
 
     def get_vorgangspositionen(
-        self, since_datetime: str, request_limit: t.Optional[int] = None
-    ) -> list[Vorgangsposition]:
+        self,
+        since_datetime: str,
+        response_limit: t.Optional[int] = None,
+        proxy_list: ProxyList | None = None,
+    ) -> t.Iterator[Vorgangsposition]:
         """Get Vorgangspositionen
 
         Args:
@@ -219,21 +223,18 @@ class DIPBundestagFacade(HttpFacade):
         """
         _logger.info("Fetching vorgange.")
 
-        vorgangspositionen = [
-            Vorgangsposition.model_validate(vorgangsposition)
-            for vorgangsposition in self._do_paginated_request(
-                http.HTTPMethod.GET,
-                '/api/v1/vorgangsposition',
-                page_args_path=PAGINATION_CONTENT_ARGS_REST,
-                content_identifier='documents',
-                params={
-                    "f.aktualisiert.start": since_datetime,
-                },
-                request_limit=request_limit,
-            )
-        ]
-
-        return vorgangspositionen
+        for vorgangsposition in self._do_paginated_request(
+            http.HTTPMethod.GET,
+            '/api/v1/vorgangsposition',
+            page_args_path=PAGINATION_CONTENT_ARGS_REST,
+            content_identifier='documents',
+            params={
+                "f.aktualisiert.start": since_datetime,
+            },
+            response_limit=response_limit,
+            proxy_list=proxy_list,
+        ):
+            yield Vorgangsposition.model_validate(vorgangsposition)
 
     def get_plenarprotokolle(
         self, wahlperiode: int = 20, zuordnung: str = "BT"

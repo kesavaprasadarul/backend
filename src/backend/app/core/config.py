@@ -1,7 +1,7 @@
 """Configuration of Settings."""
+
 import pydantic as pyd
 from pydantic_settings import BaseSettings
-import os
 
 
 class Settings(BaseSettings):
@@ -21,6 +21,10 @@ class Settings(BaseSettings):
         default="rgsaY4U.oZRQKUHdJhF9qguHMkwCGIoLaqEcaHjYLF"
     )  # api key valid till end of may 2024
     DIP_BUNDESTAG_BASE_URL: str = pyd.Field(default="https://search.dip.bundestag.de")
+
+    PROXY_LIST_URL: str = pyd.Field(
+        default="https://raw.githubusercontent.com/TheSpeedX/SOCKS-List/master/http.txt"
+    )
 
 
 settings = Settings()

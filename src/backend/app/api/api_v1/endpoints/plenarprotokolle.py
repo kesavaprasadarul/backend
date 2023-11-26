@@ -2,10 +2,12 @@
 import logging
 
 import fastapi
-from backend.app.importer.dip_bundestag_plenarprotokoll_importer import DIPBundestagPlenarprotokollImporter
 
 import backend.app.schemas.schema_example as schema_example  # pylint: disable=consider-using-from-import
 from backend.app.crud.crud_example import CRUD_EXAMPLE
+from backend.app.importer.dip_bundestag_plenarprotokoll_importer import (
+    DIPBundestagPlenarprotokollImporter,
+)
 
 _logger = logging.getLogger(__name__)
 

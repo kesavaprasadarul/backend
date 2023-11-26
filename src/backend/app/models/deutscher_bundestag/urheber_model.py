@@ -1,5 +1,6 @@
-from sqlalchemy.orm import Mapped, mapped_column
 from sqlalchemy import ForeignKey
+from sqlalchemy.orm import Mapped, mapped_column
+
 from backend.app.db.database import Base
 from backend.app.facades.deutscher_bundestag.model import Rolle
 from backend.app.models.deutscher_bundestag.common import DIPSchema, TimestampMixin

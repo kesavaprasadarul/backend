@@ -54,4 +54,14 @@ class DIPBundestagPlenarprotokollImporter:
             _logger.info(
                 "Add vorgangsbezuge for plenarprotokoll with id %d to database.", plenarprotokoll.id
             )
-            CRUD_DIP_Plenarprotokoll_VORGANGSBEZUG.create_or_update_multi(obj_in_list=[DIPPlenarprotokollVorgangsbezug(id=element.id, titel=element.titel, abstract=element.abstract, datum=element.datum) for element in plenarprotokoll_vorgangsbezuege])
+            CRUD_DIP_Plenarprotokoll_VORGANGSBEZUG.create_or_update_multi(
+                obj_in_list=[
+                    DIPPlenarprotokollVorgangsbezug(
+                        id=element.id,
+                        titel=element.titel,
+                        abstract=element.abstract,
+                        datum=element.datum,
+                    )
+                    for element in plenarprotokoll_vorgangsbezuege
+                ]
+            )

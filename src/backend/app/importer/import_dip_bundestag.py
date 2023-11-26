@@ -1,10 +1,14 @@
+from typing import Callable, Iterator, TypeVar
+
 from backend.app.core.config import settings
+from backend.app.crud.base import CRUDBase
 from backend.app.crud.CRUDDIPBundestag.crud_drucksache import CRUD_DIP_DRUCKSACHE
 from backend.app.crud.CRUDDIPBundestag.crud_vorgang import CRUD_DIP_VORGANG
 from backend.app.crud.CRUDDIPBundestag.crud_vorgangsposition import CRUD_DIP_VORGANGSPOSITION
+from backend.app.db.database import Base
 from backend.app.facades.deutscher_bundestag.facade import DIPBundestagFacade
 from backend.app.facades.deutscher_bundestag.model import Drucksache, Vorgang, Vorgangsposition
-from backend.app.facades.facade import Auth, AuthType
+from backend.app.facades.util import ProxyList
 from backend.app.models.deutscher_bundestag.drucksache_model import (
     DIPAutor,
     DIPDrucksache,
@@ -28,8 +32,11 @@ from backend.app.models.deutscher_bundestag.vorgangsposition_model import (
     DIPVorgangspositionbezug,
 )
 
+ModelType = TypeVar("ModelType", bound=Base)
+PydanticModelType = TypeVar("PydanticModelType")
 
-def import_drucksache(drucksache: Drucksache):
+
+def drucksache_transform_to_db_model(drucksache: Drucksache) -> DIPDrucksache:
     dip_autoren = (
         [DIPAutor(**autor.model_dump()) for autor in drucksache.autoren_anzeige]
         if drucksache.autoren_anzeige
@@ -59,7 +66,7 @@ def import_drucksache(drucksache: Drucksache):
         else []
     )
 
-    drucksache = DIPDrucksache(
+    return DIPDrucksache(
         **drucksache.model_dump(
             exclude={
                 'autoren_anzeige',
@@ -76,10 +83,8 @@ def import_drucksache(drucksache: Drucksache):
         ressort=dip_ressort,
     )
 
-    CRUD_DIP_DRUCKSACHE.create_or_update(drucksache)
 
-
-def import_vorgang(vorgang: Vorgang):
+def vorgang_transform_to_db_model(vorgang: Vorgang) -> DIPVorgang:
     dip_inkrafttreten = (
         [DIPInkrafttreten(**inkrafttreten.model_dump()) for inkrafttreten in vorgang.inkrafttreten]
         if vorgang.inkrafttreten
@@ -110,7 +115,7 @@ def import_vorgang(vorgang: Vorgang):
         else []
     )
 
-    vorgang = DIPVorgang(
+    return DIPVorgang(
         **vorgang.model_dump(
             exclude={
                 'inkrafttreten',
@@ -125,10 +130,10 @@ def import_vorgang(vorgang: Vorgang):
         vorgang_verlinkung=dip_vorgang_verlinkung,
     )
 
-    CRUD_DIP_VORGANG.create_or_update(vorgang)
 
-
-def import_vorgangsposition(vorgangsposition: Vorgangsposition):
+def vorgangsposition_transform_to_db_model(
+    vorgangsposition: Vorgangsposition,
+) -> DIPVorgangsposition:
     dip_aktivitaet_anzeige = (
         [
             DIPAktivitaetAnzeige(**aktivitaet_anzeige.model_dump())
@@ -189,7 +194,7 @@ def import_vorgangsposition(vorgangsposition: Vorgangsposition):
         else []
     )
 
-    vorgangsposition = DIPVorgangsposition(
+    return DIPVorgangsposition(
         **vorgangsposition.model_dump(
             exclude={
                 'aktivitaet_anzeige',
@@ -210,27 +215,101 @@ def import_vorgangsposition(vorgangsposition: Vorgangsposition):
         vorgangspositionbezug=dip_vorgangspositionbezug,
     )
 
-    CRUD_DIP_VORGANGSPOSITION.create_or_update(vorgangsposition)
+
+def batch_upsert(
+    transform: Callable[[PydanticModelType], ModelType],
+    crud: CRUDBase[ModelType],
+    pydantic_models: Iterator[PydanticModelType],
+    upsert_batch_size: int = 100,
+):
+    batch = []
+    batch_count = 1
+    for pydantic_model in pydantic_models:
+        model = transform(pydantic_model)
+        batch.append(model)
+
+        if len(batch) >= upsert_batch_size:
+            print(f'Upserting batch {batch_count} into {model.__tablename__}-Table.')
+            crud.create_or_update_multi(batch)
+            batch = []
+            batch_count += 1
+
+    if batch:
+        print(f'Upserting final batch ({batch_count}) into {batch[0].__tablename__}-Table.')
+        crud.create_or_update_multi(batch)
+
+
+def import_drucksachen(
+    facade: DIPBundestagFacade,
+    since_datetime: str,
+    response_limit: int | None = None,
+    proxy_list: ProxyList | None = None,
+    upsert_batch_size: int = 100,
+):
+    drucksachen = facade.get_drucksachen(
+        since_datetime=since_datetime, response_limit=response_limit, proxy_list=proxy_list
+    )
+
+    crud = CRUD_DIP_DRUCKSACHE
+
+    batch_upsert(
+        transform=drucksache_transform_to_db_model,
+        crud=crud,
+        pydantic_models=drucksachen,
+        upsert_batch_size=upsert_batch_size,
+    )
+
+
+def import_vorgangspositionen(
+    facade: DIPBundestagFacade,
+    since_datetime: str,
+    response_limit: int | None = None,
+    proxy_list: ProxyList | None = None,
+    upsert_batch_size: int = 100,
+):
+    vorgangspositionen = facade.get_vorgangspositionen(
+        since_datetime=since_datetime, response_limit=response_limit, proxy_list=proxy_list
+    )
+
+    crud = CRUD_DIP_VORGANGSPOSITION
+
+    batch_upsert(
+        transform=vorgangsposition_transform_to_db_model,
+        crud=crud,
+        pydantic_models=vorgangspositionen,
+        upsert_batch_size=upsert_batch_size,
+    )
+
+
+def import_vorgang(
+    facade: DIPBundestagFacade,
+    since_datetime: str,
+    response_limit: int | None = None,
+    proxy_list: ProxyList | None = None,
+    upsert_batch_size: int = 100,
+):
+    vorgange = facade.get_vorgange(
+        since_datetime=since_datetime, response_limit=response_limit, proxy_list=proxy_list
+    )
+
+    crud = CRUD_DIP_VORGANG
+
+    batch_upsert(
+        transform=vorgang_transform_to_db_model,
+        crud=crud,
+        pydantic_models=vorgange,
+        upsert_batch_size=upsert_batch_size,
+    )
 
 
 def import_dip_bundestag():
-    auth = Auth(auth_type=AuthType.DIPBUNDESTAG_API_TOKEN, token=settings.DIP_BUNDESTAG_API_KEY)
-    facade = DIPBundestagFacade(settings.DIP_BUNDESTAG_BASE_URL, auth)
+    facade = DIPBundestagFacade.get_instance(settings)
 
-    # drucksachen: list[Drucksache] = facade.get_drucksachen('2023-01-01T00:00:00', request_limit=1)
+    proxy_list = ProxyList.from_url(settings.PROXY_LIST_URL)
 
-    # for drucksache in drucksachen:
-    #     import_drucksache(drucksache)
-
-    # vorgange = facade.get_vorgange('2023-01-01T00:00:00', request_limit=1)
-
-    # for vorgang in vorgange:
-    #     import_vorgang(vorgang)
-
-    vorgangspositionen = facade.get_vorgangspositionen('2023-01-01T00:00:00', request_limit=1)
-
-    for vorgangsposition in vorgangspositionen:
-        import_vorgangsposition(vorgangsposition)
+    import_vorgangspositionen(
+        facade=facade, since_datetime='2016-01-01T00:00:00', proxy_list=proxy_list, response_limit=1
+    )
 
 
 if __name__ == '__main__':

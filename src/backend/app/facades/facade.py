@@ -12,7 +12,7 @@ import pydantic as pyd
 import requests
 
 from backend.app.core.config import Settings
-from backend.app.facades.util import call_with_retries
+from backend.app.facades.util import Proxy, ProxyList, call_with_retries
 
 _logger = logging.getLogger(__name__)
 
@@ -20,7 +20,7 @@ _logger = logging.getLogger(__name__)
 LIMIT_PAGES = 10
 """Limit to getting only first 10 pages to not overstrain api of Deutscher Bundestag. Can be overwrriten."""
 
-HTTP_REQUEST_DEFAULT_TIMEOUT_SECS = 600
+HTTP_REQUEST_DEFAULT_TIMEOUT_SECS = 30
 """Maximum time before an HTTP request times out."""
 
 
@@ -104,6 +104,7 @@ class HttpFacade:
         data: t.Optional[str] = None,
         params: t.Optional[dict] = None,
         headers: t.Optional[dict] = None,
+        proxy: t.Optional[Proxy] = None,
         timeout: int = HTTP_REQUEST_DEFAULT_TIMEOUT_SECS,
         disable_retry: bool = False,
     ) -> requests.Response:
@@ -126,6 +127,7 @@ class HttpFacade:
             data: A string with data passed as part of the request.
             params: Query parameters which are added to the url.
             headers: headers of the request. Authorization and Accept are set by decorator.
+            proxy: Optional proxy to be used for the request.
             final_http_codes: Additional http return codes which will not be retried.
             retry_http_codes: Additional http return codes which will be retried.
             timeout: Optional timeout value to change the default set in HTTP_REQUEST_TIMEOUT_SECS
@@ -179,14 +181,29 @@ class HttpFacade:
 
             return r.status_code < 500
 
+        proxy_dict = (
+            {
+                'http': f'http://{proxy.url}',
+            }
+            if proxy
+            else None
+        )
+
         if disable_retry:
-            response = self._session.send(request=request, timeout=timeout)
+            response = self._session.send(
+                request=request,
+                timeout=timeout,
+                proxies=proxy_dict,
+                verify=proxy is None,
+            )
         else:
             response = call_with_retries(
                 self._session.send,
                 request,
                 retval_ok=is_response_final,
                 timeout=timeout,
+                proxies=proxy_dict,
+                verify=proxy is None,
             )
 
         return response
@@ -198,7 +215,8 @@ class HttpFacade:
         get_next_page_cursor: t.Callable[[t.Any], t.Optional[PageCursor]],
         page_args_path: tuple[str, ...] = PAGINATION_ARGS_REST,
         params: t.Optional[dict],
-        request_limit: t.Optional[int] = None,
+        proxy_list: t.Optional[ProxyList] = None,
+        response_limit: t.Optional[int] = None,
         **kwargs,
     ) -> collections.abc.Iterator[dict]:
         """Execute paginated http requests to external services.
@@ -224,6 +242,12 @@ class HttpFacade:
             params:
                 Optional params of request
 
+            proxy_list:
+                Optional proxy list to be used for the request.
+
+            response_limit:
+                Optional limit of requests to be executed. If not given, all pages are returned.
+
         Returns:
             Yields the unpacked content of each page.
         """
@@ -235,9 +259,26 @@ class HttpFacade:
             params = {}
 
         reached_end = False
-        while not reached_end and (request_limit is None or request_limit > 0):
-            response = self.do_request(*args, **kwargs, params=params)
-            response.raise_for_status()
+        while not reached_end and (response_limit is None or response_limit > 0):
+            try:
+                response = self.do_request(
+                    *args,
+                    **kwargs,
+                    params=params,
+                    proxy=proxy_list.get_proxy() if proxy_list else None,
+                )
+                response.raise_for_status()
+            except (
+                requests.exceptions.HTTPError,
+                requests.exceptions.ReadTimeout,
+                requests.exceptions.ConnectionError,
+            ) as e:
+                if proxy_list:
+                    print("Could not get response. Trying again with new proxy.")
+                    proxy_list.set_random_proxy()
+                    continue
+                else:
+                    raise e
 
             page = unpack_page(response)
 
@@ -251,5 +292,5 @@ class HttpFacade:
             else:
                 reached_end = True
 
-            if request_limit is not None:
-                request_limit -= 1
+            if response_limit is not None:
+                response_limit -= 1
