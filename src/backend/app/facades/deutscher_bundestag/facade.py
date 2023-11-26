@@ -253,6 +253,8 @@ class DIPBundestagFacade(HttpFacade):
 
         """
 
+        _logger.info("Get plenarprotkolle")
+
         plenarprotokolle = [
             Plenarprotokoll.model_validate(plenarprotokoll)
             for plenarprotokoll in self._do_paginated_request(
@@ -266,5 +268,6 @@ class DIPBundestagFacade(HttpFacade):
                 },
             )
         ]
+        _logger.info(plenarprotokolle)
 
         return plenarprotokolle

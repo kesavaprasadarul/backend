@@ -21,7 +21,7 @@ _logger = logging.getLogger(__name__)
 class DIPBundestagPlenarprotokollImporter:
     def __init__(self) -> None:
         self.dip_bundestag_facade = DIPBundestagFacade.get_instance(Settings())
-        self.plenarprotkolle: list[Plenarprotokoll] = []
+        self.plenarprotokolle: list[Plenarprotokoll] = []
 
     def import_plenarprotokolle(self, wahlperiode: int = 20):
         """Import plenarprotokolle."""
@@ -29,17 +29,19 @@ class DIPBundestagPlenarprotokollImporter:
             wahlperiode=wahlperiode
         )
 
+        _logger.info(self.plenarprotokolle)
+
         # TODO
         # insert into database (but for now we don't need them necessarily only vorgangsbezuge of plenarprotokolle)
 
     def import_plenarprotokoll_vrogangsbezuege(self, wahlperiode: int = 20):
-        """Import plenarprokotll vorgangsbezuege."""
+        """Import plenarprokotoll vorgangsbezuege."""
 
-        if len(self.plenarprotkolle) == 0:
+        if len(self.plenarprotokolle) == 0:
             self.import_plenarprotokolle(wahlperiode=wahlperiode)
 
         # fetch plenarprotokoll_vorgangsbezuege
-        for plenarprotokoll in self.plenarprotkolle:
+        for plenarprotokoll in self.plenarprotokolle:
             _logger.info("Fetch vorgangsbezuge for plenarprotokoll with id %d", plenarprotokoll.id)
             plenarprotokoll_vorgangsbezuege: list[PlenarprotokollVorgangsbezug] = []
             plenarprotokoll_vorgangsbezuege.extend(
@@ -52,6 +54,4 @@ class DIPBundestagPlenarprotokollImporter:
             _logger.info(
                 "Add vorgangsbezuge for plenarprotokoll with id %d to database.", plenarprotokoll.id
             )
-            CRUD_DIP_Plenarprotokoll_VORGANGSBEZUG.create_or_update_multi(
-                DIPPlenarprotokollVorgangsbezug(plenarprotokoll_vorgangsbezuege)
-            )
+            CRUD_DIP_Plenarprotokoll_VORGANGSBEZUG.create_or_update_multi(obj_in_list=[DIPPlenarprotokollVorgangsbezug(id=element.id, titel=element.titel, abstract=element.abstract, datum=element.datum) for element in plenarprotokoll_vorgangsbezuege])
