@@ -15,10 +15,10 @@ from backend.app.models.deutscher_bundestag.drucksache_model import (
     DIPVorgangsbezug,
 )
 from backend.app.models.deutscher_bundestag.fundstelle_model import DIPFundstelle
-from backend.app.models.deutscher_bundestag.ressort_model import DIPRessort
-from backend.app.models.deutscher_bundestag.plenarprotokoll_model import (
+from backend.app.models.deutscher_bundestag.plenarprotokoll_model import (  # flake8: noqa
     DIPPlenarprotokoll,
-)  # flake8: noqa
+)
+from backend.app.models.deutscher_bundestag.ressort_model import DIPRessort
 from backend.app.models.deutscher_bundestag.urheber_model import DIPUrheber
 from backend.app.models.deutscher_bundestag.vorgang_model import (
     DIPInkrafttreten,

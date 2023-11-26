@@ -7,11 +7,11 @@ from backend.app.models.deutscher_bundestag.drucksache_model import (
 )
 from backend.app.models.deutscher_bundestag.drucksache_model import (
     DIPDrucksache,  # pylint: disable=unused-import
-    DIPDrucksacheText,
 )
 from backend.app.models.deutscher_bundestag.drucksache_model import (
     DIPVorgangsbezug,  # pylint: disable=unused-import; pylint: disable=unused-import
 )
+from backend.app.models.deutscher_bundestag.drucksache_model import DIPDrucksacheText
 from backend.app.models.deutscher_bundestag.fundstelle_model import (  # pylint: disable=unused-import
     DIPFundstelle,
 )

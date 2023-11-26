@@ -11,9 +11,7 @@ from backend.app.facades.deutscher_bundestag.model import Plenarprotokoll
 from backend.app.facades.deutscher_bundestag.model_plenarprotokoll_vorgangsbezug import (
     PlenarprotokollVorgangsbezug,
 )
-from backend.app.models.deutscher_bundestag.plenarprotokoll_model import (
-    DIPVorgangsbezug,
-)
+from backend.app.models.deutscher_bundestag.plenarprotokoll_model import DIPVorgangsbezug
 
 _logger = logging.getLogger(__name__)
 

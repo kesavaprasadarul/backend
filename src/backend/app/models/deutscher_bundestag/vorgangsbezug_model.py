@@ -2,7 +2,7 @@ from sqlalchemy import ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column
 
 from backend.app.db.database import Base
-from backend.app.models.deutscher_bundestag.common import DIPSchema, TimestampMixin, SchemaNames
+from backend.app.models.deutscher_bundestag.common import DIPSchema, SchemaNames, TimestampMixin
 
 
 class DIPVorgangsbezug(Base, TimestampMixin, DIPSchema):
