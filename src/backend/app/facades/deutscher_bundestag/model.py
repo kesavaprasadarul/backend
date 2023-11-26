@@ -365,9 +365,8 @@ class Vorgang(BaseModel):
 
 
 class Fundstelle(BaseModel):
-    id: int = Field(
-        ...,
-        description='ID einer Drucksache oder eines Plenarprotokolls',
+    fk_id: int = Field(
+        ..., description='ID einer Drucksache oder eines Plenarprotokolls', alias='id'
     )
     dokumentart: Dokumentart = Field(
         ...,
