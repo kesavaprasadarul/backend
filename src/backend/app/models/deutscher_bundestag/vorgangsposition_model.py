@@ -32,7 +32,7 @@ class DIPVorgangsposition(Base, TimestampMixin, DIPSchema):
     typ: Mapped[VorgangspositionTyp] = mapped_column(nullable=False)
     titel: Mapped[str] = mapped_column(nullable=False)
     dokumentart: Mapped[Dokumentart] = mapped_column(nullable=False)
-    vorgang_id: Mapped[int] = mapped_column(ForeignKey("dip.vorgang.id"), nullable=False)
+    vorgang_id: Mapped[int] = mapped_column(nullable=False)
     datum: Mapped[dt.date] = mapped_column(nullable=False)
     aktualisiert: Mapped[dt.datetime] = mapped_column(nullable=False)
     aktivitaet_anzahl: Mapped[int] = mapped_column(nullable=False)
@@ -69,9 +69,9 @@ class DIPVorgangsposition(Base, TimestampMixin, DIPSchema):
         cascade='merge, save-update, delete, delete-orphan'
     )
 
-    vorgangspositionbezug: Mapped[list["DIPVorgangspositionBezug"]] = relationship(
+    vorgangspositionbezug: Mapped[list["DIPVorgangspositionbezug"]] = relationship(
         cascade='merge, save-update, delete, delete-orphan',
-        foreign_keys="DIPVorgangspositionBezug.from_vorgangsposition_id",
+        foreign_keys="DIPVorgangspositionbezug.vorgangsposition_id",
     )
 
 
@@ -86,7 +86,7 @@ class DIPUeberweisung(Base, TimestampMixin, DIPSchema):
     )
 
     ausschuss: Mapped[str] = mapped_column(nullable=False)
-    auschuss_kuerzel: Mapped[str] = mapped_column(nullable=False)
+    ausschuss_kuerzel: Mapped[str] = mapped_column(nullable=False)
     federfuehrung: Mapped[bool] = mapped_column(nullable=False)
     ueberweisungsart: Mapped[str] = mapped_column(nullable=True)
 
@@ -125,17 +125,18 @@ class DIPBeschlussfassung(Base, TimestampMixin, DIPSchema):
     mehrheit: Mapped[Mehrheit] = mapped_column(nullable=True)
 
 
-class DIPVorgangspositionBezug(Base, TimestampMixin, DIPSchema):
+class DIPVorgangspositionbezug(Base, TimestampMixin, DIPSchema):
     """Table attributes for Model/Relation/Table vorgangspositionbezug."""
 
-    __tablename__ = "vorgangsposition_bezug"
+    __tablename__ = "vorgangspositionbezug"
 
     id: Mapped[int] = mapped_column(primary_key=True)  # database id
-    from_vorgangsposition_id: Mapped[int] = mapped_column(
+    vorgangsposition_id: Mapped[int] = mapped_column(
         ForeignKey("dip.vorgangsposition.id"), nullable=False
     )
+    from_vorgang_id: Mapped[int] = mapped_column(nullable=False)
 
-    to_vorgangsposition_id: Mapped[int] = mapped_column(nullable=False)
+    to_vorgang_id: Mapped[int] = mapped_column(nullable=False)
 
     titel: Mapped[str] = mapped_column(nullable=False)
     vorgangstyp: Mapped[str] = mapped_column(nullable=False)

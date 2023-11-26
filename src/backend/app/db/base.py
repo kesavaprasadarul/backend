@@ -21,7 +21,7 @@ from backend.app.models.deutscher_bundestag.vorgangsposition_model import (  # p
     DIPVorgangsposition,
     DIPAktivitaetAnzeige,
     DIPUeberweisung,
-    DIPVorgangspositionBezug,
+    DIPVorgangspositionbezug,
     DIPBeschlussfassung,
 )  # pylint: disable=unused-import
 

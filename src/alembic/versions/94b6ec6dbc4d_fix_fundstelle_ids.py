@@ -71,10 +71,6 @@ def upgrade() -> None:
         sa.Column('abstract', sa.String(), nullable=True),
         sa.Column('created_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
         sa.Column('updated_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-        sa.ForeignKeyConstraint(
-            ['vorgang_id'],
-            ['dip.vorgang.id'],
-        ),
         sa.PrimaryKeyConstraint('id'),
         schema='dip',
     )
@@ -207,7 +203,7 @@ def upgrade() -> None:
         sa.Column('id', sa.Integer(), nullable=False),
         sa.Column('vorgangsposition_id', sa.Integer(), nullable=False),
         sa.Column('ausschuss', sa.String(), nullable=False),
-        sa.Column('auschuss_kuerzel', sa.String(), nullable=False),
+        sa.Column('ausschuss_kuerzel', sa.String(), nullable=False),
         sa.Column('federfuehrung', sa.Boolean(), nullable=False),
         sa.Column('ueberweisungsart', sa.String(), nullable=True),
         sa.Column('created_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
@@ -221,17 +217,18 @@ def upgrade() -> None:
     )
 
     op.create_table(
-        'vorgangsposition_bezug',
+        'vorgangspositionbezug',
         sa.Column('id', sa.Integer(), nullable=False),
-        sa.Column('from_vorgangsposition_id', sa.Integer(), nullable=False),
-        sa.Column('to_vorgangsposition_id', sa.Integer(), nullable=False),
+        sa.Column('vorgangsposition_id', sa.Integer(), nullable=False),
+        sa.Column('from_vorgang_id', sa.Integer(), nullable=False),
+        sa.Column('to_vorgang_id', sa.Integer(), nullable=False),
         sa.Column('titel', sa.String(), nullable=False),
         sa.Column('vorgangstyp', sa.String(), nullable=False),
         sa.Column('vorgangsposition', sa.String(), nullable=False),
         sa.Column('created_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
         sa.Column('updated_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
         sa.ForeignKeyConstraint(
-            ['from_vorgangsposition_id'],
+            ['vorgangsposition_id'],
             ['dip.vorgangsposition.id'],
         ),
         sa.PrimaryKeyConstraint('id'),
@@ -241,7 +238,7 @@ def upgrade() -> None:
 
 
 def downgrade() -> None:
-    op.drop_table('vorgangsposition_bezug', schema='dip')
+    op.drop_table('vorgangspositionbezug', schema='dip')
     op.drop_table('ueberweisung', schema='dip')
     op.drop_table('beschlussfassung', schema='dip')
 
@@ -271,6 +268,8 @@ def downgrade() -> None:
         schema='dip',
     )
 
+    op.execute("DELETE FROM dip.urheber WHERE drucksache_id IS NULL;")
+
     op.alter_column(
         'urheber',
         'drucksache_id',
@@ -290,6 +289,8 @@ def downgrade() -> None:
         schema='dip',
     )
 
+    op.execute("DELETE FROM dip.ressort WHERE drucksache_id IS NULL;")
+
     op.alter_column(
         'ressort',
         'drucksache_id',
@@ -308,6 +309,8 @@ def downgrade() -> None:
         'vorgangsposition_id',
         schema='dip',
     )
+
+    op.execute("DELETE FROM dip.fundstelle WHERE drucksache_id IS NULL;")
 
     op.alter_column(
         'fundstelle',

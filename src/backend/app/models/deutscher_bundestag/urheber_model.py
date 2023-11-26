@@ -1,4 +1,4 @@
-from sqlalchemy.orm import Mapped, mapped_column, relationship
+from sqlalchemy.orm import Mapped, mapped_column
 from sqlalchemy import ForeignKey
 from backend.app.db.database import Base
 from backend.app.facades.deutscher_bundestag.model import Rolle

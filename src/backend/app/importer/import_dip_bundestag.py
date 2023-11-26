@@ -32,7 +32,7 @@ from backend.app.models.deutscher_bundestag.vorgangsposition_model import (
     DIPVorgangsposition,
     DIPAktivitaetAnzeige,
     DIPUeberweisung,
-    DIPVorgangspositionBezug,
+    DIPVorgangspositionbezug,
     DIPBeschlussfassung,
 )
 
@@ -146,6 +146,21 @@ def import_vorgangsposition(vorgangsposition: Vorgangsposition):
         else []
     )
 
+    dip_vorgangspositionbezug = (
+        [
+            DIPVorgangspositionbezug(
+                **vorgangspositionbezug.model_dump(
+                    exclude={'id'},
+                ),
+                from_vorgang_id=vorgangsposition.vorgang_id,
+                to_vorgang_id=vorgangspositionbezug.id,
+            )
+            for vorgangspositionbezug in vorgangsposition.mitberaten
+        ]
+        if vorgangsposition.mitberaten
+        else []
+    )
+
     dip_ueberweisung = (
         [
             DIPUeberweisung(**ueberweisung.model_dump())
@@ -191,6 +206,7 @@ def import_vorgangsposition(vorgangsposition: Vorgangsposition):
                 'fundstelle',
                 'urheber',
                 'ressort',
+                'mitberaten',
             }
         ),
         aktivitaet_anzeige=dip_aktivitaet_anzeige,
@@ -199,6 +215,7 @@ def import_vorgangsposition(vorgangsposition: Vorgangsposition):
         fundstelle=dip_fundstelle,
         urheber=dip_urheber,
         ressort=dip_ressort,
+        vorgangspositionbezug=dip_vorgangspositionbezug,
     )
 
     CRUD_DIP_VORGANGSPOSITION.create_or_update(vorgangsposition)
