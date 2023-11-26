@@ -1,39 +1,31 @@
+from backend.app.core.config import settings
 from backend.app.crud.CRUDDIPBundestag.crud_drucksache import CRUD_DIP_DRUCKSACHE
 from backend.app.crud.CRUDDIPBundestag.crud_vorgang import CRUD_DIP_VORGANG
 from backend.app.crud.CRUDDIPBundestag.crud_vorgangsposition import CRUD_DIP_VORGANGSPOSITION
 from backend.app.facades.deutscher_bundestag.facade import DIPBundestagFacade
-from backend.app.facades.facade import (
-    Auth,
-    AuthType,
-)
-from backend.app.core.config import settings
-
 from backend.app.facades.deutscher_bundestag.model import Drucksache, Vorgang, Vorgangsposition
-
-from backend.app.models.deutscher_bundestag.ressort_model import DIPRessort
-from backend.app.models.deutscher_bundestag.urheber_model import DIPUrheber
-from backend.app.models.deutscher_bundestag.fundstelle_model import DIPFundstelle
-
+from backend.app.facades.facade import Auth, AuthType
 from backend.app.models.deutscher_bundestag.drucksache_model import (
+    DIPAutor,
     DIPDrucksache,
     DIPVorgangsbezug,
-    DIPAutor,
 )
-
+from backend.app.models.deutscher_bundestag.fundstelle_model import DIPFundstelle
+from backend.app.models.deutscher_bundestag.ressort_model import DIPRessort
+from backend.app.models.deutscher_bundestag.urheber_model import DIPUrheber
 from backend.app.models.deutscher_bundestag.vorgang_model import (
-    DIPVorgang,
     DIPInkrafttreten,
     DIPVerkuendung,
+    DIPVorgang,
     DIPVorgangDeskriptor,
     DIPVorgangVerlinkung,
 )
-
 from backend.app.models.deutscher_bundestag.vorgangsposition_model import (
-    DIPVorgangsposition,
     DIPAktivitaetAnzeige,
-    DIPUeberweisung,
-    DIPVorgangspositionbezug,
     DIPBeschlussfassung,
+    DIPUeberweisung,
+    DIPVorgangsposition,
+    DIPVorgangspositionbezug,
 )
 
 

@@ -5,9 +5,16 @@ import typing as t
 
 import requests
 
-
 from backend.app.core.config import Settings
-from backend.app.facades.deutscher_bundestag.model import Drucksache, Vorgang, Vorgangsposition
+from backend.app.facades.deutscher_bundestag.model import (
+    Drucksache,
+    Plenarprotokoll,
+    Vorgang,
+    Vorgangsposition,
+)
+from backend.app.facades.deutscher_bundestag.model_plenarprotokoll_vorgangsbezug import (
+    PlenarprotokollVorgangsbezug,
+)
 from backend.app.facades.facade import (
     PAGINATION_CONTENT_ARGS_REST,
     Auth,
@@ -17,6 +24,7 @@ from backend.app.facades.facade import (
     Page,
     PageCursor,
 )
+from backend.app.models.deutscher_bundestag import plenarprotokoll_model
 
 _logger = logging.getLogger(__name__)
 
@@ -111,10 +119,10 @@ class DIPBundestagFacade(HttpFacade):
                 Updated later than since_date, in format YYYY-MM-DDTHH:mm:ss, e.g.2023-11-14T04:28:00.
 
         Returns:
-            drucksachen (list[TServicedeskApiIssueType]):
-                A list of TServicedeskApiIssueType objects.
+            drucksachen (list[Drucksache]):
+                A list of Drucksache objects.
         """
-        _logger.info("Fetching plenarprotokolle.")
+        _logger.info("Fetching drucksachen.")
 
         drucksachen = [
             Drucksache.model_validate(drucksache)
@@ -163,6 +171,39 @@ class DIPBundestagFacade(HttpFacade):
 
         return vorgange
 
+    def get_vorgangsbezuege_of_plenarprotokoll_by_id(
+        self, plenarprotokoll_id: int
+    ) -> list[PlenarprotokollVorgangsbezug]:
+        """Get vorgangsbezuege of a a given plenarprotokoll (by id).
+
+        Required for getting content of plenarprotokoll, because vorgangsbezuege lists
+        vorgangsbezuege with title and abstract information which will be leveraged for wordcloud
+        analyzer.
+
+        Args:
+            plenarprotokoll_id (int): id of a plenarprotokoll
+
+        Returns:
+            list[PlenarprotokollVorgangsbezug]: list of PlenarprotokollVorgangsbezug objects, reduced to only relevant data needed.
+        """
+
+        _logger.info("Fetching vorgangsbezuege of plenaprotokoll with id %d.", plenarprotokoll_id)
+
+        vorgangsbezuege_of_plenarprotokoll = [
+            PlenarprotokollVorgangsbezug.model_validate(plenarprotokoll_vorgangsbezug)
+            for plenarprotokoll_vorgangsbezug in self._do_paginated_request(
+                http.HTTPMethod.GET,
+                '/api/v1/vorgang',
+                page_args_path=PAGINATION_CONTENT_ARGS_REST,
+                content_identifier='documents',
+                params={
+                    "f.plenarprotokoll": plenarprotokoll_id,
+                },
+            )
+        ]
+
+        return vorgangsbezuege_of_plenarprotokoll
+
     def get_vorgangspositionen(
         self, since_datetime: str, request_limit: t.Optional[int] = None
     ) -> list[Vorgangsposition]:
@@ -193,3 +234,40 @@ class DIPBundestagFacade(HttpFacade):
         ]
 
         return vorgangspositionen
+
+    def get_plenarprotokolle(
+        self, wahlperiode: int = 20, zuordnung: str = "BT"
+    ) -> list[Plenarprotokoll]:
+        """Get Plenarprotokolle.
+        https://search.dip.bundestag.de/api/v1/swagger-ui/#/Plenarprotokolle/getPlenarprotokollList
+
+        Args:
+            wahlperiode (int):
+                Number of wahlperiode, currently (2023) it is wahlperiode 20, which is also the default.
+            zuordnung (str):
+                Possible values are, BT, BR, BV, EK. Default is BT for Bundestag.
+                (For now only the only part we are interested, that's why BT set as default.)
+        Returns:
+            plenarprotokolle (list[Plenarprotokoll]):
+                A list of Plenarprotokoll objects.
+
+        """
+
+        _logger.info("Get plenarprotkolle")
+
+        plenarprotokolle = [
+            Plenarprotokoll.model_validate(plenarprotokoll)
+            for plenarprotokoll in self._do_paginated_request(
+                http.HTTPMethod.GET,
+                '/api/v1/plenarprotokoll',
+                page_args_path=PAGINATION_CONTENT_ARGS_REST,
+                content_identifier='documents',
+                params={
+                    "f.zuordnung": zuordnung,
+                    "f.wahlperiode": wahlperiode,
+                },
+            )
+        ]
+        _logger.info(plenarprotokolle)
+
+        return plenarprotokolle
