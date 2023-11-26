@@ -16,6 +16,9 @@ from backend.app.models.deutscher_bundestag.drucksache_model import (
 )
 from backend.app.models.deutscher_bundestag.fundstelle_model import DIPFundstelle
 from backend.app.models.deutscher_bundestag.ressort_model import DIPRessort
+from backend.app.models.deutscher_bundestag.plenarprotokoll_model import (
+    DIPPlenarprotokoll,
+)  # flake8: noqa
 from backend.app.models.deutscher_bundestag.urheber_model import DIPUrheber
 from backend.app.models.deutscher_bundestag.vorgang_model import (
     DIPInkrafttreten,
@@ -53,7 +56,9 @@ def drucksache_transform_to_db_model(drucksache: Drucksache) -> DIPDrucksache:
 
     dip_vorgangsbezug = (
         [
-            DIPVorgangsbezug(**vorgangsbezug.model_dump())
+            DIPVorgangsbezug(
+                **vorgangsbezug.model_dump(exclude={'id'}), vorgang_id=vorgangsbezug.id
+            )
             for vorgangsbezug in drucksache.vorgangsbezug
         ]
         if drucksache.vorgangsbezug

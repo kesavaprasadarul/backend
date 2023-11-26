@@ -1,12 +1,17 @@
 """Deutscher Bundestag Drucksache SQLAlchemy Models for creating associated tables in database."""
 import datetime
 
-from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy.orm import Mapped, mapped_column, relationship
+from sqlalchemy import ForeignKey
 
 from backend.app.db.database import Base
 
+from backend.app.models.deutscher_bundestag.common import DIPSchema, TimestampMixin
+from backend.app.models.deutscher_bundestag.fundstelle_model import DIPFundstelle
+from backend.app.models.deutscher_bundestag.vorgangsbezug_model import DIPVorgangsbezug
 
-class DIPPlenarprotokoll(Base):
+
+class DIPPlenarprotokoll(Base, DIPSchema, TimestampMixin):
     """Table attributes for Model/Relation/Table plenarprotokoll."""
 
     __tablename__ = "plenarprotokoll"
@@ -24,14 +29,32 @@ class DIPPlenarprotokoll(Base):
     pdf_hash: Mapped[str] = mapped_column(nullable=True)
     vorgangsbezug_anzahl: Mapped[int] = mapped_column(nullable=False)
 
+    fundstelle: Mapped["DIPFundstelle"] = relationship(
+        cascade='merge, save-update, delete, delete-orphan',
+        back_populates="plenarprotokoll",
+        foreign_keys="DIPFundstelle.plenarprotokoll_id",
+    )
 
-class DIPPlenarprotokollVorgangsbezug(Base):
-    """Table attributes for Model/Relation/Table plenarprotokoll vorgangsbezug."""
+    vorgangsbezug: Mapped[list["DIPVorgangsbezug"]] = relationship(
+        cascade='merge, save-update, delete, delete-orphan',
+        foreign_keys="DIPVorgangsbezug.plenarprotokoll_id",
+    )
 
-    __tablename__ = "plenarprotokoll_vorgangsbezug"
+    plenarprotokoll_text: Mapped["DIPPlenarprotokollText"] = relationship(
+        cascade='merge, save-update, delete, delete-orphan',
+        back_populates="plenarprotokoll",
+    )
 
-    id: Mapped[int] = mapped_column(primary_key=True)
-    plenarprotokoll_id: Mapped[int] = mapped_column(nullable=True)
-    titel: Mapped[str] = mapped_column(nullable=False)
-    abstract: Mapped[str] = mapped_column(nullable=False)
-    datum: Mapped[datetime.date] = mapped_column(nullable=False)
+
+class DIPPlenarprotokollText(Base, TimestampMixin, DIPSchema):
+    __tablename__ = "plenarprotokoll_text"
+
+    id: Mapped[int] = mapped_column(primary_key=True)  # database id
+    plenarprotokoll_id: Mapped[int] = mapped_column(
+        ForeignKey("dip.plenarprotokoll.id"), nullable=False
+    )
+    text: Mapped[str] = mapped_column(nullable=False)
+
+    plenarprotokoll: Mapped["DIPPlenarprotokoll"] = relationship(
+        "DIPPlenarprotokoll", back_populates="plenarprotokoll_text"
+    )

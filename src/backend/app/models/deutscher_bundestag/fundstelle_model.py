@@ -27,6 +27,11 @@ class DIPFundstelle(Base, TimestampMixin, DIPSchema):
         nullable=True,
     )
 
+    plenarprotokoll_id: Mapped[int] = mapped_column(
+        ForeignKey(f"{SchemaNames.DEUTSCHER_BUNDESTAG}.plenarprotokoll.id"),
+        nullable=True,
+    )
+
     dokumentart: Mapped[Dokumentart] = mapped_column(nullable=False)
     pdf_url: Mapped[str] = mapped_column(nullable=True)
     dokumentnummer: Mapped[str] = mapped_column(nullable=False)
@@ -48,3 +53,5 @@ class DIPFundstelle(Base, TimestampMixin, DIPSchema):
     drucksache = relationship("DIPDrucksache", back_populates="fundstelle")
 
     vorgangsposition = relationship("DIPVorgangsposition", back_populates="fundstelle")
+
+    plenarprotokoll = relationship("DIPPlenarprotokoll", back_populates="fundstelle")

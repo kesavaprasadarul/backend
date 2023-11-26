@@ -12,7 +12,7 @@ from backend.app.facades.deutscher_bundestag.model_plenarprotokoll_vorgangsbezug
     PlenarprotokollVorgangsbezug,
 )
 from backend.app.models.deutscher_bundestag.plenarprotokoll_model import (
-    DIPPlenarprotokollVorgangsbezug,
+    DIPVorgangsbezug,
 )
 
 _logger = logging.getLogger(__name__)
@@ -56,8 +56,9 @@ class DIPBundestagPlenarprotokollImporter:
             )
             CRUD_DIP_Plenarprotokoll_VORGANGSBEZUG.create_or_update_multi(
                 obj_in_list=[
-                    DIPPlenarprotokollVorgangsbezug(
-                        id=element.id,
+                    DIPVorgangsbezug(
+                        vorgang_id=element.id,
+                        plenarprotokoll_id=plenarprotokoll.id,
                         titel=element.titel,
                         abstract=element.abstract,
                         datum=element.datum,
