@@ -5,6 +5,7 @@
 from backend.app.models.deutscher_bundestag.drucksache_model import (  # pylint: disable=unused-import
     DIPAutor,
     DIPDrucksacheText,
+    DIPDrucksache,
 )
 from backend.app.models.deutscher_bundestag.vorgangsposition_model import (  # pylint: disable=unused-import
     DIPVorgangsposition,
