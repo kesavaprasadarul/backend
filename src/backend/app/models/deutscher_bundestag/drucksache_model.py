@@ -1,18 +1,21 @@
 """Deutscher Bundestag Drucksache SQLAlchemy Models for creating associated tables in database."""
-from sqlalchemy.orm import Mapped, mapped_column, relationship
+import datetime as dt
+
 from sqlalchemy import ForeignKey
+from sqlalchemy.orm import Mapped, mapped_column, relationship
+
 from backend.app.db.database import Base
-from backend.app.models.config import SchemaNames
 from backend.app.facades.deutscher_bundestag.model import (
-    DokumentTyp,
     DokumentartDrucksache,
+    DokumentTyp,
     Herausgeber,
 )
-import datetime as dt
+from backend.app.models.config import SchemaNames
 from backend.app.models.deutscher_bundestag.common import DIPSchema, TimestampMixin
 from backend.app.models.deutscher_bundestag.fundstelle_model import DIPFundstelle
-from backend.app.models.deutscher_bundestag.urheber_model import DIPUrheber
 from backend.app.models.deutscher_bundestag.ressort_model import DIPRessort
+from backend.app.models.deutscher_bundestag.urheber_model import DIPUrheber
+from backend.app.models.deutscher_bundestag.vorgangsbezug_model import DIPVorgangsbezug
 
 
 class DIPDrucksache(Base, TimestampMixin, DIPSchema):
@@ -59,17 +62,10 @@ class DIPDrucksache(Base, TimestampMixin, DIPSchema):
         foreign_keys="DIPRessort.drucksache_id",
     )
 
-
-class DIPVorgangsbezug(Base, TimestampMixin, DIPSchema):
-    __tablename__ = "vorgangsbezug"
-
-    id: Mapped[int] = mapped_column(primary_key=True)  # database id
-    drucksache_id: Mapped[int] = mapped_column(
-        ForeignKey(f"{SchemaNames.DEUTSCHER_BUNDESTAG}.drucksache.id"), nullable=False
+    drucksache_text: Mapped["DIPDrucksacheText"] = relationship(
+        cascade='merge, save-update, delete, delete-orphan',
+        back_populates="drucksache",
     )
-
-    titel: Mapped[str] = mapped_column(nullable=False)
-    vorgangstyp: Mapped[str] = mapped_column(nullable=False)
 
 
 class DIPAutor(Base, TimestampMixin, DIPSchema):
@@ -81,3 +77,17 @@ class DIPAutor(Base, TimestampMixin, DIPSchema):
     )
     titel: Mapped[str] = mapped_column(nullable=False)
     autor_titel: Mapped[str] = mapped_column(nullable=False)
+
+
+class DIPDrucksacheText(Base, TimestampMixin, DIPSchema):
+    __tablename__ = "drucksache_text"
+
+    id: Mapped[int] = mapped_column(primary_key=True)  # database id
+    drucksache_id: Mapped[int] = mapped_column(
+        ForeignKey(f"{SchemaNames.DEUTSCHER_BUNDESTAG}.drucksache.id"), nullable=False
+    )
+    text: Mapped[str] = mapped_column(nullable=False)
+
+    drucksache: Mapped["DIPDrucksache"] = relationship(
+        "DIPDrucksache", back_populates="drucksache_text"
+    )

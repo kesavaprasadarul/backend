@@ -1,14 +1,12 @@
-from sqlalchemy.orm import Mapped, mapped_column, relationship
+import datetime as dt
+
 from sqlalchemy import ForeignKey, Text
 from sqlalchemy.dialects.postgresql import ARRAY
+from sqlalchemy.orm import Mapped, mapped_column, relationship
+
 from backend.app.db.database import Base
+from backend.app.facades.deutscher_bundestag.model import Dokumentart, Quadrant, Zuordnung
 from backend.app.models.config import SchemaNames
-from backend.app.facades.deutscher_bundestag.model import (
-    Dokumentart,
-    Zuordnung,
-    Quadrant,
-)
-import datetime as dt
 from backend.app.models.deutscher_bundestag.common import DIPSchema, TimestampMixin
 
 # from backend.app.models.deutscher_bundestag.drucksache_model import DIPDrucksache
@@ -26,6 +24,11 @@ class DIPFundstelle(Base, TimestampMixin, DIPSchema):
 
     vorgangsposition_id: Mapped[int] = mapped_column(
         ForeignKey(f"{SchemaNames.DEUTSCHER_BUNDESTAG}.vorgangsposition.id"),
+        nullable=True,
+    )
+
+    plenarprotokoll_id: Mapped[int] = mapped_column(
+        ForeignKey(f"{SchemaNames.DEUTSCHER_BUNDESTAG}.plenarprotokoll.id"),
         nullable=True,
     )
 
@@ -50,3 +53,5 @@ class DIPFundstelle(Base, TimestampMixin, DIPSchema):
     drucksache = relationship("DIPDrucksache", back_populates="fundstelle")
 
     vorgangsposition = relationship("DIPVorgangsposition", back_populates="fundstelle")
+
+    plenarprotokoll = relationship("DIPPlenarprotokoll", back_populates="fundstelle")

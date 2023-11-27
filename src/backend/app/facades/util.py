@@ -1,16 +1,82 @@
 """Facade util functions."""
 import contextlib
 import logging
+import random
 import time
 import traceback
 import typing as t
 
+import pydantic as pyd
 import requests
 
 _logger = logging.getLogger(__name__)
 
-ATTEMPT_AFTER_SECONDS = (0, 30, 60)
+ATTEMPT_AFTER_SECONDS = (0, 15, 30)
 """Number of seconds to wait before next attempt to call with retries."""
+
+
+class ProxyListEmptyError(Exception):
+    """Raised when proxy list is empty."""
+
+
+class Proxy(pyd.BaseModel):
+    """The proxy to be used."""
+
+    url: str
+
+
+class ProxyList:
+    """The list of proxies to be used."""
+
+    original_proxies: list[Proxy]
+    proxies: list[Proxy]
+
+    current_proxy: Proxy | None = None
+
+    def __init__(self, proxies: list[Proxy]):
+        self.original_proxies = proxies.copy()
+        self.proxies = proxies.copy()
+
+    def set_random_proxy(self, drop_previous: bool = True):
+        """Get a randomly sampled proxy from the list."""
+
+        if len(self.proxies) == 0:
+            raise ProxyListEmptyError('No proxies available.')
+
+        if drop_previous and self.current_proxy:
+            self.proxies.remove(self.current_proxy)
+
+        self.current_proxy = random.choice(self.proxies)
+
+    def get_proxy(self) -> Proxy:
+        """Get the current proxy from the list."""
+        if self.current_proxy:
+            return self.current_proxy
+
+        self.set_random_proxy()
+
+        if not self.current_proxy:
+            raise ProxyListEmptyError('No proxy available.')
+
+        return self.current_proxy
+
+    def __len__(self) -> int:
+        """Get the length of the list."""
+        return len(self.proxies)
+
+    def __getitem__(self, index: int) -> Proxy:
+        """Get a proxy from the list."""
+        return self.proxies[index]
+
+    @classmethod
+    def from_url(cls, proxy_url: str) -> t.Self:
+        """Get a proxy list instance from a url."""
+        proxies = []
+        with requests.get(proxy_url) as response:
+            for line in response.iter_lines():
+                if line:
+                    proxies.append(Proxy(url=line.decode('utf-8')))
+        return cls(proxies)
 
 
 def call_with_retries(
@@ -55,7 +121,16 @@ def call_with_retries(
             if attempt >= num_attempts:
                 _logger.error('All attempts failed.')
                 return retval
-
+        except requests.exceptions.ProxyError as ex:
+            text = get_http_exception_text(ex)
+            _logger.warning(
+                'Attempt failed due to proxy error, %d left. %s: %s',
+                attempt,
+                num_attempts - attempt,
+                type(ex).__name__,
+                f'{ex}\n{text}' if text else ex,
+            )
+            raise
         # want to catch all other exceptions but also print it to log:
         except Exception as ex:  # pylint: disable=broad-except  # catch-all clause intended
             text = get_http_exception_text(ex)

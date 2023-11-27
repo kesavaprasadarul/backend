@@ -8,7 +8,9 @@ import requests
 from backend.app.core.config import Settings
 from backend.app.facades.deutscher_bundestag.model import (
     Drucksache,
+    DrucksacheText,
     Plenarprotokoll,
+    PlenarprotokollText,
     Vorgang,
     Vorgangsposition,
 )
@@ -24,7 +26,7 @@ from backend.app.facades.facade import (
     Page,
     PageCursor,
 )
-from backend.app.models.deutscher_bundestag import plenarprotokoll_model
+from backend.app.facades.util import ProxyList
 
 _logger = logging.getLogger(__name__)
 
@@ -66,7 +68,8 @@ class DIPBundestagFacade(HttpFacade):
         page_args_path: tuple,
         content_identifier: str,
         params: dict | None = None,
-        request_limit: t.Optional[int] = None,
+        proxy_list: ProxyList | None = None,
+        response_limit: t.Optional[int] = None,
         **kwargs,
     ) -> t.Iterator[dict]:
         """Helper to execute paginated request for REST API."""
@@ -95,7 +98,8 @@ class DIPBundestagFacade(HttpFacade):
             unpack_page=unpack_page,
             get_next_page_cursor=get_next_page_cursor,
             params=params,
-            request_limit=request_limit,
+            proxy_list=proxy_list,
+            response_limit=response_limit,
             page_args_path=page_args_path,
             **kwargs,
         )
@@ -110,66 +114,99 @@ class DIPBundestagFacade(HttpFacade):
         return cls(base_url=configuration.DIP_BUNDESTAG_BASE_URL, auth=auth)
 
     def get_drucksachen(
-        self, since_datetime: str, request_limit: t.Optional[int] = None
-    ) -> list[Drucksache]:
+        self,
+        since_datetime: str,
+        response_limit: t.Optional[int] = None,
+        proxy_list: ProxyList | None = None,
+    ) -> t.Iterator[Drucksache]:
         """Get Drucksachen.
+        https://search.dip.bundestag.de/api/v1/swagger-ui/#/Drucksachen/getDrucksacheList
 
         Args:
             since_datetime
                 Updated later than since_date, in format YYYY-MM-DDTHH:mm:ss, e.g.2023-11-14T04:28:00.
 
         Returns:
-            drucksachen (list[Drucksache]):
-                A list of Drucksache objects.
+            drucksachen (Iterator[Drucksache]):
+                An iterator of Drucksache objects.
         """
         _logger.info("Fetching drucksachen.")
 
-        drucksachen = [
-            Drucksache.model_validate(drucksache)
-            for drucksache in self._do_paginated_request(
-                http.HTTPMethod.GET,
-                '/api/v1/drucksache',
-                page_args_path=PAGINATION_CONTENT_ARGS_REST,
-                content_identifier='documents',
-                params={
-                    "f.aktualisiert.start": since_datetime,
-                },
-                request_limit=request_limit,
-            )
-        ]
+        for drucksache in self._do_paginated_request(
+            http.HTTPMethod.GET,
+            '/api/v1/drucksache',
+            page_args_path=PAGINATION_CONTENT_ARGS_REST,
+            content_identifier='documents',
+            params={
+                "f.aktualisiert.start": since_datetime,
+            },
+            response_limit=response_limit,
+            proxy_list=proxy_list,
+        ):
+            yield Drucksache.model_validate(drucksache)
 
-        return drucksachen
-
-    def get_vorgange(
-        self, since_datetime: str, request_limit: t.Optional[int] = None
-    ) -> list[Vorgang]:
-        """Get Vorgange.
+    def get_drucksachen_text(
+        self,
+        since_datetime: str,
+        response_limit: t.Optional[int] = None,
+        proxy_list: ProxyList | None = None,
+    ) -> t.Iterator[DrucksacheText]:
+        """Get Drucksachen-Text.
+        https://search.dip.bundestag.de/api/v1/swagger-ui/#/Drucksachen/getDrucksacheTextList
 
         Args:
             since_datetime
                 Updated later than since_date, in format YYYY-MM-DDTHH:mm:ss, e.g.2023-11-14T04:28:00.
 
         Returns:
-            vorgange (list[DIPBundestagApiVorgang]):
-                A list of DIPBundestagApiVorgang objects.
+            drucksachen_text (Iterator[DrucksacheText]): An iterator of DrucksacheText objects.
+        """
+
+        _logger.info("Fetching drucksachen.")
+
+        for drucksache_text in self._do_paginated_request(
+            http.HTTPMethod.GET,
+            '/api/v1/drucksache-text',
+            page_args_path=PAGINATION_CONTENT_ARGS_REST,
+            content_identifier='documents',
+            params={
+                "f.aktualisiert.start": since_datetime,
+            },
+            response_limit=response_limit,
+            proxy_list=proxy_list,
+        ):
+            yield DrucksacheText.model_validate(drucksache_text)
+
+    def get_vorgange(
+        self,
+        since_datetime: str,
+        response_limit: t.Optional[int] = None,
+        proxy_list: ProxyList | None = None,
+    ) -> t.Iterator[Vorgang]:
+        """Get Vorgange.
+        https://search.dip.bundestag.de/api/v1/swagger-ui/#/Vorg%C3%A4nge/getVorgangList
+
+        Args:
+            since_datetime
+                Updated later than since_date, in format YYYY-MM-DDTHH:mm:ss, e.g.2023-11-14T04:28:00.
+
+        Returns:
+            vorgange (Iterator[DIPBundestagApiVorgang]):
+                An iterator of DIPBundestagApiVorgang objects.
         """
         _logger.info("Fetching vorgange.")
 
-        vorgange = [
-            Vorgang.model_validate(vorgang)
-            for vorgang in self._do_paginated_request(
-                http.HTTPMethod.GET,
-                '/api/v1/vorgang',
-                page_args_path=PAGINATION_CONTENT_ARGS_REST,
-                content_identifier='documents',
-                params={
-                    "f.aktualisiert.start": since_datetime,
-                },
-                request_limit=request_limit,
-            )
-        ]
-
-        return vorgange
+        for vorgang in self._do_paginated_request(
+            http.HTTPMethod.GET,
+            '/api/v1/vorgang',
+            page_args_path=PAGINATION_CONTENT_ARGS_REST,
+            content_identifier='documents',
+            params={
+                "f.aktualisiert.start": since_datetime,
+            },
+            response_limit=response_limit,
+        ):
+            yield Vorgang.model_validate(vorgang)
 
     def get_vorgangsbezuege_of_plenarprotokoll_by_id(
         self, plenarprotokoll_id: int
@@ -205,39 +242,44 @@ class DIPBundestagFacade(HttpFacade):
         return vorgangsbezuege_of_plenarprotokoll
 
     def get_vorgangspositionen(
-        self, since_datetime: str, request_limit: t.Optional[int] = None
-    ) -> list[Vorgangsposition]:
+        self,
+        since_datetime: str,
+        response_limit: t.Optional[int] = None,
+        proxy_list: ProxyList | None = None,
+    ) -> t.Iterator[Vorgangsposition]:
         """Get Vorgangspositionen
+        https://search.dip.bundestag.de/api/v1/swagger-ui/#/Vorgangspositionen/getVorgangspositionList
 
         Args:
             since_datetime
                 Updated later than since_date, in format YYYY-MM-DDTHH:mm:ss, e.g.2023-11-14T04:28:00.
 
         Returns:
-            vorgange (list[DIPBundestagApiVorgang]):
-                A list of DIPBundestagApiVorgang objects.
+            vorgangsposition (Iterator[Vorgangsposition]):
+                An iterator of Vorgangsposition objects.
         """
         _logger.info("Fetching vorgange.")
 
-        vorgangspositionen = [
-            Vorgangsposition.model_validate(vorgangsposition)
-            for vorgangsposition in self._do_paginated_request(
-                http.HTTPMethod.GET,
-                '/api/v1/vorgangsposition',
-                page_args_path=PAGINATION_CONTENT_ARGS_REST,
-                content_identifier='documents',
-                params={
-                    "f.aktualisiert.start": since_datetime,
-                },
-                request_limit=request_limit,
-            )
-        ]
-
-        return vorgangspositionen
+        for vorgangsposition in self._do_paginated_request(
+            http.HTTPMethod.GET,
+            '/api/v1/vorgangsposition',
+            page_args_path=PAGINATION_CONTENT_ARGS_REST,
+            content_identifier='documents',
+            params={
+                "f.aktualisiert.start": since_datetime,
+            },
+            response_limit=response_limit,
+            proxy_list=proxy_list,
+        ):
+            yield Vorgangsposition.model_validate(vorgangsposition)
 
     def get_plenarprotokolle(
-        self, wahlperiode: int = 20, zuordnung: str = "BT"
-    ) -> list[Plenarprotokoll]:
+        self,
+        wahlperiode: int = 20,
+        zuordnung: str = "BT",
+        response_limit: int = 1000,
+        proxy_list: ProxyList | None = None,
+    ) -> t.Iterator[Plenarprotokoll]:
         """Get Plenarprotokolle.
         https://search.dip.bundestag.de/api/v1/swagger-ui/#/Plenarprotokolle/getPlenarprotokollList
 
@@ -248,26 +290,61 @@ class DIPBundestagFacade(HttpFacade):
                 Possible values are, BT, BR, BV, EK. Default is BT for Bundestag.
                 (For now only the only part we are interested, that's why BT set as default.)
         Returns:
-            plenarprotokolle (list[Plenarprotokoll]):
-                A list of Plenarprotokoll objects.
+            plenarprotokolle (Iterator[Plenarprotokoll]):
+                An iterator of Plenarprotokoll objects.
 
         """
 
         _logger.info("Get plenarprotkolle")
 
-        plenarprotokolle = [
-            Plenarprotokoll.model_validate(plenarprotokoll)
-            for plenarprotokoll in self._do_paginated_request(
-                http.HTTPMethod.GET,
-                '/api/v1/plenarprotokoll',
-                page_args_path=PAGINATION_CONTENT_ARGS_REST,
-                content_identifier='documents',
-                params={
-                    "f.zuordnung": zuordnung,
-                    "f.wahlperiode": wahlperiode,
-                },
-            )
-        ]
-        _logger.info(plenarprotokolle)
+        for plenarprotokoll in self._do_paginated_request(
+            http.HTTPMethod.GET,
+            '/api/v1/plenarprotokoll',
+            page_args_path=PAGINATION_CONTENT_ARGS_REST,
+            content_identifier='documents',
+            params={
+                "f.zuordnung": zuordnung,
+                "f.wahlperiode": wahlperiode,
+            },
+            response_limit=response_limit,
+            proxy_list=proxy_list,
+        ):
+            yield Plenarprotokoll.model_validate(plenarprotokoll)
 
-        return plenarprotokolle
+    def get_plenarprotokolle_text(
+        self,
+        wahlperiode: int = 20,
+        zuordnung: str = "BT",
+        response_limit: int = 1000,
+        proxy_list: ProxyList | None = None,
+    ) -> t.Iterator[PlenarprotokollText]:
+        """Get Plenarprotokolle-Text.
+        https://search.dip.bundestag.de/api/v1/swagger-ui/#/Plenarprotokolle/getPlenarprotokollTextList
+
+        Args:
+            wahlperiode (int):
+                Number of wahlperiode, currently (2023) it is wahlperiode 20, which is also the default.
+            zuordnung (str):
+                Possible values are, BT, BR, BV, EK. Default is BT for Bundestag.
+                (For now only the only part we are interested, that's why BT set as default.)
+        Returns:
+            plenarprotokolle_text (Iterator[PlenarprotokollText]):
+                An iterator of Plenarprotokoll-Text objects.
+
+        """
+
+        _logger.info("Get plenarprotkolle-text")
+
+        for plenarprotokoll_text in self._do_paginated_request(
+            http.HTTPMethod.GET,
+            '/api/v1/plenarprotokoll-text',
+            page_args_path=PAGINATION_CONTENT_ARGS_REST,
+            content_identifier='documents',
+            params={
+                "f.zuordnung": zuordnung,
+                "f.wahlperiode": wahlperiode,
+            },
+            response_limit=response_limit,
+            proxy_list=proxy_list,
+        ):
+            yield PlenarprotokollText.model_validate(plenarprotokoll_text)

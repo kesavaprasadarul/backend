@@ -1,10 +1,12 @@
 """Deutscher Bundestag Drucksache SQLAlchemy Models for creating associated tables in database."""
-from sqlalchemy.orm import Mapped, mapped_column, relationship
+from datetime import date, datetime
+
 from sqlalchemy import ForeignKey, Text
 from sqlalchemy.dialects.postgresql import ARRAY
+from sqlalchemy.orm import Mapped, mapped_column, relationship
+
 from backend.app.db.database import Base
-from backend.app.facades.deutscher_bundestag.model import VorgangTyp, VorgangDeskriptorTyp
-from datetime import date, datetime
+from backend.app.facades.deutscher_bundestag.model import VorgangDeskriptorTyp, VorgangTyp
 from backend.app.models.deutscher_bundestag.common import DIPSchema, TimestampMixin
 
 

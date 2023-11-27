@@ -1,6 +1,8 @@
 """Import all sqlalchemy models to make it discoverable."""
 # Import all the models, so that Base has them before being imported by alembic
 # (In case we are using alembic later on for versioning our database models)
+
+# flake8: noqa
 from backend.app.db.database import Base  # pylint: disable=unused-import
 from backend.app.models.deutscher_bundestag.drucksache_model import (
     DIPAutor,  # pylint: disable=unused-import
@@ -11,12 +13,13 @@ from backend.app.models.deutscher_bundestag.drucksache_model import (
 from backend.app.models.deutscher_bundestag.drucksache_model import (
     DIPVorgangsbezug,  # pylint: disable=unused-import; pylint: disable=unused-import
 )
+from backend.app.models.deutscher_bundestag.drucksache_model import DIPDrucksacheText
 from backend.app.models.deutscher_bundestag.fundstelle_model import (  # pylint: disable=unused-import
     DIPFundstelle,
 )
 from backend.app.models.deutscher_bundestag.plenarprotokoll_model import (  # pylint: disable=unused-import
     DIPPlenarprotokoll,
-    DIPPlenarprotokollVorgangsbezug,
+    DIPPlenarprotokollText,
 )
 from backend.app.models.deutscher_bundestag.ressort_model import (  # pylint: disable=unused-import
     DIPRessort,
