@@ -1,25 +1,22 @@
 """Class for DIP Bundestag Drucksache Importer."""
 
+from typing import Iterator
+
 from backend.app.core.config import Settings
-from backend.app.crud.CRUDDIPBundestag.crud_drucksache import (
-    CRUD_DIP_DRUCKSACHE,
-)
+from backend.app.crud.CRUDDIPBundestag.crud_drucksache import CRUD_DIP_DRUCKSACHE
 from backend.app.facades.deutscher_bundestag.model import Drucksache
-from backend.app.importer.dip_importer import DIPImporter
 from backend.app.facades.util import ProxyList
+from backend.app.importer.dip_importer import DIPImporter
 
 # import from all models to ensure they are registered
 from backend.app.models.deutscher_bundestag.models import (
-    DIPDrucksache,
     DIPAutor,
+    DIPDrucksache,
     DIPFundstelle,
+    DIPRessort,
     DIPUrheber,
     DIPVorgangsbezug,
-    DIPRessort,
 )
-
-
-from typing import Iterator
 
 
 class DIPBundestagDrucksacheImporter(DIPImporter[Drucksache, DIPDrucksache]):

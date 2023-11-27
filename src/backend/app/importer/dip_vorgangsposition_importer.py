@@ -1,25 +1,24 @@
 """Class for DIP Bundestag Vorgangsposition Importer."""
 
+from typing import Iterator
+
 from backend.app.core.config import Settings
 from backend.app.crud.CRUDDIPBundestag.crud_vorgangsposition import CRUD_DIP_VORGANGSPOSITION
 from backend.app.facades.deutscher_bundestag.model import Vorgangsposition
-from backend.app.importer.dip_importer import DIPImporter
 from backend.app.facades.util import ProxyList
+from backend.app.importer.dip_importer import DIPImporter
 
 # import from all models to ensure they are registered
 from backend.app.models.deutscher_bundestag.models import (
-    DIPVorgangsposition,
     DIPAktivitaetAnzeige,
-    DIPUeberweisung,
     DIPBeschlussfassung,
     DIPFundstelle,
-    DIPUrheber,
     DIPRessort,
+    DIPUeberweisung,
+    DIPUrheber,
+    DIPVorgangsposition,
     DIPVorgangspositionbezug,
 )
-
-
-from typing import Iterator
 
 
 class DIPBundestagVorgangspositionImporter(DIPImporter[Vorgangsposition, DIPVorgangsposition]):

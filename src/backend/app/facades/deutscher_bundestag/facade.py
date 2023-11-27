@@ -8,11 +8,11 @@ import requests
 from backend.app.core.config import Settings
 from backend.app.facades.deutscher_bundestag.model import (
     Drucksache,
+    DrucksacheText,
     Plenarprotokoll,
     PlenarprotokollText,
     Vorgang,
     Vorgangsposition,
-    DrucksacheText,
 )
 from backend.app.facades.deutscher_bundestag.model_plenarprotokoll_vorgangsbezug import (
     PlenarprotokollVorgangsbezug,

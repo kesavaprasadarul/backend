@@ -1,24 +1,21 @@
 """Class for DIP Bundestag Vorgang Importer."""
 
+from typing import Iterator
+
 from backend.app.core.config import Settings
-from backend.app.crud.CRUDDIPBundestag.crud_vorgang import (
-    CRUD_DIP_VORGANG,
-)
+from backend.app.crud.CRUDDIPBundestag.crud_vorgang import CRUD_DIP_VORGANG
 from backend.app.facades.deutscher_bundestag.model import Vorgang
-from backend.app.importer.dip_importer import DIPImporter
 from backend.app.facades.util import ProxyList
+from backend.app.importer.dip_importer import DIPImporter
 
 # import from all models to ensure they are registered
 from backend.app.models.deutscher_bundestag.models import (
-    DIPVorgang,
     DIPInkrafttreten,
     DIPVerkuendung,
+    DIPVorgang,
     DIPVorgangDeskriptor,
     DIPVorgangVerlinkung,
 )
-
-
-from typing import Iterator
 
 
 class DIPBundestagVorgangImporter(DIPImporter[Vorgang, DIPVorgang]):

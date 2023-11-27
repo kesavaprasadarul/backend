@@ -1,15 +1,14 @@
 """Class for DIP Bundestag Plenarprotokoll Importer."""
 
 import logging
+from typing import Any, Generic, Iterator, MutableMapping, TypeVar
 
-from backend.app.core.config import Settings
-from backend.app.crud.base import CRUDBase
-from backend.app.facades.deutscher_bundestag.facade import DIPBundestagFacade
-from backend.app.facades.util import ProxyList
 from pydantic import BaseModel
 
-from backend.app.crud.base import Base
-from typing import Generic, TypeVar, Iterator, MutableMapping, Any
+from backend.app.core.config import Settings
+from backend.app.crud.base import Base, CRUDBase
+from backend.app.facades.deutscher_bundestag.facade import DIPBundestagFacade
+from backend.app.facades.util import ProxyList
 
 _logger = logging.getLogger(__name__)
 

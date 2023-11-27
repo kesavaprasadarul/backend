@@ -5,15 +5,14 @@ from sqlalchemy import ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from backend.app.db.database import Base
+from backend.app.facades.deutscher_bundestag.model import (
+    DokumentartPlenarprotokoll,
+    DokumentTyp,
+    Zuordnung,
+)
 from backend.app.models.deutscher_bundestag.common import DIPSchema, TimestampMixin
 from backend.app.models.deutscher_bundestag.fundstelle_model import DIPFundstelle
 from backend.app.models.deutscher_bundestag.vorgangsbezug_model import DIPVorgangsbezug
-
-from backend.app.facades.deutscher_bundestag.model import (
-    DokumentartPlenarprotokoll,
-    Zuordnung,
-    DokumentTyp,
-)
 
 
 class DIPPlenarprotokoll(Base, DIPSchema, TimestampMixin):

@@ -1,22 +1,19 @@
 """Class for DIP Bundestag Plenarprotokoll Importer."""
 
+from typing import Iterator
+
 from backend.app.core.config import Settings
-from backend.app.crud.CRUDDIPBundestag.crud_plenarprotokoll import (
-    CRUD_DIP_PLENARPROTOKOLL,
-)
+from backend.app.crud.CRUDDIPBundestag.crud_plenarprotokoll import CRUD_DIP_PLENARPROTOKOLL
 from backend.app.facades.deutscher_bundestag.model import Plenarprotokoll
-from backend.app.importer.dip_importer import DIPImporter
 from backend.app.facades.util import ProxyList
+from backend.app.importer.dip_importer import DIPImporter
 
 # import from all models to ensure they are registered
 from backend.app.models.deutscher_bundestag.models import (
-    DIPPlenarprotokoll,
     DIPFundstelle,
+    DIPPlenarprotokoll,
     DIPVorgangsbezug,
 )
-
-
-from typing import Iterator
 
 
 class DIPBundestagPlenarprotokollImporter(DIPImporter[Plenarprotokoll, DIPPlenarprotokoll]):
