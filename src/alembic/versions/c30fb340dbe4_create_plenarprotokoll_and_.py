@@ -25,17 +25,25 @@ def upgrade() -> None:
     op.create_table(
         'plenarprotokoll',
         sa.Column('id', sa.Integer(), nullable=False),
-        sa.Column('dokumentart', sa.String(), nullable=False),
-        sa.Column('typ', sa.String(), nullable=False),
+        sa.Column(
+            'dokumentart',
+            sa.Enum('Plenarprotokoll', name='dokumentartplenarprotokoll'),
+            nullable=False,
+        ),
+        sa.Column('typ', postgresql.ENUM(name='dokumenttyp', create_type=False), nullable=False),
         sa.Column('dokumentnummer', sa.String(), nullable=False),
         sa.Column('wahlperiode', sa.Integer(), nullable=True),
-        sa.Column('herausgeber', sa.String(), nullable=False),
-        sa.Column('date', sa.String(), nullable=True),
+        sa.Column(
+            'herausgeber', postgresql.ENUM(name='zuordnung', create_type=False), nullable=False
+        ),
         sa.Column('datum', sa.Date(), nullable=False),
         sa.Column('aktualisiert', sa.String(), nullable=False),
         sa.Column('titel', sa.String(), nullable=False),
         sa.Column('pdf_hash', sa.String(), nullable=True),
         sa.Column('vorgangsbezug_anzahl', sa.Integer(), nullable=False),
+        sa.Column('sitzungsbemerkung', sa.String(), nullable=True),
+        sa.Column('created_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
+        sa.Column('updated_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
         sa.PrimaryKeyConstraint('id'),
         schema='dip',
     )
@@ -100,6 +108,8 @@ def downgrade() -> None:
 
     op.drop_column('vorgangsbezug', 'vorgang_id', schema='dip')
 
+    op.execute("DELETE FROM dip.vorgangsbezug WHERE drucksache_id IS NULL;")
+
     op.alter_column(
         'vorgangsbezug',
         'drucksache_id',
@@ -116,4 +126,6 @@ def downgrade() -> None:
     op.drop_column('fundstelle', 'plenarprotokoll_id', schema='dip')
 
     op.drop_table('plenarprotokoll', schema='dip')
+
+    sa.Enum('Plenarprotokoll', name='dokumentartplenarprotokoll').drop(op.get_bind())
     # ### end Alembic commands ###

@@ -19,4 +19,4 @@ class CRUDDIPPlenarprotokoll(CRUDBase[DIPPlenarprotokoll]):
         super().__init__(model)
 
 
-CRUD_DIP_Plenarprotokoll = CRUDDIPPlenarprotokoll(DIPPlenarprotokoll)
+CRUD_DIP_PLENARPROTOKOLL = CRUDDIPPlenarprotokoll(DIPPlenarprotokoll)

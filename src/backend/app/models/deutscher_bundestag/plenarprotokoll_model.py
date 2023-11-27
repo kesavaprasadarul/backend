@@ -9,6 +9,12 @@ from backend.app.models.deutscher_bundestag.common import DIPSchema, TimestampMi
 from backend.app.models.deutscher_bundestag.fundstelle_model import DIPFundstelle
 from backend.app.models.deutscher_bundestag.vorgangsbezug_model import DIPVorgangsbezug
 
+from backend.app.facades.deutscher_bundestag.model import (
+    DokumentartPlenarprotokoll,
+    Zuordnung,
+    DokumentTyp,
+)
+
 
 class DIPPlenarprotokoll(Base, DIPSchema, TimestampMixin):
     """Table attributes for Model/Relation/Table plenarprotokoll."""
@@ -16,17 +22,17 @@ class DIPPlenarprotokoll(Base, DIPSchema, TimestampMixin):
     __tablename__ = "plenarprotokoll"
 
     id: Mapped[int] = mapped_column(primary_key=True)  # database id
-    dokumentart: Mapped[str] = mapped_column(nullable=False)
-    typ: Mapped[str] = mapped_column(nullable=False)
+    dokumentart: Mapped[DokumentartPlenarprotokoll] = mapped_column(nullable=False)
+    typ: Mapped[DokumentTyp] = mapped_column(nullable=False)
     dokumentnummer: Mapped[str] = mapped_column(nullable=False)
     wahlperiode: Mapped[int] = mapped_column(nullable=True)
-    herausgeber: Mapped[str] = mapped_column(nullable=False)
-    date: Mapped[str] = mapped_column(nullable=True)
+    herausgeber: Mapped[Zuordnung] = mapped_column(nullable=False)
     datum: Mapped[datetime.date] = mapped_column(nullable=False)
     aktualisiert: Mapped[str] = mapped_column(nullable=False)
     titel: Mapped[str] = mapped_column(nullable=False)
     pdf_hash: Mapped[str] = mapped_column(nullable=True)
     vorgangsbezug_anzahl: Mapped[int] = mapped_column(nullable=False)
+    sitzungsbemerkung: Mapped[str] = mapped_column(nullable=True)
 
     fundstelle: Mapped["DIPFundstelle"] = relationship(
         cascade='merge, save-update, delete, delete-orphan',

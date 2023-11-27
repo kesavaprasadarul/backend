@@ -237,8 +237,12 @@ class DIPBundestagFacade(HttpFacade):
             yield Vorgangsposition.model_validate(vorgangsposition)
 
     def get_plenarprotokolle(
-        self, wahlperiode: int = 20, zuordnung: str = "BT"
-    ) -> list[Plenarprotokoll]:
+        self,
+        wahlperiode: int = 20,
+        zuordnung: str = "BT",
+        response_limit: int = 1000,
+        proxy_list: ProxyList | None = None,
+    ) -> t.Iterator[Plenarprotokoll]:
         """Get Plenarprotokolle.
         https://search.dip.bundestag.de/api/v1/swagger-ui/#/Plenarprotokolle/getPlenarprotokollList
 
@@ -256,19 +260,16 @@ class DIPBundestagFacade(HttpFacade):
 
         _logger.info("Get plenarprotkolle")
 
-        plenarprotokolle = [
-            Plenarprotokoll.model_validate(plenarprotokoll)
-            for plenarprotokoll in self._do_paginated_request(
-                http.HTTPMethod.GET,
-                '/api/v1/plenarprotokoll',
-                page_args_path=PAGINATION_CONTENT_ARGS_REST,
-                content_identifier='documents',
-                params={
-                    "f.zuordnung": zuordnung,
-                    "f.wahlperiode": wahlperiode,
-                },
-            )
-        ]
-        _logger.info(plenarprotokolle)
-
-        return plenarprotokolle
+        for plenarprotokoll in self._do_paginated_request(
+            http.HTTPMethod.GET,
+            '/api/v1/plenarprotokoll',
+            page_args_path=PAGINATION_CONTENT_ARGS_REST,
+            content_identifier='documents',
+            params={
+                "f.zuordnung": zuordnung,
+                "f.wahlperiode": wahlperiode,
+            },
+            response_limit=response_limit,
+            proxy_list=proxy_list,
+        ):
+            yield Plenarprotokoll.model_validate(plenarprotokoll)

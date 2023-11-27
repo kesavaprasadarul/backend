@@ -6,14 +6,10 @@ from backend.app.core.config import Settings
 from backend.app.crud.base import CRUDBase
 from backend.app.facades.deutscher_bundestag.facade import DIPBundestagFacade
 from backend.app.facades.util import ProxyList
-from backend.app.facades.deutscher_bundestag.model import Plenarprotokoll
-from backend.app.facades.deutscher_bundestag.model_plenarprotokoll_vorgangsbezug import (
-    PlenarprotokollVorgangsbezug,
-)
 from pydantic import BaseModel
 
 from backend.app.crud.base import Base
-from typing import Generic, TypeVar, Iterator, Mapping
+from typing import Generic, TypeVar, Iterator, MutableMapping, Any
 
 _logger = logging.getLogger(__name__)
 
@@ -22,7 +18,7 @@ PydanticModelType = TypeVar("PydanticModelType", bound=BaseModel)  # pylint: dis
 SQLModelType = TypeVar("SQLModelType", bound=Base)  # pylint: disable=invalid-name
 
 
-ParamMapping = Mapping[str, str]
+ParamMapping = MutableMapping[str, Any]
 
 
 class DIPImporter(Generic[PydanticModelType, SQLModelType]):
