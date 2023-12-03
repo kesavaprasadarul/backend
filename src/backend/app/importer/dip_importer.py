@@ -1,7 +1,7 @@
 """Class for DIP Bundestag Plenarprotokoll Importer."""
 
 import logging
-from typing import Any, Generic, Iterator, MutableMapping, TypeVar
+from typing import Any, Generic, Iterator, MutableMapping, TypeVar, Optional
 
 from pydantic import BaseModel
 
@@ -13,14 +13,20 @@ from backend.app.facades.util import ProxyList
 _logger = logging.getLogger(__name__)
 
 
-PydanticModelType = TypeVar("PydanticModelType", bound=BaseModel)  # pylint: disable=invalid-name
+PydanticDataModelType = TypeVar(
+    "PydanticDataModelType", bound=BaseModel
+)  # pylint: disable=invalid-name
+PydanticParameterModelType = TypeVar(
+    "PydanticParameterModelType", bound=BaseModel
+)  # pylint: disable=invalid-name
+
 SQLModelType = TypeVar("SQLModelType", bound=Base)  # pylint: disable=invalid-name
 
 
-ParamMapping = MutableMapping[str, Any]
+ParamMapping = MutableMapping
 
 
-class DIPImporter(Generic[PydanticModelType, SQLModelType]):
+class DIPImporter(Generic[PydanticDataModelType, PydanticParameterModelType, SQLModelType]):
     """Class for DIP Bundestag Importer."""
 
     def __init__(
@@ -33,29 +39,26 @@ class DIPImporter(Generic[PydanticModelType, SQLModelType]):
         self.crud = crud
         self.dip_bundestag_facade = DIPBundestagFacade.get_instance(Settings())
 
-    def transform_model(self, data: PydanticModelType) -> SQLModelType:
+    def transform_model(self, data: PydanticDataModelType) -> SQLModelType:
         """Transform data."""
         raise NotImplementedError
 
     def fetch_data(
         self,
-        params: ParamMapping | None = None,
+        params: Optional[PydanticParameterModelType] = None,
         response_limit=1000,
         proxy_list: ProxyList | None = None,
-        *args,
-        **kwargs,
-    ) -> Iterator[PydanticModelType]:
+    ) -> Iterator[PydanticDataModelType]:
         """Fetch data."""
         raise NotImplementedError
 
     def batch_upsert(
         self,
-        params: ParamMapping | None = None,
+        params: Optional[PydanticParameterModelType] = None,
         response_limit: int = 1000,
         proxy_list: ProxyList | None = None,
         upsert_batch_size: int = 100,
-        *args,
-        **kwargs,
+        **kwargs: Any,
     ):
         batch: list[SQLModelType] = []
         batch_count = 1
@@ -63,8 +66,6 @@ class DIPImporter(Generic[PydanticModelType, SQLModelType]):
             params=params,
             response_limit=response_limit,
             proxy_list=proxy_list,
-            *args,
-            **kwargs,
         ):
             _logger.info(f'Adding model {pydantic_model} to batch.')
             sql_model = self.transform_model(pydantic_model)
@@ -84,11 +85,10 @@ class DIPImporter(Generic[PydanticModelType, SQLModelType]):
 
     def import_data(
         self,
-        params: ParamMapping | None = None,
+        params: Optional[PydanticParameterModelType] = None,
         response_limit: int = 1000,
         proxy_list: ProxyList | None = None,
         upsert_batch_size: int = 100,
-        *args,
         **kwargs,
     ):
         """Import data."""
@@ -98,6 +98,5 @@ class DIPImporter(Generic[PydanticModelType, SQLModelType]):
             response_limit=response_limit,
             proxy_list=proxy_list,
             upsert_batch_size=upsert_batch_size,
-            *args,
             **kwargs,
         )

@@ -1,12 +1,13 @@
 """Class for DIP Bundestag Drucksache Importer."""
 
-from typing import Iterator
+from typing import Iterator, Optional
 
 from backend.app.core.config import Settings
 from backend.app.crud.CRUDDIPBundestag.crud_drucksache import CRUD_DIP_DRUCKSACHE
-from backend.app.facades.deutscher_bundestag.model import Drucksache
+from backend.app.facades.deutscher_bundestag.model import Drucksache, Vorgang
 from backend.app.facades.util import ProxyList
 from backend.app.importer.dip_importer import DIPImporter
+from backend.app.importer.dip_vorgang_importer import DIPBundestagVorgangImporter
 
 # import from all models to ensure they are registered
 from backend.app.models.deutscher_bundestag.models import (
@@ -16,17 +17,31 @@ from backend.app.models.deutscher_bundestag.models import (
     DIPRessort,
     DIPUrheber,
     DIPVorgangsbezug,
+    DIPVorgang,
 )
 
+from backend.app.facades.deutscher_bundestag.parameter_model import DrucksacheParameter
+from backend.app.facades.deutscher_bundestag.parameter_model import VorgangParameter
 
-class DIPBundestagDrucksacheImporter(DIPImporter[Drucksache, DIPDrucksache]):
+from backend.app.facades.deutscher_bundestag.model import Zuordnung
+
+from logging import getLogger
+
+_logger = getLogger(__name__)
+
+
+class DIPBundestagDrucksacheImporter(DIPImporter[Drucksache, DrucksacheParameter, DIPDrucksache]):
     """Class for DIP Bundestag Drucksache Importer."""
 
-    def __init__(self):
+    def __init__(self, import_vorgaenge: bool = True):
         """
         Initialize DIPImporter.
         """
         super().__init__(CRUD_DIP_DRUCKSACHE)
+
+        self.import_vorgaenge = import_vorgaenge
+        if import_vorgaenge:
+            self.vorgang_importer = DIPBundestagVorgangImporter()
 
     def transform_model(self, data: Drucksache) -> DIPDrucksache:
         """Transform data."""
@@ -73,25 +88,81 @@ class DIPBundestagDrucksacheImporter(DIPImporter[Drucksache, DIPDrucksache]):
             urheber=dip_urheber,
             vorgangsbezug=dip_vorgangsbezug,
             ressort=dip_ressort,
+            vorgang=[],
         )
 
     def fetch_data(
         self,
-        params: dict,
+        params: Optional[DrucksacheParameter] = None,
         response_limit=1000,
         proxy_list: ProxyList | None = None,
-        *args,
-        **kwargs,
     ) -> Iterator[Drucksache]:
         """Fetch data."""
 
-        since_datetime = params.get("since_datetime", '2021-01-01T00:00:00.000Z')
-
         return self.dip_bundestag_facade.get_drucksachen(
-            since_datetime=since_datetime,
+            params=params,
             response_limit=response_limit,
             proxy_list=proxy_list,
-            *args,
+        )
+
+    def batch_upsert(
+        self,
+        params: Optional[DrucksacheParameter] = None,
+        response_limit: int = 1000,
+        proxy_list: ProxyList | None = None,
+        upsert_batch_size: int = 100,
+        **kwargs,
+    ):
+        batch: list[DIPDrucksache] = []
+        batch_count = 1
+        for pydantic_model in self.fetch_data(
+            params=params,
+            response_limit=response_limit,
+            proxy_list=proxy_list,
+        ):
+            _logger.info(f'Adding model {pydantic_model} to batch.')
+            sql_model = self.transform_model(pydantic_model)
+
+            if self.import_vorgaenge:
+                for vorgang_pydantic in self.vorgang_importer.fetch_data(
+                    params=VorgangParameter(
+                        drucksache=sql_model.id,
+                    ),
+                    proxy_list=proxy_list,
+                ):
+                    sql_model.vorgang.append(
+                        self.vorgang_importer.transform_model(vorgang_pydantic)
+                    )
+
+            batch.append(sql_model)
+
+            if len(batch) >= upsert_batch_size:
+                _logger.info(f'Upserting batch {batch_count} into {sql_model.__tablename__}-Table.')
+                self.crud.create_or_update_multi(batch)
+                batch = []
+                batch_count += 1
+
+        if batch:
+            _logger.info(
+                f'Upserting final batch ({batch_count}) into {batch[0].__tablename__}-Table.'
+            )
+            self.crud.create_or_update_multi(batch)
+
+    def import_data(
+        self,
+        params: Optional[DrucksacheParameter] = None,
+        response_limit: int = 1000,
+        proxy_list: ProxyList | None = None,
+        upsert_batch_size: int = 100,
+        **kwargs,
+    ):
+        """Import data."""
+
+        self.batch_upsert(
+            params=params,
+            response_limit=response_limit,
+            proxy_list=proxy_list,
+            upsert_batch_size=upsert_batch_size,
             **kwargs,
         )
 
@@ -99,11 +170,11 @@ class DIPBundestagDrucksacheImporter(DIPImporter[Drucksache, DIPDrucksache]):
 def import_dip_bundestag():
     importer = DIPBundestagDrucksacheImporter()
 
+    params = DrucksacheParameter(drucksachetyp='Gesetzentwurf', zuordnung=Zuordnung.BT)
+
     importer.import_data(
-        params={
-            "since_datetime": '2021-01-01T00:00:00.000Z',
-        },
-        response_limit=1,
+        params=params,
+        response_limit=5,
         proxy_list=ProxyList.from_url(Settings().PROXY_LIST_URL),
     )
 

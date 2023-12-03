@@ -16,6 +16,7 @@ from backend.app.models.deutscher_bundestag.fundstelle_model import DIPFundstell
 from backend.app.models.deutscher_bundestag.ressort_model import DIPRessort
 from backend.app.models.deutscher_bundestag.urheber_model import DIPUrheber
 from backend.app.models.deutscher_bundestag.vorgangsbezug_model import DIPVorgangsbezug
+from backend.app.models.deutscher_bundestag.vorgang_model import DIPVorgang
 
 
 class DIPDrucksache(Base, TimestampMixin, DIPSchema):
@@ -65,6 +66,11 @@ class DIPDrucksache(Base, TimestampMixin, DIPSchema):
     drucksache_text: Mapped["DIPDrucksacheText"] = relationship(
         cascade='merge, save-update, delete, delete-orphan',
         back_populates="drucksache",
+    )
+
+    vorgang: Mapped[list["DIPVorgang"]] = relationship(
+        cascade='merge, save-update',
+        foreign_keys="DIPVorgang.drucksache_id",
     )
 
 

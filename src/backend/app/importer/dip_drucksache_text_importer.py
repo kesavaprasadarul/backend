@@ -5,6 +5,7 @@ from typing import Iterator
 from backend.app.core.config import Settings
 from backend.app.crud.CRUDDIPBundestag.crud_drucksache import CRUD_DIP_DRUCKSACHE
 from backend.app.facades.deutscher_bundestag.model import DrucksacheText
+from backend.app.facades.deutscher_bundestag.parameter_model import DrucksacheParameter
 from backend.app.facades.util import ProxyList
 from backend.app.importer.dip_importer import DIPImporter
 
@@ -19,8 +20,12 @@ from backend.app.models.deutscher_bundestag.models import (
     DIPVorgangsbezug,
 )
 
+from datetime import date, datetime, timezone
 
-class DIPBundestagDrucksacheTextImporter(DIPImporter[DrucksacheText, DIPDrucksache]):
+
+class DIPBundestagDrucksacheTextImporter(
+    DIPImporter[DrucksacheText, DrucksacheParameter, DIPDrucksache]
+):
     """Class for DIP Bundestag Drucksache-Text Importer."""
 
     def __init__(self):
@@ -89,32 +94,28 @@ class DIPBundestagDrucksacheTextImporter(DIPImporter[DrucksacheText, DIPDrucksac
 
     def fetch_data(
         self,
-        params: dict,
+        params: DrucksacheParameter | None = None,
         response_limit=1000,
         proxy_list: ProxyList | None = None,
-        *args,
-        **kwargs,
     ) -> Iterator[DrucksacheText]:
         """Fetch data."""
 
-        since_datetime = params.get("since_datetime", '2021-01-01T00:00:00.000Z')
-
         return self.dip_bundestag_facade.get_drucksachen_text(
-            since_datetime=since_datetime,
+            params=params,
             response_limit=response_limit,
             proxy_list=proxy_list,
-            *args,
-            **kwargs,
         )
 
 
 def import_dip_bundestag():
     importer = DIPBundestagDrucksacheTextImporter()
 
+    params = DrucksacheParameter(
+        aktualisiert_start=datetime(2021, 1, 1, tzinfo=timezone.utc).astimezone(),
+    )
+
     importer.import_data(
-        params={
-            "since_datetime": '2021-01-01T00:00:00.000Z',
-        },
+        params=params,
         response_limit=1,
         proxy_list=ProxyList.from_url(Settings().PROXY_LIST_URL),
     )

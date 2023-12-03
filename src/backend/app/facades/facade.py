@@ -195,6 +195,7 @@ class HttpFacade:
                 timeout=timeout,
                 proxies=proxy_dict,
                 verify=proxy is None,
+                allow_redirects=False,
             )
         else:
             response = call_with_retries(
@@ -269,12 +270,11 @@ class HttpFacade:
                 )
                 response.raise_for_status()
             except (
-                requests.exceptions.HTTPError,
                 requests.exceptions.ReadTimeout,
                 requests.exceptions.ConnectionError,
             ) as e:
                 if proxy_list:
-                    print("Could not get response. Trying again with new proxy.")
+                    print(f"Could not get response. Trying again with new proxy. Error: {e}")
                     proxy_list.set_random_proxy()
                     continue
                 else:

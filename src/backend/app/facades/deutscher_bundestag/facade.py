@@ -14,6 +14,13 @@ from backend.app.facades.deutscher_bundestag.model import (
     Vorgang,
     Vorgangsposition,
 )
+from backend.app.facades.deutscher_bundestag.parameter_model import (
+    DrucksacheParameter,
+    PlenarprotokollParameter,
+    VorgangParameter,
+    VorgangspositionParameter,
+)
+
 from backend.app.facades.deutscher_bundestag.model_plenarprotokoll_vorgangsbezug import (
     PlenarprotokollVorgangsbezug,
 )
@@ -25,8 +32,10 @@ from backend.app.facades.facade import (
     MediaType,
     Page,
     PageCursor,
+    HTTP_REQUEST_DEFAULT_TIMEOUT_SECS,
 )
-from backend.app.facades.util import ProxyList
+from backend.app.facades.util import ProxyList, Proxy, call_with_retries
+import urllib.parse
 
 _logger = logging.getLogger(__name__)
 
@@ -42,23 +51,142 @@ class DIPBundestagFacade(HttpFacade):
     https://dip.bundestag.de/%C3%BCber-dip/hilfe/api.
     """
 
+    # TODO: Sometimes the API redirects and expectes some javascript execution
+    # Potentially this is just a sha256-post which we could mock (maybe here)
+    # hence why I pulled out this session sending into a separate method
+    def _send_request(
+        self,
+        request: requests.PreparedRequest,
+        timeout: int,
+        proxies: t.Optional[dict[str, str]] = None,
+        verify: bool = True,
+    ) -> requests.Response:
+        response = self._session.send(
+            request=request,
+            timeout=timeout,
+            proxies=proxies,
+            verify=verify,
+        )
+
+        return response
+
     # pylint: disable=duplicate-code  # overriding do_request is similar in every facade
     def do_request(
         self,
         method: http.HTTPMethod,
         url_path: str,
         *,
-        content_type=MediaType.JSON,
-        accept_type=None,
-        **kwargs,
+        content_type: t.Optional[MediaType] = None,
+        accept_type: t.Optional[MediaType] = None,
+        final_http_codes: t.Optional[set[int]] = None,
+        retry_http_codes: t.Optional[set[int]] = None,
+        json: t.Optional[dict] = None,
+        data: t.Optional[str] = None,
+        params: t.Optional[dict] = None,
+        headers: t.Optional[dict] = None,
+        proxy: t.Optional[Proxy] = None,
+        timeout: int = HTTP_REQUEST_DEFAULT_TIMEOUT_SECS,
+        disable_retry: bool = False,
     ) -> requests.Response:
-        return super().do_request(
-            method,
-            url_path,
-            content_type=content_type,
-            accept_type=accept_type,
-            **kwargs,
+        """Execute http requests to external services.
+
+        Preparation of a request includes setting mandatory standard headers, setting auth header
+        and calculating the final target url based on the endpoint url. For performance reasons, a
+        requests Session is used internally.
+
+        In case the request fails, the method will attempt to retry. By default, only HTTP codes >=
+        500 will be reattempted. Use ``final_http_codes`` and ``retry_http_codes`` to modify this
+        behavior.
+
+        Args:
+            method: The http verb which should be used for the request.
+            url_path: The path of the url, added to the hostname of the instance.
+            content_type: The content type to be passed as header or None if no body is sent.
+            accept_type: The accept type to be passed as header.
+            json: A dict which will be passed as json.
+            data: A string with data passed as part of the request.
+            params: Query parameters which are added to the url.
+            headers: headers of the request. Authorization and Accept are set by decorator.
+            proxy: Optional proxy to be used for the request.
+            final_http_codes: Additional http return codes which will not be retried.
+            retry_http_codes: Additional http return codes which will be retried.
+            timeout: Optional timeout value to change the default set in HTTP_REQUEST_TIMEOUT_SECS
+            disable_retry: Optional flag to disable any retry in case of failures with default False
+        Returns:
+            The response of the request
+
+        """
+        all_headers = headers.copy() if headers else {}
+        basic_auth = None
+
+        match self.auth.auth_type:
+            case AuthType.DIPBUNDESTAG_API_TOKEN:
+                all_headers['Authorization'] = f'ApiKey {self.auth.token}'
+            case AuthType.TOKEN:
+                all_headers['Authorization'] = f'Bearer {self.auth.token}'
+            case AuthType.BASIC_AUTHENTICATION:
+                basic_auth = (
+                    self.auth.username,
+                    self.auth.password,
+                )
+            case AuthType.TOKEN_AS_USER:
+                basic_auth = (self.auth.token, '')
+            case _:  # pragma: no cover  # coverage.py does not recognize pattern
+                raise NotImplementedError(self.auth.auth_type)
+
+        if content_type:
+            all_headers['Content-Type'] = content_type.value
+
+        if accept_type:
+            all_headers['Accept'] = accept_type.value
+
+        request = requests.Request(
+            method=method.value,
+            url=urllib.parse.urljoin(self.base_url, url_path),
+            params=params,
+            headers=all_headers,
+            json=json,
+            data=data,
+            auth=basic_auth,
+        ).prepare()
+
+        def is_response_final(r: requests.Response) -> bool:
+            """Return if response is final, i.e. request should not be retried."""
+
+            if final_http_codes and r.status_code in final_http_codes:
+                return True
+
+            if retry_http_codes and r.status_code in retry_http_codes:
+                return False
+
+            return r.status_code < 500
+
+        proxy_dict = (
+            {
+                'http': f'http://{proxy.url}',
+            }
+            if proxy
+            else None
         )
+
+        if disable_retry:
+            response = self._send_request(
+                request=request,
+                timeout=timeout,
+                proxies=proxy_dict,
+                verify=proxy is None,
+            )
+        else:
+            response = call_with_retries(
+                self._session.send,
+                request,
+                retval_ok=is_response_final,
+                timeout=timeout,
+                proxies=proxy_dict,
+                verify=proxy is None,
+            )
+
+        return response
 
     def _do_paginated_request(
         self,
@@ -115,7 +243,7 @@ class DIPBundestagFacade(HttpFacade):
 
     def get_drucksachen(
         self,
-        since_datetime: str,
+        params: DrucksacheParameter | None = None,
         response_limit: t.Optional[int] = None,
         proxy_list: ProxyList | None = None,
     ) -> t.Iterator[Drucksache]:
@@ -132,14 +260,16 @@ class DIPBundestagFacade(HttpFacade):
         """
         _logger.info("Fetching drucksachen.")
 
+        param_dict = (
+            params.model_dump(mode='json', exclude_none=True, by_alias=True) if params else None
+        )
+
         for drucksache in self._do_paginated_request(
             http.HTTPMethod.GET,
             '/api/v1/drucksache',
             page_args_path=PAGINATION_CONTENT_ARGS_REST,
             content_identifier='documents',
-            params={
-                "f.aktualisiert.start": since_datetime,
-            },
+            params=param_dict,
             response_limit=response_limit,
             proxy_list=proxy_list,
         ):
@@ -147,7 +277,7 @@ class DIPBundestagFacade(HttpFacade):
 
     def get_drucksachen_text(
         self,
-        since_datetime: str,
+        params: DrucksacheParameter | None = None,
         response_limit: t.Optional[int] = None,
         proxy_list: ProxyList | None = None,
     ) -> t.Iterator[DrucksacheText]:
@@ -162,16 +292,18 @@ class DIPBundestagFacade(HttpFacade):
             drucksachen_text (Iterator[DrucksacheText]): An iterator of DrucksacheText objects.
         """
 
-        _logger.info("Fetching drucksachen.")
+        param_dict = (
+            params.model_dump(mode='json', exclude_none=True, by_alias=True) if params else None
+        )
+
+        _logger.info("Fetching drucksachen-text with params %s.", param_dict)
 
         for drucksache_text in self._do_paginated_request(
             http.HTTPMethod.GET,
             '/api/v1/drucksache-text',
             page_args_path=PAGINATION_CONTENT_ARGS_REST,
             content_identifier='documents',
-            params={
-                "f.aktualisiert.start": since_datetime,
-            },
+            params=param_dict,
             response_limit=response_limit,
             proxy_list=proxy_list,
         ):
@@ -179,7 +311,7 @@ class DIPBundestagFacade(HttpFacade):
 
     def get_vorgange(
         self,
-        since_datetime: str,
+        params: VorgangParameter | None = None,
         response_limit: t.Optional[int] = None,
         proxy_list: ProxyList | None = None,
     ) -> t.Iterator[Vorgang]:
@@ -194,17 +326,20 @@ class DIPBundestagFacade(HttpFacade):
             vorgange (Iterator[DIPBundestagApiVorgang]):
                 An iterator of DIPBundestagApiVorgang objects.
         """
-        _logger.info("Fetching vorgange.")
+        param_dict = (
+            params.model_dump(mode='json', exclude_none=True, by_alias=True) if params else None
+        )
+
+        _logger.info("Fetching vorgaenge with params %s.", param_dict)
 
         for vorgang in self._do_paginated_request(
             http.HTTPMethod.GET,
             '/api/v1/vorgang',
             page_args_path=PAGINATION_CONTENT_ARGS_REST,
             content_identifier='documents',
-            params={
-                "f.aktualisiert.start": since_datetime,
-            },
+            params=param_dict,
             response_limit=response_limit,
+            proxy_list=proxy_list,
         ):
             yield Vorgang.model_validate(vorgang)
 
@@ -243,7 +378,7 @@ class DIPBundestagFacade(HttpFacade):
 
     def get_vorgangspositionen(
         self,
-        since_datetime: str,
+        params: VorgangspositionParameter | None = None,
         response_limit: t.Optional[int] = None,
         proxy_list: ProxyList | None = None,
     ) -> t.Iterator[Vorgangsposition]:
@@ -258,16 +393,18 @@ class DIPBundestagFacade(HttpFacade):
             vorgangsposition (Iterator[Vorgangsposition]):
                 An iterator of Vorgangsposition objects.
         """
-        _logger.info("Fetching vorgange.")
+        param_dict = (
+            params.model_dump(mode='json', exclude_none=True, by_alias=True) if params else None
+        )
+
+        _logger.info("Fetching vorgangspositionen with params %s.", param_dict)
 
         for vorgangsposition in self._do_paginated_request(
             http.HTTPMethod.GET,
             '/api/v1/vorgangsposition',
             page_args_path=PAGINATION_CONTENT_ARGS_REST,
             content_identifier='documents',
-            params={
-                "f.aktualisiert.start": since_datetime,
-            },
+            params=param_dict,
             response_limit=response_limit,
             proxy_list=proxy_list,
         ):
@@ -275,8 +412,7 @@ class DIPBundestagFacade(HttpFacade):
 
     def get_plenarprotokolle(
         self,
-        wahlperiode: int = 20,
-        zuordnung: str = "BT",
+        params: PlenarprotokollParameter | None = None,
         response_limit: int = 1000,
         proxy_list: ProxyList | None = None,
     ) -> t.Iterator[Plenarprotokoll]:
@@ -295,17 +431,18 @@ class DIPBundestagFacade(HttpFacade):
 
         """
 
-        _logger.info("Get plenarprotkolle")
+        param_dict = (
+            params.model_dump(mode='json', exclude_none=True, by_alias=True) if params else None
+        )
+
+        _logger.info("Fetching plenarprotokoll with params %s.", param_dict)
 
         for plenarprotokoll in self._do_paginated_request(
             http.HTTPMethod.GET,
             '/api/v1/plenarprotokoll',
             page_args_path=PAGINATION_CONTENT_ARGS_REST,
             content_identifier='documents',
-            params={
-                "f.zuordnung": zuordnung,
-                "f.wahlperiode": wahlperiode,
-            },
+            params=param_dict,
             response_limit=response_limit,
             proxy_list=proxy_list,
         ):
@@ -313,8 +450,7 @@ class DIPBundestagFacade(HttpFacade):
 
     def get_plenarprotokolle_text(
         self,
-        wahlperiode: int = 20,
-        zuordnung: str = "BT",
+        params: PlenarprotokollParameter | None = None,
         response_limit: int = 1000,
         proxy_list: ProxyList | None = None,
     ) -> t.Iterator[PlenarprotokollText]:
@@ -333,17 +469,18 @@ class DIPBundestagFacade(HttpFacade):
 
         """
 
-        _logger.info("Get plenarprotkolle-text")
+        param_dict = (
+            params.model_dump(mode='json', exclude_none=True, by_alias=True) if params else None
+        )
+
+        _logger.info("Fetching plenarprotokoll-text with params %s.", param_dict)
 
         for plenarprotokoll_text in self._do_paginated_request(
             http.HTTPMethod.GET,
             '/api/v1/plenarprotokoll-text',
             page_args_path=PAGINATION_CONTENT_ARGS_REST,
             content_identifier='documents',
-            params={
-                "f.zuordnung": zuordnung,
-                "f.wahlperiode": wahlperiode,
-            },
+            params=param_dict,
             response_limit=response_limit,
             proxy_list=proxy_list,
         ):

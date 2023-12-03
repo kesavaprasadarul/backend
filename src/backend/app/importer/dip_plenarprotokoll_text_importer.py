@@ -5,6 +5,7 @@ from typing import Iterator
 from backend.app.core.config import Settings
 from backend.app.crud.CRUDDIPBundestag.crud_plenarprotokoll import CRUD_DIP_PLENARPROTOKOLL
 from backend.app.facades.deutscher_bundestag.model import PlenarprotokollText
+from backend.app.facades.deutscher_bundestag.parameter_model import PlenarprotokollParameter
 from backend.app.facades.util import ProxyList
 from backend.app.importer.dip_importer import DIPImporter
 
@@ -17,7 +18,9 @@ from backend.app.models.deutscher_bundestag.models import (
 )
 
 
-class DIPBundestagPlenarprotokollImporter(DIPImporter[PlenarprotokollText, DIPPlenarprotokoll]):
+class DIPBundestagPlenarprotokollImporter(
+    DIPImporter[PlenarprotokollText, PlenarprotokollParameter, DIPPlenarprotokoll]
+):
     """Class for DIP Bundestag Plenarprotokoll Importer."""
 
     def __init__(self):
@@ -57,24 +60,16 @@ class DIPBundestagPlenarprotokollImporter(DIPImporter[PlenarprotokollText, DIPPl
 
     def fetch_data(
         self,
-        params: dict,
+        params: PlenarprotokollParameter | None = None,
         response_limit=1000,
         proxy_list: ProxyList | None = None,
-        *args,
-        **kwargs,
     ) -> Iterator[PlenarprotokollText]:
         """Fetch data."""
 
-        wahlperiode = params.get("wahlperiode", 20)
-        zuordnung = params.get("zuordnung", "BT")
-
         return self.dip_bundestag_facade.get_plenarprotokolle_text(
-            wahlperiode=wahlperiode,
-            zuordnung=zuordnung,
+            params=params,
             response_limit=response_limit,
             proxy_list=proxy_list,
-            *args,
-            **kwargs,
         )
 
 
@@ -82,10 +77,7 @@ def import_dip_bundestag():
     importer = DIPBundestagPlenarprotokollImporter()
 
     importer.import_data(
-        params={
-            "wahlperiode": 20,
-            "zuordnung": "BT",
-        },
+        params=None,
         response_limit=1,
         proxy_list=ProxyList.from_url(Settings().PROXY_LIST_URL),
     )

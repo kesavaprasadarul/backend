@@ -35,6 +35,11 @@ class DIPVorgang(Base, TimestampMixin, DIPSchema):
     mitteilung: Mapped[str] = mapped_column(nullable=True)
     sek: Mapped[str] = mapped_column(nullable=True)
 
+    drucksache_id: Mapped[int] = mapped_column(ForeignKey("dip.drucksache.id"), nullable=True)
+    plenarprotokoll_id: Mapped[int] = mapped_column(
+        ForeignKey("dip.plenarprotokoll.id"), nullable=True
+    )
+
     deskriptor: Mapped[list["DIPVorgangDeskriptor"]] = relationship(
         cascade='merge, save-update, delete, delete-orphan'
     )

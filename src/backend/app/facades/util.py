@@ -79,12 +79,15 @@ class ProxyList:
         return cls(proxies)
 
 
+R = t.TypeVar('R')
+
+
 def call_with_retries(
-    callable_: t.Callable,
+    callable_: t.Callable[..., R],
     *args,
     retval_ok: t.Callable[[t.Any], bool] = lambda _: True,
     **kwargs,
-):
+) -> R:
     """Invoke a callable robustly with delayed retries.
 
     Failure of the invoked callable is indicated by a raised exception or if the return code does
