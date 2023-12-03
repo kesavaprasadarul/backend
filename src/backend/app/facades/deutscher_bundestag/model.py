@@ -8,7 +8,7 @@ from datetime import date, datetime
 from enum import Enum
 from typing import List, Optional
 
-from pydantic import BaseModel, Field, RootModel
+from pydantic import BaseModel, Field, RootModel, validator
 
 
 class ListResponseBase(BaseModel):
@@ -419,6 +419,12 @@ class Fundstelle(BaseModel):
     top_zusatz: Optional[str] = Field(
         None,
     )
+
+    @validator('anfangsquadrant', 'endquadrant', pre=True)
+    def empty_str_to_none(cls, v):
+        if v == '':
+            return None
+        return v
 
 
 class PersonRole(BaseModel):

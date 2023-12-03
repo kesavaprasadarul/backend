@@ -67,7 +67,6 @@ class DIPImporter(Generic[PydanticDataModelType, PydanticParameterModelType, SQL
             response_limit=response_limit,
             proxy_list=proxy_list,
         ):
-            _logger.info(f'Adding model {pydantic_model} to batch.')
             sql_model = self.transform_model(pydantic_model)
             batch.append(sql_model)
 

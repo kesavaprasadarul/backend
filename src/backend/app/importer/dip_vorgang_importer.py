@@ -18,6 +18,9 @@ from backend.app.models.deutscher_bundestag.models import (
     DIPVorgangVerlinkung,
 )
 
+import pytz
+from datetime import datetime
+
 
 class DIPBundestagVorgangImporter(DIPImporter[Vorgang, VorgangParameter, DIPVorgang]):
     """Class for DIP Bundestag Vorgang Importer."""
@@ -93,10 +96,13 @@ class DIPBundestagVorgangImporter(DIPImporter[Vorgang, VorgangParameter, DIPVorg
 def import_dip_bundestag():
     importer = DIPBundestagVorgangImporter()
 
+    params = VorgangParameter(
+        aktualisiert_start=datetime(2022, 1, 1, tzinfo=pytz.UTC).astimezone(),
+    )
+
     importer.import_data(
-        params=None,
-        response_limit=1,
-        # proxy_list=ProxyList.from_url(Settings().PROXY_LIST_URL),
+        params=params,
+        response_limit=10000,
     )
 
 

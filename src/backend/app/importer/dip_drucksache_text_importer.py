@@ -116,7 +116,7 @@ def import_dip_bundestag():
     importer.import_data(
         params=params,
         response_limit=1,
-        proxy_list=ProxyList.from_url(Settings().PROXY_LIST_URL),
+        proxy_list=ProxyList.from_url(Settings().PROXY_LIST_SOCKS4_URL),
     )
 
 

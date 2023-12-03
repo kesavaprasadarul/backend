@@ -20,6 +20,11 @@ from backend.app.models.deutscher_bundestag.models import (
     DIPVorgangsposition,
     DIPVorgangspositionbezug,
 )
+from datetime import datetime
+import pytz
+
+import logging
+from backend.app.utils import setup_logging
 
 
 class DIPBundestagVorgangspositionImporter(
@@ -128,16 +133,12 @@ class DIPBundestagVorgangspositionImporter(
 def import_dip_bundestag():
     importer = DIPBundestagVorgangspositionImporter()
 
-    from datetime import date
-
-    params = VorgangspositionParameter(zuordnung=Zuordnung.BT, datum_start=date(2023, 1, 1))
-
-    importer.import_data(
-        params=params,
-        response_limit=100,
-        proxy_list=ProxyList.from_url(Settings().PROXY_LIST_URL),
+    params = VorgangspositionParameter(
+        aktualisiert_start=datetime(2022, 1, 1, tzinfo=pytz.UTC).astimezone(),
     )
+    importer.import_data(params=params, response_limit=10000)
 
 
 if __name__ == '__main__':
+    setup_logging()
     import_dip_bundestag()

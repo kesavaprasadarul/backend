@@ -160,13 +160,7 @@ class DIPBundestagFacade(HttpFacade):
 
             return r.status_code < 500
 
-        proxy_dict = (
-            {
-                'http': f'http://{proxy.url}',
-            }
-            if proxy
-            else None
-        )
+        proxy_dict = proxy.to_dict() if proxy else None
 
         if disable_retry:
             response = self._send_request(
@@ -177,7 +171,7 @@ class DIPBundestagFacade(HttpFacade):
             )
         else:
             response = call_with_retries(
-                self._session.send,
+                self._send_request,
                 request,
                 retval_ok=is_response_final,
                 timeout=timeout,

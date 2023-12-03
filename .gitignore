@@ -16,3 +16,5 @@ pytest.ini
 # used for temporary local files like daemon pid files
 .tmp/
 .vscode/
+logs/errors.log
+logs/info.log
