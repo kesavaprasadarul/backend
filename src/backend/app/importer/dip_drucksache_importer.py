@@ -1,10 +1,15 @@
 """Class for DIP Bundestag Drucksache Importer."""
 
+from logging import getLogger
 from typing import Iterator, Optional
 
 from backend.app.core.config import Settings
 from backend.app.crud.CRUDDIPBundestag.crud_drucksache import CRUD_DIP_DRUCKSACHE
-from backend.app.facades.deutscher_bundestag.model import Drucksache, Vorgang
+from backend.app.facades.deutscher_bundestag.model import Drucksache, Vorgang, Zuordnung
+from backend.app.facades.deutscher_bundestag.parameter_model import (
+    DrucksacheParameter,
+    VorgangParameter,
+)
 from backend.app.facades.util import ProxyList
 from backend.app.importer.dip_importer import DIPImporter
 from backend.app.importer.dip_vorgang_importer import DIPBundestagVorgangImporter
@@ -16,16 +21,9 @@ from backend.app.models.deutscher_bundestag.models import (
     DIPFundstelle,
     DIPRessort,
     DIPUrheber,
-    DIPVorgangsbezug,
     DIPVorgang,
+    DIPVorgangsbezug,
 )
-
-from backend.app.facades.deutscher_bundestag.parameter_model import DrucksacheParameter
-from backend.app.facades.deutscher_bundestag.parameter_model import VorgangParameter
-
-from backend.app.facades.deutscher_bundestag.model import Zuordnung
-
-from logging import getLogger
 
 _logger = getLogger(__name__)
 

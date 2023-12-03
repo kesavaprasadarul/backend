@@ -1,5 +1,6 @@
 """Class for DIP Bundestag Drucksache-Text Importer."""
 
+from datetime import date, datetime, timezone
 from typing import Iterator
 
 from backend.app.core.config import Settings
@@ -19,8 +20,6 @@ from backend.app.models.deutscher_bundestag.models import (
     DIPUrheber,
     DIPVorgangsbezug,
 )
-
-from datetime import date, datetime, timezone
 
 
 class DIPBundestagDrucksacheTextImporter(

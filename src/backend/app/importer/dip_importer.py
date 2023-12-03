@@ -1,7 +1,7 @@
 """Class for DIP Bundestag Plenarprotokoll Importer."""
 
 import logging
-from typing import Any, Generic, Iterator, MutableMapping, TypeVar, Optional
+from typing import Any, Generic, Iterator, MutableMapping, Optional, TypeVar
 
 from pydantic import BaseModel
 

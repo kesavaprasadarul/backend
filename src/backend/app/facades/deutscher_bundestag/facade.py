@@ -2,6 +2,7 @@
 import http
 import logging
 import typing as t
+import urllib.parse
 
 import requests
 
@@ -14,17 +15,17 @@ from backend.app.facades.deutscher_bundestag.model import (
     Vorgang,
     Vorgangsposition,
 )
+from backend.app.facades.deutscher_bundestag.model_plenarprotokoll_vorgangsbezug import (
+    PlenarprotokollVorgangsbezug,
+)
 from backend.app.facades.deutscher_bundestag.parameter_model import (
     DrucksacheParameter,
     PlenarprotokollParameter,
     VorgangParameter,
     VorgangspositionParameter,
 )
-
-from backend.app.facades.deutscher_bundestag.model_plenarprotokoll_vorgangsbezug import (
-    PlenarprotokollVorgangsbezug,
-)
 from backend.app.facades.facade import (
+    HTTP_REQUEST_DEFAULT_TIMEOUT_SECS,
     PAGINATION_CONTENT_ARGS_REST,
     Auth,
     AuthType,
@@ -32,10 +33,8 @@ from backend.app.facades.facade import (
     MediaType,
     Page,
     PageCursor,
-    HTTP_REQUEST_DEFAULT_TIMEOUT_SECS,
 )
-from backend.app.facades.util import ProxyList, Proxy, call_with_retries
-import urllib.parse
+from backend.app.facades.util import Proxy, ProxyList, call_with_retries
 
 _logger = logging.getLogger(__name__)
 

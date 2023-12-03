@@ -3,6 +3,7 @@ from enum import Enum
 from typing import List, Optional
 
 from pydantic import BaseModel, Field, RootModel
+
 from backend.app.facades.deutscher_bundestag.model import Dokumentart, Zuordnung
 
 

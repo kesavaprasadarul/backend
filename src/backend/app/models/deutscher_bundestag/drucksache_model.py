@@ -15,8 +15,8 @@ from backend.app.models.deutscher_bundestag.common import DIPSchema, TimestampMi
 from backend.app.models.deutscher_bundestag.fundstelle_model import DIPFundstelle
 from backend.app.models.deutscher_bundestag.ressort_model import DIPRessort
 from backend.app.models.deutscher_bundestag.urheber_model import DIPUrheber
-from backend.app.models.deutscher_bundestag.vorgangsbezug_model import DIPVorgangsbezug
 from backend.app.models.deutscher_bundestag.vorgang_model import DIPVorgang
+from backend.app.models.deutscher_bundestag.vorgangsbezug_model import DIPVorgangsbezug
 
 
 class DIPDrucksache(Base, TimestampMixin, DIPSchema):
