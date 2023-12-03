@@ -10,5 +10,5 @@ class PlenarprotokollVorgangsbezug(pyd.BaseModel):
 
     id: int = pyd.Field()
     titel: str
-    abstract: str = pyd.Field(default="None")
+    abstract: str | None = pyd.Field(default=None)
     datum: datetime.date
