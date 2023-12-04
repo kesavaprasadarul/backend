@@ -1,4 +1,5 @@
 """DIP Bundestag facade."""
+import datetime
 import http
 import logging
 import typing as t
@@ -275,8 +276,10 @@ class DIPBundestagFacade(HttpFacade):
 
     def get_plenarprotokolle(
         self,
-        wahlperiode: int = 20,
-        zuordnung: str = "BT",
+        date_start: datetime.date | None = None,
+        date_end: datetime.date | None = None,
+        wahlperiode: int | None = None,
+        zuordnung: str | None = None,
         response_limit: int = 1000,
         proxy_list: ProxyList | None = None,
     ) -> t.Iterator[Plenarprotokoll]:
@@ -305,6 +308,8 @@ class DIPBundestagFacade(HttpFacade):
             params={
                 "f.zuordnung": zuordnung,
                 "f.wahlperiode": wahlperiode,
+                "f.datum.start": date_start,
+                "f.datum.end": date_end,
             },
             response_limit=response_limit,
             proxy_list=proxy_list,
