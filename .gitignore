@@ -16,3 +16,7 @@ pytest.ini
 # used for temporary local files like daemon pid files
 .tmp/
 .vscode/
+# fasttext util model
+cc.de.300.bin
+cc.de.300.bin.gz
+
