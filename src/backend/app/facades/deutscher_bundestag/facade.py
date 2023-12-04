@@ -93,7 +93,7 @@ class DIPBundestagFacade(HttpFacade):
                 return PageCursor('cursor', cursor)
             return None
 
-        return self.do_paginated_request(
+        yield from self.do_paginated_request(
             method,
             url,
             unpack_page=unpack_page,

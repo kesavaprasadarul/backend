@@ -1,8 +1,10 @@
 import fasttext
 import fasttext.util  # use pip install fasttext-wheel
-import nltk
+
+# import nltk
 import numpy as np
-from nltk.corpus import stopwords
+
+# from nltk.corpus import stopwords
 
 
 # A class that represents a file and allows querying and analysing its content
@@ -61,9 +63,9 @@ class WordCounter:
 
     def remove_words(self):
         # Download the stop words dataset for German
-        nltk.download('stopwords')
-        nltk.download('de')
-        stop_words_german = set(stopwords.words('german'))
+        # nltk.download('stopwords')
+        # nltk.download('de')
+        # stop_words_german = set(stopwords.words('german'))
         # remove words of lower case and stopwords and the substring "gesetz" and everything after of words
         # we dont want
         # 1. "zur" (kein Nomen, nicht aussagekräftig)
@@ -288,9 +290,7 @@ class WordCounter:
         self.wordlist = [
             word.split('gesetz')[0]
             for word in self.wordlist
-            if not (
-                word[0].islower() or word.lower() in stop_words_german or word in german_articles
-            )
+            if not (word[0].islower() or word in german_articles)
         ]
 
     def make_word_cloud(self):
