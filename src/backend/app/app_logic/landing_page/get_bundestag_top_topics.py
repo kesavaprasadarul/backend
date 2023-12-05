@@ -10,6 +10,8 @@ from backend.app.facades.deutscher_bundestag.facade import DIPBundestagFacade
 from backend.app.facades.deutscher_bundestag.model_plenarprotokoll_vorgangsbezug import (
     PlenarprotokollVorgangsbezug,
 )
+from backend.app.facades.deutscher_bundestag.parameter_model import PlenarprotokollParameter
+from backend.app.facades.deutscher_bundestag.model import Zuordnung
 
 _logger = logging.getLogger(__name__)
 
@@ -29,7 +31,9 @@ def get_bundestag_top_topics_for_month(month: int, year: int):
         "Fetch plenarprotokolle with date_start='%s' and date_end='%s'", date_start, date_end
     )
     plenarprotokolle = dip_bundestag_facade.get_plenarprotokolle(
-        date_start=date_start, date_end=date_end, zuordnung="BT"
+        PlenarprotokollParameter(
+            datum_start=date_start, datum_ende=date_end, zuordnung=Zuordnung.BT
+        )
     )
 
     plenarprotokoll_vorgangsbezuege: list[PlenarprotokollVorgangsbezug] = []

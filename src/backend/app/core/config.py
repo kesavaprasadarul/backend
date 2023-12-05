@@ -22,8 +22,14 @@ class Settings(BaseSettings):
     )  # api key valid till end of may 2024
     DIP_BUNDESTAG_BASE_URL: str = pyd.Field(default="https://search.dip.bundestag.de")
 
-    PROXY_LIST_URL: str = pyd.Field(
+    PROXY_LIST_HTTP_URL: str = pyd.Field(
         default="https://raw.githubusercontent.com/TheSpeedX/SOCKS-List/master/http.txt"
+    )
+    PROXY_LIST_SOCKS4_URL: str = pyd.Field(
+        default="https://raw.githubusercontent.com/TheSpeedX/SOCKS-List/master/socks4.txt"
+    )
+    PROXY_LIST_SOCKS5_URL: str = pyd.Field(
+        default="https://raw.githubusercontent.com/TheSpeedX/SOCKS-List/master/socks5.txt"
     )
 
 

@@ -4,7 +4,8 @@ from typing import Iterator
 
 from backend.app.core.config import Settings
 from backend.app.crud.CRUDDIPBundestag.crud_vorgangsposition import CRUD_DIP_VORGANGSPOSITION
-from backend.app.facades.deutscher_bundestag.model import Vorgangsposition
+from backend.app.facades.deutscher_bundestag.model import Vorgangsposition, Zuordnung
+from backend.app.facades.deutscher_bundestag.parameter_model import VorgangspositionParameter
 from backend.app.facades.util import ProxyList
 from backend.app.importer.dip_importer import DIPImporter
 
@@ -19,9 +20,16 @@ from backend.app.models.deutscher_bundestag.models import (
     DIPVorgangsposition,
     DIPVorgangspositionbezug,
 )
+from datetime import datetime
+import pytz
+
+import logging
+from backend.app.core.logging import configure_logging
 
 
-class DIPBundestagVorgangspositionImporter(DIPImporter[Vorgangsposition, DIPVorgangsposition]):
+class DIPBundestagVorgangspositionImporter(
+    DIPImporter[Vorgangsposition, VorgangspositionParameter, DIPVorgangsposition]
+):
     """Class for DIP Bundestag Vorgangsposition Importer."""
 
     def __init__(self):
@@ -109,36 +117,28 @@ class DIPBundestagVorgangspositionImporter(DIPImporter[Vorgangsposition, DIPVorg
 
     def fetch_data(
         self,
-        params: dict,
+        params: VorgangspositionParameter | None = None,
         response_limit=1000,
         proxy_list: ProxyList | None = None,
-        *args,
-        **kwargs,
     ) -> Iterator[Vorgangsposition]:
         """Fetch data."""
 
-        since_datetime = params.get("since_datetime", '2021-01-01T00:00:00.000Z')
-
         return self.dip_bundestag_facade.get_vorgangspositionen(
-            since_datetime=since_datetime,
+            params=params,
             response_limit=response_limit,
             proxy_list=proxy_list,
-            *args,
-            **kwargs,
         )
 
 
 def import_dip_bundestag():
     importer = DIPBundestagVorgangspositionImporter()
 
-    importer.import_data(
-        params={
-            "since_datetime": '2021-01-01T00:00:00.000Z',
-        },
-        response_limit=1,
-        proxy_list=ProxyList.from_url(Settings().PROXY_LIST_URL),
+    params = VorgangspositionParameter(
+        aktualisiert_start=datetime(2022, 1, 1, tzinfo=pytz.UTC).astimezone(),
     )
+    importer.import_data(params=params, response_limit=10000)
 
 
 if __name__ == '__main__':
+    configure_logging()
     import_dip_bundestag()

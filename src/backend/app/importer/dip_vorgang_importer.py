@@ -5,6 +5,7 @@ from typing import Iterator
 from backend.app.core.config import Settings
 from backend.app.crud.CRUDDIPBundestag.crud_vorgang import CRUD_DIP_VORGANG
 from backend.app.facades.deutscher_bundestag.model import Vorgang
+from backend.app.facades.deutscher_bundestag.parameter_model import VorgangParameter
 from backend.app.facades.util import ProxyList
 from backend.app.importer.dip_importer import DIPImporter
 
@@ -17,8 +18,11 @@ from backend.app.models.deutscher_bundestag.models import (
     DIPVorgangVerlinkung,
 )
 
+import pytz
+from datetime import datetime
 
-class DIPBundestagVorgangImporter(DIPImporter[Vorgang, DIPVorgang]):
+
+class DIPBundestagVorgangImporter(DIPImporter[Vorgang, VorgangParameter, DIPVorgang]):
     """Class for DIP Bundestag Vorgang Importer."""
 
     def __init__(self):
@@ -77,34 +81,28 @@ class DIPBundestagVorgangImporter(DIPImporter[Vorgang, DIPVorgang]):
 
     def fetch_data(
         self,
-        params: dict,
+        params: VorgangParameter | None = None,
         response_limit=1000,
         proxy_list: ProxyList | None = None,
-        *args,
-        **kwargs,
     ) -> Iterator[Vorgang]:
         """Fetch data."""
-
-        since_datetime = params.get("since_datetime", '2021-01-01T00:00:00.000Z')
-
         return self.dip_bundestag_facade.get_vorgange(
-            since_datetime=since_datetime,
+            params=params,
             response_limit=response_limit,
             proxy_list=proxy_list,
-            *args,
-            **kwargs,
         )
 
 
 def import_dip_bundestag():
     importer = DIPBundestagVorgangImporter()
 
+    params = VorgangParameter(
+        aktualisiert_start=datetime(2022, 1, 1, tzinfo=pytz.UTC).astimezone(),
+    )
+
     importer.import_data(
-        params={
-            "since_datetime": '2021-01-01T00:00:00.000Z',
-        },
-        response_limit=1,
-        proxy_list=ProxyList.from_url(Settings().PROXY_LIST_URL),
+        params=params,
+        response_limit=10000,
     )
 
 

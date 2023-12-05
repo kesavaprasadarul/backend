@@ -9,6 +9,8 @@ import typing as t
 import pydantic as pyd
 import requests
 
+from enum import Enum
+
 _logger = logging.getLogger(__name__)
 
 ATTEMPT_AFTER_SECONDS = (0, 15, 30)
@@ -19,10 +21,28 @@ class ProxyListEmptyError(Exception):
     """Raised when proxy list is empty."""
 
 
+class ProxyMethod(Enum):
+    """Proxy methods."""
+
+    SOCKS4 = 'socks4'
+    SOCKS5 = 'socks5'
+    HTTP = 'http'
+
+
 class Proxy(pyd.BaseModel):
     """The proxy to be used."""
 
-    url: str
+    ip: str
+    method: ProxyMethod = ProxyMethod.SOCKS5
+
+    def to_dict(self) -> dict[str, str]:
+        """Convert proxy to dict."""
+        url_prefix = f'{self.method.value}://'
+
+        return {
+            'http': url_prefix + self.ip,
+            'https': url_prefix + self.ip,
+        }
 
 
 class ProxyList:
@@ -33,12 +53,32 @@ class ProxyList:
 
     current_proxy: Proxy | None = None
 
+    sample_test_domains: list[str] = ["www.google.com", "dip.bundestag.de"]
+
     def __init__(self, proxies: list[Proxy]):
         self.original_proxies = proxies.copy()
         self.proxies = proxies.copy()
 
-    def set_random_proxy(self, drop_previous: bool = True):
-        """Get a randomly sampled proxy from the list."""
+    # from https://github.com/TheSpeedX/socker/blob/master/proxy_tester_menu.py
+    def _test_proxy(self, domain: str, proxy: Proxy) -> bool:
+        """Test a proxy."""
+        proxies = proxy.to_dict()
+
+        with contextlib.suppress(requests.RequestException):
+            print(f"Testing https://{domain}, proxy: {proxies}")
+            response = requests.get(f"http://{domain}", proxies=proxies, timeout=10, verify=False)
+            if response.status_code >= 200 and response.status_code < 300:
+                return True
+        return False
+
+    def test_sample_domains(self, proxy: Proxy) -> bool:
+        for domain in self.sample_test_domains:
+            if not self._test_proxy(domain, proxy):
+                return False
+        return True
+
+    def set_random_proxy(self, drop_previous: bool = True, test: bool = True):
+        """Get a randomly sampled proxy from the list and test if it works."""
 
         if len(self.proxies) == 0:
             raise ProxyListEmptyError('No proxies available.')
@@ -46,14 +86,21 @@ class ProxyList:
         if drop_previous and self.current_proxy:
             self.proxies.remove(self.current_proxy)
 
-        self.current_proxy = random.choice(self.proxies)
+        new_proxy = random.choice(self.proxies)
 
-    def get_proxy(self) -> Proxy:
+        while test and not self.test_sample_domains(new_proxy):
+            print(f"Proxy {new_proxy} failed test, removing from list.")
+            self.proxies.remove(new_proxy)
+            new_proxy = random.choice(self.proxies)
+        print(f"Proxy {new_proxy} passed test.")
+        self.current_proxy = new_proxy
+
+    def get_proxy(self, test: bool = True) -> Proxy:
         """Get the current proxy from the list."""
         if self.current_proxy:
             return self.current_proxy
 
-        self.set_random_proxy()
+        self.set_random_proxy(test=test)
 
         if not self.current_proxy:
             raise ProxyListEmptyError('No proxy available.')
@@ -69,22 +116,25 @@ class ProxyList:
         return self.proxies[index]
 
     @classmethod
-    def from_url(cls, proxy_url: str) -> t.Self:
+    def from_url(cls, proxy_url: str, method: ProxyMethod = ProxyMethod.SOCKS5) -> t.Self:
         """Get a proxy list instance from a url."""
         proxies = []
         with requests.get(proxy_url) as response:
             for line in response.iter_lines():
                 if line:
-                    proxies.append(Proxy(url=line.decode('utf-8')))
+                    proxies.append(Proxy(ip=line.decode('utf-8'), method=method))
         return cls(proxies)
 
 
+R = t.TypeVar('R')
+
+
 def call_with_retries(
-    callable_: t.Callable,
+    callable_: t.Callable[..., R],
     *args,
     retval_ok: t.Callable[[t.Any], bool] = lambda _: True,
     **kwargs,
-):
+) -> R:
     """Invoke a callable robustly with delayed retries.
 
     Failure of the invoked callable is indicated by a raised exception or if the return code does

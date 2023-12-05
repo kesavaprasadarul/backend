@@ -14,6 +14,7 @@ import requests
 from backend.app.core.config import Settings
 from backend.app.facades.util import Proxy, ProxyList, call_with_retries
 
+
 _logger = logging.getLogger(__name__)
 
 
@@ -181,13 +182,7 @@ class HttpFacade:
 
             return r.status_code < 500
 
-        proxy_dict = (
-            {
-                'http': f'http://{proxy.url}',
-            }
-            if proxy
-            else None
-        )
+        proxy_dict = proxy.to_dict() if proxy else None
 
         if disable_retry:
             response = self._session.send(
@@ -195,6 +190,7 @@ class HttpFacade:
                 timeout=timeout,
                 proxies=proxy_dict,
                 verify=proxy is None,
+                allow_redirects=False,
             )
         else:
             response = call_with_retries(
@@ -269,13 +265,12 @@ class HttpFacade:
                 )
                 response.raise_for_status()
             except (
-                requests.exceptions.HTTPError,
                 requests.exceptions.ReadTimeout,
                 requests.exceptions.ConnectionError,
             ) as e:
                 if proxy_list:
-                    print("Could not get response. Trying again with new proxy.")
-                    proxy_list.set_random_proxy()
+                    print(f"Could not get response. Trying again with new proxy. Error: {e}")
+                    proxy_list.set_random_proxy(test=True)
                     continue
                 else:
                     raise e
@@ -288,8 +283,10 @@ class HttpFacade:
                 raise NotImplementedError(f'Unexpected page content type {type(page.content)}.')
 
             if cursor := get_next_page_cursor(page.page_info):
+                _logger.info(f'Next cursor: {cursor}.')
                 params[cursor.name] = cursor.value
             else:
+                _logger.info('Reached end of pages.')
                 reached_end = True
 
             if response_limit is not None:
