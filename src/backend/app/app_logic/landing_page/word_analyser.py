@@ -1,10 +1,17 @@
 import fasttext
 import fasttext.util  # use pip install fasttext-wheel
+import os
+import shutil
+from backend.app.utils import get_data_folder
+from backend.app.core.logging import configure_logging
 
 # import nltk
 import numpy as np
 
 # from nltk.corpus import stopwords
+from logging import getLogger
+
+logger = getLogger(__name__)
 
 
 # A class that represents a file and allows querying and analysing its content
@@ -27,11 +34,26 @@ class WordCounter:
         "Forschung",
         "Wohnungsbau",
     ]
-    fasttext.util.download_model('de', if_exists='ignore')  # English
-    ft = fasttext.load_model('cc.de.300.bin')  # German vocabulary , trained on Wikipedia
 
     def __init__(self, wordlist):
         self.wordlist = wordlist
+
+        model_path = "models/cc.de.300.bin"
+        model_path = os.path.join(get_data_folder(), model_path)
+
+        # Download the fasttext model for German if it is not already downloaded
+        if not os.path.isfile(model_path):
+            logger.info("Downloading fasttext model")
+            file_name = fasttext.util.download_model('de', if_exists='ignore')  # English
+
+            logger.info("Moving fasttext model to %s", model_path)
+
+            shutil.move(file_name, model_path)
+
+            if os.path.isfile(file_name + ".gz"):
+                os.remove(file_name + ".gz")
+        logger.info("Loading fasttext model from %s", model_path)
+        self.ft = fasttext.load_model(model_path)  # German vocabulary , trained on Wikipedia
 
     # Maps a word to a vector, currently just by a library call
     def __wtv(self, word):
@@ -327,4 +349,5 @@ def main():
 
 
 if __name__ == "__main__":
+    configure_logging()
     main()

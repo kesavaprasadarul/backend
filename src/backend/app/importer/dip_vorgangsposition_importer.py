@@ -24,7 +24,7 @@ from datetime import datetime
 import pytz
 
 import logging
-from backend.app.utils import setup_logging
+from backend.app.core.logging import configure_logging
 
 
 class DIPBundestagVorgangspositionImporter(
@@ -140,5 +140,5 @@ def import_dip_bundestag():
 
 
 if __name__ == '__main__':
-    setup_logging()
+    configure_logging()
     import_dip_bundestag()

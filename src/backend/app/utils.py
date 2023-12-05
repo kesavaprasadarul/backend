@@ -3,18 +3,14 @@ import logging
 import logging.config
 import os
 
+from pathlib import Path
 
-def setup_logging(
-    default_path='./logs/logging.json', default_level=logging.DEBUG, env_key='LOG_CFG'
-):
-    """Setup logging configuration"""
-    path = default_path
-    value = os.getenv(env_key, None)
-    if value:
-        path = value
-    if os.path.exists(path):
-        with open(path, 'rt') as f:
-            config = json.load(f)
-        logging.config.dictConfig(config)
-    else:
-        logging.basicConfig(level=default_level)
+
+def get_project_root() -> Path:
+    """Returns project root folder."""
+    return Path(__file__).parent.parent
+
+
+def get_data_folder() -> Path:
+    """Returns data folder."""
+    return get_project_root() / "data"

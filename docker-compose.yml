@@ -15,7 +15,8 @@ services:
   backend:
     # set volume to have changes made locally available in uvicorn localhost:8000/docs (run in container)
     volumes:
-      - ./src/backend:/opt/backend/backend
+      - ./src/backend/app:/opt/backend/backend/app
+      - ./data/models:/opt/backend/backend/data/models
     build:
       context: ./
       dockerfile: Dockerfile
