@@ -18,7 +18,8 @@ router = fastapi.APIRouter()
     "/bundestag_top_topics",
     tags=["bundestag-top-topics"],
 )
-def get_bundestag_top_topics(month: int, year: int, election_period: int):
+def get_bundestag_top_topics(month: int | None = None, year: int | None = None, election_period: int | None = None):
+
     top_topics_per_ressort: dict[str, list[list]] = get_bundestag_top_topics_for_month(month, year)
 
     return GetBundestagTopTopicsApiResponse(
