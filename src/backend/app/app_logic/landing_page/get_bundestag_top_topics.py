@@ -7,11 +7,11 @@ import logging
 from backend.app.app_logic.landing_page.word_analyser import WordCounter
 from backend.app.core.config import Settings
 from backend.app.facades.deutscher_bundestag.facade import DIPBundestagFacade
+from backend.app.facades.deutscher_bundestag.model import Zuordnung
 from backend.app.facades.deutscher_bundestag.model_plenarprotokoll_vorgangsbezug import (
     PlenarprotokollVorgangsbezug,
 )
 from backend.app.facades.deutscher_bundestag.parameter_model import PlenarprotokollParameter
-from backend.app.facades.deutscher_bundestag.model import Zuordnung
 
 _logger = logging.getLogger(__name__)
 
@@ -57,7 +57,12 @@ def get_bundestag_top_topics_for_month(month: int, year: int):
 
     # word counter for analysing
     word_analyser = WordCounter(plenarprotokoll_vorgangsbezuege_abstract_split)
-    top_topics_by_ressort = word_analyser.make_word_cloud()
+    topics_by_ressort = word_analyser.make_word_cloud()
 
-    # output formatting
+    top_topics_by_ressort = {}
+    for key in topics_by_ressort.keys():
+        top_topics_by_ressort[key] = sorted(
+            topics_by_ressort[key], key=lambda x: x[1], reverse=True
+        )[0:5]
+
     return top_topics_by_ressort
