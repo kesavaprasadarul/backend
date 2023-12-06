@@ -1,7 +1,7 @@
 """Entry point for FastAPI including API routers (endpoints)."""
 from fastapi import FastAPI
 
-from backend.app.api.api_v1.api import api_router
+from backend.app.api.v1.api import api_router
 from backend.app.core.config import settings
 from backend.app.core.logging import configure_logging
 
