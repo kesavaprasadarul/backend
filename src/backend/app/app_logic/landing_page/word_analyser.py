@@ -2,6 +2,7 @@ import fasttext
 import fasttext.util  # use pip install fasttext-wheel
 import os
 import shutil
+import re
 from backend.app.utils import get_data_folder
 from backend.app.core.logging import configure_logging
 
@@ -84,17 +85,7 @@ class WordCounter:
         return dict_w_res
 
     def remove_words(self):
-        # Download the stop words dataset for German
-        # nltk.download('stopwords')
-        # nltk.download('de')
-        # stop_words_german = set(stopwords.words('german'))
-        # remove words of lower case and stopwords and the substring "gesetz" and everything after of words
-        # we dont want
-        # 1. "zur" (kein Nomen, nicht aussagekräftig)
-        # 2. "Ist" (auch Füllworter sind manchmal groß geschrieben)
-        # 3. "Digitalisierungsgesetesentwurf" -> besser "Digitalisierung"
-        # 4. Artikel sind auuch unnöttig
-        german_articles = {
+           german_articles = {
             # Nominative
             'Der',
             'Die',
@@ -308,10 +299,82 @@ class WordCounter:
             'Irgendeine',
             'Irgendein',
         }
+        #TOP 100 words thaat  appear at leaast 20 times (extracted over all protocols of 2023)
+
+        top100= ['13', 'Bundesregierung', 'Entlastung', 'Ausschuss', 'Antwort', 'Olaf', 'Annahme', 'Ordnungsrufes',
+                 'EUZBBG',
+                 'Deutschlands', 'Entscheidung', '6.', 'Beschleunigung', 'Bundes', '50', 'Fraktion', 'EP',
+                 'Gesetzentwurf',
+                 'Einfügung', 'Erteilung', 'Finanzierung', '10', 'Klimaschutz', 'Prüfung', 'BÜNDNIS', 'Verwendung',
+                 'Erneute',
+                 'Angabe', 'Ausschusses:', 'Parlament', 'Unternehmen', 'Deutschland', 'November', 'Deutsche',
+                 'Europäische',
+                 'Juli', 'Parlament,', 'Sicherstellung', 'Anlage', 'Robert', 'Titeländerung', 'Bundesministerium',
+                 'Verordnungsermächtigung<br', 'Bereich', 'Einrichtung', 'Auffassung', 'Vorschriften', 'Wann', 'Rat',
+                 'Übertragung', 'Anwendung', 'BvR', 'Indikativen', 'Fortsetzung', 'Ausschusses:</strong>', 'Oktober',
+                 'Vorhaben', 'Feststellung', 'Standards', 'Verbesserung', 'Hat', 'Regelung', 'Sozialausschuss',
+                 'Bundestagsdrucksache', 'Mitglieder', 'Abg', 'Siehe', 'Beendigung', 'Ländern', 'Russland',
+                 'Petitionsausschusses', 'Bundesministeriums', 'Empfehlung', 'Verzicht', 'Fragestunde',
+                 'Berücksichtigung',
+                 '25.', '6', 'Januar', 'Möglichkeit', 'Anerkennung', '9', 'SPD,', 'L', 'Aufnahme', 'Unterrichtung',
+                 'Einführung', 'Klarstellungen', 'Ausgaben', 'Entwicklung', 'Bundesminister', 'Anlagen', 'Zusammenhang',
+                 '12',
+                 'Ausweitung', 'Bund', 'FDP', 'Lage', '20.', '11', 'Sammelübersicht', 'Neufassung', 'Jahre',
+                 'Weiterentwicklung', 'Personen', 'Verordnung', 'Deutschen', 'EuB-BReg', '2016', 'Bekämpfung',
+                 'September',
+                 '(bitte', '26.', 'Zugang', '(2.', '17.', 'Bildung', 'Entschließung', 'Beibehaltung', 'Union',
+                 'Kommission',
+                 'Zustimmung', 'Bundestages', 'Ergänzung', 'Ausschuss)', 'Förderung', 'Bewertung', '1.', 'Durchführung',
+                 '2',
+                 '2022', 'Hintergrund', '21.', '(EG)', 'Dezember', '30', 'WP', 'Buch', 'KOM(2022)', 'Jahr', 'Vorlage,',
+                 'Petitionen', 'Absenkung', '20', '1)<br', 'Daten', 'Gesetz', 'Aussprache', 'Kenntnis', '(Anlage', '7',
+                 'Forschung', '8', 'Frage(n):<br', 'Richtlinien', 'Nr.', 'Grundlage', 'Dr.', 'Arbeit', 'Verfahren',
+                 'Versorgung', 'Begrüßung', 'Klarstellung', 'Schutz', 'Ausbau', '1', '(GASP/GSVP)', 'Unterstützung',
+                 'April',
+                 'Nutzung', 'Parlaments', 'Sondervermögens', 'Stand', 'Hinblick', 'Reduzierung', 'Rat,',
+                 'Folgeänderungen',
+                 '31.', 'Vorlage', 'Sicht', '13.', '19.', 'Internationalen', 'Rahmen', '2020', 'Zusätzliche',
+                 'Festlegung',
+                 '&ndash;', 'Höhe', 'Euro,', 'Bundesrepublik', '14', 'Richtlinie', 'Status', 'Absatz', '(EU)',
+                 'Übereinkommens',
+                 'Mitteln', 'Verlängerung', 'Digitales', 'Digitalisierung', 'Koalitionsvertrag', 'Ermöglichung',
+                 'Schaffung',
+                 '2024', 'Europa', 'Vorschau', '2025', 'Anforderungen', 'Informationen', 'Aufhebung', 'Namen',
+                 'Zusammenarbeit',
+                 'Europäischen', 'Abgabe', 'Rechtsverordnungen;', 'GESTA', 'Wirtschafts-', 'Staaten', '(ABl.', 'Wahl',
+                 'Reform',
+                 'Soldaten,', 'Menschen', 'Mrd', 'Erweiterung', 'Republik', 'Art.', 'Verkehr', 'Regelungen',
+                 'Sanktionen:',
+                 'Verhinderung', 'Prozent', '<br', 'Sicherung', 'EU', '90/DIE', 'Auswirkungen', 'Vorgaben', 'GRÜNEN',
+                 'Rates',
+                 'Bezug', '24.', 'März', 'Energien', 'Investitionen', 'Verpflichtung', 'Kosten', '(eingebracht', '2.',
+                 'Wärmeplanung', 'Bezug:', 'Evaluierung', 'Erleichterung', '3', 'Anzahl', 'Bericht', 'Mitteilung',
+                 'Anhebung',
+                 'Regionen', 'Einhaltung', 'Sozial', 'Verbot', 'Änderungen', 'Euro', '2023', 'Bundeshaushalt',
+                 'Mitgliedstaaten', 'Bereitstellung', 'S.', 'Anpassungen', 'Recht', ';', '29.', '2024,', 'Rechts',
+                 '2019',
+                 'Gebäudeenergie', 'Gewährleistung', 'Verteidigung', 'Mio', 'Mai', 'Aufbau', 'Bundesministerin',
+                 'Bundeswehr',
+                 'Juni', 'Steigerung', '2021', 'Vermeidung', 'Einsatz', 'Modernisierung', 'Februar', 'Vorschlag',
+                 'Beschlusses',
+                 'Pflicht', 'Gesetzen', 'Soldaten', '§', 'Änderung', 'Beteiligung', 'Anpassung', 'BT-Drs', 'Umsetzung',
+                 'Entschließungsantrag', 'Bundesministers', 'Ende', '<strong>Beschlussempfehlung', 'Wirtschaft', '23',
+                 'KOM(2023)', 'Mittel', 'Originaltext', 'Stärkung', 'Wie', 'Stellungnahme', 'Anträge',
+                 'Verordnungsermächtigung', '(AfD)', '(vgl.', 'Kommunen', '7.', 'Gesetzes', 'Länder', 'Beschluss', '-',
+                 'Verlangen', 'Ratsdok.', 'Frage', 'Streitkräfte', '15', '2022)', 'AG', 'Jahren', 'Erhöhung',
+                 'Bundestag',
+                 '15.', 'Bundesregierung,', '2023,', 'Maßnahmen', 'Sicherheit', 'Übereinkommen', '30.', 'Gemeinsamer',
+                 '2018',
+                 'Vereinbarung']
+        self.wordlist=[word for word in self.wordlist if word not in top100]
+
+        #remove nonalphabetical chars
+        regex = re.compile('[^a-zA-ZÄÖÜäöüß]')
+        # Use list comprehension to apply the regex and filter the list
+        self.wordlist = [regex.sub('', item) for item in self.wordlist]
 
         self.wordlist = [
-            word.split('gesetz')[0]
-            for word in self.wordlist
+            word for word in self.wordlist
             if not (word[0].islower() or word in german_articles)
         ]
 
