@@ -10,8 +10,7 @@ from backend.app.facades.deutscher_bundestag.model import (
     DokumentTyp,
     Herausgeber,
 )
-from backend.app.models.config import SchemaNames
-from backend.app.models.deutscher_bundestag.common import DIPSchema, TimestampMixin
+from backend.app.models.common import DIPSchema, TimestampMixin
 from backend.app.models.deutscher_bundestag.fundstelle_model import DIPFundstelle
 from backend.app.models.deutscher_bundestag.ressort_model import DIPRessort
 from backend.app.models.deutscher_bundestag.urheber_model import DIPUrheber
@@ -78,9 +77,7 @@ class DIPAutor(Base, TimestampMixin, DIPSchema):
     __tablename__ = "autor"
 
     id: Mapped[int] = mapped_column(primary_key=True)  # database id
-    drucksache_id: Mapped[int] = mapped_column(
-        ForeignKey(f"{SchemaNames.DEUTSCHER_BUNDESTAG}.drucksache.id"), nullable=False
-    )
+    drucksache_id: Mapped[int] = mapped_column(ForeignKey("dip.drucksache.id"), nullable=False)
     titel: Mapped[str] = mapped_column(nullable=False)
     autor_titel: Mapped[str] = mapped_column(nullable=False)
 
@@ -89,9 +86,7 @@ class DIPDrucksacheText(Base, TimestampMixin, DIPSchema):
     __tablename__ = "drucksache_text"
 
     id: Mapped[int] = mapped_column(primary_key=True)  # database id
-    drucksache_id: Mapped[int] = mapped_column(
-        ForeignKey(f"{SchemaNames.DEUTSCHER_BUNDESTAG}.drucksache.id"), nullable=False
-    )
+    drucksache_id: Mapped[int] = mapped_column(ForeignKey("dip.drucksache.id"), nullable=False)
     text: Mapped[str] = mapped_column(nullable=False)
 
     drucksache: Mapped["DIPDrucksache"] = relationship(

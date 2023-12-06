@@ -1,0 +1,73 @@
+"""Contains endpoints for importing PLENARPROTOKOLLE from DIP Bundestag API with DIP Bundestag facade."""
+import logging
+from datetime import date, datetime
+from typing import Optional
+
+from fastapi import APIRouter, Depends
+
+from backend.app.api.v1.models.messages import Abstimmung
+from backend.app.api.v1.models.queries import DateRange, DatetimeRange
+from backend.app.services.abstimmung.service import AbstimmungService
+from backend.app.services.common import ObjectNotFound
+
+_logger = logging.getLogger(__name__)
+
+router = APIRouter(prefix="/abstimmung", tags=["abstimmung"])
+
+
+@router.get(
+    "/",
+    response_model=list[Abstimmung],
+)
+async def read_abstimmungen(
+    limit: int = 100,
+    date_min: date | None = None,
+    date_max: date | None = None,
+    aktualisiert_min: datetime | None = None,
+    aktualisiert_max: datetime | None = None,
+    service: AbstimmungService = Depends(AbstimmungService),
+):
+    abstimmungen = (
+        service.query(
+            limit=limit,
+            skip=0,
+            datum=DateRange(min=date_min, max=date_max),
+            aktualisiert=DatetimeRange(min=aktualisiert_min, max=aktualisiert_max),
+        )
+        or []
+    )
+
+    return abstimmungen
+
+
+@router.get(
+    "/count",
+    response_model=int,
+)
+async def count_abstimmungen(
+    date_min: date | None = None,
+    date_max: date | None = None,
+    aktualisiert_min: datetime | None = None,
+    aktualisiert_max: datetime | None = None,
+    service: AbstimmungService = Depends(AbstimmungService),
+):
+    return service.query_count(
+        datum=DateRange(min=date_min, max=date_max),
+        aktualisiert=DatetimeRange(min=aktualisiert_min, max=aktualisiert_max),
+    )
+
+
+@router.get(
+    "/{id}",
+    response_model=Abstimmung,
+)
+async def read_abstimmung(
+    id: int,
+    service: AbstimmungService = Depends(AbstimmungService),
+):
+    msg = service.get(id=id)
+    _logger.info(msg)
+
+    if msg:
+        return msg
+    raise ObjectNotFound

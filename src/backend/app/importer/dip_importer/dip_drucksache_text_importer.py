@@ -8,7 +8,7 @@ from backend.app.crud.CRUDDIPBundestag.crud_drucksache import CRUD_DIP_DRUCKSACH
 from backend.app.facades.deutscher_bundestag.model import DrucksacheText
 from backend.app.facades.deutscher_bundestag.parameter_model import DrucksacheParameter
 from backend.app.facades.util import ProxyList
-from backend.app.importer.dip_importer import DIPImporter
+from backend.app.importer.dip_importer.base import DIPImporter
 
 # import from all models to ensure they are registered
 from backend.app.models.deutscher_bundestag.models import (

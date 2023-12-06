@@ -3,14 +3,14 @@ import logging
 
 import fastapi
 
+from backend.app.api.v1.models.responses import BundestagTopTopicsApiResponse
 from backend.app.app_logic.landing_page.get_bundestag_top_topics import (
     get_bundestag_top_topics_for_month,
 )
-from backend.app.api.v1.models.responses import BundestagTopTopicsApiResponse
 
 _logger = logging.getLogger(__name__)
 
-router = fastapi.APIRouter(prefix="bundestag_top_topics", tags=["bundestag-top-topics"])
+router = fastapi.APIRouter(prefix="/bundestag_top_topics", tags=["bundestag-top-topics"])
 
 
 @router.get(path='/', response_model=BundestagTopTopicsApiResponse)

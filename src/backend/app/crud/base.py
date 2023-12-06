@@ -95,7 +95,7 @@ class CRUDBase(Generic[ModelType]):
             # if database closed unexpectedly, OperationalError occurs
             _logger.error("%s occured. Session will be rolled back.", error)
             CRUDBase.db.rollback()
-            return CRUDBase.db.scalars(select(self.model).where(self.model.id == id))
+            return CRUDBase.db.scalar(select(self.model).where(self.model.id == id))
 
     def read_all(self):
         """Read all objects from database via select."""
@@ -107,12 +107,26 @@ class CRUDBase(Generic[ModelType]):
             CRUDBase.db.rollback()
             return CRUDBase.db.scalars(select(self.model)).all()
 
-    def read_multi(self, skip: int = 0, limit: int = 100):
+    def read_multi(self, filters: list = [], skip: int = 0, limit: int = 100):
         """Read multi objects from database."""
         try:
-            return CRUDBase.db.scalars(select(self.model).offset(skip).limit(limit)).all()
+            return CRUDBase.db.scalars(
+                select(self.model).filter(*filters).offset(skip).limit(limit)
+            ).all()
         except OperationalError as error:
             # if database closed unexpectedly, OperationalError occurs
             _logger.error("%s occured. Session will be rolled back.", error)
             CRUDBase.db.rollback()
-            return CRUDBase.db.scalars(select(self.model).offset(skip).limit(limit)).all()
+            return CRUDBase.db.scalars(
+                select(self.model).filter(*filters).offset(skip).limit(limit)
+            ).all()
+
+    def count(self, filters: list = []) -> int:
+        """Count objects from database."""
+        try:
+            return CRUDBase.db.query(self.model).filter(*filters).count()
+        except OperationalError as error:
+            # if database closed unexpectedly, OperationalError occurs
+            _logger.error("%s occured. Session will be rolled back.", error)
+            CRUDBase.db.rollback()
+            return CRUDBase.db.query(self.model).filter(*filters).count()

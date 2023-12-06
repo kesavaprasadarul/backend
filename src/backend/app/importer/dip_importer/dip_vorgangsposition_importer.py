@@ -1,13 +1,18 @@
 """Class for DIP Bundestag Vorgangsposition Importer."""
 
+import logging
+from datetime import datetime
 from typing import Iterator
 
+import pytz
+
 from backend.app.core.config import Settings
+from backend.app.core.logging import configure_logging
 from backend.app.crud.CRUDDIPBundestag.crud_vorgangsposition import CRUD_DIP_VORGANGSPOSITION
 from backend.app.facades.deutscher_bundestag.model import Vorgangsposition, Zuordnung
 from backend.app.facades.deutscher_bundestag.parameter_model import VorgangspositionParameter
 from backend.app.facades.util import ProxyList
-from backend.app.importer.dip_importer import DIPImporter
+from backend.app.importer.dip_importer.base import DIPImporter
 
 # import from all models to ensure they are registered
 from backend.app.models.deutscher_bundestag.models import (
@@ -20,11 +25,6 @@ from backend.app.models.deutscher_bundestag.models import (
     DIPVorgangsposition,
     DIPVorgangspositionbezug,
 )
-from datetime import datetime
-import pytz
-
-import logging
-from backend.app.core.logging import configure_logging
 
 
 class DIPBundestagVorgangspositionImporter(

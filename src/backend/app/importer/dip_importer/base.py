@@ -37,7 +37,12 @@ class DIPImporter(Generic[PydanticDataModelType, PydanticParameterModelType, SQL
         Initialize DIPImporter.
         """
         self.crud = crud
+        self.imported_count = 0
         self.dip_bundestag_facade = DIPBundestagFacade.get_instance(Settings())
+
+    def get_imported_count(self) -> int:
+        """Get count of imported data."""
+        return self.imported_count
 
     def transform_model(self, data: PydanticDataModelType) -> SQLModelType:
         """Transform data."""
@@ -61,7 +66,7 @@ class DIPImporter(Generic[PydanticDataModelType, PydanticParameterModelType, SQL
         **kwargs: Any,
     ):
         batch: list[SQLModelType] = []
-        batch_count = 1
+        batch_number = 0
         for pydantic_model in self.fetch_data(
             params=params,
             response_limit=response_limit,
@@ -71,16 +76,20 @@ class DIPImporter(Generic[PydanticDataModelType, PydanticParameterModelType, SQL
             batch.append(sql_model)
 
             if len(batch) >= upsert_batch_size:
-                _logger.info(f'Upserting batch {batch_count} into {sql_model.__tablename__}-Table.')
+                _logger.info(
+                    f'Upserting batch {batch_number} into {sql_model.__tablename__}-Table.'
+                )
                 self.crud.create_or_update_multi(batch)
                 batch = []
-                batch_count += 1
+                batch_number += 1
+                self.imported_count += upsert_batch_size
 
         if batch:
             _logger.info(
-                f'Upserting final batch ({batch_count}) into {batch[0].__tablename__}-Table.'
+                f'Upserting final batch ({batch_number}) into {batch[0].__tablename__}-Table.'
             )
             self.crud.create_or_update_multi(batch)
+            self.imported_count += len(batch)
 
     def import_data(
         self,

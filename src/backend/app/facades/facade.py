@@ -14,7 +14,6 @@ import requests
 from backend.app.core.config import Settings
 from backend.app.facades.util import Proxy, ProxyList, call_with_retries
 
-
 _logger = logging.getLogger(__name__)
 
 

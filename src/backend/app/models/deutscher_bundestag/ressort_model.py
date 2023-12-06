@@ -2,20 +2,17 @@ from sqlalchemy import ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column
 
 from backend.app.db.database import Base
-from backend.app.models.config import SchemaNames
-from backend.app.models.deutscher_bundestag.common import DIPSchema, TimestampMixin
+from backend.app.models.common import DIPSchema, TimestampMixin
 
 
 class DIPRessort(Base, TimestampMixin, DIPSchema):
     __tablename__ = "ressort"
 
     id: Mapped[int] = mapped_column(primary_key=True)  # database id
-    drucksache_id: Mapped[int] = mapped_column(
-        ForeignKey(f"{SchemaNames.DEUTSCHER_BUNDESTAG}.drucksache.id"), nullable=True
-    )
+    drucksache_id: Mapped[int] = mapped_column(ForeignKey(f"dip.drucksache.id"), nullable=True)
 
     vorgangsposition_id: Mapped[int] = mapped_column(
-        ForeignKey(f"{SchemaNames.DEUTSCHER_BUNDESTAG}.vorgangsposition.id"),
+        ForeignKey(f"dip.vorgangsposition.id"),
         nullable=True,
     )
 

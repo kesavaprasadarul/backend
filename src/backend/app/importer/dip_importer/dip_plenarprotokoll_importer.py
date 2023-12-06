@@ -7,7 +7,7 @@ from backend.app.crud.CRUDDIPBundestag.crud_plenarprotokoll import CRUD_DIP_PLEN
 from backend.app.facades.deutscher_bundestag.model import Plenarprotokoll
 from backend.app.facades.deutscher_bundestag.parameter_model import PlenarprotokollParameter
 from backend.app.facades.util import ProxyList
-from backend.app.importer.dip_importer import DIPImporter
+from backend.app.importer.dip_importer.base import DIPImporter
 
 # import from all models to ensure they are registered
 from backend.app.models.deutscher_bundestag.models import (
@@ -68,10 +68,11 @@ class DIPBundestagPlenarprotokollImporter(
 def import_dip_bundestag():
     importer = DIPBundestagPlenarprotokollImporter()
 
+    params = PlenarprotokollParameter(dokumentnummer=['20/8626', '20/9345'])
+
     importer.import_data(
-        params=None,
+        params=params,
         response_limit=1,
-        proxy_list=ProxyList.from_url(Settings().PROXY_LIST_SOCKS4_URL),
     )
 
 
