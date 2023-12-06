@@ -1,16 +1,18 @@
+import os
+import re
+import shutil
+
+# from nltk.corpus import stopwords
+from logging import getLogger
+
 import fasttext
 import fasttext.util  # use pip install fasttext-wheel
-import os
-import shutil
-import re
-from backend.app.utils import get_data_folder
-from backend.app.core.logging import configure_logging
 
 # import nltk
 import numpy as np
 
-# from nltk.corpus import stopwords
-from logging import getLogger
+from backend.app.core.logging import configure_logging
+from backend.app.utils import get_data_folder
 
 logger = getLogger(__name__)
 

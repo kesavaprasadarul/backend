@@ -3,7 +3,7 @@ from sqlalchemy.orm import Mapped, mapped_column
 
 from backend.app.db.database import Base
 from backend.app.facades.deutscher_bundestag.model import Rolle
-from backend.app.models.deutscher_bundestag.common import DIPSchema, TimestampMixin
+from backend.app.models.common import DIPSchema, TimestampMixin
 
 
 class DIPUrheber(Base, TimestampMixin, DIPSchema):

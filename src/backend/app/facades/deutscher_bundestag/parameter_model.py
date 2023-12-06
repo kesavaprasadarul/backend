@@ -230,6 +230,12 @@ class DrucksacheParameter(CommonParameter, RessortfdfTitelUrheberParameter):
 
 
 class PlenarprotokollParameter(CommonParameter):
+    dokumentnummer: Optional[list[str]] = Field(
+        default=None,
+        description="Dokumentnummer einer Drucksache oder eines Plenarprotokolls (ODER-Suche)",
+        serialization_alias="f.dokumentnummer",
+    )
+
     zuordnung: Optional[Zuordnung] = Field(
         default=None,
         description="Zuordnung der Entität zum Bundestag, Bundesrat, Bundesversammlung oder Europakammer (UND-Suche)",

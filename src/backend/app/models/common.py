@@ -3,11 +3,13 @@ from datetime import datetime
 from sqlalchemy import func
 from sqlalchemy.orm import Mapped, mapped_column
 
-from backend.app.models.config import SchemaNames
+
+class APISchema:
+    __table_args__ = {"schema": "public"}
 
 
 class DIPSchema:
-    __table_args__ = {"schema": SchemaNames.DEUTSCHER_BUNDESTAG}
+    __table_args__ = {"schema": "dip"}
 
 
 class TimestampMixin:

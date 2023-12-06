@@ -5,11 +5,10 @@ import random
 import time
 import traceback
 import typing as t
+from enum import Enum
 
 import pydantic as pyd
 import requests
-
-from enum import Enum
 
 _logger = logging.getLogger(__name__)
 

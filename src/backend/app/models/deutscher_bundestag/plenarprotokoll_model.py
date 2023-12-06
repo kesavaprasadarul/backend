@@ -10,7 +10,7 @@ from backend.app.facades.deutscher_bundestag.model import (
     DokumentTyp,
     Zuordnung,
 )
-from backend.app.models.deutscher_bundestag.common import DIPSchema, TimestampMixin
+from backend.app.models.common import DIPSchema, TimestampMixin
 from backend.app.models.deutscher_bundestag.fundstelle_model import DIPFundstelle
 from backend.app.models.deutscher_bundestag.vorgangsbezug_model import DIPVorgangsbezug
 

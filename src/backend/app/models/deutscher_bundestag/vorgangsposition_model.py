@@ -12,7 +12,7 @@ from backend.app.facades.deutscher_bundestag.model import (
     VorgangspositionTyp,
     Zuordnung,
 )
-from backend.app.models.deutscher_bundestag.common import DIPSchema, TimestampMixin
+from backend.app.models.common import DIPSchema, TimestampMixin
 from backend.app.models.deutscher_bundestag.fundstelle_model import DIPFundstelle
 from backend.app.models.deutscher_bundestag.ressort_model import DIPRessort
 from backend.app.models.deutscher_bundestag.urheber_model import DIPUrheber
