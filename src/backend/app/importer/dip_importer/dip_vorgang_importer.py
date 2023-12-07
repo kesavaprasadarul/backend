@@ -113,15 +113,13 @@ class DIPBundestagVorgangImporter(DIPImporter[Vorgang, VorgangParameter, DIPVorg
 
             if self.import_vorgangspositionen:
                 time.sleep(0.5)
-                for vorgang_pydantic in self.vorgangsposition_importer.fetch_data(
+                for vorgangsposition in self.vorgangsposition_importer.fetch_data(
                     params=VorgangspositionParameter(
                         vorgang=db_model.id,
                     ),
                     proxy_list=proxy_list,
                 ):
-                    db_model.vorgangsposition.append(
-                        self.vorgangsposition_importer.transform_model(vorgang_pydantic)
-                    )
+                    db_model.vorgangsposition.append(vorgangsposition)
 
             yield db_model
 

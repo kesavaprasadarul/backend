@@ -85,13 +85,13 @@ class DIPBundestagPlenarprotokollImporter(
 
             if self.import_vorgaenge:
                 time.sleep(0.5)
-                for vorgang_pydantic in self.vorgang_importer.fetch_data(
+                for vorgang in self.vorgang_importer.fetch_data(
                     params=VorgangParameter(
                         drucksache=db_model.id,
                     ),
                     proxy_list=proxy_list,
                 ):
-                    db_model.vorgang.append(self.vorgang_importer.transform_model(vorgang_pydantic))
+                    db_model.vorgang.append(vorgang)
 
             yield db_model
 
