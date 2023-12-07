@@ -5,9 +5,13 @@ from typing import Iterator
 from backend.app.core.config import Settings
 from backend.app.crud.CRUDDIPBundestag.crud_plenarprotokoll import CRUD_DIP_PLENARPROTOKOLL
 from backend.app.facades.deutscher_bundestag.model import PlenarprotokollText
-from backend.app.facades.deutscher_bundestag.parameter_model import PlenarprotokollParameter
+from backend.app.facades.deutscher_bundestag.parameter_model import (
+    PlenarprotokollParameter,
+    VorgangParameter,
+)
 from backend.app.facades.util import ProxyList
 from backend.app.importer.dip_importer.base import DIPImporter
+from backend.app.importer.dip_importer.dip_vorgang_importer import DIPBundestagVorgangImporter
 
 # import from all models to ensure they are registered
 from backend.app.models.deutscher_bundestag.models import (
@@ -16,6 +20,7 @@ from backend.app.models.deutscher_bundestag.models import (
     DIPPlenarprotokollText,
     DIPVorgangsbezug,
 )
+import time
 
 
 class DIPBundestagPlenarprotokollImporter(
@@ -23,11 +28,18 @@ class DIPBundestagPlenarprotokollImporter(
 ):
     """Class for DIP Bundestag Plenarprotokoll Importer."""
 
-    def __init__(self):
+    def __init__(self, import_vorgaenge: bool = True, import_vorgangspositionen: bool = True):
         """
         Initialize DIPImporter.
         """
         super().__init__(CRUD_DIP_PLENARPROTOKOLL)
+        self.import_vorgaenge = import_vorgaenge
+        self.import_vorgangspositionen = import_vorgangspositionen
+
+        if import_vorgaenge:
+            self.vorgang_importer = DIPBundestagVorgangImporter(
+                import_vorgangspositionen=import_vorgangspositionen
+            )
 
     def transform_model(self, data: PlenarprotokollText) -> DIPPlenarprotokoll:
         """Transform data."""
@@ -63,14 +75,25 @@ class DIPBundestagPlenarprotokollImporter(
         params: PlenarprotokollParameter | None = None,
         response_limit=1000,
         proxy_list: ProxyList | None = None,
-    ) -> Iterator[PlenarprotokollText]:
+    ) -> Iterator[DIPPlenarprotokoll]:
         """Fetch data."""
 
-        return self.dip_bundestag_facade.get_plenarprotokolle_text(
-            params=params,
-            response_limit=response_limit,
-            proxy_list=proxy_list,
-        )
+        for model in self.dip_bundestag_facade.get_plenarprotokolle_text(
+            params, response_limit, proxy_list
+        ):
+            db_model = self.transform_model(model)
+
+            if self.import_vorgaenge:
+                time.sleep(0.5)
+                for vorgang_pydantic in self.vorgang_importer.fetch_data(
+                    params=VorgangParameter(
+                        drucksache=db_model.id,
+                    ),
+                    proxy_list=proxy_list,
+                ):
+                    db_model.vorgang.append(self.vorgang_importer.transform_model(vorgang_pydantic))
+
+            yield db_model
 
 
 def import_dip_bundestag():

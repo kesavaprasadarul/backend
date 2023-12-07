@@ -53,7 +53,7 @@ class DIPImporter(Generic[PydanticDataModelType, PydanticParameterModelType, SQL
         params: Optional[PydanticParameterModelType] = None,
         response_limit=1000,
         proxy_list: ProxyList | None = None,
-    ) -> Iterator[PydanticDataModelType]:
+    ) -> Iterator[SQLModelType]:
         """Fetch data."""
         raise NotImplementedError
 
@@ -67,18 +67,15 @@ class DIPImporter(Generic[PydanticDataModelType, PydanticParameterModelType, SQL
     ):
         batch: list[SQLModelType] = []
         batch_number = 0
-        for pydantic_model in self.fetch_data(
+        for db_model in self.fetch_data(
             params=params,
             response_limit=response_limit,
             proxy_list=proxy_list,
         ):
-            sql_model = self.transform_model(pydantic_model)
-            batch.append(sql_model)
+            batch.append(db_model)
 
             if len(batch) >= upsert_batch_size:
-                _logger.info(
-                    f'Upserting batch {batch_number} into {sql_model.__tablename__}-Table.'
-                )
+                _logger.info(f'Upserting batch {batch_number} into {db_model.__tablename__}-Table.')
                 self.crud.create_or_update_multi(batch)
                 batch = []
                 batch_number += 1

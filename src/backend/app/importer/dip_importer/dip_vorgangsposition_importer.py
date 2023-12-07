@@ -120,14 +120,17 @@ class DIPBundestagVorgangspositionImporter(
         params: VorgangspositionParameter | None = None,
         response_limit=1000,
         proxy_list: ProxyList | None = None,
-    ) -> Iterator[Vorgangsposition]:
+    ) -> Iterator[DIPVorgangsposition]:
         """Fetch data."""
 
-        return self.dip_bundestag_facade.get_vorgangspositionen(
+        for model in self.dip_bundestag_facade.get_vorgangspositionen(
             params=params,
             response_limit=response_limit,
             proxy_list=proxy_list,
-        )
+        ):
+            db_model = self.transform_model(model)
+
+            yield db_model
 
 
 def import_dip_bundestag():

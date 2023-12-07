@@ -8,6 +8,7 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 from backend.app.db.database import Base
 from backend.app.facades.deutscher_bundestag.model import VorgangDeskriptorTyp, VorgangTyp
 from backend.app.models.common import DIPSchema, TimestampMixin
+from backend.app.models.deutscher_bundestag.vorgangsposition_model import DIPVorgangsposition
 
 
 class DIPVorgang(Base, TimestampMixin, DIPSchema):
@@ -54,6 +55,12 @@ class DIPVorgang(Base, TimestampMixin, DIPSchema):
 
     vorgang_verlinkung: Mapped[list["DIPVorgangVerlinkung"]] = relationship(
         cascade='merge, save-update, delete, delete-orphan'
+    )
+
+    vorgangsposition: Mapped[list["DIPVorgangsposition"]] = relationship(
+        cascade='merge, save-update',
+        foreign_keys="DIPVorgangsposition.vorgang_id",
+        primaryjoin="DIPVorgang.id==DIPVorgangsposition.vorgang_id",
     )
 
 
