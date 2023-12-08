@@ -2,7 +2,7 @@
 import logging
 
 from backend.app.crud.base import CRUDBase
-from backend.app.models.top_topics_model import TopTopics
+from backend.app.models.api.top_topics_model import TopTopics
 
 _logger = logging.getLogger(__name__)
 

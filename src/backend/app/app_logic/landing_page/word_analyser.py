@@ -659,7 +659,9 @@ class WordCounter:
         self.wordlist = [regex.sub('', item) for item in self.wordlist]
 
         self.wordlist = [
-            word for word in self.wordlist if word != '' and not word[0].islower() and not (word in german_articles)
+            word
+            for word in self.wordlist
+            if word != '' and not word[0].islower() and not (word in german_articles)
         ]
 
     def make_word_cloud(self):
