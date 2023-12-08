@@ -29,16 +29,17 @@ class BundestagTopTopicsService:
         election_period: int | None,
     ) -> list:
         filters = []
-        if month:
+        if month and year and not election_period:
             filters.append(TopTopics.month == month)
-        if year:
-            if not month:
-                filters.append(TopTopics.month == None)
             filters.append(TopTopics.year == year)
-        if election_period:
-            if not month and not year:
-                filters.append(TopTopics.month == None)
-                filters.append(TopTopics.month == None)
+            filters.append(TopTopics.election_period == None)
+        if year and not month and not election_period:
+            filters.append(TopTopics.month == None)
+            filters.append(TopTopics.year == year)
+            filters.append(TopTopics.election_period == None)
+        if election_period and not year and not month:
+            filters.append(TopTopics.month == None)
+            filters.append(TopTopics.year == None)
             filters.append(TopTopics.election_period == election_period)
 
         return filters
