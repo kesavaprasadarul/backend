@@ -11,6 +11,7 @@ import fasttext.util  # use pip install fasttext-wheel
 # import nltk
 import numpy as np
 
+from backend.app.core.bundestag_ressorts import BUNDESTAG_RESSORTS
 from backend.app.core.logging import configure_logging
 from backend.app.utils import get_data_folder
 
@@ -19,25 +20,6 @@ logger = getLogger(__name__)
 
 # A class that represents a file and allows querying and analysing its content
 class WordCounter:
-    ressortsText = [
-        "Wirtschaft",
-        "Finanzen",
-        "Innenpolitik",
-        "Außenpolitik",
-        "Justiz",
-        "Arbeit",
-        "Verteidingung",
-        "Landwirtschaft",
-        "Familie",
-        "Gesundheit",
-        "Digitalisierung",
-        "Verkehr",
-        "Umwelt",
-        "Bildung",
-        "Forschung",
-        "Wohnungsbau",
-    ]
-
     def __init__(self, wordlist):
         self.wordlist = wordlist
 
@@ -77,7 +59,7 @@ class WordCounter:
         dict_w_res = dict()
         for word_t in set(self.wordlist):
             percent = 0
-            for res in self.ressortsText:
+            for res in BUNDESTAG_RESSORTS:
                 divisor = np.linalg.norm(self.__wtv(word_t)) * np.linalg.norm(self.__wtv(res))
                 if divisor > 0:
                     val = np.dot(self.__wtv(word_t), self.__wtv(res)) / divisor
@@ -659,7 +641,9 @@ class WordCounter:
         self.wordlist = [regex.sub('', item) for item in self.wordlist]
 
         self.wordlist = [
-            word for word in self.wordlist if word != '' and not word[0].islower() and not (word in german_articles)
+            word
+            for word in self.wordlist
+            if word != '' and not word[0].islower() and not (word in german_articles)
         ]
 
     def make_word_cloud(self):
