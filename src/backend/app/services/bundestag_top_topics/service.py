@@ -32,8 +32,13 @@ class BundestagTopTopicsService:
         if month:
             filters.append(TopTopics.month == month)
         if year:
+            if not month:
+                filters.append(TopTopics.month == None)
             filters.append(TopTopics.year == year)
         if election_period:
+            if not month and not year:
+                filters.append(TopTopics.month == None)
+                filters.append(TopTopics.month == None)
             filters.append(TopTopics.election_period == election_period)
 
         return filters
