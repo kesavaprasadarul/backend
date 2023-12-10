@@ -1,19 +1,20 @@
 """Class for DIP Bundestag Drucksache-Text Importer."""
 
+import time
 from datetime import date, datetime, timezone
-from typing import Iterator
+from typing import Iterator, Optional
 
 from backend.app.core.config import Settings
+from backend.app.core.logging import configure_logging
 from backend.app.crud.CRUDDIPBundestag.crud_drucksache import CRUD_DIP_DRUCKSACHE
 from backend.app.facades.deutscher_bundestag.model import DrucksacheText
 from backend.app.facades.deutscher_bundestag.parameter_model import (
     DrucksacheParameter,
     VorgangParameter,
 )
-
-from backend.app.importer.dip_importer.dip_vorgang_importer import DIPBundestagVorgangImporter
 from backend.app.facades.util import ProxyList
 from backend.app.importer.dip_importer.base import DIPImporter
+from backend.app.importer.dip_importer.dip_vorgang_importer import DIPBundestagVorgangImporter
 
 # import from all models to ensure they are registered
 from backend.app.models.deutscher_bundestag.models import (
@@ -25,11 +26,6 @@ from backend.app.models.deutscher_bundestag.models import (
     DIPUrheber,
     DIPVorgangsbezug,
 )
-
-import time
-
-from typing import Optional
-from backend.app.core.logging import configure_logging
 
 
 class DIPBundestagDrucksacheTextImporter(
@@ -123,7 +119,7 @@ class DIPBundestagDrucksacheTextImporter(
             db_model = self.transform_model(model)
 
             if self.import_vorgaenge:
-                time.sleep(0.5)
+                time.sleep(self.delay_between_requests)
                 for vorgang_pydantic in self.vorgang_importer.fetch_data(
                     params=VorgangParameter(
                         drucksache=db_model.id,

@@ -12,10 +12,13 @@ class DIPVorgangsbezug(Base, TimestampMixin, DIPSchema):
 
     vorgang_id: Mapped[int] = mapped_column(nullable=False)
 
-    drucksache_id: Mapped[int] = mapped_column(ForeignKey(f"dip.drucksache.id"), nullable=True)
+    drucksache_id: Mapped[int] = mapped_column(
+        ForeignKey(f"dip.drucksache.id", ondelete="SET NULL", onupdate="CASCADE"), nullable=True
+    )
 
     plenarprotokoll_id: Mapped[int] = mapped_column(
-        ForeignKey(f"dip.plenarprotokoll.id"), nullable=True
+        ForeignKey(f"dip.plenarprotokoll.id", ondelete="SET NULL", onupdate="CASCADE"),
+        nullable=True,
     )
 
     titel: Mapped[str] = mapped_column(nullable=False)

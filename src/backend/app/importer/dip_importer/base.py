@@ -25,6 +25,8 @@ SQLModelType = TypeVar("SQLModelType", bound=Base)  # pylint: disable=invalid-na
 
 ParamMapping = MutableMapping
 
+DELAY_BETWEEN_REQUESTS = 0.28
+
 
 class DIPImporter(Generic[PydanticDataModelType, PydanticParameterModelType, SQLModelType]):
     """Class for DIP Bundestag Importer."""
@@ -32,6 +34,7 @@ class DIPImporter(Generic[PydanticDataModelType, PydanticParameterModelType, SQL
     def __init__(
         self,
         crud: CRUDBase[SQLModelType],
+        delay_between_requests: float = DELAY_BETWEEN_REQUESTS,
     ):
         """
         Initialize DIPImporter.
@@ -39,6 +42,7 @@ class DIPImporter(Generic[PydanticDataModelType, PydanticParameterModelType, SQL
         self.crud = crud
         self.imported_count = 0
         self.dip_bundestag_facade = DIPBundestagFacade.get_instance(Settings())
+        self.delay_between_requests = delay_between_requests
 
     def get_imported_count(self) -> int:
         """Get count of imported data."""
@@ -55,6 +59,14 @@ class DIPImporter(Generic[PydanticDataModelType, PydanticParameterModelType, SQL
         proxy_list: ProxyList | None = None,
     ) -> Iterator[SQLModelType]:
         """Fetch data."""
+        raise NotImplementedError
+
+    def fetch_count(
+        self,
+        params: Optional[PydanticParameterModelType] = None,
+        proxy_list: ProxyList | None = None,
+    ) -> int:
+        """Fetch count."""
         raise NotImplementedError
 
     def batch_upsert(
@@ -75,20 +87,22 @@ class DIPImporter(Generic[PydanticDataModelType, PydanticParameterModelType, SQL
             batch.append(db_model)
 
             if len(batch) >= upsert_batch_size:
-                _logger.info(f'Upserting batch {batch_number} into {db_model.__tablename__}-Table.')
+                _logger.debug(
+                    f'Upserting batch {batch_number} into {db_model.__tablename__}-Table.'
+                )
                 self.crud.create_or_update_multi(batch)
                 batch = []
                 batch_number += 1
                 self.imported_count += upsert_batch_size
 
         if batch:
-            _logger.info(
+            _logger.debug(
                 f'Upserting final batch ({batch_number}) into {batch[0].__tablename__}-Table.'
             )
             self.crud.create_or_update_multi(batch)
             self.imported_count += len(batch)
 
-        _logger.info(f'Imported {self.imported_count} {self.crud.model.__tablename__}.')
+        _logger.debug(f'Imported {self.imported_count} {self.crud.model.__tablename__}.')
 
     def import_data(
         self,

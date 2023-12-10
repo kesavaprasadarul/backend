@@ -32,11 +32,13 @@ class DIPBundestagVorgangspositionImporter(
 ):
     """Class for DIP Bundestag Vorgangsposition Importer."""
 
-    def __init__(self):
+    def __init__(self, raise_on_error: bool = False):
         """
         Initialize DIPImporter.
         """
         super().__init__(CRUD_DIP_VORGANGSPOSITION)
+
+        self.raise_on_error = raise_on_error
 
     def transform_model(self, data: Vorgangsposition) -> DIPVorgangsposition:
         """Transform data."""
@@ -127,6 +129,7 @@ class DIPBundestagVorgangspositionImporter(
             params=params,
             response_limit=response_limit,
             proxy_list=proxy_list,
+            raise_on_error=self.raise_on_error,
         ):
             db_model = self.transform_model(model)
 

@@ -4,6 +4,7 @@ import time
 from typing import Iterator
 
 from backend.app.core.config import Settings
+from backend.app.core.logging import configure_logging
 from backend.app.crud.CRUDDIPBundestag.crud_plenarprotokoll import CRUD_DIP_PLENARPROTOKOLL
 from backend.app.facades.deutscher_bundestag.model import Plenarprotokoll
 from backend.app.facades.deutscher_bundestag.parameter_model import (
@@ -18,10 +19,9 @@ from backend.app.importer.dip_importer.dip_vorgang_importer import DIPBundestagV
 from backend.app.models.deutscher_bundestag.models import (
     DIPFundstelle,
     DIPPlenarprotokoll,
-    DIPVorgangsbezug,
     DIPVorgang,
+    DIPVorgangsbezug,
 )
-from backend.app.core.logging import configure_logging
 
 
 class DIPBundestagPlenarprotokollImporter(
@@ -81,7 +81,7 @@ class DIPBundestagPlenarprotokollImporter(
             db_model = self.transform_model(model)
 
             if self.import_vorgaenge:
-                time.sleep(0.5)
+                time.sleep(self.delay_between_requests)
                 for vorgang in self.vorgang_importer.fetch_data(
                     params=VorgangParameter(
                         drucksache=db_model.id,

@@ -323,8 +323,8 @@ class Vorgang(BaseModel):
         None,
         description='Datierung des letzten zugehörigen Dokuments',
     )
-    aktualisiert: datetime = Field(
-        ...,
+    aktualisiert: datetime | None = Field(
+        None,
         description='Letzte Aktualisierung der Entität',
     )
     titel: str = Field(
@@ -502,8 +502,8 @@ class Vorgangsposition(BaseModel):
         ...,
         description='Datum des zugehörigen Dokuments',
     )
-    aktualisiert: datetime = Field(
-        ...,
+    aktualisiert: datetime | None = Field(
+        None,
         description='Letzte Aktualisierung der Entität oder des zugehörigen Dokuments',
     )
     fundstelle: Fundstelle

@@ -1,11 +1,14 @@
 """Class for DIP Bundestag Vorgang Importer."""
 
+import logging
+import time
 from datetime import datetime
 from typing import Iterator
 
 import pytz
 
 from backend.app.core.config import Settings
+from backend.app.core.logging import configure_logging
 from backend.app.crud.CRUDDIPBundestag.crud_vorgang import CRUD_DIP_VORGANG
 from backend.app.facades.deutscher_bundestag.model import Vorgang
 from backend.app.facades.deutscher_bundestag.parameter_model import (
@@ -27,26 +30,24 @@ from backend.app.models.deutscher_bundestag.models import (
     DIPVorgangVerlinkung,
 )
 
-import logging
-import time
-from backend.app.core.logging import configure_logging
-
-
 _logger = logging.getLogger(__name__)
 
 
 class DIPBundestagVorgangImporter(DIPImporter[Vorgang, VorgangParameter, DIPVorgang]):
     """Class for DIP Bundestag Vorgang Importer."""
 
-    def __init__(self, import_vorgangspositionen: bool = True):
+    def __init__(self, import_vorgangspositionen: bool = True, raise_on_error: bool = False):
         """
         Initialize DIPImporter.
         """
         super().__init__(CRUD_DIP_VORGANG)
 
         self.import_vorgangspositionen = import_vorgangspositionen
+        self.raise_on_error = raise_on_error
         if import_vorgangspositionen:
-            self.vorgangsposition_importer = DIPBundestagVorgangspositionImporter()
+            self.vorgangsposition_importer = DIPBundestagVorgangspositionImporter(
+                raise_on_error=raise_on_error
+            )
 
     def transform_model(self, data: Vorgang) -> DIPVorgang:
         """Transform data."""
@@ -63,7 +64,6 @@ class DIPBundestagVorgangImporter(DIPImporter[Vorgang, VorgangParameter, DIPVorg
             else []
         )
 
-        _logger.info("data.deskriptor: %s", data.deskriptor)
         dip_vorgang_deskriptor = (
             [
                 DIPVorgangDeskriptor(**vorgang_deskriptor.model_dump())
@@ -108,11 +108,12 @@ class DIPBundestagVorgangImporter(DIPImporter[Vorgang, VorgangParameter, DIPVorg
             params=params,
             response_limit=response_limit,
             proxy_list=proxy_list,
+            raise_on_error=self.raise_on_error,
         ):
             db_model = self.transform_model(model)
 
             if self.import_vorgangspositionen:
-                time.sleep(0.5)
+                time.sleep(self.delay_between_requests)
                 for vorgangsposition in self.vorgangsposition_importer.fetch_data(
                     params=VorgangspositionParameter(
                         vorgang=db_model.id,

@@ -31,9 +31,7 @@ def get_bundestag_top_topics_for_month(month: int, year: int):
         "Fetch plenarprotokolle with date_start='%s' and date_end='%s'", date_start, date_end
     )
     plenarprotokolle = dip_bundestag_facade.get_plenarprotokolle(
-        PlenarprotokollParameter(
-            datum_start=date_start, datum_ende=date_end, zuordnung=Zuordnung.BT
-        )
+        PlenarprotokollParameter(datum_start=date_start, datum_end=date_end, zuordnung=Zuordnung.BT)
     )
 
     plenarprotokoll_vorgangsbezuege: list[PlenarprotokollVorgangsbezug] = []

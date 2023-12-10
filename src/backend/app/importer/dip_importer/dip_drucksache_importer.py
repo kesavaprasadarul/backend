@@ -3,11 +3,13 @@
 import time
 from datetime import datetime
 from logging import getLogger
+from tokenize import endpats
 from typing import Iterator, Optional
 
 import pytz
 
 from backend.app.core.config import Settings
+from backend.app.core.logging import configure_logging
 from backend.app.crud.CRUDDIPBundestag.crud_drucksache import CRUD_DIP_DRUCKSACHE
 from backend.app.facades.deutscher_bundestag.model import Drucksache, Vorgang, Zuordnung
 from backend.app.facades.deutscher_bundestag.parameter_model import (
@@ -28,22 +30,27 @@ from backend.app.models.deutscher_bundestag.models import (
     DIPVorgang,
     DIPVorgangsbezug,
 )
-from backend.app.core.logging import configure_logging
 
 
 class DIPBundestagDrucksacheImporter(DIPImporter[Drucksache, DrucksacheParameter, DIPDrucksache]):
     """Class for DIP Bundestag Drucksache Importer."""
 
-    def __init__(self, import_vorgaenge: bool = True, import_vorgangspositionen: bool = True):
+    def __init__(
+        self,
+        import_vorgaenge: bool = True,
+        import_vorgangspositionen: bool = True,
+        raise_on_error: bool = False,
+    ):
         """
         Initialize DIPImporter.
         """
         super().__init__(CRUD_DIP_DRUCKSACHE)
 
         self.import_vorgaenge = import_vorgaenge
+        self.raise_on_error = raise_on_error
         if import_vorgaenge:
             self.vorgang_importer = DIPBundestagVorgangImporter(
-                import_vorgangspositionen=import_vorgangspositionen
+                import_vorgangspositionen=import_vorgangspositionen, raise_on_error=raise_on_error
             )
 
     def transform_model(self, data: Drucksache) -> DIPDrucksache:
@@ -94,6 +101,19 @@ class DIPBundestagDrucksacheImporter(DIPImporter[Drucksache, DrucksacheParameter
             vorgang=[],
         )
 
+    def fetch_count(
+        self,
+        params: Optional[DrucksacheParameter] = None,
+        proxy_list: ProxyList | None = None,
+    ) -> int:
+        """Fetch count."""
+        time.sleep(self.delay_between_requests)
+        return self.dip_bundestag_facade.get_count(
+            endpoint='/api/v1/drucksache',
+            params=params,
+            proxy_list=proxy_list,
+        )
+
     def fetch_data(
         self,
         params: Optional[DrucksacheParameter] = None,
@@ -106,11 +126,14 @@ class DIPBundestagDrucksacheImporter(DIPImporter[Drucksache, DrucksacheParameter
             params=params,
             response_limit=response_limit,
             proxy_list=proxy_list,
+            raise_on_error=self.raise_on_error,
         ):
+            # if model.id == 271560:
+            #     print('debug')
             db_model = self.transform_model(model)
 
             if self.import_vorgaenge:
-                time.sleep(0.5)
+                time.sleep(self.delay_between_requests)
                 for vorgang_pydantic in self.vorgang_importer.fetch_data(
                     params=VorgangParameter(
                         drucksache=db_model.id,
@@ -126,13 +149,11 @@ def import_dip_bundestag():
     importer = DIPBundestagDrucksacheImporter()
 
     params = DrucksacheParameter(
-        aktualisiert_start=datetime(2022, 1, 1, tzinfo=pytz.UTC).astimezone(),
+        aktualisiert_start=datetime(2023, 1, 1, tzinfo=pytz.UTC).astimezone(),
+        aktualisiert_end=datetime(2023, 12, 31, tzinfo=pytz.UTC).astimezone(),
     )
 
-    importer.import_data(
-        params=params,
-        response_limit=1,
-    )
+    importer.import_data(params=params, response_limit=1000, upsert_batch_size=30)
 
 
 if __name__ == '__main__':

@@ -2,7 +2,7 @@ from datetime import date, datetime
 from enum import Enum
 from typing import List, Optional
 
-from pydantic import BaseModel, Field, RootModel
+from pydantic import BaseModel, Field, field_serializer
 
 from backend.app.facades.deutscher_bundestag.model import Dokumentart, Zuordnung
 
@@ -33,10 +33,10 @@ class CommonParameter(BaseModel):
         serialization_alias="f.datum.start",
     )
 
-    datum_ende: Optional[date] = Field(
+    datum_end: Optional[date] = Field(
         default=None,
         description="Spätestes Datum der Entität",
-        serialization_alias="f.datum.ende",
+        serialization_alias="f.datum.end",
     )
 
     id: Optional[list[int]] = Field(
@@ -74,6 +74,11 @@ class CommonParameter(BaseModel):
         description="Steuert das Datenformat der Antwort, möglich sind JSON (voreingestellt) oder XML.",
         serialization_alias="format",
     )
+
+    @field_serializer('aktualisiert_start', 'aktualisiert_end')
+    def serialize_aktualisiert(self, value: datetime) -> str:
+        """Serialize aktualisiert_start and aktualisiert_end in a format that is accepted by the API."""
+        return value.strftime("%Y-%m-%dT%H:%M:%S")
 
 
 class DokumentartParameter(BaseModel):

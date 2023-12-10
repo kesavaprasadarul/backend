@@ -9,10 +9,12 @@ class DIPRessort(Base, TimestampMixin, DIPSchema):
     __tablename__ = "ressort"
 
     id: Mapped[int] = mapped_column(primary_key=True)  # database id
-    drucksache_id: Mapped[int] = mapped_column(ForeignKey(f"dip.drucksache.id"), nullable=True)
+    drucksache_id: Mapped[int] = mapped_column(
+        ForeignKey(f"dip.drucksache.id", ondelete="SET NULL", onupdate="CASCADE"), nullable=True
+    )
 
     vorgangsposition_id: Mapped[int] = mapped_column(
-        ForeignKey(f"dip.vorgangsposition.id"),
+        ForeignKey(f"dip.vorgangsposition.id", ondelete="SET NULL", onupdate="CASCADE"),
         nullable=True,
     )
 

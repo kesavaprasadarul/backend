@@ -23,7 +23,7 @@ class DIPVorgang(Base, TimestampMixin, DIPSchema):
     wahlperiode: Mapped[int] = mapped_column(nullable=False)
     initiative: Mapped[list[str]] = mapped_column(ARRAY(Text), nullable=True)
     datum: Mapped[date] = mapped_column(nullable=True)
-    aktualisiert: Mapped[datetime] = mapped_column(nullable=False)
+    aktualisiert: Mapped[datetime] = mapped_column(nullable=True)
     titel: Mapped[str] = mapped_column(nullable=False)
     abstract: Mapped[str] = mapped_column(nullable=True)
     sachgebiet: Mapped[list[str]] = mapped_column(ARRAY(Text), nullable=True)
@@ -36,9 +36,11 @@ class DIPVorgang(Base, TimestampMixin, DIPSchema):
     mitteilung: Mapped[str] = mapped_column(nullable=True)
     sek: Mapped[str] = mapped_column(nullable=True)
 
-    drucksache_id: Mapped[int] = mapped_column(ForeignKey("dip.drucksache.id"), nullable=True)
+    drucksache_id: Mapped[int] = mapped_column(
+        ForeignKey("dip.drucksache.id", ondelete="SET NULL", onupdate="CASCADE"), nullable=True
+    )
     plenarprotokoll_id: Mapped[int] = mapped_column(
-        ForeignKey("dip.plenarprotokoll.id"), nullable=True
+        ForeignKey("dip.plenarprotokoll.id", ondelete="SET NULL", onupdate="CASCADE"), nullable=True
     )
 
     deskriptor: Mapped[list["DIPVorgangDeskriptor"]] = relationship(

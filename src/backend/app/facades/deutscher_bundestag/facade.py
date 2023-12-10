@@ -3,8 +3,11 @@ import http
 import logging
 import typing as t
 import urllib.parse
+from typing import TypeVar
 
 import requests
+from black import Mode
+from pydantic import BaseModel, ValidationError
 
 from backend.app.core.config import Settings
 from backend.app.facades.deutscher_bundestag.model import (
@@ -42,6 +45,8 @@ _logger = logging.getLogger(__name__)
 PAGE_SIZE = 100
 """Number of elements returned in a single paged response."""
 
+RequestParams = TypeVar("RequestParams", bound=BaseModel)
+
 
 class DIPBundestagFacade(HttpFacade):
     """Facade implementation for a DIP Bundestag.
@@ -49,6 +54,8 @@ class DIPBundestagFacade(HttpFacade):
     For more information look at docu of DIP bundestag API:
     https://dip.bundestag.de/%C3%BCber-dip/hilfe/api.
     """
+
+    cursor: str | None = None
 
     # TODO: Sometimes the API redirects and expectes some javascript execution
     # Potentially this is just a sha256-post which we could mock (maybe here)
@@ -68,6 +75,9 @@ class DIPBundestagFacade(HttpFacade):
         )
 
         return response
+
+    def get_cursor(self) -> str | None:
+        return self.cursor
 
     # pylint: disable=duplicate-code  # overriding do_request is similar in every facade
     def do_request(
@@ -194,7 +204,8 @@ class DIPBundestagFacade(HttpFacade):
         **kwargs,
     ) -> t.Iterator[dict]:
         """Helper to execute paginated request for REST API."""
-        self.cursor: str | None = None
+
+        self.cursor = kwargs["start_cursor"] if "start_cursor" in kwargs else None
 
         def unpack_page(paged_response: requests.Response) -> Page:
             json_response = content = paged_response.json()
@@ -202,6 +213,8 @@ class DIPBundestagFacade(HttpFacade):
             new_cursor = json_response['cursor']
             has_next_page = self.cursor != new_cursor
             self.cursor = new_cursor
+            _logger.debug('cursor: %s', self.cursor)
+
             if has_next_page:
                 # return new cursor, and add new content
                 return Page(new_cursor, content)
@@ -234,11 +247,44 @@ class DIPBundestagFacade(HttpFacade):
         )
         return cls(base_url=configuration.DIP_BUNDESTAG_BASE_URL, auth=auth)
 
+    def get_count(self, endpoint, params: BaseModel | None = None, proxy_list=None) -> int:
+        """Helper to get count of elements for a given endpoint."""
+
+        param_dict = (
+            params.model_dump(mode='json', exclude_none=True, by_alias=True) if params else None
+        )
+
+        try:
+            response = self.do_request(
+                http.HTTPMethod.GET,
+                endpoint,
+                params=param_dict,
+                proxy=proxy_list.get_proxy() if proxy_list else None,
+            )
+            response.raise_for_status()
+        except Exception as e:
+            _logger.error(
+                f"Error while fetching count for {endpoint} with params {param_dict}: {e}."
+            )
+            raise e
+
+        json_response = response.json()
+
+        count_key = 'numFound'
+
+        if count_key in json_response:
+            return int(json_response[count_key])
+
+        raise ValueError(
+            f"Response does not contain '{count_key}' for {endpoint} with params {param_dict}."
+        )
+
     def get_drucksachen(
         self,
         params: DrucksacheParameter | None = None,
         response_limit: t.Optional[int] = None,
         proxy_list: ProxyList | None = None,
+        raise_on_error: bool = False,
     ) -> t.Iterator[Drucksache]:
         """Get Drucksachen.
         https://search.dip.bundestag.de/api/v1/swagger-ui/#/Drucksachen/getDrucksacheList
@@ -251,28 +297,41 @@ class DIPBundestagFacade(HttpFacade):
             drucksachen (Iterator[Drucksache]):
                 An iterator of Drucksache objects.
         """
-        _logger.info("Fetching drucksachen.")
 
         param_dict = (
             params.model_dump(mode='json', exclude_none=True, by_alias=True) if params else None
         )
 
-        for drucksache in self._do_paginated_request(
-            http.HTTPMethod.GET,
-            '/api/v1/drucksache',
-            page_args_path=PAGINATION_CONTENT_ARGS_REST,
-            content_identifier='documents',
-            params=param_dict,
-            response_limit=response_limit,
-            proxy_list=proxy_list,
-        ):
-            yield Drucksache.model_validate(drucksache)
+        _logger.debug("Fetching drucksachen. Params: %s.", param_dict)
+
+        try:
+            for drucksache in self._do_paginated_request(
+                http.HTTPMethod.GET,
+                '/api/v1/drucksache',
+                page_args_path=PAGINATION_CONTENT_ARGS_REST,
+                content_identifier='documents',
+                params=param_dict,
+                response_limit=response_limit,
+                proxy_list=proxy_list,
+            ):
+                try:
+                    yield Drucksache.model_validate(drucksache)
+                except ValidationError as e:
+                    _logger.error(
+                        f"Validation error while validating a DRUCKSACHE with params {param_dict} at cursor {self.cursor}: {e}."
+                    )
+                    if raise_on_error:
+                        raise e
+        except Exception as e:
+            _logger.error(f"Error while fetching drucksache at cursor {self.cursor}: {e}.")
+            raise e
 
     def get_drucksachen_text(
         self,
         params: DrucksacheParameter | None = None,
         response_limit: t.Optional[int] = None,
         proxy_list: ProxyList | None = None,
+        raise_on_error: bool = False,
     ) -> t.Iterator[DrucksacheText]:
         """Get Drucksachen-Text.
         https://search.dip.bundestag.de/api/v1/swagger-ui/#/Drucksachen/getDrucksacheTextList
@@ -289,24 +348,36 @@ class DIPBundestagFacade(HttpFacade):
             params.model_dump(mode='json', exclude_none=True, by_alias=True) if params else None
         )
 
-        _logger.info("Fetching drucksachen-text with params %s.", param_dict)
+        _logger.debug("Fetching drucksachen-text with params %s.", param_dict)
 
-        for drucksache_text in self._do_paginated_request(
-            http.HTTPMethod.GET,
-            '/api/v1/drucksache-text',
-            page_args_path=PAGINATION_CONTENT_ARGS_REST,
-            content_identifier='documents',
-            params=param_dict,
-            response_limit=response_limit,
-            proxy_list=proxy_list,
-        ):
-            yield DrucksacheText.model_validate(drucksache_text)
+        try:
+            for drucksache_text in self._do_paginated_request(
+                http.HTTPMethod.GET,
+                '/api/v1/drucksache-text',
+                page_args_path=PAGINATION_CONTENT_ARGS_REST,
+                content_identifier='documents',
+                params=param_dict,
+                response_limit=response_limit,
+                proxy_list=proxy_list,
+            ):
+                try:
+                    yield DrucksacheText.model_validate(drucksache_text)
+                except ValidationError as e:
+                    _logger.error(
+                        f"Validation error while validating a DRUCKSACHE_TEXT with params {param_dict} at cursor {self.cursor}: {e}."
+                    )
+                    if raise_on_error:
+                        raise e
+        except Exception as e:
+            _logger.error(f"Error while fetching DRUCKSACHE_TEXT at cursor {self.cursor}: {e}.")
+            raise e
 
     def get_vorgange(
         self,
         params: VorgangParameter | None = None,
         response_limit: t.Optional[int] = None,
         proxy_list: ProxyList | None = None,
+        raise_on_error: bool = False,
     ) -> t.Iterator[Vorgang]:
         """Get Vorgange.
         https://search.dip.bundestag.de/api/v1/swagger-ui/#/Vorg%C3%A4nge/getVorgangList
@@ -323,18 +394,28 @@ class DIPBundestagFacade(HttpFacade):
             params.model_dump(mode='json', exclude_none=True, by_alias=True) if params else None
         )
 
-        _logger.info("Fetching vorgaenge with params %s.", param_dict)
-
-        for vorgang in self._do_paginated_request(
-            http.HTTPMethod.GET,
-            '/api/v1/vorgang',
-            page_args_path=PAGINATION_CONTENT_ARGS_REST,
-            content_identifier='documents',
-            params=param_dict,
-            response_limit=response_limit,
-            proxy_list=proxy_list,
-        ):
-            yield Vorgang.model_validate(vorgang)
+        _logger.debug("Fetching vorgaenge with params %s.", param_dict)
+        try:
+            for vorgang in self._do_paginated_request(
+                http.HTTPMethod.GET,
+                '/api/v1/vorgang',
+                page_args_path=PAGINATION_CONTENT_ARGS_REST,
+                content_identifier='documents',
+                params=param_dict,
+                response_limit=response_limit,
+                proxy_list=proxy_list,
+            ):
+                try:
+                    yield Vorgang.model_validate(vorgang)
+                except ValidationError as e:
+                    _logger.error(
+                        f"Validation error while validating a VORGANG with params {param_dict} at cursor {self.cursor}: {e}."
+                    )
+                    if raise_on_error:
+                        raise e
+        except Exception as e:
+            _logger.error(f"Error while fetching VORGANG at cursor {self.cursor}: {e}.")
+            raise e
 
     def get_vorgangsbezuege_of_plenarprotokoll_by_id(
         self, plenarprotokoll_id: int
@@ -352,7 +433,7 @@ class DIPBundestagFacade(HttpFacade):
             list[PlenarprotokollVorgangsbezug]: list of PlenarprotokollVorgangsbezug objects, reduced to only relevant data needed.
         """
 
-        _logger.info("Fetching vorgangsbezuege of plenaprotokoll with id %d.", plenarprotokoll_id)
+        _logger.debug("Fetching vorgangsbezuege of plenaprotokoll with id %d.", plenarprotokoll_id)
 
         vorgangsbezuege_of_plenarprotokoll = [
             PlenarprotokollVorgangsbezug.model_validate(plenarprotokoll_vorgangsbezug)
@@ -374,6 +455,7 @@ class DIPBundestagFacade(HttpFacade):
         params: VorgangspositionParameter | None = None,
         response_limit: t.Optional[int] = None,
         proxy_list: ProxyList | None = None,
+        raise_on_error: bool = False,
     ) -> t.Iterator[Vorgangsposition]:
         """Get Vorgangspositionen
         https://search.dip.bundestag.de/api/v1/swagger-ui/#/Vorgangspositionen/getVorgangspositionList
@@ -390,24 +472,35 @@ class DIPBundestagFacade(HttpFacade):
             params.model_dump(mode='json', exclude_none=True, by_alias=True) if params else None
         )
 
-        _logger.info("Fetching vorgangspositionen with params %s.", param_dict)
-
-        for vorgangsposition in self._do_paginated_request(
-            http.HTTPMethod.GET,
-            '/api/v1/vorgangsposition',
-            page_args_path=PAGINATION_CONTENT_ARGS_REST,
-            content_identifier='documents',
-            params=param_dict,
-            response_limit=response_limit,
-            proxy_list=proxy_list,
-        ):
-            yield Vorgangsposition.model_validate(vorgangsposition)
+        _logger.debug("Fetching vorgangspositionen with params %s.", param_dict)
+        try:
+            for vorgangsposition in self._do_paginated_request(
+                http.HTTPMethod.GET,
+                '/api/v1/vorgangsposition',
+                page_args_path=PAGINATION_CONTENT_ARGS_REST,
+                content_identifier='documents',
+                params=param_dict,
+                response_limit=response_limit,
+                proxy_list=proxy_list,
+            ):
+                try:
+                    yield Vorgangsposition.model_validate(vorgangsposition)
+                except ValidationError as e:
+                    _logger.error(
+                        f"Validation error while validating a VORGANGSPOSITION with params {param_dict} at cursor {self.cursor}: {e}."
+                    )
+                    if raise_on_error:
+                        raise e
+        except Exception as e:
+            _logger.error(f"Error while fetching VORGANGSPOSITION at cursor {self.cursor}: {e}.")
+            raise e
 
     def get_plenarprotokolle(
         self,
         params: PlenarprotokollParameter | None = None,
         response_limit: int = 1000,
         proxy_list: ProxyList | None = None,
+        raise_on_error: bool = False,
     ) -> t.Iterator[Plenarprotokoll]:
         """Get Plenarprotokolle.
         https://search.dip.bundestag.de/api/v1/swagger-ui/#/Plenarprotokolle/getPlenarprotokollList
@@ -428,24 +521,35 @@ class DIPBundestagFacade(HttpFacade):
             params.model_dump(mode='json', exclude_none=True, by_alias=True) if params else None
         )
 
-        _logger.info("Fetching plenarprotokoll with params %s.", param_dict)
-
-        for plenarprotokoll in self._do_paginated_request(
-            http.HTTPMethod.GET,
-            '/api/v1/plenarprotokoll',
-            page_args_path=PAGINATION_CONTENT_ARGS_REST,
-            content_identifier='documents',
-            params=param_dict,
-            response_limit=response_limit,
-            proxy_list=proxy_list,
-        ):
-            yield Plenarprotokoll.model_validate(plenarprotokoll)
+        _logger.debug("Fetching plenarprotokoll with params %s.", param_dict)
+        try:
+            for plenarprotokoll in self._do_paginated_request(
+                http.HTTPMethod.GET,
+                '/api/v1/plenarprotokoll',
+                page_args_path=PAGINATION_CONTENT_ARGS_REST,
+                content_identifier='documents',
+                params=param_dict,
+                response_limit=response_limit,
+                proxy_list=proxy_list,
+            ):
+                try:
+                    yield Plenarprotokoll.model_validate(plenarprotokoll)
+                except ValidationError as e:
+                    _logger.error(
+                        f"Validation error while validating a PLENARPROTOKOLL with params {param_dict} at cursor {self.cursor}: {e}."
+                    )
+                    if raise_on_error:
+                        raise e
+        except Exception as e:
+            _logger.error(f"Error while fetching PLENARPROTOKOLL at cursor {self.cursor}: {e}.")
+            raise e
 
     def get_plenarprotokolle_text(
         self,
         params: PlenarprotokollParameter | None = None,
         response_limit: int = 1000,
         proxy_list: ProxyList | None = None,
+        raise_on_error: bool = False,
     ) -> t.Iterator[PlenarprotokollText]:
         """Get Plenarprotokolle-Text.
         https://search.dip.bundestag.de/api/v1/swagger-ui/#/Plenarprotokolle/getPlenarprotokollTextList
@@ -467,14 +571,24 @@ class DIPBundestagFacade(HttpFacade):
         )
 
         _logger.info("Fetching plenarprotokoll-text with params %s.", param_dict)
-
-        for plenarprotokoll_text in self._do_paginated_request(
-            http.HTTPMethod.GET,
-            '/api/v1/plenarprotokoll-text',
-            page_args_path=PAGINATION_CONTENT_ARGS_REST,
-            content_identifier='documents',
-            params=param_dict,
-            response_limit=response_limit,
-            proxy_list=proxy_list,
-        ):
-            yield PlenarprotokollText.model_validate(plenarprotokoll_text)
+        try:
+            for plenarprotokoll_text in self._do_paginated_request(
+                http.HTTPMethod.GET,
+                '/api/v1/plenarprotokoll-text',
+                page_args_path=PAGINATION_CONTENT_ARGS_REST,
+                content_identifier='documents',
+                params=param_dict,
+                response_limit=response_limit,
+                proxy_list=proxy_list,
+            ):
+                try:
+                    yield PlenarprotokollText.model_validate(plenarprotokoll_text)
+                except ValidationError as e:
+                    _logger.error(
+                        f"Validation error while validating a PLENARPROTOKOLL_TEXT with params {param_dict} at cursor {self.cursor}: {e}."
+                    )
+                    if raise_on_error:
+                        raise e
+        except Exception as e:
+            _logger.error(f"Error while fetching DRUCKSACHE_TEXT at cursor {self.cursor}: {e}.")
+            raise e

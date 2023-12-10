@@ -10,9 +10,12 @@ class DIPUrheber(Base, TimestampMixin, DIPSchema):
     __tablename__ = "urheber"
 
     id: Mapped[int] = mapped_column(primary_key=True)  # database id
-    drucksache_id: Mapped[int] = mapped_column(ForeignKey("dip.drucksache.id"), nullable=True)
+    drucksache_id: Mapped[int] = mapped_column(
+        ForeignKey("dip.drucksache.id", ondelete="SET NULL", onupdate="CASCADE"), nullable=True
+    )
     vorgangsposition_id: Mapped[int] = mapped_column(
-        ForeignKey("dip.vorgangsposition.id"), nullable=True
+        ForeignKey("dip.vorgangsposition.id", ondelete="SET NULL", onupdate="CASCADE"),
+        nullable=True,
     )
     einbringer: Mapped[bool] = mapped_column(nullable=True)
     bezeichnung: Mapped[str] = mapped_column(nullable=False)

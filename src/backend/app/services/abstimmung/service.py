@@ -19,7 +19,6 @@ class AbstimmungService:
 
     def get(self, id: int) -> Optional[Abstimmung]:
         result = self.crud.read(id)
-        _logger.info(result)
         return Abstimmung.model_validate(result) if result else None
 
     def _build_filter_options(
