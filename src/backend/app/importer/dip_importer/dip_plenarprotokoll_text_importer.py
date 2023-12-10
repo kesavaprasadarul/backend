@@ -21,6 +21,7 @@ from backend.app.models.deutscher_bundestag.models import (
     DIPVorgangsbezug,
 )
 import time
+from backend.app.core.logging import configure_logging
 
 
 class DIPBundestagPlenarprotokollImporter(
@@ -107,4 +108,5 @@ def import_dip_bundestag():
 
 
 if __name__ == '__main__':
+    configure_logging()
     import_dip_bundestag()

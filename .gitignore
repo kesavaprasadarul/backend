@@ -22,3 +22,4 @@ cc.de.300.bin.gz
 
 logs/errors.log
 logs/info.log
+backend.log

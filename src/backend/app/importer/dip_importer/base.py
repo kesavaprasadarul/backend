@@ -88,6 +88,8 @@ class DIPImporter(Generic[PydanticDataModelType, PydanticParameterModelType, SQL
             self.crud.create_or_update_multi(batch)
             self.imported_count += len(batch)
 
+        _logger.info(f'Imported {self.imported_count} {self.crud.model.__tablename__}.')
+
     def import_data(
         self,
         params: Optional[PydanticParameterModelType] = None,

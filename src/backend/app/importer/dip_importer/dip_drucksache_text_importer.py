@@ -29,6 +29,7 @@ from backend.app.models.deutscher_bundestag.models import (
 import time
 
 from typing import Optional
+from backend.app.core.logging import configure_logging
 
 
 class DIPBundestagDrucksacheTextImporter(
@@ -149,4 +150,5 @@ def import_dip_bundestag():
 
 
 if __name__ == '__main__':
+    configure_logging()
     import_dip_bundestag()

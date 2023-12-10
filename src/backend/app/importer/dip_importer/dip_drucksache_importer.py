@@ -30,8 +30,6 @@ from backend.app.models.deutscher_bundestag.models import (
 )
 from backend.app.core.logging import configure_logging
 
-_logger = getLogger(__name__)
-
 
 class DIPBundestagDrucksacheImporter(DIPImporter[Drucksache, DrucksacheParameter, DIPDrucksache]):
     """Class for DIP Bundestag Drucksache Importer."""
@@ -138,5 +136,5 @@ def import_dip_bundestag():
 
 
 if __name__ == '__main__':
-    import_dip_bundestag()
     configure_logging()
+    import_dip_bundestag()
