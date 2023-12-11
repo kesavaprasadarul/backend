@@ -1,7 +1,7 @@
 """Entry point for FastAPI including API routers (endpoints)."""
 import time
 from contextlib import asynccontextmanager
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
 from logging import getLogger
 from sched import scheduler
 
@@ -14,6 +14,7 @@ from backend.app.api.v1.api import api_router
 from backend.app.core.config import settings
 from backend.app.core.logging import configure_logging
 from backend.app.importer.abstimmung_importer import FetchTypes, import_abstimmungen
+from backend.app.importer.mandate_importer import import_mandate
 
 _logger = getLogger(__name__)
 
@@ -27,7 +28,7 @@ def execution_listener(event):
         _logger.error(f"Job crashed: {event.job_id}")
     else:
         _logger.info(f"Job finished: {event.job_id}")
-        if event.job_id == 'init_import_abstimmungen':
+        if event.job_id == 'startup_imports':
             app_scheduler.add_job(
                 import_abstimmungen,
                 id='cron_import_abstimmungen',
@@ -38,18 +39,24 @@ def execution_listener(event):
             )
 
 
+async def startup_imports_job():
+    """Startup event."""
+    await import_mandate()
+
+    import_abstimmungen(
+        fetch=FetchTypes.MISSING,
+        date_start=date(2023, 1, 1),
+        date_end=(date.today() + timedelta(weeks=1)),
+    )
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Startup event."""
 
     app_scheduler.add_job(
-        import_abstimmungen,
-        id='init_import_abstimmungen',
-        kwargs={
-            'fetch': FetchTypes.MISSING,
-            'date_start': datetime(2023, 12, 1),
-            'date_end': (datetime.now() + timedelta(weeks=1)),
-        },
+        startup_imports_job,
+        id='startup_imports',
         next_run_time=datetime.now(),
     )
 

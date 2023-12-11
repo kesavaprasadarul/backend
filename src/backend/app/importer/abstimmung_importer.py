@@ -136,7 +136,7 @@ def _import_relevant_beschlussfassungen(
         drucksache_importer.import_data(param)
         _logger.debug("Importing Drucksachen with parameter %s finished", param)
 
-    _logger.info("Imported %s Drucksachen.", drucksache_importer.get_imported_count())
+    _logger.info("Imported %s new Drucksachen.", drucksache_importer.get_imported_count())
 
 
 def import_abstimmungen(
@@ -172,21 +172,18 @@ def import_abstimmungen(
         vorgangstyp_filter=vorgangstyp_filter,
     )
 
-    imported_count = drucksache_importer.get_imported_count()
+    # imported_count = drucksache_importer.get_imported_count()
+    # if imported_count == 0:
+    #     _logger.info("No new Drucksachen found. No abstimmungen imported.")
+    #     return
 
-    if imported_count == 0:
-        _logger.info("No new Drucksachen found. No abstimmungen imported.")
-        return
-
-    _logger.info("Imported %s Drucksachen.", imported_count)
-
-    # CRUD_Abstimmung.update_abstimmungen(drucksachetyp_filter, vorgangstyp_filter)
+    CRUD_Abstimmung.update_abstimmungen(drucksachetyp_filter, vorgangstyp_filter)
 
 
 if __name__ == "__main__":
     configure_logging()
     import_abstimmungen(
         fetch=FetchTypes.MISSING,
-        date_start=date(2023, 12, 1),
-        date_end=(date.today() + timedelta(weeks=1)),
+        date_start=date(1980, 6, 15),
+        date_end=date(1980, 12, 15),  # (date.today() + timedelta(weeks=1)),
     )

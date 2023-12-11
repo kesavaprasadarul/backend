@@ -25,7 +25,7 @@ class CRUDAbstimmung(CRUDBase[APIAbstimmung]):
         """Call import procedure."""
         _logger.info("Call import procedure for %s", self.model.__tablename__)
         CRUDBase.db.execute(
-            sa.text("CALL public.update_abstimmungen(:drucksachetyp, :vorgangstyp)"),
+            sa.text("CALL public.import_abstimmungen(:drucksachetyp, :vorgangstyp)"),
             {"drucksachetyp": drucksachetyp_filter, "vorgangstyp": vorgangstyp_filter},
         )
 
