@@ -25,7 +25,7 @@ SQLModelType = TypeVar("SQLModelType", bound=Base)  # pylint: disable=invalid-na
 
 ParamMapping = MutableMapping
 
-DELAY_BETWEEN_REQUESTS = 0.28
+DELAY_BETWEEN_REQUESTS = 0.5
 
 
 class DIPImporter(Generic[PydanticDataModelType, PydanticParameterModelType, SQLModelType]):

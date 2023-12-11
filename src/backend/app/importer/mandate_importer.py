@@ -13,7 +13,7 @@ from backend.app.utils import get_data_folder
 FILE_NAME = 'mandate.csv'
 
 
-async def _read_mandate(mandate: list[APIMandate], file) -> list[APIMandate]:
+def _read_mandate(mandate: list[APIMandate], file) -> list[APIMandate]:
     with open(
         file,
         "r",
@@ -38,7 +38,7 @@ async def _read_mandate(mandate: list[APIMandate], file) -> list[APIMandate]:
     return mandate
 
 
-async def import_mandate() -> None:
+def import_mandate() -> None:
     _logger.info("Import Mandate")
     file = os.path.join(get_data_folder(), FILE_NAME)
 
@@ -48,10 +48,10 @@ async def import_mandate() -> None:
 
     mandate: list[APIMandate] = []
 
-    CRUD_Mandate.create_or_update_multi(await _read_mandate(mandate, file))
+    CRUD_Mandate.create_or_update_multi(_read_mandate(mandate, file))
 
     _logger.info("Import Mandate finished")
 
 
 if __name__ == '__main__':
-    asyncio.run(import_mandate())
+    import_mandate()

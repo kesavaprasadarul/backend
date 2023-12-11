@@ -26,6 +26,14 @@ app_scheduler = AsyncIOScheduler()
 def execution_listener(event):
     if event.exception:
         _logger.error(f"Job crashed: {event.job_id}")
+        if event.job_id == 'startup_imports':
+            app_scheduler.add_job(
+                event.job.func,
+                id=event.job_id,
+                kwargs=event.job.kwargs,
+                trigger='date',
+                next_run_time=datetime.now() + timedelta(minutes=5),
+            )
     else:
         _logger.info(f"Job finished: {event.job_id}")
         if event.job_id == 'startup_imports':
@@ -39,9 +47,9 @@ def execution_listener(event):
             )
 
 
-async def startup_imports_job():
+def startup_imports_job():
     """Startup event."""
-    await import_mandate()
+    import_mandate()
 
     import_abstimmungen(
         fetch=FetchTypes.MISSING,
@@ -59,7 +67,6 @@ async def lifespan(app: FastAPI):
         id='startup_imports',
         next_run_time=datetime.now(),
     )
-
     app_scheduler.add_listener(execution_listener, EVENT_JOB_EXECUTED | EVENT_JOB_ERROR)
     app_scheduler.start()
 
