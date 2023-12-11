@@ -22,3 +22,19 @@ class Abstimmung(BaseModel):
 
     class Config:
         from_attributes = True
+
+
+class BundestagTopTopic(BaseModel):
+    """Eine Top Topoic."""
+
+    id: int
+
+    ressort: str
+    word: str
+    value: int
+    month: Optional[int]
+    year: Optional[int]
+    election_period: Optional[int]
+
+    class Config:
+        from_attributes = True

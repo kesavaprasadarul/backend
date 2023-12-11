@@ -23,14 +23,24 @@ configure_logging()
 app_scheduler = AsyncIOScheduler()
 
 
+def startup_imports_job():
+    """Startup event."""
+    import_mandate()
+
+    import_abstimmungen(
+        fetch=FetchTypes.MISSING,
+        date_start=date(2023, 1, 1),
+        date_end=(date.today() + timedelta(weeks=1)),
+    )
+
+
 def execution_listener(event):
     if event.exception:
         _logger.error(f"Job crashed: {event.job_id}")
         if event.job_id == 'startup_imports':
             app_scheduler.add_job(
-                event.job.func,
+                startup_imports_job,
                 id=event.job_id,
-                kwargs=event.job.kwargs,
                 trigger='date',
                 next_run_time=datetime.now() + timedelta(minutes=60),
             )
@@ -45,17 +55,6 @@ def execution_listener(event):
                 minute='*/15',
                 max_instances=1,
             )
-
-
-def startup_imports_job():
-    """Startup event."""
-    import_mandate()
-
-    import_abstimmungen(
-        fetch=FetchTypes.MISSING,
-        date_start=date(2023, 1, 1),
-        date_end=(date.today() + timedelta(weeks=1)),
-    )
 
 
 @asynccontextmanager
