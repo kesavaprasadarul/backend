@@ -32,7 +32,7 @@ def execution_listener(event):
                 id=event.job_id,
                 kwargs=event.job.kwargs,
                 trigger='date',
-                next_run_time=datetime.now() + timedelta(minutes=5),
+                next_run_time=datetime.now() + timedelta(minutes=60),
             )
     else:
         _logger.info(f"Job finished: {event.job_id}")
