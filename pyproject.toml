@@ -9,22 +9,24 @@ readme = "README.md"
 daiquiri = "^3.2.1"
 fastapi = "^0.100.0"
 psycopg2-binary = "^2.9.5"
-python = "^3.11"
+python = ">=3.11 <3.12"
 pytz = "^2023.2"
 raven = "^6.10.0"
 sqlalchemy = "2.0.19"
 tenacity = "^8.2.2"
-uvicorn = {extras = ["standard"], version = "^0.23.0"}
+uvicorn = { extras = ["standard"], version = "^0.23.0" }
 pydantic = "^2.0.3"
 pydantic-settings = "^2.0.2"
 alembic = "^1.12.1"
-requests = {extras = ["socks"], version = "^2.31.0"}
+requests = { extras = ["socks"], version = "^2.31.0" }
 tqdm = "^4.66.1"
 requests-toolbelt = "^1.0.0"
 black = "^23.11.0"
 nltk = "^3.8.1"
 numpy = "^1.26.2"
 fasttext-wheel = "^0.9.2"
+apscheduler = "^3.10.4"
+
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.3.0"
@@ -33,6 +35,8 @@ flake8 = "^6.0.0"
 inquirer = "^3.0.0"
 isort = "^5.10.1"
 mypy = "1.4.1"
+types-psycopg2 = "^2.9.21.20"
+types-pytz = "^2023.3.1.1"
 pylint = "2.17.4"
 pytest = "^7.1.0"
 pytest-cov = "^4.0.0"
@@ -75,12 +79,12 @@ disable_error_code = ["annotation-unchecked"]
 
 [tool.pylint.main]
 disable = [
-    "too-few-public-methods",  # classes are used as data containers
-    "useless-return",  # if someone wants to show None is returned, allow it
-    "fixme", # during bootstrapping of the library we will commit TODOs
-    "cyclic-import",  # problematic cyclic-imports are handled by python itself
-    "line-too-long",  # sometime required (mypy comments), better enforced by black
-    "method-cache-max-size-none",  # we use unlimited caches for performance reasons during short execution life-time
+    "too-few-public-methods",     # classes are used as data containers
+    "useless-return",             # if someone wants to show None is returned, allow it
+    "fixme",                      # during bootstrapping of the library we will commit TODOs
+    "cyclic-import",              # problematic cyclic-imports are handled by python itself
+    "line-too-long",              # sometime required (mypy comments), better enforced by black
+    "method-cache-max-size-none", # we use unlimited caches for performance reasons during short execution life-time
     # let reviewers decide about these metrics:
     "too-many-instance-attributes",
     "too-many-locals",
@@ -88,10 +92,26 @@ disable = [
     "too-many-branches",
     "too-many-return-statements",
     "too-many-statements",
-    "too-many-nested-blocks"
+    "too-many-nested-blocks",
 ]
 docstring-min-length = 15
-good-names = ["i", "j", "k", "ex", "Run", "_", "_logger", "f", "m", "r", "t", "pr", "gh", "T", "db"]
+good-names = [
+    "i",
+    "j",
+    "k",
+    "ex",
+    "Run",
+    "_",
+    "_logger",
+    "f",
+    "m",
+    "r",
+    "t",
+    "pr",
+    "gh",
+    "T",
+    "db",
+]
 ignore-paths = "src/alembic"
 
 [tool.pylint.variables]

@@ -3,11 +3,13 @@
 import time
 from datetime import datetime
 from logging import getLogger
+from tokenize import endpats
 from typing import Iterator, Optional
 
 import pytz
 
 from backend.app.core.config import Settings
+from backend.app.core.logging import configure_logging
 from backend.app.crud.CRUDDIPBundestag.crud_drucksache import CRUD_DIP_DRUCKSACHE
 from backend.app.facades.deutscher_bundestag.model import Drucksache, Vorgang, Zuordnung
 from backend.app.facades.deutscher_bundestag.parameter_model import (
@@ -29,21 +31,27 @@ from backend.app.models.deutscher_bundestag.models import (
     DIPVorgangsbezug,
 )
 
-_logger = getLogger(__name__)
-
 
 class DIPBundestagDrucksacheImporter(DIPImporter[Drucksache, DrucksacheParameter, DIPDrucksache]):
     """Class for DIP Bundestag Drucksache Importer."""
 
-    def __init__(self, import_vorgaenge: bool = True):
+    def __init__(
+        self,
+        import_vorgaenge: bool = True,
+        import_vorgangspositionen: bool = True,
+        raise_on_error: bool = False,
+    ):
         """
         Initialize DIPImporter.
         """
         super().__init__(CRUD_DIP_DRUCKSACHE)
 
         self.import_vorgaenge = import_vorgaenge
+        self.raise_on_error = raise_on_error
         if import_vorgaenge:
-            self.vorgang_importer = DIPBundestagVorgangImporter()
+            self.vorgang_importer = DIPBundestagVorgangImporter(
+                import_vorgangspositionen=import_vorgangspositionen, raise_on_error=raise_on_error
+            )
 
     def transform_model(self, data: Drucksache) -> DIPDrucksache:
         """Transform data."""
@@ -93,102 +101,61 @@ class DIPBundestagDrucksacheImporter(DIPImporter[Drucksache, DrucksacheParameter
             vorgang=[],
         )
 
+    def fetch_count(
+        self,
+        params: Optional[DrucksacheParameter] = None,
+        proxy_list: ProxyList | None = None,
+    ) -> int:
+        """Fetch count."""
+        time.sleep(self.delay_between_requests)
+        return self.dip_bundestag_facade.get_count(
+            endpoint='/api/v1/drucksache',
+            params=params,
+            proxy_list=proxy_list,
+        )
+
     def fetch_data(
         self,
         params: Optional[DrucksacheParameter] = None,
         response_limit=1000,
         proxy_list: ProxyList | None = None,
-    ) -> Iterator[Drucksache]:
+    ) -> Iterator[DIPDrucksache]:
         """Fetch data."""
 
-        return self.dip_bundestag_facade.get_drucksachen(
+        for model in self.dip_bundestag_facade.get_drucksachen(
             params=params,
             response_limit=response_limit,
             proxy_list=proxy_list,
-        )
-
-    def batch_upsert(
-        self,
-        params: Optional[DrucksacheParameter] = None,
-        response_limit: int = 1000,
-        proxy_list: ProxyList | None = None,
-        upsert_batch_size: int = 100,
-        **kwargs,
-    ):
-        batch: list[DIPDrucksache] = []
-        batch_number = 0
-        for pydantic_model in self.fetch_data(
-            params=params,
-            response_limit=response_limit,
-            proxy_list=proxy_list,
+            raise_on_error=self.raise_on_error,
         ):
-            _logger.info(f'Adding model {pydantic_model} to batch.')
-            sql_model = self.transform_model(pydantic_model)
+            # if model.id == 271560:
+            #     print('debug')
+            db_model = self.transform_model(model)
 
             if self.import_vorgaenge:
-                time.sleep(
-                    0.5
-                )  # sleep to avoid too many requests in a short time and rate limiting
+                time.sleep(self.delay_between_requests)
                 for vorgang_pydantic in self.vorgang_importer.fetch_data(
                     params=VorgangParameter(
-                        drucksache=sql_model.id,
+                        drucksache=db_model.id,
                     ),
                     proxy_list=proxy_list,
                 ):
-                    sql_model.vorgang.append(
-                        self.vorgang_importer.transform_model(vorgang_pydantic)
-                    )
+                    db_model.vorgang.append(vorgang_pydantic)
 
-            batch.append(sql_model)
-
-            if len(batch) >= upsert_batch_size:
-                _logger.info(
-                    f'Upserting batch {batch_number} into {sql_model.__tablename__}-Table.'
-                )
-                self.crud.create_or_update_multi(batch)
-                batch = []
-                batch_number += 1
-                self.imported_count += upsert_batch_size
-
-        if batch:
-            _logger.info(
-                f'Upserting final batch ({batch_number}) into {batch[0].__tablename__}-Table.'
-            )
-            self.crud.create_or_update_multi(batch)
-            self.imported_count += len(batch)
-
-    def import_data(
-        self,
-        params: Optional[DrucksacheParameter] = None,
-        response_limit: int = 1000,
-        proxy_list: ProxyList | None = None,
-        upsert_batch_size: int = 100,
-        **kwargs,
-    ):
-        """Import data."""
-
-        self.batch_upsert(
-            params=params,
-            response_limit=response_limit,
-            proxy_list=proxy_list,
-            upsert_batch_size=upsert_batch_size,
-            **kwargs,
-        )
+            yield db_model
 
 
 def import_dip_bundestag():
     importer = DIPBundestagDrucksacheImporter()
 
     params = DrucksacheParameter(
-        aktualisiert_start=datetime(2022, 1, 1, tzinfo=pytz.UTC).astimezone(),
-        dokumentnummer=['20/8626', '20/9345'],
+        aktualisiert_start=datetime(2023, 1, 1, tzinfo=pytz.UTC).astimezone(),
+        aktualisiert_end=datetime(2023, 12, 31, tzinfo=pytz.UTC).astimezone(),
     )
 
-    importer.import_data(
-        params=params,
-        response_limit=10000,
-    )
+    importer.import_data(params=params, response_limit=1000, upsert_batch_size=30)
 
 
 if __name__ == '__main__':
+    configure_logging()
     import_dip_bundestag()

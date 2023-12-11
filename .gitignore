@@ -20,5 +20,5 @@ pytest.ini
 cc.de.300.bin
 cc.de.300.bin.gz
 
-logs/errors.log
-logs/info.log
+info.log*
+debug.log*

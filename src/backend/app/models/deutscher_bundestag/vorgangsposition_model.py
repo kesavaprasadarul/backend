@@ -36,7 +36,7 @@ class DIPVorgangsposition(Base, TimestampMixin, DIPSchema):
     dokumentart: Mapped[Dokumentart] = mapped_column(nullable=False)
     vorgang_id: Mapped[int] = mapped_column(nullable=False)
     datum: Mapped[dt.date] = mapped_column(nullable=False)
-    aktualisiert: Mapped[dt.datetime] = mapped_column(nullable=False)
+    aktualisiert: Mapped[dt.datetime] = mapped_column(nullable=True)
     aktivitaet_anzahl: Mapped[int] = mapped_column(nullable=False)
     ratsdok: Mapped[str] = mapped_column(nullable=True)
     kom: Mapped[str] = mapped_column(nullable=True)

@@ -55,7 +55,7 @@ class DIPPlenarprotokollText(Base, TimestampMixin, DIPSchema):
 
     id: Mapped[int] = mapped_column(primary_key=True)  # database id
     plenarprotokoll_id: Mapped[int] = mapped_column(
-        ForeignKey("dip.plenarprotokoll.id"), nullable=False
+        ForeignKey("dip.plenarprotokoll.id", ondelete="CASCADE", onupdate="CASCADE"), nullable=False
     )
     text: Mapped[str] = mapped_column(nullable=False)
 

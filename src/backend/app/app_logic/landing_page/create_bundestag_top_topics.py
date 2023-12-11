@@ -15,6 +15,7 @@ from backend.app.facades.deutscher_bundestag.model_plenarprotokoll_vorgangsbezug
 )
 from backend.app.facades.deutscher_bundestag.parameter_model import PlenarprotokollParameter
 from backend.app.models.api.top_topics_model import TopTopics
+import time
 
 _logger = logging.getLogger(__name__)
 
@@ -53,7 +54,7 @@ def create_bundestag_top_topics(
     plenarprotokolle = dip_bundestag_facade.get_plenarprotokolle(
         PlenarprotokollParameter(
             datum_start=date_start,
-            datum_ende=date_end,
+            datum_end=date_end,
             wahlperiode=[election_period] if election_period else None,
             zuordnung=Zuordnung.BT,
         )
@@ -62,6 +63,7 @@ def create_bundestag_top_topics(
     plenarprotokoll_vorgangsbezuege: list[PlenarprotokollVorgangsbezug] = []
     for plenarprotokoll in plenarprotokolle:
         _logger.info("Fetch vorgangsbezuge for plenarprotokoll with id %d", plenarprotokoll.id)
+        time.sleep(0.5)
         plenarprotokoll_vorgangsbezuege.extend(
             dip_bundestag_facade.get_vorgangsbezuege_of_plenarprotokoll_by_id(
                 plenarprotokoll_id=plenarprotokoll.id

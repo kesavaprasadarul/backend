@@ -6,6 +6,7 @@
 from backend.app.db.database import Base  # pylint: disable=unused-import
 from backend.app.models.api.abstimmung_model import APIAbstimmung
 from backend.app.models.api.top_topics_model import TopTopics  # pylint: disable=unused-import
+from backend.app.models.api.mandate_model import APIMandate
 from backend.app.models.deutscher_bundestag.drucksache_model import (
     DIPAutor,  # pylint: disable=unused-import
 )

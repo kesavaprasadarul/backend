@@ -268,7 +268,7 @@ class HttpFacade:
                 requests.exceptions.ConnectionError,
             ) as e:
                 if proxy_list:
-                    print(f"Could not get response. Trying again with new proxy. Error: {e}")
+                    _logger.warn(f"Could not get response. Trying again with new proxy. Error: {e}")
                     proxy_list.set_random_proxy(test=True)
                     continue
                 else:
@@ -282,10 +282,10 @@ class HttpFacade:
                 raise NotImplementedError(f'Unexpected page content type {type(page.content)}.')
 
             if cursor := get_next_page_cursor(page.page_info):
-                _logger.info(f'Next cursor: {cursor}.')
+                _logger.debug(f'Next cursor: {cursor}.')
                 params[cursor.name] = cursor.value
             else:
-                _logger.info('Reached end of pages.')
+                _logger.debug('Reached end of pages.')
                 reached_end = True
 
             if response_limit is not None:

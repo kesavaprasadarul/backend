@@ -5,7 +5,7 @@ import shutil
 # from nltk.corpus import stopwords
 from logging import getLogger
 
-import fasttext
+import fasttext  # mypy: ignore
 import fasttext.util  # use pip install fasttext-wheel
 
 # import nltk

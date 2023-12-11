@@ -8,6 +8,7 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 from backend.app.db.database import Base
 from backend.app.facades.deutscher_bundestag.model import VorgangDeskriptorTyp, VorgangTyp
 from backend.app.models.common import DIPSchema, TimestampMixin
+from backend.app.models.deutscher_bundestag.vorgangsposition_model import DIPVorgangsposition
 
 
 class DIPVorgang(Base, TimestampMixin, DIPSchema):
@@ -22,7 +23,7 @@ class DIPVorgang(Base, TimestampMixin, DIPSchema):
     wahlperiode: Mapped[int] = mapped_column(nullable=False)
     initiative: Mapped[list[str]] = mapped_column(ARRAY(Text), nullable=True)
     datum: Mapped[date] = mapped_column(nullable=True)
-    aktualisiert: Mapped[datetime] = mapped_column(nullable=False)
+    aktualisiert: Mapped[datetime] = mapped_column(nullable=True)
     titel: Mapped[str] = mapped_column(nullable=False)
     abstract: Mapped[str] = mapped_column(nullable=True)
     sachgebiet: Mapped[list[str]] = mapped_column(ARRAY(Text), nullable=True)
@@ -35,9 +36,11 @@ class DIPVorgang(Base, TimestampMixin, DIPSchema):
     mitteilung: Mapped[str] = mapped_column(nullable=True)
     sek: Mapped[str] = mapped_column(nullable=True)
 
-    drucksache_id: Mapped[int] = mapped_column(ForeignKey("dip.drucksache.id"), nullable=True)
+    drucksache_id: Mapped[int] = mapped_column(
+        ForeignKey("dip.drucksache.id", ondelete="SET NULL", onupdate="CASCADE"), nullable=True
+    )
     plenarprotokoll_id: Mapped[int] = mapped_column(
-        ForeignKey("dip.plenarprotokoll.id"), nullable=True
+        ForeignKey("dip.plenarprotokoll.id", ondelete="SET NULL", onupdate="CASCADE"), nullable=True
     )
 
     deskriptor: Mapped[list["DIPVorgangDeskriptor"]] = relationship(
@@ -54,6 +57,12 @@ class DIPVorgang(Base, TimestampMixin, DIPSchema):
 
     vorgang_verlinkung: Mapped[list["DIPVorgangVerlinkung"]] = relationship(
         cascade='merge, save-update, delete, delete-orphan'
+    )
+
+    vorgangsposition: Mapped[list["DIPVorgangsposition"]] = relationship(
+        cascade='merge, save-update',
+        foreign_keys="DIPVorgangsposition.vorgang_id",
+        primaryjoin="DIPVorgang.id==DIPVorgangsposition.vorgang_id",
     )
 
 

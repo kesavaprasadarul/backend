@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   db:
-    image: postgres:12
+    image: postgres:16
     tty: true
     ports:
       - "5432:5432"
@@ -29,7 +29,7 @@ services:
       - "8000:80"
     # overrides CMD in Dockerfile to have uvicorn reload functionality for developing at localhost:8000/docs available
     command: >
-      sh -c "alembic upgrade head && uvicorn backend.app.main:app --reload --host 0.0.0.0 --port 80"
+      sh -c "alembic upgrade head && uvicorn backend.app.main:app --reload --host 0.0.0.0 --port 80 --workers 4"
 
 volumes:
   db-postgres-data:

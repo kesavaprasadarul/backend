@@ -1,14 +1,20 @@
 """Class for DIP Bundestag Drucksache-Text Importer."""
 
+import time
 from datetime import date, datetime, timezone
-from typing import Iterator
+from typing import Iterator, Optional
 
 from backend.app.core.config import Settings
+from backend.app.core.logging import configure_logging
 from backend.app.crud.CRUDDIPBundestag.crud_drucksache import CRUD_DIP_DRUCKSACHE
 from backend.app.facades.deutscher_bundestag.model import DrucksacheText
-from backend.app.facades.deutscher_bundestag.parameter_model import DrucksacheParameter
+from backend.app.facades.deutscher_bundestag.parameter_model import (
+    DrucksacheParameter,
+    VorgangParameter,
+)
 from backend.app.facades.util import ProxyList
 from backend.app.importer.dip_importer.base import DIPImporter
+from backend.app.importer.dip_importer.dip_vorgang_importer import DIPBundestagVorgangImporter
 
 # import from all models to ensure they are registered
 from backend.app.models.deutscher_bundestag.models import (
@@ -27,11 +33,17 @@ class DIPBundestagDrucksacheTextImporter(
 ):
     """Class for DIP Bundestag Drucksache-Text Importer."""
 
-    def __init__(self):
+    def __init__(self, import_vorgaenge: bool = True, import_vorgangspositionen: bool = True):
         """
         Initialize DIPImporter.
         """
         super().__init__(CRUD_DIP_DRUCKSACHE)
+
+        self.import_vorgaenge = import_vorgaenge
+        if import_vorgaenge:
+            self.vorgang_importer = DIPBundestagVorgangImporter(
+                import_vorgangspositionen=import_vorgangspositionen
+            )
 
     def transform_model(self, data: DrucksacheText) -> DIPDrucksache:
         """Transform data."""
@@ -93,17 +105,30 @@ class DIPBundestagDrucksacheTextImporter(
 
     def fetch_data(
         self,
-        params: DrucksacheParameter | None = None,
+        params: Optional[DrucksacheParameter] = None,
         response_limit=1000,
         proxy_list: ProxyList | None = None,
-    ) -> Iterator[DrucksacheText]:
+    ) -> Iterator[DIPDrucksache]:
         """Fetch data."""
 
-        return self.dip_bundestag_facade.get_drucksachen_text(
+        for model in self.dip_bundestag_facade.get_drucksachen_text(
             params=params,
             response_limit=response_limit,
             proxy_list=proxy_list,
-        )
+        ):
+            db_model = self.transform_model(model)
+
+            if self.import_vorgaenge:
+                time.sleep(self.delay_between_requests)
+                for vorgang_pydantic in self.vorgang_importer.fetch_data(
+                    params=VorgangParameter(
+                        drucksache=db_model.id,
+                    ),
+                    proxy_list=proxy_list,
+                ):
+                    db_model.vorgang.append(vorgang_pydantic)
+
+            yield db_model
 
 
 def import_dip_bundestag():
@@ -121,4 +146,5 @@ def import_dip_bundestag():
 
 
 if __name__ == '__main__':
+    configure_logging()
     import_dip_bundestag()

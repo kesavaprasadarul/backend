@@ -32,11 +32,13 @@ class DIPBundestagVorgangspositionImporter(
 ):
     """Class for DIP Bundestag Vorgangsposition Importer."""
 
-    def __init__(self):
+    def __init__(self, raise_on_error: bool = False):
         """
         Initialize DIPImporter.
         """
         super().__init__(CRUD_DIP_VORGANGSPOSITION)
+
+        self.raise_on_error = raise_on_error
 
     def transform_model(self, data: Vorgangsposition) -> DIPVorgangsposition:
         """Transform data."""
@@ -120,14 +122,18 @@ class DIPBundestagVorgangspositionImporter(
         params: VorgangspositionParameter | None = None,
         response_limit=1000,
         proxy_list: ProxyList | None = None,
-    ) -> Iterator[Vorgangsposition]:
+    ) -> Iterator[DIPVorgangsposition]:
         """Fetch data."""
 
-        return self.dip_bundestag_facade.get_vorgangspositionen(
+        for model in self.dip_bundestag_facade.get_vorgangspositionen(
             params=params,
             response_limit=response_limit,
             proxy_list=proxy_list,
-        )
+            raise_on_error=self.raise_on_error,
+        ):
+            db_model = self.transform_model(model)
+
+            yield db_model
 
 
 def import_dip_bundestag():
