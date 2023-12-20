@@ -126,7 +126,7 @@ class DIPBundestagDrucksacheTextImporter(
                     ),
                     proxy_list=proxy_list,
                 ):
-                    db_model.vorgang.append(vorgang_pydantic)
+                    db_model.vorgaenge.append(vorgang_pydantic)
 
             yield db_model
 

@@ -97,6 +97,8 @@ def _import_relevant_beschlussfassungen(
 
         _logger.info("Comparing Drucksachen counts per week with API counts per week")
 
+        total_missing = 0
+
         for count_per_week in db_counts_per_week:
             count_param_list = _create_drucksache_parameter_list(
                 drucksachetyp_list=drucksachetyp_filter,
@@ -122,11 +124,13 @@ def _import_relevant_beschlussfassungen(
                     count_per_week.year,
                     count_per_week.week,
                 )
+                total_missing += api_drucksache_count - count_per_week.drucksache_count
                 param_list.extend(params_with_at_least_one_drucksache)
 
         _logger.info(
-            "Comparing Drucksachen counts per week with API counts per week finished. Found %s Drucksachen-Parameters to import.",
+            "Comparing Drucksachen counts per week with API counts per week finished. Found %s Drucksachen-Parameters to import (Total missing: %s)",
             len(param_list),
+            total_missing,
         )
 
     _logger.info("Start import of data")
@@ -145,12 +149,7 @@ def import_abstimmungen(
     date_end: date | None = None,
 ):
     # Base parameters that we need for meaninungful abstimmungen
-    drucksachetyp_filter = [
-        'Beschluss',
-        'Gesetzgebung',
-        'Beschlussempfehlung und Bericht',
-        'Empfehlungen',
-    ]
+    drucksachetyp_filter = None
     vorgangstyp_filter = [
         "Antrag",
         "Entschließungsantrag BT",
@@ -177,13 +176,13 @@ def import_abstimmungen(
     #     _logger.info("No new Drucksachen found. No abstimmungen imported.")
     #     return
 
-    CRUD_Abstimmung.update_abstimmungen(drucksachetyp_filter, vorgangstyp_filter)
+    # CRUD_Abstimmung.update_abstimmungen(drucksachetyp_filter, vorgangstyp_filter)
 
 
 if __name__ == "__main__":
     configure_logging()
     import_abstimmungen(
         fetch=FetchTypes.MISSING,
-        date_start=date(1980, 6, 15),
-        date_end=date(1980, 12, 15),  # (date.today() + timedelta(weeks=1)),
+        date_start=date(2023, 1, 1),
+        date_end=date(2023, 12, 31),  # (date.today() + timedelta(weeks=1)),
     )

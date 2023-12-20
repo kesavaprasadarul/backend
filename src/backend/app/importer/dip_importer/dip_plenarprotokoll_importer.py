@@ -2,6 +2,7 @@
 
 import time
 from typing import Iterator
+import datetime
 
 from backend.app.core.config import Settings
 from backend.app.core.logging import configure_logging
@@ -84,11 +85,11 @@ class DIPBundestagPlenarprotokollImporter(
                 time.sleep(self.delay_between_requests)
                 for vorgang in self.vorgang_importer.fetch_data(
                     params=VorgangParameter(
-                        drucksache=db_model.id,
+                        plenarprotokoll=db_model.id,
                     ),
                     proxy_list=proxy_list,
                 ):
-                    db_model.vorgang.append(vorgang)
+                    db_model.vorgaenge.append(vorgang)
 
             yield db_model
 
@@ -96,11 +97,13 @@ class DIPBundestagPlenarprotokollImporter(
 def import_dip_bundestag():
     importer = DIPBundestagPlenarprotokollImporter()
 
-    params = PlenarprotokollParameter()
+    params = PlenarprotokollParameter(
+        datum_start=datetime.date(2023, 12, 1), datum_end=datetime.date(2023, 12, 31)
+    )
 
     importer.import_data(
         params=params,
-        response_limit=1,
+        response_limit=1000,
     )
 
 

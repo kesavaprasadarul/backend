@@ -16,6 +16,8 @@ from backend.app.models.deutscher_bundestag.ressort_model import DIPRessort
 from backend.app.models.deutscher_bundestag.urheber_model import DIPUrheber
 from backend.app.models.deutscher_bundestag.vorgang_model import DIPVorgang
 from backend.app.models.deutscher_bundestag.vorgangsbezug_model import DIPVorgangsbezug
+from sqlalchemy.ext.associationproxy import association_proxy
+from sqlalchemy.ext.associationproxy import AssociationProxy
 
 
 class DIPDrucksache(Base, TimestampMixin, DIPSchema):
@@ -67,9 +69,15 @@ class DIPDrucksache(Base, TimestampMixin, DIPSchema):
         back_populates="drucksache",
     )
 
-    vorgang: Mapped[list["DIPVorgang"]] = relationship(
-        cascade='merge, save-update',
-        foreign_keys="DIPVorgang.drucksache_id",
+    drucksache_vorgang_association: Mapped[list["DIPDrucksacheVorgangAssociation"]] = relationship(
+        back_populates="drucksache",
+        cascade='merge, save-update, delete, delete-orphan',
+    )
+
+    vorgaenge: AssociationProxy[list["DIPVorgang"]] = association_proxy(
+        "drucksache_vorgang_association",
+        "vorgang",
+        creator=lambda vorgang: DIPDrucksacheVorgangAssociation(vorgang=vorgang),
     )
 
 
@@ -92,3 +100,15 @@ class DIPDrucksacheText(Base, TimestampMixin, DIPSchema):
     drucksache: Mapped["DIPDrucksache"] = relationship(
         "DIPDrucksache", back_populates="drucksache_text"
     )
+
+
+class DIPDrucksacheVorgangAssociation(Base, TimestampMixin, DIPSchema):
+    __tablename__ = "drucksache_vorgang_association"
+
+    drucksache_id: Mapped[int] = mapped_column(ForeignKey("dip.drucksache.id"), primary_key=True)
+    vorgang_id: Mapped[int] = mapped_column(ForeignKey("dip.vorgang.id"), primary_key=True)
+
+    drucksache: Mapped["DIPDrucksache"] = relationship(
+        "DIPDrucksache", back_populates="drucksache_vorgang_association"
+    )
+    vorgang: Mapped["DIPVorgang"] = relationship("DIPVorgang", back_populates="drucksachen")

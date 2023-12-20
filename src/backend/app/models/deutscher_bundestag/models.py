@@ -6,6 +6,7 @@ from backend.app.models.deutscher_bundestag.drucksache_model import (  # pylint:
     DIPAutor,
     DIPDrucksache,
     DIPDrucksacheText,
+    DIPDrucksacheVorgangAssociation,
 )
 from backend.app.models.deutscher_bundestag.fundstelle_model import (  # pylint: disable=unused-import
     DIPFundstelle,
@@ -13,6 +14,7 @@ from backend.app.models.deutscher_bundestag.fundstelle_model import (  # pylint:
 from backend.app.models.deutscher_bundestag.plenarprotokoll_model import (  # pylint: disable=unused-import
     DIPPlenarprotokoll,
     DIPPlenarprotokollText,
+    DIPPlenarprotokollVorgangAssociation,
 )
 from backend.app.models.deutscher_bundestag.ressort_model import (  # pylint: disable=unused-import
     DIPRessort,

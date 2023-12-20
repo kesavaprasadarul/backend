@@ -13,6 +13,9 @@ from backend.app.facades.deutscher_bundestag.model import (
 from backend.app.models.common import DIPSchema, TimestampMixin
 from backend.app.models.deutscher_bundestag.fundstelle_model import DIPFundstelle
 from backend.app.models.deutscher_bundestag.vorgangsbezug_model import DIPVorgangsbezug
+from backend.app.models.deutscher_bundestag.vorgang_model import DIPVorgang
+from sqlalchemy.ext.associationproxy import association_proxy
+from sqlalchemy.ext.associationproxy import AssociationProxy
 
 
 class DIPPlenarprotokoll(Base, DIPSchema, TimestampMixin):
@@ -49,6 +52,19 @@ class DIPPlenarprotokoll(Base, DIPSchema, TimestampMixin):
         back_populates="plenarprotokoll",
     )
 
+    plenarprotokoll_vorgang_association: Mapped[
+        list["DIPPlenarprotokollVorgangAssociation"]
+    ] = relationship(
+        back_populates="plenarprotokoll",
+        cascade='merge, save-update, delete, delete-orphan',
+    )
+
+    vorgaenge: AssociationProxy[list["DIPVorgang"]] = association_proxy(
+        "plenarprotokoll_vorgang_association",
+        "vorgang",
+        creator=lambda vorgang: DIPPlenarprotokollVorgangAssociation(vorgang=vorgang),
+    )
+
 
 class DIPPlenarprotokollText(Base, TimestampMixin, DIPSchema):
     __tablename__ = "plenarprotokoll_text"
@@ -62,3 +78,17 @@ class DIPPlenarprotokollText(Base, TimestampMixin, DIPSchema):
     plenarprotokoll: Mapped["DIPPlenarprotokoll"] = relationship(
         "DIPPlenarprotokoll", back_populates="plenarprotokoll_text"
     )
+
+
+class DIPPlenarprotokollVorgangAssociation(Base, TimestampMixin, DIPSchema):
+    __tablename__ = "plenarprotokoll_vorgang_association"
+
+    plenarprotokoll_id: Mapped[int] = mapped_column(
+        ForeignKey("dip.plenarprotokoll.id"), primary_key=True
+    )
+    vorgang_id: Mapped[int] = mapped_column(ForeignKey("dip.vorgang.id"), primary_key=True)
+
+    plenarprotokoll: Mapped["DIPPlenarprotokoll"] = relationship(
+        "DIPPlenarprotokoll", back_populates="plenarprotokoll_vorgang_association"
+    )
+    vorgang: Mapped["DIPVorgang"] = relationship("DIPVorgang", back_populates="plenarprotokolle")

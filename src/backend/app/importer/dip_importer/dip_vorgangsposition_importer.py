@@ -1,7 +1,7 @@
 """Class for DIP Bundestag Vorgangsposition Importer."""
 
 import logging
-from datetime import datetime
+from datetime import datetime, date
 from typing import Iterator
 
 import pytz
@@ -139,9 +139,7 @@ class DIPBundestagVorgangspositionImporter(
 def import_dip_bundestag():
     importer = DIPBundestagVorgangspositionImporter()
 
-    params = VorgangspositionParameter(
-        aktualisiert_start=datetime(2022, 1, 1, tzinfo=pytz.UTC).astimezone(),
-    )
+    params = VorgangspositionParameter(datum_start=date(2023, 1, 1))
     importer.import_data(params=params, response_limit=10000)
 
 

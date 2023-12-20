@@ -60,6 +60,7 @@ class AuthType(enum.Enum):
     TOKEN = enum.auto()
     BASIC_AUTHENTICATION = enum.auto()
     TOKEN_AS_USER = enum.auto()
+    NONE = enum.auto()
 
 
 class Auth(pyd.BaseModel):
@@ -73,6 +74,10 @@ class Auth(pyd.BaseModel):
 
 class MediaType(enum.Enum):
     JSON = 'application/json'
+    HTML = 'text/html'
+    PDF = 'application/pdf'
+    XLSX = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+    XLS = 'application/vnd.ms-excel'
 
 
 class HttpFacade:
@@ -151,6 +156,8 @@ class HttpFacade:
                 )
             case AuthType.TOKEN_AS_USER:
                 basic_auth = (self.auth.token, '')
+            case AuthType.NONE:
+                pass
             case _:  # pragma: no cover  # coverage.py does not recognize pattern
                 raise NotImplementedError(self.auth.auth_type)
 
@@ -231,9 +238,6 @@ class HttpFacade:
             page_size:
                 Optional size of a page to customize default size defined by service.
 
-            page_args_path:
-                Path into the kwargs dictionary where the page information is stored.
-
             params:
                 Optional params of request
 
@@ -246,9 +250,6 @@ class HttpFacade:
         Returns:
             Yields the unpacked content of each page.
         """
-        page_args_dict = kwargs
-        for name in page_args_path:
-            page_args_dict = page_args_dict.setdefault(name, {})
 
         if params is None:
             params = {}

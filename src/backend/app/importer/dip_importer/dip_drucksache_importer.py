@@ -98,7 +98,6 @@ class DIPBundestagDrucksacheImporter(DIPImporter[Drucksache, DrucksacheParameter
             urheber=dip_urheber,
             vorgangsbezug=dip_vorgangsbezug,
             ressort=dip_ressort,
-            vorgang=[],
         )
 
     def fetch_count(
@@ -140,7 +139,7 @@ class DIPBundestagDrucksacheImporter(DIPImporter[Drucksache, DrucksacheParameter
                     ),
                     proxy_list=proxy_list,
                 ):
-                    db_model.vorgang.append(vorgang_pydantic)
+                    db_model.vorgaenge.append(vorgang_pydantic)
 
             yield db_model
 
