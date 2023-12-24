@@ -4,6 +4,7 @@ from backend.app.facades.bundestag_abstimmungen.parameter_model import (
 from backend.app.utils import get_data_folder
 from backend.app.facades.bundestag_abstimmungen.facade import BundestagAbstimmungenFacade
 from backend.app.core.config import settings
+from backend.app.core.logging import configure_logging
 from datetime import date
 
 
@@ -16,7 +17,7 @@ class BundestagAbstimmungenImporter:
         self, params: BundestagAbstimmungenParameter | None = None, response_limit: int = 1000
     ):
         for abstimmung in self.facade.get_bundestag_abstimmungen(
-            params=params, response_limit=1000
+            params=params, response_limit=response_limit
         ):
             yield abstimmung
 
@@ -33,4 +34,5 @@ def main():
 
 
 if __name__ == '__main__':
+    configure_logging()
     main()

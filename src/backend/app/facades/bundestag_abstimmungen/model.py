@@ -13,33 +13,13 @@ class Vote(StrEnum):
     NICHTABGEGEBEN = "nichtabgegeben"
 
 
-class BundestagAbstimmungLink(BaseModel):
-    type: MediaType = Field(
-        description="Type of the link.",
-    )
+class BundestagAbstimmungUrl(BaseModel):
     url: str = Field(
-        description="URL of the link.",
+        description="Link to the vote.",
     )
 
-
-class BundestagAbstimmungLinks(BaseModel):
-    """Bundestag Abstimmungen Links."""
-
-    publication_date: Optional[datetime] = Field(
-        None,
-        description="Publication date of the document.",
-    )
-
-    title: str = Field(
-        description="Title of the document.",
-    )
-
-    abstimmung_date: datetime = Field(
-        description="Date of the vote.",
-    )
-
-    links: list[BundestagAbstimmungLink] = Field(
-        description="List of links.",
+    abstimmung_id: int = Field(
+        description="ID of the vote.",
     )
 
 
@@ -104,14 +84,6 @@ class BundestagAbstimmung(BaseModel):
         description="Number of votes not cast.",
     )
 
-    links: list[BundestagAbstimmungLink] = Field(
-        description="List of links.",
-    )
-
     votes: list[BundestagEinzelpersonAbstimmung] = Field(
         description="List of votes.",
-    )
-
-    link_used: BundestagAbstimmungLink = Field(
-        description="Link used to retrieve the data.",
     )

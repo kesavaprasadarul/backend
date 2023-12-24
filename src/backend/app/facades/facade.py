@@ -5,6 +5,7 @@ import dataclasses
 import enum
 import http
 import logging
+import time
 import typing as t
 import urllib.parse
 
@@ -22,6 +23,9 @@ LIMIT_PAGES = 10
 
 HTTP_REQUEST_DEFAULT_TIMEOUT_SECS = 30
 """Maximum time before an HTTP request times out."""
+
+DELAY_BETWEEN_REQUESTS = 0.5
+"""Default delay between requests to avoid overstraining the API."""
 
 
 @dataclasses.dataclass
@@ -87,14 +91,47 @@ class HttpFacade:
     magic and only needs the request specific parameters like url path and so on.
     """
 
-    def __init__(self, base_url: str, auth: Auth):
+    def __init__(
+        self, base_url: str, auth: Auth, delay_between_requests: float = DELAY_BETWEEN_REQUESTS
+    ):
         self.base_url = base_url
         self.auth = auth
         self._session = requests.Session()
+        self.last_request = None
+        self.delay_between_requests = delay_between_requests
 
     @classmethod
     def get_instance(cls, settings: Settings):
         raise NotImplementedError()
+
+    def _wait_delay(self):
+        """Wait for delay between requests."""
+        if self.delay_between_requests:
+            if self.last_request:
+                time_since_last_request = time.time() - self.last_request
+                if time_since_last_request < self.delay_between_requests:
+                    time.sleep(self.delay_between_requests - time_since_last_request)
+        self.last_request = time.time()
+
+    def _send_request(
+        self,
+        request: requests.PreparedRequest,
+        timeout: int = HTTP_REQUEST_DEFAULT_TIMEOUT_SECS,
+        proxies: dict | None = None,
+        verify: bool = True,
+    ) -> requests.Response:
+        """Send request with session."""
+        self._wait_delay()
+
+        _logger.info(f'Sending request to {request.url}. Timer: {self.last_request}.')
+
+        return self._session.send(
+            request=request,
+            timeout=timeout,
+            proxies=proxies,
+            verify=verify,
+            allow_redirects=False,
+        )
 
     def do_request(
         self,
@@ -191,16 +228,12 @@ class HttpFacade:
         proxy_dict = proxy.to_dict() if proxy else None
 
         if disable_retry:
-            response = self._session.send(
-                request=request,
-                timeout=timeout,
-                proxies=proxy_dict,
-                verify=proxy is None,
-                allow_redirects=False,
+            response = self._send_request(
+                request=request, timeout=timeout, proxies=proxy_dict, verify=proxy is None
             )
         else:
             response = call_with_retries(
-                self._session.send,
+                self._send_request,
                 request,
                 retval_ok=is_response_final,
                 timeout=timeout,

@@ -57,25 +57,6 @@ class DIPBundestagFacade(HttpFacade):
 
     cursor: str | None = None
 
-    # TODO: Sometimes the API redirects and expectes some javascript execution
-    # Potentially this is just a sha256-post which we could mock (maybe here)
-    # hence why I pulled out this session sending into a separate method
-    def _send_request(
-        self,
-        request: requests.PreparedRequest,
-        timeout: int,
-        proxies: t.Optional[dict[str, str]] = None,
-        verify: bool = True,
-    ) -> requests.Response:
-        response = self._session.send(
-            request=request,
-            timeout=timeout,
-            proxies=proxies,
-            verify=verify,
-        )
-
-        return response
-
     def get_cursor(self) -> str | None:
         return self.cursor
 

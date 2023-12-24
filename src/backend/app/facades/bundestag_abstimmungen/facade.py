@@ -1,4 +1,5 @@
 """Bundestag Abstimmungen facade."""
+from email.utils import parsedate
 import http
 import logging
 import typing as t
@@ -9,8 +10,7 @@ from pydantic import BaseModel
 
 from backend.app.core.config import Settings
 from backend.app.facades.bundestag_abstimmungen.model import (
-    BundestagAbstimmungLink,
-    BundestagAbstimmungLinks,
+    BundestagAbstimmungUrl,
     BundestagAbstimmung,
     BundestagEinzelpersonAbstimmung,
     Vote,
@@ -32,47 +32,16 @@ from backend.app.facades.util import ProxyList
 from bs4 import BeautifulSoup, Tag
 from datetime import datetime
 import re
-from urllib.parse import urlparse
-import pandas as pd
-import io
 import time
+from typing import Callable, Literal
+from functools import partial
 
 _logger = logging.getLogger(__name__)
 
 PAGE_SIZE = 30
 """Number of elements returned in a single paged response."""
-DELAY_BETWEEN_REQUESTS = 0.5
+DELAY_BETWEEN_REQUESTS = 0.3
 RequestParams = TypeVar("RequestParams", bound=BaseModel)
-
-MONTH_TO_NUMBER = {
-    "Januar": 1,
-    "Februar": 2,
-    "März": 3,
-    "April": 4,
-    "Mai": 5,
-    "Juni": 6,
-    "Juli": 7,
-    "August": 8,
-    "September": 9,
-    "Oktober": 10,
-    "November": 11,
-    "Dezember": 12,
-}
-
-
-XLSX_COL_NAME_MAPPING = {
-    'Wahlperiode': 'wahlperiode',
-    'Sitzungnr': 'sitzung',
-    'Abstimmnr': 'abstimmung_number',
-    'Fraktion/Gruppe': 'fraktion',
-    'Name': 'name',
-    'Vorname': 'vorname',
-    'ja': 'ja',
-    'nein': 'nein',
-    'Enthaltung': 'enthalten',
-    'ungültig': 'ungueltig',
-    'nichtabgegeben': 'nicht_abgegeben',
-}
 
 
 class ParserError(Exception):
@@ -83,6 +52,10 @@ class ParserError(Exception):
 
 class BundestagAbstimmungenFacade(HttpFacade):
     data_hits: int = 0
+    cursor: dict[str, int] = {
+        'url_offset': 0,
+        'party_offset': 0,
+    }
 
     @classmethod
     def get_instance(cls, configuration: Settings) -> t.Self:
@@ -93,139 +66,57 @@ class BundestagAbstimmungenFacade(HttpFacade):
         auth = Auth(auth_type=AuthType.NONE)
         return cls(base_url=configuration.BUNDESTAG_ABSTIMMUNGEN_URL, auth=auth)
 
-    def _parse_content(self, soup: BeautifulSoup) -> list[dict]:
-        """Parse content from response."""
+    def unpack_page(
+        self,
+        paged_response: requests.Response,
+        callable_parse_content: Callable[[BeautifulSoup], t.Iterable[dict]],
+    ) -> Page:
+        response_text = paged_response.text
 
-        def _parse_date(str_date: str) -> datetime:
-            """Parse date from string."""
-            for k, v in MONTH_TO_NUMBER.items():
-                new_date = str_date.replace(k, str(v))
-                if new_date != str_date:
-                    return datetime.strptime(new_date, "%d. %m %Y")
-            raise ParserError(f"Could not parse date: {str_date}")
+        soup = BeautifulSoup(response_text, "html.parser")
 
-        table = soup.find('table')
+        meta = soup.find(class_='meta-slider')
 
-        if table is None:
-            raise ParserError("Could not find table")
-        table_body = table.find('tbody')
+        if meta is None:
+            raise ParserError("Could not find meta-slider")
 
-        if table_body is None:
-            raise ParserError("Could not find table body")
+        # check if meta is a tag for type hinting
+        if not isinstance(meta, Tag):
+            raise ParserError("Could not find meta-slider")
 
-        if not isinstance(table_body, Tag):
-            raise ParserError("Could not find table body")
+        if not meta.has_attr('data-hits'):
+            raise ParserError("Could not find data-hits in meta-slider")
 
-        rows = table_body.find_all('tr')
+        self.data_hits = int(meta.attrs['data-hits'])
 
-        parsed_data: list[dict] = []
-        for i, row in enumerate(rows):
-            cols = row.find_all('td')
-            if len(cols) != 4:
-                raise ParserError(f"Expected 4 columns (Row: {i}), but got {len(cols)}")
+        if not meta.has_attr('data-limit'):
+            _logger.warning("Could not find data-limit in meta-slider")
 
-            publication_date = None
-            try:
-                publication_date = _parse_date(cols[0].text.strip())
-            except ParserError as e:
-                _logger.warn("Could not parse publication date: %s", e)
+        if not meta.has_attr('data-nextoffset'):
+            _logger.warning("Could not find data-nextoffset in meta-slider")
 
-            title_raw_text = cols[2].text.strip()
+        data_limit = int(meta.attrs.get('data-limit', PAGE_SIZE))
 
-            links = cols[2].find_all('a')
-            if len(links) > 2:
-                raise ParserError(
-                    f"Expected at most 2 links (Row: {i}), but got {len(links)}: {links}"
-                )
-            if len(links) == 0:
-                raise ParserError(f"Expected at least 1 link (Row: {i}), but got none")
+        new_cursor = int(meta.attrs.get('data-nextoffset', self.cursor['url_offset'] + data_limit))
 
-            parsed_links = []
+        has_next_page = new_cursor < self.data_hits
 
-            for link in links:
-                link_text = link.text.strip()
-                if not 'href' in link.attrs:
-                    _logger.warn("Link has no href: %s", link)
-                    continue
+        content = callable_parse_content(soup)
 
-                if link_text.lower().startswith('pdf'):
-                    parsed_links.append(
-                        {
-                            'type': MediaType.PDF,
-                            'url': link.attrs['href'],
-                        }
-                    )
-                elif link_text.lower().startswith('xlsx'):
-                    parsed_links.append(
-                        {
-                            'type': MediaType.XLSX,
-                            'url': link.attrs['href'],
-                        }
-                    )
-                elif link_text.lower().startswith('xls'):
-                    parsed_links.append(
-                        {
-                            'type': MediaType.XLS,
-                            'url': link.attrs['href'],
-                        }
-                    )
-                else:
-                    _logger.warn("Unknown link type: %s", link_text)
+        if has_next_page:
+            self.cursor['url_offset'] = new_cursor
+            _logger.debug('cursor: %s', self.cursor)
 
-            abstimmung_date = None
-            title = None
-            if ':' in title_raw_text:
-                if title_raw_text.startswith('08:'):
-                    title_raw_text = title_raw_text.replace('08:', '08.')  # fix typo
-
-                if title_raw_text.startswith('27.06.20130:'):
-                    title_raw_text = title_raw_text.replace('27.06.20130:', '27.06.2013:')
-
-                abstimmung_date_str, title_raw = title_raw_text.split('\n')[0].split(':', 1)
-                title = title_raw.strip()
-
-                if abstimmung_date_str.endswith('206'):
-                    abstimmung_date_str = abstimmung_date_str.replace('206', '2016')  # fix typo
-                try:
-                    abstimmung_date = datetime.strptime(abstimmung_date_str.strip(), "%d.%m.%Y")
-                except ValueError as e:
-                    _logger.warn("Could not parse abstimmung date: %s", e)
-
-            if title is None:
-                title = title_raw_text.split('\n')[0].strip()
-            if abstimmung_date is None:
-                for link in parsed_links:
-                    url_filename = link['url'].split('/')[-1]
-                    if match := re.match(r'\d{8}', url_filename):
-                        abstimmung_date = datetime.strptime(match.group(0), "%Y%m%d")
-                        break
-
-            if abstimmung_date is None:
-                if (
-                    title == 'Ergebnis der namentlichen Abstimmung zur Gesundheitsreform'
-                ):  # manually set date
-                    abstimmung_date = datetime(2007, 2, 2)
-                else:
-                    raise ParserError(f"Could not parse abstimmung date: {title_raw_text}")
-
-            assert abstimmung_date is not None
-            assert title is not None
-
-            parsed_data.append(
-                {
-                    'publication_date': publication_date,
-                    'title': title,
-                    'abstimmung_date': abstimmung_date,
-                    'links': parsed_links,
-                }
-            )
-
-        return parsed_data
+            # return new cursor, and add new content
+            return Page(new_cursor, content)
+        # there is no new page, return none as now new cursor and [] as content is already in from last iteration
+        return Page(None, content)
 
     def _do_paginated_request(
         self,
         method: http.HTTPMethod,
         url: str,
+        parse_url_content: Callable[[BeautifulSoup], t.Iterator[dict]],
         *,
         params: dict | None = None,
         proxy_list: ProxyList | None = None,
@@ -234,54 +125,17 @@ class BundestagAbstimmungenFacade(HttpFacade):
     ) -> t.Iterator[dict]:
         """Helper to execute paginated request for REST API."""
 
-        self.cursor = kwargs["offset"] if "offset" in kwargs else 0
+        self.cursor['url_offset'] = kwargs["offset"] if "offset" in kwargs else 0
 
-        def unpack_page(paged_response: requests.Response) -> Page:
-            response_text = paged_response.text
-
-            soup = BeautifulSoup(response_text, "html.parser")
-
-            meta = soup.find(class_='meta-slider')
-
-            if meta is None:
-                raise ParserError("Could not find meta-slider")
-
-            # check if meta is a tag for type hinting
-            if not isinstance(meta, Tag):
-                raise ParserError("Could not find meta-slider")
-
-            if not meta.has_attr('data-hits'):
-                raise ParserError("Could not find data-hits in meta-slider")
-
-            self.data_hits = int(meta.attrs['data-hits'])
-
-            if not meta.has_attr('data-limit'):
-                _logger.warning("Could not find data-limit in meta-slider")
-
-            if not meta.has_attr('data-nextoffset'):
-                _logger.warning("Could not find data-nextoffset in meta-slider")
-
-            data_limit = int(meta.attrs.get('data-limit', PAGE_SIZE))
-
-            new_cursor = int(meta.attrs.get('data-nextoffset', self.cursor + data_limit))
-
-            has_next_page = new_cursor < self.data_hits
-
-            content = self._parse_content(soup)
-
-            if has_next_page:
-                self.cursor = new_cursor
-                _logger.debug('cursor: %s', self.cursor)
-
-                # return new cursor, and add new content
-                return Page(new_cursor, content)
-            # there is no new page, return none as now new cursor and [] as content is already in from last iteration
-            return Page(None, content)
-
-        def get_next_page_cursor(cursor: bool) -> PageCursor | None:
+        def get_next_page_cursor(cursor: int) -> PageCursor | None:
             if cursor:
                 return PageCursor('offset', cursor)
             return None
+
+        unpack_page = partial(
+            self.unpack_page,
+            callable_parse_content=parse_url_content,
+        )
 
         yield from self.do_paginated_request(
             method,
@@ -294,124 +148,78 @@ class BundestagAbstimmungenFacade(HttpFacade):
             **kwargs,
         )
 
-    def get_bundestag_abstimmungen_links(
-        self, params: BundestagAbstimmungenParameter | None = None, response_limit: int = 1000
-    ) -> t.Iterator[BundestagAbstimmungLinks]:
+    def get_bundestag_abstimmung_urls(
+        self,
+        params: BundestagAbstimmungenParameter | None = None,
+        response_limit: int = 1000,
+    ) -> t.Iterator[BundestagAbstimmungUrl]:
         param_dict = (
             params.model_dump(mode='json', exclude_none=True, by_alias=True) if params else None
         )
 
-        for abstimmungen_links in self._do_paginated_request(
+        def _parse_url_content(soup: BeautifulSoup) -> t.Iterator[dict]:
+            """Parse content from response."""
+            a_links = soup.find_all('a', attrs={'tabindex': '0', 'href': True})
+
+            if a_links is None or not isinstance(a_links, list) or len(a_links) == 0:
+                return []
+
+            for a_link in a_links:
+                href = a_link['href']
+
+                match_abstimmung_id = re.match(
+                    r'/parlament/plenum/abstimmung/abstimmung\?id=(\d+)', href
+                )
+
+                if match_abstimmung_id is None:
+                    _logger.warning('Could not find abstimmung id in href: %s', href)
+                    continue
+
+                abstimmung_id = int(match_abstimmung_id.group(1))
+                url = href
+
+                yield {
+                    'url': url,
+                    'abstimmung_id': abstimmung_id,
+                }
+
+        for abstimmungen_link in self._do_paginated_request(
             method=http.HTTPMethod.GET,
-            url="/ajax/filterlist/de/parlament/plenum/abstimmung/liste/462112-462112",
+            url="/ajax/filterlist/de/parlament/plenum/abstimmung/484422-484422",
             params=param_dict,
             response_limit=response_limit,
+            parse_url_content=_parse_url_content,
         ):
-            yield BundestagAbstimmungLinks.model_validate(abstimmungen_links)
+            yield BundestagAbstimmungUrl.model_validate(abstimmungen_link)
+
+
+    def get_bundestag_abstimmungen_by_person
 
     def get_bundestag_abstimmungen(
         self, params: BundestagAbstimmungenParameter | None = None, response_limit: int = 1000
-    ) -> t.Iterator[BundestagAbstimmung]:
-        def _parse_excel_abstimmung_ergebnis(
-            df: pd.DataFrame,
-            link_source: BundestagAbstimmungLink,
-            abstimmungen_links: BundestagAbstimmungLinks,
-            delay_between_requests: float = DELAY_BETWEEN_REQUESTS,
-        ) -> BundestagAbstimmung:
-            df = df.rename(columns=XLSX_COL_NAME_MAPPING, errors='raise')
+    ) -> t.Iterator[dict]:
+        abstimmung_urls = self.get_bundestag_abstimmung_urls(params, response_limit)
 
-            individual_votes = []
+        def _parse_url_content(soup: BeautifulSoup) -> dict:
+            fraction_votes_html = soup.find_all('div', 'col-xs-12 col-sm-3')
 
-            for i, row in df.iterrows():
-                vote = None
-                if row['ja'] == 1:
-                    vote = Vote.JA
-                elif row['nein'] == 1:
-                    vote = Vote.NEIN
-                elif row['enthalten'] == 1:
-                    vote = Vote.ENTHALTEN
-                elif row['ungueltig'] == 1:
-                    vote = Vote.UNGUELTIG
-                elif row['nicht_abgegeben'] == 1:
-                    vote = Vote.NICHTABGEGEBEN
+            for fraction_vote_html in fraction_votes_html:
+                fraction = next(fraction_vote_html.find('h4', 'bt-chart-fraktion').strings).strip()
 
-                if vote is None:
-                    raise ParserError(f"Could not parse vote: {row}")
+                if fraction is None:
+                    raise ParserError("Could not find fraction")
 
-                individual_votes.append(
-                    BundestagEinzelpersonAbstimmung(
-                        name=row['name'],
-                        surname=row['vorname'],
-                        fraktion=row['fraktion'],
-                        vote=vote,
-                    ),
-                )
+                _logger.info('Fetching abstimmungen data for fraction: %s', fraction)
 
-            total_ja = df['ja'].sum()
-            total_nein = df['nein'].sum()
-            total_enthalten = df['enthalten'].sum()
-            total_ungueltig = df['ungueltig'].sum()
-            total_nicht_abgegeben = df['nicht_abgegeben'].sum()
-            sitzung = df['sitzung'].iloc[0]
-            abstimmung_number = df['abstimmung_number'].iloc[0]
-            wahlperiode = df['wahlperiode'].iloc[0]
-            title = abstimmungen_links.title
-            abstimmung_date = abstimmungen_links.abstimmung_date
+            return dict()
 
-            return BundestagAbstimmung(
-                title=title,
-                abstimmung_date=abstimmung_date,
-                wahlperiode=wahlperiode,
-                sitzung=sitzung,
-                abstimmung_number=abstimmung_number,
-                ja=total_ja,
-                nein=total_nein,
-                enthalten=total_enthalten,
-                ungueltig=total_ungueltig,
-                nicht_abgegeben=total_nicht_abgegeben,
-                links=abstimmungen_links.links,
-                votes=individual_votes,
-                link_used=link_source,
+        endpoint = 
+
+        for abstimmung_url in abstimmung_urls:
+            
+            response = self.do_request(
+                method=http.HTTPMethod.GET,
+                url_path=abstimmung_url.url,
+                accept_type=MediaType.HTML,
             )
-
-        def get_dataframe_from_excel(content: bytes, media_type: MediaType) -> pd.DataFrame:
-            if media_type == MediaType.XLSX:
-                df = pd.read_excel(io.BytesIO(content), engine='openpyxl')
-            elif media_type == MediaType.XLS:
-                df = pd.read_excel(io.BytesIO(content), engine='xlrd')
-            else:
-                raise ParserError(f"Unknown media type: {media_type}")
-            return df
-
-        for abstimmungen_links in self.get_bundestag_abstimmungen_links(params, response_limit):
-            parsed = False
-            for link in abstimmungen_links.links:
-                time.sleep(delay_between_requests)
-                response = self.do_request(
-                    method=http.HTTPMethod.GET,
-                    url_path=link.url,
-                    accept_type=link.type,
-                )
-
-                response.raise_for_status()
-                if link.type == MediaType.XLSX or link.type == MediaType.XLS:
-                    try:
-                        df = get_dataframe_from_excel(response.content, link.type)
-
-                        yield _parse_excel_abstimmung_ergebnis(df, link, abstimmungen_links)
-                        parsed = True
-                        break
-                    except ParserError as e:
-                        _logger.warn(
-                            f"Could not parse {link.type.value} for abstimmung {abstimmungen_links.title}: {e}"
-                        )
-                    except Exception as e:
-                        _logger.error(
-                            f"Could not parse {link.type.value} for abstimmung {abstimmungen_links.title}: {e}"
-                        )
-                elif link.type == MediaType.PDF:
-                    pass
-                else:
-                    raise ParserError(f"Unknown media type: {link.type}")
-            if not parsed:
-                _logger.warn(f"Could not parse abstimmung {abstimmungen_links.title}")
+            yield dict()
