@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, AnyUrl
 from typing import Optional
 from datetime import datetime
 from backend.app.facades.facade import MediaType
@@ -24,6 +24,8 @@ class BundestagAbstimmungUrl(BaseModel):
 
 
 class BundestagEinzelpersonAbstimmung(BaseModel):
+    id: int = Field(description="Id of the person")
+
     name: str = Field(
         description="Name of the person.",
     )
@@ -40,9 +42,15 @@ class BundestagEinzelpersonAbstimmung(BaseModel):
         description="Vote of the person.",
     )
 
+    image: AnyUrl = Field(description="Image of the person")
+
 
 class BundestagAbstimmung(BaseModel):
     """Bundestag Abstimmung."""
+
+    id: int = Field(
+        description="ID of the vote.",
+    )
 
     title: str = Field(
         description="Title of the vote.",
@@ -85,5 +93,5 @@ class BundestagAbstimmung(BaseModel):
     )
 
     votes: list[BundestagEinzelpersonAbstimmung] = Field(
-        description="List of votes.",
+        description="List of individual votes.",
     )

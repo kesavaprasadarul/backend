@@ -310,7 +310,9 @@ class HttpFacade:
 
             page = unpack_page(response)
 
-            if isinstance(page.content, collections.abc.Sequence):
+            if isinstance(page.content, collections.abc.Sequence) or isinstance(
+                page.content, t.Generator
+            ):
                 yield from page.content
             else:
                 raise NotImplementedError(f'Unexpected page content type {type(page.content)}.')

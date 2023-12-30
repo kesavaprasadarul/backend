@@ -148,7 +148,7 @@ class BundestagAbstimmungenFacade(HttpFacade):
             **kwargs,
         )
 
-    def get_bundestag_abstimmung_urls(
+    def get_bundestag_abstimmung_pointers(
         self,
         params: BundestagAbstimmungenParameter | None = None,
         response_limit: int = 1000,
@@ -192,34 +192,11 @@ class BundestagAbstimmungenFacade(HttpFacade):
         ):
             yield BundestagAbstimmungUrl.model_validate(abstimmungen_link)
 
-
-    def get_bundestag_abstimmungen_by_person
-
-    def get_bundestag_abstimmungen(
-        self, params: BundestagAbstimmungenParameter | None = None, response_limit: int = 1000
-    ) -> t.Iterator[dict]:
-        abstimmung_urls = self.get_bundestag_abstimmung_urls(params, response_limit)
-
-        def _parse_url_content(soup: BeautifulSoup) -> dict:
-            fraction_votes_html = soup.find_all('div', 'col-xs-12 col-sm-3')
-
-            for fraction_vote_html in fraction_votes_html:
-                fraction = next(fraction_vote_html.find('h4', 'bt-chart-fraktion').strings).strip()
-
-                if fraction is None:
-                    raise ParserError("Could not find fraction")
-
-                _logger.info('Fetching abstimmungen data for fraction: %s', fraction)
-
-            return dict()
-
-        endpoint = 
-
-        for abstimmung_url in abstimmung_urls:
-            
-            response = self.do_request(
-                method=http.HTTPMethod.GET,
-                url_path=abstimmung_url.url,
-                accept_type=MediaType.HTML,
-            )
-            yield dict()
+    def get_bundestag_abstimmungen_individual_votes(
+        self,
+        abstimmung_id: int,
+        params: BundestagAbstimmungenParameter | None = None,
+        response_limit: int = 1000,
+    ) -> t.Iterator[BundestagEinzelpersonAbstimmung]:
+        endpoint = "apps/na/na/namensliste.form"
+        pass

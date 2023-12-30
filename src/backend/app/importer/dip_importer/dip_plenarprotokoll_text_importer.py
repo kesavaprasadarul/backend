@@ -102,7 +102,7 @@ def import_dip_bundestag():
     importer = DIPBundestagPlenarprotokollImporter()
 
     params = PlenarprotokollParameter(
-        datum_start=datetime.date(2023, 12, 1), datum_end=datetime.date(2023, 12, 31)
+        datum_start=datetime.date(2023, 1, 1), datum_end=datetime.date(2023, 12, 31)
     )
 
     importer.import_data(
