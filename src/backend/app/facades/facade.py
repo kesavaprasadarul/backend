@@ -123,7 +123,7 @@ class HttpFacade:
         """Send request with session."""
         self._wait_delay()
 
-        _logger.info(f'Sending request to {request.url}. Timer: {self.last_request}.')
+        _logger.debug(f'Sending request to {request.url}. Timer: {self.last_request}.')
 
         return self._session.send(
             request=request,

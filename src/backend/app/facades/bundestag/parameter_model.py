@@ -3,12 +3,6 @@ from typing import Optional
 from datetime import date, datetime
 
 
-class BundestagEinzelpersonAbstimmungParameter(BaseModel):
-    abstimmung_id: int = Field(
-        description="ID of the vote.",
-    )
-
-
 class BundestagAbstimmungenPointerParameter(BaseModel):
     """Bundestag Abstimmungen Pointer."""
 
@@ -30,7 +24,5 @@ class BundestagAbstimmungenPointerParameter(BaseModel):
         return str(int(datetime(value.year, value.month, value.day).timestamp())).ljust(13, '0')
 
 
-class BundestagAbstimmungenParameter(BundestagAbstimmungenPointerParameter, BaseModel):
-    """Bundestag Abstimmungen."""
-
-    pass
+class BundestagAbstimmungParameter(BaseModel):
+    abstimmung_id: int = Field(description="ID of the vote.", serialization_alias="id")

@@ -11,9 +11,9 @@ from backend.app.facades.deutscher_bundestag.model import (
     Zuordnung,
 )
 from backend.app.models.common import DIPSchema, TimestampMixin
-from backend.app.models.deutscher_bundestag.fundstelle_model import DIPFundstelle
-from backend.app.models.deutscher_bundestag.vorgangsbezug_model import DIPVorgangsbezug
-from backend.app.models.deutscher_bundestag.vorgang_model import DIPVorgang
+from backend.app.models.dip.fundstelle_model import DIPFundstelle
+from backend.app.models.dip.vorgangsbezug_model import DIPVorgangsbezug
+from backend.app.models.dip.vorgang_model import DIPVorgang
 from sqlalchemy.ext.associationproxy import association_proxy
 from sqlalchemy.ext.associationproxy import AssociationProxy
 

@@ -13,9 +13,9 @@ from backend.app.facades.deutscher_bundestag.model import (
     Zuordnung,
 )
 from backend.app.models.common import DIPSchema, TimestampMixin
-from backend.app.models.deutscher_bundestag.fundstelle_model import DIPFundstelle
-from backend.app.models.deutscher_bundestag.ressort_model import DIPRessort
-from backend.app.models.deutscher_bundestag.urheber_model import DIPUrheber
+from backend.app.models.dip.fundstelle_model import DIPFundstelle
+from backend.app.models.dip.ressort_model import DIPRessort
+from backend.app.models.dip.urheber_model import DIPUrheber
 
 
 class DIPVorgangsposition(Base, TimestampMixin, DIPSchema):

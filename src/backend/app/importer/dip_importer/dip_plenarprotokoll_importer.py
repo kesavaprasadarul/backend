@@ -13,11 +13,11 @@ from backend.app.facades.deutscher_bundestag.parameter_model import (
     VorgangParameter,
 )
 from backend.app.facades.util import ProxyList
-from backend.app.importer.dip_importer.base import DIPImporter
+from backend.app.importer.dip_importer.dip_importer import DIPImporter
 from backend.app.importer.dip_importer.dip_vorgang_importer import DIPBundestagVorgangImporter
 
 # import from all models to ensure they are registered
-from backend.app.models.deutscher_bundestag.models import (
+from backend.app.models.dip.models import (
     DIPFundstelle,
     DIPPlenarprotokoll,
     DIPVorgang,
@@ -74,7 +74,7 @@ class DIPBundestagPlenarprotokollImporter(
     ) -> Iterator[DIPPlenarprotokoll]:
         """Fetch data."""
 
-        for model in self.dip_bundestag_facade.get_plenarprotokolle(
+        for model in self.facade.get_plenarprotokolle(
             params=params,
             response_limit=response_limit,
             proxy_list=proxy_list,

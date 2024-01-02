@@ -8,7 +8,7 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 from backend.app.db.database import Base
 from backend.app.facades.deutscher_bundestag.model import VorgangDeskriptorTyp, VorgangTyp
 from backend.app.models.common import DIPSchema, TimestampMixin
-from backend.app.models.deutscher_bundestag.vorgangsposition_model import DIPVorgangsposition
+from backend.app.models.dip.vorgangsposition_model import DIPVorgangsposition
 from typing import List
 
 

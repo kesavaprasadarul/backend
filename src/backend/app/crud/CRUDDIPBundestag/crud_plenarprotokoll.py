@@ -2,7 +2,7 @@
 import logging
 
 from backend.app.crud.base import CRUDBase
-from backend.app.models.deutscher_bundestag.plenarprotokoll_model import DIPPlenarprotokoll
+from backend.app.models.dip.plenarprotokoll_model import DIPPlenarprotokoll
 
 _logger = logging.getLogger(__name__)
 

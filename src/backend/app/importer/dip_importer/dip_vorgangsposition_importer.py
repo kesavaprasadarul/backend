@@ -12,10 +12,10 @@ from backend.app.crud.CRUDDIPBundestag.crud_vorgangsposition import CRUD_DIP_VOR
 from backend.app.facades.deutscher_bundestag.model import Vorgangsposition, Zuordnung
 from backend.app.facades.deutscher_bundestag.parameter_model import VorgangspositionParameter
 from backend.app.facades.util import ProxyList
-from backend.app.importer.dip_importer.base import DIPImporter
+from backend.app.importer.dip_importer.dip_importer import DIPImporter
 
 # import from all models to ensure they are registered
-from backend.app.models.deutscher_bundestag.models import (
+from backend.app.models.dip.models import (
     DIPAktivitaetAnzeige,
     DIPBeschlussfassung,
     DIPFundstelle,
@@ -125,7 +125,7 @@ class DIPBundestagVorgangspositionImporter(
     ) -> Iterator[DIPVorgangsposition]:
         """Fetch data."""
 
-        for model in self.dip_bundestag_facade.get_vorgangspositionen(
+        for model in self.facade.get_vorgangspositionen(
             params=params,
             response_limit=response_limit,
             proxy_list=proxy_list,

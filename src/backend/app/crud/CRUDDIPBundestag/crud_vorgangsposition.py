@@ -2,7 +2,7 @@
 import logging
 
 from backend.app.crud.base import CRUDBase
-from backend.app.models.deutscher_bundestag.vorgangsposition_model import DIPVorgangsposition
+from backend.app.models.dip.vorgangsposition_model import DIPVorgangsposition
 
 _logger = logging.getLogger(__name__)
 

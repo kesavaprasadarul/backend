@@ -1,4 +1,4 @@
-from backend.app.crud.CRUDApi.crud_mandate import CRUD_Mandate
+from backend.app.crud.CRUDApi.crud_mandate import CRUD_MANDATE
 from logging import getLogger
 import csv
 import os
@@ -48,7 +48,7 @@ def import_mandate() -> None:
 
     mandate: list[APIMandate] = []
 
-    CRUD_Mandate.create_or_update_multi(_read_mandate(mandate, file))
+    CRUD_MANDATE.create_or_update_multi(_read_mandate(mandate, file))
 
     _logger.info("Import Mandate finished")
 

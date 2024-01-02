@@ -16,13 +16,13 @@ from backend.app.facades.deutscher_bundestag.parameter_model import (
     VorgangspositionParameter,
 )
 from backend.app.facades.util import ProxyList
-from backend.app.importer.dip_importer.base import DIPImporter
+from backend.app.importer.dip_importer.dip_importer import DIPImporter
 from backend.app.importer.dip_importer.dip_vorgangsposition_importer import (
     DIPBundestagVorgangspositionImporter,
 )
 
 # import from all models to ensure they are registered
-from backend.app.models.deutscher_bundestag.models import (
+from backend.app.models.dip.models import (
     DIPInkrafttreten,
     DIPVerkuendung,
     DIPVorgang,
@@ -104,7 +104,7 @@ class DIPBundestagVorgangImporter(DIPImporter[Vorgang, VorgangParameter, DIPVorg
         proxy_list: ProxyList | None = None,
     ) -> Iterator[DIPVorgang]:
         """Fetch data."""
-        for model in self.dip_bundestag_facade.get_vorgange(
+        for model in self.facade.get_vorgange(
             params=params,
             response_limit=response_limit,
             proxy_list=proxy_list,

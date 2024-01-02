@@ -11,11 +11,11 @@ from backend.app.facades.deutscher_bundestag.model import (
     Herausgeber,
 )
 from backend.app.models.common import DIPSchema, TimestampMixin
-from backend.app.models.deutscher_bundestag.fundstelle_model import DIPFundstelle
-from backend.app.models.deutscher_bundestag.ressort_model import DIPRessort
-from backend.app.models.deutscher_bundestag.urheber_model import DIPUrheber
-from backend.app.models.deutscher_bundestag.vorgang_model import DIPVorgang
-from backend.app.models.deutscher_bundestag.vorgangsbezug_model import DIPVorgangsbezug
+from backend.app.models.dip.fundstelle_model import DIPFundstelle
+from backend.app.models.dip.ressort_model import DIPRessort
+from backend.app.models.dip.urheber_model import DIPUrheber
+from backend.app.models.dip.vorgang_model import DIPVorgang
+from backend.app.models.dip.vorgangsbezug_model import DIPVorgangsbezug
 from sqlalchemy.ext.associationproxy import association_proxy
 from sqlalchemy.ext.associationproxy import AssociationProxy
 

@@ -1,4 +1,4 @@
-"""Class for DIP Bundestag Plenarprotokoll Importer."""
+"""Base class for HTTP-Imports."""
 
 import logging
 from typing import Any, Generic, Iterator, MutableMapping, Optional, TypeVar
@@ -7,7 +7,7 @@ from pydantic import BaseModel
 
 from backend.app.core.config import Settings
 from backend.app.crud.base import Base, CRUDBase
-from backend.app.facades.deutscher_bundestag.facade import DIPBundestagFacade
+from backend.app.facades.deutscher_bundestag.facade import HttpFacade
 from backend.app.facades.util import ProxyList
 
 _logger = logging.getLogger(__name__)
@@ -20,6 +20,8 @@ PydanticParameterModelType = TypeVar(
     "PydanticParameterModelType", bound=BaseModel
 )  # pylint: disable=invalid-name
 
+FacadeType = TypeVar("FacadeType", bound=HttpFacade)  # pylint: disable=invalid-name
+
 SQLModelType = TypeVar("SQLModelType", bound=Base)  # pylint: disable=invalid-name
 
 
@@ -28,12 +30,15 @@ ParamMapping = MutableMapping
 DELAY_BETWEEN_REQUESTS = 0.5
 
 
-class DIPImporter(Generic[PydanticDataModelType, PydanticParameterModelType, SQLModelType]):
-    """Class for DIP Bundestag Importer."""
+class HttpImporter(
+    Generic[FacadeType, PydanticDataModelType, PydanticParameterModelType, SQLModelType]
+):
+    """Class for HTTP Imports."""
 
     def __init__(
         self,
         crud: CRUDBase[SQLModelType],
+        facade: FacadeType,
         delay_between_requests: float = DELAY_BETWEEN_REQUESTS,
     ):
         """
@@ -41,7 +46,7 @@ class DIPImporter(Generic[PydanticDataModelType, PydanticParameterModelType, SQL
         """
         self.crud = crud
         self.imported_count = 0
-        self.dip_bundestag_facade = DIPBundestagFacade.get_instance(Settings())
+        self.facade = facade
         self.delay_between_requests = delay_between_requests
 
     def get_imported_count(self) -> int:

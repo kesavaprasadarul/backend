@@ -13,11 +13,11 @@ from backend.app.facades.deutscher_bundestag.parameter_model import (
     VorgangParameter,
 )
 from backend.app.facades.util import ProxyList
-from backend.app.importer.dip_importer.base import DIPImporter
+from backend.app.importer.dip_importer.dip_importer import DIPImporter
 from backend.app.importer.dip_importer.dip_vorgang_importer import DIPBundestagVorgangImporter
 
 # import from all models to ensure they are registered
-from backend.app.models.deutscher_bundestag.models import (
+from backend.app.models.dip.models import (
     DIPAutor,
     DIPDrucksache,
     DIPDrucksacheText,
@@ -111,7 +111,7 @@ class DIPBundestagDrucksacheTextImporter(
     ) -> Iterator[DIPDrucksache]:
         """Fetch data."""
 
-        for model in self.dip_bundestag_facade.get_drucksachen_text(
+        for model in self.facade.get_drucksachen_text(
             params=params,
             response_limit=response_limit,
             proxy_list=proxy_list,
