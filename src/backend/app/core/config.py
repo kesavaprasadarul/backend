@@ -14,6 +14,7 @@ class Settings(BaseSettings):
     POSTGRES_DB: str = pyd.Field(default="fastapi")
     POSTGRES_PASSWORD: str = pyd.Field(default="password")
     POSTGRES_SERVER: str = pyd.Field(default="localhost")
+    POSTGRES_PORT: str = pyd.Field(default="5432")
     POSTGRES_USER: str = pyd.Field(default="admin")
 
     # Deutscher Bundestag
