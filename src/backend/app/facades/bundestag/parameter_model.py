@@ -26,3 +26,10 @@ class BundestagAbstimmungenPointerParameter(BaseModel):
 
 class BundestagAbstimmungParameter(BaseModel):
     abstimmung_id: int = Field(description="ID of the vote.", serialization_alias="id")
+
+
+class BundestagRedeParameter(BaseModel):
+    video_id: str = Field(
+        description="ID of the video with which to fetch the subtitles.",
+        serialization_alias="content",
+    )

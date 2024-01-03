@@ -1,12 +1,18 @@
 """Deutscher Bundestag Drucksache SQLAlchemy Models for creating associated tables in database."""
 import datetime as dt
 
-from sqlalchemy import ForeignKey
+from sqlalchemy import ForeignKey, Sequence
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from backend.app.db.database import Base
 from backend.app.models.common import BTSchema, TimestampMixin
 from backend.app.facades.bundestag.model import Vote
+from sqlalchemy.ext.declarative import declared_attr
+from sqlalchemy.ext.declarative import declared_attr
+from sqlalchemy.orm import object_session
+from sqlalchemy.orm import relationship
+from sqlalchemy.orm import Session
+from sqlalchemy.orm import validates
 
 
 class BTAbstimmung(Base, TimestampMixin, BTSchema):
@@ -56,10 +62,15 @@ class BTEinzelpersonAbstimmung(Base, TimestampMixin, BTSchema):
 
     vote: Mapped[Vote] = mapped_column(nullable=False)
 
-    person: Mapped["BTPerson"] = relationship("BTPerson", back_populates="individual_votes")
+    person: Mapped["BTPerson"] = relationship(
+        "BTPerson",
+        back_populates="individual_votes",
+        cascade="merge, save-update",
+    )
 
     abstimmung: Mapped["BTAbstimmung"] = relationship(
-        "BTAbstimmung", back_populates="individual_votes"
+        "BTAbstimmung",
+        back_populates="individual_votes",
     )
 
 
@@ -87,15 +98,21 @@ class BTAbstimmungRedner(Base, TimestampMixin, BTSchema):
 
     __tablename__ = "abstimmung_redner"
 
-    id: Mapped[int] = mapped_column(primary_key=True)  # database id
+    id: Mapped[int] = mapped_column(
+        Sequence('abstimmung_redner_id_seq', schema='bt'), unique=True, nullable=False
+    )  # database id
 
-    abstimmung_id: Mapped[int] = mapped_column(ForeignKey("bt.abstimmung.id"), nullable=False)
+    abstimmung_id: Mapped[int] = mapped_column(
+        ForeignKey("bt.abstimmung.id"), nullable=False, primary_key=True
+    )
 
-    function: Mapped[str] = mapped_column(nullable=False)
+    name: Mapped[str] = mapped_column(nullable=False, primary_key=True)
 
-    bt_video_id: Mapped[str] = mapped_column(nullable=False)
+    surname: Mapped[str] = mapped_column(nullable=False, primary_key=True)
 
-    video_url: Mapped[str] = mapped_column(nullable=False)
+    function: Mapped[str] = mapped_column(nullable=False, primary_key=True)
+
+    title: Mapped[str] = mapped_column(nullable=True)
 
     image_url: Mapped[str] = mapped_column(nullable=False)
 
@@ -104,13 +121,48 @@ class BTAbstimmungRedner(Base, TimestampMixin, BTSchema):
         back_populates="redner",
     )
 
+    reden: Mapped[list["BTRede"]] = relationship(
+        "BTRede",
+        back_populates="abstimmung_redner",
+        cascade="merge, save-update, delete, delete-orphan",
+    )
+
+
+class BTRede(Base, TimestampMixin, BTSchema):
+    """Table attributes for Model/Relation/Table rede."""
+
+    __tablename__ = "rede"
+
+    id: Mapped[int] = mapped_column(
+        Sequence('rede_id_seq', schema='bt'), unique=True, nullable=False
+    )  # database id
+
+    abstimmung_redner_id: Mapped[int] = mapped_column(
+        ForeignKey("bt.abstimmung_redner.id"), nullable=False
+    )
+
+    bt_video_id: Mapped[str] = mapped_column(nullable=False, primary_key=True)
+
+    video_url: Mapped[str] = mapped_column(nullable=False)
+
+    text: Mapped[str] = mapped_column(nullable=True)
+
+    abstimmung_redner: Mapped["BTAbstimmungRedner"] = relationship(
+        "BTAbstimmungRedner",
+        back_populates="reden",
+    )
+
 
 class BTPerson(Base, TimestampMixin, BTSchema):
     """Table attributes for Model/Relation/Table person."""
 
     __tablename__ = "person"
 
-    id: Mapped[int] = mapped_column(primary_key=True)  # database id
+    id: Mapped[int] = mapped_column(
+        Sequence('person_id_seq', schema='bt'), unique=True, nullable=False
+    )  # database id
+
+    biography_url: Mapped[str] = mapped_column(nullable=False, primary_key=True)
 
     name: Mapped[str] = mapped_column(nullable=False)
 
@@ -121,8 +173,6 @@ class BTPerson(Base, TimestampMixin, BTSchema):
     fraktion: Mapped[str] = mapped_column(nullable=False)
 
     bundesland: Mapped[str] = mapped_column(nullable=False)
-
-    biography_url: Mapped[str] = mapped_column(nullable=False)
 
     image_url: Mapped[str] = mapped_column(nullable=True)
 

@@ -4,7 +4,7 @@ import http
 import logging
 import typing as t
 from typing import TypeVar
-
+from io import StringIO
 import requests
 from pydantic import BaseModel
 
@@ -19,6 +19,7 @@ from backend.app.facades.bundestag.model import (
 from backend.app.facades.bundestag.parameter_model import (
     BundestagAbstimmungParameter,
     BundestagAbstimmungenPointerParameter,
+    BundestagRedeParameter,
 )
 from backend.app.facades.facade import (
     HTTP_REQUEST_DEFAULT_TIMEOUT_SECS,
@@ -37,6 +38,7 @@ import re
 import time
 from typing import Callable, Literal
 from functools import partial
+import webvtt
 
 _logger = logging.getLogger(__name__)
 
@@ -532,3 +534,32 @@ class BundestagFacade(HttpFacade):
 
         soup = BeautifulSoup(resp.text, "html.parser")
         yield from _parse_url_content(soup=soup)
+
+    def get_bundestag_rede_text(
+        self,
+        params: BundestagRedeParameter | None = None,
+    ) -> str:
+        param_dict = (
+            params.model_dump(mode='json', exclude_none=True, by_alias=True) if params else None
+        )
+
+        param_dict['application'] = 144277506
+
+        resp = self.do_request(
+            method=http.HTTPMethod.GET,
+            url_path="/pservices/player/vtt",
+            params=param_dict,
+            content_type=MediaType.HTML,
+            base_url="https://webtv.bundestag.de/",
+        )
+
+        resp.raise_for_status()
+
+        payload = resp.content.decode("utf-8")
+        buffer = StringIO(payload)
+
+        clean_text = ""
+        for caption in webvtt.read_buffer(buffer):
+            clean_text += caption.text.replace('\n', ' ').strip() + " "
+
+        return clean_text

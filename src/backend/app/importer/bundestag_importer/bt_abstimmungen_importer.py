@@ -1,6 +1,7 @@
 from backend.app.facades.bundestag.parameter_model import (
     BundestagAbstimmungenPointerParameter,
     BundestagAbstimmungParameter,
+    BundestagRedeParameter,
 )
 from backend.app.facades.bundestag.model import (
     BundestagAbstimmungUrl,
@@ -16,6 +17,7 @@ from backend.app.models.bundestag.abstimmung_model import (
     BTEinzelpersonAbstimmung,
     BTAbstimmungRedner,
     BTAbstimmungDrucksache,
+    BTRede,
 )
 from backend.app.core.config import settings
 from backend.app.core.logging import configure_logging
@@ -30,8 +32,9 @@ _logger = logging.getLogger(__name__)
 class BTAbstimmungenImporter(
     BTImporter[BundestagAbstimmung, BundestagAbstimmungenPointerParameter, BTAbstimmung]
 ):
-    def __init__(self):
+    def __init__(self, import_rede: bool = True):
         super().__init__(crud=CRUD_BUNDESTAG_ABSTIMMUNG)
+        self.import_rede = import_rede
 
     def transform_model(self, data: BundestagAbstimmung) -> BTAbstimmung:
         bt_einzelabstimmungen = []
@@ -54,17 +57,38 @@ class BTAbstimmungenImporter(
                     person=person,
                 )
             )
-        bt_abstimmung_redner = []
+        bt_abstimmung_redner = dict()
 
         for redner in data.redner:
-            bt_abstimmung_redner.append(
-                BTAbstimmungRedner(
+            identifier = (
+                redner.name,
+                redner.surname,
+                redner.title,
+                redner.function,
+            )
+            rede = BTRede(
+                bt_video_id=redner.video_id,
+                video_url=redner.video_url.unicode_string(),
+                text=redner.text,
+            )
+            if identifier not in bt_abstimmung_redner:
+                bt_redner = BTAbstimmungRedner(
+                    name=redner.name,
+                    surname=redner.surname,
+                    title=redner.title,
                     function=redner.function,
-                    bt_video_id=redner.video_id,
-                    video_url=redner.video_url.unicode_string(),
                     image_url=redner.image_url.unicode_string(),
                 )
-            )
+
+                rede.abstimmung_redner = bt_redner
+                bt_redner.reden.append(rede)
+                bt_abstimmung_redner[identifier] = bt_redner
+            else:
+                bt_redner = bt_abstimmung_redner[identifier]
+                rede.abstimmung_redner = bt_redner
+                bt_redner.reden.append(rede)
+
+        bt_abstimmung_redner = list(bt_abstimmung_redner.values())
 
         bt_abstimmung_drucksachen = []
         for drucksache in data.drucksachen:
@@ -112,6 +136,14 @@ class BTAbstimmungenImporter(
                 params=individual_abstimmung_params
             ):
                 bt_abstimmung.individual_votes.append(bt_einzelabstimmung)
+
+            if self.import_rede:
+                for redner in bt_abstimmung.redner:
+                    rede_params = BundestagRedeParameter(video_id=redner.video_id)
+                    bt_abstimmung_rede_text = self.facade.get_bundestag_rede_text(
+                        params=rede_params
+                    )
+                    redner.text = bt_abstimmung_rede_text
 
             yield self.transform_model(bt_abstimmung)
 

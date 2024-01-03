@@ -93,6 +93,11 @@ class BundestagAbstimmungRedner(BaseModel):
         description="Url to the image of the person.",
     )
 
+    text: Optional[str] = Field(
+        description="Text of the speech.",
+        default=None,
+    )
+
 
 class BundestagAbstimmung(BaseModel):
     """Bundestag Abstimmung."""
