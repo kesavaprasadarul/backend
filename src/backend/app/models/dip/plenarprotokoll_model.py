@@ -2,6 +2,7 @@
 import datetime
 
 from sqlalchemy import ForeignKey
+from sqlalchemy.ext.associationproxy import AssociationProxy, association_proxy
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from backend.app.db.database import Base
@@ -12,10 +13,8 @@ from backend.app.facades.deutscher_bundestag.model import (
 )
 from backend.app.models.common import DIPSchema, TimestampMixin
 from backend.app.models.dip.fundstelle_model import DIPFundstelle
-from backend.app.models.dip.vorgangsbezug_model import DIPVorgangsbezug
 from backend.app.models.dip.vorgang_model import DIPVorgang
-from sqlalchemy.ext.associationproxy import association_proxy
-from sqlalchemy.ext.associationproxy import AssociationProxy
+from backend.app.models.dip.vorgangsbezug_model import DIPVorgangsbezug
 
 
 class DIPPlenarprotokoll(Base, DIPSchema, TimestampMixin):

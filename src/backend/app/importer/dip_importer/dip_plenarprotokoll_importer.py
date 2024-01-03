@@ -1,8 +1,8 @@
 """Class for DIP Bundestag Plenarprotokoll Importer."""
 
+import datetime
 import time
 from typing import Iterator
-import datetime
 
 from backend.app.core.config import Settings
 from backend.app.core.logging import configure_logging

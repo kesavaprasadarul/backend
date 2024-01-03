@@ -2,17 +2,12 @@
 import datetime as dt
 
 from sqlalchemy import ForeignKey, Sequence
-from sqlalchemy.orm import Mapped, mapped_column, relationship
+from sqlalchemy.ext.declarative import declared_attr
+from sqlalchemy.orm import Mapped, Session, mapped_column, object_session, relationship, validates
 
 from backend.app.db.database import Base
-from backend.app.models.common import BTSchema, TimestampMixin
 from backend.app.facades.bundestag.model import Vote
-from sqlalchemy.ext.declarative import declared_attr
-from sqlalchemy.ext.declarative import declared_attr
-from sqlalchemy.orm import object_session
-from sqlalchemy.orm import relationship
-from sqlalchemy.orm import Session
-from sqlalchemy.orm import validates
+from backend.app.models.common import BTSchema, TimestampMixin
 
 
 class BTAbstimmung(Base, TimestampMixin, BTSchema):

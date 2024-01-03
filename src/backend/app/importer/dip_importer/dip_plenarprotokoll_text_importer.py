@@ -1,5 +1,6 @@
 """Class for DIP Bundestag Plenarprotokoll Importer."""
 
+import datetime
 import time
 from typing import Iterator
 
@@ -22,7 +23,6 @@ from backend.app.models.dip.models import (
     DIPPlenarprotokollText,
     DIPVorgangsbezug,
 )
-import datetime
 
 
 class DIPBundestagPlenarprotokollImporter(

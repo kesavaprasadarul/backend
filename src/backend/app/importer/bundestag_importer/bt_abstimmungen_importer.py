@@ -1,30 +1,31 @@
+import logging
+from datetime import date
+from typing import Iterator
+
+from backend.app.core.config import settings
+from backend.app.core.logging import configure_logging
+from backend.app.crud.CRUDBundestag.crud_abstimmung import CRUD_BUNDESTAG_ABSTIMMUNG
+from backend.app.facades.bundestag.model import (
+    BundestagAbstimmung,
+    BundestagAbstimmungUrl,
+    BundestagEinzelpersonAbstimmung,
+    Vote,
+)
 from backend.app.facades.bundestag.parameter_model import (
     BundestagAbstimmungenPointerParameter,
     BundestagAbstimmungParameter,
     BundestagRedeParameter,
 )
-from backend.app.facades.bundestag.model import (
-    BundestagAbstimmungUrl,
-    BundestagAbstimmung,
-    BundestagEinzelpersonAbstimmung,
-    Vote,
-)
-from backend.app.crud.CRUDBundestag.crud_abstimmung import CRUD_BUNDESTAG_ABSTIMMUNG
+from backend.app.facades.util import ProxyList
 from backend.app.importer.bundestag_importer.bt_importer import BTImporter
 from backend.app.models.bundestag.abstimmung_model import (
     BTAbstimmung,
-    BTPerson,
-    BTEinzelpersonAbstimmung,
-    BTAbstimmungRedner,
     BTAbstimmungDrucksache,
+    BTAbstimmungRedner,
+    BTEinzelpersonAbstimmung,
+    BTPerson,
     BTRede,
 )
-from backend.app.core.config import settings
-from backend.app.core.logging import configure_logging
-from backend.app.facades.util import ProxyList
-from datetime import date
-from typing import Iterator
-import logging
 
 _logger = logging.getLogger(__name__)
 

@@ -8,20 +8,14 @@ from backend.app.models.dip.drucksache_model import (  # pylint: disable=unused-
     DIPDrucksacheText,
     DIPDrucksacheVorgangAssociation,
 )
-from backend.app.models.dip.fundstelle_model import (  # pylint: disable=unused-import
-    DIPFundstelle,
-)
+from backend.app.models.dip.fundstelle_model import DIPFundstelle  # pylint: disable=unused-import
 from backend.app.models.dip.plenarprotokoll_model import (  # pylint: disable=unused-import
     DIPPlenarprotokoll,
     DIPPlenarprotokollText,
     DIPPlenarprotokollVorgangAssociation,
 )
-from backend.app.models.dip.ressort_model import (  # pylint: disable=unused-import
-    DIPRessort,
-)
-from backend.app.models.dip.urheber_model import (  # pylint: disable=unused-import
-    DIPUrheber,
-)
+from backend.app.models.dip.ressort_model import DIPRessort  # pylint: disable=unused-import
+from backend.app.models.dip.urheber_model import DIPUrheber  # pylint: disable=unused-import
 from backend.app.models.dip.vorgang_model import (  # pylint: disable=unused-import
     DIPInkrafttreten,
     DIPVerkuendung,

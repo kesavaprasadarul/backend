@@ -2,6 +2,7 @@
 import datetime as dt
 
 from sqlalchemy import ForeignKey
+from sqlalchemy.ext.associationproxy import AssociationProxy, association_proxy
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from backend.app.db.database import Base
@@ -16,8 +17,6 @@ from backend.app.models.dip.ressort_model import DIPRessort
 from backend.app.models.dip.urheber_model import DIPUrheber
 from backend.app.models.dip.vorgang_model import DIPVorgang
 from backend.app.models.dip.vorgangsbezug_model import DIPVorgangsbezug
-from sqlalchemy.ext.associationproxy import association_proxy
-from sqlalchemy.ext.associationproxy import AssociationProxy
 
 
 class DIPDrucksache(Base, TimestampMixin, DIPSchema):

@@ -1,6 +1,7 @@
-from pydantic import BaseModel, Field, field_serializer
-from typing import Optional
 from datetime import date, datetime
+from typing import Optional
+
+from pydantic import BaseModel, Field, field_serializer
 
 
 class BundestagAbstimmungenPointerParameter(BaseModel):

@@ -3,6 +3,7 @@ import calendar
 import datetime
 import itertools
 import logging
+import time
 from typing import Optional
 
 from backend.app.app_logic.landing_page.word_analyser import WordCounter
@@ -15,7 +16,6 @@ from backend.app.facades.deutscher_bundestag.model_plenarprotokoll_vorgangsbezug
 )
 from backend.app.facades.deutscher_bundestag.parameter_model import PlenarprotokollParameter
 from backend.app.models.api.top_topics_model import TopTopics
-import time
 
 _logger = logging.getLogger(__name__)
 

@@ -1,5 +1,6 @@
 """Deutscher Bundestag Drucksache SQLAlchemy Models for creating associated tables in database."""
 from datetime import date, datetime
+from typing import List
 
 from sqlalchemy import ForeignKey, Text
 from sqlalchemy.dialects.postgresql import ARRAY
@@ -9,7 +10,6 @@ from backend.app.db.database import Base
 from backend.app.facades.deutscher_bundestag.model import VorgangDeskriptorTyp, VorgangTyp
 from backend.app.models.common import DIPSchema, TimestampMixin
 from backend.app.models.dip.vorgangsposition_model import DIPVorgangsposition
-from typing import List
 
 
 class DIPVorgang(Base, TimestampMixin, DIPSchema):

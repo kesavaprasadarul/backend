@@ -1,7 +1,7 @@
 """Class for DIP Bundestag Vorgangsposition Importer."""
 
 import logging
-from datetime import datetime, date
+from datetime import date, datetime
 from typing import Iterator
 
 import pytz

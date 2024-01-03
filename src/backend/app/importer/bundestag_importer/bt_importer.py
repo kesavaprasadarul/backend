@@ -11,7 +11,6 @@ from backend.app.facades.bundestag.facade import BundestagFacade
 from backend.app.facades.util import ProxyList
 from backend.app.importer.base import HttpImporter
 
-
 PydanticDataModelType = TypeVar(
     "PydanticDataModelType", bound=BaseModel
 )  # pylint: disable=invalid-name

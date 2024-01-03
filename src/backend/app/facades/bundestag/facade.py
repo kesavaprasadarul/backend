@@ -1,24 +1,31 @@
 """Bundestag Abstimmungen facade."""
-from email.utils import parsedate
 import http
 import logging
+import re
+import time
 import typing as t
-from typing import TypeVar
+from datetime import date, datetime
+from email.utils import parsedate
+from functools import partial
 from io import StringIO
+from typing import Callable, Literal, TypeVar
+
 import requests
+import webvtt
+from bs4 import BeautifulSoup, Tag
 from pydantic import BaseModel
 
 from backend.app.core.config import Settings
 from backend.app.facades.bundestag.model import (
-    BundestagAbstimmungUrl,
     BundestagAbstimmung,
-    BundestagEinzelpersonAbstimmung,
     BundestagAbstimmungRedner,
+    BundestagAbstimmungUrl,
+    BundestagEinzelpersonAbstimmung,
     Vote,
 )
 from backend.app.facades.bundestag.parameter_model import (
-    BundestagAbstimmungParameter,
     BundestagAbstimmungenPointerParameter,
+    BundestagAbstimmungParameter,
     BundestagRedeParameter,
 )
 from backend.app.facades.facade import (
@@ -32,13 +39,6 @@ from backend.app.facades.facade import (
     PageCursor,
 )
 from backend.app.facades.util import ProxyList
-from bs4 import BeautifulSoup, Tag
-from datetime import datetime, date
-import re
-import time
-from typing import Callable, Literal
-from functools import partial
-import webvtt
 
 _logger = logging.getLogger(__name__)
 
