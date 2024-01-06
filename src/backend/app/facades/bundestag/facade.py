@@ -11,8 +11,8 @@ from io import StringIO
 from typing import Callable, Literal, TypeVar
 
 import requests
-import webvtt
-from bs4 import BeautifulSoup, Tag
+import webvtt  # type: ignore
+from bs4 import BeautifulSoup, Tag  # type: ignore
 from pydantic import BaseModel
 
 from backend.app.core.config import Settings
@@ -21,6 +21,7 @@ from backend.app.facades.bundestag.model import (
     BundestagAbstimmungRedner,
     BundestagAbstimmungUrl,
     BundestagEinzelpersonAbstimmung,
+    DIPRelatedDrucksache,
     Vote,
 )
 from backend.app.facades.bundestag.parameter_model import (
@@ -172,10 +173,10 @@ class BundestagFacade(HttpFacade):
         response_limit: int = 1000,
     ) -> t.Iterator[BundestagAbstimmungUrl]:
         param_dict = (
-            params.model_dump(mode='json', exclude_none=True, by_alias=True) if params else None
+            params.model_dump(mode='json', exclude_none=True, by_alias=True) if params else {}
         )
 
-        if params.date_start is not None or params.date_end is not None:
+        if "date_start" in param_dict or "date_end" in param_dict:
             param_dict['startfield'] = 'date'
 
         def _parse_url_content(soup: BeautifulSoup) -> t.Iterator[dict]:
@@ -215,12 +216,10 @@ class BundestagFacade(HttpFacade):
 
     def get_bundestag_abstimmung(
         self,
-        params: BundestagAbstimmungParameter | None = None,
+        params: BundestagAbstimmungParameter,
         response_limit: int = 1000,
     ) -> BundestagAbstimmung:
-        param_dict = (
-            params.model_dump(mode='json', exclude_none=True, by_alias=True) if params else None
-        )
+        param_dict = params.model_dump(mode='json', exclude_none=True, by_alias=True)
 
         def _parse_german_date(date_german: str) -> date:
             date_english = None
@@ -297,10 +296,10 @@ class BundestagFacade(HttpFacade):
                 drucksache_url = drucksache['href']
 
                 drucksachen.append(
-                    {
-                        'url': drucksache_url,
-                        'drucksache_name': drucksache_name,
-                    }
+                    DIPRelatedDrucksache(
+                        url=drucksache_url,
+                        drucksache_name=drucksache_name,
+                    )
                 )
 
             # parse voting results
@@ -423,12 +422,10 @@ class BundestagFacade(HttpFacade):
 
     def get_bundestag_abstimmung_individual_votes(
         self,
-        params: BundestagAbstimmungParameter | None = None,
+        params: BundestagAbstimmungParameter,
         response_limit: int = 1000,
     ) -> t.Iterator[BundestagEinzelpersonAbstimmung]:
-        param_dict = (
-            params.model_dump(mode='json', exclude_none=True, by_alias=True) if params else None
-        )
+        param_dict = params.model_dump(mode='json', exclude_none=True, by_alias=True)
 
         def _parse_url_content(soup: BeautifulSoup) -> t.Iterator[BundestagEinzelpersonAbstimmung]:
             """Parse content from response."""
@@ -535,13 +532,8 @@ class BundestagFacade(HttpFacade):
         soup = BeautifulSoup(resp.text, "html.parser")
         yield from _parse_url_content(soup=soup)
 
-    def get_bundestag_rede_text(
-        self,
-        params: BundestagRedeParameter | None = None,
-    ) -> str:
-        param_dict = (
-            params.model_dump(mode='json', exclude_none=True, by_alias=True) if params else None
-        )
+    def get_bundestag_rede_text(self, params: BundestagRedeParameter) -> str:
+        param_dict = params.model_dump(mode='json', exclude_none=True, by_alias=True)
 
         param_dict['application'] = 144277506
 

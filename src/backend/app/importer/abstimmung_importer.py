@@ -6,8 +6,7 @@ from sqlite3 import Date
 from pydantic import BaseModel, Field
 
 from backend.app.core.logging import configure_logging
-from backend.app.crud.CRUDApi import crud_abstimmung
-from backend.app.crud.CRUDApi.crud_abstimmung import CRUD_Abstimmung
+from backend.app.crud.CRUDApi.crud_beschlussfassung import CRUD_Beschlussfassung
 from backend.app.crud.CRUDDIPBundestag.crud_drucksache import CRUD_DIP_DRUCKSACHE, CountsPerWeek
 from backend.app.facades.deutscher_bundestag.model import DrucksacheTextListResponse, Zuordnung
 from backend.app.facades.deutscher_bundestag.parameter_model import DrucksacheParameter
@@ -143,12 +142,12 @@ def _import_relevant_beschlussfassungen(
     _logger.info("Imported %s new Drucksachen.", drucksache_importer.get_imported_count())
 
 
-def import_abstimmungen(
+def import_beschlussfassungen(
     fetch: FetchTypes,
     date_start: date | None = None,
     date_end: date | None = None,
 ):
-    # Base parameters that we need for meaninungful abstimmungen
+    # Base parameters that we need for meaninungful beschlussfassungen
     drucksachetyp_filter = None
     vorgangstyp_filter = [
         "Antrag",
@@ -171,17 +170,17 @@ def import_abstimmungen(
         vorgangstyp_filter=vorgangstyp_filter,
     )
 
-    # imported_count = drucksache_importer.get_imported_count()
-    # if imported_count == 0:
-    #     _logger.info("No new Drucksachen found. No abstimmungen imported.")
-    #     return
+    imported_count = drucksache_importer.get_imported_count()
+    if imported_count == 0:
+        _logger.info("No new Drucksachen found. No beschlussfassungen imported.")
+        return
 
-    # CRUD_Abstimmung.update_abstimmungen(drucksachetyp_filter, vorgangstyp_filter)
+    CRUD_Beschlussfassung.update_beschlussfassung(drucksachetyp_filter, vorgangstyp_filter)
 
 
 if __name__ == "__main__":
     configure_logging()
-    import_abstimmungen(
+    import_beschlussfassungen(
         fetch=FetchTypes.MISSING,
         date_start=date(2023, 1, 1),
         date_end=date(2023, 12, 31),  # (date.today() + timedelta(weeks=1)),

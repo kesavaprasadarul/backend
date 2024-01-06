@@ -4,7 +4,7 @@
 
 # flake8: noqa
 from backend.app.db.database import Base  # pylint: disable=unused-import
-from backend.app.models.api.abstimmung_model import APIAbstimmung
+from backend.app.models.api.beschlussfassung_model import APIBeschlussfassung
 from backend.app.models.api.mandate_model import APIMandate
 from backend.app.models.api.top_topics_model import TopTopics  # pylint: disable=unused-import
 from backend.app.models.bundestag.abstimmung_model import (  # pylint: disable=unused-import

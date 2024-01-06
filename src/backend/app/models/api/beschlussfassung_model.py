@@ -10,10 +10,10 @@ from backend.app.models.common import APISchema, TimestampMixin
 from backend.app.models.dip.models import DIPBeschlussfassung, DIPVorgangsposition
 
 
-class APIAbstimmung(Base, TimestampMixin):
+class APIBeschlussfassung(Base, TimestampMixin):
     """Table attributes for Model/Relation/Table example_model."""
 
-    __tablename__ = "abstimmung"
+    __tablename__ = "beschlussfassung"
     id: Mapped[int] = mapped_column(primary_key=True)  # database id
 
     titel: Mapped[str] = mapped_column(nullable=False)

@@ -5,13 +5,13 @@ import sqlalchemy as sa
 from pydantic import BaseModel
 
 from backend.app.crud.base import CRUDBase
-from backend.app.models.api.abstimmung_model import APIAbstimmung
+from backend.app.models.api.beschlussfassung_model import APIBeschlussfassung
 
 _logger = logging.getLogger(__name__)
 
 
-class CRUDAbstimmung(CRUDBase[APIAbstimmung]):
-    """Provides CRUD operations for public.abstimmung table."""
+class CRUDBeschlussfassung(CRUDBase[APIBeschlussfassung]):
+    """Provides CRUD operations for public.beschlussfassung table."""
 
     def __init__(self, model: type):
         """
@@ -19,15 +19,15 @@ class CRUDAbstimmung(CRUDBase[APIAbstimmung]):
         """
         super().__init__(model)
 
-    def update_abstimmungen(
+    def update_beschlussfassung(
         self, drucksachetyp_filter: list[str] | None, vorgangstyp_filter: list[str] | None
     ) -> None:
         """Call import procedure."""
         _logger.info("Call import procedure for %s", self.model.__tablename__)
         CRUDBase.db.execute(
-            sa.text("CALL public.import_abstimmungen(:drucksachetyp, :vorgangstyp)"),
+            sa.text("CALL public.import_beschlussfassung(:drucksachetyp, :vorgangstyp)"),
             {"drucksachetyp": drucksachetyp_filter, "vorgangstyp": vorgangstyp_filter},
         )
 
 
-CRUD_Abstimmung = CRUDAbstimmung(APIAbstimmung)
+CRUD_Beschlussfassung = CRUDBeschlussfassung(APIBeschlussfassung)

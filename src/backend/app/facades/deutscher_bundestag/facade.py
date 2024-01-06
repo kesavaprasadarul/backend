@@ -77,6 +77,7 @@ class DIPBundestagFacade(HttpFacade):
         proxy: t.Optional[Proxy] = None,
         timeout: int = HTTP_REQUEST_DEFAULT_TIMEOUT_SECS,
         disable_retry: bool = False,
+        base_url: t.Optional[str] = None,
     ) -> requests.Response:
         """Execute http requests to external services.
 
@@ -109,6 +110,8 @@ class DIPBundestagFacade(HttpFacade):
         all_headers = headers.copy() if headers else {}
         basic_auth = None
 
+        base_url = base_url or self.base_url
+
         match self.auth.auth_type:
             case AuthType.DIPBUNDESTAG_API_TOKEN:
                 all_headers['Authorization'] = f'ApiKey {self.auth.token}'
@@ -132,7 +135,7 @@ class DIPBundestagFacade(HttpFacade):
 
         request = requests.Request(
             method=method.value,
-            url=urllib.parse.urljoin(self.base_url, url_path),
+            url=urllib.parse.urljoin(base_url, url_path),
             params=params,
             headers=all_headers,
             json=json,

@@ -1,4 +1,4 @@
-"""CRUD Operations DIP Bundestag for Drucksache."""
+"""CRUD Operations Bundestag Abstimmung."""
 import datetime
 import logging
 

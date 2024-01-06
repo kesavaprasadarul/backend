@@ -58,7 +58,7 @@ class BTAbstimmungenImporter(
                     person=person,
                 )
             )
-        bt_abstimmung_redner = dict()
+        bt_abstimmung_redner_dict = dict()
 
         for redner in data.redner:
             identifier = (
@@ -72,7 +72,7 @@ class BTAbstimmungenImporter(
                 video_url=redner.video_url.unicode_string(),
                 text=redner.text,
             )
-            if identifier not in bt_abstimmung_redner:
+            if identifier not in bt_abstimmung_redner_dict:
                 bt_redner = BTAbstimmungRedner(
                     name=redner.name,
                     surname=redner.surname,
@@ -83,13 +83,13 @@ class BTAbstimmungenImporter(
 
                 rede.abstimmung_redner = bt_redner
                 bt_redner.reden.append(rede)
-                bt_abstimmung_redner[identifier] = bt_redner
+                bt_abstimmung_redner_dict[identifier] = bt_redner
             else:
-                bt_redner = bt_abstimmung_redner[identifier]
+                bt_redner = bt_abstimmung_redner_dict[identifier]
                 rede.abstimmung_redner = bt_redner
                 bt_redner.reden.append(rede)
 
-        bt_abstimmung_redner = list(bt_abstimmung_redner.values())
+        bt_abstimmung_redner = list(bt_abstimmung_redner_dict.values())
 
         bt_abstimmung_drucksachen = []
         for drucksache in data.drucksachen:
