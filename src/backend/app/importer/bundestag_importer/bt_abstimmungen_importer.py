@@ -1,3 +1,4 @@
+import datetime
 import logging
 from datetime import date
 from typing import Iterator
@@ -149,16 +150,18 @@ class BTAbstimmungenImporter(
             yield self.transform_model(bt_abstimmung)
 
 
-def import_bt_abstimmungen():
+def import_bt_abstimmungen(date_start: datetime.date, date_end: datetime.date):
     importer = BTAbstimmungenImporter()
 
-    params = BundestagAbstimmungenPointerParameter(
-        date_start=date(2021, 1, 1), date_end=date(2023, 12, 31)
-    )
+    params = BundestagAbstimmungenPointerParameter(date_start=date_start, date_end=date_end)
 
     importer.import_data(params=params, response_limit=1000, upsert_batch_size=1)
 
 
 if __name__ == '__main__':
     configure_logging()
-    import_bt_abstimmungen()
+    from datetime import date, timedelta
+
+    import_bt_abstimmungen(
+        date_start=date(2023, 1, 1), date_end=(date.today() + timedelta(weeks=1))
+    )

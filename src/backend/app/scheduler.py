@@ -2,6 +2,7 @@ from apscheduler.events import EVENT_JOB_ERROR, EVENT_JOB_EXECUTED
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from logging import getLogger
 from backend.app.importer.abstimmung_importer import FetchTypes, import_beschlussfassungen
+from backend.app.importer.bundestag_importer.bt_abstimmungen_importer import import_bt_abstimmungen
 from backend.app.importer.mandate_importer import import_mandate
 from datetime import date, datetime, timedelta
 
@@ -13,6 +14,10 @@ app_scheduler = AsyncIOScheduler()
 def startup_imports_job():
     """Startup event."""
     import_mandate()
+
+    import_bt_abstimmungen(
+        date_start=date(2023, 1, 1), date_end=(date.today() + timedelta(weeks=1))
+    )
 
     import_beschlussfassungen(
         fetch=FetchTypes.MISSING,
