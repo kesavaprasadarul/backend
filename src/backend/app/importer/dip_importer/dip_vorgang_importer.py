@@ -3,7 +3,7 @@
 import logging
 import time
 from datetime import datetime
-from typing import Iterator
+from typing import Any, Iterator
 
 import pytz
 
@@ -102,6 +102,7 @@ class DIPBundestagVorgangImporter(DIPImporter[Vorgang, VorgangParameter, DIPVorg
         params: VorgangParameter | None = None,
         response_limit=1000,
         proxy_list: ProxyList | None = None,
+        **kwargs: Any,
     ) -> Iterator[DIPVorgang]:
         """Fetch data."""
         for model in self.facade.get_vorgange(

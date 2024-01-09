@@ -2,7 +2,7 @@
 
 import datetime
 import time
-from typing import Iterator
+from typing import Any, Iterator
 
 from backend.app.core.config import Settings
 from backend.app.core.logging import configure_logging
@@ -71,6 +71,7 @@ class DIPBundestagPlenarprotokollImporter(
         params: PlenarprotokollParameter | None = None,
         response_limit=1000,
         proxy_list: ProxyList | None = None,
+        **kwargs: Any,
     ) -> Iterator[DIPPlenarprotokoll]:
         """Fetch data."""
 

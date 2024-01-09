@@ -62,6 +62,7 @@ class HttpImporter(
         params: Optional[PydanticParameterModelType] = None,
         response_limit=1000,
         proxy_list: ProxyList | None = None,
+        **kwargs: Any,
     ) -> Iterator[SQLModelType]:
         """Fetch data."""
         raise NotImplementedError
@@ -88,6 +89,7 @@ class HttpImporter(
             params=params,
             response_limit=response_limit,
             proxy_list=proxy_list,
+            **kwargs,
         ):
             batch.append(db_model)
 

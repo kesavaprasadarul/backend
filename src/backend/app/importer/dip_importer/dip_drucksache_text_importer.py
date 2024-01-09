@@ -2,7 +2,7 @@
 
 import time
 from datetime import date, datetime, timezone
-from typing import Iterator, Optional
+from typing import Any, Iterator, Optional
 
 from backend.app.core.config import Settings
 from backend.app.core.logging import configure_logging
@@ -108,6 +108,7 @@ class DIPBundestagDrucksacheTextImporter(
         params: Optional[DrucksacheParameter] = None,
         response_limit=1000,
         proxy_list: ProxyList | None = None,
+        **kwargs: Any,
     ) -> Iterator[DIPDrucksache]:
         """Fetch data."""
 

@@ -2,7 +2,7 @@
 
 import logging
 from datetime import date, datetime
-from typing import Iterator
+from typing import Iterator, Any
 
 import pytz
 
@@ -13,6 +13,7 @@ from backend.app.facades.deutscher_bundestag.model import Vorgangsposition, Zuor
 from backend.app.facades.deutscher_bundestag.parameter_model import VorgangspositionParameter
 from backend.app.facades.util import ProxyList
 from backend.app.importer.dip_importer.dip_importer import DIPImporter
+
 
 # import from all models to ensure they are registered
 from backend.app.models.dip.models import (
@@ -122,6 +123,7 @@ class DIPBundestagVorgangspositionImporter(
         params: VorgangspositionParameter | None = None,
         response_limit=1000,
         proxy_list: ProxyList | None = None,
+        **kwargs: Any,
     ) -> Iterator[DIPVorgangsposition]:
         """Fetch data."""
 

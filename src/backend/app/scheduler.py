@@ -16,7 +16,7 @@ def startup_imports_job():
     import_mandate()
 
     import_bt_abstimmungen(
-        date_start=date(2023, 1, 1), date_end=(date.today() + timedelta(weeks=1))
+        date_start=date(2016, 1, 1), date_end=(date.today() + timedelta(weeks=1))
     )
 
     # import_beschlussfassungen(

@@ -4,7 +4,7 @@ import time
 from datetime import datetime
 from logging import getLogger
 from tokenize import endpats
-from typing import Iterator, Optional
+from typing import Any, Iterator, Optional
 
 import pytz
 
@@ -118,6 +118,7 @@ class DIPBundestagDrucksacheImporter(DIPImporter[Drucksache, DrucksacheParameter
         params: Optional[DrucksacheParameter] = None,
         response_limit=1000,
         proxy_list: ProxyList | None = None,
+        **kwargs: Any,
     ) -> Iterator[DIPDrucksache]:
         """Fetch data."""
 

@@ -50,9 +50,7 @@ class BTAbstimmungenImporter(
         batch: list[BTAbstimmung] = []
         batch_number = 0
         for db_model in self.fetch_data(
-            params=params,
-            response_limit=response_limit,
-            proxy_list=proxy_list,
+            params=params, response_limit=response_limit, proxy_list=proxy_list, **kwargs
         ):
             batch.append(db_model)
 
@@ -158,10 +156,23 @@ class BTAbstimmungenImporter(
         params: BundestagAbstimmungenPointerParameter | None = None,
         response_limit: int = 1000,
         proxy_list: ProxyList | None = None,
+        **kwargs: Any,
     ) -> Iterator[BTAbstimmung]:
+        existing_ids: set[int] | None = None
+        if 'existing_ids' in kwargs:
+            existing_ids = kwargs['existing_ids']
+
+            if not isinstance(existing_ids, set):
+                raise ValueError('existing_ids must be a set')
+
         for abstimmung_pointer in self.facade.get_bundestag_abstimmung_pointers(
             params=params, response_limit=response_limit
         ):
+            if existing_ids is not None and abstimmung_pointer.abstimmung_id in existing_ids:
+                _logger.debug(
+                    f'Abstimmung with id {abstimmung_pointer.abstimmung_id} already exists in database. Skipping.'
+                )
+                continue
             individual_abstimmung_params = BundestagAbstimmungParameter(
                 abstimmung_id=abstimmung_pointer.abstimmung_id
             )
@@ -187,11 +198,22 @@ class BTAbstimmungenImporter(
 
 
 def import_bt_abstimmungen(date_start: datetime.date, date_end: datetime.date):
+    _logger.info(f'Importing Abstimmungen from {date_start} to {date_end}.')
     importer = BTAbstimmungenImporter()
+
+    existing_abstimmungen = importer.crud.read_all()
+
+    existing_abstimmungen_ids = set(abstimmung.id for abstimmung in existing_abstimmungen)
 
     params = BundestagAbstimmungenPointerParameter(date_start=date_start, date_end=date_end)
 
-    importer.import_data(params=params, response_limit=1000, upsert_batch_size=1)
+    importer.import_data(
+        params=params,
+        response_limit=1000,
+        upsert_batch_size=1,
+        existing_ids=existing_abstimmungen_ids,
+    )
+    _logger.info(f'Imported Abstimmungen from {date_start} to {date_end}.')
 
 
 if __name__ == '__main__':
