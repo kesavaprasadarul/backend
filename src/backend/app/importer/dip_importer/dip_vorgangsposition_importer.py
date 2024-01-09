@@ -1,8 +1,8 @@
 """Class for DIP Bundestag Vorgangsposition Importer."""
 
 import logging
-from datetime import datetime
-from typing import Iterator
+from datetime import date, datetime
+from typing import Iterator, Any
 
 import pytz
 
@@ -12,10 +12,11 @@ from backend.app.crud.CRUDDIPBundestag.crud_vorgangsposition import CRUD_DIP_VOR
 from backend.app.facades.deutscher_bundestag.model import Vorgangsposition, Zuordnung
 from backend.app.facades.deutscher_bundestag.parameter_model import VorgangspositionParameter
 from backend.app.facades.util import ProxyList
-from backend.app.importer.dip_importer.base import DIPImporter
+from backend.app.importer.dip_importer.dip_importer import DIPImporter
+
 
 # import from all models to ensure they are registered
-from backend.app.models.deutscher_bundestag.models import (
+from backend.app.models.dip.models import (
     DIPAktivitaetAnzeige,
     DIPBeschlussfassung,
     DIPFundstelle,
@@ -122,10 +123,11 @@ class DIPBundestagVorgangspositionImporter(
         params: VorgangspositionParameter | None = None,
         response_limit=1000,
         proxy_list: ProxyList | None = None,
+        **kwargs: Any,
     ) -> Iterator[DIPVorgangsposition]:
         """Fetch data."""
 
-        for model in self.dip_bundestag_facade.get_vorgangspositionen(
+        for model in self.facade.get_vorgangspositionen(
             params=params,
             response_limit=response_limit,
             proxy_list=proxy_list,
@@ -139,9 +141,7 @@ class DIPBundestagVorgangspositionImporter(
 def import_dip_bundestag():
     importer = DIPBundestagVorgangspositionImporter()
 
-    params = VorgangspositionParameter(
-        aktualisiert_start=datetime(2022, 1, 1, tzinfo=pytz.UTC).astimezone(),
-    )
+    params = VorgangspositionParameter(datum_start=date(2023, 1, 1))
     importer.import_data(params=params, response_limit=10000)
 
 

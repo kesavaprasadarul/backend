@@ -5,6 +5,7 @@ import dataclasses
 import enum
 import http
 import logging
+import time
 import typing as t
 import urllib.parse
 
@@ -22,6 +23,9 @@ LIMIT_PAGES = 10
 
 HTTP_REQUEST_DEFAULT_TIMEOUT_SECS = 30
 """Maximum time before an HTTP request times out."""
+
+DELAY_BETWEEN_REQUESTS = 0.5
+"""Default delay between requests to avoid overstraining the API."""
 
 
 @dataclasses.dataclass
@@ -60,6 +64,7 @@ class AuthType(enum.Enum):
     TOKEN = enum.auto()
     BASIC_AUTHENTICATION = enum.auto()
     TOKEN_AS_USER = enum.auto()
+    NONE = enum.auto()
 
 
 class Auth(pyd.BaseModel):
@@ -73,6 +78,10 @@ class Auth(pyd.BaseModel):
 
 class MediaType(enum.Enum):
     JSON = 'application/json'
+    HTML = 'text/html'
+    PDF = 'application/pdf'
+    XLSX = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+    XLS = 'application/vnd.ms-excel'
 
 
 class HttpFacade:
@@ -82,14 +91,47 @@ class HttpFacade:
     magic and only needs the request specific parameters like url path and so on.
     """
 
-    def __init__(self, base_url: str, auth: Auth):
+    def __init__(
+        self, base_url: str, auth: Auth, delay_between_requests: float = DELAY_BETWEEN_REQUESTS
+    ):
         self.base_url = base_url
         self.auth = auth
         self._session = requests.Session()
+        self.last_request = None
+        self.delay_between_requests = delay_between_requests
 
     @classmethod
     def get_instance(cls, settings: Settings):
         raise NotImplementedError()
+
+    def _wait_delay(self):
+        """Wait for delay between requests."""
+        if self.delay_between_requests:
+            if self.last_request:
+                time_since_last_request = time.time() - self.last_request
+                if time_since_last_request < self.delay_between_requests:
+                    time.sleep(self.delay_between_requests - time_since_last_request)
+        self.last_request = time.time()
+
+    def _send_request(
+        self,
+        request: requests.PreparedRequest,
+        timeout: int = HTTP_REQUEST_DEFAULT_TIMEOUT_SECS,
+        proxies: dict | None = None,
+        verify: bool = True,
+    ) -> requests.Response:
+        """Send request with session."""
+        self._wait_delay()
+
+        _logger.debug(f'Sending request to {request.url}. Timer: {self.last_request}.')
+
+        return self._session.send(
+            request=request,
+            timeout=timeout,
+            proxies=proxies,
+            verify=verify,
+            allow_redirects=False,
+        )
 
     def do_request(
         self,
@@ -107,6 +149,7 @@ class HttpFacade:
         proxy: t.Optional[Proxy] = None,
         timeout: int = HTTP_REQUEST_DEFAULT_TIMEOUT_SECS,
         disable_retry: bool = False,
+        base_url: t.Optional[str] = None,
     ) -> requests.Response:
         """Execute http requests to external services.
 
@@ -132,12 +175,15 @@ class HttpFacade:
             retry_http_codes: Additional http return codes which will be retried.
             timeout: Optional timeout value to change the default set in HTTP_REQUEST_TIMEOUT_SECS
             disable_retry: Optional flag to disable any retry in case of failures with default False
+            base_url: Optional base url to be used instead of the one defined in the instance.
         Returns:
             The response of the request
 
         """
         all_headers = headers.copy() if headers else {}
         basic_auth = None
+
+        base_url = base_url or self.base_url
 
         match self.auth.auth_type:
             case AuthType.DIPBUNDESTAG_API_TOKEN:
@@ -151,6 +197,8 @@ class HttpFacade:
                 )
             case AuthType.TOKEN_AS_USER:
                 basic_auth = (self.auth.token, '')
+            case AuthType.NONE:
+                pass
             case _:  # pragma: no cover  # coverage.py does not recognize pattern
                 raise NotImplementedError(self.auth.auth_type)
 
@@ -162,7 +210,7 @@ class HttpFacade:
 
         request = requests.Request(
             method=method.value,
-            url=urllib.parse.urljoin(self.base_url, url_path),
+            url=urllib.parse.urljoin(base_url, url_path),
             params=params,
             headers=all_headers,
             json=json,
@@ -184,16 +232,12 @@ class HttpFacade:
         proxy_dict = proxy.to_dict() if proxy else None
 
         if disable_retry:
-            response = self._session.send(
-                request=request,
-                timeout=timeout,
-                proxies=proxy_dict,
-                verify=proxy is None,
-                allow_redirects=False,
+            response = self._send_request(
+                request=request, timeout=timeout, proxies=proxy_dict, verify=proxy is None
             )
         else:
             response = call_with_retries(
-                self._session.send,
+                self._send_request,
                 request,
                 retval_ok=is_response_final,
                 timeout=timeout,
@@ -231,9 +275,6 @@ class HttpFacade:
             page_size:
                 Optional size of a page to customize default size defined by service.
 
-            page_args_path:
-                Path into the kwargs dictionary where the page information is stored.
-
             params:
                 Optional params of request
 
@@ -246,9 +287,6 @@ class HttpFacade:
         Returns:
             Yields the unpacked content of each page.
         """
-        page_args_dict = kwargs
-        for name in page_args_path:
-            page_args_dict = page_args_dict.setdefault(name, {})
 
         if params is None:
             params = {}
@@ -276,7 +314,9 @@ class HttpFacade:
 
             page = unpack_page(response)
 
-            if isinstance(page.content, collections.abc.Sequence):
+            if isinstance(page.content, collections.abc.Sequence) or isinstance(
+                page.content, t.Generator
+            ):
                 yield from page.content
             else:
                 raise NotImplementedError(f'Unexpected page content type {type(page.content)}.')

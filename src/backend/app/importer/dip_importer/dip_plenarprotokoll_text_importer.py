@@ -1,7 +1,8 @@
 """Class for DIP Bundestag Plenarprotokoll Importer."""
 
+import datetime
 import time
-from typing import Iterator
+from typing import Any, Iterator
 
 from backend.app.core.config import Settings
 from backend.app.core.logging import configure_logging
@@ -12,11 +13,11 @@ from backend.app.facades.deutscher_bundestag.parameter_model import (
     VorgangParameter,
 )
 from backend.app.facades.util import ProxyList
-from backend.app.importer.dip_importer.base import DIPImporter
+from backend.app.importer.dip_importer.dip_importer import DIPImporter
 from backend.app.importer.dip_importer.dip_vorgang_importer import DIPBundestagVorgangImporter
 
 # import from all models to ensure they are registered
-from backend.app.models.deutscher_bundestag.models import (
+from backend.app.models.dip.models import (
     DIPFundstelle,
     DIPPlenarprotokoll,
     DIPPlenarprotokollText,
@@ -76,23 +77,22 @@ class DIPBundestagPlenarprotokollImporter(
         params: PlenarprotokollParameter | None = None,
         response_limit=1000,
         proxy_list: ProxyList | None = None,
+        **kwargs: Any,
     ) -> Iterator[DIPPlenarprotokoll]:
         """Fetch data."""
 
-        for model in self.dip_bundestag_facade.get_plenarprotokolle_text(
-            params, response_limit, proxy_list
-        ):
+        for model in self.facade.get_plenarprotokolle_text(params, response_limit, proxy_list):
             db_model = self.transform_model(model)
 
             if self.import_vorgaenge:
                 time.sleep(self.delay_between_requests)
                 for vorgang in self.vorgang_importer.fetch_data(
                     params=VorgangParameter(
-                        drucksache=db_model.id,
+                        plenarprotokoll=db_model.id,
                     ),
                     proxy_list=proxy_list,
                 ):
-                    db_model.vorgang.append(vorgang)
+                    db_model.vorgaenge.append(vorgang)
 
             yield db_model
 
@@ -100,10 +100,13 @@ class DIPBundestagPlenarprotokollImporter(
 def import_dip_bundestag():
     importer = DIPBundestagPlenarprotokollImporter()
 
+    params = PlenarprotokollParameter(
+        datum_start=datetime.date(2023, 1, 1), datum_end=datetime.date(2023, 12, 31)
+    )
+
     importer.import_data(
-        params=None,
-        response_limit=1,
-        proxy_list=ProxyList.from_url(Settings().PROXY_LIST_SOCKS4_URL),
+        params=params,
+        response_limit=100,
     )
 
 

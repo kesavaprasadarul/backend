@@ -4,9 +4,7 @@ from sqlalchemy.orm import declarative_base, sessionmaker
 
 from backend.app.core.config import settings as s
 
-DATABASE_URL = (
-    f"postgresql://{s.POSTGRES_USER}:{s.POSTGRES_PASSWORD}@{s.POSTGRES_SERVER}/{s.POSTGRES_DB}"
-)
+DATABASE_URL = f"postgresql://{s.POSTGRES_USER}:{s.POSTGRES_PASSWORD}@{s.POSTGRES_SERVER}:{s.POSTGRES_PORT}/{s.POSTGRES_DB}"
 
 engine = create_engine(DATABASE_URL, pool_pre_ping=True)
 

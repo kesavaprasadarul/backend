@@ -2,7 +2,7 @@
 
 import time
 from datetime import date, datetime, timezone
-from typing import Iterator, Optional
+from typing import Any, Iterator, Optional
 
 from backend.app.core.config import Settings
 from backend.app.core.logging import configure_logging
@@ -13,11 +13,11 @@ from backend.app.facades.deutscher_bundestag.parameter_model import (
     VorgangParameter,
 )
 from backend.app.facades.util import ProxyList
-from backend.app.importer.dip_importer.base import DIPImporter
+from backend.app.importer.dip_importer.dip_importer import DIPImporter
 from backend.app.importer.dip_importer.dip_vorgang_importer import DIPBundestagVorgangImporter
 
 # import from all models to ensure they are registered
-from backend.app.models.deutscher_bundestag.models import (
+from backend.app.models.dip.models import (
     DIPAutor,
     DIPDrucksache,
     DIPDrucksacheText,
@@ -108,10 +108,11 @@ class DIPBundestagDrucksacheTextImporter(
         params: Optional[DrucksacheParameter] = None,
         response_limit=1000,
         proxy_list: ProxyList | None = None,
+        **kwargs: Any,
     ) -> Iterator[DIPDrucksache]:
         """Fetch data."""
 
-        for model in self.dip_bundestag_facade.get_drucksachen_text(
+        for model in self.facade.get_drucksachen_text(
             params=params,
             response_limit=response_limit,
             proxy_list=proxy_list,
@@ -126,7 +127,7 @@ class DIPBundestagDrucksacheTextImporter(
                     ),
                     proxy_list=proxy_list,
                 ):
-                    db_model.vorgang.append(vorgang_pydantic)
+                    db_model.vorgaenge.append(vorgang_pydantic)
 
             yield db_model
 

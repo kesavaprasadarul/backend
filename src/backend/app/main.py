@@ -1,78 +1,37 @@
 """Entry point for FastAPI including API routers (endpoints)."""
 import time
 from contextlib import asynccontextmanager
-from datetime import datetime, timedelta, date
+import uvicorn
+
 from logging import getLogger
 from sched import scheduler
 
-from apscheduler.events import EVENT_JOB_ERROR, EVENT_JOB_EXECUTED
-from apscheduler.schedulers.asyncio import AsyncIOScheduler
-from apscheduler.schedulers.background import BackgroundScheduler
-from fastapi import FastAPI, middleware
 from fastapi.middleware.cors import CORSMiddleware
-
+from fastapi import FastAPI, middleware
 from backend.app.api.v1.api import api_router
 from backend.app.core.config import settings
 from backend.app.core.logging import configure_logging
-from backend.app.importer.abstimmung_importer import FetchTypes, import_abstimmungen
-from backend.app.importer.mandate_importer import import_mandate
+
+from backend.app.scheduler import init_schedules, shutdown_scheduler
 
 _logger = getLogger(__name__)
 
 configure_logging()
 
-app_scheduler = AsyncIOScheduler()
-
-
-def startup_imports_job():
-    """Startup event."""
-    import_mandate()
-
-    import_abstimmungen(
-        fetch=FetchTypes.MISSING,
-        date_start=date(2023, 1, 1),
-        date_end=(date.today() + timedelta(weeks=1)),
-    )
-
-
-def execution_listener(event):
-    if event.exception:
-        _logger.error(f"Job crashed: {event.job_id}")
-        if event.job_id == 'startup_imports':
-            app_scheduler.add_job(
-                startup_imports_job,
-                id=event.job_id,
-                trigger='date',
-                next_run_time=datetime.now() + timedelta(minutes=60),
-            )
-    else:
-        _logger.info(f"Job finished: {event.job_id}")
-        if event.job_id == 'startup_imports':
-            app_scheduler.add_job(
-                import_abstimmungen,
-                id='cron_import_abstimmungen',
-                kwargs={'fetch': FetchTypes.NEW},
-                trigger='cron',
-                minute='*/15',
-                max_instances=1,
-            )
+importer = True
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Startup event."""
+    _logger.info("Starting up...")
 
-    app_scheduler.add_job(
-        startup_imports_job,
-        id='startup_imports',
-        next_run_time=datetime.now(),
-    )
-    app_scheduler.add_listener(execution_listener, EVENT_JOB_EXECUTED | EVENT_JOB_ERROR)
-    app_scheduler.start()
+    if importer:
+        init_schedules()
 
     yield
 
-    app_scheduler.shutdown(wait=True)
+    shutdown_scheduler()
 
 
 origins = [
@@ -93,3 +52,6 @@ app.add_middleware(
 )
 
 app.include_router(api_router, prefix=f"{settings.API_V1_STR}")
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)

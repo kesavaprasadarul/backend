@@ -14,6 +14,7 @@ class Settings(BaseSettings):
     POSTGRES_DB: str = pyd.Field(default="fastapi")
     POSTGRES_PASSWORD: str = pyd.Field(default="password")
     POSTGRES_SERVER: str = pyd.Field(default="localhost")
+    POSTGRES_PORT: str = pyd.Field(default="5432")
     POSTGRES_USER: str = pyd.Field(default="admin")
 
     # Deutscher Bundestag
@@ -21,6 +22,8 @@ class Settings(BaseSettings):
         default="rgsaY4U.oZRQKUHdJhF9qguHMkwCGIoLaqEcaHjYLF"
     )  # api key valid till end of may 2024
     DIP_BUNDESTAG_BASE_URL: str = pyd.Field(default="https://search.dip.bundestag.de")
+
+    BUNDESTAG_ABSTIMMUNGEN_URL: str = pyd.Field(default="https://www.bundestag.de")
 
     # Proxy Lists
     PROXY_LIST_HTTP_URL: str = pyd.Field(

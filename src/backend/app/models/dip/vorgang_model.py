@@ -1,5 +1,6 @@
 """Deutscher Bundestag Drucksache SQLAlchemy Models for creating associated tables in database."""
 from datetime import date, datetime
+from typing import List
 
 from sqlalchemy import ForeignKey, Text
 from sqlalchemy.dialects.postgresql import ARRAY
@@ -8,7 +9,7 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 from backend.app.db.database import Base
 from backend.app.facades.deutscher_bundestag.model import VorgangDeskriptorTyp, VorgangTyp
 from backend.app.models.common import DIPSchema, TimestampMixin
-from backend.app.models.deutscher_bundestag.vorgangsposition_model import DIPVorgangsposition
+from backend.app.models.dip.vorgangsposition_model import DIPVorgangsposition
 
 
 class DIPVorgang(Base, TimestampMixin, DIPSchema):
@@ -36,13 +37,6 @@ class DIPVorgang(Base, TimestampMixin, DIPSchema):
     mitteilung: Mapped[str] = mapped_column(nullable=True)
     sek: Mapped[str] = mapped_column(nullable=True)
 
-    drucksache_id: Mapped[int] = mapped_column(
-        ForeignKey("dip.drucksache.id", ondelete="SET NULL", onupdate="CASCADE"), nullable=True
-    )
-    plenarprotokoll_id: Mapped[int] = mapped_column(
-        ForeignKey("dip.plenarprotokoll.id", ondelete="SET NULL", onupdate="CASCADE"), nullable=True
-    )
-
     deskriptor: Mapped[list["DIPVorgangDeskriptor"]] = relationship(
         cascade='merge, save-update, delete, delete-orphan'
     )
@@ -63,6 +57,14 @@ class DIPVorgang(Base, TimestampMixin, DIPSchema):
         cascade='merge, save-update',
         foreign_keys="DIPVorgangsposition.vorgang_id",
         primaryjoin="DIPVorgang.id==DIPVorgangsposition.vorgang_id",
+    )
+
+    drucksachen: Mapped[List["DIPDrucksacheVorgangAssociation"]] = relationship(
+        back_populates="vorgang",
+    )
+
+    plenarprotokolle: Mapped[List["DIPPlenarprotokollVorgangAssociation"]] = relationship(
+        back_populates="vorgang",
     )
 
 

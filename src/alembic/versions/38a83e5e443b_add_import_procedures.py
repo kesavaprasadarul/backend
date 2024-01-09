@@ -131,7 +131,7 @@ def upgrade() -> None:
 				, vorgangstyp_filter;
 			
 			-- Debug
-		--	 /*
+			 /*
 				DROP TABLE IF EXISTS temp_params;
 				CREATE TEMPORARY TABLE temp_params AS 
 				SELECT '{

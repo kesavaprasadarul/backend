@@ -10,7 +10,7 @@ from sqlalchemy.exc import OperationalError
 
 from backend.app.crud.base import CRUDBase
 from backend.app.facades.deutscher_bundestag.model import Zuordnung
-from backend.app.models.deutscher_bundestag.drucksache_model import DIPDrucksache
+from backend.app.models.dip.drucksache_model import DIPDrucksache
 
 _logger = logging.getLogger(__name__)
 

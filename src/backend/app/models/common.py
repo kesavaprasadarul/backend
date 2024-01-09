@@ -12,6 +12,10 @@ class DIPSchema:
     __table_args__ = {"schema": "dip"}
 
 
+class BTSchema:
+    __table_args__ = {"schema": "bt"}
+
+
 class TimestampMixin:
     created_at: Mapped[datetime] = mapped_column(
         nullable=False,
