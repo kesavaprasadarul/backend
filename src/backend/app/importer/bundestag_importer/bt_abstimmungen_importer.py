@@ -27,6 +27,7 @@ from backend.app.models.bundestag.abstimmung_model import (
     BTPerson,
     BTRede,
 )
+from typing import Any, Generic, Iterator, MutableMapping, Optional, TypeVar
 
 _logger = logging.getLogger(__name__)
 
@@ -37,6 +38,41 @@ class BTAbstimmungenImporter(
     def __init__(self, import_rede: bool = True):
         super().__init__(crud=CRUD_BUNDESTAG_ABSTIMMUNG)
         self.import_rede = import_rede
+
+    def batch_upsert(
+        self,
+        params: Optional[BundestagAbstimmungenPointerParameter] = None,
+        response_limit: int = 1000,
+        proxy_list: ProxyList | None = None,
+        upsert_batch_size: int = 100,
+        **kwargs: Any,
+    ):
+        batch: list[BTAbstimmung] = []
+        batch_number = 0
+        for db_model in self.fetch_data(
+            params=params,
+            response_limit=response_limit,
+            proxy_list=proxy_list,
+        ):
+            batch.append(db_model)
+
+            if len(batch) >= upsert_batch_size:
+                _logger.debug(
+                    f'Upserting batch {batch_number} into {db_model.__tablename__}-Table.'
+                )
+                self.crud.upsert_many(batch)
+                batch = []
+                batch_number += 1
+                self.imported_count += upsert_batch_size
+
+        if batch:
+            _logger.debug(
+                f'Upserting final batch ({batch_number}) into {batch[0].__tablename__}-Table.'
+            )
+            self.crud.create_or_update_multi(batch)
+            self.imported_count += len(batch)
+
+        _logger.debug(f'Imported {self.imported_count} {self.crud.model.__tablename__}.')
 
     def transform_model(self, data: BundestagAbstimmung) -> BTAbstimmung:
         bt_einzelabstimmungen = []

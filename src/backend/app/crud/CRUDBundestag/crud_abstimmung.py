@@ -2,10 +2,10 @@
 import datetime
 import logging
 
-from pydantic import BaseModel
-
 from backend.app.crud.base import CRUDBase
 from backend.app.models.bundestag.abstimmung_model import BTAbstimmung
+
+_logger = logging.getLogger(__name__)
 
 
 class CRUDBundestagAbstimmung(CRUDBase[BTAbstimmung]):

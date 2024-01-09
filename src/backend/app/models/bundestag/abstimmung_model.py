@@ -58,9 +58,7 @@ class BTEinzelpersonAbstimmung(Base, TimestampMixin, BTSchema):
     vote: Mapped[Vote] = mapped_column(nullable=False)
 
     person: Mapped["BTPerson"] = relationship(
-        "BTPerson",
-        back_populates="individual_votes",
-        cascade="merge, save-update",
+        "BTPerson", back_populates="individual_votes", cascade="merge, save-update"
     )
 
     abstimmung: Mapped["BTAbstimmung"] = relationship(
