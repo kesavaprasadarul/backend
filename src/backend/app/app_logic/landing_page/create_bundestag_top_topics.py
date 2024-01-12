@@ -63,7 +63,6 @@ def create_bundestag_top_topics(
     plenarprotokoll_vorgangsbezuege: list[PlenarprotokollVorgangsbezug] = []
     for plenarprotokoll in plenarprotokolle:
         _logger.info("Fetch vorgangsbezuge for plenarprotokoll with id %d", plenarprotokoll.id)
-        time.sleep(0.5)
         plenarprotokoll_vorgangsbezuege.extend(
             dip_bundestag_facade.get_vorgangsbezuege_of_plenarprotokoll_by_id(
                 plenarprotokoll_id=plenarprotokoll.id
