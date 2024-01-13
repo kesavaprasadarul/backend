@@ -179,6 +179,7 @@ TOP_100_NOISE = set(
         'Regionen',
         'Vorhaben',
         'Bundesregierung',
+        'br',
         'Republik',
         'Gesetzentwurf',
         'Klarstellungen',

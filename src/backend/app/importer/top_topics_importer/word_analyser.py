@@ -11,25 +11,39 @@ import fasttext.util  # use pip install fasttext-wheel
 # import nltk
 import numpy as np
 
-from backend.app.core.bundestag_ressorts import BUNDESTAG_RESSORTS
+from backend.app.core.bundestag_ressorts import BUNDESTAG_RESSORT
 from backend.app.core.logging import configure_logging
 from backend.app.utils import get_data_folder
-from collections import Counter
-from backend.app.app_logic.landing_page.word_blacklists import (
+from collections import Counter, defaultdict
+from backend.app.importer.top_topics_importer.word_blacklists import (
     ABGEORDNETEN_NAMEN,
     TOP_100_NOISE,
     GERMAN_ARTICLES,
+    GERMAN_STOPWORDS,
 )
 
 logger = getLogger(__name__)
 
+DEFAULT_STOPWORDS: set[str] = (
+    TOP_100_NOISE | ABGEORDNETEN_NAMEN | GERMAN_ARTICLES | GERMAN_STOPWORDS
+)
+
+
+class WordCount:
+    def __init__(self, word: str, count: int):
+        self.word = word
+        self.count = count
+
+    def __str__(self):
+        return f"Word: {self.word}, Count: {self.count}"
+
 
 # A class that represents a file and allows querying and analysing its content
 class WordCounter:
-    def __init__(self, wordlist):
+    def __init__(self, wordlist, stopwords: set[str] = DEFAULT_STOPWORDS):
         self.wordlist = wordlist
 
-        self.word_blacklist: set[str] = TOP_100_NOISE | ABGEORDNETEN_NAMEN | GERMAN_ARTICLES
+        self.word_blacklist: set[str] = stopwords
 
         model_path = "models/cc.de.300.bin"
         model_path = os.path.join(get_data_folder(), model_path)
@@ -49,11 +63,13 @@ class WordCounter:
         self.ft = fasttext.load_model(model_path)  # German vocabulary , trained on Wikipedia
 
         self.ressort_to_vectors = {
-            ressort: self.ft.get_word_vector(ressort) for ressort in BUNDESTAG_RESSORTS
+            ressort: self.ft.get_word_vector(ressort.value) for ressort in BUNDESTAG_RESSORT
         }
 
     # returns the ressort that is most similar to the given word and a dict of all ressorts and their similarity to the word
-    def word_to_ressort(self, word: str) -> tuple[str | None, dict[str, float]]:
+    def word_to_ressort(
+        self, word: str
+    ) -> tuple[BUNDESTAG_RESSORT | None, dict[BUNDESTAG_RESSORT, float]]:
         best_ressort: str | None = None
         sim_ressorts = {}
         for res, res_vec in self.ressort_to_vectors.items():
@@ -62,6 +78,9 @@ class WordCounter:
             if divisor > 0:
                 val = np.dot(word_vector, res_vec) / divisor
                 if best_ressort and sim_ressorts[best_ressort] < val:
+                    best_ressort = res
+
+                if not best_ressort:
                     best_ressort = res
                 sim_ressorts[res] = val
             else:
@@ -93,18 +112,16 @@ class WordCounter:
 
         return word_counter
 
-    def make_word_cloud(self):
+    def make_word_cloud(self) -> dict[BUNDESTAG_RESSORT, list[tuple[str, int]]]:
         word_counter = self.clean_words()
 
-        for word, count in word_counter.items():
-            ressort = self.word_to_ressort(word)
+        ressort_to_words: dict[BUNDESTAG_RESSORT, list[tuple[str, int]]] = defaultdict(list)
 
-        ressort_to_words = {}
-        for word, ressort in self.word_to_ressort().items():
-            if ressort in ressort_to_words:
-                ressort_to_words[ressort].append((word, dictionary_counts.get(word)))
-            else:
-                ressort_to_words[ressort] = [(word, dictionary_counts.get(word))]
+        for word, count in word_counter.items():
+            ressort, sim_ressorts = self.word_to_ressort(word)
+
+            if ressort:
+                ressort_to_words[ressort].append((word, count))
         return ressort_to_words
 
 
