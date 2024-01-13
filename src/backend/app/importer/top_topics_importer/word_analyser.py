@@ -11,7 +11,7 @@ import fasttext.util  # use pip install fasttext-wheel
 # import nltk
 import numpy as np
 
-from backend.app.core.bundestag_ressorts import BUNDESTAG_RESSORT
+from backend.app.core.bundestag_ressorts import BUNDESTAG_RESSORT, RESSORT_SUBSTITUTIONS
 from backend.app.core.logging import configure_logging
 from backend.app.utils import get_data_folder
 from collections import Counter, defaultdict
@@ -62,7 +62,13 @@ class WordCounter:
         logger.info("Loading fasttext model from %s", model_path)
         self.ft = fasttext.load_model(model_path)  # German vocabulary , trained on Wikipedia
 
-        self.ressort_to_vectors = {
+        # just quick hacky and wrong @ daniel
+        self.ressort_words_to_ressort = {
+            ressort_word
+            for ressort in BUNDESTAG_RESSORT
+            for ressort_word in RESSORT_SUBSTITUTIONS[ressort]
+        }
+        self.ressort_words = {
             ressort: self.ft.get_word_vector(ressort.value) for ressort in BUNDESTAG_RESSORT
         }
 
