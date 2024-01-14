@@ -11,7 +11,7 @@ import fasttext.util  # use pip install fasttext-wheel
 # import nltk
 import numpy as np
 
-from backend.app.core.bundestag_ressorts import BUNDESTAG_RESSORT, RESSORT_SUBSTITUTIONS
+from backend.app.core.bundestag_ressorts import BUNDESTAG_RESSORT, RESSORT_TOPICS
 from backend.app.core.logging import configure_logging
 from backend.app.utils import get_data_folder
 from collections import Counter, defaultdict
@@ -62,15 +62,15 @@ class WordCounter:
         logger.info("Loading fasttext model from %s", model_path)
         self.ft = fasttext.load_model(model_path)  # German vocabulary , trained on Wikipedia
 
-        # just quick hacky and wrong @ daniel
-        self.ressort_words_to_ressort = {
-            ressort_word
-            for ressort in BUNDESTAG_RESSORT
-            for ressort_word in RESSORT_SUBSTITUTIONS[ressort]
+        self.ressort_to_vectors = {
+            ressort: [] for ressort in BUNDESTAG_RESSORT
         }
-        self.ressort_words = {
-            ressort: self.ft.get_word_vector(ressort.value) for ressort in BUNDESTAG_RESSORT
-        }
+
+        for key in self.ressort_to_vectors:
+            word_vectors: list[list] = [self.ft.get_word_vector(ressort_topic) for ressort_topic in RESSORT_TOPICS[key]]
+            # flatten list
+            self.ressort_to_vectors[key] = [word_vector for word_vector in word_vectors]
+
 
     # returns the ressort that is most similar to the given word and a dict of all ressorts and their similarity to the word
     def word_to_ressort(
@@ -79,18 +79,18 @@ class WordCounter:
         best_ressort: str | None = None
         sim_ressorts = {}
         for res, res_vec in self.ressort_to_vectors.items():
-            word_vector = self.ft.get_word_vector(word)
-            divisor = np.linalg.norm(word_vector) * np.linalg.norm(res_vec)
-            if divisor > 0:
-                val = np.dot(word_vector, res_vec) / divisor
-                if best_ressort and sim_ressorts[best_ressort] < val:
-                    best_ressort = res
-
-                if not best_ressort:
-                    best_ressort = res
-                sim_ressorts[res] = val
-            else:
-                sim_ressorts[res] = 0
+            for ressort_topic_vector in res_vec:
+                word_vector = self.ft.get_word_vector(word)
+                divisor = np.linalg.norm(word_vector) * np.linalg.norm(ressort_topic_vector)
+                if divisor > 0:
+                    val = np.dot(word_vector, ressort_topic_vector) / divisor
+                    if best_ressort and sim_ressorts[best_ressort] < val:
+                        best_ressort = res
+                    if not best_ressort:
+                        best_ressort = res
+                    sim_ressorts[res] = val
+                else:
+                    sim_ressorts[res] = 0
 
         return best_ressort, sim_ressorts
 

@@ -90,22 +90,6 @@ def create_bundestag_top_topics(
     word_analyser = WordCounter(plenarprotokoll_vorgangsbezuege_abstract_split)
     topics_by_ressort = word_analyser.make_word_cloud()
 
-    if to_db:
-        # store to db
-        for key in topics_by_ressort:
-            CRUD_TOP_TOPICS.create_or_update_multi(
-                [
-                    TopTopics(
-                        month=month,
-                        year=year,
-                        election_period=election_period,
-                        ressort=key,
-                        word=word_and_value[0],
-                        value=word_and_value[1],
-                    )
-                    for word_and_value in topics_by_ressort[key]
-                ]
-            )
     if output_file_path:
         # store to csv
         df = pd.DataFrame(
@@ -130,6 +114,23 @@ def create_bundestag_top_topics(
         top_topics_by_ressort[key] = sorted(
             topics_by_ressort[key], key=lambda x: x[1], reverse=True
         )[0:5]
+
+    if to_db:
+        # store to db
+        for key in top_topics_by_ressort:
+            CRUD_TOP_TOPICS.create_or_update_multi(
+                [
+                    TopTopics(
+                        month=month,
+                        year=year,
+                        election_period=election_period,
+                        ressort=key,
+                        word=word_and_value[0],
+                        value=word_and_value[1],
+                    )
+                    for word_and_value in top_topics_by_ressort[key]
+                ]
+            )
 
     return top_topics_by_ressort
 

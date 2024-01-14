@@ -24,20 +24,40 @@ class BUNDESTAG_RESSORT(StrEnum):
 
 
 """Contains subset of ressorts that are used for bundestag top topics."""
-RESSORT_SUBSTITUTIONS = {
-    BUNDESTAG_RESSORT.WIRTSCHAFT: ["Wirtschaft", 'Klimaschutz'],
+RESSORT_TOPICS = {
+    BUNDESTAG_RESSORT.WIRTSCHAFT: ["Wirtschaft"],
     BUNDESTAG_RESSORT.FINANZEN: ["Finanzen"],
-    BUNDESTAG_RESSORT.INNENPOLITIK: ["Innenpolitik", 'Heimat'],
+    BUNDESTAG_RESSORT.INNENPOLITIK: ["Innenpolitik"],
     BUNDESTAG_RESSORT.AUSSENPOLITIK: ["Außenpolitik"],
     BUNDESTAG_RESSORT.JUSTIZ: ["Justiz"],
-    BUNDESTAG_RESSORT.ARBEIT: ["Arbeit", 'Soziales'],
-    BUNDESTAG_RESSORT.VERTEIDIGUNG: ["Militär"],
-    BUNDESTAG_RESSORT.LANDWIRTSCHAFT: ["Ernährung", "Landwirtschaft"],
-    BUNDESTAG_RESSORT.FAMILIE: ["Familie"],  # , "Senioren"]
+    BUNDESTAG_RESSORT.ARBEIT: ["Arbeit"],
+    BUNDESTAG_RESSORT.VERTEIDIGUNG: ["Verteidigung"],
+    BUNDESTAG_RESSORT.LANDWIRTSCHAFT: ["Landwirtschaft"],
+    BUNDESTAG_RESSORT.FAMILIE: ["Familie"],
     BUNDESTAG_RESSORT.GESUNDHEIT: ["Gesundheit"],
     BUNDESTAG_RESSORT.VERKEHR_UND_DIGITALISIERUNG: ["Digitales", "Verkehr"],
-    BUNDESTAG_RESSORT.UMWELT: ["Umwelt", 'Naturschutz', 'nukleare Sicherheit', 'Verbraucherschutz'],
+    BUNDESTAG_RESSORT.UMWELT: ["Umwelt"],
     BUNDESTAG_RESSORT.BILDUNG_UND_FORSCHUNG: ["Bildung", "Forschung"],
-    BUNDESTAG_RESSORT.ENTWICKLUNG: ["Entwicklung", 'wirtschaftliche Zusammenarbeit'],
-    BUNDESTAG_RESSORT.WOHNUNGSBAU: ["Wohnungsbau", 'Wohnen', 'Stadtentwicklung', 'Bauwesen'],
+    BUNDESTAG_RESSORT.ENTWICKLUNG: ["Entwicklung"],
+    BUNDESTAG_RESSORT.WOHNUNGSBAU: ["Wohnungsbau"],
 }
+
+
+# """Contains subset of ressorts that are used for bundestag top topics."""
+# RESSORT_SUBSTITUTIONS = {
+#     BUNDESTAG_RESSORT.WIRTSCHAFT: ["Wirtschaft", 'Klimaschutz'],
+#     BUNDESTAG_RESSORT.FINANZEN: ["Finanzen"],
+#     BUNDESTAG_RESSORT.INNENPOLITIK: ["Innenpolitik", 'Heimat'],
+#     BUNDESTAG_RESSORT.AUSSENPOLITIK: ["Außenpolitik"],
+#     BUNDESTAG_RESSORT.JUSTIZ: ["Justiz"],
+#     BUNDESTAG_RESSORT.ARBEIT: ["Arbeit", 'Soziales'],
+#     BUNDESTAG_RESSORT.VERTEIDIGUNG: ["Militär"],
+#     BUNDESTAG_RESSORT.LANDWIRTSCHAFT: ["Ernährung", "Landwirtschaft"],
+#     BUNDESTAG_RESSORT.FAMILIE: ["Familie"],  # , "Senioren"]
+#     BUNDESTAG_RESSORT.GESUNDHEIT: ["Gesundheit"],
+#     BUNDESTAG_RESSORT.VERKEHR_UND_DIGITALISIERUNG: ["Digitales", "Verkehr"],
+#     BUNDESTAG_RESSORT.UMWELT: ["Umwelt", 'Naturschutz', 'nukleare Sicherheit', 'Verbraucherschutz'],
+#     BUNDESTAG_RESSORT.BILDUNG_UND_FORSCHUNG: ["Bildung", "Forschung"],
+#     BUNDESTAG_RESSORT.ENTWICKLUNG: ["Entwicklung", 'wirtschaftliche Zusammenarbeit'],
+#     BUNDESTAG_RESSORT.WOHNUNGSBAU: ["Wohnungsbau", 'Wohnen', 'Stadtentwicklung', 'Bauwesen'],
+# }
