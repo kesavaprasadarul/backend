@@ -2,3 +2,4 @@
 dist
 */*_cache
 .venv
+data/models/cc.de.300.bin
