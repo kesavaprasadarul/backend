@@ -107,6 +107,7 @@ def import_dip_bundestag():
     importer.import_data(
         params=params,
         response_limit=100,
+        upsert_batch_size=1,
     )
 
 

@@ -121,6 +121,7 @@ class DIPBundestagVorgangImporter(DIPImporter[Vorgang, VorgangParameter, DIPVorg
                     ),
                     proxy_list=proxy_list,
                 ):
+                    vorgangsposition.vorgang_id = db_model.id
                     db_model.vorgangsposition.append(vorgangsposition)
 
             yield db_model

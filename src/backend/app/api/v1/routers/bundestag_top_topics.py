@@ -4,10 +4,10 @@ import logging
 import fastapi
 
 from backend.app.api.v1.models.responses import BundestagTopTopicsApiResponse
-from backend.app.app_logic.landing_page.create_bundestag_top_topics import (
+from backend.app.importer.top_topics_importer.create_bundestag_top_topics import (
     create_bundestag_top_topics,
 )
-from backend.app.core.bundestag_ressorts import BUNDESTAG_RESSORTS
+from backend.app.core.bundestag_ressorts import BUNDESTAG_RESSORT
 from backend.app.services.bundestag_top_topics.service import BundestagTopTopicsService
 
 _logger = logging.getLogger(__name__)
@@ -28,13 +28,13 @@ def get_bundestag_top_topics(
         election_period=election_period,
     )
 
-    top_topics_by_ressort: dict[str, list[list]] = {}
+    top_topics_by_ressort: dict[BUNDESTAG_RESSORT, list[tuple[str, int]]] = {}
 
-    for ressort in BUNDESTAG_RESSORTS:
+    for ressort in BUNDESTAG_RESSORT:
         top_topics_by_ressort[ressort] = [
-            [top_topic.word, top_topic.value]
+            (top_topic.word, top_topic.value)
             for top_topic in bundestag_top_topics
-            if top_topic.ressort == ressort
+            if top_topic.ressort == ressort.value
         ]
 
     api_response = BundestagTopTopicsApiResponse(
@@ -48,9 +48,9 @@ def get_bundestag_top_topics(
 def post_bundestag_top_topics(
     month: int | None = None, year: int | None = None, election_period: int | None = None
 ):
-    top_topics_per_ressort: dict[str, list[list]] = create_bundestag_top_topics(
-        month, year, election_period
-    )
+    top_topics_per_ressort: dict[
+        BUNDESTAG_RESSORT, list[tuple[str, int]]
+    ] = create_bundestag_top_topics(month, year, election_period)
 
     return BundestagTopTopicsApiResponse(
         month=month, year=year, election_period=election_period, top_topics=top_topics_per_ressort

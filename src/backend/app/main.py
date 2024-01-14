@@ -18,7 +18,7 @@ _logger = getLogger(__name__)
 
 configure_logging()
 
-importer = True
+importer = False
 
 
 @asynccontextmanager
