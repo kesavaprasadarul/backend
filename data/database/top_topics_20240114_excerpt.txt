@@ -1,0 +1,3527 @@
+1,Wirtschaft,Kultur,5,1,2020,\N
+2,Wirtschaft,Wirtschaft,5,1,2020,\N
+3,Wirtschaft,Wechselkurs,3,1,2020,\N
+4,Wirtschaft,Schweizer,3,1,2020,\N
+5,Wirtschaft,Gesellschaft,2,1,2020,\N
+6,Verkehr und Digitalisierung,Bahn,8,1,2020,\N
+7,Verkehr und Digitalisierung,Verkehr,8,1,2020,\N
+8,Verkehr und Digitalisierung,Öffentlichkeitsbeteiligung,3,1,2020,\N
+9,Verkehr und Digitalisierung,Raum,3,1,2020,\N
+10,Verkehr und Digitalisierung,Serviceangeboten,3,1,2020,\N
+11,Landwirtschaft,Landwirtschaft,5,1,2020,\N
+12,Landwirtschaft,Kreta,4,1,2020,\N
+13,Landwirtschaft,Grünen,3,1,2020,\N
+14,Landwirtschaft,Energieerzeugungskapazitäten,3,1,2020,\N
+15,Landwirtschaft,Region,3,1,2020,\N
+16,Entwicklung,Hinwirken,9,1,2020,\N
+17,Entwicklung,Inwieweit,8,1,2020,\N
+18,Entwicklung,Gesetzentwurfs,7,1,2020,\N
+19,Entwicklung,Kenntnisse,7,1,2020,\N
+20,Entwicklung,Ebene,6,1,2020,\N
+21,Verteidigung,Aufklärung,8,1,2020,\N
+22,Verteidigung,Soldaten,7,1,2020,\N
+23,Verteidigung,Tötung,7,1,2020,\N
+24,Verteidigung,Streitkräfte,5,1,2020,\N
+25,Verteidigung,Ablehnung,4,1,2020,\N
+26,Umwelt,Klimaschutzprogramm,4,1,2020,\N
+27,Umwelt,Energien,4,1,2020,\N
+28,Umwelt,Energie,3,1,2020,\N
+29,Umwelt,Naturschutz,3,1,2020,\N
+30,Umwelt,Klimaschutz,2,1,2020,\N
+31,Arbeit,Engagement,9,1,2020,\N
+32,Arbeit,Stellen,9,1,2020,\N
+33,Arbeit,Berichterstattung,7,1,2020,\N
+34,Arbeit,Genehmigung,6,1,2020,\N
+35,Arbeit,Wochen,6,1,2020,\N
+36,Justiz,Gesichtserkennung,5,1,2020,\N
+37,Justiz,Urteil,5,1,2020,\N
+38,Justiz,Bundeswehr,5,1,2020,\N
+39,Justiz,Bundespolizei,4,1,2020,\N
+40,Justiz,Bundesbehörden,4,1,2020,\N
+41,Wohnungsbau,Menschenrecht,11,1,2020,\N
+42,Wohnungsbau,Einzelmaßnahmen,7,1,2020,\N
+43,Wohnungsbau,Familiennachzug,5,1,2020,\N
+44,Wohnungsbau,Gigawatt,5,1,2020,\N
+45,Wohnungsbau,Strukturwandel,4,1,2020,\N
+46,Gesundheit,Barrierefreiheit,8,1,2020,\N
+47,Gesundheit,Freiheit,3,1,2020,\N
+48,Gesundheit,Leben,3,1,2020,\N
+49,Gesundheit,Gesundheit,3,1,2020,\N
+50,Gesundheit,Ernährung,2,1,2020,\N
+51,Bildung und Forschung,Information,7,1,2020,\N
+52,Bildung und Forschung,Zweck,7,1,2020,\N
+53,Bildung und Forschung,Stiftung,6,1,2020,\N
+54,Bildung und Forschung,Soleimanis,4,1,2020,\N
+55,Bildung und Forschung,Bildungspolitik,3,1,2020,\N
+56,Außenpolitik,Auswärtigen,6,1,2020,\N
+57,Außenpolitik,Ramstein,6,1,2020,\N
+58,Außenpolitik,Türkei,5,1,2020,\N
+59,Außenpolitik,Libyen,5,1,2020,\N
+60,Außenpolitik,Soleimani,5,1,2020,\N
+61,Familie,Generals,4,1,2020,\N
+62,Familie,Heimat,4,1,2020,\N
+63,Familie,Nachkommen,3,1,2020,\N
+64,Familie,Teilt,3,1,2020,\N
+65,Familie,Kindern,3,1,2020,\N
+66,Innenpolitik,Schuldenbremse,3,1,2020,\N
+67,Innenpolitik,Bundesebene,3,1,2020,\N
+68,Innenpolitik,Grundgesetz,2,1,2020,\N
+69,Innenpolitik,Extremismus,2,1,2020,\N
+70,Innenpolitik,URENCO,2,1,2020,\N
+71,Finanzen,Finanzmittel,2,1,2020,\N
+72,Finanzen,Angelegenheiten,2,1,2020,\N
+73,Finanzen,Personal,2,1,2020,\N
+74,Finanzen,Visa,2,1,2020,\N
+75,Finanzen,Papiere,2,1,2020,\N
+76,Entwicklung,Gesetzentwurfs,8,2,2020,\N
+77,Entwicklung,Hinwirken,6,2,2020,\N
+78,Entwicklung,Einbringung,5,2,2020,\N
+79,Entwicklung,Ebene,3,2,2020,\N
+80,Entwicklung,Wirksamkeit,3,2,2020,\N
+81,Verkehr und Digitalisierung,Bahn,5,2,2020,\N
+82,Verkehr und Digitalisierung,Verkehr,5,2,2020,\N
+83,Verkehr und Digitalisierung,Burkert,3,2,2020,\N
+84,Verkehr und Digitalisierung,Eisenbahnstrecken,2,2,2020,\N
+85,Verkehr und Digitalisierung,Rechnungszuschlag,2,2,2020,\N
+86,Gesundheit,Schäden,3,2,2020,\N
+87,Gesundheit,Gesundheit,3,2,2020,\N
+88,Gesundheit,Kindes,3,2,2020,\N
+89,Gesundheit,Krankenkassen,3,2,2020,\N
+90,Gesundheit,Versicherten,3,2,2020,\N
+91,Landwirtschaft,Region,4,2,2020,\N
+92,Landwirtschaft,Gebieten,3,2,2020,\N
+93,Landwirtschaft,Rumänien,3,2,2020,\N
+94,Landwirtschaft,Kolonialzeit,3,2,2020,\N
+95,Landwirtschaft,Kraftstoffe,3,2,2020,\N
+96,Bildung und Forschung,Entwicklungszusammenarbeit,5,2,2020,\N
+97,Bildung und Forschung,Petitionensausschusses,5,2,2020,\N
+98,Bildung und Forschung,Information,3,2,2020,\N
+99,Bildung und Forschung,Instituts,2,2,2020,\N
+100,Bildung und Forschung,Beirats,2,2,2020,\N
+101,Arbeit,Stellen,5,2,2020,\N
+102,Arbeit,Beiträge,3,2,2020,\N
+103,Arbeit,Entschädigung,3,2,2020,\N
+104,Arbeit,Versammlung,3,2,2020,\N
+105,Arbeit,Berichterstattung,2,2,2020,\N
+106,Außenpolitik,Vereinigten,3,2,2020,\N
+107,Außenpolitik,Nachbarstaaten,3,2,2020,\N
+108,Außenpolitik,Freihandelsabkommens,2,2,2020,\N
+109,Außenpolitik,Friedensmission,2,2,2020,\N
+110,Außenpolitik,Darfur,2,2,2020,\N
+111,Wirtschaft,Bundesländern,5,2,2020,\N
+112,Wirtschaft,Schweizer,3,2,2020,\N
+113,Wirtschaft,Schweiz,3,2,2020,\N
+114,Wirtschaft,Großbritannien,3,2,2020,\N
+115,Wirtschaft,Vertretern,3,2,2020,\N
+116,Wohnungsbau,Mietpreisbremse,5,2,2020,\N
+117,Wohnungsbau,Entwicklungsfonds,5,2,2020,\N
+118,Wohnungsbau,Berliner,4,2,2020,\N
+119,Wohnungsbau,Wohnungsmärkten,3,2,2020,\N
+120,Wohnungsbau,Mietanstiegs,2,2,2020,\N
+121,Umwelt,Katastrophenschutz,2,2,2020,\N
+122,Umwelt,Atomkraftwerken,2,2,2020,\N
+123,Umwelt,Entsorgungssystemen,1,2,2020,\N
+124,Umwelt,Smart,1,2,2020,\N
+125,Umwelt,Nachhaltigkeitszielen,1,2,2020,\N
+126,Justiz,Assange,7,2,2020,\N
+127,Justiz,Sudan,4,2,2020,\N
+128,Justiz,Gesetzbuch,3,2,2020,\N
+129,Justiz,Einführungsgesetz,3,2,2020,\N
+130,Justiz,Bürgerlichen,3,2,2020,\N
+131,Familie,Lebensgemeinschaft,3,2,2020,\N
+132,Familie,Bela,3,2,2020,\N
+133,Familie,Bach,3,2,2020,\N
+134,Familie,Königreich,3,2,2020,\N
+135,Familie,Haushaltsziel,2,2,2020,\N
+136,Finanzen,Personal,3,2,2020,\N
+137,Finanzen,Sonderbericht,2,2,2020,\N
+138,Finanzen,Einkommen,2,2,2020,\N
+139,Finanzen,Finanzinformationen,2,2,2020,\N
+140,Finanzen,Versicherung,2,2,2020,\N
+141,Verteidigung,Streitkräfte,7,2,2020,\N
+142,Verteidigung,Abzug,3,2,2020,\N
+143,Verteidigung,Aufklärung,2,2,2020,\N
+144,Verteidigung,Opfer,2,2,2020,\N
+145,Verteidigung,Truppen,2,2,2020,\N
+146,Innenpolitik,Ungarn,3,2,2020,\N
+147,Innenpolitik,Urenco,2,2,2020,\N
+148,Innenpolitik,Aufenthaltsgesetzes,2,2,2020,\N
+149,Innenpolitik,Islamismus,1,2,2020,\N
+150,Innenpolitik,Extremismus,1,2,2020,\N
+151,Verkehr und Digitalisierung,Bahn,7,3,2020,\N
+152,Verkehr und Digitalisierung,Bundesfernstraßen,4,3,2020,\N
+153,Verkehr und Digitalisierung,Brücken,4,3,2020,\N
+154,Verkehr und Digitalisierung,Verkehr,4,3,2020,\N
+155,Verkehr und Digitalisierung,Inseln,3,3,2020,\N
+156,Arbeit,Tätigkeit,6,3,2020,\N
+157,Arbeit,Dienste,6,3,2020,\N
+158,Arbeit,Sitzung,6,3,2020,\N
+159,Arbeit,Beschäftigte,6,3,2020,\N
+160,Arbeit,Titel,5,3,2020,\N
+161,Finanzen,Kredite,4,3,2020,\N
+162,Finanzen,Personal,4,3,2020,\N
+163,Finanzen,Fristen,3,3,2020,\N
+164,Finanzen,Insolvenzantragspflicht,2,3,2020,\N
+165,Finanzen,Stundung,2,3,2020,\N
+166,Wohnungsbau,Zusatzausgaben,8,3,2020,\N
+167,Wohnungsbau,Flüchtlinge,5,3,2020,\N
+168,Wohnungsbau,Migranten,4,3,2020,\N
+169,Wohnungsbau,Sozialgesetzbuch,3,3,2020,\N
+170,Wohnungsbau,Building,3,3,2020,\N
+171,Entwicklung,Aussetzung,14,3,2020,\N
+172,Entwicklung,Gesetzentwurfs,11,3,2020,\N
+173,Entwicklung,Hinwirken,7,3,2020,\N
+174,Entwicklung,Voraussetzungen,7,3,2020,\N
+175,Entwicklung,Einschränkung,6,3,2020,\N
+176,Bildung und Forschung,Coronavirus,7,3,2020,\N
+177,Bildung und Forschung,Gender,5,3,2020,\N
+178,Bildung und Forschung,Gutachten,5,3,2020,\N
+179,Bildung und Forschung,Wissenschaft,5,3,2020,\N
+180,Bildung und Forschung,Moratorium,4,3,2020,\N
+181,Landwirtschaft,Bundesanstalt,5,3,2020,\N
+182,Landwirtschaft,Kanada,5,3,2020,\N
+183,Landwirtschaft,Thüringen,5,3,2020,\N
+184,Landwirtschaft,Betriebe,4,3,2020,\N
+185,Landwirtschaft,Gemischten,4,3,2020,\N
+186,Verteidigung,Streitkräfte,10,3,2020,\N
+187,Verteidigung,Grenze,5,3,2020,\N
+188,Verteidigung,Vertreter,5,3,2020,\N
+189,Verteidigung,Forderungen,4,3,2020,\N
+190,Verteidigung,Opfer,3,3,2020,\N
+191,Außenpolitik,Türkei,11,3,2020,\N
+192,Außenpolitik,Mandatsobergrenze,7,3,2020,\N
+193,Außenpolitik,Bundeskanzlerin,7,3,2020,\N
+194,Außenpolitik,Irak,5,3,2020,\N
+195,Außenpolitik,Abkommens,5,3,2020,\N
+196,Gesundheit,Dauer,5,3,2020,\N
+197,Gesundheit,Funktionsfähigkeit,4,3,2020,\N
+198,Gesundheit,Patienten,3,3,2020,\N
+199,Gesundheit,Gesundheit,3,3,2020,\N
+200,Gesundheit,Verbraucherschutz,3,3,2020,\N
+201,Umwelt,Vereinten,5,3,2020,\N
+202,Umwelt,Schutzstatus,3,3,2020,\N
+203,Umwelt,Ressourcen,2,3,2020,\N
+204,Umwelt,Inherent,2,3,2020,\N
+205,Umwelt,Entsorgung,2,3,2020,\N
+206,Justiz,Verfassungsschutz,6,3,2020,\N
+207,Justiz,KrWaffKontrG,4,3,2020,\N
+208,Justiz,Grundrechten,3,3,2020,\N
+209,Justiz,Rechtsgrundlage,3,3,2020,\N
+210,Justiz,Auskunftssperre,3,3,2020,\N
+211,Wirtschaft,Griechenland,10,3,2020,\N
+212,Wirtschaft,Wirtschaft,6,3,2020,\N
+213,Wirtschaft,Maritimen,4,3,2020,\N
+214,Wirtschaft,Bundesländern,4,3,2020,\N
+215,Wirtschaft,Krise,3,3,2020,\N
+216,Innenpolitik,GUARDIAN,5,3,2020,\N
+217,Innenpolitik,Waffenschmuggel,4,3,2020,\N
+218,Innenpolitik,Rechtsextremismus,3,3,2020,\N
+219,Innenpolitik,Ministerpräsidenten,3,3,2020,\N
+220,Innenpolitik,Sozialleistungen,2,3,2020,\N
+221,Familie,Kinder,8,3,2020,\N
+222,Familie,Heimat,7,3,2020,\N
+223,Familie,Angela,4,3,2020,\N
+224,Familie,Eltern,3,3,2020,\N
+225,Familie,Oswin,3,3,2020,\N
+226,Entwicklung,Gesetzentwurfs,13,4,2020,\N
+227,Entwicklung,Öffnung,11,4,2020,\N
+228,Entwicklung,Aussetzung,10,4,2020,\N
+229,Entwicklung,Eindämmung,8,4,2020,\N
+230,Entwicklung,Gewährung,8,4,2020,\N
+231,Arbeit,Engagement,7,4,2020,\N
+232,Arbeit,Hilfen,4,4,2020,\N
+233,Arbeit,Anspruch,4,4,2020,\N
+234,Arbeit,Ersetzen,4,4,2020,\N
+235,Arbeit,Hilfe,3,4,2020,\N
+236,Außenpolitik,Demokratie,5,4,2020,\N
+237,Außenpolitik,Abgeordnetenentschädigung,3,4,2020,\N
+238,Außenpolitik,Generalversammlungen,3,4,2020,\N
+239,Außenpolitik,Sanktionen,3,4,2020,\N
+240,Außenpolitik,Umsatzsteuergesetz,2,4,2020,\N
+241,Umwelt,Green,2,4,2020,\N
+242,Umwelt,Gewässer,2,4,2020,\N
+243,Umwelt,Atomkraft,1,4,2020,\N
+244,Umwelt,Klimaschutz,1,4,2020,\N
+245,Umwelt,Tschernobyl,1,4,2020,\N
+246,Finanzen,Einkommen,4,4,2020,\N
+247,Finanzen,Vermögensabgabe,4,4,2020,\N
+248,Finanzen,Personal,3,4,2020,\N
+249,Finanzen,Bundeszuschusses,2,4,2020,\N
+250,Finanzen,Deals,1,4,2020,\N
+251,Bildung und Forschung,Instrumente,4,4,2020,\N
+252,Bildung und Forschung,Ausbildungsförderung,4,4,2020,\N
+253,Bildung und Forschung,Coronavirus,4,4,2020,\N
+254,Bildung und Forschung,Sommersemesters,4,4,2020,\N
+255,Bildung und Forschung,Förderinstrumente,3,4,2020,\N
+256,Landwirtschaft,Landesaufnahme,3,4,2020,\N
+257,Landwirtschaft,Genossenschaften,3,4,2020,\N
+258,Landwirtschaft,Hangneigung,2,4,2020,\N
+259,Landwirtschaft,Geologischen,2,4,2020,\N
+260,Landwirtschaft,Ausgleichszahlungen,2,4,2020,\N
+261,Verkehr und Digitalisierung,Fahrkostenzuschuss,3,4,2020,\N
+262,Verkehr und Digitalisierung,Bahn,3,4,2020,\N
+263,Verkehr und Digitalisierung,Handel,2,4,2020,\N
+264,Verkehr und Digitalisierung,Internet,2,4,2020,\N
+265,Verkehr und Digitalisierung,Telemedienangeboten,2,4,2020,\N
+266,Wirtschaft,Kurzarbeitergeld,7,4,2020,\N
+267,Wirtschaft,Europäischer,6,4,2020,\N
+268,Wirtschaft,Kurzarbeitergeldes,6,4,2020,\N
+269,Wirtschaft,Organisationen,4,4,2020,\N
+270,Wirtschaft,Sachsen,4,4,2020,\N
+271,Justiz,Straftaten,5,4,2020,\N
+272,Justiz,Bundesländer,4,4,2020,\N
+273,Justiz,Staatsanwaltschaft,3,4,2020,\N
+274,Justiz,Grundrechten,3,4,2020,\N
+275,Justiz,Frontex,3,4,2020,\N
+276,Innenpolitik,Grenzkontrollen,5,4,2020,\N
+277,Innenpolitik,Arbeitslosenversicherung,3,4,2020,\N
+278,Innenpolitik,Arbeitslosengeld,3,4,2020,\N
+279,Innenpolitik,Asylprüfung,3,4,2020,\N
+280,Innenpolitik,Rettungsschirm,2,4,2020,\N
+281,Gesundheit,Dauer,6,4,2020,\N
+282,Gesundheit,Soforthilfe,3,4,2020,\N
+283,Gesundheit,Ältere,3,4,2020,\N
+284,Gesundheit,Ordnung,2,4,2020,\N
+285,Gesundheit,Gefährdung,2,4,2020,\N
+286,Wohnungsbau,Soforthilfen,4,4,2020,\N
+287,Wohnungsbau,Rechtsanspruch,4,4,2020,\N
+288,Wohnungsbau,Zuschüsse,4,4,2020,\N
+289,Wohnungsbau,Zuschuss,4,4,2020,\N
+290,Wohnungsbau,Krankenhäuser,4,4,2020,\N
+291,Verteidigung,Absicherung,8,4,2020,\N
+292,Verteidigung,Ausgleich,6,4,2020,\N
+293,Verteidigung,Erstattung,4,4,2020,\N
+294,Verteidigung,Anspruchs,4,4,2020,\N
+295,Verteidigung,Schutzes,3,4,2020,\N
+296,Familie,Eltern,6,4,2020,\N
+297,Familie,Kinder,4,4,2020,\N
+298,Familie,Angehörige,2,4,2020,\N
+299,Familie,Erwachsene,2,4,2020,\N
+300,Familie,Kindern,2,4,2020,\N
+301,Entwicklung,Gesetzentwurfs,26,5,2020,\N
+302,Entwicklung,Aussetzung,18,5,2020,\N
+303,Entwicklung,Gewährung,17,5,2020,\N
+304,Entwicklung,Ausbildung,16,5,2020,\N
+305,Entwicklung,Hinwirken,14,5,2020,\N
+306,Arbeit,Engagement,17,5,2020,\N
+307,Arbeit,Beschäftigte,12,5,2020,\N
+308,Arbeit,Berichterstattung,10,5,2020,\N
+309,Arbeit,Anspruch,10,5,2020,\N
+310,Arbeit,Umgang,9,5,2020,\N
+311,Bildung und Forschung,Coronavirus,10,5,2020,\N
+312,Bildung und Forschung,Entwicklungszusammenarbeit,6,5,2020,\N
+313,Bildung und Forschung,Operationstechnischen,6,5,2020,\N
+314,Bildung und Forschung,Studierender,5,5,2020,\N
+315,Bildung und Forschung,Veranstaltungen,5,5,2020,\N
+316,Umwelt,Klimaschutz,7,5,2020,\N
+317,Umwelt,Energieeffizienz,4,5,2020,\N
+318,Umwelt,Wasser,4,5,2020,\N
+319,Umwelt,Energie,4,5,2020,\N
+320,Umwelt,Gewässer,2,5,2020,\N
+321,Finanzen,Fristen,7,5,2020,\N
+322,Finanzen,Einkommen,7,5,2020,\N
+323,Finanzen,Verwalters,6,5,2020,\N
+324,Finanzen,Rettungsfonds,4,5,2020,\N
+325,Finanzen,Haushaltsführung,4,5,2020,\N
+326,Außenpolitik,Mandatsobergrenze,9,5,2020,\N
+327,Außenpolitik,Einkommensteuergesetz,9,5,2020,\N
+328,Außenpolitik,Regierung,8,5,2020,\N
+329,Außenpolitik,Mandats,6,5,2020,\N
+330,Außenpolitik,Abkommen,6,5,2020,\N
+331,Wirtschaft,Kurzarbeitergeld,10,5,2020,\N
+332,Wirtschaft,München,10,5,2020,\N
+333,Wirtschaft,Bundesländern,8,5,2020,\N
+334,Wirtschaft,Kurzarbeitergeldes,8,5,2020,\N
+335,Wirtschaft,Organisationen,6,5,2020,\N
+336,Gesundheit,Dauer,15,5,2020,\N
+337,Gesundheit,Pflege,11,5,2020,\N
+338,Gesundheit,Gesundheit,9,5,2020,\N
+339,Gesundheit,Soforthilfe,7,5,2020,\N
+340,Gesundheit,Leistungserbringer,6,5,2020,\N
+341,Verkehr und Digitalisierung,Bahn,11,5,2020,\N
+342,Verkehr und Digitalisierung,Haftungshöchstbeträge,6,5,2020,\N
+343,Verkehr und Digitalisierung,Öffentlichkeitsbeteiligung,6,5,2020,\N
+344,Verkehr und Digitalisierung,Flugverbindung,6,5,2020,\N
+345,Verkehr und Digitalisierung,Elektrofahrzeuge,5,5,2020,\N
+346,Landwirtschaft,Entwicklungsländern,5,5,2020,\N
+347,Landwirtschaft,Steuerbefreiung,5,5,2020,\N
+348,Landwirtschaft,Hebammen,5,5,2020,\N
+349,Landwirtschaft,Grundrente,4,5,2020,\N
+350,Landwirtschaft,Drohnen,4,5,2020,\N
+351,Wohnungsbau,Zusatzausgaben,9,5,2020,\N
+352,Wohnungsbau,Grundsicherung,9,5,2020,\N
+353,Wohnungsbau,Soforthilfen,7,5,2020,\N
+354,Wohnungsbau,Schulen,6,5,2020,\N
+355,Wohnungsbau,Zuschüsse,6,5,2020,\N
+356,Verteidigung,Streitkräfte,14,5,2020,\N
+357,Verteidigung,Schutzes,11,5,2020,\N
+358,Verteidigung,Absicherung,10,5,2020,\N
+359,Verteidigung,Erstattung,7,5,2020,\N
+360,Verteidigung,Operation,6,5,2020,\N
+361,Familie,Familien,12,5,2020,\N
+362,Familie,Eltern,8,5,2020,\N
+363,Familie,Kinder,7,5,2020,\N
+364,Familie,Angehörige,7,5,2020,\N
+365,Familie,Gemeinschaft,5,5,2020,\N
+366,Innenpolitik,Arbeitslosengeld,5,5,2020,\N
+367,Innenpolitik,Grundgesetz,4,5,2020,\N
+368,Innenpolitik,Rückkehrrecht,3,5,2020,\N
+369,Innenpolitik,Grundrechtseinschränkungen,3,5,2020,\N
+370,Innenpolitik,Sozialleistungen,3,5,2020,\N
+371,Justiz,Bundeswehr,9,5,2020,\N
+372,Justiz,Gewalt,9,5,2020,\N
+373,Justiz,Justiz,7,5,2020,\N
+374,Justiz,Bundesverfassungsgerichts,7,5,2020,\N
+375,Justiz,Verfassungsschutz,7,5,2020,\N
+376,Entwicklung,Übernahme,12,6,2020,\N
+377,Entwicklung,Hinwirken,12,6,2020,\N
+378,Entwicklung,Aussetzung,7,6,2020,\N
+379,Entwicklung,Aufstockung,7,6,2020,\N
+380,Entwicklung,Anschluss,6,6,2020,\N
+381,Arbeit,Engagement,11,6,2020,\N
+382,Arbeit,Anspruch,6,6,2020,\N
+383,Arbeit,Kurzarbeit,5,6,2020,\N
+384,Arbeit,Kontrolle,5,6,2020,\N
+385,Arbeit,Lohnersatzleistungen,4,6,2020,\N
+386,Finanzen,Gewährleistungen,5,6,2020,\N
+387,Finanzen,Einkommensteuererklärungen,2,6,2020,\N
+388,Finanzen,Gesamthaushalts,2,6,2020,\N
+389,Finanzen,Wirtschaftsplans,2,6,2020,\N
+390,Finanzen,Öffentliche,2,6,2020,\N
+391,Wirtschaft,Wirtschaft,7,6,2020,\N
+392,Wirtschaft,Gesellschaft,6,6,2020,\N
+393,Wirtschaft,Kurzarbeitergeld,3,6,2020,\N
+394,Wirtschaft,Einkommensteuer,2,6,2020,\N
+395,Wirtschaft,Umsatzsteuer,2,6,2020,\N
+396,Innenpolitik,Progressionsvorbehalt,5,6,2020,\N
+397,Innenpolitik,Rechtsextremismus,4,6,2020,\N
+398,Innenpolitik,Steuererklärungspflicht,3,6,2020,\N
+399,Innenpolitik,Nachtragshaushaltsgesetz,3,6,2020,\N
+400,Innenpolitik,Arbeitslosengeld,3,6,2020,\N
+401,Verteidigung,Absicherung,6,6,2020,\N
+402,Verteidigung,Schutzes,6,6,2020,\N
+403,Verteidigung,Nichtanrechnung,4,6,2020,\N
+404,Verteidigung,Verurteilung,4,6,2020,\N
+405,Verteidigung,Nichtberücksichtigung,3,6,2020,\N
+406,Justiz,Urteil,5,6,2020,\N
+407,Justiz,Bundesverfassungsgerichts,4,6,2020,\N
+408,Justiz,Gewalt,4,6,2020,\N
+409,Justiz,Straftaten,4,6,2020,\N
+410,Justiz,Auskunftssperre,4,6,2020,\N
+411,Wohnungsbau,Einzelmaßnahmen,10,6,2020,\N
+412,Wohnungsbau,Kinderbonus,8,6,2020,\N
+413,Wohnungsbau,Arbeitslosigkeitsrisiken,5,6,2020,\N
+414,Wohnungsbau,Konjunkturpaketes,3,6,2020,\N
+415,Wohnungsbau,Finanzhilfen,3,6,2020,\N
+416,Bildung und Forschung,Langtitels,4,6,2020,\N
+417,Bildung und Forschung,Information,3,6,2020,\N
+418,Bildung und Forschung,Entwicklungszusammenarbeit,3,6,2020,\N
+419,Bildung und Forschung,Bildung,3,6,2020,\N
+420,Bildung und Forschung,Ergänzendes,3,6,2020,\N
+421,Gesundheit,Zustand,4,6,2020,\N
+422,Gesundheit,Dauer,3,6,2020,\N
+423,Gesundheit,Soforthilfe,3,6,2020,\N
+424,Gesundheit,Gesundheitsschutz,3,6,2020,\N
+425,Gesundheit,Ordnung,3,6,2020,\N
+426,Verkehr und Digitalisierung,Handel,4,6,2020,\N
+427,Verkehr und Digitalisierung,Brücken,4,6,2020,\N
+428,Verkehr und Digitalisierung,Internet,3,6,2020,\N
+429,Verkehr und Digitalisierung,Zwischenfall,3,6,2020,\N
+430,Verkehr und Digitalisierung,Vergaben,2,6,2020,\N
+431,Familie,Notlage,5,6,2020,\N
+432,Familie,Familien,3,6,2020,\N
+433,Familie,Kinder,3,6,2020,\N
+434,Familie,Geschlechtsangabe,2,6,2020,\N
+435,Familie,Kindern,2,6,2020,\N
+436,Landwirtschaft,Rumänien,3,6,2020,\N
+437,Landwirtschaft,Bundesanstalt,3,6,2020,\N
+438,Landwirtschaft,Steuerbefreiungen,2,6,2020,\N
+439,Landwirtschaft,Erträgen,2,6,2020,\N
+440,Landwirtschaft,Entwicklungsländern,2,6,2020,\N
+441,Umwelt,Energien,5,6,2020,\N
+442,Umwelt,Klimaschutz,4,6,2020,\N
+443,Umwelt,Green,3,6,2020,\N
+444,Umwelt,Natur,3,6,2020,\N
+445,Umwelt,Ermäßigungsfaktors,2,6,2020,\N
+446,Außenpolitik,Regierung,11,6,2020,\N
+447,Außenpolitik,Demokratie,5,6,2020,\N
+448,Außenpolitik,Syrien,4,6,2020,\N
+449,Außenpolitik,Atomwaffen,4,6,2020,\N
+450,Außenpolitik,Mittelmeer,4,6,2020,\N
+451,Landwirtschaft,Kohleregionen,5,7,2020,\N
+452,Landwirtschaft,Kohleverstromung,5,7,2020,\N
+453,Landwirtschaft,Gemeinden,4,7,2020,\N
+454,Landwirtschaft,Grundrente,4,7,2020,\N
+455,Landwirtschaft,Nutztierhaltung,3,7,2020,\N
+456,Wohnungsbau,Einzelmaßnahmen,6,7,2020,\N
+457,Wohnungsbau,Rentenversicherung,6,7,2020,\N
+458,Wohnungsbau,Hamburg,5,7,2020,\N
+459,Wohnungsbau,Finanzhilfen,4,7,2020,\N
+460,Wohnungsbau,Nettokreditaufnahme,4,7,2020,\N
+461,Bildung und Forschung,Konferenz,5,7,2020,\N
+462,Bildung und Forschung,Entwicklungszusammenarbeit,5,7,2020,\N
+463,Bildung und Forschung,Information,4,7,2020,\N
+464,Bildung und Forschung,Pandemien,3,7,2020,\N
+465,Bildung und Forschung,European,3,7,2020,\N
+466,Entwicklung,Gesetzentwurfs,14,7,2020,\N
+467,Entwicklung,Hinwirken,12,7,2020,\N
+468,Entwicklung,Übernahme,10,7,2020,\N
+469,Entwicklung,Austritt,7,7,2020,\N
+470,Entwicklung,Empfehlungen,6,7,2020,\N
+471,Finanzen,Einkommen,6,7,2020,\N
+472,Finanzen,Gesamthaushalts,4,7,2020,\N
+473,Finanzen,Wirtschaftsplans,4,7,2020,\N
+474,Finanzen,Kredite,3,7,2020,\N
+475,Finanzen,Sozialversicherungsbeiträge,2,7,2020,\N
+476,Verteidigung,Ausgleich,6,7,2020,\N
+477,Verteidigung,Abschluss,6,7,2020,\N
+478,Verteidigung,Nationalen,5,7,2020,\N
+479,Verteidigung,Absicherung,4,7,2020,\N
+480,Verteidigung,Schutzes,4,7,2020,\N
+481,Arbeit,Engagement,16,7,2020,\N
+482,Arbeit,Bildaufnahmen,7,7,2020,\N
+483,Arbeit,Hilfen,4,7,2020,\N
+484,Arbeit,Berichterstattung,3,7,2020,\N
+485,Arbeit,Beschäftigung,3,7,2020,\N
+486,Wirtschaft,Großbritannien,5,7,2020,\N
+487,Wirtschaft,Wirecard,5,7,2020,\N
+488,Wirtschaft,Gesellschaft,4,7,2020,\N
+489,Wirtschaft,Organisationen,4,7,2020,\N
+490,Wirtschaft,Krise,3,7,2020,\N
+491,Gesundheit,Rehabilitation,4,7,2020,\N
+492,Gesundheit,Diabetes,3,7,2020,\N
+493,Gesundheit,Gefahr,3,7,2020,\N
+494,Gesundheit,Gesundheit,3,7,2020,\N
+495,Gesundheit,Krankenversicherung,3,7,2020,\N
+496,Verkehr und Digitalisierung,Puttgarden,4,7,2020,\N
+497,Verkehr und Digitalisierung,Luftverkehrs,3,7,2020,\N
+498,Verkehr und Digitalisierung,Waren,2,7,2020,\N
+499,Verkehr und Digitalisierung,Netz,2,7,2020,\N
+500,Verkehr und Digitalisierung,Seeverkehrs,2,7,2020,\N
+501,Justiz,Gesetze,5,7,2020,\N
+502,Justiz,Nordirland,5,7,2020,\N
+503,Justiz,Behörde,3,7,2020,\N
+504,Justiz,Rechtsstaatlichkeit,3,7,2020,\N
+505,Justiz,Strafgesetzbuch,3,7,2020,\N
+506,Außenpolitik,Vereinigten,10,7,2020,\N
+507,Außenpolitik,Regierung,8,7,2020,\N
+508,Außenpolitik,Königreichs,7,7,2020,\N
+509,Außenpolitik,Israel,7,7,2020,\N
+510,Außenpolitik,Atomgemeinschaft,6,7,2020,\N
+511,Innenpolitik,Überhangmandaten,2,7,2020,\N
+512,Innenpolitik,Wahlkreise,2,7,2020,\N
+513,Innenpolitik,Ungarn,2,7,2020,\N
+514,Innenpolitik,Kreditobergrenze,2,7,2020,\N
+515,Innenpolitik,Haushaltsgesetz,2,7,2020,\N
+516,Umwelt,Klimaschutz,4,7,2020,\N
+517,Umwelt,Lübeck,4,7,2020,\N
+518,Umwelt,Kohlekraftwerke,2,7,2020,\N
+519,Umwelt,Lieferketten,2,7,2020,\N
+520,Umwelt,Energien,2,7,2020,\N
+521,Familie,Partnerschaft,6,7,2020,\N
+522,Familie,Kirche,4,7,2020,\N
+523,Familie,Königreich,3,7,2020,\N
+524,Familie,Unterkunft,3,7,2020,\N
+525,Familie,Barbe,2,7,2020,\N
+526,Finanzen,Finanzielle,6,9,2020,\N
+527,Finanzen,Finanzlage,4,9,2020,\N
+528,Finanzen,Finanzkraft,4,9,2020,\N
+529,Finanzen,Jahresbericht,3,9,2020,\N
+530,Finanzen,Verwalters,3,9,2020,\N
+531,Außenpolitik,Regierung,6,9,2020,\N
+532,Außenpolitik,Vereinigten,5,9,2020,\N
+533,Außenpolitik,Agenda,5,9,2020,\N
+534,Außenpolitik,Bundesrates,5,9,2020,\N
+535,Außenpolitik,Menschenrechten,5,9,2020,\N
+536,Wohnungsbau,Gewerbesteuermindereinnahmen,8,9,2020,\N
+537,Wohnungsbau,Krankenhäuser,7,9,2020,\N
+538,Wohnungsbau,Einzelmaßnahmen,6,9,2020,\N
+539,Wohnungsbau,Nord,5,9,2020,\N
+540,Wohnungsbau,Schulen,5,9,2020,\N
+541,Entwicklung,Digitalisierung,14,9,2020,\N
+542,Entwicklung,Gesetzentwurfs,13,9,2020,\N
+543,Entwicklung,Übernahme,12,9,2020,\N
+544,Entwicklung,Hinwirken,11,9,2020,\N
+545,Entwicklung,Ebene,11,9,2020,\N
+546,Wirtschaft,Ausland,7,9,2020,\N
+547,Wirtschaft,Zentralbank,5,9,2020,\N
+548,Wirtschaft,Steuereinnahmen,4,9,2020,\N
+549,Wirtschaft,Energiewende,4,9,2020,\N
+550,Wirtschaft,Gewerbesteuerausfälle,4,9,2020,\N
+551,Innenpolitik,Grundgesetzänderung,4,9,2020,\N
+552,Innenpolitik,Haushaltsgesetz,2,9,2020,\N
+553,Innenpolitik,Grundgesetz,2,9,2020,\N
+554,Innenpolitik,Atomgesetzes,2,9,2020,\N
+555,Innenpolitik,Steuertarif,2,9,2020,\N
+556,Familie,Unterkunft,13,9,2020,\N
+557,Familie,Kindern,7,9,2020,\N
+558,Familie,Alexej,5,9,2020,\N
+559,Familie,Mali,4,9,2020,\N
+560,Familie,Aufenthalt,3,9,2020,\N
+561,Verteidigung,Ausgleich,20,9,2020,\N
+562,Verteidigung,Moria,8,9,2020,\N
+563,Verteidigung,Aufklärung,5,9,2020,\N
+564,Verteidigung,Interessen,4,9,2020,\N
+565,Verteidigung,Verstößen,4,9,2020,\N
+566,Landwirtschaft,Gemeinden,8,9,2020,\N
+567,Landwirtschaft,Heizung,8,9,2020,\N
+568,Landwirtschaft,Lager,3,9,2020,\N
+569,Landwirtschaft,Windenergieanlagen,3,9,2020,\N
+570,Landwirtschaft,Entwicklungsländern,3,9,2020,\N
+571,Verkehr und Digitalisierung,Inseln,5,9,2020,\N
+572,Verkehr und Digitalisierung,Stream,5,9,2020,\N
+573,Verkehr und Digitalisierung,Elektrofahrzeuge,5,9,2020,\N
+574,Verkehr und Digitalisierung,Infrastrukturabgabe,4,9,2020,\N
+575,Verkehr und Digitalisierung,Nummer,4,9,2020,\N
+576,Justiz,Rechtsstaatlichkeit,7,9,2020,\N
+577,Justiz,Abgabenordnung,4,9,2020,\N
+578,Justiz,Bundesländer,4,9,2020,\N
+579,Justiz,Bundeswehr,4,9,2020,\N
+580,Justiz,Gewalt,4,9,2020,\N
+581,Bildung und Forschung,Bildung,15,9,2020,\N
+582,Bildung und Forschung,Innovation,7,9,2020,\N
+583,Bildung und Forschung,Innovationen,6,9,2020,\N
+584,Bildung und Forschung,Gutachten,6,9,2020,\N
+585,Bildung und Forschung,Wasserstoff,6,9,2020,\N
+586,Arbeit,Engagement,13,9,2020,\N
+587,Arbeit,Genehmigung,10,9,2020,\N
+588,Arbeit,Kontrolle,7,9,2020,\N
+589,Arbeit,Gesetzentwürfen,7,9,2020,\N
+590,Arbeit,Hilfe,6,9,2020,\N
+591,Umwelt,Nachhaltigkeit,8,9,2020,\N
+592,Umwelt,Umwelt,6,9,2020,\N
+593,Umwelt,Energie,5,9,2020,\N
+594,Umwelt,Klimaschutz,5,9,2020,\N
+595,Umwelt,Energien,4,9,2020,\N
+596,Gesundheit,Gesundheit,5,9,2020,\N
+597,Gesundheit,Schäden,5,9,2020,\N
+598,Gesundheit,Apotheken,4,9,2020,\N
+599,Gesundheit,Gefahr,3,9,2020,\N
+600,Gesundheit,Wohlstand,3,9,2020,\N
+601,Entwicklung,Vertrags,27,10,2020,\N
+602,Entwicklung,Protokolls,23,10,2020,\N
+603,Entwicklung,Begriffs,22,10,2020,\N
+604,Entwicklung,Ursprung,21,10,2020,\N
+605,Entwicklung,Gesetzentwurfs,10,10,2020,\N
+606,Arbeit,Arbeitsweise,27,10,2020,\N
+607,Arbeit,Engagement,9,10,2020,\N
+608,Arbeit,Genehmigung,8,10,2020,\N
+609,Arbeit,Berichterstattung,6,10,2020,\N
+610,Arbeit,Fällen,5,10,2020,\N
+611,Justiz,Gewalt,11,10,2020,\N
+612,Justiz,Polizei,7,10,2020,\N
+613,Justiz,Abgabenordnung,7,10,2020,\N
+614,Justiz,Grundrechten,6,10,2020,\N
+615,Justiz,Einführungsgesetz,6,10,2020,\N
+616,Bildung und Forschung,Methoden,21,10,2020,\N
+617,Bildung und Forschung,Bildung,8,10,2020,\N
+618,Bildung und Forschung,Studie,7,10,2020,\N
+619,Bildung und Forschung,Coronavirus,6,10,2020,\N
+620,Bildung und Forschung,Weiterbildung,4,10,2020,\N
+621,Außenpolitik,Abkommen,26,10,2020,\N
+622,Außenpolitik,Türkei,15,10,2020,\N
+623,Außenpolitik,Assoziationsrat,11,10,2020,\N
+624,Außenpolitik,Regierung,10,10,2020,\N
+625,Außenpolitik,Assoziierungsabkommen,9,10,2020,\N
+626,Verteidigung,Opfer,7,10,2020,\N
+627,Verteidigung,Aufklärung,5,10,2020,\N
+628,Verteidigung,Ablehnung,5,10,2020,\N
+629,Verteidigung,Befugnisse,5,10,2020,\N
+630,Verteidigung,Abschluss,5,10,2020,\N
+631,Wirtschaft,Verwaltungen,21,10,2020,\N
+632,Wirtschaft,Organisationen,7,10,2020,\N
+633,Wirtschaft,Verwaltung,5,10,2020,\N
+634,Wirtschaft,Politik,4,10,2020,\N
+635,Wirtschaft,Wirtschaft,4,10,2020,\N
+636,Innenpolitik,Wettbewerbsrecht,5,10,2020,\N
+637,Innenpolitik,Reformkommission,4,10,2020,\N
+638,Innenpolitik,Seehofer,4,10,2020,\N
+639,Innenpolitik,Niederlande,3,10,2020,\N
+640,Innenpolitik,Ungarn,3,10,2020,\N
+641,Wohnungsbau,Sozialgesetzbuch,11,10,2020,\N
+642,Wohnungsbau,Berlin,8,10,2020,\N
+643,Wohnungsbau,Haushaltsjahr,6,10,2020,\N
+644,Wohnungsbau,Flüchtlinge,5,10,2020,\N
+645,Wohnungsbau,Sozialcharta,5,10,2020,\N
+646,Gesundheit,Prävention,5,10,2020,\N
+647,Gesundheit,Apotheken,5,10,2020,\N
+648,Gesundheit,Freiheit,4,10,2020,\N
+649,Gesundheit,Dauer,4,10,2020,\N
+650,Gesundheit,Ernährung,4,10,2020,\N
+651,Familie,Kindern,6,10,2020,\N
+652,Familie,Horst,6,10,2020,\N
+653,Familie,Kinder,5,10,2020,\N
+654,Familie,Gemeinschaft,4,10,2020,\N
+655,Familie,Königreich,4,10,2020,\N
+656,Finanzen,Angelegenheiten,5,10,2020,\N
+657,Finanzen,Visa,3,10,2020,\N
+658,Finanzen,Sonderbericht,2,10,2020,\N
+659,Finanzen,Gesamthaushaltsplan,2,10,2020,\N
+660,Finanzen,Haushalt,2,10,2020,\N
+661,Verkehr und Digitalisierung,Nummer,5,10,2020,\N
+662,Verkehr und Digitalisierung,Arzneimitteln,4,10,2020,\N
+663,Verkehr und Digitalisierung,Wettbewerb,3,10,2020,\N
+664,Verkehr und Digitalisierung,Cannabis,3,10,2020,\N
+665,Verkehr und Digitalisierung,Bundesautobahnen,3,10,2020,\N
+666,Landwirtschaft,Gemeinschaften,8,10,2020,\N
+667,Landwirtschaft,Landwirtschaft,7,10,2020,\N
+668,Landwirtschaft,Gemischten,5,10,2020,\N
+669,Landwirtschaft,Niedersachsen,5,10,2020,\N
+670,Landwirtschaft,Windenergieanlagen,4,10,2020,\N
+671,Umwelt,Energien,6,10,2020,\N
+672,Umwelt,Handeln,3,10,2020,\N
+673,Umwelt,Ausgangsstoffen,3,10,2020,\N
+674,Umwelt,Vereinten,3,10,2020,\N
+675,Umwelt,Kulturgut,2,10,2020,\N
+676,Außenpolitik,Regierung,13,11,2020,\N
+677,Außenpolitik,Türkei,9,11,2020,\N
+678,Außenpolitik,Präsidenten,7,11,2020,\N
+679,Außenpolitik,Menschenrechte,7,11,2020,\N
+680,Außenpolitik,Bundeskanzlerin,7,11,2020,\N
+681,Wohnungsbau,Arbeitslosigkeitsrisiken,17,11,2020,\N
+682,Wohnungsbau,Sozialgesetzbuch,15,11,2020,\N
+683,Wohnungsbau,Elterngeld,6,11,2020,\N
+684,Wohnungsbau,Aktionsplan,6,11,2020,\N
+685,Wohnungsbau,Berlin,6,11,2020,\N
+686,Entwicklung,Gewährung,26,11,2020,\N
+687,Entwicklung,Hinwirken,14,11,2020,\N
+688,Entwicklung,Gesetzentwurfs,13,11,2020,\N
+689,Entwicklung,Kriterien,12,11,2020,\N
+690,Entwicklung,Kenntnisse,12,11,2020,\N
+691,Justiz,Gewalt,11,11,2020,\N
+692,Justiz,Bundeswehr,11,11,2020,\N
+693,Justiz,Gerichtshofs,7,11,2020,\N
+694,Justiz,Justiz,7,11,2020,\N
+695,Justiz,Bundespolizei,7,11,2020,\N
+696,Finanzen,Personal,6,11,2020,\N
+697,Finanzen,Ermächtigungen,5,11,2020,\N
+698,Finanzen,Jahresbericht,4,11,2020,\N
+699,Finanzen,Insolvenzantragspflicht,4,11,2020,\N
+700,Finanzen,Gesetzliche,3,11,2020,\N
+701,Bildung und Forschung,Bildung,7,11,2020,\N
+702,Bildung und Forschung,Standpunkt,6,11,2020,\N
+703,Bildung und Forschung,Lambrecht,5,11,2020,\N
+704,Bildung und Forschung,Videokonferenz,5,11,2020,\N
+705,Bildung und Forschung,Ausschusses,4,11,2020,\N
+706,Arbeit,Engagement,13,11,2020,\N
+707,Arbeit,Hilfe,10,11,2020,\N
+708,Arbeit,Stellen,9,11,2020,\N
+709,Arbeit,Anfrage,8,11,2020,\N
+710,Arbeit,Berichterstattung,8,11,2020,\N
+711,Umwelt,Energie,5,11,2020,\N
+712,Umwelt,Schutzstatus,4,11,2020,\N
+713,Umwelt,Klimawandel,3,11,2020,\N
+714,Umwelt,Atomkraftwerks,3,11,2020,\N
+715,Umwelt,Ausgangsstoffen,3,11,2020,\N
+716,Gesundheit,Gesundheit,8,11,2020,\N
+717,Gesundheit,Verbraucherschutz,8,11,2020,\N
+718,Gesundheit,Krankenversicherung,6,11,2020,\N
+719,Gesundheit,Infektionsschutzgesetzes,6,11,2020,\N
+720,Gesundheit,Behinderungen,5,11,2020,\N
+721,Verkehr und Digitalisierung,Öffentlichen,9,11,2020,\N
+722,Verkehr und Digitalisierung,Bahn,7,11,2020,\N
+723,Verkehr und Digitalisierung,Himmel,4,11,2020,\N
+724,Verkehr und Digitalisierung,Flughäfen,4,11,2020,\N
+725,Verkehr und Digitalisierung,Fahrzeuge,4,11,2020,\N
+726,Familie,Notlage,17,11,2020,\N
+727,Familie,Heimat,8,11,2020,\N
+728,Familie,Angela,6,11,2020,\N
+729,Familie,Kinder,6,11,2020,\N
+730,Familie,Königreich,5,11,2020,\N
+731,Innenpolitik,Vormundschaftsrechts,3,11,2020,\N
+732,Innenpolitik,Zeitung,3,11,2020,\N
+733,Innenpolitik,Seehofer,3,11,2020,\N
+734,Innenpolitik,Sozialversicherungswahlen,3,11,2020,\N
+735,Innenpolitik,Neuwahlen,3,11,2020,\N
+736,Verteidigung,Aufklärung,8,11,2020,\N
+737,Verteidigung,Abschluss,7,11,2020,\N
+738,Verteidigung,Führung,7,11,2020,\N
+739,Verteidigung,Nationalen,6,11,2020,\N
+740,Verteidigung,Opfer,6,11,2020,\N
+741,Wirtschaft,Wirtschaft,12,11,2020,\N
+742,Wirtschaft,Ausland,6,11,2020,\N
+743,Wirtschaft,Belarus,6,11,2020,\N
+744,Wirtschaft,Zivilgesellschaft,5,11,2020,\N
+745,Wirtschaft,Verwaltung,5,11,2020,\N
+746,Landwirtschaft,Bundesanstalt,5,11,2020,\N
+747,Landwirtschaft,Landwirtschaft,4,11,2020,\N
+748,Landwirtschaft,Drohnen,4,11,2020,\N
+749,Landwirtschaft,Alterssicherung,4,11,2020,\N
+750,Landwirtschaft,Infektionsgeschehen,3,11,2020,\N
+751,Gesundheit,Freiheit,4,12,2020,\N
+752,Gesundheit,Gesundheit,4,12,2020,\N
+753,Gesundheit,Effizienz,3,12,2020,\N
+754,Gesundheit,Gute,2,12,2020,\N
+755,Gesundheit,Dauer,2,12,2020,\N
+756,Familie,Heimat,7,12,2020,\N
+757,Familie,Chalid,7,12,2020,\N
+758,Familie,Kindern,4,12,2020,\N
+759,Familie,LUNA,4,12,2020,\N
+760,Familie,Nähe,3,12,2020,\N
+761,Entwicklung,Überschreitung,7,12,2020,\N
+762,Entwicklung,Beschaffung,6,12,2020,\N
+763,Entwicklung,Restrukturierung,6,12,2020,\N
+764,Entwicklung,Kenntnisse,6,12,2020,\N
+765,Entwicklung,Verkürzung,5,12,2020,\N
+766,Bildung und Forschung,Arbeitsgruppe,3,12,2020,\N
+767,Bildung und Forschung,Wasserstoff,3,12,2020,\N
+768,Bildung und Forschung,Behandlungen,2,12,2020,\N
+769,Bildung und Forschung,Wissenschaft,2,12,2020,\N
+770,Bildung und Forschung,Sonderregelungen,2,12,2020,\N
+771,Arbeit,Fällen,6,12,2020,\N
+772,Arbeit,Engagement,6,12,2020,\N
+773,Arbeit,Kurzarbeit,5,12,2020,\N
+774,Arbeit,Tätigkeitsverbote,4,12,2020,\N
+775,Arbeit,Fernverkäufe,4,12,2020,\N
+776,Landwirtschaft,Drohnen,8,12,2020,\N
+777,Landwirtschaft,Windenergieanlagen,4,12,2020,\N
+778,Landwirtschaft,Ackerlandstatus,3,12,2020,\N
+779,Landwirtschaft,Lohnsteuerabzugsverfahren,2,12,2020,\N
+780,Landwirtschaft,Wildtieren,2,12,2020,\N
+781,Verteidigung,Aufklärung,3,12,2020,\N
+782,Verteidigung,Ständigen,3,12,2020,\N
+783,Verteidigung,Anhörung,2,12,2020,\N
+784,Verteidigung,Nichtberücksichtigung,2,12,2020,\N
+785,Verteidigung,Ersatz,2,12,2020,\N
+786,Justiz,Bundeswehr,6,12,2020,\N
+787,Justiz,Einführungsgesetz,4,12,2020,\N
+788,Justiz,Familiensachen,4,12,2020,\N
+789,Justiz,Gewalt,4,12,2020,\N
+790,Justiz,Finanzverwaltung,4,12,2020,\N
+791,Finanzen,Bundeshaushaltsplans,14,12,2020,\N
+792,Finanzen,Einzelplan,6,12,2020,\N
+793,Finanzen,Angelegenheiten,4,12,2020,\N
+794,Finanzen,Wirtschaftsplans,4,12,2020,\N
+795,Finanzen,Gesamthaushalts,4,12,2020,\N
+796,Außenpolitik,Menschenrechte,11,12,2020,\N
+797,Außenpolitik,Beziehungen,5,12,2020,\N
+798,Außenpolitik,Türkei,4,12,2020,\N
+799,Außenpolitik,Krisenbewältigung,4,12,2020,\N
+800,Außenpolitik,Finanzbeziehungen,4,12,2020,\N
+801,Wohnungsbau,Haushaltsjahr,10,12,2020,\N
+802,Wohnungsbau,Nettokreditaufnahme,8,12,2020,\N
+803,Wohnungsbau,Flüchtlinge,4,12,2020,\N
+804,Wohnungsbau,Entschuldungsverfahren,3,12,2020,\N
+805,Wohnungsbau,Jahressteuergesetz,3,12,2020,\N
+806,Innenpolitik,Aufenthaltsgesetzes,3,12,2020,\N
+807,Innenpolitik,Steuererstattungsansprüche,2,12,2020,\N
+808,Innenpolitik,Religionsfreiheit,2,12,2020,\N
+809,Innenpolitik,Arbeitnehmerrechten,2,12,2020,\N
+810,Innenpolitik,Arbeitsstättenverordnung,2,12,2020,\N
+811,Umwelt,Energien,8,12,2020,\N
+812,Umwelt,Energie,4,12,2020,\N
+813,Umwelt,Schutzziele,2,12,2020,\N
+814,Umwelt,Atomstrom,2,12,2020,\N
+815,Umwelt,Atomkraft,2,12,2020,\N
+816,Wirtschaft,Steuereinnahmen,8,12,2020,\N
+817,Wirtschaft,Wirtschaft,5,12,2020,\N
+818,Wirtschaft,Unternehmensstatistiken,4,12,2020,\N
+819,Wirtschaft,Insolvenz,4,12,2020,\N
+820,Wirtschaft,Gesamtwirtschaftliche,4,12,2020,\N
+821,Verkehr und Digitalisierung,Bahn,7,12,2020,\N
+822,Verkehr und Digitalisierung,Gegenständen,6,12,2020,\N
+823,Verkehr und Digitalisierung,Empfänger,5,12,2020,\N
+824,Verkehr und Digitalisierung,Handel,4,12,2020,\N
+825,Verkehr und Digitalisierung,Nummer,4,12,2020,\N
+901,Entwicklung,Accent,168,1,2021,\N
+902,Entwicklung,Grid,41,1,2021,\N
+903,Entwicklung,Colorful,27,1,2021,\N
+904,Entwicklung,Dark,12,1,2021,\N
+905,Entwicklung,Aussetzung,9,1,2021,\N
+906,Verkehr und Digitalisierung,Light,12,1,2021,\N
+907,Verkehr und Digitalisierung,Bahn,7,1,2021,\N
+908,Verkehr und Digitalisierung,Verkehr,4,1,2021,\N
+909,Verkehr und Digitalisierung,Alkohol,4,1,2021,\N
+910,Verkehr und Digitalisierung,Kontrollen,4,1,2021,\N
+911,Bildung und Forschung,Coronavirus,4,1,2021,\N
+912,Bildung und Forschung,Technologie,4,1,2021,\N
+913,Bildung und Forschung,Bildung,4,1,2021,\N
+914,Bildung und Forschung,Coronapandemie,4,1,2021,\N
+915,Bildung und Forschung,Milliarden,4,1,2021,\N
+916,Wohnungsbau,Shading,26,1,2021,\N
+917,Wohnungsbau,Sozialgesetzbuch,6,1,2021,\N
+918,Wohnungsbau,Schulen,6,1,2021,\N
+919,Wohnungsbau,Elterngeld,5,1,2021,\N
+920,Wohnungsbau,Familiennachzug,5,1,2021,\N
+921,Umwelt,Natur,3,1,2021,\N
+922,Umwelt,Vereinten,3,1,2021,\N
+923,Umwelt,Umweltprüfungen,3,1,2021,\N
+924,Umwelt,Atomkraft,3,1,2021,\N
+925,Umwelt,Nachhaltigkeit,2,1,2021,\N
+926,Arbeit,Table,104,1,2021,\N
+927,Arbeit,Berichterstattung,7,1,2021,\N
+928,Arbeit,Masken,7,1,2021,\N
+929,Arbeit,Text,7,1,2021,\N
+930,Arbeit,Verfügung,6,1,2021,\N
+931,Wirtschaft,Unternehmensstatistiken,8,1,2021,\N
+932,Wirtschaft,Bundeswirtschaftsministerium,6,1,2021,\N
+933,Wirtschaft,Wirtschaft,4,1,2021,\N
+934,Wirtschaft,Ausland,3,1,2021,\N
+935,Wirtschaft,Sachsen,3,1,2021,\N
+936,Verteidigung,Aufklärung,5,1,2021,\N
+937,Verteidigung,Nationalen,4,1,2021,\N
+938,Verteidigung,Befugnisse,3,1,2021,\N
+939,Verteidigung,Ermächtigungsgrundlage,3,1,2021,\N
+940,Verteidigung,Befreiung,3,1,2021,\N
+941,Justiz,Bundesverfassungsgerichts,6,1,2021,\N
+942,Justiz,Bundesnetzagentur,5,1,2021,\N
+943,Justiz,Bestandsdaten,5,1,2021,\N
+944,Justiz,Bestandsdatenauskunft,5,1,2021,\N
+945,Justiz,Bundesländer,5,1,2021,\N
+946,Außenpolitik,Türkei,14,1,2021,\N
+947,Außenpolitik,Bundeskanzlerin,6,1,2021,\N
+948,Außenpolitik,Handelspraktiken,4,1,2021,\N
+949,Außenpolitik,Regierung,4,1,2021,\N
+950,Außenpolitik,Zypern,4,1,2021,\N
+951,Familie,List,43,1,2021,\N
+952,Familie,Eltern,11,1,2021,\N
+953,Familie,Kinder,4,1,2021,\N
+954,Familie,Teilt,4,1,2021,\N
+955,Familie,Sorte,3,1,2021,\N
+956,Gesundheit,Ernährung,8,1,2021,\N
+957,Gesundheit,Dauer,4,1,2021,\N
+958,Gesundheit,Gesundheit,4,1,2021,\N
+959,Gesundheit,Behinderungen,3,1,2021,\N
+960,Gesundheit,Risikogruppen,3,1,2021,\N
+961,Finanzen,Columns,5,1,2021,\N
+962,Finanzen,Bullet,4,1,2021,\N
+963,Finanzen,Sonderbericht,3,1,2021,\N
+964,Finanzen,Insolvenzantragspflicht,3,1,2021,\N
+965,Finanzen,Vermögen,3,1,2021,\N
+966,Landwirtschaft,Landwirtschaft,7,1,2021,\N
+967,Landwirtschaft,Lebensmitteln,5,1,2021,\N
+968,Landwirtschaft,Agroforstwirtschaft,5,1,2021,\N
+969,Landwirtschaft,Landwirte,4,1,2021,\N
+970,Landwirtschaft,Niedersachsen,3,1,2021,\N
+971,Innenpolitik,Zeitung,4,1,2021,\N
+972,Innenpolitik,Wettbewerbsrecht,4,1,2021,\N
+973,Innenpolitik,Bundestagswahl,3,1,2021,\N
+974,Innenpolitik,Rückkehrpflicht,2,1,2021,\N
+975,Innenpolitik,Elternzeitgesetz,2,1,2021,\N
+976,Entwicklung,Teilhabe,8,2,2021,\N
+977,Entwicklung,Hinwirken,7,2,2021,\N
+978,Entwicklung,Aufarbeitung,6,2,2021,\N
+979,Entwicklung,Gesetzentwurfs,6,2,2021,\N
+980,Entwicklung,Transparenz,5,2,2021,\N
+981,Umwelt,Energie,6,2,2021,\N
+982,Umwelt,Verbraucher,5,2,2021,\N
+983,Umwelt,Verbraucherinnen,4,2,2021,\N
+984,Umwelt,Naturschutz,3,2,2021,\N
+985,Umwelt,Energien,3,2,2021,\N
+986,Landwirtschaft,Niedersachsen,6,2,2021,\N
+987,Landwirtschaft,Drohnen,4,2,2021,\N
+988,Landwirtschaft,Afrika,3,2,2021,\N
+989,Landwirtschaft,Brauereigaststätten,3,2,2021,\N
+990,Landwirtschaft,Nutzhanf,3,2,2021,\N
+991,Wirtschaft,Führungspositionen,6,2,2021,\N
+992,Wirtschaft,Leistungsträger,4,2,2021,\N
+993,Wirtschaft,Privatwirtschaft,4,2,2021,\N
+994,Wirtschaft,Wirtschaft,4,2,2021,\N
+995,Wirtschaft,Medien,4,2,2021,\N
+996,Verteidigung,Abzug,5,2,2021,\N
+997,Verteidigung,Anspruchs,4,2,2021,\N
+998,Verteidigung,Nichtberücksichtigung,3,2,2021,\N
+999,Verteidigung,Verhängung,3,2,2021,\N
+1000,Verteidigung,Ausgleich,3,2,2021,\N
+1001,Gesundheit,Gesundheit,5,2,2021,\N
+1002,Gesundheit,Dauer,4,2,2021,\N
+1003,Gesundheit,Pflege,3,2,2021,\N
+1004,Gesundheit,Gefahr,3,2,2021,\N
+1005,Gesundheit,Freiheit,3,2,2021,\N
+1006,Justiz,Bundeswehr,14,2,2021,\N
+1007,Justiz,Bundespolizei,6,2,2021,\N
+1008,Justiz,Einführungsgesetz,4,2,2021,\N
+1009,Justiz,Gesetzgebungsverfahren,4,2,2021,\N
+1010,Justiz,Menschenrechtsverletzungen,3,2,2021,\N
+1011,Verkehr und Digitalisierung,Wettbewerb,5,2,2021,\N
+1012,Verkehr und Digitalisierung,Verkehr,4,2,2021,\N
+1013,Verkehr und Digitalisierung,Bahn,4,2,2021,\N
+1014,Verkehr und Digitalisierung,Anhang,3,2,2021,\N
+1015,Verkehr und Digitalisierung,Arzneimitteln,3,2,2021,\N
+1016,Wohnungsbau,Krankenhäuser,7,2,2021,\N
+1017,Wohnungsbau,Sozialgesetzbuch,4,2,2021,\N
+1018,Wohnungsbau,Verordnungsermächtigungen,3,2,2021,\N
+1019,Wohnungsbau,Obdachlose,3,2,2021,\N
+1020,Wohnungsbau,Berlin,3,2,2021,\N
+1021,Arbeit,Engagement,9,2,2021,\N
+1022,Arbeit,Männern,6,2,2021,\N
+1023,Arbeit,Satz,5,2,2021,\N
+1024,Arbeit,Stellen,5,2,2021,\N
+1025,Arbeit,Beachtung,4,2,2021,\N
+1026,Bildung und Forschung,Standpunkt,5,2,2021,\N
+1027,Bildung und Forschung,Mittagsverpflegung,4,2,2021,\N
+1028,Bildung und Forschung,Sonderregelungen,3,2,2021,\N
+1029,Bildung und Forschung,Impfstoffen,3,2,2021,\N
+1030,Bildung und Forschung,Brennelementen,3,2,2021,\N
+1031,Familie,Königreich,4,2,2021,\N
+1032,Familie,Kinderzuschlag,2,2,2021,\N
+1033,Familie,Eltern,2,2,2021,\N
+1034,Familie,Frau,2,2,2021,\N
+1035,Familie,Mitgliedern,2,2,2021,\N
+1036,Finanzen,Haushaltsführung,4,2,2021,\N
+1037,Finanzen,Verpflichtungsermächtigungen,4,2,2021,\N
+1038,Finanzen,Haushaltsjahres,4,2,2021,\N
+1039,Finanzen,Personal,3,2,2021,\N
+1040,Finanzen,Vorstände,2,2,2021,\N
+1041,Außenpolitik,Regierung,6,2,2021,\N
+1042,Außenpolitik,Türkei,5,2,2021,\N
+1043,Außenpolitik,Demokratie,4,2,2021,\N
+1044,Außenpolitik,Polen,4,2,2021,\N
+1045,Außenpolitik,Abrüstung,3,2,2021,\N
+1046,Innenpolitik,Länderparlamente,2,2,2021,\N
+1047,Innenpolitik,Arbeitslosengeld,2,2,2021,\N
+1048,Innenpolitik,Rechtsbereinigung,2,2,2021,\N
+1049,Innenpolitik,Ungarn,2,2,2021,\N
+1050,Innenpolitik,Abgeordnete,2,2,2021,\N
+1051,Entwicklung,Ausbildung,9,3,2021,\N
+1052,Entwicklung,Gestaltung,8,3,2021,\N
+1053,Entwicklung,Einschränkung,8,3,2021,\N
+1054,Entwicklung,Teilhabe,7,3,2021,\N
+1055,Entwicklung,Konkretisierung,7,3,2021,\N
+1056,Landwirtschaft,Lebensmittel,5,3,2021,\N
+1057,Landwirtschaft,Agrarpolitik,4,3,2021,\N
+1058,Landwirtschaft,Tierquälerei,3,3,2021,\N
+1059,Landwirtschaft,Windenergieanlagen,3,3,2021,\N
+1060,Landwirtschaft,Kraftstoffe,3,3,2021,\N
+1061,Wohnungsbau,Zusatzausgaben,7,3,2021,\N
+1062,Wohnungsbau,Finanzrahmens,6,3,2021,\N
+1063,Wohnungsbau,Innenstädte,5,3,2021,\N
+1064,Wohnungsbau,Einzelmaßnahmen,4,3,2021,\N
+1065,Wohnungsbau,Anzeigetatbestände,4,3,2021,\N
+1066,Gesundheit,Behinderungen,8,3,2021,\N
+1067,Gesundheit,Freiheit,5,3,2021,\N
+1068,Gesundheit,Erholung,4,3,2021,\N
+1069,Gesundheit,Qualität,4,3,2021,\N
+1070,Gesundheit,Anzeigepflicht,3,3,2021,\N
+1071,Arbeit,Berichterstattung,11,3,2021,\N
+1072,Arbeit,Engagement,8,3,2021,\N
+1073,Arbeit,Ausübung,6,3,2021,\N
+1074,Arbeit,Beförderung,6,3,2021,\N
+1075,Arbeit,Kontrolle,6,3,2021,\N
+1076,Familie,Kindern,9,3,2021,\N
+1077,Familie,Kinder,8,3,2021,\N
+1078,Familie,Königreich,5,3,2021,\N
+1079,Familie,Angela,3,3,2021,\N
+1080,Familie,Personenkreis,2,3,2021,\N
+1081,Bildung und Forschung,Bildung,12,3,2021,\N
+1082,Bildung und Forschung,Zwecke,9,3,2021,\N
+1083,Bildung und Forschung,Praxis,7,3,2021,\N
+1084,Bildung und Forschung,Abschlussbericht,5,3,2021,\N
+1085,Bildung und Forschung,Anwendungsbereich,4,3,2021,\N
+1086,Verteidigung,Soldaten,8,3,2021,\N
+1087,Verteidigung,Streitkräfte,8,3,2021,\N
+1088,Verteidigung,Schutzes,7,3,2021,\N
+1089,Verteidigung,Interessen,6,3,2021,\N
+1090,Verteidigung,Verletzung,5,3,2021,\N
+1091,Justiz,Einführungsgesetz,11,3,2021,\N
+1092,Justiz,Gewalt,10,3,2021,\N
+1093,Justiz,Grundrechten,8,3,2021,\N
+1094,Justiz,Familiensachen,8,3,2021,\N
+1095,Justiz,Bundesverfassungsgerichts,7,3,2021,\N
+1096,Finanzen,Angelegenheiten,11,3,2021,\N
+1097,Finanzen,Jahresbericht,3,3,2021,\N
+1098,Finanzen,Themen,3,3,2021,\N
+1099,Finanzen,Zuständigkeiten,3,3,2021,\N
+1100,Finanzen,Gebühren,3,3,2021,\N
+1101,Verkehr und Digitalisierung,Anhang,9,3,2021,\N
+1102,Verkehr und Digitalisierung,Informationsaustausch,4,3,2021,\N
+1103,Verkehr und Digitalisierung,Bahn,4,3,2021,\N
+1104,Verkehr und Digitalisierung,Wettbewerb,3,3,2021,\N
+1105,Verkehr und Digitalisierung,Internet,3,3,2021,\N
+1106,Innenpolitik,Rückkehrpflicht,4,3,2021,\N
+1107,Innenpolitik,Strukturreform,3,3,2021,\N
+1108,Innenpolitik,Vormundschaftsrechts,3,3,2021,\N
+1109,Innenpolitik,GUARDIAN,3,3,2021,\N
+1110,Innenpolitik,Rechtsbereinigung,2,3,2021,\N
+1111,Außenpolitik,Vereinigten,6,3,2021,\N
+1112,Außenpolitik,Mandatsobergrenze,6,3,2021,\N
+1113,Außenpolitik,Türkei,5,3,2021,\N
+1114,Außenpolitik,Fortgeltung,5,3,2021,\N
+1115,Außenpolitik,Afghanistan,5,3,2021,\N
+1116,Wirtschaft,Verwaltung,7,3,2021,\N
+1117,Wirtschaft,Verbrauchern,5,3,2021,\N
+1118,Wirtschaft,Wirtschaft,4,3,2021,\N
+1119,Wirtschaft,Gesellschaft,4,3,2021,\N
+1120,Wirtschaft,Krise,4,3,2021,\N
+1121,Umwelt,Stoffe,5,3,2021,\N
+1122,Umwelt,Strahlung,5,3,2021,\N
+1123,Umwelt,Radon,4,3,2021,\N
+1124,Umwelt,Smart,3,3,2021,\N
+1125,Umwelt,Abfallvermeidung,2,3,2021,\N
+1126,Entwicklung,Genesenenstatus,5,1,2022,\N
+1127,Entwicklung,Monaten,4,1,2022,\N
+1128,Entwicklung,Nachtrags,3,1,2022,\N
+1129,Entwicklung,Stabilisierung,2,1,2022,\N
+1130,Entwicklung,Fähigkeitsaufbau,2,1,2022,\N
+1131,Landwirtschaft,Bundesanstalt,2,1,2022,\N
+1132,Landwirtschaft,Energieversorgung,2,1,2022,\N
+1133,Landwirtschaft,Lebensmittel,1,1,2022,\N
+1134,Landwirtschaft,Agrarexporte,1,1,2022,\N
+1135,Landwirtschaft,Wirtschaftsweise,1,1,2022,\N
+1136,Umwelt,Klimaschutz,6,1,2022,\N
+1137,Umwelt,Inherent,2,1,2022,\N
+1138,Umwelt,Energie,2,1,2022,\N
+1139,Umwelt,Europäisches,1,1,2022,\N
+1140,Umwelt,Greenwashing,1,1,2022,\N
+1141,Bildung und Forschung,Studie,3,1,2022,\N
+1142,Bildung und Forschung,Technologie,2,1,2022,\N
+1143,Bildung und Forschung,Virologen,2,1,2022,\N
+1144,Bildung und Forschung,Halbleiterfertigung,1,1,2022,\N
+1145,Bildung und Forschung,Wissenschaftsplattform,1,1,2022,\N
+1146,Wirtschaft,Wirtschaft,6,1,2022,\N
+1147,Wirtschaft,Politik,3,1,2022,\N
+1148,Wirtschaft,Energiepreisen,2,1,2022,\N
+1149,Wirtschaft,Frankfurt,2,1,2022,\N
+1150,Wirtschaft,Kurzarbeitergeld,2,1,2022,\N
+1151,Wohnungsbau,Gebäude,3,1,2022,\N
+1152,Wohnungsbau,Haushaltsjahr,3,1,2022,\N
+1153,Wohnungsbau,Zusatzausgaben,2,1,2022,\N
+1154,Wohnungsbau,Vorkaufsrechts,2,1,2022,\N
+1155,Wohnungsbau,BauGB,2,1,2022,\N
+1156,Verteidigung,Sofortige,2,1,2022,\N
+1157,Verteidigung,Streitkräfte,2,1,2022,\N
+1158,Verteidigung,Operation,2,1,2022,\N
+1159,Verteidigung,Kampf,2,1,2022,\N
+1160,Verteidigung,Führung,2,1,2022,\N
+1161,Innenpolitik,Nachtragshaushaltsgesetz,4,1,2022,\N
+1162,Innenpolitik,Wehrbeauftragen,1,1,2022,\N
+1163,Innenpolitik,Restrukturierungsfondsgesetz,1,1,2022,\N
+1164,Innenpolitik,Haushaltsgesetz,1,1,2022,\N
+1165,Innenpolitik,Vorsitze,1,1,2022,\N
+1166,Justiz,BAMF,3,1,2022,\N
+1167,Justiz,Organstreitverfahren,2,1,2022,\N
+1168,Justiz,Prozessvertretung,2,1,2022,\N
+1169,Justiz,Steuerzahler,2,1,2022,\N
+1170,Justiz,Asylsuchende,2,1,2022,\N
+1171,Arbeit,Vereinbarte,5,1,2022,\N
+1172,Arbeit,Beiträge,2,1,2022,\N
+1173,Arbeit,Mission,2,1,2022,\N
+1174,Arbeit,Gedenken,2,1,2022,\N
+1175,Arbeit,Bestellung,2,1,2022,\N
+1176,Außenpolitik,NATO,4,1,2022,\N
+1177,Außenpolitik,Ukraine,4,1,2022,\N
+1178,Außenpolitik,Polen,4,1,2022,\N
+1179,Außenpolitik,Bundeskanzler,3,1,2022,\N
+1180,Außenpolitik,Iraq,2,1,2022,\N
+1181,Verkehr und Digitalisierung,Nummer,3,1,2022,\N
+1182,Verkehr und Digitalisierung,Joint,2,1,2022,\N
+1183,Verkehr und Digitalisierung,Lasten,1,1,2022,\N
+1184,Verkehr und Digitalisierung,Allgemeinverfügung,1,1,2022,\N
+1185,Verkehr und Digitalisierung,Emergency,1,1,2022,\N
+1186,Finanzen,Wirtschaftsplans,3,1,2022,\N
+1187,Finanzen,Bundeshaushaltsplan,3,1,2022,\N
+1188,Finanzen,Haushaltsführung,2,1,2022,\N
+1189,Finanzen,Volumen,1,1,2022,\N
+1190,Finanzen,Gesamthaushalts,1,1,2022,\N
+1191,Gesundheit,Impfpflicht,4,1,2022,\N
+1192,Gesundheit,Gesundheit,2,1,2022,\N
+1193,Gesundheit,Impfnebenwirkungen,2,1,2022,\N
+1194,Gesundheit,Saunaanlagen,2,1,2022,\N
+1195,Gesundheit,Kureinrichtungen,2,1,2022,\N
+1196,Familie,Heimat,4,1,2022,\N
+1197,Familie,David,3,1,2022,\N
+1198,Familie,Yusuf,2,1,2022,\N
+1199,Familie,Brief,2,1,2022,\N
+1200,Familie,Andrij,1,1,2022,\N
+1201,Arbeit,Beschäftigung,5,2,2022,\N
+1202,Arbeit,Gedenken,2,2,2022,\N
+1203,Arbeit,Zugangserleichterungen,2,2,2022,\N
+1204,Arbeit,Kurzarbeit,2,2,2022,\N
+1205,Arbeit,Anspruch,2,2,2022,\N
+1206,Verteidigung,Angriff,3,2,2022,\N
+1207,Verteidigung,Waffen,3,2,2022,\N
+1208,Verteidigung,Opfer,2,2,2022,\N
+1209,Verteidigung,Streitkräfte,2,2,2022,\N
+1210,Verteidigung,Abwehr,2,2,2022,\N
+1211,Außenpolitik,Ukraine,8,2,2022,\N
+1212,Außenpolitik,Afghanistan,8,2,2022,\N
+1213,Außenpolitik,Regierungserklärung,4,2,2022,\N
+1214,Außenpolitik,Beabsichtigt,4,2,2022,\N
+1215,Außenpolitik,Russland,3,2,2022,\N
+1216,Familie,Kinder,4,2,2022,\N
+1217,Familie,Andrij,2,2,2022,\N
+1218,Familie,Melnyk,2,2,2022,\N
+1219,Familie,Angehörige,2,2,2022,\N
+1220,Familie,Familien,2,2,2022,\N
+1221,Entwicklung,Infektionsgeschehens,3,2,2022,\N
+1222,Entwicklung,Bezugsdauer,2,2,2022,\N
+1223,Entwicklung,Anrechnungsfreiheit,2,2,2022,\N
+1224,Entwicklung,Nichtabruf,2,2,2022,\N
+1225,Entwicklung,Hemmung,2,2,2022,\N
+1226,Gesundheit,Impfpflicht,5,2,2022,\N
+1227,Gesundheit,Soziales,4,2,2022,\N
+1228,Gesundheit,Ernährung,3,2,2022,\N
+1229,Gesundheit,Pflege,2,2,2022,\N
+1230,Gesundheit,Mitgefühl,1,2,2022,\N
+1231,Justiz,Bundeswehr,5,2,2022,\N
+1232,Justiz,Bundesbehörden,2,2,2022,\N
+1233,Justiz,Amts,2,2,2022,\N
+1234,Justiz,Bundesverwaltungsgerichts,2,2,2022,\N
+1235,Justiz,Sicherheitsunternehmen,2,2,2022,\N
+1236,Wirtschaft,Wirtschaft,3,2,2022,\N
+1237,Wirtschaft,Kurzarbeitergeld,3,2,2022,\N
+1238,Wirtschaft,Brüssel,3,2,2022,\N
+1239,Wirtschaft,Kurzarbeitergeldes,2,2,2022,\N
+1240,Wirtschaft,Politik,2,2,2022,\N
+1241,Landwirtschaft,Landwirtschaft,4,2,2022,\N
+1242,Landwirtschaft,Bundesanstalt,2,2,2022,\N
+1243,Landwirtschaft,Betriebe,2,2,2022,\N
+1244,Landwirtschaft,Energieversorgung,1,2,2022,\N
+1245,Landwirtschaft,Importabhängigkeit,1,2,2022,\N
+1246,Wohnungsbau,Planungssicherheit,3,2,2022,\N
+1247,Wohnungsbau,Heizkostenzuschusses,2,2,2022,\N
+1248,Wohnungsbau,Pflegeanwendungen,2,2,2022,\N
+1249,Wohnungsbau,Sozialgesetzbuch,2,2,2022,\N
+1250,Wohnungsbau,Zusatzausgaben,2,2,2022,\N
+1251,Verkehr und Digitalisierung,Einvernehmen,3,2,2022,\N
+1252,Verkehr und Digitalisierung,Cannabis,3,2,2022,\N
+1253,Verkehr und Digitalisierung,Zugverbindungen,2,2,2022,\N
+1254,Verkehr und Digitalisierung,Kein,1,2,2022,\N
+1255,Verkehr und Digitalisierung,Kraftstoffpreise,1,2,2022,\N
+1256,Innenpolitik,Mindestlohns,2,2,2022,\N
+1257,Innenpolitik,Spähsoftware,1,2,2022,\N
+1258,Innenpolitik,Gesetzesantrag,1,2,2022,\N
+1259,Innenpolitik,Strategiewechsel,1,2,2022,\N
+1260,Innenpolitik,GUARDIAN,1,2,2022,\N
+1261,Bildung und Forschung,Sonderregelungen,3,2,2022,\N
+1262,Bildung und Forschung,Akuthilfen,2,2,2022,\N
+1263,Bildung und Forschung,Dänemark,2,2,2022,\N
+1264,Bildung und Forschung,Corona,2,2,2022,\N
+1265,Bildung und Forschung,Förderämter,1,2,2022,\N
+1266,Finanzen,Einkommens,2,2,2022,\N
+1267,Finanzen,Wirtschaftsplans,2,2,2022,\N
+1268,Finanzen,Zinsregeln,1,2,2022,\N
+1269,Finanzen,Personal,1,2,2022,\N
+1270,Finanzen,Volumen,1,2,2022,\N
+1271,Umwelt,Energie,3,2,2022,\N
+1272,Umwelt,Verbraucherinnen,1,2,2022,\N
+1273,Umwelt,Verbraucher,1,2,2022,\N
+1274,Umwelt,Treibhausgasemissionen,1,2,2022,\N
+1275,Umwelt,Klimaschutzmaßnahmen,1,2,2022,\N
+1276,Finanzen,Gesamthaushalts,8,3,2022,\N
+1277,Finanzen,Bundeshaushaltsplans,4,3,2022,\N
+1278,Finanzen,Wirtschaftsplans,4,3,2022,\N
+1279,Finanzen,Finanzplan,4,3,2022,\N
+1280,Finanzen,Personal,3,3,2022,\N
+1281,Entwicklung,Einschränkung,7,3,2022,\N
+1282,Entwicklung,Schutzmaßnahmen,6,3,2022,\N
+1283,Entwicklung,Gesetzentwurfs,5,3,2022,\N
+1284,Entwicklung,Einsetzung,5,3,2022,\N
+1285,Entwicklung,Stabilisierung,4,3,2022,\N
+1286,Wohnungsbau,Nettokreditaufnahme,8,3,2022,\N
+1287,Wohnungsbau,Sozialgesetzbuch,5,3,2022,\N
+1288,Wohnungsbau,Kinderkrankengeld,4,3,2022,\N
+1289,Wohnungsbau,Entschädigungsanspruch,4,3,2022,\N
+1290,Wohnungsbau,Heizkostenzuschusses,4,3,2022,\N
+1291,Wirtschaft,Steuereinnahmen,8,3,2022,\N
+1292,Wirtschaft,Bürgern,4,3,2022,\N
+1293,Wirtschaft,Gesamtwirtschaftliche,4,3,2022,\N
+1294,Wirtschaft,Wettbewerbsfähigkeit,2,3,2022,\N
+1295,Wirtschaft,Gebietskörperschaften,2,3,2022,\N
+1296,Außenpolitik,Ukraine,11,3,2022,\N
+1297,Außenpolitik,Angriffskrieges,4,3,2022,\N
+1298,Außenpolitik,Finanzbeziehungen,4,3,2022,\N
+1299,Außenpolitik,Beziehungen,3,3,2022,\N
+1300,Außenpolitik,Beabsichtigt,3,3,2022,\N
+1301,Umwelt,Energiekosten,6,3,2022,\N
+1302,Umwelt,Nachhaltige,2,3,2022,\N
+1303,Umwelt,Europäisches,1,3,2022,\N
+1304,Umwelt,Klimaschutzziele,1,3,2022,\N
+1305,Umwelt,Umweltprotesten,1,3,2022,\N
+1306,Arbeit,Stelleneinsparungen,4,3,2022,\N
+1307,Arbeit,Berichterstattung,4,3,2022,\N
+1308,Arbeit,Einkommensausfälle,4,3,2022,\N
+1309,Arbeit,Aktivitäten,4,3,2022,\N
+1310,Arbeit,Gespräche,3,3,2022,\N
+1311,Gesundheit,Impfpflicht,5,3,2022,\N
+1312,Gesundheit,Erkrankung,4,3,2022,\N
+1313,Gesundheit,Kindes,4,3,2022,\N
+1314,Gesundheit,Infektionsschutzgesetz,4,3,2022,\N
+1315,Gesundheit,Versorgungssicherheit,3,3,2022,\N
+1316,Verteidigung,Maskenpflicht,6,3,2022,\N
+1317,Verteidigung,Opfer,6,3,2022,\N
+1318,Verteidigung,Absicherung,3,3,2022,\N
+1319,Verteidigung,Vorhalten,2,3,2022,\N
+1320,Verteidigung,Sicherheitsreserve,2,3,2022,\N
+1321,Landwirtschaft,Marktgebietsverantwortlichen,4,3,2022,\N
+1322,Landwirtschaft,Landwirtschaft,3,3,2022,\N
+1323,Landwirtschaft,Erdgasspeichern,2,3,2022,\N
+1324,Landwirtschaft,Energiewirtschaftsgesetzes,2,3,2022,\N
+1325,Landwirtschaft,Ernährungssicherheit,2,3,2022,\N
+1326,Bildung und Forschung,Sonderausschreibungen,2,3,2022,\N
+1327,Bildung und Forschung,Medizinischen,2,3,2022,\N
+1328,Bildung und Forschung,Coronabedingte,2,3,2022,\N
+1329,Bildung und Forschung,Information,2,3,2022,\N
+1330,Bildung und Forschung,Impfprävention,2,3,2022,\N
+1331,Justiz,Grundrechten,6,3,2022,\N
+1332,Justiz,Gewalt,3,3,2022,\N
+1333,Justiz,Kindeswohl,2,3,2022,\N
+1334,Justiz,Hafteinrichtungen,2,3,2022,\N
+1335,Justiz,Internetveröffentlichungen,2,3,2022,\N
+1336,Familie,Kinder,4,3,2022,\N
+1337,Familie,Eltern,3,3,2022,\N
+1338,Familie,Kindern,3,3,2022,\N
+1339,Familie,Mitgliedern,2,3,2022,\N
+1340,Familie,Luis,2,3,2022,\N
+1341,Verkehr und Digitalisierung,Raum,3,3,2022,\N
+1342,Verkehr und Digitalisierung,Personenfernverkehr,2,3,2022,\N
+1343,Verkehr und Digitalisierung,Sperrung,2,3,2022,\N
+1344,Verkehr und Digitalisierung,Nummer,2,3,2022,\N
+1345,Verkehr und Digitalisierung,Verkehr,2,3,2022,\N
+1346,Innenpolitik,Ehegattennachzug,4,3,2022,\N
+1347,Innenpolitik,Elternzeitgesetz,2,3,2022,\N
+1348,Innenpolitik,Arbeitnehmerüberlassungsgesetz,2,3,2022,\N
+1349,Innenpolitik,Islamismus,2,3,2022,\N
+1350,Innenpolitik,GUARDIAN,1,3,2022,\N
+1351,Bildung und Forschung,Leitlinien,3,4,2022,\N
+1352,Bildung und Forschung,Entwicklungszusammenarbeit,3,4,2022,\N
+1353,Bildung und Forschung,Impfprävention,3,4,2022,\N
+1354,Bildung und Forschung,Anwendungsbereich,2,4,2022,\N
+1355,Bildung und Forschung,Berufsbildung,2,4,2022,\N
+1356,Verteidigung,Schutzes,5,4,2022,\N
+1357,Verteidigung,Streitkräfte,3,4,2022,\N
+1358,Verteidigung,Antrags,3,4,2022,\N
+1359,Verteidigung,Vereidigung,3,4,2022,\N
+1360,Verteidigung,Verteidigungsfähigkeit,3,4,2022,\N
+1361,Außenpolitik,Ukraine,21,4,2022,\N
+1362,Außenpolitik,Moldau,7,4,2022,\N
+1363,Außenpolitik,Libyen,3,4,2022,\N
+1364,Außenpolitik,Strategische,3,4,2022,\N
+1365,Außenpolitik,Kriegsbeginn,3,4,2022,\N
+1366,Finanzen,Verpflichtungsermächtigungen,5,4,2022,\N
+1367,Finanzen,Haushaltsführung,4,4,2022,\N
+1368,Finanzen,Haushaltsjahres,4,4,2022,\N
+1369,Finanzen,Sonderbericht,3,4,2022,\N
+1370,Finanzen,Geschäftsbereich,3,4,2022,\N
+1371,Verkehr und Digitalisierung,Gütern,3,4,2022,\N
+1372,Verkehr und Digitalisierung,Anhalten,2,4,2022,\N
+1373,Verkehr und Digitalisierung,Umleiten,2,4,2022,\N
+1374,Verkehr und Digitalisierung,Inverkehrbringens,2,4,2022,\N
+1375,Verkehr und Digitalisierung,Waren,2,4,2022,\N
+1376,Entwicklung,Einmalzahlung,9,4,2022,\N
+1377,Entwicklung,Digitalisierung,7,4,2022,\N
+1378,Entwicklung,Gleichbehandlung,5,4,2022,\N
+1379,Entwicklung,Artikels,4,4,2022,\N
+1380,Entwicklung,Ausführung,4,4,2022,\N
+1381,Justiz,Bundeswehr,10,4,2022,\N
+1382,Justiz,Küstenwache,5,4,2022,\N
+1383,Justiz,Akten,4,4,2022,\N
+1384,Justiz,Antidiskriminierungsstelle,4,4,2022,\N
+1385,Justiz,Rechnungshofs,3,4,2022,\N
+1386,Wohnungsbau,Vertriebenen,6,4,2022,\N
+1387,Wohnungsbau,Massenzustroms,5,4,2022,\N
+1388,Wohnungsbau,Mindestsicherungssysteme,4,4,2022,\N
+1389,Wohnungsbau,Flüchtlingen,4,4,2022,\N
+1390,Wohnungsbau,Kindergrundsicherung,3,4,2022,\N
+1391,Arbeit,Arbeitnehmer,8,4,2022,\N
+1392,Arbeit,Vereinbarkeit,6,4,2022,\N
+1393,Arbeit,Leistungsberechtigte,4,4,2022,\N
+1394,Arbeit,Arbeitsbedingungen,4,4,2022,\N
+1395,Arbeit,Männern,4,4,2022,\N
+1396,Familie,Kinder,6,4,2022,\N
+1397,Familie,Familie,3,4,2022,\N
+1398,Familie,Mali,3,4,2022,\N
+1399,Familie,Erwachsene,2,4,2022,\N
+1400,Familie,Assistenzhunde,2,4,2022,\N
+1401,Innenpolitik,Mindestlohns,5,4,2022,\N
+1402,Innenpolitik,Arbeitslosengeld,3,4,2022,\N
+1403,Innenpolitik,Wehrbeauftragten,2,4,2022,\N
+1404,Innenpolitik,Rechtsextremismus,2,4,2022,\N
+1405,Innenpolitik,NetzDG,2,4,2022,\N
+1406,Umwelt,Umwelt,4,4,2022,\N
+1407,Umwelt,Natur,3,4,2022,\N
+1408,Umwelt,Klimaschutz,2,4,2022,\N
+1409,Umwelt,Klimaschutzes,2,4,2022,\N
+1410,Umwelt,Kernkraftwerken,2,4,2022,\N
+1411,Wirtschaft,Globalisierung,8,4,2022,\N
+1412,Wirtschaft,Wirtschaft,6,4,2022,\N
+1413,Wirtschaft,Inflation,4,4,2022,\N
+1414,Wirtschaft,Ausland,3,4,2022,\N
+1415,Wirtschaft,Spaniens,2,4,2022,\N
+1416,Gesundheit,Impfpflicht,6,4,2022,\N
+1417,Gesundheit,Dauer,4,4,2022,\N
+1418,Gesundheit,Gesundheit,3,4,2022,\N
+1419,Gesundheit,Freiheit,2,4,2022,\N
+1420,Gesundheit,Versorgungssicherheit,2,4,2022,\N
+1421,Landwirtschaft,Kraftstoffe,4,4,2022,\N
+1422,Landwirtschaft,Fischerei,2,4,2022,\N
+1423,Landwirtschaft,Wehrdienst,1,4,2022,\N
+1424,Landwirtschaft,Raps,1,4,2022,\N
+1425,Landwirtschaft,Baumwolle,1,4,2022,\N
+1426,Verkehr und Digitalisierung,Personennahverkehrs,4,5,2022,\N
+1427,Verkehr und Digitalisierung,Datenaustausch,3,5,2022,\N
+1428,Verkehr und Digitalisierung,Straßenverkehr,3,5,2022,\N
+1429,Verkehr und Digitalisierung,Strom,3,5,2022,\N
+1430,Verkehr und Digitalisierung,Weiterer,2,5,2022,\N
+1431,Wirtschaft,Wirtschaft,13,5,2022,\N
+1432,Wirtschaft,Energielieferanten,4,5,2022,\N
+1433,Wirtschaft,Haushaltskunden,4,5,2022,\N
+1434,Wirtschaft,Bürgern,4,5,2022,\N
+1435,Wirtschaft,Organisationen,3,5,2022,\N
+1436,Entwicklung,Einmalzahlung,8,5,2022,\N
+1437,Entwicklung,Überwachung,6,5,2022,\N
+1438,Entwicklung,Herstellung,5,5,2022,\N
+1439,Entwicklung,Unabhängigkeit,5,5,2022,\N
+1440,Entwicklung,Ausbildung,5,5,2022,\N
+1441,Außenpolitik,Ukraine,25,5,2022,\N
+1442,Außenpolitik,Russlands,8,5,2022,\N
+1443,Außenpolitik,Treibhausgasneutralität,5,5,2022,\N
+1444,Außenpolitik,Mandatsobergrenze,5,5,2022,\N
+1445,Außenpolitik,Afghanistan,5,5,2022,\N
+1446,Wohnungsbau,Sozialgesetzbuch,8,5,2022,\N
+1447,Wohnungsbau,Geflüchtete,6,5,2022,\N
+1448,Wohnungsbau,Haushaltsjahr,5,5,2022,\N
+1449,Wohnungsbau,Zusatzausgaben,5,5,2022,\N
+1450,Wohnungsbau,Gebäude,5,5,2022,\N
+1451,Justiz,Bundesnetzagentur,6,5,2022,\N
+1452,Justiz,Rechtsfolgen,4,5,2022,\N
+1453,Justiz,Strafgesetzbuches,4,5,2022,\N
+1454,Justiz,Bundesverfassungsgerichts,4,5,2022,\N
+1455,Justiz,Einführungsgesetz,4,5,2022,\N
+1456,Arbeit,Beitrag,5,5,2022,\N
+1457,Arbeit,Verpflichtungen,4,5,2022,\N
+1458,Arbeit,Entschädigung,4,5,2022,\N
+1459,Arbeit,Fällen,4,5,2022,\N
+1460,Arbeit,Arbeitsbedingungen,4,5,2022,\N
+1461,Umwelt,Energien,9,5,2022,\N
+1462,Umwelt,Klimaschutz,7,5,2022,\N
+1463,Umwelt,Organismen,3,5,2022,\N
+1464,Umwelt,Energie,3,5,2022,\N
+1465,Umwelt,Global,3,5,2022,\N
+1466,Landwirtschaft,Alterssicherung,6,5,2022,\N
+1467,Landwirtschaft,Kraftstoffe,5,5,2022,\N
+1468,Landwirtschaft,Energieversorgung,5,5,2022,\N
+1469,Landwirtschaft,Windenergie,4,5,2022,\N
+1470,Landwirtschaft,Heizung,3,5,2022,\N
+1471,Verteidigung,Streitkräfte,7,5,2022,\N
+1472,Verteidigung,Soldaten,6,5,2022,\N
+1473,Verteidigung,Angriff,5,5,2022,\N
+1474,Verteidigung,Geltendmachung,3,5,2022,\N
+1475,Verteidigung,Reserve,3,5,2022,\N
+1476,Bildung und Forschung,Bildung,12,5,2022,\N
+1477,Bildung und Forschung,Special,5,5,2022,\N
+1478,Bildung und Forschung,Jugendliche,4,5,2022,\N
+1479,Bildung und Forschung,Universitäten,4,5,2022,\N
+1480,Bildung und Forschung,Innovation,3,5,2022,\N
+1481,Innenpolitik,Mindestlohns,3,5,2022,\N
+1482,Innenpolitik,Aufenthaltsgesetzes,3,5,2022,\N
+1483,Innenpolitik,Rentenniveau,2,5,2022,\N
+1484,Innenpolitik,Arbeitslosengeld,2,5,2022,\N
+1485,Innenpolitik,Regierungskoalition,2,5,2022,\N
+1486,Finanzen,Bundeshaushaltsplans,3,5,2022,\N
+1487,Finanzen,Geschäftsbereich,3,5,2022,\N
+1488,Finanzen,Zuständigkeiten,3,5,2022,\N
+1489,Finanzen,Wertpapieren,3,5,2022,\N
+1490,Finanzen,Renten,2,5,2022,\N
+1491,Gesundheit,Verbraucherschutz,5,5,2022,\N
+1492,Gesundheit,Künstliche,3,5,2022,\N
+1493,Gesundheit,Todes,2,5,2022,\N
+1494,Gesundheit,Langzeitpflege,2,5,2022,\N
+1495,Gesundheit,Versorgungssicherheit,2,5,2022,\N
+1496,Familie,Kinder,6,5,2022,\N
+1497,Familie,Teilt,5,5,2022,\N
+1498,Familie,Heimat,4,5,2022,\N
+1499,Familie,Gruppe,3,5,2022,\N
+1500,Familie,Freibeträge,3,5,2022,\N
+1501,Justiz,Bundeswehr,11,6,2022,\N
+1502,Justiz,Abgabenordnung,7,6,2022,\N
+1503,Justiz,Bundesverfassungsgerichts,5,6,2022,\N
+1504,Justiz,Behörde,4,6,2022,\N
+1505,Justiz,Bundesnetzagentur,3,6,2022,\N
+1506,Arbeit,Arbeitsbedingungen,7,6,2022,\N
+1507,Arbeit,Hilfe,6,6,2022,\N
+1508,Arbeit,Teilnahme,5,6,2022,\N
+1509,Arbeit,Verpflichtungen,5,6,2022,\N
+1510,Arbeit,Werbung,4,6,2022,\N
+1511,Entwicklung,Entwurfs,8,6,2022,\N
+1512,Entwicklung,Jahres,7,6,2022,\N
+1513,Entwicklung,Ausbildung,6,6,2022,\N
+1514,Entwicklung,Gesetzentwurfs,4,6,2022,\N
+1515,Entwicklung,Erreichung,4,6,2022,\N
+1516,Bildung und Forschung,Wasserstoff,5,6,2022,\N
+1517,Bildung und Forschung,Videokommunikation,4,6,2022,\N
+1518,Bildung und Forschung,European,3,6,2022,\N
+1519,Bildung und Forschung,Schüler,3,6,2022,\N
+1520,Bildung und Forschung,Ausnahmeregelung,2,6,2022,\N
+1521,Verteidigung,Streitkräfte,8,6,2022,\N
+1522,Verteidigung,Interessen,3,6,2022,\N
+1523,Verteidigung,Haager,3,6,2022,\N
+1524,Verteidigung,Vollstreckung,3,6,2022,\N
+1525,Verteidigung,Verteidigungsfähigkeit,3,6,2022,\N
+1526,Gesundheit,Sterben,5,6,2022,\N
+1527,Gesundheit,Dauer,3,6,2022,\N
+1528,Gesundheit,Selbsttötung,2,6,2022,\N
+1529,Gesundheit,Leben,2,6,2022,\N
+1530,Gesundheit,Schwangerschaftsabbrüche,2,6,2022,\N
+1531,Außenpolitik,Ukraine,13,6,2022,\N
+1532,Außenpolitik,Afghanistan,5,6,2022,\N
+1533,Außenpolitik,Angriffskrieges,4,6,2022,\N
+1534,Außenpolitik,Treibhausgasneutralität,3,6,2022,\N
+1535,Außenpolitik,Mandatsobergrenze,3,6,2022,\N
+1536,Verkehr und Digitalisierung,Einvernehmen,4,6,2022,\N
+1537,Verkehr und Digitalisierung,Betäubungsmitteln,3,6,2022,\N
+1538,Verkehr und Digitalisierung,Abstand,2,6,2022,\N
+1539,Verkehr und Digitalisierung,Kraftwerken,2,6,2022,\N
+1540,Verkehr und Digitalisierung,Vergabeverfahren,2,6,2022,\N
+1541,Familie,Freibeträge,6,6,2022,\N
+1542,Familie,Notlage,2,6,2022,\N
+1543,Familie,Sitz,2,6,2022,\N
+1544,Familie,Gesellschafters,2,6,2022,\N
+1545,Familie,Unternehmers,2,6,2022,\N
+1546,Wirtschaft,Wirtschaft,8,6,2022,\N
+1547,Wirtschaft,Steuereinnahmen,6,6,2022,\N
+1548,Wirtschaft,Studierende,4,6,2022,\N
+1549,Wirtschaft,Politik,3,6,2022,\N
+1550,Wirtschaft,Gesellschaft,3,6,2022,\N
+1551,Wohnungsbau,Haushaltsjahr,17,6,2022,\N
+1552,Wohnungsbau,Nettokreditaufnahme,6,6,2022,\N
+1553,Wohnungsbau,BAföG,5,6,2022,\N
+1554,Wohnungsbau,Bundesausbildungsförderungsgesetz,5,6,2022,\N
+1555,Wohnungsbau,Mindestlohn,5,6,2022,\N
+1556,Umwelt,Vereinten,4,6,2022,\N
+1557,Umwelt,Energien,3,6,2022,\N
+1558,Umwelt,Klimaschutz,3,6,2022,\N
+1559,Umwelt,Energiekosten,3,6,2022,\N
+1560,Umwelt,Flächenbeitragswerte,2,6,2022,\N
+1561,Landwirtschaft,Windenergieanlagen,5,6,2022,\N
+1562,Landwirtschaft,Erdgas,4,6,2022,\N
+1563,Landwirtschaft,Erzeuger,4,6,2022,\N
+1564,Landwirtschaft,Betriebe,4,6,2022,\N
+1565,Landwirtschaft,Stromerzeugung,3,6,2022,\N
+1566,Finanzen,Bundeshaushaltsplans,19,6,2022,\N
+1567,Finanzen,Gesamthaushalts,6,6,2022,\N
+1568,Finanzen,Sondervermögen,4,6,2022,\N
+1569,Finanzen,Geschäftsbereich,4,6,2022,\N
+1570,Finanzen,Verwaltungsrat,3,6,2022,\N
+1571,Innenpolitik,Nachtragshaushaltsgesetz,4,6,2022,\N
+1572,Innenpolitik,Mindestlohns,4,6,2022,\N
+1573,Innenpolitik,Rathenaus,1,6,2022,\N
+1574,Innenpolitik,Haushaltsgesetzes,1,6,2022,\N
+1575,Innenpolitik,Misstrauen,1,6,2022,\N
+1576,Finanzen,Haushaltsführung,5,7,2022,\N
+1577,Finanzen,Verpflichtungsermächtigungen,4,7,2022,\N
+1578,Finanzen,Haushaltsjahres,4,7,2022,\N
+1579,Finanzen,Finanzen,4,7,2022,\N
+1580,Finanzen,Jahresbericht,3,7,2022,\N
+1581,Landwirtschaft,Windenergieanlagen,6,7,2022,\N
+1582,Landwirtschaft,Stromerzeugung,4,7,2022,\N
+1583,Landwirtschaft,Windenergie,4,7,2022,\N
+1584,Landwirtschaft,Treibhausgasemissionszertifikaten,3,7,2022,\N
+1585,Landwirtschaft,Erdgas,3,7,2022,\N
+1586,Entwicklung,Resilienzplans,24,7,2022,\N
+1587,Entwicklung,Billigung,23,7,2022,\N
+1588,Entwicklung,Migration,5,7,2022,\N
+1589,Entwicklung,Digitalisierung,5,7,2022,\N
+1590,Entwicklung,Beitritt,4,7,2022,\N
+1591,Verkehr und Digitalisierung,Stromsektor,4,7,2022,\N
+1592,Verkehr und Digitalisierung,Handel,3,7,2022,\N
+1593,Verkehr und Digitalisierung,Kroatien,3,7,2022,\N
+1594,Verkehr und Digitalisierung,Liegen,3,7,2022,\N
+1595,Verkehr und Digitalisierung,Straßengüterverkehr,2,7,2022,\N
+1596,Wohnungsbau,Stadtentwicklung,5,7,2022,\N
+1597,Wohnungsbau,Wohnungen,5,7,2022,\N
+1598,Wohnungsbau,Council,4,7,2022,\N
+1599,Wohnungsbau,Verordnungsermächtigungen,4,7,2022,\N
+1600,Wohnungsbau,Flächen,4,7,2022,\N
+1601,Gesundheit,Gesundheit,3,7,2022,\N
+1602,Gesundheit,Gefährdung,2,7,2022,\N
+1603,Gesundheit,Freiheit,2,7,2022,\N
+1604,Gesundheit,Pflege,2,7,2022,\N
+1605,Gesundheit,Funktionsfähigkeit,2,7,2022,\N
+1606,Innenpolitik,Parliament,4,7,2022,\N
+1607,Innenpolitik,Schweden,2,7,2022,\N
+1608,Innenpolitik,Asyl,2,7,2022,\N
+1609,Innenpolitik,Schuldenbremse,2,7,2022,\N
+1610,Innenpolitik,Wehrbeauftragten,1,7,2022,\N
+1611,Justiz,Bundeswehr,10,7,2022,\N
+1612,Justiz,Commission,2,7,2022,\N
+1613,Justiz,Rechtsstaatlichkeit,2,7,2022,\N
+1614,Justiz,Drittstaatsangehörige,2,7,2022,\N
+1615,Justiz,Rechnungshofs,2,7,2022,\N
+1616,Arbeit,Vierteljahr,4,7,2022,\N
+1617,Arbeit,Teilnahme,4,7,2022,\N
+1618,Arbeit,Versammlung,3,7,2022,\N
+1619,Arbeit,Genehmigung,3,7,2022,\N
+1620,Arbeit,Engagements,2,7,2022,\N
+1621,Außenpolitik,Ukraine,9,7,2022,\N
+1622,Außenpolitik,Afghanistan,5,7,2022,\N
+1623,Außenpolitik,Polen,5,7,2022,\N
+1624,Außenpolitik,Russland,5,7,2022,\N
+1625,Außenpolitik,Treibhausgasneutralität,4,7,2022,\N
+1626,Bildung und Forschung,European,6,7,2022,\N
+1627,Bildung und Forschung,Bildung,3,7,2022,\N
+1628,Bildung und Forschung,Studie,3,7,2022,\N
+1629,Bildung und Forschung,Handlungsfelder,2,7,2022,\N
+1630,Bildung und Forschung,Communication,2,7,2022,\N
+1631,Umwelt,Finnland,4,7,2022,\N
+1632,Umwelt,Energien,4,7,2022,\N
+1633,Umwelt,Handeln,3,7,2022,\N
+1634,Umwelt,Klima,2,7,2022,\N
+1635,Umwelt,Flächenbeitragswerte,2,7,2022,\N
+1636,Wirtschaft,Krise,4,7,2022,\N
+1637,Wirtschaft,Brüssel,3,7,2022,\N
+1638,Wirtschaft,System,3,7,2022,\N
+1639,Wirtschaft,Verwaltung,3,7,2022,\N
+1640,Wirtschaft,Hauptversammlungen,3,7,2022,\N
+1641,Verteidigung,Vertreter,4,7,2022,\N
+1642,Verteidigung,Streitkräfte,3,7,2022,\N
+1643,Verteidigung,Flucht,3,7,2022,\N
+1644,Verteidigung,Soldaten,3,7,2022,\N
+1645,Verteidigung,Abzug,3,7,2022,\N
+1646,Familie,Border,2,7,2022,\N
+1647,Familie,Ferda,2,7,2022,\N
+1648,Familie,Heimat,2,7,2022,\N
+1649,Familie,Mitgliedern,2,7,2022,\N
+1650,Familie,ALTHEA,1,7,2022,\N
+1651,Verkehr und Digitalisierung,Marktzugang,3,9,2022,\N
+1652,Verkehr und Digitalisierung,Handel,3,9,2022,\N
+1653,Verkehr und Digitalisierung,Gasverbrauchs,2,9,2022,\N
+1654,Verkehr und Digitalisierung,Transportkapazitäten,2,9,2022,\N
+1655,Verkehr und Digitalisierung,Raum,2,9,2022,\N
+1656,Entwicklung,Stelleneinsparung,8,9,2022,\N
+1657,Entwicklung,Abmilderung,7,9,2022,\N
+1658,Entwicklung,Vorschlags,6,9,2022,\N
+1659,Entwicklung,Verringerung,5,9,2022,\N
+1660,Entwicklung,Kapiteln,5,9,2022,\N
+1661,Umwelt,Klimaschutz,5,9,2022,\N
+1662,Umwelt,Kohlendioxidausstoßes,3,9,2022,\N
+1663,Umwelt,Sächsische,3,9,2022,\N
+1664,Umwelt,Energieversorgungssicherheit,2,9,2022,\N
+1665,Umwelt,Nachhaltigkeit,2,9,2022,\N
+1666,Landwirtschaft,Gasumlage,6,9,2022,\N
+1667,Landwirtschaft,Wachstumsförderung,4,9,2022,\N
+1668,Landwirtschaft,Handelsbeschränkungen,3,9,2022,\N
+1669,Landwirtschaft,Pflanzenschutzmitteln,3,9,2022,\N
+1670,Landwirtschaft,Photovoltaik,2,9,2022,\N
+1671,Arbeit,Kurzarbeit,6,9,2022,\N
+1672,Arbeit,Arbeitgeber,5,9,2022,\N
+1673,Arbeit,Stellen,5,9,2022,\N
+1674,Arbeit,Sitzungen,5,9,2022,\N
+1675,Arbeit,Beschäftigte,5,9,2022,\N
+1676,Wohnungsbau,Nettokreditaufnahme,8,9,2022,\N
+1677,Wohnungsbau,Sozialgesetzbuch,6,9,2022,\N
+1678,Wohnungsbau,Solaranlagen,4,9,2022,\N
+1679,Wohnungsbau,Investorenschutz,3,9,2022,\N
+1680,Wohnungsbau,Gasbeschaffungsumlage,3,9,2022,\N
+1681,Justiz,Streitbeilegung,3,9,2022,\N
+1682,Justiz,Staatsangehörige,3,9,2022,\N
+1683,Justiz,Finanzbehörden,3,9,2022,\N
+1684,Justiz,Gesetze,3,9,2022,\N
+1685,Justiz,Einführungsgesetz,3,9,2022,\N
+1686,Bildung und Forschung,Zukunftsinvestitionen,4,9,2022,\N
+1687,Bildung und Forschung,European,3,9,2022,\N
+1688,Bildung und Forschung,Herkunftsangaben,3,9,2022,\N
+1689,Bildung und Forschung,Auslandsaufenthalte,3,9,2022,\N
+1690,Bildung und Forschung,Katalog,3,9,2022,\N
+1691,Verteidigung,Vollstreckung,5,9,2022,\N
+1692,Verteidigung,Föderation,3,9,2022,\N
+1693,Verteidigung,Verstößen,3,9,2022,\N
+1694,Verteidigung,Schutzes,3,9,2022,\N
+1695,Verteidigung,Waffen,3,9,2022,\N
+1696,Innenpolitik,Arbeitslosengeld,4,9,2022,\N
+1697,Innenpolitik,Hinweisgeberschutzgesetz,2,9,2022,\N
+1698,Innenpolitik,Spielautomaten,2,9,2022,\N
+1699,Innenpolitik,Zeitung,2,9,2022,\N
+1700,Innenpolitik,Bundeskanzleramtes,2,9,2022,\N
+1701,Außenpolitik,Ukraine,15,9,2022,\N
+1702,Außenpolitik,Russland,8,9,2022,\N
+1703,Außenpolitik,Beziehungen,4,9,2022,\N
+1704,Außenpolitik,Energiesicherungsgesetzes,4,9,2022,\N
+1705,Außenpolitik,Russischen,4,9,2022,\N
+1706,Wirtschaft,Wirtschaft,8,9,2022,\N
+1707,Wirtschaft,Uniper,8,9,2022,\N
+1708,Wirtschaft,Steuereinnahmen,8,9,2022,\N
+1709,Wirtschaft,Kurzarbeitergeld,4,9,2022,\N
+1710,Wirtschaft,Inflation,4,9,2022,\N
+1711,Finanzen,Wirtschaftsplans,10,9,2022,\N
+1712,Finanzen,Steuern,5,9,2022,\N
+1713,Finanzen,Bundeshaushaltsplans,4,9,2022,\N
+1714,Finanzen,Gesamthaushalts,4,9,2022,\N
+1715,Finanzen,Finanzplan,4,9,2022,\N
+1716,Gesundheit,Resilienz,6,9,2022,\N
+1717,Gesundheit,Pflege,5,9,2022,\N
+1718,Gesundheit,Mitteilungspflicht,4,9,2022,\N
+1719,Gesundheit,Arzneimittel,3,9,2022,\N
+1720,Gesundheit,Erkrankungen,3,9,2022,\N
+1721,Familie,Minderheit,4,9,2022,\N
+1722,Familie,Königreich,3,9,2022,\N
+1723,Familie,Kinder,3,9,2022,\N
+1724,Familie,Gruppen,3,9,2022,\N
+1725,Familie,Ursula,3,9,2022,\N
+1726,Wirtschaft,Inflation,9,10,2022,\N
+1727,Wirtschaft,Energiepreise,7,10,2022,\N
+1728,Wirtschaft,Energiepreispauschale,6,10,2022,\N
+1729,Wirtschaft,Haushalte,6,10,2022,\N
+1730,Wirtschaft,Protelion,6,10,2022,\N
+1731,Landwirtschaft,Energieversorgung,4,10,2022,\N
+1732,Landwirtschaft,Brennstoffe,4,10,2022,\N
+1733,Landwirtschaft,Versorgungsempfängerinnen,2,10,2022,\N
+1734,Landwirtschaft,Alterssicherung,2,10,2022,\N
+1735,Landwirtschaft,Landwirte,2,10,2022,\N
+1736,Außenpolitik,Ukraine,15,10,2022,\N
+1737,Außenpolitik,Neuverhandlungen,6,10,2022,\N
+1738,Außenpolitik,Russland,6,10,2022,\N
+1739,Außenpolitik,Sanktionen,5,10,2022,\N
+1740,Außenpolitik,Türkei,4,10,2022,\N
+1741,Entwicklung,Abfederung,8,10,2022,\N
+1742,Entwicklung,Gewährung,7,10,2022,\N
+1743,Entwicklung,Inwieweit,7,10,2022,\N
+1744,Entwicklung,Infrastruktur,6,10,2022,\N
+1745,Entwicklung,Formen,5,10,2022,\N
+1746,Arbeit,Beschäftigten,7,10,2022,\N
+1747,Arbeit,Ausstellung,5,10,2022,\N
+1748,Arbeit,Arbeitnehmer,4,10,2022,\N
+1749,Arbeit,Leistungsberechtigung,4,10,2022,\N
+1750,Arbeit,Kohle,4,10,2022,\N
+1751,Wohnungsbau,Sozialgesetzbuch,18,10,2022,\N
+1752,Wohnungsbau,Flüchtlinge,7,10,2022,\N
+1753,Wohnungsbau,Wirtschaftsstabilisierungsfonds,5,10,2022,\N
+1754,Wohnungsbau,Krankenhäuser,5,10,2022,\N
+1755,Wohnungsbau,Rassismus,4,10,2022,\N
+1756,Verkehr und Digitalisierung,Arzneimitteln,6,10,2022,\N
+1757,Verkehr und Digitalisierung,Gebrauch,4,10,2022,\N
+1758,Verkehr und Digitalisierung,Netz,4,10,2022,\N
+1759,Verkehr und Digitalisierung,Winter,3,10,2022,\N
+1760,Verkehr und Digitalisierung,Strom,3,10,2022,\N
+1761,Bildung und Forschung,Zwecke,4,10,2022,\N
+1762,Bildung und Forschung,Entfristung,4,10,2022,\N
+1763,Bildung und Forschung,Austausch,4,10,2022,\N
+1764,Bildung und Forschung,BMWK,4,10,2022,\N
+1765,Bildung und Forschung,Patientenorganisationen,4,10,2022,\N
+1766,Finanzen,Finanzen,4,10,2022,\N
+1767,Finanzen,Kreditaufnahme,3,10,2022,\N
+1768,Finanzen,Beitragssätze,3,10,2022,\N
+1769,Finanzen,Vermögenswerte,3,10,2022,\N
+1770,Finanzen,Haushaltsvermerks,2,10,2022,\N
+1771,Verteidigung,Verstöße,5,10,2022,\N
+1772,Verteidigung,Einheit,4,10,2022,\N
+1773,Verteidigung,Befugnisse,3,10,2022,\N
+1774,Verteidigung,Streitkräfte,3,10,2022,\N
+1775,Verteidigung,Nichtberücksichtigung,3,10,2022,\N
+1776,Innenpolitik,Islamismus,5,10,2022,\N
+1777,Innenpolitik,Gesetzgebungskompetenz,2,10,2022,\N
+1778,Innenpolitik,Schuldenbremse,2,10,2022,\N
+1779,Innenpolitik,Europawahlgesetzes,2,10,2022,\N
+1780,Innenpolitik,Fremdenfeindlichkeit,2,10,2022,\N
+1781,Familie,Heimat,8,10,2022,\N
+1782,Familie,Eltern,5,10,2022,\N
+1783,Familie,Angehörige,5,10,2022,\N
+1784,Familie,Sitz,4,10,2022,\N
+1785,Familie,Königreich,3,10,2022,\N
+1786,Gesundheit,Krankenkassen,8,10,2022,\N
+1787,Gesundheit,Arzneimittel,4,10,2022,\N
+1788,Gesundheit,Krankenversicherung,4,10,2022,\N
+1789,Gesundheit,Schaden,3,10,2022,\N
+1790,Gesundheit,Gesundheit,3,10,2022,\N
+1791,Umwelt,Klimaschutz,4,10,2022,\N
+1792,Umwelt,Wärme,4,10,2022,\N
+1793,Umwelt,Wasser,4,10,2022,\N
+1794,Umwelt,Energien,3,10,2022,\N
+1795,Umwelt,Energiekosten,3,10,2022,\N
+1796,Justiz,Amts,5,10,2022,\N
+1797,Justiz,Unionsrecht,5,10,2022,\N
+1798,Justiz,Bundesverfassungsgerichts,5,10,2022,\N
+1799,Justiz,Bagatellgrenze,4,10,2022,\N
+1800,Justiz,Grundrechte,3,10,2022,\N
+1801,Entwicklung,Leistungsminderungen,9,11,2022,\N
+1802,Entwicklung,Stelleneinsparung,8,11,2022,\N
+1803,Entwicklung,Infrastruktur,7,11,2022,\N
+1804,Entwicklung,Strukturelle,6,11,2022,\N
+1805,Entwicklung,Aufteilung,6,11,2022,\N
+1806,Innenpolitik,Landesebene,3,11,2022,\N
+1807,Innenpolitik,Arbeitslosengeld,3,11,2022,\N
+1808,Innenpolitik,Krisenvorsorge,3,11,2022,\N
+1809,Innenpolitik,Solidaritätszuschlaggesetz,3,11,2022,\N
+1810,Innenpolitik,Strompreisbremse,2,11,2022,\N
+1811,Außenpolitik,Iran,8,11,2022,\N
+1812,Außenpolitik,Auswärtige,8,11,2022,\N
+1813,Außenpolitik,Mitgliedstaat,8,11,2022,\N
+1814,Außenpolitik,Afghanistan,7,11,2022,\N
+1815,Außenpolitik,Türkei,6,11,2022,\N
+1816,Justiz,Bundesverfassungsgerichts,7,11,2022,\N
+1817,Justiz,Justiz,5,11,2022,\N
+1818,Justiz,Rechtsprechung,5,11,2022,\N
+1819,Justiz,Bagatellgrenze,5,11,2022,\N
+1820,Justiz,Zentralstelle,4,11,2022,\N
+1821,Finanzen,Wirtschaftsplans,11,11,2022,\N
+1822,Finanzen,Bundeshaushaltsplans,10,11,2022,\N
+1823,Finanzen,Vermögen,6,11,2022,\N
+1824,Finanzen,Einkommen,5,11,2022,\N
+1825,Finanzen,Gesamthaushalts,4,11,2022,\N
+1826,Arbeit,Karenzzeit,12,11,2022,\N
+1827,Arbeit,Leistungsbezugs,6,11,2022,\N
+1828,Arbeit,Zeitplan,4,11,2022,\N
+1829,Arbeit,Stellen,4,11,2022,\N
+1830,Arbeit,Außenprüfungen,4,11,2022,\N
+1831,Wohnungsbau,Sozialgesetzbuch,15,11,2022,\N
+1832,Wohnungsbau,Nettokreditaufnahme,8,11,2022,\N
+1833,Wohnungsbau,Sozialen,7,11,2022,\N
+1834,Wohnungsbau,Haushaltsjahr,6,11,2022,\N
+1835,Wohnungsbau,Wohneigentum,6,11,2022,\N
+1836,Gesundheit,Resilienz,4,11,2022,\N
+1837,Gesundheit,Mitteilungspflicht,3,11,2022,\N
+1838,Gesundheit,Gesundheit,3,11,2022,\N
+1839,Gesundheit,Geschlecht,3,11,2022,\N
+1840,Gesundheit,Rehabilitation,3,11,2022,\N
+1841,Bildung und Forschung,Entfristung,9,11,2022,\N
+2185,Wirtschaft,Wirtschaft,3,3,2023,\N
+1842,Bildung und Forschung,Vereinigungen,5,11,2022,\N
+1843,Bildung und Forschung,Religion,4,11,2022,\N
+1844,Bildung und Forschung,Zukunftsinvestitionen,4,11,2022,\N
+1845,Bildung und Forschung,Austausch,4,11,2022,\N
+1846,Verkehr und Digitalisierung,Winter,5,11,2022,\N
+1847,Verkehr und Digitalisierung,Nutzfahrzeuge,4,11,2022,\N
+1848,Verkehr und Digitalisierung,Weiterbetrieb,4,11,2022,\N
+1849,Verkehr und Digitalisierung,Barzahlungsverbot,3,11,2022,\N
+1850,Verkehr und Digitalisierung,Erdgasleitungen,3,11,2022,\N
+1851,Familie,Heimat,6,11,2022,\N
+1852,Familie,Steuerpflichtige,6,11,2022,\N
+1853,Familie,Neurath,4,11,2022,\N
+1854,Familie,Pflegefamilien,4,11,2022,\N
+1855,Familie,Teilt,3,11,2022,\N
+1856,Verteidigung,Frist,6,11,2022,\N
+1857,Verteidigung,Erstattung,6,11,2022,\N
+1858,Verteidigung,Nichtberücksichtigung,6,11,2022,\N
+1859,Verteidigung,Ausgleich,5,11,2022,\N
+1860,Verteidigung,Nationalen,3,11,2022,\N
+1861,Wirtschaft,Steuereinnahmen,8,11,2022,\N
+1862,Wirtschaft,Mehrwertsteuer,6,11,2022,\N
+1863,Wirtschaft,Bürgergeldes,4,11,2022,\N
+1864,Wirtschaft,Gesamtwirtschaftliche,4,11,2022,\N
+1865,Wirtschaft,Wirtschaft,3,11,2022,\N
+1866,Landwirtschaft,Wachstumsförderung,4,11,2022,\N
+1867,Landwirtschaft,Energieversorgung,4,11,2022,\N
+1868,Landwirtschaft,Bundesanstalt,4,11,2022,\N
+1869,Landwirtschaft,Namibia,4,11,2022,\N
+1870,Landwirtschaft,Erdgasspeichern,3,11,2022,\N
+1871,Umwelt,Energien,6,11,2022,\N
+1872,Umwelt,Wärme,5,11,2022,\N
+1873,Umwelt,Klimaschutz,4,11,2022,\N
+1874,Umwelt,Betriebsstoffe,3,11,2022,\N
+1875,Umwelt,Kälte,3,11,2022,\N
+1876,Umwelt,Wärme,14,12,2022,\N
+1877,Umwelt,Kilowattstunde,12,12,2022,\N
+1878,Umwelt,Energien,7,12,2022,\N
+1879,Umwelt,Energiekosten,6,12,2022,\N
+1880,Umwelt,Raumordnung,4,12,2022,\N
+1881,Verkehr und Digitalisierung,Netzbezuges,6,12,2022,\N
+1882,Verkehr und Digitalisierung,Preisbremsen,4,12,2022,\N
+1883,Verkehr und Digitalisierung,Handel,3,12,2022,\N
+1884,Verkehr und Digitalisierung,Entlastungsbeträgen,3,12,2022,\N
+1885,Verkehr und Digitalisierung,Wind,3,12,2022,\N
+1886,Entwicklung,Verwaltungsvereinbarung,12,12,2022,\N
+1887,Entwicklung,Gewährung,6,12,2022,\N
+1888,Entwicklung,Berichts,6,12,2022,\N
+1889,Entwicklung,Wirkung,6,12,2022,\N
+1890,Entwicklung,Basiskontingents,6,12,2022,\N
+1891,Verteidigung,Abschöpfung,6,12,2022,\N
+1892,Verteidigung,Verstößen,5,12,2022,\N
+1893,Verteidigung,Notfallmaßnahmen,4,12,2022,\N
+1894,Verteidigung,Flankierung,3,12,2022,\N
+1895,Verteidigung,Sicherheitszuschlags,3,12,2022,\N
+1896,Justiz,Bundesnetzagentur,4,12,2022,\N
+1897,Justiz,Bundespolizei,3,12,2022,\N
+1898,Justiz,Missbrauch,3,12,2022,\N
+1899,Justiz,Präsidentin,3,12,2022,\N
+1900,Justiz,Bundesverfassungsgerichts,3,12,2022,\N
+1901,Gesundheit,Preis,9,12,2022,\N
+1902,Gesundheit,Mitteilungspflicht,3,12,2022,\N
+1903,Gesundheit,Funktionsfähigkeit,3,12,2022,\N
+1904,Gesundheit,Apotheken,3,12,2022,\N
+1905,Gesundheit,Soziales,3,12,2022,\N
+1906,Außenpolitik,Basispreiskontingents,6,12,2022,\N
+1907,Außenpolitik,Mitgliedstaat,5,12,2022,\N
+1908,Außenpolitik,Beziehungen,4,12,2022,\N
+1909,Außenpolitik,Ukraine,3,12,2022,\N
+1910,Außenpolitik,Meldekanäle,2,12,2022,\N
+1911,Wirtschaft,Energiepreise,4,12,2022,\N
+1912,Wirtschaft,Rheinischen,4,12,2022,\N
+1913,Wirtschaft,Mehrwertsteuer,4,12,2022,\N
+1914,Wirtschaft,Arbeitnehmern,3,12,2022,\N
+1915,Wirtschaft,Haushalte,3,12,2022,\N
+1916,Arbeit,Wege,5,12,2022,\N
+1917,Arbeit,Ausstellung,5,12,2022,\N
+1918,Arbeit,Agentur,5,12,2022,\N
+1919,Arbeit,Arbeitnehmer,4,12,2022,\N
+1920,Arbeit,Beschäftigten,4,12,2022,\N
+1921,Landwirtschaft,Bundesanstalt,8,12,2022,\N
+1922,Landwirtschaft,Erdgas,7,12,2022,\N
+1923,Landwirtschaft,Brennstoffen,6,12,2022,\N
+1924,Landwirtschaft,Landwirtschaft,4,12,2022,\N
+1925,Landwirtschaft,Schwedt,4,12,2022,\N
+1926,Bildung und Forschung,Arbeitsbericht,7,12,2022,\N
+1927,Bildung und Forschung,European,5,12,2022,\N
+1928,Bildung und Forschung,Committee,4,12,2022,\N
+1929,Bildung und Forschung,Ausschusses,3,12,2022,\N
+1930,Bildung und Forschung,Höchstwerte,3,12,2022,\N
+1931,Finanzen,Kundendaten,6,12,2022,\N
+1932,Finanzen,Mitgliederversammlungen,4,12,2022,\N
+1933,Finanzen,Boni,3,12,2022,\N
+1934,Finanzen,Dividenden,3,12,2022,\N
+1935,Finanzen,Betriebskostenabrechnung,3,12,2022,\N
+1936,Innenpolitik,Strompreisbremse,5,12,2022,\N
+1937,Innenpolitik,Hinweisgeberschutzgesetz,2,12,2022,\N
+1938,Innenpolitik,Gesetzentwürfe,2,12,2022,\N
+1939,Innenpolitik,Arbeitnehmerüberlassungsgesetzes,2,12,2022,\N
+1940,Innenpolitik,Landesebene,2,12,2022,\N
+1941,Familie,Revier,4,12,2022,\N
+1942,Familie,Neurath,4,12,2022,\N
+1943,Familie,Familien,3,12,2022,\N
+1944,Familie,Friends,3,12,2022,\N
+1945,Familie,Steuerpflichtige,3,12,2022,\N
+1946,Wohnungsbau,Privathaushalte,9,12,2022,\N
+1947,Wohnungsbau,Immobilienaufgaben,8,12,2022,\N
+1948,Wohnungsbau,Härtefallfonds,7,12,2022,\N
+1949,Wohnungsbau,Bauwesen,7,12,2022,\N
+1950,Wohnungsbau,Büros,7,12,2022,\N
+2026,Entwicklung,Stufe,11,1,2023,\N
+2027,Entwicklung,Handlungen,8,1,2023,\N
+2028,Entwicklung,Unabhängigkeit,6,1,2023,\N
+2029,Entwicklung,Regelgröße,5,1,2023,\N
+2030,Entwicklung,Digitalisierung,5,1,2023,\N
+2031,Arbeit,Unterstützungsmaßnahme,11,1,2023,\N
+2032,Arbeit,Gemeinsame,6,1,2023,\N
+2033,Arbeit,Stellen,5,1,2023,\N
+2034,Arbeit,Genehmigung,5,1,2023,\N
+2035,Arbeit,Bundesagentur,4,1,2023,\N
+2036,Innenpolitik,Nationalversammlung,3,1,2023,\N
+2037,Innenpolitik,Wahlkreise,2,1,2023,\N
+2038,Innenpolitik,Frankreich,2,1,2023,\N
+2039,Innenpolitik,Sozialleistungen,2,1,2023,\N
+2040,Innenpolitik,Ungarn,2,1,2023,\N
+2041,Außenpolitik,Ukraine,43,1,2023,\N
+2042,Außenpolitik,Türkei,11,1,2023,\N
+2043,Außenpolitik,Russland,7,1,2023,\N
+2044,Außenpolitik,Iran,6,1,2023,\N
+2045,Außenpolitik,Souveränität,6,1,2023,\N
+2046,Bildung und Forschung,Fachkräften,5,1,2023,\N
+2047,Bildung und Forschung,Stiftung,3,1,2023,\N
+2048,Bildung und Forschung,European,3,1,2023,\N
+2049,Bildung und Forschung,Luhansk,3,1,2023,\N
+2050,Bildung und Forschung,Fünfundzwanzigstes,2,1,2023,\N
+2051,Familie,Partnerschaft,5,1,2023,\N
+2052,Familie,Mali,4,1,2023,\N
+2053,Familie,Partner,3,1,2023,\N
+2054,Familie,Königreich,3,1,2023,\N
+2055,Familie,Kreis,3,1,2023,\N
+2056,Wohnungsbau,Flüchtlinge,5,1,2023,\N
+2057,Wohnungsbau,Wahlrecht,2,1,2023,\N
+2058,Wohnungsbau,Arbeitslosigkeitsrisiken,2,1,2023,\N
+2059,Wohnungsbau,Netzausbaubeschleunigungsgesetz,2,1,2023,\N
+2060,Wohnungsbau,Schiffssicherheitsgesetz,2,1,2023,\N
+2061,Verkehr und Digitalisierung,Planfeststellungsverfahren,4,1,2023,\N
+2062,Verkehr und Digitalisierung,Binnenschifffahrt,4,1,2023,\N
+2063,Verkehr und Digitalisierung,Hält,4,1,2023,\N
+2064,Verkehr und Digitalisierung,Import,3,1,2023,\N
+2065,Verkehr und Digitalisierung,Cannabis,3,1,2023,\N
+2066,Wirtschaft,Belarus,10,1,2023,\N
+2067,Wirtschaft,Industrie,5,1,2023,\N
+2068,Wirtschaft,Wirtschaft,4,1,2023,\N
+2069,Wirtschaft,Griechenland,4,1,2023,\N
+2070,Wirtschaft,Großbritannien,4,1,2023,\N
+2071,Verteidigung,Streitkräfte,9,1,2023,\N
+2072,Verteidigung,Föderation,6,1,2023,\N
+2073,Verteidigung,Munition,3,1,2023,\N
+2074,Verteidigung,Schützenpanzer,3,1,2023,\N
+2075,Verteidigung,Resilienzfazilität,3,1,2023,\N
+2076,Landwirtschaft,Gebiete,6,1,2023,\N
+2077,Landwirtschaft,Genusszwecken,3,1,2023,\N
+2078,Landwirtschaft,Energiekrise,2,1,2023,\N
+2079,Landwirtschaft,Fliegerhorst,2,1,2023,\N
+2080,Landwirtschaft,Herkunftsländern,2,1,2023,\N
+2081,Justiz,Bundeswehr,11,1,2023,\N
+2082,Justiz,Staatsangehörige,5,1,2023,\N
+2083,Justiz,Rechtsstaatlichkeit,5,1,2023,\N
+2084,Justiz,Beschleunigungsgebots,4,1,2023,\N
+2085,Justiz,Bundesverwaltungsgerichts,4,1,2023,\N
+2086,Finanzen,Sonderbericht,4,1,2023,\N
+2087,Finanzen,Jahresbericht,4,1,2023,\N
+2088,Finanzen,Zuständigkeiten,2,1,2023,\N
+2089,Finanzen,Generaldirektion,2,1,2023,\N
+2090,Finanzen,Finanzen,2,1,2023,\N
+2091,Gesundheit,Soziales,6,1,2023,\N
+2092,Gesundheit,Patienten,3,1,2023,\N
+2093,Gesundheit,Krankenkassen,3,1,2023,\N
+2094,Gesundheit,Integrität,3,1,2023,\N
+2095,Gesundheit,Versorgungssicherheit,2,1,2023,\N
+2096,Umwelt,Marder,3,1,2023,\N
+2097,Umwelt,Klimaschutz,2,1,2023,\N
+2098,Umwelt,Prozessstoffs,2,1,2023,\N
+2099,Umwelt,Einwegkunststofffonds,2,1,2023,\N
+2100,Umwelt,Ressourcen,2,1,2023,\N
+2101,Entwicklung,Analyse,3,2,2023,\N
+2102,Entwicklung,Projekte,3,2,2023,\N
+2103,Entwicklung,Zukunft,3,2,2023,\N
+2104,Entwicklung,Beschaffungsvorhaben,3,2,2023,\N
+2105,Entwicklung,Gesamtstrategie,2,2,2023,\N
+2106,Wohnungsbau,Exportkredite,3,2,2023,\N
+2107,Wohnungsbau,Familiennachzug,3,2,2023,\N
+2108,Wohnungsbau,Geflüchtete,3,2,2023,\N
+2109,Wohnungsbau,Berlin,2,2,2023,\N
+2110,Wohnungsbau,Krankenhäusern,2,2,2023,\N
+2111,Wirtschaft,Wirtschaft,3,2,2023,\N
+2112,Wirtschaft,Inflation,2,2,2023,\N
+2113,Wirtschaft,Bundesländern,2,2,2023,\N
+2114,Wirtschaft,Welt,2,2,2023,\N
+2115,Wirtschaft,Energiepreise,1,2,2023,\N
+2116,Justiz,Bundeswehr,3,2,2023,\N
+2117,Justiz,Rechtsrahmen,2,2,2023,\N
+2118,Justiz,Beschleunigungsgebots,2,2,2023,\N
+2119,Justiz,Bundesverwaltungsgerichts,2,2,2023,\N
+2120,Justiz,Verfahrensdauer,1,2,2023,\N
+2121,Arbeit,Aufsicht,4,2,2023,\N
+2122,Arbeit,Gemeinsame,3,2,2023,\N
+2123,Arbeit,Wege,3,2,2023,\N
+2124,Arbeit,Teilnahme,3,2,2023,\N
+2125,Arbeit,Kann,3,2,2023,\N
+2126,Landwirtschaft,Landwirtschaft,4,2,2023,\N
+2127,Landwirtschaft,Streumunition,3,2,2023,\N
+2128,Landwirtschaft,Niederlanden,3,2,2023,\N
+2129,Landwirtschaft,Pflanzenschutzmitteln,3,2,2023,\N
+2130,Landwirtschaft,Thailand,2,2,2023,\N
+2131,Bildung und Forschung,Abschlussbericht,2,2,2023,\N
+2132,Bildung und Forschung,Krankenhausstandorte,2,2,2023,\N
+2133,Bildung und Forschung,Diskussionen,2,2,2023,\N
+2134,Bildung und Forschung,Entbürokratisierung,1,2,2023,\N
+2135,Bildung und Forschung,Datenkommunikation,1,2,2023,\N
+2136,Umwelt,Verbraucher,3,2,2023,\N
+2137,Umwelt,Klimaschutz,2,2,2023,\N
+2138,Umwelt,LAAYOUNE,2,2,2023,\N
+2139,Umwelt,Prozessstoffs,1,2,2023,\N
+2140,Umwelt,Klimaneutralität,1,2,2023,\N
+2141,Verteidigung,Êzîden,3,2,2023,\N
+2142,Verteidigung,Abschluss,2,2,2023,\N
+2143,Verteidigung,Opfer,2,2,2023,\N
+2144,Verteidigung,Meinung,2,2,2023,\N
+2145,Verteidigung,Gegenzug,1,2,2023,\N
+2146,Verkehr und Digitalisierung,Planfeststellungsverfahren,2,2,2023,\N
+2147,Verkehr und Digitalisierung,Binnenschifffahrt,2,2,2023,\N
+2148,Verkehr und Digitalisierung,Landesgrenze,2,2,2023,\N
+2149,Verkehr und Digitalisierung,Ladesäulenverordnung,1,2,2023,\N
+2150,Verkehr und Digitalisierung,Erörterungstermin,1,2,2023,\N
+2151,Finanzen,Mitgliederversammlungen,5,2,2023,\N
+2152,Finanzen,Sondervermögen,2,2,2023,\N
+2153,Finanzen,Etat,2,2,2023,\N
+2154,Finanzen,Zuständigkeiten,1,2,2023,\N
+2155,Finanzen,Sonderbericht,1,2,2023,\N
+2156,Außenpolitik,Ukraine,11,2,2023,\N
+2157,Außenpolitik,Europas,4,2,2023,\N
+2158,Außenpolitik,Deutschlandtickets,2,2,2023,\N
+2159,Außenpolitik,Legislaturperiode,2,2,2023,\N
+2160,Außenpolitik,Türkei,2,2,2023,\N
+2161,Familie,Partnerschaft,3,2,2023,\N
+2162,Familie,Königreich,2,2,2023,\N
+2163,Familie,Wohnung,1,2,2023,\N
+2164,Familie,Bischof,1,2,2023,\N
+2165,Familie,Ronaldo,1,2,2023,\N
+2166,Gesundheit,Gesundheit,3,2,2023,\N
+2167,Gesundheit,Ernährung,3,2,2023,\N
+2168,Gesundheit,Organspende,2,2,2023,\N
+2169,Gesundheit,Mobilität,1,2,2023,\N
+2170,Gesundheit,Wohlstand,1,2,2023,\N
+2171,Innenpolitik,Rechtsextremismus,2,2,2023,\N
+2172,Innenpolitik,Bundesebene,1,2,2023,\N
+2173,Innenpolitik,Ganztagsfinanzierungsgesetz,1,2,2023,\N
+2174,Innenpolitik,Ganztagsfinanzhilfegesetz,1,2,2023,\N
+2175,Innenpolitik,Asylpolitik,1,2,2023,\N
+2176,Bildung und Forschung,Jugend,7,3,2023,\N
+2177,Bildung und Forschung,Bildung,6,3,2023,\N
+2178,Bildung und Forschung,Stiftung,5,3,2023,\N
+2179,Bildung und Forschung,Patientenorganisationen,4,3,2023,\N
+2180,Bildung und Forschung,Pränataltests,3,3,2023,\N
+2181,Wirtschaft,Wettbewerbsfähigkeit,4,3,2023,\N
+2182,Wirtschaft,Bundesländern,4,3,2023,\N
+2183,Wirtschaft,Verwaltung,3,3,2023,\N
+2184,Wirtschaft,Industrie,3,3,2023,\N
+2186,Außenpolitik,Deutschlandtickets,8,3,2023,\N
+2187,Außenpolitik,Ukraine,8,3,2023,\N
+2188,Außenpolitik,Kernkraftwerke,5,3,2023,\N
+2189,Außenpolitik,Mandatsobergrenze,5,3,2023,\N
+2190,Außenpolitik,Resolution,4,3,2023,\N
+2191,Arbeit,Aufgabenwahrnehmung,4,3,2023,\N
+2192,Arbeit,Beschäftigung,4,3,2023,\N
+2193,Arbeit,Treffen,3,3,2023,\N
+2194,Arbeit,Ausgleichsabgabe,3,3,2023,\N
+2195,Arbeit,Vergütung,3,3,2023,\N
+2196,Entwicklung,Offenlegung,6,3,2023,\N
+2197,Entwicklung,Neuausrichtung,5,3,2023,\N
+2198,Entwicklung,Regelgröße,5,3,2023,\N
+2199,Entwicklung,Mehr,4,3,2023,\N
+2200,Entwicklung,Unterbringung,4,3,2023,\N
+2201,Verkehr und Digitalisierung,Personennahverkehr,5,3,2023,\N
+2202,Verkehr und Digitalisierung,Regionalisierungsmittel,4,3,2023,\N
+2203,Verkehr und Digitalisierung,Stationsentgelte,4,3,2023,\N
+2204,Verkehr und Digitalisierung,Fahrgeldeinnahmen,4,3,2023,\N
+2205,Verkehr und Digitalisierung,Regionalisierungsgesetz,4,3,2023,\N
+2206,Wohnungsbau,Genehmigungsverfahren,7,3,2023,\N
+2207,Wohnungsbau,Sozialgesetzbuch,6,3,2023,\N
+2208,Wohnungsbau,Zusatzausgaben,5,3,2023,\N
+2209,Wohnungsbau,London,2,3,2023,\N
+2210,Wohnungsbau,Planungssicherheit,2,3,2023,\N
+2211,Umwelt,Energien,4,3,2023,\N
+2212,Umwelt,Umweltverträglichkeitsprüfung,3,3,2023,\N
+2213,Umwelt,Klimaschutz,3,3,2023,\N
+2214,Umwelt,Insekten,3,3,2023,\N
+2215,Umwelt,Isar,2,3,2023,\N
+2216,Landwirtschaft,Pflanzenschutzmitteln,3,3,2023,\N
+2217,Landwirtschaft,Emsland,2,3,2023,\N
+2218,Landwirtschaft,Bestäuber,2,3,2023,\N
+2219,Landwirtschaft,Ernährungssicherheit,2,3,2023,\N
+2220,Landwirtschaft,Brennstoffemissionshandel,2,3,2023,\N
+2221,Familie,Kinder,4,3,2023,\N
+2222,Familie,Partnerschaft,2,3,2023,\N
+2223,Familie,Zustimmungsbedürftige,2,3,2023,\N
+2224,Familie,Vollmer,2,3,2023,\N
+2225,Familie,Kindern,2,3,2023,\N
+2226,Verteidigung,Streitkräfte,5,3,2023,\N
+2227,Verteidigung,Aufklärung,4,3,2023,\N
+2228,Verteidigung,Ausgleich,4,3,2023,\N
+2229,Verteidigung,Besetzung,4,3,2023,\N
+2230,Verteidigung,Sicherheitsüberprüfung,4,3,2023,\N
+2231,Finanzen,Sondervermögen,4,3,2023,\N
+2232,Finanzen,Ertragsteuerinformationen,3,3,2023,\N
+2233,Finanzen,Personal,2,3,2023,\N
+2234,Finanzen,Bewilligungen,2,3,2023,\N
+2235,Finanzen,Fristen,2,3,2023,\N
+2236,Justiz,Bundeswehr,5,3,2023,\N
+2237,Justiz,Patientenakte,3,3,2023,\N
+2238,Justiz,Patientenberatung,3,3,2023,\N
+2239,Justiz,Prüfbehörde,2,3,2023,\N
+2240,Justiz,Gesetzesvollzug,2,3,2023,\N
+2241,Innenpolitik,Wahlen,3,3,2023,\N
+2242,Innenpolitik,GUARDIAN,2,3,2023,\N
+2243,Innenpolitik,Wahlkreise,2,3,2023,\N
+2244,Innenpolitik,Extremismus,2,3,2023,\N
+2245,Innenpolitik,Islamismus,2,3,2023,\N
+2246,Gesundheit,Krankenkassen,6,3,2023,\N
+2247,Gesundheit,Mobilität,4,3,2023,\N
+2248,Gesundheit,Pflege,3,3,2023,\N
+2249,Gesundheit,Leben,3,3,2023,\N
+2250,Gesundheit,Prävention,3,3,2023,\N
+2251,Arbeit,Stellen,6,4,2023,\N
+2252,Arbeit,Vorschläge,5,4,2023,\N
+2253,Arbeit,Fällen,5,4,2023,\N
+2254,Arbeit,Beschäftigung,4,4,2023,\N
+2255,Arbeit,Rückbaugenehmigung,3,4,2023,\N
+2256,Außenpolitik,Ukraine,6,4,2023,\N
+2257,Außenpolitik,Kernkraftwerke,5,4,2023,\N
+2258,Außenpolitik,Drittstaaten,5,4,2023,\N
+2259,Außenpolitik,Mandatsobergrenze,4,4,2023,\N
+2260,Außenpolitik,Auswärtigen,4,4,2023,\N
+2261,Verkehr und Digitalisierung,Verkehr,11,4,2023,\N
+2262,Verkehr und Digitalisierung,Bahn,6,4,2023,\N
+2263,Verkehr und Digitalisierung,Cannabis,5,4,2023,\N
+2264,Verkehr und Digitalisierung,EUMPM,4,4,2023,\N
+2265,Verkehr und Digitalisierung,Abschnitt,4,4,2023,\N
+2266,Entwicklung,Digitalisierung,9,4,2023,\N
+2267,Entwicklung,Ausschreibung,5,4,2023,\N
+2268,Entwicklung,Integration,4,4,2023,\N
+2269,Entwicklung,Vergabe,4,4,2023,\N
+2270,Entwicklung,Gründe,4,4,2023,\N
+2271,Umwelt,Verbraucher,4,4,2023,\N
+2272,Umwelt,Isar,2,4,2023,\N
+2273,Umwelt,Betroffenheit,2,4,2023,\N
+2274,Umwelt,Niger,2,4,2023,\N
+2275,Umwelt,Mensch,2,4,2023,\N
+2276,Landwirtschaft,Agrarpolitik,3,4,2023,\N
+2277,Landwirtschaft,Emsland,2,4,2023,\N
+2278,Landwirtschaft,Fischerei,2,4,2023,\N
+2279,Landwirtschaft,Durchführungsverordnung,2,4,2023,\N
+2280,Landwirtschaft,Bejagung,2,4,2023,\N
+2281,Wirtschaft,Informationstechnik,4,4,2023,\N
+2282,Wirtschaft,Energiewende,3,4,2023,\N
+2283,Wirtschaft,Mehrheitsbeteiligungen,3,4,2023,\N
+2284,Wirtschaft,Rechtsformen,3,4,2023,\N
+2285,Wirtschaft,Neckarwestheim,2,4,2023,\N
+2286,Verteidigung,Streitkräfte,6,4,2023,\N
+2287,Verteidigung,Verbandsklagen,4,4,2023,\N
+2288,Verteidigung,Aufklärung,4,4,2023,\N
+2289,Verteidigung,Karte,3,4,2023,\N
+2290,Verteidigung,Evakuierungen,3,4,2023,\N
+2291,Wohnungsbau,Zusatzausgaben,4,4,2023,\N
+2292,Wohnungsbau,Sozialgesetzbuch,3,4,2023,\N
+2293,Wohnungsbau,Pflegeversicherung,3,4,2023,\N
+2294,Wohnungsbau,Hamburger,3,4,2023,\N
+2295,Wohnungsbau,Hamburg,3,4,2023,\N
+2296,Bildung und Forschung,Digitales,12,4,2023,\N
+2297,Bildung und Forschung,Gutachten,4,4,2023,\N
+2298,Bildung und Forschung,Materialerhaltung,3,4,2023,\N
+2299,Bildung und Forschung,Beschleunigungskommission,3,4,2023,\N
+2300,Bildung und Forschung,Weiterbildung,2,4,2023,\N
+2301,Innenpolitik,Arbeitsmarktpolitik,1,4,2023,\N
+2302,Innenpolitik,Asylpolitik,1,4,2023,\N
+2303,Innenpolitik,Beitragsrecht,1,4,2023,\N
+2304,Innenpolitik,Wehrbeauftragten,1,4,2023,\N
+2305,Innenpolitik,Populisten,1,4,2023,\N
+2306,Justiz,Bundeswehr,4,4,2023,\N
+2307,Justiz,Justiz,3,4,2023,\N
+2308,Justiz,Staatsangehöriger,3,4,2023,\N
+2309,Justiz,Roma,3,4,2023,\N
+2310,Justiz,Betroffene,2,4,2023,\N
+2311,Gesundheit,Pflege,4,4,2023,\N
+2312,Gesundheit,Gesundheit,3,4,2023,\N
+2313,Gesundheit,Ordnung,2,4,2023,\N
+2314,Gesundheit,Pflegebedürftiger,2,4,2023,\N
+2315,Gesundheit,Pflegepersonen,2,4,2023,\N
+2316,Familie,Kinder,4,4,2023,\N
+2317,Familie,Aufenthalt,3,4,2023,\N
+2318,Familie,Aufenthaltserlaubnis,2,4,2023,\N
+2319,Familie,Familie,2,4,2023,\N
+2320,Familie,Angehörige,2,4,2023,\N
+2321,Finanzen,Bekanntmachungen,4,4,2023,\N
+2322,Finanzen,Finanzen,3,4,2023,\N
+2323,Finanzen,Einkauf,2,4,2023,\N
+2324,Finanzen,Jahresende,2,4,2023,\N
+2325,Finanzen,Einkommen,2,4,2023,\N
+2326,Bildung und Forschung,Digitales,11,5,2023,\N
+2327,Bildung und Forschung,Entwicklungszusammenarbeit,4,5,2023,\N
+2328,Bildung und Forschung,Wissenschaft,3,5,2023,\N
+2329,Bildung und Forschung,Vereinigungen,2,5,2023,\N
+2330,Bildung und Forschung,Gutachten,2,5,2023,\N
+2331,Entwicklung,Offenlegung,8,5,2023,\N
+2332,Entwicklung,Beitragssatzes,6,5,2023,\N
+2333,Entwicklung,Transparenz,6,5,2023,\N
+2334,Entwicklung,Digitalisierung,6,5,2023,\N
+2335,Entwicklung,Verfahrens,5,5,2023,\N
+2336,Arbeit,Anfrage,7,5,2023,\N
+2337,Arbeit,Arbeitsbedingungen,5,5,2023,\N
+2338,Arbeit,Anspruch,4,5,2023,\N
+2339,Arbeit,Auftrag,4,5,2023,\N
+2340,Arbeit,Zuschläge,3,5,2023,\N
+2341,Justiz,Bundeswehr,9,5,2023,\N
+2342,Justiz,Bundesverfassungsgerichts,4,5,2023,\N
+2343,Justiz,Justiz,4,5,2023,\N
+2344,Justiz,Bundesverfassungsgerichtsentscheidung,3,5,2023,\N
+2345,Justiz,Berichtspflicht,2,5,2023,\N
+2346,Verkehr und Digitalisierung,Verkehr,7,5,2023,\N
+2347,Verkehr und Digitalisierung,Abschnitt,4,5,2023,\N
+2348,Verkehr und Digitalisierung,Bahn,4,5,2023,\N
+2349,Verkehr und Digitalisierung,Schiene,4,5,2023,\N
+2350,Verkehr und Digitalisierung,Arzneimitteln,3,5,2023,\N
+2351,Wirtschaft,Wirtschaft,13,5,2023,\N
+2352,Wirtschaft,Gewinnverlagerung,3,5,2023,\N
+2353,Wirtschaft,Sachsen,3,5,2023,\N
+2354,Wirtschaft,Bundesländern,3,5,2023,\N
+2355,Wirtschaft,Märkte,2,5,2023,\N
+2356,Wohnungsbau,Pflegeversicherung,10,5,2023,\N
+2357,Wohnungsbau,Zusatzausgaben,5,5,2023,\N
+2358,Wohnungsbau,Rentenversicherung,4,5,2023,\N
+2359,Wohnungsbau,Pflegegelds,3,5,2023,\N
+2360,Wohnungsbau,Pflegesachleistungen,3,5,2023,\N
+2361,Verteidigung,Streitkräfte,5,5,2023,\N
+2362,Verteidigung,Vertreter,4,5,2023,\N
+2363,Verteidigung,Abschläge,3,5,2023,\N
+2364,Verteidigung,Munition,3,5,2023,\N
+2365,Verteidigung,Zeugen,3,5,2023,\N
+2366,Gesundheit,Pflege,8,5,2023,\N
+2367,Gesundheit,Verbraucherschutz,8,5,2023,\N
+2368,Gesundheit,Pflegebedürftiger,7,5,2023,\N
+2369,Gesundheit,Pflegepersonen,4,5,2023,\N
+2370,Gesundheit,Arzneimittel,3,5,2023,\N
+2371,Finanzen,Finanzsituation,3,5,2023,\N
+2372,Finanzen,Ertragsteuerinformationen,3,5,2023,\N
+2373,Finanzen,Haushaltsmittel,2,5,2023,\N
+2374,Finanzen,Police,2,5,2023,\N
+2375,Finanzen,Geschäftsbereich,2,5,2023,\N
+2376,Familie,Kleinen,6,5,2023,\N
+2377,Familie,Heimat,4,5,2023,\N
+2378,Familie,Aufenthalt,3,5,2023,\N
+2379,Familie,Pflegeperson,3,5,2023,\N
+2380,Familie,Kinderlose,3,5,2023,\N
+2381,Innenpolitik,Beitragsrecht,3,5,2023,\N
+2382,Innenpolitik,Wahlen,3,5,2023,\N
+2383,Innenpolitik,Euratom,2,5,2023,\N
+2384,Innenpolitik,Versicherungspflicht,2,5,2023,\N
+2385,Innenpolitik,Hinweisgeberschutzgesetz,2,5,2023,\N
+2386,Umwelt,Klimaschutz,12,5,2023,\N
+2387,Umwelt,Energien,4,5,2023,\N
+2388,Umwelt,Energie,3,5,2023,\N
+2389,Umwelt,Energieverbrauch,2,5,2023,\N
+2390,Umwelt,Lieferketten,2,5,2023,\N
+2391,Landwirtschaft,Kraftstoffe,2,5,2023,\N
+2392,Landwirtschaft,BMDV,2,5,2023,\N
+2393,Landwirtschaft,Supermarktketten,2,5,2023,\N
+2394,Landwirtschaft,Industrieemissionen,2,5,2023,\N
+2395,Landwirtschaft,Lebensmittel,2,5,2023,\N
+2396,Außenpolitik,Staatssekretär,6,5,2023,\N
+2397,Außenpolitik,Mandatsobergrenze,5,5,2023,\N
+2398,Außenpolitik,Afghanistan,4,5,2023,\N
+2399,Außenpolitik,Ukraine,3,5,2023,\N
+2400,Außenpolitik,Polen,3,5,2023,\N
+2401,Entwicklung,Chancenkarte,6,6,2023,\N
+2402,Entwicklung,Ausbildung,5,6,2023,\N
+2403,Entwicklung,Konkretisierung,5,6,2023,\N
+2404,Entwicklung,Präzisierung,4,6,2023,\N
+2405,Entwicklung,Mindestgehaltsschwelle,4,6,2023,\N
+2406,Wohnungsbau,Sozialgesetzbuch,6,6,2023,\N
+2407,Wohnungsbau,Wiederaufbau,5,6,2023,\N
+2408,Wohnungsbau,Zusatzausgaben,4,6,2023,\N
+2409,Wohnungsbau,Wärmewende,4,6,2023,\N
+2410,Wohnungsbau,Zuwanderung,3,6,2023,\N
+2411,Bildung und Forschung,Bildung,14,6,2023,\N
+2412,Bildung und Forschung,Wasserstoff,8,6,2023,\N
+2413,Bildung und Forschung,Entwicklungszusammenarbeit,5,6,2023,\N
+2414,Bildung und Forschung,Weiterbildung,4,6,2023,\N
+2415,Bildung und Forschung,Weiterbildungsförderung,4,6,2023,\N
+2416,Verteidigung,Karte,6,6,2023,\N
+2417,Verteidigung,Streitkräfte,6,6,2023,\N
+2418,Verteidigung,Verbandsklagen,4,6,2023,\N
+2419,Verteidigung,Waffen,3,6,2023,\N
+2420,Verteidigung,Ausgleich,2,6,2023,\N
+2421,Justiz,Bundespolizei,5,6,2023,\N
+2422,Justiz,Gesetze,4,6,2023,\N
+2423,Justiz,Bundesministerien,4,6,2023,\N
+2424,Justiz,Ermittlungen,4,6,2023,\N
+2425,Justiz,Straftaten,3,6,2023,\N
+2426,Außenpolitik,Ukraine,9,6,2023,\N
+2427,Außenpolitik,Russland,6,6,2023,\N
+2428,Außenpolitik,Drittstaaten,5,6,2023,\N
+2429,Außenpolitik,Fachkräfteeinwanderung,5,6,2023,\N
+2430,Außenpolitik,Mandatsobergrenze,4,6,2023,\N
+2431,Finanzen,Einzelplans,3,6,2023,\N
+2432,Finanzen,Haushalt,3,6,2023,\N
+2433,Finanzen,Dividenden,2,6,2023,\N
+2434,Finanzen,Beitragsbemessungsgrenze,2,6,2023,\N
+2435,Finanzen,Ressorts,2,6,2023,\N
+2436,Verkehr und Digitalisierung,Arzneimitteln,5,6,2023,\N
+2437,Verkehr und Digitalisierung,Blauen,4,6,2023,\N
+2438,Verkehr und Digitalisierung,Bahn,4,6,2023,\N
+2439,Verkehr und Digitalisierung,Abschnitt,4,6,2023,\N
+2440,Verkehr und Digitalisierung,Fahrgäste,4,6,2023,\N
+2441,Umwelt,Energie,6,6,2023,\N
+2442,Umwelt,Klimaschutz,5,6,2023,\N
+2443,Umwelt,Betroffenheit,3,6,2023,\N
+2444,Umwelt,Energien,3,6,2023,\N
+2445,Umwelt,Handeln,3,6,2023,\N
+2446,Landwirtschaft,Gemeinden,4,6,2023,\N
+2447,Landwirtschaft,Biomasse,4,6,2023,\N
+2448,Landwirtschaft,Agrarpolitik,3,6,2023,\N
+2449,Landwirtschaft,Kohleregionen,3,6,2023,\N
+2450,Landwirtschaft,Photovoltaik,2,6,2023,\N
+2451,Arbeit,Umgang,5,6,2023,\N
+2452,Arbeit,Ausübung,4,6,2023,\N
+2453,Arbeit,Erleichterungen,4,6,2023,\N
+2454,Arbeit,Qualifizierungsgeld,4,6,2023,\N
+2455,Arbeit,Arbeiten,3,6,2023,\N
+2456,Wirtschaft,Selbstverwaltung,7,6,2023,\N
+2457,Wirtschaft,Wirtschaft,6,6,2023,\N
+2458,Wirtschaft,Gewinnverlagerung,4,6,2023,\N
+2459,Wirtschaft,Fachkräfte,3,6,2023,\N
+2460,Wirtschaft,Arbeitsmarktes,2,6,2023,\N
+2461,Gesundheit,Versorgungssicherheit,3,6,2023,\N
+2462,Gesundheit,Arzneimittel,3,6,2023,\N
+2463,Gesundheit,Leben,3,6,2023,\N
+2464,Gesundheit,Mobilität,3,6,2023,\N
+2465,Gesundheit,Effizienz,2,6,2023,\N
+2466,Familie,Aufenthalt,5,6,2023,\N
+2467,Familie,Aufenthaltserlaubnis,4,6,2023,\N
+2468,Familie,Aufenthalten,2,6,2023,\N
+2469,Familie,Nachzug,2,6,2023,\N
+2470,Familie,ALTHEA,2,6,2023,\N
+2471,Innenpolitik,Asylrecht,5,6,2023,\N
+2472,Innenpolitik,Arbeitsmarktpolitik,2,6,2023,\N
+2473,Innenpolitik,Wehrbeauftragten,2,6,2023,\N
+2474,Innenpolitik,Antisemitismus,2,6,2023,\N
+2475,Innenpolitik,Euratom,2,6,2023,\N
+2476,Bildung und Forschung,Wärmeplanung,4,7,2023,\N
+2477,Bildung und Forschung,Regelversorgung,2,7,2023,\N
+2478,Bildung und Forschung,Positionspapier,2,7,2023,\N
+2479,Bildung und Forschung,Vereinigungen,2,7,2023,\N
+2480,Bildung und Forschung,Institutes,2,7,2023,\N
+2481,Wohnungsbau,Modernisierungsumlage,3,7,2023,\N
+2482,Wohnungsbau,Bauwesen,3,7,2023,\N
+2483,Wohnungsbau,Wohnungen,3,7,2023,\N
+2484,Wohnungsbau,Hamburg,3,7,2023,\N
+2485,Wohnungsbau,Endenergieverbrauchs,2,7,2023,\N
+2486,Innenpolitik,Wehrbeauftragen,2,7,2023,\N
+2487,Innenpolitik,Abgeordnete,2,7,2023,\N
+2488,Innenpolitik,Krankenhausreform,1,7,2023,\N
+2489,Innenpolitik,Personenkennzeichen,1,7,2023,\N
+2490,Innenpolitik,Finanzpolitik,1,7,2023,\N
+2491,Außenpolitik,Geschäftsordnungsantrag,2,7,2023,\N
+2492,Außenpolitik,Ukraine,2,7,2023,\N
+2493,Außenpolitik,Nationale,2,7,2023,\N
+2494,Außenpolitik,Arbeiterpartei,2,7,2023,\N
+2495,Außenpolitik,Kurdistans,2,7,2023,\N
+2496,Umwelt,Verbraucher,3,7,2023,\N
+2497,Umwelt,Treibhausgasemissionen,2,7,2023,\N
+2498,Umwelt,Wasser,2,7,2023,\N
+2499,Umwelt,Energieeffizienzzielen,1,7,2023,\N
+2500,Umwelt,Umweltmanagementsystemen,1,7,2023,\N
+2501,Arbeit,Hilfe,6,7,2023,\N
+2502,Arbeit,Vierteljahr,4,7,2023,\N
+2503,Arbeit,Hilfeleistungen,4,7,2023,\N
+2504,Arbeit,Kollektivinteressen,3,7,2023,\N
+2505,Arbeit,Wochen,3,7,2023,\N
+2506,Entwicklung,Zusammenführung,4,7,2023,\N
+2507,Entwicklung,Gesetzesevaluation,4,7,2023,\N
+2508,Entwicklung,Einsparung,3,7,2023,\N
+2509,Entwicklung,Vergleich,3,7,2023,\N
+2510,Entwicklung,Konkretisierung,3,7,2023,\N
+2511,Gesundheit,Sterben,7,7,2023,\N
+2512,Gesundheit,Selbsttötung,3,7,2023,\N
+2513,Gesundheit,Versorgungssicherheit,2,7,2023,\N
+2514,Gesundheit,Apotheken,2,7,2023,\N
+2515,Gesundheit,Ansehen,2,7,2023,\N
+2516,Justiz,Bundesverfassungsgerichts,6,7,2023,\N
+2517,Justiz,Bundeswehr,6,7,2023,\N
+2518,Justiz,Faeser,4,7,2023,\N
+2519,Justiz,Berichtspflicht,3,7,2023,\N
+2520,Justiz,Straffreiheit,3,7,2023,\N
+2521,Landwirtschaft,Erzeugnisse,3,7,2023,\N
+2522,Landwirtschaft,Industrieemissionen,3,7,2023,\N
+2523,Landwirtschaft,Energieversorgung,2,7,2023,\N
+2524,Landwirtschaft,Erdgas,2,7,2023,\N
+2525,Landwirtschaft,Urlaubsgebiete,1,7,2023,\N
+2526,Verteidigung,Verbandsklagen,5,7,2023,\N
+2527,Verteidigung,Wiederherstellung,3,7,2023,\N
+2528,Verteidigung,Aufklärung,3,7,2023,\N
+2529,Verteidigung,Herbeirufung,2,7,2023,\N
+2530,Verteidigung,Wahrung,2,7,2023,\N
+2531,Wirtschaft,Wirtschaft,3,7,2023,\N
+2532,Wirtschaft,Verbrauchern,2,7,2023,\N
+2533,Wirtschaft,Industrie,2,7,2023,\N
+2534,Wirtschaft,Wettbewerbsbeschränkungen,2,7,2023,\N
+2535,Wirtschaft,Logistikbranche,2,7,2023,\N
+2536,Verkehr und Digitalisierung,Betäubungsmitteln,4,7,2023,\N
+2537,Verkehr und Digitalisierung,Abstand,3,7,2023,\N
+2538,Verkehr und Digitalisierung,Bahn,3,7,2023,\N
+2539,Verkehr und Digitalisierung,Leitplanken,3,7,2023,\N
+2540,Verkehr und Digitalisierung,Informationsaustausch,2,7,2023,\N
+2541,Finanzen,Verpflichtungsermächtigungen,6,7,2023,\N
+2542,Finanzen,Haushaltsführung,5,7,2023,\N
+2543,Finanzen,Haushaltsjahres,4,7,2023,\N
+2544,Finanzen,Geschäftsbereich,3,7,2023,\N
+2545,Finanzen,Jahresbericht,2,7,2023,\N
+2546,Familie,Heimat,4,7,2023,\N
+2547,Familie,Wohnung,2,7,2023,\N
+2548,Familie,Teilt,2,7,2023,\N
+2549,Familie,Anhängern,1,7,2023,\N
+2550,Familie,Kinder,1,7,2023,\N
+2551,Wohnungsbau,Stadtentwicklung,9,9,2023,\N
+2552,Wohnungsbau,Bauwesen,7,9,2023,\N
+2553,Wohnungsbau,Wohnungen,5,9,2023,\N
+2554,Wohnungsbau,Sozialgesetzbuch,5,9,2023,\N
+2555,Wohnungsbau,Krankenhäuser,4,9,2023,\N
+2556,Entwicklung,Geschäftsführung,7,9,2023,\N
+2557,Entwicklung,Digitalisierung,7,9,2023,\N
+2558,Entwicklung,Dokumentation,6,9,2023,\N
+2559,Entwicklung,Wahrnehmung,6,9,2023,\N
+2560,Entwicklung,Hälfte,5,9,2023,\N
+2561,Wirtschaft,Aserbaidschan,4,9,2023,\N
+2562,Wirtschaft,Dekarbonisierung,4,9,2023,\N
+2563,Wirtschaft,Gesamtwirtschaftliche,4,9,2023,\N
+2564,Wirtschaft,Steuereinnahmen,4,9,2023,\N
+2565,Wirtschaft,Kultur,3,9,2023,\N
+2566,Finanzen,Finanzplan,4,9,2023,\N
+2567,Finanzen,Bundeshaushaltsplans,4,9,2023,\N
+2568,Finanzen,Wirtschaftsplans,4,9,2023,\N
+2569,Finanzen,Kreditaufnahme,2,9,2023,\N
+2570,Finanzen,Finanzausschusses,2,9,2023,\N
+2571,Umwelt,Vereinten,4,9,2023,\N
+2572,Umwelt,Energien,4,9,2023,\N
+2573,Umwelt,Energie,4,9,2023,\N
+2574,Umwelt,Smart,3,9,2023,\N
+2575,Umwelt,Treibhausgasemissionen,2,9,2023,\N
+2576,Verkehr und Digitalisierung,Kraftfahrzeuge,7,9,2023,\N
+2577,Verkehr und Digitalisierung,Verkehr,5,9,2023,\N
+2578,Verkehr und Digitalisierung,Fahrzeuge,4,9,2023,\N
+2579,Verkehr und Digitalisierung,Kraftfahrzeuganhänger,4,9,2023,\N
+2580,Verkehr und Digitalisierung,Schleuse,2,9,2023,\N
+2581,Familie,Gemeinschaft,4,9,2023,\N
+2582,Familie,Königreich,3,9,2023,\N
+2583,Familie,Krall,3,9,2023,\N
+2584,Familie,Heimat,2,9,2023,\N
+2585,Familie,Klara,2,9,2023,\N
+2586,Bildung und Forschung,Bildung,9,9,2023,\N
+2587,Bildung und Forschung,Wärmeplanung,7,9,2023,\N
+2588,Bildung und Forschung,Sprecher,4,9,2023,\N
+2589,Bildung und Forschung,Zukunftsinvestitionen,4,9,2023,\N
+2590,Bildung und Forschung,Wasserstoff,4,9,2023,\N
+2591,Justiz,Bundeswehr,6,9,2023,\N
+2592,Justiz,Beauftragte,3,9,2023,\N
+2593,Justiz,Marokko,3,9,2023,\N
+2594,Justiz,Berichtspflicht,3,9,2023,\N
+2595,Justiz,Missbrauch,2,9,2023,\N
+2596,Arbeit,Mitgliedschaft,4,9,2023,\N
+2597,Arbeit,Kontrolle,3,9,2023,\N
+2598,Arbeit,Verfügung,3,9,2023,\N
+2599,Arbeit,Ressortabstimmung,3,9,2023,\N
+2600,Arbeit,Teilnahme,3,9,2023,\N
+2601,Landwirtschaft,Energieversorgung,4,9,2023,\N
+2602,Landwirtschaft,Gemeinden,4,9,2023,\N
+2603,Landwirtschaft,Biomasse,4,9,2023,\N
+2604,Landwirtschaft,Pflanzenschutzmitteln,2,9,2023,\N
+2605,Landwirtschaft,Kraftstoffe,2,9,2023,\N
+2606,Außenpolitik,Ukraine,12,9,2023,\N
+2607,Außenpolitik,Bundeskanzler,5,9,2023,\N
+2608,Außenpolitik,Wahlperiode,5,9,2023,\N
+2609,Außenpolitik,Nationen,4,9,2023,\N
+2610,Außenpolitik,Sprechers,4,9,2023,\N
+2611,Verteidigung,Forderungen,4,9,2023,\N
+2612,Verteidigung,Föderation,3,9,2023,\N
+2613,Verteidigung,Munition,3,9,2023,\N
+2614,Verteidigung,Nationalen,3,9,2023,\N
+2615,Verteidigung,Haftpflichtversicherung,3,9,2023,\N
+2616,Gesundheit,Gesundheit,3,9,2023,\N
+2617,Gesundheit,Patienten,3,9,2023,\N
+2618,Gesundheit,Mobilität,3,9,2023,\N
+2619,Gesundheit,Endometriose,2,9,2023,\N
+2620,Gesundheit,Qualität,2,9,2023,\N
+2621,Innenpolitik,Versicherungspflicht,3,9,2023,\N
+2622,Innenpolitik,Bergkarabach,2,9,2023,\N
+2623,Innenpolitik,Aufenthaltsgesetzes,2,9,2023,\N
+2624,Innenpolitik,Geywitz,2,9,2023,\N
+2625,Innenpolitik,Krankenhausreform,2,9,2023,\N
+2626,Justiz,Bundesländer,6,10,2023,\N
+2627,Justiz,Bundeswehr,5,10,2023,\N
+2628,Justiz,Faeser,5,10,2023,\N
+2629,Justiz,Betroffenen,5,10,2023,\N
+2630,Justiz,Beauftragte,4,10,2023,\N
+2631,Entwicklung,Digitalisierung,7,10,2023,\N
+2632,Entwicklung,Planungen,5,10,2023,\N
+2633,Entwicklung,Techniken,5,10,2023,\N
+2634,Entwicklung,Indikatoren,4,10,2023,\N
+2635,Entwicklung,Einstellung,4,10,2023,\N
+2636,Gesundheit,Ernährung,3,10,2023,\N
+2637,Gesundheit,Verbraucherschutz,3,10,2023,\N
+2638,Gesundheit,Pflege,2,10,2023,\N
+2639,Gesundheit,Gesundheitsschutz,2,10,2023,\N
+2640,Gesundheit,Patienten,2,10,2023,\N
+2641,Verkehr und Digitalisierung,Verkehrsnetzes,3,10,2023,\N
+2642,Verkehr und Digitalisierung,Wasserstoffhochlauf,3,10,2023,\N
+2643,Verkehr und Digitalisierung,Cannabis,3,10,2023,\N
+2644,Verkehr und Digitalisierung,Bundesfernstraßen,2,10,2023,\N
+2645,Verkehr und Digitalisierung,Strom,2,10,2023,\N
+2646,Arbeit,Gespräche,5,10,2023,\N
+2647,Arbeit,Büro,5,10,2023,\N
+2648,Arbeit,Arbeitsweise,5,10,2023,\N
+2649,Arbeit,Betreuer,4,10,2023,\N
+2650,Arbeit,Stellen,4,10,2023,\N
+2651,Außenpolitik,Israel,11,10,2023,\N
+2652,Außenpolitik,Hamas,10,10,2023,\N
+2653,Außenpolitik,Ukraine,7,10,2023,\N
+2654,Außenpolitik,Israels,5,10,2023,\N
+2655,Außenpolitik,Russland,5,10,2023,\N
+2656,Umwelt,Klimaschutz,12,10,2023,\N
+2657,Umwelt,Ostsee,5,10,2023,\N
+2658,Umwelt,Energien,4,10,2023,\N
+2659,Umwelt,Klimaneutralität,2,10,2023,\N
+2660,Umwelt,Energie,2,10,2023,\N
+2661,Wohnungsbau,Wärmenetze,7,10,2023,\N
+2662,Wohnungsbau,Haushaltsausschuss,5,10,2023,\N
+2663,Wohnungsbau,Flüchtlingen,4,10,2023,\N
+2664,Wohnungsbau,Flüchtlinge,4,10,2023,\N
+2665,Wohnungsbau,Sozialgesetzbuch,3,10,2023,\N
+2666,Verteidigung,Force,6,10,2023,\N
+2667,Verteidigung,Soldaten,5,10,2023,\N
+2668,Verteidigung,Nationalen,4,10,2023,\N
+2669,Verteidigung,Verurteilung,3,10,2023,\N
+2670,Verteidigung,Befreiung,2,10,2023,\N
+2671,Landwirtschaft,Schweizerischen,4,10,2023,\N
+2672,Landwirtschaft,Streumunition,3,10,2023,\N
+2673,Landwirtschaft,Photovoltaik,2,10,2023,\N
+2674,Landwirtschaft,Energieversorgung,2,10,2023,\N
+2675,Landwirtschaft,Altmunition,2,10,2023,\N
+2676,Bildung und Forschung,Handlungsfelder,5,10,2023,\N
+2677,Bildung und Forschung,Wärmeplanung,5,10,2023,\N
+2678,Bildung und Forschung,Pflegeausbildung,4,10,2023,\N
+2679,Bildung und Forschung,Teilvorhaben,3,10,2023,\N
+2680,Bildung und Forschung,Jugend,3,10,2023,\N
+2681,Wirtschaft,Wirtschaft,12,10,2023,\N
+2682,Wirtschaft,Kultur,5,10,2023,\N
+2683,Wirtschaft,Gewinnverlagerung,4,10,2023,\N
+2684,Wirtschaft,Eidgenossenschaft,4,10,2023,\N
+2685,Wirtschaft,Bundesländern,3,10,2023,\N
+2686,Finanzen,Young,3,10,2023,\N
+2687,Finanzen,Bagatellgrenzen,2,10,2023,\N
+2688,Finanzen,Abfindungen,2,10,2023,\N
+2689,Finanzen,Ausbildungsvergütung,2,10,2023,\N
+2690,Finanzen,Themen,2,10,2023,\N
+2691,Innenpolitik,Zentralabteilung,4,10,2023,\N
+2692,Innenpolitik,Bundeskanzleramt,3,10,2023,\N
+2693,Innenpolitik,Krankenhausreform,2,10,2023,\N
+2694,Innenpolitik,Gesetzentwürfe,2,10,2023,\N
+2695,Innenpolitik,Geywitz,2,10,2023,\N
+2696,Familie,Heimat,8,10,2023,\N
+2697,Familie,Bewohner,2,10,2023,\N
+2698,Familie,Sofia,2,10,2023,\N
+2699,Familie,Klara,2,10,2023,\N
+2700,Familie,Roten,2,10,2023,\N
+2701,Justiz,Bundeswehr,7,11,2023,\N
+2702,Justiz,Gewalt,7,11,2023,\N
+2703,Justiz,Gesetze,7,11,2023,\N
+2704,Justiz,Bundesverfassungsgerichts,6,11,2023,\N
+2705,Justiz,Gerichte,5,11,2023,\N
+2706,Wirtschaft,Wirtschaft,15,11,2023,\N
+2707,Wirtschaft,Vereine,6,11,2023,\N
+2708,Wirtschaft,Dekarbonisierung,5,11,2023,\N
+2709,Wirtschaft,Unternehmensinvestitionen,4,11,2023,\N
+2710,Wirtschaft,Verwaltung,3,11,2023,\N
+2711,Außenpolitik,Ukraine,10,11,2023,\N
+2712,Außenpolitik,Israel,6,11,2023,\N
+2713,Außenpolitik,Hamas,4,11,2023,\N
+2714,Außenpolitik,Menschenrechte,4,11,2023,\N
+2715,Außenpolitik,Syrien,3,11,2023,\N
+2716,Arbeit,Verantwortung,6,11,2023,\N
+2717,Arbeit,Teilnahme,5,11,2023,\N
+2718,Arbeit,Zurückweisungen,5,11,2023,\N
+2719,Arbeit,Betreuer,5,11,2023,\N
+2720,Arbeit,Titel,4,11,2023,\N
+2721,Verkehr und Digitalisierung,Kraftfahrzeuge,7,11,2023,\N
+2722,Verkehr und Digitalisierung,Strom,4,11,2023,\N
+2723,Verkehr und Digitalisierung,Verkehr,4,11,2023,\N
+2724,Verkehr und Digitalisierung,Kraftfahrzeuganhänger,4,11,2023,\N
+2725,Verkehr und Digitalisierung,Internet,3,11,2023,\N
+2726,Entwicklung,Vergleich,7,11,2023,\N
+2727,Entwicklung,Dokumentation,6,11,2023,\N
+2728,Entwicklung,Projekte,6,11,2023,\N
+2729,Entwicklung,Übergang,5,11,2023,\N
+2730,Entwicklung,Aussage,5,11,2023,\N
+2731,Familie,Italien,4,11,2023,\N
+2732,Familie,Eltern,3,11,2023,\N
+2733,Familie,Gruppen,3,11,2023,\N
+2734,Familie,Kindern,2,11,2023,\N
+2735,Familie,Samidoun,2,11,2023,\N
+2736,Verteidigung,Forderung,3,11,2023,\N
+2737,Verteidigung,Einholung,3,11,2023,\N
+2738,Verteidigung,Soldaten,3,11,2023,\N
+2739,Verteidigung,Wiederherstellung,3,11,2023,\N
+2740,Verteidigung,Abschluss,3,11,2023,\N
+2741,Bildung und Forschung,Wärmeplanung,5,11,2023,\N
+2742,Bildung und Forschung,European,4,11,2023,\N
+2743,Bildung und Forschung,Institut,4,11,2023,\N
+2744,Bildung und Forschung,Praxis,3,11,2023,\N
+2745,Bildung und Forschung,Milliarden,3,11,2023,\N
+2746,Finanzen,Finanzen,4,11,2023,\N
+2747,Finanzen,Einzelplan,3,11,2023,\N
+2748,Finanzen,Einzelplans,3,11,2023,\N
+2749,Finanzen,Angelegenheiten,3,11,2023,\N
+2750,Finanzen,Übrige,2,11,2023,\N
+2751,Landwirtschaft,Tierarztvorbehalt,4,11,2023,\N
+2752,Landwirtschaft,Energieversorgung,4,11,2023,\N
+2753,Landwirtschaft,Brennstoffemissionshandel,3,11,2023,\N
+2754,Landwirtschaft,Landwirte,2,11,2023,\N
+2755,Landwirtschaft,Pflanzenschutz,2,11,2023,\N
+2756,Wohnungsbau,Wärmenetze,8,11,2023,\N
+2757,Wohnungsbau,Sozialgesetzbuch,6,11,2023,\N
+2758,Wohnungsbau,Jüdisches,5,11,2023,\N
+2759,Wohnungsbau,Büros,4,11,2023,\N
+2760,Wohnungsbau,Rentenversicherung,4,11,2023,\N
+2761,Gesundheit,Leben,6,11,2023,\N
+2762,Gesundheit,Gesundheit,5,11,2023,\N
+2763,Gesundheit,Leistungsfähigkeit,3,11,2023,\N
+2764,Gesundheit,Humanarzneimittel,2,11,2023,\N
+2765,Gesundheit,Risiken,2,11,2023,\N
+2766,Innenpolitik,Landesgrenzen,4,11,2023,\N
+2767,Innenpolitik,Antisemitismus,3,11,2023,\N
+2768,Innenpolitik,Versicherungspflicht,3,11,2023,\N
+2769,Innenpolitik,Asylrecht,3,11,2023,\N
+2770,Innenpolitik,Schuldenbremse,2,11,2023,\N
+2771,Umwelt,Klimaschutz,12,11,2023,\N
+2772,Umwelt,Chemikalien,3,11,2023,\N
+2773,Umwelt,Energien,3,11,2023,\N
+2774,Umwelt,Tieren,2,11,2023,\N
+2775,Umwelt,Grenzwerte,2,11,2023,\N
+2776,Entwicklung,Rückführung,5,12,2023,\N
+2777,Entwicklung,Überschreitung,4,12,2023,\N
+2778,Entwicklung,Regelgrenze,4,12,2023,\N
+2779,Entwicklung,Sprache,4,12,2023,\N
+2780,Entwicklung,Fortschritte,4,12,2023,\N
+2781,Wohnungsbau,Transformationsfonds,5,12,2023,\N
+2782,Wohnungsbau,Haushaltsfinanzierungsgesetz,4,12,2023,\N
+2783,Wohnungsbau,Rentenversicherung,4,12,2023,\N
+2784,Wohnungsbau,Haushaltsjahren,4,12,2023,\N
+2785,Wohnungsbau,Nettokreditaufnahme,4,12,2023,\N
+2786,Wirtschaft,Gesundheitswesens,3,12,2023,\N
+2787,Wirtschaft,Akteure,3,12,2023,\N
+2788,Wirtschaft,Mikroelektronik,2,12,2023,\N
+2789,Wirtschaft,Agenturen,2,12,2023,\N
+2790,Wirtschaft,Energiepreise,2,12,2023,\N
+2791,Gesundheit,Gesundheit,6,12,2023,\N
+2792,Gesundheit,Barrierefreiheit,3,12,2023,\N
+2793,Gesundheit,Qualität,2,12,2023,\N
+2794,Gesundheit,Gesundheitsanwendungen,2,12,2023,\N
+2795,Gesundheit,Krankenkassen,2,12,2023,\N
+2796,Justiz,Bundeswehr,10,12,2023,\N
+2797,Justiz,Bundesverfassungsgerichts,8,12,2023,\N
+2798,Justiz,Gesetze,5,12,2023,\N
+2799,Justiz,Justiz,5,12,2023,\N
+2800,Justiz,Geldwäsche,4,12,2023,\N
+2801,Arbeit,Anfrage,4,12,2023,\N
+2802,Arbeit,Rückkehr,3,12,2023,\N
+2803,Arbeit,Aufsicht,3,12,2023,\N
+2804,Arbeit,Kontrolle,3,12,2023,\N
+2805,Arbeit,Arbeitnehmer,3,12,2023,\N
+2806,Außenpolitik,Ukraine,12,12,2023,\N
+2807,Außenpolitik,Moldau,7,12,2023,\N
+2808,Außenpolitik,Beitrittsverhandlungen,5,12,2023,\N
+2809,Außenpolitik,Russland,5,12,2023,\N
+2810,Außenpolitik,Israel,3,12,2023,\N
+2811,Landwirtschaft,Subventionspolitik,4,12,2023,\N
+2812,Landwirtschaft,Landwirtschaft,3,12,2023,\N
+2813,Landwirtschaft,Agrarpolitik,3,12,2023,\N
+2814,Landwirtschaft,Energieerzeugung,2,12,2023,\N
+2815,Landwirtschaft,Flutkatastrophe,2,12,2023,\N
+2816,Verkehr und Digitalisierung,Kraftfahrzeuge,6,12,2023,\N
+2817,Verkehr und Digitalisierung,Datenaustausch,5,12,2023,\N
+2818,Verkehr und Digitalisierung,Kraftfahrzeuganhänger,4,12,2023,\N
+2819,Verkehr und Digitalisierung,Erdgaslieferstopp,2,12,2023,\N
+2820,Verkehr und Digitalisierung,Sommer,2,12,2023,\N
+2821,Finanzen,Sondervermögen,10,12,2023,\N
+2822,Finanzen,Kreditaufnahme,4,12,2023,\N
+2823,Finanzen,Kredite,4,12,2023,\N
+2824,Finanzen,Vorauszahlungen,3,12,2023,\N
+2825,Finanzen,Bundeshaushaltsplan,2,12,2023,\N
+2826,Innenpolitik,Nachtragshaushaltsgesetz,5,12,2023,\N
+2827,Innenpolitik,Haushaltsgesetz,4,12,2023,\N
+2828,Innenpolitik,Schuldenbremse,3,12,2023,\N
+2829,Innenpolitik,Nachtragshaushaltsgesetzes,3,12,2023,\N
+2830,Innenpolitik,Versicherungspflicht,3,12,2023,\N
+2831,Umwelt,Energie,6,12,2023,\N
+2832,Umwelt,Chemikalien,2,12,2023,\N
+2833,Umwelt,Einklang,2,12,2023,\N
+2834,Umwelt,Umwelt,2,12,2023,\N
+2835,Umwelt,Eiskristall,2,12,2023,\N
+2836,Familie,Heimat,5,12,2023,\N
+2837,Familie,Notsituation,4,12,2023,\N
+2838,Familie,Bosnien,4,12,2023,\N
+2839,Familie,Kleine,2,12,2023,\N
+2840,Familie,Kleinen,2,12,2023,\N
+2841,Verteidigung,Einvernehmens,4,12,2023,\N
+2842,Verteidigung,Nichtigerklärung,3,12,2023,\N
+2843,Verteidigung,Verletzung,3,12,2023,\N
+2844,Verteidigung,Soldaten,3,12,2023,\N
+2845,Verteidigung,Haftpflichtversicherung,3,12,2023,\N
+2846,Bildung und Forschung,Meldepflichten,3,12,2023,\N
+2847,Bildung und Forschung,Information,3,12,2023,\N
+2848,Bildung und Forschung,Report,2,12,2023,\N
+2849,Bildung und Forschung,Assessment,2,12,2023,\N
+2850,Bildung und Forschung,Ermittlungszentrum,2,12,2023,\N
+2926,Bildung und Forschung,Stiftung,12,4,2021,\N
+2927,Bildung und Forschung,Zwecke,8,4,2021,\N
+2928,Bildung und Forschung,Austausch,6,4,2021,\N
+2929,Bildung und Forschung,Abschlussbericht,6,4,2021,\N
+2930,Bildung und Forschung,Coronavirus,6,4,2021,\N
+2931,Verkehr und Digitalisierung,Verkehr,9,4,2021,\N
+2932,Verkehr und Digitalisierung,Handel,5,4,2021,\N
+2933,Verkehr und Digitalisierung,Bundesstraßen,5,4,2021,\N
+2934,Verkehr und Digitalisierung,Autobahn,5,4,2021,\N
+2935,Verkehr und Digitalisierung,Abschnitt,5,4,2021,\N
+2936,Arbeit,Verpflichtungen,7,4,2021,\N
+2937,Arbeit,Anspruch,7,4,2021,\N
+2938,Arbeit,Berichterstattung,6,4,2021,\N
+2939,Arbeit,Engagement,6,4,2021,\N
+2940,Arbeit,Verantwortung,6,4,2021,\N
+2941,Finanzen,Zuständigkeiten,6,4,2021,\N
+2942,Finanzen,Kreditaufnahme,3,4,2021,\N
+2943,Finanzen,Gebühren,3,4,2021,\N
+2944,Finanzen,Gesetzliche,3,4,2021,\N
+2945,Finanzen,Personal,3,4,2021,\N
+2946,Außenpolitik,Türkei,9,4,2021,\N
+2947,Außenpolitik,Vereinigten,7,4,2021,\N
+2948,Außenpolitik,Abkommens,6,4,2021,\N
+2949,Außenpolitik,Regierung,6,4,2021,\N
+2950,Außenpolitik,Ukraine,6,4,2021,\N
+2951,Wirtschaft,Großbritannien,8,4,2021,\N
+2952,Wirtschaft,Wirtschaft,8,4,2021,\N
+2953,Wirtschaft,Bundesländern,6,4,2021,\N
+2954,Wirtschaft,Gewinnverlagerung,5,4,2021,\N
+2955,Wirtschaft,Ausland,5,4,2021,\N
+2956,Entwicklung,Ausbildung,12,4,2021,\N
+2957,Entwicklung,Marktüberwachung,11,4,2021,\N
+2958,Entwicklung,Teilhabe,11,4,2021,\N
+2959,Entwicklung,Verarbeitung,10,4,2021,\N
+2960,Entwicklung,Übermittlung,10,4,2021,\N
+2961,Verteidigung,Schutzes,6,4,2021,\N
+2962,Verteidigung,Strafbarkeit,5,4,2021,\N
+2963,Verteidigung,Verstößen,5,4,2021,\N
+2964,Verteidigung,Ermächtigungsgrundlage,5,4,2021,\N
+2965,Verteidigung,Streitkräfte,4,4,2021,\N
+2966,Wohnungsbau,Sozialgesetzbuch,11,4,2021,\N
+2967,Wohnungsbau,Aktionsplan,7,4,2021,\N
+2968,Wohnungsbau,Berlin,6,4,2021,\N
+2969,Wohnungsbau,Rentenversicherung,5,4,2021,\N
+2970,Wohnungsbau,Zusatzausgaben,4,4,2021,\N
+2971,Gesundheit,Dauer,10,4,2021,\N
+2972,Gesundheit,Gesundheit,10,4,2021,\N
+2973,Gesundheit,Behinderungen,9,4,2021,\N
+2974,Gesundheit,Qualität,5,4,2021,\N
+2975,Gesundheit,Sorgfaltspflichten,4,4,2021,\N
+2976,Familie,Kindern,9,4,2021,\N
+2977,Familie,Kinder,6,4,2021,\N
+2978,Familie,Königreich,4,4,2021,\N
+2979,Familie,Familien,3,4,2021,\N
+2980,Familie,Pflegefamilien,3,4,2021,\N
+2981,Innenpolitik,Haushaltsgesetz,5,4,2021,\N
+2982,Innenpolitik,Asyl,5,4,2021,\N
+2983,Innenpolitik,Rechtsvorschriften,3,4,2021,\N
+2984,Innenpolitik,Bundestagsabgeordnete,3,4,2021,\N
+2985,Innenpolitik,Strukturreform,3,4,2021,\N
+2986,Justiz,Bundeswehr,11,4,2021,\N
+2987,Justiz,Einführungsgesetz,11,4,2021,\N
+2988,Justiz,Bürgerlichen,8,4,2021,\N
+2989,Justiz,Justiz,7,4,2021,\N
+2990,Justiz,Geldwäsche,7,4,2021,\N
+2991,Umwelt,Energie,5,4,2021,\N
+2992,Umwelt,Treibhausgasemissionen,4,4,2021,\N
+2993,Umwelt,Genf,3,4,2021,\N
+2994,Umwelt,Entsorgung,3,4,2021,\N
+2995,Umwelt,Umweltschutz,3,4,2021,\N
+2996,Landwirtschaft,Tierarzneimittel,4,4,2021,\N
+2997,Landwirtschaft,Durchführungsverordnung,4,4,2021,\N
+2998,Landwirtschaft,Luftfahrzeuge,4,4,2021,\N
+2999,Landwirtschaft,Drohnen,4,4,2021,\N
+3000,Landwirtschaft,Luftfahrzeugsysteme,4,4,2021,\N
+3001,Entwicklung,Gesetzentwurfs,15,5,2021,\N
+3002,Entwicklung,Marktüberwachung,15,5,2021,\N
+3003,Entwicklung,Option,14,5,2021,\N
+3004,Entwicklung,Hinwirken,14,5,2021,\N
+3005,Entwicklung,Bekanntmachungserlaubnis,11,5,2021,\N
+3006,Wohnungsbau,Wahlrecht,7,5,2021,\N
+3007,Wohnungsbau,Schulen,7,5,2021,\N
+3008,Wohnungsbau,Sozialgesetzbuch,5,5,2021,\N
+3009,Wohnungsbau,Investitionsprogramm,5,5,2021,\N
+3010,Wohnungsbau,Zusatzausgaben,5,5,2021,\N
+3011,Arbeit,Engagement,14,5,2021,\N
+3012,Arbeit,Betriebsrates,12,5,2021,\N
+3013,Arbeit,Berichterstattung,12,5,2021,\N
+3014,Arbeit,Dienstleistungen,12,5,2021,\N
+3015,Arbeit,Verantwortung,12,5,2021,\N
+3016,Verteidigung,Abschluss,18,5,2021,\N
+3017,Verteidigung,Soldaten,11,5,2021,\N
+3018,Verteidigung,Ausgleich,9,5,2021,\N
+3019,Verteidigung,Streitkräfte,9,5,2021,\N
+3020,Verteidigung,Frist,6,5,2021,\N
+3021,Familie,Königreich,11,5,2021,\N
+3022,Familie,Angehörigen,5,5,2021,\N
+3023,Familie,Kinder,4,5,2021,\N
+3024,Familie,Geschlechtsangabe,4,5,2021,\N
+3025,Familie,Kind,3,5,2021,\N
+3026,Landwirtschaft,Drohnen,6,5,2021,\N
+3027,Landwirtschaft,Gemeinden,5,5,2021,\N
+3028,Landwirtschaft,Betrieben,5,5,2021,\N
+3029,Landwirtschaft,Bundesanstalt,5,5,2021,\N
+3030,Landwirtschaft,Durchführungsverordnung,5,5,2021,\N
+3031,Finanzen,Zuständigkeiten,8,5,2021,\N
+3032,Finanzen,Angelegenheiten,5,5,2021,\N
+3033,Finanzen,Personal,4,5,2021,\N
+3034,Finanzen,Rechnungen,4,5,2021,\N
+3035,Finanzen,Themen,3,5,2021,\N
+3036,Außenpolitik,Vereinigten,20,5,2021,\N
+3037,Außenpolitik,Regierung,14,5,2021,\N
+3038,Außenpolitik,Atomgemeinschaft,10,5,2021,\N
+3039,Außenpolitik,Abkommens,9,5,2021,\N
+3040,Außenpolitik,Demokratie,8,5,2021,\N
+3041,Innenpolitik,Wahlverfahren,4,5,2021,\N
+3042,Innenpolitik,Bundeswahlgesetz,4,5,2021,\N
+3043,Innenpolitik,Strukturreform,4,5,2021,\N
+3044,Innenpolitik,Grundgesetz,3,5,2021,\N
+3045,Innenpolitik,Rechtsvorschriften,3,5,2021,\N
+3046,Gesundheit,Gesundheit,6,5,2021,\N
+3047,Gesundheit,Freiheit,6,5,2021,\N
+3048,Gesundheit,Privatsphäre,5,5,2021,\N
+3049,Gesundheit,Zustand,4,5,2021,\N
+3050,Gesundheit,Barrierefreiheit,4,5,2021,\N
+3051,Bildung und Forschung,Zwecke,11,5,2021,\N
+3052,Bildung und Forschung,Bildung,9,5,2021,\N
+3053,Bildung und Forschung,Information,7,5,2021,\N
+3054,Bildung und Forschung,Studie,7,5,2021,\N
+3055,Bildung und Forschung,Weiterbildung,6,5,2021,\N
+3056,Verkehr und Digitalisierung,Fahrzeugen,9,5,2021,\N
+3057,Verkehr und Digitalisierung,Verkehr,9,5,2021,\N
+3058,Verkehr und Digitalisierung,Straßenverkehrsgesetz,5,5,2021,\N
+3059,Verkehr und Digitalisierung,Straßenverkehr,5,5,2021,\N
+3060,Verkehr und Digitalisierung,Bahn,5,5,2021,\N
+3061,Justiz,Nordirland,13,5,2021,\N
+3062,Justiz,Bundeswehr,10,5,2021,\N
+3063,Justiz,Gesetze,8,5,2021,\N
+3064,Justiz,Bundesverfassungsgerichts,7,5,2021,\N
+3065,Justiz,Gerichtshofs,7,5,2021,\N
+3066,Wirtschaft,Großbritannien,13,5,2021,\N
+3067,Wirtschaft,Wirtschaft,10,5,2021,\N
+3068,Wirtschaft,Bundesländern,7,5,2021,\N
+3069,Wirtschaft,Medien,6,5,2021,\N
+3070,Wirtschaft,Betriebsrat,5,5,2021,\N
+3071,Umwelt,Klimaschutz,8,5,2021,\N
+3072,Umwelt,Naturschutz,8,5,2021,\N
+3073,Umwelt,Treibhausgasemissionen,7,5,2021,\N
+3074,Umwelt,Umwelt,5,5,2021,\N
+3075,Umwelt,Energie,5,5,2021,\N
+3076,Entwicklung,Verabschiedung,72,6,2021,\N
+3077,Entwicklung,Hinwirken,40,6,2021,\N
+3078,Entwicklung,Gesetzentwurfs,34,6,2021,\N
+3079,Entwicklung,Ebene,22,6,2021,\N
+3080,Entwicklung,Digitalisierung,17,6,2021,\N
+3081,Landwirtschaft,Agrarpolitik,12,6,2021,\N
+3082,Landwirtschaft,Tierarzneimittel,8,6,2021,\N
+3083,Landwirtschaft,Gemeinden,6,6,2021,\N
+3084,Landwirtschaft,Windenergieanlagen,6,6,2021,\N
+3085,Landwirtschaft,Landwirtschaft,6,6,2021,\N
+3086,Familie,Angela,12,6,2021,\N
+3087,Familie,Kinder,11,6,2021,\N
+3088,Familie,Notlage,7,6,2021,\N
+3089,Familie,Königreich,6,6,2021,\N
+3090,Familie,Angehörige,6,6,2021,\N
+3091,Innenpolitik,Grundgesetz,8,6,2021,\N
+3092,Innenpolitik,Bundeskanzleramt,5,6,2021,\N
+3093,Innenpolitik,Schuldenbremse,4,6,2021,\N
+3094,Innenpolitik,Reformpaket,4,6,2021,\N
+3095,Innenpolitik,Atomausstieg,4,6,2021,\N
+3096,Justiz,Einführungsgesetz,17,6,2021,\N
+3097,Justiz,Bürgerlichen,14,6,2021,\N
+3098,Justiz,Gewalt,12,6,2021,\N
+3099,Justiz,Bundeswehr,12,6,2021,\N
+3100,Justiz,Bundespolizei,12,6,2021,\N
+3101,Wohnungsbau,Sozialgesetzbuch,10,6,2021,\N
+3102,Wohnungsbau,Flächen,10,6,2021,\N
+3103,Wohnungsbau,Aktionsplan,9,6,2021,\N
+3104,Wohnungsbau,Investitionsprogramm,9,6,2021,\N
+3105,Wohnungsbau,Ganztagsbetreuung,9,6,2021,\N
+3106,Außenpolitik,Regierung,22,6,2021,\N
+3107,Außenpolitik,Bundeskanzlerin,17,6,2021,\N
+3108,Außenpolitik,Menschenrechte,14,6,2021,\N
+3109,Außenpolitik,Sanktionen,11,6,2021,\N
+3110,Außenpolitik,Merkel,10,6,2021,\N
+3111,Arbeit,Engagement,38,6,2021,\N
+3112,Arbeit,Kooperation,15,6,2021,\N
+3113,Arbeit,Beschäftigung,11,6,2021,\N
+3114,Arbeit,Berichterstattung,10,6,2021,\N
+3115,Arbeit,Zeit,10,6,2021,\N
+3116,Bildung und Forschung,Entwicklungszusammenarbeit,21,6,2021,\N
+3117,Bildung und Forschung,Bildung,18,6,2021,\N
+3118,Bildung und Forschung,Innovation,14,6,2021,\N
+3119,Bildung und Forschung,Wissenschaft,12,6,2021,\N
+3120,Bildung und Forschung,Zwecke,9,6,2021,\N
+3121,Wirtschaft,Wirtschaft,13,6,2021,\N
+3122,Wirtschaft,Gesellschaft,7,6,2021,\N
+3123,Wirtschaft,Kultur,7,6,2021,\N
+3124,Wirtschaft,Bundesländern,7,6,2021,\N
+3125,Wirtschaft,Akteure,6,6,2021,\N
+3126,Gesundheit,Gesundheit,11,6,2021,\N
+3127,Gesundheit,Leben,11,6,2021,\N
+3128,Gesundheit,Mobilität,9,6,2021,\N
+3129,Gesundheit,Pflege,9,6,2021,\N
+3130,Gesundheit,Freiheit,8,6,2021,\N
+3131,Verteidigung,Aufklärung,10,6,2021,\N
+3132,Verteidigung,Schutzes,8,6,2021,\N
+3133,Verteidigung,Freilassung,7,6,2021,\N
+3134,Verteidigung,Strafbarkeit,7,6,2021,\N
+3135,Verteidigung,Ausgleich,6,6,2021,\N
+3136,Finanzen,Verpflichtungsermächtigungen,5,6,2021,\N
+3137,Finanzen,Themen,4,6,2021,\N
+3138,Finanzen,Einkommen,4,6,2021,\N
+3139,Finanzen,Haushaltsführung,4,6,2021,\N
+3140,Finanzen,Haushaltsjahres,4,6,2021,\N
+3141,Umwelt,Klimaschutz,9,6,2021,\N
+3142,Umwelt,Umwelt,8,6,2021,\N
+3143,Umwelt,Smart,6,6,2021,\N
+3144,Umwelt,Klima,5,6,2021,\N
+3145,Umwelt,Entsorgung,5,6,2021,\N
+3146,Verkehr und Digitalisierung,Verkehr,9,6,2021,\N
+3147,Verkehr und Digitalisierung,Wettbewerb,6,6,2021,\N
+3148,Verkehr und Digitalisierung,Kein,6,6,2021,\N
+3149,Verkehr und Digitalisierung,Raum,5,6,2021,\N
+3150,Verkehr und Digitalisierung,Öffentlichen,4,6,2021,\N
+3151,Wirtschaft,Staatliche,1,8,2021,\N
+3152,Wirtschaft,Zahlungsunfähigkeit,1,8,2021,\N
+3153,Wirtschaft,Bevölkerungsschutz,1,8,2021,\N
+3154,Wirtschaft,Erneuerbare,1,8,2021,\N
+3155,Wirtschaft,Verwaltung,1,8,2021,\N
+3156,Gesundheit,Garantie,1,8,2021,\N
+3157,Gesundheit,Schäden,1,8,2021,\N
+3158,Gesundheit,Infektionsschutzgesetz,1,8,2021,\N
+3159,Gesundheit,Impfung,1,8,2021,\N
+3160,Gesundheit,Sicherheitsrisiken,1,8,2021,\N
+3161,Wohnungsbau,Wiederaufbau,2,8,2021,\N
+3162,Wohnungsbau,Remmers,2,8,2021,\N
+3163,Wohnungsbau,Präsenzunterricht,1,8,2021,\N
+3164,Wohnungsbau,Solidaritätsfonds,1,8,2021,\N
+3165,Wohnungsbau,Förderzeiträume,1,8,2021,\N
+3166,Familie,Kindern,2,8,2021,\N
+3167,Familie,Karin,2,8,2021,\N
+3168,Familie,Gemeinschaft,2,8,2021,\N
+3169,Familie,Mittleren,1,8,2021,\N
+3170,Familie,Zeki,1,8,2021,\N
+3171,Entwicklung,Aussetzung,3,8,2021,\N
+3172,Entwicklung,Hinwirken,3,8,2021,\N
+3173,Entwicklung,Eintritt,3,8,2021,\N
+3174,Entwicklung,Tragweite,3,8,2021,\N
+3175,Entwicklung,Einschränkung,2,8,2021,\N
+3176,Bildung und Forschung,Bildung,3,8,2021,\N
+3177,Bildung und Forschung,Kodex,1,8,2021,\N
+3178,Bildung und Forschung,Sonderregelungen,1,8,2021,\N
+3179,Bildung und Forschung,Informationsmittel,1,8,2021,\N
+3180,Bildung und Forschung,Katastrophenhilfe,1,8,2021,\N
+3181,Arbeit,Nachruf,4,8,2021,\N
+3182,Arbeit,Hilfen,1,8,2021,\N
+3183,Arbeit,Erleichterungen,1,8,2021,\N
+3184,Arbeit,Kommunikation,1,8,2021,\N
+3185,Arbeit,Testnachweise,1,8,2021,\N
+3186,Finanzen,Insolvenzantragspflicht,2,8,2021,\N
+3187,Finanzen,Zuständigkeiten,2,8,2021,\N
+3188,Finanzen,Fristen,1,8,2021,\N
+3189,Finanzen,Raten,1,8,2021,\N
+3190,Finanzen,Auszahlungen,1,8,2021,\N
+3191,Umwelt,Klimaschutz,2,8,2021,\N
+3192,Umwelt,Katastrophenwarnungen,1,8,2021,\N
+3193,Umwelt,Naturkatstrophen,1,8,2021,\N
+3194,Umwelt,Naturkatastrophen,1,8,2021,\N
+3195,Umwelt,Katastrophenschutz,1,8,2021,\N
+3196,Verkehr und Digitalisierung,Hochwasser,2,8,2021,\N
+3197,Verkehr und Digitalisierung,Eisenbahnbrücken,1,8,2021,\N
+3198,Verkehr und Digitalisierung,Starkregenfällen,1,8,2021,\N
+3199,Verkehr und Digitalisierung,Hochwassern,1,8,2021,\N
+3200,Verkehr und Digitalisierung,Eisenbahnbetriebsanlagen,1,8,2021,\N
+3201,Justiz,Grundrechten,3,8,2021,\N
+3202,Justiz,Hebner,2,8,2021,\N
+3203,Justiz,Einführungsgesetz,2,8,2021,\N
+3204,Justiz,Bürgerlichen,2,8,2021,\N
+3205,Justiz,Stiftungsrechts,2,8,2021,\N
+3206,Verteidigung,Evakuierung,3,8,2021,\N
+3207,Verteidigung,Evakuierungsoperation,2,8,2021,\N
+3208,Verteidigung,Vorlagepflichten,1,8,2021,\N
+3209,Verteidigung,Verhältnismäßigkeit,1,8,2021,\N
+3210,Verteidigung,Reserve,1,8,2021,\N
+3211,Landwirtschaft,Maag,2,8,2021,\N
+3212,Landwirtschaft,Hochwasserkatastrophe,1,8,2021,\N
+3213,Landwirtschaft,Flutopfer,1,8,2021,\N
+3214,Landwirtschaft,Geoinformationssystems,1,8,2021,\N
+3215,Landwirtschaft,Extremwetterereignisse,1,8,2021,\N
+3216,Außenpolitik,Afghanistan,7,8,2021,\N
+3217,Außenpolitik,Ortskräfte,3,8,2021,\N
+3218,Außenpolitik,Klimaschutzpolitik,2,8,2021,\N
+3219,Außenpolitik,Machtübernahme,2,8,2021,\N
+3220,Außenpolitik,Taliban,2,8,2021,\N
+3221,Innenpolitik,Bundesebene,1,8,2021,\N
+3222,Innenpolitik,Ministerpräsidenten,1,8,2021,\N
+3223,Innenpolitik,Grundrechtseinschränkungen,1,8,2021,\N
+3224,Arbeit,Hilfen,1,9,2021,\N
+3225,Arbeit,Erleichterungen,1,9,2021,\N
+3226,Arbeit,Kommunikation,1,9,2021,\N
+3227,Arbeit,Testnachweise,1,9,2021,\N
+3228,Arbeit,Stunden,1,9,2021,\N
+3229,Entwicklung,Aussetzung,5,9,2021,\N
+3230,Entwicklung,Förderfähigkeit,3,9,2021,\N
+3231,Entwicklung,Rechtsanspruchs,2,9,2021,\N
+3232,Entwicklung,Anrechnung,2,9,2021,\N
+3233,Entwicklung,Grundschulalter,2,9,2021,\N
+3234,Wohnungsbau,Ganztagsbetreuung,3,9,2021,\N
+3235,Wohnungsbau,Finanzhilfen,3,9,2021,\N
+3236,Wohnungsbau,Ganztagsschulen,2,9,2021,\N
+3237,Wohnungsbau,Investitionsprogramm,2,9,2021,\N
+3238,Wohnungsbau,Betriebskosten,2,9,2021,\N
+3239,Finanzen,Insolvenzantragspflicht,4,9,2021,\N
+3240,Finanzen,Zuständigkeiten,2,9,2021,\N
+3241,Finanzen,Fristen,1,9,2021,\N
+3242,Finanzen,Gemeindeverbände,1,9,2021,\N
+3243,Finanzen,Betriebsausgaben,1,9,2021,\N
+3244,Wirtschaft,Zahlungsunfähigkeit,1,9,2021,\N
+3245,Wirtschaft,Zentralbank,1,9,2021,\N
+3246,Wirtschaft,Weltbank,1,9,2021,\N
+3247,Wirtschaft,Bevölkerungsschutz,1,9,2021,\N
+3248,Wirtschaft,Erneuerbare,1,9,2021,\N
+3249,Umwelt,Katastrophenwarnungen,1,9,2021,\N
+3250,Umwelt,Naturkatstrophen,1,9,2021,\N
+3251,Umwelt,Naturkatastrophen,1,9,2021,\N
+3252,Umwelt,Klimaschutz,1,9,2021,\N
+3253,Umwelt,Katastrophenschutz,1,9,2021,\N
+3254,Verkehr und Digitalisierung,Starkregenfällen,3,9,2021,\N
+3255,Verkehr und Digitalisierung,Hochwassern,3,9,2021,\N
+3256,Verkehr und Digitalisierung,Eisenbahnbrücken,1,9,2021,\N
+3257,Verkehr und Digitalisierung,Eisenbahnbetriebsanlagen,1,9,2021,\N
+3258,Verkehr und Digitalisierung,Minderbelastungen,1,9,2021,\N
+3259,Justiz,Gesetze,3,9,2021,\N
+3260,Justiz,Einreisende,1,9,2021,\N
+3261,Justiz,Grundrechten,1,9,2021,\N
+3262,Justiz,Europarates,1,9,2021,\N
+3263,Justiz,Hebner,1,9,2021,\N
+3264,Bildung und Forschung,Kodex,1,9,2021,\N
+3265,Bildung und Forschung,Bonusmittel,1,9,2021,\N
+3266,Bildung und Forschung,Themenfeldern,1,9,2021,\N
+3267,Bildung und Forschung,Sonderregelungen,1,9,2021,\N
+3268,Bildung und Forschung,Informationsmittel,1,9,2021,\N
+3269,Gesundheit,Schäden,1,9,2021,\N
+3270,Gesundheit,Wohlstand,1,9,2021,\N
+3271,Verteidigung,Vorlagepflichten,1,9,2021,\N
+3272,Verteidigung,Verhältnismäßigkeit,1,9,2021,\N
+3273,Verteidigung,Vorhaltung,1,9,2021,\N
+3274,Verteidigung,Frist,1,9,2021,\N
+3275,Verteidigung,Ausgleich,1,9,2021,\N
+3276,Familie,Kinder,2,9,2021,\N
+3277,Familie,Drosten,1,9,2021,\N
+3278,Familie,Rosenbrock,1,9,2021,\N
+3279,Familie,Mittleren,1,9,2021,\N
+3280,Landwirtschaft,Gemeinden,1,9,2021,\N
+3281,Landwirtschaft,Bergholz,1,9,2021,\N
+3282,Landwirtschaft,Hochwasserkatastrophe,1,9,2021,\N
+3283,Landwirtschaft,Flutopfer,1,9,2021,\N
+3284,Landwirtschaft,Geoinformationssystems,1,9,2021,\N
+3285,Außenpolitik,Umsatzsteuerverteilung,2,9,2021,\N
+3286,Außenpolitik,Parlamentarischen,1,9,2021,\N
+3287,Außenpolitik,Nachbarstaaten,1,9,2021,\N
+3288,Außenpolitik,Ortskräfte,1,9,2021,\N
+3289,Außenpolitik,Sondergipfels,1,9,2021,\N
+3290,Innenpolitik,Regierungskoalition,1,9,2021,\N
+3291,Innenpolitik,Ganztagsfinanzhilfegesetz,1,9,2021,\N
+3292,Innenpolitik,Bundesebene,1,9,2021,\N
+3293,Entwicklung,Eröffnung,2,10,2021,\N
+3294,Entwicklung,Übernahme,1,10,2021,\N
+3295,Entwicklung,Änderungsmaßgaben,1,10,2021,\N
+3296,Entwicklung,Beeinträchtigung,1,10,2021,\N
+3297,Entwicklung,Festsetzung,1,10,2021,\N
+3298,Innenpolitik,Geschäftsordnungen,1,10,2021,\N
+3299,Arbeit,Sitzung,3,10,2021,\N
+3300,Arbeit,Verhaltensregeln,1,10,2021,\N
+3301,Arbeit,Gemeinsame,1,10,2021,\N
+3302,Arbeit,Vorschlagsrechts,1,10,2021,\N
+3303,Verkehr und Digitalisierung,Kommunikationsmittel,1,10,2021,\N
+3304,Außenpolitik,Geschäftsordnungsantrag,1,10,2021,\N
+3305,Außenpolitik,Präsidenten,1,10,2021,\N
+3306,Verteidigung,Ablehnung,1,10,2021,\N
+3307,Finanzen,Stellvertreter,1,10,2021,\N
+3308,Außenpolitik,Umsatzsteuergesetz,2,11,2021,\N
+3309,Außenpolitik,Massenmigration,1,11,2021,\N
+3310,Außenpolitik,Polen,1,11,2021,\N
+3311,Außenpolitik,Außenwirtschaftsgesetzes,1,11,2021,\N
+3312,Außenpolitik,Außenwirtschaftsverordnung,1,11,2021,\N
+3313,Verteidigung,Abwehr,3,11,2021,\N
+3314,Verteidigung,Befreiungen,2,11,2021,\N
+3315,Verteidigung,Strafbarkeit,2,11,2021,\N
+3316,Verteidigung,Täuschung,2,11,2021,\N
+3317,Verteidigung,Abwehrmaßnahmen,1,11,2021,\N
+3318,Entwicklung,Verarbeitung,4,11,2021,\N
+3319,Entwicklung,Tragweite,3,11,2021,\N
+3320,Entwicklung,Durchschnittssatzes,2,11,2021,\N
+3321,Entwicklung,Festschreibung,2,11,2021,\N
+3322,Entwicklung,Umsatzsteuerentlastung,2,11,2021,\N
+3323,Wohnungsbau,Jahressteuergesetz,2,11,2021,\N
+3324,Wohnungsbau,Maßnahmenkatalog,2,11,2021,\N
+3325,Wohnungsbau,Versorgungsaufschlag,2,11,2021,\N
+3326,Wohnungsbau,Schulschließungen,1,11,2021,\N
+3327,Wohnungsbau,Ganztagsinfrastrukturausbau,1,11,2021,\N
+3328,Verkehr und Digitalisierung,Nummer,2,11,2021,\N
+3329,Verkehr und Digitalisierung,Einfuhren,2,11,2021,\N
+3330,Verkehr und Digitalisierung,Gebrauch,2,11,2021,\N
+3331,Verkehr und Digitalisierung,Tempo,1,11,2021,\N
+3332,Verkehr und Digitalisierung,Brownout,1,11,2021,\N
+3333,Familie,Gruppen,2,11,2021,\N
+3334,Familie,Kinder,1,11,2021,\N
+3335,Familie,Wohnung,1,11,2021,\N
+3336,Familie,Familien,1,11,2021,\N
+3337,Familie,Swetlana,1,11,2021,\N
+3338,Bildung und Forschung,Täterprivilegierungen,2,11,2021,\N
+3339,Bildung und Forschung,Fälschungen,2,11,2021,\N
+3340,Bildung und Forschung,Impfnachweisen,2,11,2021,\N
+3341,Bildung und Forschung,Jugendliche,1,11,2021,\N
+3342,Bildung und Forschung,Horizont,1,11,2021,\N
+3343,Wirtschaft,Unionsrechtlich,2,11,2021,\N
+3344,Wirtschaft,Umsatzsteuerrecht,1,11,2021,\N
+3345,Wirtschaft,Energiewende,1,11,2021,\N
+3346,Wirtschaft,Wirtschaft,1,11,2021,\N
+3347,Wirtschaft,Haushalte,1,11,2021,\N
+3348,Landwirtschaft,Pauschallandwirte,2,11,2021,\N
+3349,Landwirtschaft,Steuerbefreiung,2,11,2021,\N
+3350,Landwirtschaft,Pandemiebekämpfung,2,11,2021,\N
+3351,Landwirtschaft,Energieversorgung,2,11,2021,\N
+3352,Arbeit,Wege,2,11,2021,\N
+3353,Arbeit,Lieferungen,2,11,2021,\N
+3354,Arbeit,Beschäftigtendaten,2,11,2021,\N
+3355,Arbeit,Härten,2,11,2021,\N
+3356,Arbeit,Vereinbarkeit,2,11,2021,\N
+3357,Innenpolitik,Ganztagsfinanzierungsgesetz,1,11,2021,\N
+3358,Innenpolitik,Redezeit,1,11,2021,\N
+3359,Innenpolitik,Sitzverteilung,1,11,2021,\N
+3360,Innenpolitik,LINKE,1,11,2021,\N
+3361,Justiz,Gesetze,4,11,2021,\N
+3362,Justiz,Sonderrecht,2,11,2021,\N
+3363,Justiz,Entschädigungszahlungen,2,11,2021,\N
+3364,Justiz,Grundrechten,2,11,2021,\N
+3365,Justiz,Versammlungsfreiheit,2,11,2021,\N
+3366,Gesundheit,Infektionsschutz,2,11,2021,\N
+3367,Gesundheit,Arbeitsschutz,2,11,2021,\N
+3368,Gesundheit,Gesundheit,2,11,2021,\N
+3369,Gesundheit,Pflege,2,11,2021,\N
+3370,Gesundheit,Rehabilitationseinrichtungen,2,11,2021,\N
+3371,Finanzen,Bundeszuschusses,1,11,2021,\N
+3372,Finanzen,Gesundheitsfonds,1,11,2021,\N
+3373,Finanzen,Abgaben,1,11,2021,\N
+3374,Umwelt,Kernenergie,1,11,2021,\N
+3375,Umwelt,Warme,1,11,2021,\N
+3376,Umwelt,Kälte,1,11,2021,\N
+3377,Umwelt,Energie,1,11,2021,\N
+3378,Gesundheit,Impfung,5,12,2021,\N
+3379,Gesundheit,Impfpflicht,4,12,2021,\N
+3380,Gesundheit,Genesung,4,12,2021,\N
+3381,Gesundheit,Resilienz,3,12,2021,\N
+3382,Gesundheit,Integrität,3,12,2021,\N
+3383,Entwicklung,Sprache,5,12,2021,\N
+3384,Entwicklung,Rahmens,4,12,2021,\N
+3385,Entwicklung,Aufbewahrung,4,12,2021,\N
+3386,Entwicklung,Wirksamkeit,4,12,2021,\N
+3387,Entwicklung,Einschränkung,4,12,2021,\N
+3388,Arbeit,Gemeinsame,7,12,2021,\N
+3389,Arbeit,Agentur,4,12,2021,\N
+3390,Arbeit,Verausgabung,3,12,2021,\N
+3391,Arbeit,Assoziation,3,12,2021,\N
+3392,Arbeit,Sitzung,2,12,2021,\N
+3393,Umwelt,Klimaneutralität,2,12,2021,\N
+3394,Umwelt,CSDP,2,12,2021,\N
+3395,Umwelt,Japan,2,12,2021,\N
+3396,Umwelt,Klimaschutz,1,12,2021,\N
+3397,Umwelt,Atomkraft,1,12,2021,\N
+3398,Finanzen,Jahresbericht,5,12,2021,\N
+3399,Finanzen,Vollmacht,2,12,2021,\N
+3400,Finanzen,Anhänge,2,12,2021,\N
+3401,Finanzen,Gesamthaushalts,1,12,2021,\N
+3402,Finanzen,Wirtschaftsplans,1,12,2021,\N
+3403,Innenpolitik,Ganztagsfinanzierungsgesetz,3,12,2021,\N
+3404,Innenpolitik,Wirtschaftsstabilisierungsbeschleunigungsgesetz,2,12,2021,\N
+3405,Innenpolitik,Haushaltsgesetz,1,12,2021,\N
+3406,Innenpolitik,Mindestsicherung,1,12,2021,\N
+3407,Innenpolitik,Abgeordnetengesetzes,1,12,2021,\N
+3408,Wohnungsbau,Notariatsunterlagen,4,12,2021,\N
+3409,Wohnungsbau,Infrastrukturausbau,3,12,2021,\N
+3410,Wohnungsbau,Ganztagsbetreuung,3,12,2021,\N
+3411,Wohnungsbau,Grundschulkinder,2,12,2021,\N
+3412,Wohnungsbau,Wirtschaftsstabilisierungsfonds,2,12,2021,\N
+3413,Bildung und Forschung,European,3,12,2021,\N
+3414,Bildung und Forschung,Tests,3,12,2021,\N
+3415,Bildung und Forschung,Bonusmitteln,2,12,2021,\N
+3416,Bildung und Forschung,Geimpftenrechte,2,12,2021,\N
+3417,Bildung und Forschung,Notfallversorgung,2,12,2021,\N
+3418,Wirtschaft,Wirtschaft,4,12,2021,\N
+3419,Wirtschaft,Königsteiner,2,12,2021,\N
+3420,Wirtschaft,Inflation,2,12,2021,\N
+3421,Wirtschaft,Kreises,2,12,2021,\N
+3422,Wirtschaft,Zertifikate,2,12,2021,\N
+3423,Landwirtschaft,Beihilfen,2,12,2021,\N
+3424,Landwirtschaft,Tierärzte,2,12,2021,\N
+3425,Landwirtschaft,Ausgleichszahlungen,2,12,2021,\N
+3426,Landwirtschaft,EUAM,2,12,2021,\N
+3427,Landwirtschaft,Gemischten,2,12,2021,\N
+3428,Verteidigung,Operation,6,12,2021,\N
+3429,Verteidigung,Vertreters,3,12,2021,\N
+3430,Verteidigung,Militäroperation,3,12,2021,\N
+3431,Verteidigung,Abschluss,3,12,2021,\N
+3432,Verteidigung,Stützung,2,12,2021,\N
+3433,Justiz,Grundrechten,6,12,2021,\N
+3434,Justiz,Grundrechte,4,12,2021,\N
+3435,Justiz,Marokko,4,12,2021,\N
+3436,Justiz,Beurkundungsgesetz,2,12,2021,\N
+3437,Justiz,Bundesnotarordnung,2,12,2021,\N
+3438,Außenpolitik,Ukraine,6,12,2021,\N
+3439,Außenpolitik,Russland,5,12,2021,\N
+3440,Außenpolitik,Abkommens,5,12,2021,\N
+3441,Außenpolitik,Syrien,4,12,2021,\N
+3442,Außenpolitik,Mittelmeer,4,12,2021,\N
+3443,Verkehr und Digitalisierung,Kontakt,2,12,2021,\N
+3444,Verkehr und Digitalisierung,Testnachweisen,2,12,2021,\N
+3445,Verkehr und Digitalisierung,Kontrollen,2,12,2021,\N
+3446,Verkehr und Digitalisierung,Güterverkehr,2,12,2021,\N
+3447,Verkehr und Digitalisierung,Horizontales,2,12,2021,\N
+3448,Familie,Königreich,5,12,2021,\N
+3449,Familie,Partnerschaft,5,12,2021,\N
+3450,Familie,SOPHIA,3,12,2021,\N
+3451,Familie,Personengruppen,2,12,2021,\N
+3452,Familie,Gemeinschaft,2,12,2021,\N
+3528,Gesundheit,Gesundheit,43,\N,2020,\N
+3529,Gesundheit,Dauer,40,\N,2020,\N
+3530,Gesundheit,Freiheit,22,\N,2020,\N
+3531,Gesundheit,Verbraucherschutz,19,\N,2020,\N
+3532,Gesundheit,Pflege,18,\N,2020,\N
+3533,Familie,Kinder,39,\N,2020,\N
+3534,Familie,Heimat,39,\N,2020,\N
+3535,Familie,Kindern,32,\N,2020,\N
+3536,Familie,Notlage,29,\N,2020,\N
+3537,Familie,Eltern,28,\N,2020,\N
+3538,Entwicklung,Gesetzentwurfs,122,\N,2020,\N
+3539,Entwicklung,Hinwirken,98,\N,2020,\N
+3540,Entwicklung,Gewährung,74,\N,2020,\N
+3541,Entwicklung,Aussetzung,73,\N,2020,\N
+3542,Entwicklung,Übernahme,65,\N,2020,\N
+3543,Bildung und Forschung,Bildung,47,\N,2020,\N
+3544,Bildung und Forschung,Coronavirus,28,\N,2020,\N
+3545,Bildung und Forschung,Methoden,27,\N,2020,\N
+3546,Bildung und Forschung,Entwicklungszusammenarbeit,27,\N,2020,\N
+3547,Bildung und Forschung,Information,25,\N,2020,\N
+3548,Arbeit,Engagement,103,\N,2020,\N
+3549,Arbeit,Berichterstattung,43,\N,2020,\N
+3550,Arbeit,Hilfe,40,\N,2020,\N
+3551,Arbeit,Genehmigung,39,\N,2020,\N
+3552,Arbeit,Anspruch,39,\N,2020,\N
+3553,Landwirtschaft,Landwirtschaft,27,\N,2020,\N
+3554,Landwirtschaft,Drohnen,23,\N,2020,\N
+3555,Landwirtschaft,Region,21,\N,2020,\N
+3556,Landwirtschaft,Windenergieanlagen,19,\N,2020,\N
+3557,Landwirtschaft,Bundesanstalt,19,\N,2020,\N
+3558,Verteidigung,Ausgleich,48,\N,2020,\N
+3559,Verteidigung,Streitkräfte,46,\N,2020,\N
+3560,Verteidigung,Aufklärung,40,\N,2020,\N
+3561,Verteidigung,Abschluss,33,\N,2020,\N
+3562,Verteidigung,Absicherung,32,\N,2020,\N
+3563,Justiz,Gewalt,49,\N,2020,\N
+3564,Justiz,Bundeswehr,45,\N,2020,\N
+3565,Justiz,Einführungsgesetz,32,\N,2020,\N
+3566,Justiz,Grundrechten,29,\N,2020,\N
+3567,Justiz,Justiz,29,\N,2020,\N
+3568,Finanzen,Einkommen,24,\N,2020,\N
+3569,Finanzen,Personal,24,\N,2020,\N
+3570,Finanzen,Angelegenheiten,18,\N,2020,\N
+3571,Finanzen,Bundeshaushaltsplans,18,\N,2020,\N
+3572,Finanzen,Kredite,18,\N,2020,\N
+3573,Außenpolitik,Regierung,67,\N,2020,\N
+3574,Außenpolitik,Türkei,48,\N,2020,\N
+3575,Außenpolitik,Abkommen,44,\N,2020,\N
+3576,Außenpolitik,Menschenrechte,37,\N,2020,\N
+3577,Außenpolitik,Vereinigten,32,\N,2020,\N
+3578,Wohnungsbau,Einzelmaßnahmen,48,\N,2020,\N
+3579,Wohnungsbau,Sozialgesetzbuch,40,\N,2020,\N
+3580,Wohnungsbau,Berlin,31,\N,2020,\N
+3581,Wohnungsbau,Flüchtlinge,26,\N,2020,\N
+3582,Wohnungsbau,Arbeitslosigkeitsrisiken,26,\N,2020,\N
+3583,Innenpolitik,Arbeitslosengeld,17,\N,2020,\N
+3584,Innenpolitik,Rechtsextremismus,16,\N,2020,\N
+3585,Innenpolitik,Seehofer,13,\N,2020,\N
+3586,Innenpolitik,Frankreich,12,\N,2020,\N
+3587,Innenpolitik,Ungarn,11,\N,2020,\N
+3588,Umwelt,Energien,34,\N,2020,\N
+3589,Umwelt,Klimaschutz,26,\N,2020,\N
+3590,Umwelt,Energie,26,\N,2020,\N
+3591,Umwelt,Umwelt,15,\N,2020,\N
+3592,Umwelt,Klimaschutzprogramm,14,\N,2020,\N
+3593,Wirtschaft,Wirtschaft,53,\N,2020,\N
+3594,Wirtschaft,Organisationen,31,\N,2020,\N
+3595,Wirtschaft,Bundesländern,31,\N,2020,\N
+3596,Wirtschaft,Kurzarbeitergeld,29,\N,2020,\N
+3597,Wirtschaft,Gesellschaft,26,\N,2020,\N
+3598,Verkehr und Digitalisierung,Bahn,57,\N,2020,\N
+3599,Verkehr und Digitalisierung,Verkehr,26,\N,2020,\N
+3600,Verkehr und Digitalisierung,Handel,22,\N,2020,\N
+3601,Verkehr und Digitalisierung,Nummer,20,\N,2020,\N
+3602,Verkehr und Digitalisierung,Öffentlichen,14,\N,2020,\N
+3603,Gesundheit,Gesundheit,40,\N,2021,\N
+3604,Gesundheit,Freiheit,29,\N,2021,\N
+3605,Gesundheit,Dauer,29,\N,2021,\N
+3606,Gesundheit,Behinderungen,28,\N,2021,\N
+3607,Gesundheit,Pflege,23,\N,2021,\N
+3608,Entwicklung,Accent,168,\N,2021,\N
+3609,Entwicklung,Verabschiedung,83,\N,2021,\N
+3610,Entwicklung,Gesetzentwurfs,81,\N,2021,\N
+3611,Entwicklung,Hinwirken,76,\N,2021,\N
+3612,Entwicklung,Teilhabe,59,\N,2021,\N
+3613,Arbeit,Table,104,\N,2021,\N
+3614,Arbeit,Engagement,83,\N,2021,\N
+3615,Arbeit,Berichterstattung,49,\N,2021,\N
+3616,Arbeit,Kooperation,30,\N,2021,\N
+3617,Arbeit,Verantwortung,28,\N,2021,\N
+3618,Umwelt,Klimaschutz,25,\N,2021,\N
+3619,Umwelt,Energie,23,\N,2021,\N
+3620,Umwelt,Energien,17,\N,2021,\N
+3621,Umwelt,Naturschutz,17,\N,2021,\N
+3622,Umwelt,Umwelt,16,\N,2021,\N
+3623,Finanzen,Zuständigkeiten,25,\N,2021,\N
+3624,Finanzen,Angelegenheiten,22,\N,2021,\N
+3625,Finanzen,Personal,15,\N,2021,\N
+3626,Finanzen,Themen,14,\N,2021,\N
+3627,Finanzen,Jahresbericht,13,\N,2021,\N
+3628,Innenpolitik,Grundgesetz,15,\N,2021,\N
+3629,Innenpolitik,Strukturreform,10,\N,2021,\N
+3630,Innenpolitik,Bundesebene,9,\N,2021,\N
+3631,Innenpolitik,Asyl,9,\N,2021,\N
+3632,Innenpolitik,Rechtsvorschriften,8,\N,2021,\N
+3633,Wohnungsbau,Sozialgesetzbuch,40,\N,2021,\N
+3634,Wohnungsbau,Aktionsplan,27,\N,2021,\N
+3635,Wohnungsbau,Shading,26,\N,2021,\N
+3636,Wohnungsbau,Zusatzausgaben,21,\N,2021,\N
+3637,Wohnungsbau,Schulen,20,\N,2021,\N
+3638,Bildung und Forschung,Bildung,51,\N,2021,\N
+3639,Bildung und Forschung,Zwecke,40,\N,2021,\N
+3640,Bildung und Forschung,Entwicklungszusammenarbeit,38,\N,2021,\N
+3641,Bildung und Forschung,Stiftung,30,\N,2021,\N
+3642,Bildung und Forschung,Austausch,26,\N,2021,\N
+3643,Wirtschaft,Wirtschaft,48,\N,2021,\N
+3644,Wirtschaft,Bundesländern,28,\N,2021,\N
+3645,Wirtschaft,Großbritannien,27,\N,2021,\N
+3646,Wirtschaft,Gesellschaft,23,\N,2021,\N
+3647,Wirtschaft,Verwaltung,21,\N,2021,\N
+3648,Landwirtschaft,Agrarpolitik,23,\N,2021,\N
+3649,Landwirtschaft,Landwirtschaft,21,\N,2021,\N
+3650,Landwirtschaft,Niedersachsen,19,\N,2021,\N
+3651,Landwirtschaft,Drohnen,18,\N,2021,\N
+3652,Landwirtschaft,Gemeinden,16,\N,2021,\N
+3653,Verteidigung,Abschluss,34,\N,2021,\N
+3654,Verteidigung,Ausgleich,30,\N,2021,\N
+3655,Verteidigung,Soldaten,30,\N,2021,\N
+3656,Verteidigung,Streitkräfte,29,\N,2021,\N
+3657,Verteidigung,Schutzes,29,\N,2021,\N
+3658,Justiz,Bundeswehr,52,\N,2021,\N
+3659,Justiz,Einführungsgesetz,52,\N,2021,\N
+3660,Justiz,Grundrechten,44,\N,2021,\N
+3661,Justiz,Gewalt,39,\N,2021,\N
+3662,Justiz,Bürgerlichen,35,\N,2021,\N
+3663,Außenpolitik,Regierung,58,\N,2021,\N
+3664,Außenpolitik,Türkei,45,\N,2021,\N
+3665,Außenpolitik,Vereinigten,38,\N,2021,\N
+3666,Außenpolitik,Demokratie,26,\N,2021,\N
+3667,Außenpolitik,Menschenrechte,26,\N,2021,\N
+3668,Verkehr und Digitalisierung,Verkehr,38,\N,2021,\N
+3669,Verkehr und Digitalisierung,Bahn,23,\N,2021,\N
+3670,Verkehr und Digitalisierung,Wettbewerb,19,\N,2021,\N
+3671,Verkehr und Digitalisierung,Fahrzeugen,16,\N,2021,\N
+3672,Verkehr und Digitalisierung,Kontrollen,15,\N,2021,\N
+3673,Familie,List,43,\N,2021,\N
+3674,Familie,Königreich,36,\N,2021,\N
+3675,Familie,Kinder,36,\N,2021,\N
+3676,Familie,Kindern,28,\N,2021,\N
+3677,Familie,Eltern,23,\N,2021,\N
+3678,Umwelt,Energien,36,\N,2022,\N
+3679,Umwelt,Klimaschutz,33,\N,2022,\N
+3680,Umwelt,Energiekosten,25,\N,2022,\N
+3681,Umwelt,Wärme,24,\N,2022,\N
+3682,Umwelt,Energie,15,\N,2022,\N
+3683,Verkehr und Digitalisierung,Winter,14,\N,2022,\N
+3684,Verkehr und Digitalisierung,Öffentlichen,11,\N,2022,\N
+3685,Verkehr und Digitalisierung,Strom,11,\N,2022,\N
+3686,Verkehr und Digitalisierung,Arzneimitteln,11,\N,2022,\N
+3687,Verkehr und Digitalisierung,Handel,10,\N,2022,\N
+3688,Entwicklung,Gewährung,31,\N,2022,\N
+3689,Entwicklung,Digitalisierung,28,\N,2022,\N
+3690,Entwicklung,Abfederung,25,\N,2022,\N
+3691,Entwicklung,Einmalzahlung,25,\N,2022,\N
+3692,Entwicklung,Abmilderung,25,\N,2022,\N
+3693,Verteidigung,Streitkräfte,31,\N,2022,\N
+3694,Verteidigung,Erstattung,18,\N,2022,\N
+3695,Verteidigung,Schutzes,16,\N,2022,\N
+3696,Verteidigung,Ausgleich,15,\N,2022,\N
+3697,Verteidigung,Antrags,14,\N,2022,\N
+3698,Justiz,Bundeswehr,40,\N,2022,\N
+3699,Justiz,Bundesverfassungsgerichts,24,\N,2022,\N
+3700,Justiz,Bundesnetzagentur,19,\N,2022,\N
+3701,Justiz,Einführungsgesetz,16,\N,2022,\N
+3702,Justiz,Abgabenordnung,16,\N,2022,\N
+3703,Gesundheit,Impfpflicht,23,\N,2022,\N
+3704,Gesundheit,Gesundheit,22,\N,2022,\N
+3705,Gesundheit,Dauer,15,\N,2022,\N
+3706,Gesundheit,Krankenkassen,14,\N,2022,\N
+3707,Gesundheit,Versorgungssicherheit,13,\N,2022,\N
+3708,Außenpolitik,Ukraine,127,\N,2022,\N
+3709,Außenpolitik,Russland,35,\N,2022,\N
+3710,Außenpolitik,Afghanistan,35,\N,2022,\N
+3711,Außenpolitik,Sanktionen,25,\N,2022,\N
+3712,Außenpolitik,Türkei,23,\N,2022,\N
+3713,Wirtschaft,Wirtschaft,57,\N,2022,\N
+3714,Wirtschaft,Steuereinnahmen,32,\N,2022,\N
+3715,Wirtschaft,Inflation,23,\N,2022,\N
+3716,Wirtschaft,Mehrwertsteuer,22,\N,2022,\N
+3717,Wirtschaft,Energiepreise,16,\N,2022,\N
+3718,Arbeit,Tätigkeit,21,\N,2022,\N
+3719,Arbeit,Arbeitnehmer,21,\N,2022,\N
+3720,Arbeit,Arbeitsbedingungen,18,\N,2022,\N
+3721,Arbeit,Vereinbarkeit,18,\N,2022,\N
+3722,Arbeit,Berichterstattung,17,\N,2022,\N
+3723,Landwirtschaft,Energieversorgung,24,\N,2022,\N
+3724,Landwirtschaft,Erdgas,18,\N,2022,\N
+3725,Landwirtschaft,Bundesanstalt,18,\N,2022,\N
+3726,Landwirtschaft,Landwirtschaft,17,\N,2022,\N
+3727,Landwirtschaft,Windenergieanlagen,16,\N,2022,\N
+3728,Bildung und Forschung,Bildung,28,\N,2022,\N
+3729,Bildung und Forschung,European,19,\N,2022,\N
+3730,Bildung und Forschung,Entfristung,18,\N,2022,\N
+3731,Bildung und Forschung,Austausch,13,\N,2022,\N
+3732,Bildung und Forschung,Wasserstoff,11,\N,2022,\N
+3733,Finanzen,Bundeshaushaltsplans,40,\N,2022,\N
+3734,Finanzen,Wirtschaftsplans,34,\N,2022,\N
+3735,Finanzen,Gesamthaushalts,25,\N,2022,\N
+3736,Finanzen,Steuern,18,\N,2022,\N
+3737,Finanzen,Finanzplan,16,\N,2022,\N
+3738,Innenpolitik,Arbeitslosengeld,15,\N,2022,\N
+3739,Innenpolitik,Mindestlohns,14,\N,2022,\N
+3740,Innenpolitik,Aufenthaltsgesetzes,11,\N,2022,\N
+3741,Innenpolitik,Nachtragshaushaltsgesetz,10,\N,2022,\N
+3742,Innenpolitik,Zeitung,8,\N,2022,\N
+3743,Familie,Heimat,31,\N,2022,\N
+3744,Familie,Kinder,26,\N,2022,\N
+3745,Familie,Angehörige,16,\N,2022,\N
+3746,Familie,Eltern,14,\N,2022,\N
+3747,Familie,Familien,13,\N,2022,\N
+3748,Wohnungsbau,Sozialgesetzbuch,63,\N,2022,\N
+3749,Wohnungsbau,Haushaltsjahr,35,\N,2022,\N
+3750,Wohnungsbau,Nettokreditaufnahme,34,\N,2022,\N
+3751,Wohnungsbau,Flüchtlinge,22,\N,2022,\N
+3752,Wohnungsbau,Zusatzausgaben,20,\N,2022,\N
+3753,Entwicklung,Digitalisierung,46,\N,2023,\N
+3754,Entwicklung,Kenntnisse,23,\N,2023,\N
+3755,Entwicklung,Vergleich,23,\N,2023,\N
+3756,Entwicklung,Zukunft,22,\N,2023,\N
+3757,Entwicklung,Übermittlung,21,\N,2023,\N
+3758,Wohnungsbau,Sozialgesetzbuch,35,\N,2023,\N
+3759,Wohnungsbau,Zusatzausgaben,20,\N,2023,\N
+3760,Wohnungsbau,Wärmenetze,18,\N,2023,\N
+3761,Wohnungsbau,Genehmigungsverfahren,18,\N,2023,\N
+3762,Wohnungsbau,Flüchtlinge,17,\N,2023,\N
+3763,Wirtschaft,Wirtschaft,64,\N,2023,\N
+3764,Wirtschaft,Bundesländern,23,\N,2023,\N
+3765,Wirtschaft,Industrie,17,\N,2023,\N
+3766,Wirtschaft,Inflation,15,\N,2023,\N
+3767,Wirtschaft,Dekarbonisierung,14,\N,2023,\N
+3768,Gesundheit,Gesundheit,25,\N,2023,\N
+3769,Gesundheit,Pflege,19,\N,2023,\N
+3770,Gesundheit,Mobilität,16,\N,2023,\N
+3771,Gesundheit,Verbraucherschutz,16,\N,2023,\N
+3772,Gesundheit,Leben,16,\N,2023,\N
+3773,Justiz,Bundeswehr,66,\N,2023,\N
+3774,Justiz,Bundesverfassungsgerichts,27,\N,2023,\N
+3775,Justiz,Gesetze,23,\N,2023,\N
+3776,Justiz,Justiz,20,\N,2023,\N
+3777,Justiz,Bundesländer,17,\N,2023,\N
+3778,Arbeit,Stellen,23,\N,2023,\N
+3779,Arbeit,Verfügung,23,\N,2023,\N
+3780,Arbeit,Kontrolle,22,\N,2023,\N
+3781,Arbeit,Fällen,20,\N,2023,\N
+3782,Arbeit,Genehmigung,19,\N,2023,\N
+3783,Außenpolitik,Ukraine,123,\N,2023,\N
+3784,Außenpolitik,Russland,31,\N,2023,\N
+3785,Außenpolitik,Türkei,22,\N,2023,\N
+3786,Außenpolitik,Israel,22,\N,2023,\N
+3787,Außenpolitik,Bundeskanzler,20,\N,2023,\N
+3788,Landwirtschaft,Energieversorgung,17,\N,2023,\N
+3789,Landwirtschaft,Landwirtschaft,12,\N,2023,\N
+3790,Landwirtschaft,Agrarpolitik,11,\N,2023,\N
+3791,Landwirtschaft,Industrieemissionen,10,\N,2023,\N
+3792,Landwirtschaft,Pflanzenschutzmitteln,10,\N,2023,\N
+3793,Verkehr und Digitalisierung,Verkehr,36,\N,2023,\N
+3794,Verkehr und Digitalisierung,Kraftfahrzeuge,21,\N,2023,\N
+3795,Verkehr und Digitalisierung,Bahn,19,\N,2023,\N
+3796,Verkehr und Digitalisierung,Cannabis,15,\N,2023,\N
+3797,Verkehr und Digitalisierung,Abschnitt,13,\N,2023,\N
+3798,Finanzen,Sondervermögen,21,\N,2023,\N
+3799,Finanzen,Finanzen,18,\N,2023,\N
+3800,Finanzen,Verpflichtungsermächtigungen,12,\N,2023,\N
+3801,Finanzen,Jahresbericht,10,\N,2023,\N
+3802,Finanzen,Geschäftsbereich,10,\N,2023,\N
+3803,Innenpolitik,Versicherungspflicht,13,\N,2023,\N
+3804,Innenpolitik,Asylrecht,9,\N,2023,\N
+3805,Innenpolitik,Wahlen,9,\N,2023,\N
+3806,Innenpolitik,Antisemitismus,7,\N,2023,\N
+3807,Innenpolitik,Beitragsrecht,7,\N,2023,\N
+3808,Umwelt,Klimaschutz,52,\N,2023,\N
+3809,Umwelt,Energien,24,\N,2023,\N
+3810,Umwelt,Energie,23,\N,2023,\N
+3811,Umwelt,Verbraucher,16,\N,2023,\N
+3812,Umwelt,Vereinten,12,\N,2023,\N
+3813,Familie,Heimat,30,\N,2023,\N
+3814,Familie,Kinder,19,\N,2023,\N
+3815,Familie,Aufenthalt,13,\N,2023,\N
+3816,Familie,Partnerschaft,12,\N,2023,\N
+3817,Familie,Kleinen,11,\N,2023,\N
+3818,Verteidigung,Streitkräfte,36,\N,2023,\N
+3819,Verteidigung,Soldaten,20,\N,2023,\N
+3820,Verteidigung,Aufklärung,19,\N,2023,\N
+3821,Verteidigung,Nationalen,17,\N,2023,\N
+3822,Verteidigung,Herbeirufung,14,\N,2023,\N
+3823,Bildung und Forschung,Bildung,40,\N,2023,\N
+3824,Bildung und Forschung,Digitales,29,\N,2023,\N
+3825,Bildung und Forschung,Wärmeplanung,23,\N,2023,\N
+3826,Bildung und Forschung,Wasserstoff,15,\N,2023,\N
+3827,Bildung und Forschung,Jugend,14,\N,2023,\N
