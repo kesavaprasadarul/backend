@@ -45,21 +45,26 @@ class AbstimmungService:
     def _build_filter_options(
         self,
         datum: DateRange | None = None,
+        dachzeile: list[str] | None = None,
     ) -> list:
         filters = []
         if datum:
             if datum.min:
-                filters.append(BTAbstimmung.abstimmung_datum >= datum.min)
+                filters.append(BTAbstimmung.abstimmung_date >= datum.min)
             if datum.max:
-                filters.append(BTAbstimmung.abstimmung_datum <= datum.max)
+                filters.append(BTAbstimmung.abstimmung_date <= datum.max)
+        if dachzeile:
+            filters.append(BTAbstimmung.dachzeile.in_(dachzeile))
         return filters
 
     def query_count(
         self,
         datum: DateRange | None = None,
+        dachzeile: list[str] | None = None,
     ) -> int:
         filters = self._build_filter_options(
             datum=datum,
+            dachzeile=dachzeile,
         )
 
         return self.abstimmung_crud.count(filters=filters)
@@ -69,9 +74,11 @@ class AbstimmungService:
         limit: int,
         skip: int = 0,
         datum: DateRange | None = None,
+        dachzeile: list[str] | None = None,
     ) -> list[BundestagAbstimmung]:
         filters = self._build_filter_options(
             datum=datum,
+            dachzeile=dachzeile,
         )
 
         results = self.abstimmung_crud.read_multi(filters=filters, skip=skip, limit=limit)
