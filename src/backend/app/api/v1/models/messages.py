@@ -52,6 +52,20 @@ class BundestagAbstimmungDrucksache(BaseModel):
         from_attributes = True
 
 
+class BundestagFraktionAbstimmung(BaseModel):
+    """Eine Abstimmung einer Fraktion."""
+
+    fraktion: str
+
+    ja: int
+    nein: int
+    enthalten: int
+    nicht_abgegeben: int
+
+    class Config:
+        from_attributes = True
+
+
 class BundestagAbstimmung(BaseModel):
     id: int
 
@@ -66,6 +80,8 @@ class BundestagAbstimmung(BaseModel):
     dachzeile: Optional[str]
 
     drucksachen: list[BundestagAbstimmungDrucksache]
+
+    fraktionen: list[BundestagFraktionAbstimmung]
 
     class Config:
         from_attributes = True
