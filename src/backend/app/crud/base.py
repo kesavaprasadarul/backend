@@ -6,6 +6,7 @@ from psycopg2 import IntegrityError
 from sqlalchemy import delete, select
 from sqlalchemy.exc import OperationalError
 from sqlalchemy.orm import Session
+from sqlalchemy.sql.expression import desc
 
 from backend.app.db.database import Base, SessionLocal
 
@@ -135,7 +136,7 @@ class CRUDBase(Generic[ModelType]):
             return CRUDBase.db.scalars(
                 select(self.model)
                 .filter(*filters)
-                .order_by(self.model.id)
+                .order_by(desc(self.model.id))
                 .offset(skip)
                 .limit(limit)
             ).all()
@@ -146,7 +147,7 @@ class CRUDBase(Generic[ModelType]):
             return CRUDBase.db.scalars(
                 select(self.model)
                 .filter(*filters)
-                .order_by(self.model.id)
+                .order_by(desc(self.model.id))
                 .offset(skip)
                 .limit(limit)
             ).all()

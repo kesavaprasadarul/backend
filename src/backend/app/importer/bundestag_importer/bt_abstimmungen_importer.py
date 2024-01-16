@@ -26,6 +26,7 @@ from backend.app.models.bundestag.abstimmung_model import (
     BTEinzelpersonAbstimmung,
     BTPerson,
     BTRede,
+    BTFraktionAbstimmung,
 )
 from typing import Any, Generic, Iterator, MutableMapping, Optional, TypeVar
 
@@ -74,6 +75,9 @@ class BTAbstimmungenImporter(
 
     def transform_model(self, data: BundestagAbstimmung) -> BTAbstimmung:
         bt_einzelabstimmungen = []
+
+        bt_fraktionen = {}
+
         for einzelabstimmung in data.individual_votes:
             person = BTPerson(
                 name=einzelabstimmung.name,
@@ -93,6 +97,26 @@ class BTAbstimmungenImporter(
                     person=person,
                 )
             )
+
+            if person.fraktion not in bt_fraktionen:
+                bt_fraktionen[person.fraktion] = BTFraktionAbstimmung(
+                    abstimmung_id=data.id,
+                    fraktion=person.fraktion,
+                    ja=0,
+                    nein=0,
+                    enthalten=0,
+                    nicht_abgegeben=0,
+                )
+
+            if einzelabstimmung.vote == Vote.JA:
+                bt_fraktionen[person.fraktion].ja += 1
+            elif einzelabstimmung.vote == Vote.NEIN:
+                bt_fraktionen[person.fraktion].nein += 1
+            elif einzelabstimmung.vote == Vote.ENTHALTEN:
+                bt_fraktionen[person.fraktion].enthalten += 1
+            elif einzelabstimmung.vote == Vote.NICHTABGEGEBEN:
+                bt_fraktionen[person.fraktion].nicht_abgegeben += 1
+
         bt_abstimmung_redner_dict = dict()
 
         for redner in data.redner:
@@ -147,6 +171,7 @@ class BTAbstimmungenImporter(
             individual_votes=bt_einzelabstimmungen,
             drucksachen=bt_abstimmung_drucksachen,
             redner=bt_abstimmung_redner,
+            fraktion_votes=list(bt_fraktionen.values()),
         )
 
         return bt_abstimmung
@@ -197,22 +222,24 @@ class BTAbstimmungenImporter(
             yield self.transform_model(bt_abstimmung)
 
 
-def import_bt_abstimmungen(date_start: datetime.date, date_end: datetime.date):
+def import_bt_abstimmungen(date_start: datetime.date, date_end: datetime.date, full: bool = False):
     _logger.info(f'Importing Abstimmungen from {date_start} to {date_end}.')
     importer = BTAbstimmungenImporter()
-
-    existing_abstimmungen = importer.crud.read_all()
-
-    existing_abstimmungen_ids = set(abstimmung.id for abstimmung in existing_abstimmungen)
-
     params = BundestagAbstimmungenPointerParameter(date_start=date_start, date_end=date_end)
 
-    importer.import_data(
-        params=params,
-        response_limit=1000,
-        upsert_batch_size=1,
-        existing_ids=existing_abstimmungen_ids,
-    )
+    if not full:
+        existing_abstimmungen = importer.crud.read_all()
+
+        existing_abstimmungen_ids = set(abstimmung.id for abstimmung in existing_abstimmungen)
+
+        importer.import_data(
+            params=params,
+            response_limit=1000,
+            upsert_batch_size=1,
+            existing_ids=existing_abstimmungen_ids,
+        )
+    else:
+        importer.import_data(params=params, response_limit=1000, upsert_batch_size=1)
     _logger.info(f'Imported Abstimmungen from {date_start} to {date_end}.')
 
 
@@ -221,5 +248,5 @@ if __name__ == '__main__':
     from datetime import date, timedelta
 
     import_bt_abstimmungen(
-        date_start=date(2023, 1, 1), date_end=(date.today() + timedelta(weeks=1))
+        date_start=date(2023, 1, 1), date_end=(date.today() + timedelta(weeks=1)), full=True
     )

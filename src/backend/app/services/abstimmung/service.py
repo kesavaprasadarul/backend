@@ -2,7 +2,11 @@ import logging
 from datetime import datetime
 from typing import Optional
 
-from backend.app.api.v1.models.messages import BundestagAbstimmung, BundestagAbstimmungDrucksache
+from backend.app.api.v1.models.messages import (
+    BundestagAbstimmung,
+    BundestagAbstimmungDrucksache,
+    BundestagFraktionAbstimmung,
+)
 from backend.app.api.v1.models.queries import DateRange, DatetimeRange
 from backend.app.crud.CRUDBundestag.crud_abstimmung import CRUDBundestagAbstimmung
 from backend.app.models.bundestag.abstimmung_model import BTAbstimmung
@@ -36,6 +40,16 @@ class AbstimmungService:
                         drucksache_name=drucksache.drucksache_name,
                     )
                     for drucksache in result.drucksachen
+                ],
+                fraktionen=[
+                    BundestagFraktionAbstimmung(
+                        fraktion=fraktion.fraktion,
+                        ja=fraktion.ja,
+                        nein=fraktion.nein,
+                        enthalten=fraktion.enthalten,
+                        nicht_abgegeben=fraktion.nicht_abgegeben,
+                    )
+                    for fraktion in result.fraktion_votes
                 ],
             )
             if result
@@ -98,6 +112,16 @@ class AbstimmungService:
                         drucksache_name=drucksache.drucksache_name,
                     )
                     for drucksache in r.drucksachen
+                ],
+                fraktionen=[
+                    BundestagFraktionAbstimmung(
+                        fraktion=fraktion.fraktion,
+                        ja=fraktion.ja,
+                        nein=fraktion.nein,
+                        enthalten=fraktion.enthalten,
+                        nicht_abgegeben=fraktion.nicht_abgegeben,
+                    )
+                    for fraktion in r.fraktion_votes
                 ],
             )
             for r in results
