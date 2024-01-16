@@ -35,12 +35,45 @@ class BTAbstimmung(Base, TimestampMixin, BTSchema):
         back_populates="abstimmung", cascade="merge, save-update, delete, delete-orphan"
     )
 
+    fraktion_votes: Mapped[list["BTFraktionAbstimmung"]] = relationship(
+        back_populates="abstimmung", cascade="merge, save-update, delete, delete-orphan"
+    )
+
     drucksachen: Mapped[list["BTAbstimmungDrucksache"]] = relationship(
         back_populates="abstimmung", cascade="merge, save-update, delete, delete-orphan"
     )
 
     redner: Mapped[list["BTAbstimmungRedner"]] = relationship(
         back_populates="abstimmung", cascade="merge, save-update, delete, delete-orphan"
+    )
+
+
+class BTFraktionAbstimmung(Base, TimestampMixin, BTSchema):
+    """Table attributes for Model/Relation/Table fraktion_abstimmung."""
+
+    __tablename__ = "fraktion_abstimmung"
+
+    id: Mapped[int] = mapped_column(
+        Sequence('fraktion_abstimmung_id_seq', schema='bt'), unique=True, nullable=False
+    )  # database id
+
+    abstimmung_id: Mapped[int] = mapped_column(
+        ForeignKey("bt.abstimmung.id"), nullable=False, primary_key=True
+    )
+
+    fraktion: Mapped[str] = mapped_column(nullable=False, primary_key=True)
+
+    ja: Mapped[int] = mapped_column(nullable=False)
+
+    nein: Mapped[int] = mapped_column(nullable=False)
+
+    enthalten: Mapped[int] = mapped_column(nullable=False)
+
+    nicht_abgegeben: Mapped[int] = mapped_column(nullable=False)
+
+    abstimmung: Mapped["BTAbstimmung"] = relationship(
+        "BTAbstimmung",
+        back_populates="fraktion_votes",
     )
 
 
