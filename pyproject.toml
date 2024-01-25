@@ -29,8 +29,8 @@ apscheduler = "^3.10.4"
 beautifulsoup4 = "^4.12.2"
 lxml = "^4.9.3"
 webvtt-py = "^0.4.6"
-pybind11 = "^2.11.1"
-bertopic = "^0.16.0"
+#pybind11 = "^2.11.1"
+#bertopic = "^0.16.0"
 
 
 [tool.poetry.group.dev.dependencies]
