@@ -9,9 +9,9 @@ class TopTopics(Base):
 
     __tablename__ = "top_topics"
 
-    month: Mapped[int] = mapped_column(primary_key=True, nullable=True)
-    year: Mapped[int] = mapped_column(primary_key=True, nullable=True)
-    election_period: Mapped[int] = mapped_column(primary_key=True, nullable=True)
+    month: Mapped[int] = mapped_column(primary_key=True)
+    year: Mapped[int] = mapped_column(primary_key=True)
+    election_period: Mapped[int] = mapped_column(primary_key=True)
     ressort: Mapped[str] = mapped_column(nullable=False)
     word: Mapped[str] = mapped_column(nullable=False)
     value: Mapped[str] = mapped_column(nullable=False)

@@ -121,9 +121,9 @@ def create_bundestag_top_topics(
             CRUD_TOP_TOPICS.create_or_update_multi(
                 [
                     TopTopics(
-                        month=month,
-                        year=year,
-                        election_period=election_period,
+                        month=month if month else 0,
+                        year=year if year else 0,
+                        election_period=election_period if election_period else 0,
                         ressort=key,
                         word=word_and_value[0],
                         value=word_and_value[1],
