@@ -125,10 +125,11 @@ def create_bundestag_top_topics(
                         year=year if year else 0,
                         election_period=election_period if election_period else 0,
                         ressort=key,
+                        index=index,
                         word=word_and_value[0],
                         value=word_and_value[1],
                     )
-                    for word_and_value in top_topics_by_ressort[key]
+                    for index, word_and_value in enumerate(top_topics_by_ressort[key])
                 ]
             )
 
