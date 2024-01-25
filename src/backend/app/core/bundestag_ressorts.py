@@ -12,7 +12,7 @@ class BUNDESTAG_RESSORT(StrEnum):
     AUSSENPOLITIK = "Außenpolitik"
     JUSTIZ = "Justiz"
     ARBEIT = "Arbeit"
-    VERTEIDIGUNG = "Verteidigung"
+    VERTEIDIGUNG = "Milität"
     LANDWIRTSCHAFT = "Landwirtschaft"
     FAMILIE = "Familie"
     GESUNDHEIT = "Gesundheit"
