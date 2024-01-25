@@ -12,7 +12,7 @@ class TopTopics(Base):
     month: Mapped[int] = mapped_column(primary_key=True)
     year: Mapped[int] = mapped_column(primary_key=True)
     election_period: Mapped[int] = mapped_column(primary_key=True)
-    ressort: Mapped[str] = mapped_column(nullable=False)
+    ressort: Mapped[str] = mapped_column(primary_key=True)
     index: Mapped[int] = mapped_column(primary_key=True)
     word: Mapped[str] = mapped_column(nullable=False)
     value: Mapped[str] = mapped_column(nullable=False)
