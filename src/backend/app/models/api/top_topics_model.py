@@ -8,10 +8,11 @@ class TopTopics(Base):
     """Table attributes for Model/Relation/Table top topics."""
 
     __tablename__ = "top_topics"
-    id: Mapped[int] = mapped_column(primary_key=True)  # database id
-    ressort: Mapped[str] = mapped_column(nullable=False)
+
+    month: Mapped[int] = mapped_column(primary_key=True)
+    year: Mapped[int] = mapped_column(primary_key=True)
+    election_period: Mapped[int] = mapped_column(primary_key=True)
+    ressort: Mapped[str] = mapped_column(primary_key=True)
+    index: Mapped[int] = mapped_column(primary_key=True)
     word: Mapped[str] = mapped_column(nullable=False)
     value: Mapped[str] = mapped_column(nullable=False)
-    month: Mapped[int] = mapped_column(nullable=True)
-    year: Mapped[int] = mapped_column(nullable=True)
-    election_period: Mapped[int] = mapped_column(nullable=True)

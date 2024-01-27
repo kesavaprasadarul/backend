@@ -152,6 +152,26 @@ class CRUDBase(Generic[ModelType]):
                 .limit(limit)
             ).all()
 
+    def read_multi_without_order_by(self, filters: list = [], skip: int = 0, limit: int = 100):
+        """Read multi objects from database."""
+        try:
+            return CRUDBase.db.scalars(
+                select(self.model)
+                .filter(*filters)
+                .offset(skip)
+                .limit(limit)
+            ).all()
+        except OperationalError as error:
+            # if database closed unexpectedly, OperationalError occurs
+            _logger.error("%s occured. Session will be rolled back.", error)
+            CRUDBase.db.rollback()
+            return CRUDBase.db.scalars(
+                select(self.model)
+                .filter(*filters)
+                .offset(skip)
+                .limit(limit)
+            ).all()
+
     def count(self, filters: list = []) -> int:
         """Count objects from database."""
         try:

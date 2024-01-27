@@ -29,11 +29,10 @@ class Beschlussfassung(BaseModel):
 class BundestagTopTopic(BaseModel):
     """Eine Top Topoic."""
 
-    id: int
-
     ressort: str
     word: str
     value: int
+    index: int
     month: Optional[int]
     year: Optional[int]
     election_period: Optional[int]

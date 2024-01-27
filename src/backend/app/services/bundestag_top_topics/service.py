@@ -32,14 +32,14 @@ class BundestagTopTopicsService:
         if month and year and not election_period:
             filters.append(TopTopics.month == month)
             filters.append(TopTopics.year == year)
-            filters.append(TopTopics.election_period == None)
+            filters.append(TopTopics.election_period == 0)
         if year and not month and not election_period:
-            filters.append(TopTopics.month == None)
+            filters.append(TopTopics.month == 0)
             filters.append(TopTopics.year == year)
-            filters.append(TopTopics.election_period == None)
+            filters.append(TopTopics.election_period == 0)
         if election_period and not year and not month:
-            filters.append(TopTopics.month == None)
-            filters.append(TopTopics.year == None)
+            filters.append(TopTopics.month == 0)
+            filters.append(TopTopics.year == 0)
             filters.append(TopTopics.election_period == election_period)
 
         return filters
@@ -56,5 +56,5 @@ class BundestagTopTopicsService:
             election_period=election_period,
         )
 
-        results = self.crud.read_multi(filters=filters)
+        results = self.crud.read_multi_without_order_by(filters=filters)
         return [BundestagTopTopic.model_validate(r) for r in results]

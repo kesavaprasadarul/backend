@@ -1,0 +1,3569 @@
+Arbeit,Kurzarbeit,5,6,2020,0,0
+Arbeit,Lohnersatzleistungen,4,6,2020,0,1
+Arbeit,Arbeitgeber,3,6,2020,0,2
+Arbeit,Zeit,3,6,2020,0,3
+Arbeit,Entsendung,3,6,2020,0,4
+Entwicklung,Aufstockung,7,6,2020,0,0
+Verteidigung,Bundeswehr,7,11,2023,0,0
+Bildung und Forschung,Wärmeplanung,5,11,2023,0,0
+Bildung und Forschung,Institut,4,11,2023,0,1
+Bildung und Forschung,Arbeitsbericht,3,11,2023,0,2
+Bildung und Forschung,Praxis,3,11,2023,0,3
+Bildung und Forschung,Milliarden,3,11,2023,0,4
+Finanzen,Finanzen,4,11,2023,0,0
+Finanzen,Einzelplan,3,11,2023,0,1
+Finanzen,Verpflichtungsermächtigungen,2,11,2023,0,2
+Finanzen,Sondervermögen,2,11,2023,0,3
+Wohnungsbau,Wärmenetze,8,11,2023,0,0
+Wohnungsbau,Jüdisches,5,11,2023,0,1
+Landwirtschaft,Tierarztvorbehalt,4,11,2023,0,0
+Landwirtschaft,Energieversorgung,4,11,2023,0,1
+Landwirtschaft,Brennstoffemissionshandel,3,11,2023,0,2
+Landwirtschaft,Haftpflichtversicherung,3,11,2023,0,3
+Landwirtschaft,Fischereifonds,2,11,2023,0,4
+Umwelt,Klimaschutz,12,11,2023,0,0
+Umwelt,Chemikalien,3,11,2023,0,1
+Umwelt,Energien,3,11,2023,0,2
+Umwelt,Grenzwerte,2,11,2023,0,3
+Gesundheit,Leben,6,11,2023,0,0
+Gesundheit,Gesundheit,5,11,2023,0,1
+Innenpolitik,Landesgrenzen,4,11,2023,0,0
+Innenpolitik,Antisemitismus,3,11,2023,0,1
+Innenpolitik,Versicherungspflicht,3,11,2023,0,2
+Innenpolitik,Asylrecht,3,11,2023,0,3
+Innenpolitik,Schuldenbremse,2,11,2023,0,4
+Justiz,Gesetze,7,11,2023,0,0
+Justiz,Bundesverfassungsgerichts,6,11,2023,0,1
+Justiz,Gerichte,5,11,2023,0,2
+Justiz,Betreuungsvereine,4,11,2023,0,3
+Justiz,Verfassungsbeschwerde,3,11,2023,0,4
+Außenpolitik,Ukraine,43,1,2023,0,0
+Außenpolitik,Türkei,11,1,2023,0,1
+Außenpolitik,Russland,7,1,2023,0,2
+Außenpolitik,Iran,6,1,2023,0,3
+Außenpolitik,Souveränität,6,1,2023,0,4
+Bildung und Forschung,Fachkräften,5,1,2023,0,0
+Bildung und Forschung,Patientenorganisationen,2,1,2023,0,1
+Bildung und Forschung,Weiterbildung,2,1,2023,0,2
+Bildung und Forschung,Blutproben,2,1,2023,0,3
+Bildung und Forschung,Medikamenten,2,1,2023,0,4
+Familie,Partnerschaft,5,1,2023,0,0
+Familie,Partner,3,1,2023,0,1
+Familie,Kreis,3,1,2023,0,2
+Familie,Heimat,2,1,2023,0,3
+Familie,Kinder,2,1,2023,0,4
+Entwicklung,Stufe,11,1,2023,0,0
+Entwicklung,Handlungen,8,1,2023,0,1
+Entwicklung,Unabhängigkeit,6,1,2023,0,2
+Wirtschaft,Wirtschaft,15,11,2023,0,0
+Wirtschaft,Vereine,6,11,2023,0,1
+Wirtschaft,Dekarbonisierung,5,11,2023,0,2
+Wirtschaft,Unternehmensinvestitionen,4,11,2023,0,3
+Wirtschaft,Verwaltung,3,11,2023,0,4
+Außenpolitik,Ukraine,10,11,2023,0,0
+Außenpolitik,Israel,6,11,2023,0,1
+Außenpolitik,Hamas,4,11,2023,0,2
+Außenpolitik,Menschenrechte,4,11,2023,0,3
+Außenpolitik,Syrien,3,11,2023,0,4
+Arbeit,Zurückweisungen,5,11,2023,0,0
+Arbeit,Betreuer,5,11,2023,0,1
+Arbeit,Vereinbarten,4,11,2023,0,2
+Arbeit,Summe,3,11,2023,0,3
+Arbeit,Verpflichtungen,3,11,2023,0,4
+Verkehr und Digitalisierung,Kraftfahrzeuge,7,11,2023,0,0
+Verkehr und Digitalisierung,Strom,4,11,2023,0,1
+Verkehr und Digitalisierung,Verkehr,4,11,2023,0,2
+Verkehr und Digitalisierung,Kraftfahrzeuganhänger,4,11,2023,0,3
+Familie,Eltern,3,11,2023,0,0
+Familie,Gruppen,3,11,2023,0,1
+Familie,Kindern,2,11,2023,0,2
+Familie,Samidoun,2,11,2023,0,3
+Familie,Kinderanzahl,2,11,2023,0,4
+Verteidigung,Italien,4,11,2023,0,1
+Verteidigung,Soldaten,3,11,2023,0,2
+Verteidigung,Hochseeschlepper,3,11,2023,0,3
+Verteidigung,Afghaninnen,3,11,2023,0,4
+Finanzen,Haushaltslage,2,11,2023,0,4
+Wohnungsbau,Büros,4,11,2023,0,2
+Wohnungsbau,Rentenversicherung,4,11,2023,0,3
+Wohnungsbau,Gebäude,4,11,2023,0,4
+Umwelt,Tieren,2,11,2023,0,4
+Gesundheit,Leistungsfähigkeit,3,11,2023,0,2
+Gesundheit,Humanarzneimittel,2,11,2023,0,3
+Gesundheit,Mitteilungspflicht,2,11,2023,0,4
+Entwicklung,Regelgröße,5,1,2023,0,3
+Entwicklung,Digitalisierung,5,1,2023,0,4
+Arbeit,Unterstützungsmaßnahme,11,1,2023,0,0
+Arbeit,Bundesagentur,4,1,2023,0,1
+Arbeit,Mitarbeiter,4,1,2023,0,2
+Arbeit,Ausstellung,4,1,2023,0,3
+Arbeit,Sitzung,4,1,2023,0,4
+Innenpolitik,Nationalversammlung,3,1,2023,0,0
+Innenpolitik,Sozialleistungen,2,1,2023,0,1
+Innenpolitik,Ungarn,2,1,2023,0,2
+Innenpolitik,Christenverfolgung,1,1,2023,0,3
+Innenpolitik,Proporzes,1,1,2023,0,4
+Wohnungsbau,Flüchtlinge,5,1,2023,0,0
+Wohnungsbau,Resilienzfazilität,3,1,2023,0,1
+Wohnungsbau,Wahlrecht,2,1,2023,0,2
+Wohnungsbau,Arbeitslosigkeitsrisiken,2,1,2023,0,3
+Wohnungsbau,Netzausbaubeschleunigungsgesetz,2,1,2023,0,4
+Verkehr und Digitalisierung,Planfeststellungsverfahren,4,1,2023,0,0
+Verkehr und Digitalisierung,Binnenschifffahrt,4,1,2023,0,1
+Verkehr und Digitalisierung,Import,3,1,2023,0,2
+Verkehr und Digitalisierung,Cannabis,3,1,2023,0,3
+Verkehr und Digitalisierung,Handel,3,1,2023,0,4
+Wirtschaft,Belarus,10,1,2023,0,0
+Wirtschaft,Föderation,6,1,2023,0,1
+Wirtschaft,Industrie,5,1,2023,0,2
+Wirtschaft,Wirtschaft,4,1,2023,0,3
+Wirtschaft,Griechenland,4,1,2023,0,4
+Landwirtschaft,Gebiete,6,1,2023,0,0
+Landwirtschaft,Genusszwecken,3,1,2023,0,1
+Landwirtschaft,Energiekrise,2,1,2023,0,2
+Landwirtschaft,Herkunftsländern,2,1,2023,0,3
+Landwirtschaft,EUAM,2,1,2023,0,4
+Justiz,Staatsangehörige,5,1,2023,0,0
+Justiz,Rechtsstaatlichkeit,5,1,2023,0,1
+Justiz,Beschleunigungsgebots,4,1,2023,0,2
+Justiz,Bundesverwaltungsgerichts,4,1,2023,0,3
+Justiz,Rechnungshofs,4,1,2023,0,4
+Finanzen,Zuständigkeiten,2,1,2023,0,0
+Finanzen,Generaldirektion,2,1,2023,0,1
+Finanzen,Finanzen,2,1,2023,0,2
+Finanzen,Geld,2,1,2023,0,3
+Finanzen,Verbindlichkeiten,1,1,2023,0,4
+Gesundheit,Soziales,6,1,2023,0,0
+Gesundheit,Patienten,3,1,2023,0,1
+Gesundheit,Krankenkassen,3,1,2023,0,2
+Gesundheit,Integrität,3,1,2023,0,3
+Gesundheit,Verletzung,2,1,2023,0,4
+Umwelt,Marder,3,1,2023,0,0
+Umwelt,Klimaschutz,2,1,2023,0,1
+Umwelt,Präklusion,2,1,2023,0,2
+Umwelt,Einwegkunststofffonds,2,1,2023,0,3
+Umwelt,Ressourcen,2,1,2023,0,4
+Verteidigung,Bundeswehr,11,1,2023,0,0
+Verteidigung,Streitkräfte,9,1,2023,0,1
+Verteidigung,Mali,4,1,2023,0,2
+Verteidigung,Russischen,4,1,2023,0,3
+Verteidigung,Großbritannien,4,1,2023,0,4
+Entwicklung,Analyse,3,2,2023,0,0
+Entwicklung,Projekte,3,2,2023,0,1
+Entwicklung,Zukunft,3,2,2023,0,2
+Entwicklung,Beschaffungsvorhaben,3,2,2023,0,3
+Entwicklung,Konzentration,2,2,2023,0,4
+Wohnungsbau,Exportkredite,3,2,2023,0,0
+Wohnungsbau,Familiennachzug,3,2,2023,0,1
+Wohnungsbau,Geflüchtete,3,2,2023,0,2
+Wohnungsbau,Berlin,2,2,2023,0,3
+Wohnungsbau,Krankenhäusern,2,2,2023,0,4
+Wirtschaft,Wirtschaft,3,2,2023,0,0
+Wirtschaft,Inflation,2,2,2023,0,1
+Wirtschaft,Welt,2,2,2023,0,2
+Wirtschaft,Energiepreise,1,2,2023,0,3
+Wirtschaft,Informationstechnik,1,2,2023,0,4
+Verteidigung,Bundeswehr,3,2,2023,0,0
+Verteidigung,Königreich,2,2,2023,0,1
+Verteidigung,Thailand,2,2,2023,0,2
+Verteidigung,Kampfjets,2,2,2023,0,3
+Verteidigung,Êzîdinnen,2,2,2023,0,4
+Landwirtschaft,Landwirtschaft,4,2,2023,0,0
+Landwirtschaft,Streumunition,3,2,2023,0,1
+Landwirtschaft,Niederlanden,3,2,2023,0,2
+Landwirtschaft,Pflanzenschutzmitteln,3,2,2023,0,3
+Landwirtschaft,Lebensmitteln,2,2,2023,0,4
+Bildung und Forschung,Krankenhausstandorte,2,2,2023,0,0
+Bildung und Forschung,Entbürokratisierung,1,2,2023,0,1
+Bildung und Forschung,Datenkommunikation,1,2,2023,0,2
+Bildung und Forschung,Lernwelten,1,2,2023,0,3
+Bildung und Forschung,Weiterbildung,1,2,2023,0,4
+Umwelt,Verbraucher,3,2,2023,0,0
+Umwelt,Klimaschutz,2,2,2023,0,1
+Umwelt,Präklusion,1,2,2023,0,2
+Umwelt,Klimaneutralität,1,2,2023,0,3
+Umwelt,Abfallwirtschaft,1,2,2023,0,4
+Verkehr und Digitalisierung,Planfeststellungsverfahren,2,2,2023,0,0
+Verkehr und Digitalisierung,Binnenschifffahrt,2,2,2023,0,1
+Verkehr und Digitalisierung,Landesgrenze,2,2,2023,0,2
+Verkehr und Digitalisierung,Ladesäulenverordnung,1,2,2023,0,3
+Verkehr und Digitalisierung,Terminals,1,2,2023,0,4
+Justiz,Rechtsrahmen,2,2,2023,0,0
+Justiz,Beschleunigungsgebots,2,2,2023,0,1
+Justiz,Bundesverwaltungsgerichts,2,2,2023,0,2
+Justiz,Verfahrensdauer,1,2,2023,0,3
+Justiz,Streitbeilegung,1,2,2023,0,4
+Arbeit,Termin,2,2,2023,0,0
+Arbeit,Engagements,2,2,2023,0,1
+Arbeit,Gedenken,2,2,2023,0,2
+Arbeit,Schriftlichen,2,2,2023,0,3
+Arbeit,Schreiben,2,2,2023,0,4
+Finanzen,Mitgliederversammlungen,5,2,2023,0,0
+Finanzen,Sondervermögen,2,2,2023,0,1
+Finanzen,Etat,2,2,2023,0,2
+Finanzen,Zuständigkeiten,1,2,2023,0,3
+Finanzen,Gesetzliche,1,2,2023,0,4
+Außenpolitik,Ukraine,11,2,2023,0,0
+Außenpolitik,Europas,4,2,2023,0,1
+Außenpolitik,Êzîden,3,2,2023,0,2
+Außenpolitik,Deutschlandtickets,2,2,2023,0,3
+Außenpolitik,Legislaturperiode,2,2,2023,0,4
+Familie,Partnerschaft,3,2,2023,0,0
+Familie,Wohnung,1,2,2023,0,1
+Familie,First,1,2,2023,0,2
+Familie,Bischof,1,2,2023,0,3
+Familie,Ronaldo,1,2,2023,0,4
+Gesundheit,Gesundheit,3,2,2023,0,0
+Gesundheit,Ernährung,3,2,2023,0,1
+Gesundheit,Organspende,2,2,2023,0,2
+Gesundheit,Mobilität,1,2,2023,0,3
+Gesundheit,Wohlstand,1,2,2023,0,4
+Innenpolitik,Rechtsextremismus,2,2,2023,0,0
+Innenpolitik,Ganztagsfinanzierungsgesetz,1,2,2023,0,1
+Innenpolitik,Ganztagsfinanzhilfegesetz,1,2,2023,0,2
+Innenpolitik,Asylpolitik,1,2,2023,0,3
+Innenpolitik,Schutzquote,1,2,2023,0,4
+Bildung und Forschung,Jugend,7,3,2023,0,0
+Bildung und Forschung,Bildung,6,3,2023,0,1
+Bildung und Forschung,Patientenorganisationen,4,3,2023,0,2
+Bildung und Forschung,Pränataltests,3,3,2023,0,3
+Bildung und Forschung,Meldungen,3,3,2023,0,4
+Wirtschaft,Wettbewerbsfähigkeit,4,3,2023,0,0
+Wirtschaft,Verwaltung,3,3,2023,0,1
+Wirtschaft,Industrie,3,3,2023,0,2
+Wirtschaft,Wirtschaft,3,3,2023,0,3
+Wirtschaft,China,3,3,2023,0,4
+Außenpolitik,Deutschlandtickets,8,3,2023,0,0
+Außenpolitik,Ukraine,8,3,2023,0,1
+Außenpolitik,Kernkraftwerke,5,3,2023,0,2
+Außenpolitik,Mandatsobergrenze,5,3,2023,0,3
+Außenpolitik,Sanktionen,4,3,2023,0,4
+Arbeit,Aufgabenwahrnehmung,4,3,2023,0,0
+Arbeit,Beschäftigung,4,3,2023,0,1
+Arbeit,Sicherheitsüberprüfung,4,3,2023,0,2
+Arbeit,Verstöße,3,3,2023,0,3
+Arbeit,Kampf,3,3,2023,0,4
+Entwicklung,Neuausrichtung,5,3,2023,0,0
+Entwicklung,Regelgröße,5,3,2023,0,1
+Entwicklung,Unterbringung,4,3,2023,0,2
+Entwicklung,Nutzer,4,3,2023,0,3
+Entwicklung,Verhältnis,4,3,2023,0,4
+Verkehr und Digitalisierung,Personennahverkehr,5,3,2023,0,0
+Verkehr und Digitalisierung,Regionalisierungsmittel,4,3,2023,0,1
+Verkehr und Digitalisierung,Stationsentgelte,4,3,2023,0,2
+Verkehr und Digitalisierung,Fahrgeldeinnahmen,4,3,2023,0,3
+Verkehr und Digitalisierung,Regionalisierungsgesetz,4,3,2023,0,4
+Wohnungsbau,Zusatzausgaben,5,3,2023,0,0
+Wohnungsbau,London,2,3,2023,0,1
+Wohnungsbau,Planungssicherheit,2,3,2023,0,2
+Wohnungsbau,Nord,2,3,2023,0,3
+Wohnungsbau,Bundesmittel,2,3,2023,0,4
+Umwelt,Energien,4,3,2023,0,0
+Umwelt,Umweltverträglichkeitsprüfung,3,3,2023,0,1
+Umwelt,Klimaschutz,3,3,2023,0,2
+Umwelt,Insekten,3,3,2023,0,3
+Umwelt,Isar,2,3,2023,0,4
+Landwirtschaft,Pflanzenschutzmitteln,3,3,2023,0,0
+Landwirtschaft,Emsland,2,3,2023,0,1
+Landwirtschaft,Bestäuber,2,3,2023,0,2
+Landwirtschaft,Ernährungssicherheit,2,3,2023,0,3
+Landwirtschaft,Brennstoffemissionshandel,2,3,2023,0,4
+Familie,Kinder,4,3,2023,0,0
+Familie,Partnerschaft,2,3,2023,0,1
+Familie,Zustimmungsbedürftige,2,3,2023,0,2
+Familie,Kindern,2,3,2023,0,3
+Familie,Erwachsene,2,3,2023,0,4
+Verteidigung,Streitkräfte,5,3,2023,0,0
+Verteidigung,Bundeswehr,5,3,2023,0,1
+Verteidigung,Weltraum,2,3,2023,0,2
+Verteidigung,Südsudan,2,3,2023,0,3
+Verteidigung,Zivilpersonen,2,3,2023,0,4
+Finanzen,Sondervermögen,4,3,2023,0,0
+Finanzen,Ertragsteuerinformationen,3,3,2023,0,1
+Finanzen,Haushalt,2,3,2023,0,2
+Finanzen,Haushaltsplanung,2,3,2023,0,3
+Finanzen,Risikoprofil,2,3,2023,0,4
+Justiz,Verurteilung,3,3,2023,0,0
+Justiz,Patientenakte,3,3,2023,0,1
+Justiz,Patientenberatung,3,3,2023,0,2
+Justiz,Staatsanwaltschaft,2,3,2023,0,3
+Justiz,Strafprozessordnung,2,3,2023,0,4
+Gesundheit,Krankenkassen,6,3,2023,0,0
+Gesundheit,Mobilität,4,3,2023,0,1
+Gesundheit,Pflege,3,3,2023,0,2
+Gesundheit,Leben,3,3,2023,0,3
+Gesundheit,Prävention,3,3,2023,0,4
+Innenpolitik,Wahlen,3,3,2023,0,0
+Innenpolitik,Extremismus,2,3,2023,0,1
+Innenpolitik,Islamismus,2,3,2023,0,2
+Innenpolitik,Versicherungspflicht,2,3,2023,0,3
+Innenpolitik,Wahlkampfauftritte,1,3,2023,0,4
+Arbeit,Vorschläge,5,4,2023,0,0
+Arbeit,Beschäftigung,4,4,2023,0,1
+Arbeit,Rückbaugenehmigung,3,4,2023,0,2
+Arbeit,Hilfe,3,4,2023,0,3
+Arbeit,Sicherheitsinterviews,3,4,2023,0,4
+Außenpolitik,Ukraine,6,4,2023,0,0
+Außenpolitik,Kernkraftwerke,5,4,2023,0,1
+Außenpolitik,Drittstaaten,5,4,2023,0,2
+Außenpolitik,Mandatsobergrenze,4,4,2023,0,3
+Außenpolitik,Auswärtigen,4,4,2023,0,4
+Verkehr und Digitalisierung,Verkehr,11,4,2023,0,0
+Verkehr und Digitalisierung,Bahn,6,4,2023,0,1
+Verkehr und Digitalisierung,Cannabis,5,4,2023,0,2
+Verkehr und Digitalisierung,Bundesverkehrsministerium,4,4,2023,0,3
+Verkehr und Digitalisierung,Evakuierungen,3,4,2023,0,4
+Entwicklung,Digitalisierung,9,4,2023,0,0
+Entwicklung,Ausschreibung,5,4,2023,0,1
+Entwicklung,Integration,4,4,2023,0,2
+Entwicklung,Vergabe,4,4,2023,0,3
+Entwicklung,Zuge,4,4,2023,0,4
+Umwelt,Verbraucher,4,4,2023,0,0
+Umwelt,Isar,2,4,2023,0,1
+Umwelt,Betroffenheit,2,4,2023,0,2
+Umwelt,Mensch,2,4,2023,0,3
+Umwelt,Tier,2,4,2023,0,4
+Landwirtschaft,Agrarpolitik,3,4,2023,0,0
+Landwirtschaft,Emsland,2,4,2023,0,1
+Landwirtschaft,Fischerei,2,4,2023,0,2
+Landwirtschaft,Durchführungsverordnung,2,4,2023,0,3
+Landwirtschaft,Bejagung,2,4,2023,0,4
+Wirtschaft,Informationstechnik,4,4,2023,0,0
+Wirtschaft,Energiewende,3,4,2023,0,1
+Wirtschaft,Mehrheitsbeteiligungen,3,4,2023,0,2
+Wirtschaft,Rechtsformen,3,4,2023,0,3
+Wirtschaft,Neckarwestheim,2,4,2023,0,4
+Wohnungsbau,Zusatzausgaben,4,4,2023,0,0
+Wohnungsbau,Pflegeversicherung,3,4,2023,0,1
+Wohnungsbau,Hamburger,3,4,2023,0,2
+Wohnungsbau,Hamburg,3,4,2023,0,3
+Wohnungsbau,Mindereinnahmen,3,4,2023,0,4
+Bildung und Forschung,Digitales,12,4,2023,0,0
+Bildung und Forschung,Materialerhaltung,3,4,2023,0,1
+Bildung und Forschung,Beschleunigungskommission,3,4,2023,0,2
+Bildung und Forschung,Weiterbildung,2,4,2023,0,3
+Bildung und Forschung,Weiterbildungsförderung,2,4,2023,0,4
+Innenpolitik,Arbeitsmarktpolitik,1,4,2023,0,0
+Innenpolitik,Asylpolitik,1,4,2023,0,1
+Innenpolitik,Beitragsrecht,1,4,2023,0,2
+Innenpolitik,Populisten,1,4,2023,0,3
+Innenpolitik,Regierungspressekonferenz,1,4,2023,0,4
+Justiz,Verbandsklagen,4,4,2023,0,0
+Justiz,Justiz,3,4,2023,0,1
+Justiz,Staatsangehöriger,3,4,2023,0,2
+Justiz,Roma,3,4,2023,0,3
+Justiz,Bundesverfassungsgerichts,2,4,2023,0,4
+Verteidigung,Streitkräfte,6,4,2023,0,0
+Verteidigung,Bundeswehr,4,4,2023,0,1
+Verteidigung,Teheran,4,4,2023,0,2
+Verteidigung,Afghanistan,3,4,2023,0,3
+Verteidigung,Islamabad,3,4,2023,0,4
+Familie,Kinder,4,4,2023,0,0
+Familie,Aufenthalt,3,4,2023,0,1
+Familie,Aufenthaltserlaubnis,2,4,2023,0,2
+Familie,Familie,2,4,2023,0,3
+Familie,Angehörige,2,4,2023,0,4
+Finanzen,Bekanntmachungen,4,4,2023,0,0
+Finanzen,Finanzen,3,4,2023,0,1
+Finanzen,Einkauf,2,4,2023,0,2
+Finanzen,Jahresende,2,4,2023,0,3
+Finanzen,Haushaltsplanung,1,4,2023,0,4
+Gesundheit,Pflege,4,4,2023,0,0
+Gesundheit,Gesundheit,3,4,2023,0,1
+Gesundheit,Pflegebedürftiger,2,4,2023,0,2
+Gesundheit,Pflegepersonen,2,4,2023,0,3
+Gesundheit,Ausgewogene,2,4,2023,0,4
+Bildung und Forschung,Digitales,11,5,2023,0,0
+Bildung und Forschung,Entwicklungszusammenarbeit,4,5,2023,0,1
+Bildung und Forschung,Wissenschaft,3,5,2023,0,2
+Bildung und Forschung,Rede,2,5,2023,0,3
+Bildung und Forschung,Abteilungen,2,5,2023,0,4
+Entwicklung,Beitragssatzes,6,5,2023,0,0
+Entwicklung,Transparenz,6,5,2023,0,1
+Entwicklung,Digitalisierung,6,5,2023,0,2
+Entwicklung,Stabilisierung,4,5,2023,0,3
+Entwicklung,Novellierung,4,5,2023,0,4
+Arbeit,Arbeitsbedingungen,5,5,2023,0,0
+Arbeit,Auftrag,4,5,2023,0,1
+Arbeit,Zuschläge,3,5,2023,0,2
+Arbeit,Äußerungen,3,5,2023,0,3
+Arbeit,Unterstützungsaufgaben,2,5,2023,0,4
+Justiz,Bundesverfassungsgerichts,4,5,2023,0,0
+Justiz,Justiz,4,5,2023,0,1
+Justiz,Bundesverfassungsgerichtsentscheidung,3,5,2023,0,2
+Justiz,Zeugen,3,5,2023,0,3
+Justiz,Straftaten,2,5,2023,0,4
+Verkehr und Digitalisierung,Verkehr,7,5,2023,0,0
+Verkehr und Digitalisierung,Bahn,4,5,2023,0,1
+Verkehr und Digitalisierung,Schiene,4,5,2023,0,2
+Verkehr und Digitalisierung,Arzneimitteln,3,5,2023,0,3
+Verkehr und Digitalisierung,Anhang,3,5,2023,0,4
+Wohnungsbau,Pflegeversicherung,10,5,2023,0,0
+Wohnungsbau,Zusatzausgaben,5,5,2023,0,1
+Wohnungsbau,Rentenversicherung,4,5,2023,0,2
+Wohnungsbau,Pflegegelds,3,5,2023,0,3
+Wohnungsbau,Pflegesachleistungen,3,5,2023,0,4
+Wirtschaft,Wirtschaft,13,5,2023,0,0
+Wirtschaft,Vertreter,4,5,2023,0,1
+Wirtschaft,Gewinnverlagerung,3,5,2023,0,2
+Wirtschaft,Sachsen,3,5,2023,0,3
+Wirtschaft,Akteuren,2,5,2023,0,4
+Gesundheit,Pflege,8,5,2023,0,0
+Gesundheit,Verbraucherschutz,8,5,2023,0,1
+Gesundheit,Pflegebedürftiger,7,5,2023,0,2
+Gesundheit,Pflegepersonen,4,5,2023,0,3
+Gesundheit,Arzneimittel,3,5,2023,0,4
+Finanzen,Finanzsituation,3,5,2023,0,0
+Finanzen,Abschläge,3,5,2023,0,1
+Finanzen,Ertragsteuerinformationen,3,5,2023,0,2
+Finanzen,Haushaltsmittel,2,5,2023,0,3
+Finanzen,Finanzen,2,5,2023,0,4
+Familie,Heimat,4,5,2023,0,0
+Familie,Aufenthalt,3,5,2023,0,1
+Familie,Pflegeperson,3,5,2023,0,2
+Familie,Kinderlose,3,5,2023,0,3
+Familie,Eltern,3,5,2023,0,4
+Innenpolitik,Beitragsrecht,3,5,2023,0,0
+Innenpolitik,Wahlen,3,5,2023,0,1
+Innenpolitik,Euratom,2,5,2023,0,2
+Innenpolitik,Versicherungspflicht,2,5,2023,0,3
+Innenpolitik,Hinweisgeberschutzgesetz,2,5,2023,0,4
+Verteidigung,Bundeswehr,9,5,2023,0,0
+Verteidigung,Streitkräfte,5,5,2023,0,1
+Verteidigung,Afghanistan,4,5,2023,0,2
+Verteidigung,Munition,3,5,2023,0,3
+Verteidigung,Mali,2,5,2023,0,4
+Umwelt,Klimaschutz,12,5,2023,0,0
+Umwelt,Energien,4,5,2023,0,1
+Umwelt,Energie,3,5,2023,0,2
+Umwelt,Energieverbrauch,2,5,2023,0,3
+Umwelt,Lieferketten,2,5,2023,0,4
+Landwirtschaft,Kraftstoffe,2,5,2023,0,0
+Landwirtschaft,Supermarktketten,2,5,2023,0,1
+Landwirtschaft,Industrieemissionen,2,5,2023,0,2
+Landwirtschaft,Lebensmittel,2,5,2023,0,3
+Landwirtschaft,Polargewässern,1,5,2023,0,4
+Außenpolitik,Staatssekretär,6,5,2023,0,0
+Außenpolitik,Mandatsobergrenze,5,5,2023,0,1
+Außenpolitik,Ukraine,3,5,2023,0,2
+Außenpolitik,Polen,3,5,2023,0,3
+Außenpolitik,Legislaturperiode,3,5,2023,0,4
+Entwicklung,Karte,6,6,2023,0,0
+Entwicklung,Chancenkarte,6,6,2023,0,1
+Entwicklung,Ausbildung,5,6,2023,0,2
+Entwicklung,Mindestgehaltsschwelle,4,6,2023,0,3
+Entwicklung,Inhaber,4,6,2023,0,4
+Wohnungsbau,Wiederaufbau,5,6,2023,0,0
+Wohnungsbau,Zusatzausgaben,4,6,2023,0,1
+Wohnungsbau,Wärmewende,4,6,2023,0,2
+Wohnungsbau,Zuwanderung,3,6,2023,0,3
+Wohnungsbau,Wärmeerzeugung,3,6,2023,0,4
+Bildung und Forschung,Bildung,14,6,2023,0,0
+Bildung und Forschung,Wasserstoff,8,6,2023,0,1
+Bildung und Forschung,Entwicklungszusammenarbeit,5,6,2023,0,2
+Bildung und Forschung,Weiterbildung,4,6,2023,0,3
+Bildung und Forschung,Weiterbildungsförderung,4,6,2023,0,4
+Justiz,Bundespolizei,5,6,2023,0,0
+Justiz,Gesetze,4,6,2023,0,1
+Justiz,Bundesministerien,4,6,2023,0,2
+Justiz,Ermittlungen,4,6,2023,0,3
+Justiz,Verbandsklagen,4,6,2023,0,4
+Außenpolitik,Ukraine,9,6,2023,0,0
+Außenpolitik,Russland,6,6,2023,0,1
+Außenpolitik,Drittstaaten,5,6,2023,0,2
+Außenpolitik,Fachkräfteeinwanderung,5,6,2023,0,3
+Außenpolitik,Mandatsobergrenze,4,6,2023,0,4
+Finanzen,Haushalt,3,6,2023,0,0
+Finanzen,Dividenden,2,6,2023,0,1
+Finanzen,Beitragsbemessungsgrenze,2,6,2023,0,2
+Finanzen,Finanzen,2,6,2023,0,3
+Finanzen,Verpflichtungsermächtigungen,2,6,2023,0,4
+Verkehr und Digitalisierung,Arzneimitteln,5,6,2023,0,0
+Verkehr und Digitalisierung,Blauen,4,6,2023,0,1
+Verkehr und Digitalisierung,Bahn,4,6,2023,0,2
+Verkehr und Digitalisierung,Fahrgäste,4,6,2023,0,3
+Verkehr und Digitalisierung,Kränkenhäusern,2,6,2023,0,4
+Umwelt,Energie,6,6,2023,0,0
+Umwelt,Klimaschutz,5,6,2023,0,1
+Umwelt,Betroffenheit,3,6,2023,0,2
+Umwelt,Energien,3,6,2023,0,3
+Umwelt,Handeln,3,6,2023,0,4
+Landwirtschaft,Gemeinden,4,6,2023,0,0
+Landwirtschaft,Biomasse,4,6,2023,0,1
+Landwirtschaft,Agrarpolitik,3,6,2023,0,2
+Landwirtschaft,Kohleregionen,3,6,2023,0,3
+Landwirtschaft,Photovoltaik,2,6,2023,0,4
+Arbeit,Ausübung,4,6,2023,0,0
+Arbeit,Erleichterungen,4,6,2023,0,1
+Arbeit,Qualifizierungsgeld,4,6,2023,0,2
+Arbeit,Arbeiten,3,6,2023,0,3
+Arbeit,Beschäftigung,3,6,2023,0,4
+Wirtschaft,Selbstverwaltung,7,6,2023,0,0
+Wirtschaft,Wirtschaft,6,6,2023,0,1
+Wirtschaft,Gewinnverlagerung,4,6,2023,0,2
+Wirtschaft,Fachkräfte,3,6,2023,0,3
+Wirtschaft,Arbeitsmarktes,2,6,2023,0,4
+Gesundheit,Versorgungssicherheit,3,6,2023,0,0
+Gesundheit,Arzneimittel,3,6,2023,0,1
+Gesundheit,Leben,3,6,2023,0,2
+Gesundheit,Mobilität,3,6,2023,0,3
+Gesundheit,Saarow,2,6,2023,0,4
+Familie,Aufenthalt,5,6,2023,0,0
+Familie,Aufenthaltserlaubnis,4,6,2023,0,1
+Familie,Kinder,2,6,2023,0,2
+Familie,Trauzeugen,2,6,2023,0,3
+Familie,Großeltern,2,6,2023,0,4
+Innenpolitik,Asylrecht,5,6,2023,0,0
+Innenpolitik,Arbeitsmarktpolitik,2,6,2023,0,1
+Innenpolitik,Antisemitismus,2,6,2023,0,2
+Innenpolitik,Euratom,2,6,2023,0,3
+Innenpolitik,Wahlen,2,6,2023,0,4
+Verteidigung,Streitkräfte,6,6,2023,0,0
+Verteidigung,Libanon,4,6,2023,0,1
+Verteidigung,Beabsichtigt,4,6,2023,0,2
+Verteidigung,Afghaninnen,3,6,2023,0,3
+Verteidigung,Waffen,3,6,2023,0,4
+Bildung und Forschung,Wärmeplanung,4,7,2023,0,0
+Bildung und Forschung,Regelversorgung,2,7,2023,0,1
+Bildung und Forschung,Positionspapier,2,7,2023,0,2
+Bildung und Forschung,Krankenhausschließungen,1,7,2023,0,3
+Bildung und Forschung,Außerplanmäßige,1,7,2023,0,4
+Wohnungsbau,Modernisierungsumlage,3,7,2023,0,0
+Wohnungsbau,Bauwesen,3,7,2023,0,1
+Wohnungsbau,Wohnungen,3,7,2023,0,2
+Wohnungsbau,Hamburg,3,7,2023,0,3
+Wohnungsbau,Endenergieverbrauchs,2,7,2023,0,4
+Innenpolitik,Krankenhausreform,1,7,2023,0,0
+Innenpolitik,Personenkennzeichen,1,7,2023,0,1
+Innenpolitik,Finanzpolitik,1,7,2023,0,2
+Innenpolitik,Rentenniveau,1,7,2023,0,3
+Innenpolitik,Terrorbekämpfung,1,7,2023,0,4
+Außenpolitik,Ukraine,2,7,2023,0,0
+Außenpolitik,Arbeiterpartei,2,7,2023,0,1
+Außenpolitik,Visaverfahren,2,7,2023,0,2
+Außenpolitik,Botschaft,2,7,2023,0,3
+Außenpolitik,Parteien,2,7,2023,0,4
+Umwelt,Verbraucher,3,7,2023,0,0
+Umwelt,Treibhausgasemissionen,2,7,2023,0,1
+Umwelt,Wasser,2,7,2023,0,2
+Umwelt,Energieeffizienzzielen,1,7,2023,0,3
+Umwelt,Umweltmanagementsystemen,1,7,2023,0,4
+Arbeit,Hilfe,6,7,2023,0,0
+Arbeit,Hilfeleistungen,4,7,2023,0,1
+Arbeit,Kollektivinteressen,3,7,2023,0,2
+Arbeit,Sitzung,3,7,2023,0,3
+Arbeit,Vorschläge,2,7,2023,0,4
+Entwicklung,Einsparung,3,7,2023,0,0
+Entwicklung,Realisierung,3,7,2023,0,1
+Entwicklung,Wiederherstellung,3,7,2023,0,2
+Entwicklung,Voraussetzungen,3,7,2023,0,3
+Entwicklung,Welchen,3,7,2023,0,4
+Gesundheit,Sterben,7,7,2023,0,0
+Gesundheit,Selbsttötung,3,7,2023,0,1
+Gesundheit,Versorgungssicherheit,2,7,2023,0,2
+Gesundheit,Apotheken,2,7,2023,0,3
+Gesundheit,Mobilität,1,7,2023,0,4
+Justiz,Bundesverfassungsgerichts,6,7,2023,0,0
+Justiz,Verbandsklagen,5,7,2023,0,1
+Justiz,Straffreiheit,3,7,2023,0,2
+Justiz,Einführungsgesetz,2,7,2023,0,3
+Justiz,Strafgesetzbuch,2,7,2023,0,4
+Landwirtschaft,Erzeugnisse,3,7,2023,0,0
+Landwirtschaft,Industrieemissionen,3,7,2023,0,1
+Landwirtschaft,Energieversorgung,2,7,2023,0,2
+Landwirtschaft,Erdgas,2,7,2023,0,3
+Landwirtschaft,Urlaubsgebiete,1,7,2023,0,4
+Wirtschaft,Wirtschaft,3,7,2023,0,0
+Wirtschaft,Verbrauchern,2,7,2023,0,1
+Wirtschaft,Industrie,2,7,2023,0,2
+Wirtschaft,Wettbewerbsbeschränkungen,2,7,2023,0,3
+Wirtschaft,Logistikbranche,2,7,2023,0,4
+Verkehr und Digitalisierung,Betäubungsmitteln,4,7,2023,0,0
+Verkehr und Digitalisierung,Abstand,3,7,2023,0,1
+Verkehr und Digitalisierung,Bahn,3,7,2023,0,2
+Verkehr und Digitalisierung,Leitplanken,3,7,2023,0,3
+Verkehr und Digitalisierung,Elektrizitätsbinnenmarkt,2,7,2023,0,4
+Finanzen,Verpflichtungsermächtigungen,6,7,2023,0,0
+Finanzen,Haushaltsführung,5,7,2023,0,1
+Finanzen,Haushaltsjahres,4,7,2023,0,2
+Finanzen,Bundeshaushaltsplans,2,7,2023,0,3
+Finanzen,Abteilungsleiter,2,7,2023,0,4
+Verteidigung,Bundeswehr,6,7,2023,0,0
+Verteidigung,Wehrbeauftragen,2,7,2023,0,1
+Verteidigung,Soldaten,2,7,2023,0,2
+Verteidigung,Betätigungsverbot,2,7,2023,0,3
+Verteidigung,Kurdistans,2,7,2023,0,4
+Familie,Heimat,4,7,2023,0,0
+Familie,Wohnung,2,7,2023,0,1
+Familie,Kinder,1,7,2023,0,2
+Familie,Oltmanns,1,7,2023,0,3
+Familie,Heide,1,7,2023,0,4
+Wohnungsbau,Stadtentwicklung,9,9,2023,0,0
+Wohnungsbau,Bauwesen,7,9,2023,0,1
+Wohnungsbau,Wohnungen,5,9,2023,0,2
+Wohnungsbau,Krankenhäuser,4,9,2023,0,3
+Wohnungsbau,Neubauten,4,9,2023,0,4
+Entwicklung,Digitalisierung,7,9,2023,0,0
+Entwicklung,Projekte,5,9,2023,0,1
+Entwicklung,Überarbeitung,4,9,2023,0,2
+Entwicklung,Forderungen,4,9,2023,0,3
+Entwicklung,Ebenen,4,9,2023,0,4
+Wirtschaft,Aserbaidschan,4,9,2023,0,0
+Wirtschaft,Dekarbonisierung,4,9,2023,0,1
+Wirtschaft,Gesamtwirtschaftliche,4,9,2023,0,2
+Wirtschaft,Kultur,3,9,2023,0,3
+Wirtschaft,Föderation,3,9,2023,0,4
+Umwelt,Vereinten,4,9,2023,0,0
+Umwelt,Energien,4,9,2023,0,1
+Umwelt,Energie,4,9,2023,0,2
+Umwelt,Treibhausgasemissionen,2,9,2023,0,3
+Umwelt,Energieeffizienz,2,9,2023,0,4
+Verkehr und Digitalisierung,Kraftfahrzeuge,7,9,2023,0,0
+Verkehr und Digitalisierung,Verkehr,5,9,2023,0,1
+Verkehr und Digitalisierung,Fahrzeuge,4,9,2023,0,2
+Verkehr und Digitalisierung,Kraftfahrzeuganhänger,4,9,2023,0,3
+Verkehr und Digitalisierung,Schleuse,2,9,2023,0,4
+Bildung und Forschung,Bildung,9,9,2023,0,0
+Bildung und Forschung,Wärmeplanung,7,9,2023,0,1
+Bildung und Forschung,Zukunftsinvestitionen,4,9,2023,0,2
+Bildung und Forschung,Wasserstoff,4,9,2023,0,3
+Bildung und Forschung,Kategorie,3,9,2023,0,4
+Justiz,Beauftragte,3,9,2023,0,0
+Justiz,Marokko,3,9,2023,0,1
+Justiz,Missbrauch,2,9,2023,0,2
+Justiz,BMFSFJ,2,9,2023,0,3
+Justiz,Landesbehörden,2,9,2023,0,4
+Arbeit,Mitgliedschaft,4,9,2023,0,0
+Arbeit,Ressortabstimmung,3,9,2023,0,1
+Arbeit,Videoverhandlungen,3,9,2023,0,2
+Arbeit,Geltung,3,9,2023,0,3
+Arbeit,Sonderurlaub,3,9,2023,0,4
+Familie,Prosor,2,10,2023,0,4
+Landwirtschaft,Energieversorgung,4,9,2023,0,0
+Landwirtschaft,Gemeinden,4,9,2023,0,1
+Landwirtschaft,Biomasse,4,9,2023,0,2
+Landwirtschaft,Haftpflichtversicherung,3,9,2023,0,3
+Landwirtschaft,Pflanzenschutzmitteln,2,9,2023,0,4
+Außenpolitik,Ukraine,12,9,2023,0,0
+Außenpolitik,Wahlperiode,5,9,2023,0,1
+Außenpolitik,Nationen,4,9,2023,0,2
+Außenpolitik,Sprechers,4,9,2023,0,3
+Außenpolitik,Finanzbeziehungen,4,9,2023,0,4
+Verteidigung,Bundeswehr,6,9,2023,0,0
+Verteidigung,Beabsichtigt,3,9,2023,0,1
+Verteidigung,Russischen,3,9,2023,0,2
+Verteidigung,Munition,3,9,2023,0,3
+Verteidigung,Königreich,3,9,2023,0,4
+Finanzen,Finanzplan,4,9,2023,0,0
+Finanzen,Bundeshaushaltsplans,4,9,2023,0,1
+Finanzen,Wirtschaftsplans,4,9,2023,0,2
+Finanzen,Kreditaufnahme,2,9,2023,0,3
+Finanzen,Finanzausschusses,2,9,2023,0,4
+Gesundheit,Gesundheit,3,9,2023,0,0
+Gesundheit,Patienten,3,9,2023,0,1
+Gesundheit,Mobilität,3,9,2023,0,2
+Gesundheit,Endometriose,2,9,2023,0,3
+Gesundheit,Alter,2,9,2023,0,4
+Familie,Heimat,2,9,2023,0,0
+Familie,Jina,2,9,2023,0,1
+Familie,Mahsa,2,9,2023,0,2
+Familie,Amini,2,9,2023,0,3
+Familie,Wolodymyr,2,9,2023,0,4
+Innenpolitik,Versicherungspflicht,3,9,2023,0,0
+Innenpolitik,Bergkarabach,2,9,2023,0,1
+Innenpolitik,Aufenthaltsgesetzes,2,9,2023,0,2
+Innenpolitik,Krankenhausreform,2,9,2023,0,3
+Innenpolitik,Asylanträge,2,9,2023,0,4
+Entwicklung,Digitalisierung,7,10,2023,0,0
+Entwicklung,Planungen,5,10,2023,0,1
+Entwicklung,Techniken,5,10,2023,0,2
+Entwicklung,Indikatoren,4,10,2023,0,3
+Entwicklung,Einstellung,4,10,2023,0,4
+Wohnungsbau,Wärmenetze,7,10,2023,0,0
+Wohnungsbau,Haushaltsausschuss,5,10,2023,0,1
+Wohnungsbau,Flüchtlingen,4,10,2023,0,2
+Wohnungsbau,Flüchtlinge,4,10,2023,0,3
+Wohnungsbau,Solaranlagen,3,10,2023,0,4
+Justiz,Beauftragte,4,10,2023,0,0
+Justiz,Beauftragten,4,10,2023,0,1
+Justiz,Bundesverwaltungsgerichts,3,10,2023,0,2
+Justiz,Vertragsverletzungsverfahren,3,10,2023,0,3
+Justiz,Betreuungsvereine,3,10,2023,0,4
+Gesundheit,Ernährung,3,10,2023,0,0
+Gesundheit,Verbraucherschutz,3,10,2023,0,1
+Gesundheit,Gesundheitsschutz,2,10,2023,0,2
+Gesundheit,Pflege,2,10,2023,0,3
+Gesundheit,Patienten,2,10,2023,0,4
+Verkehr und Digitalisierung,Verkehrsnetzes,3,10,2023,0,0
+Verkehr und Digitalisierung,Wasserstoffhochlauf,3,10,2023,0,1
+Verkehr und Digitalisierung,Cannabis,3,10,2023,0,2
+Verkehr und Digitalisierung,Bundesfernstraßen,2,10,2023,0,3
+Verkehr und Digitalisierung,Strom,2,10,2023,0,4
+Arbeit,Gespräche,5,10,2023,0,0
+Arbeit,Büro,5,10,2023,0,1
+Arbeit,Betreuer,4,10,2023,0,2
+Arbeit,Task,4,10,2023,0,3
+Arbeit,Streitigkeiten,3,10,2023,0,4
+Außenpolitik,Israel,11,10,2023,0,0
+Außenpolitik,Hamas,10,10,2023,0,1
+Außenpolitik,Ukraine,7,10,2023,0,2
+Außenpolitik,Israels,5,10,2023,0,3
+Außenpolitik,Russland,5,10,2023,0,4
+Umwelt,Klimaschutz,12,10,2023,0,0
+Umwelt,Ostsee,5,10,2023,0,1
+Umwelt,Energien,4,10,2023,0,2
+Umwelt,Klimaneutralität,2,10,2023,0,3
+Umwelt,Energie,2,10,2023,0,4
+Landwirtschaft,Schweizerischen,4,10,2023,0,0
+Landwirtschaft,Streumunition,3,10,2023,0,1
+Landwirtschaft,Photovoltaik,2,10,2023,0,2
+Landwirtschaft,Energieversorgung,2,10,2023,0,3
+Landwirtschaft,Altmunition,2,10,2023,0,4
+Bildung und Forschung,Wärmeplanung,5,10,2023,0,0
+Bildung und Forschung,Pflegeausbildung,4,10,2023,0,1
+Bildung und Forschung,Teilvorhaben,3,10,2023,0,2
+Bildung und Forschung,Jugend,3,10,2023,0,3
+Bildung und Forschung,Stiftungsrates,2,10,2023,0,4
+Wirtschaft,Wirtschaft,12,10,2023,0,0
+Wirtschaft,Kultur,5,10,2023,0,1
+Wirtschaft,Gewinnverlagerung,4,10,2023,0,2
+Wirtschaft,Eidgenossenschaft,4,10,2023,0,3
+Wirtschaft,Dekarbonisierung,3,10,2023,0,4
+Finanzen,Young,3,10,2023,0,0
+Finanzen,Bagatellgrenzen,2,10,2023,0,1
+Finanzen,Ausbildungsvergütung,2,10,2023,0,2
+Finanzen,Vermögens,2,10,2023,0,3
+Finanzen,Financial,2,10,2023,0,4
+Verteidigung,Force,6,10,2023,0,0
+Verteidigung,Soldaten,5,10,2023,0,1
+Verteidigung,Bundeswehr,5,10,2023,0,2
+Verteidigung,Stab,3,10,2023,0,3
+Verteidigung,Streitkräfte,2,10,2023,0,4
+Innenpolitik,Zentralabteilung,4,10,2023,0,0
+Innenpolitik,Bundeskanzleramt,3,10,2023,0,1
+Innenpolitik,Krankenhausreform,2,10,2023,0,2
+Innenpolitik,Mautpflichtgrenze,1,10,2023,0,3
+Innenpolitik,Terrorakten,1,10,2023,0,4
+Familie,Heimat,8,10,2023,0,0
+Familie,Bewohner,2,10,2023,0,1
+Familie,Sofia,2,10,2023,0,2
+Familie,Kinder,2,10,2023,0,3
+Entwicklung,Digitalisierung,46,0,2023,0,0
+Entwicklung,Zukunft,22,0,2023,0,1
+Entwicklung,Infrastruktur,21,0,2023,0,2
+Entwicklung,Sinne,19,0,2023,0,3
+Entwicklung,Strategie,19,0,2023,0,4
+Landwirtschaft,Energieversorgung,17,0,2023,0,0
+Landwirtschaft,Landwirtschaft,12,0,2023,0,1
+Landwirtschaft,Agrarpolitik,11,0,2023,0,2
+Landwirtschaft,Industrieemissionen,10,0,2023,0,3
+Landwirtschaft,Pflanzenschutzmitteln,10,0,2023,0,4
+Arbeit,Vorschläge,18,0,2023,0,0
+Arbeit,Hilfe,18,0,2023,0,1
+Arbeit,Aktivitäten,14,0,2023,0,2
+Arbeit,Erleichterungen,14,0,2023,0,3
+Arbeit,Beschäftigung,14,0,2023,0,4
+Verkehr und Digitalisierung,Verkehr,36,0,2023,0,0
+Verkehr und Digitalisierung,Kraftfahrzeuge,21,0,2023,0,1
+Verkehr und Digitalisierung,Bahn,19,0,2023,0,2
+Verkehr und Digitalisierung,Cannabis,15,0,2023,0,3
+Verkehr und Digitalisierung,Kraftfahrzeuganhänger,12,0,2023,0,4
+Justiz,Bundesverfassungsgerichts,27,0,2023,0,0
+Justiz,Gesetze,23,0,2023,0,1
+Justiz,Justiz,20,0,2023,0,2
+Justiz,Bundespolizei,16,0,2023,0,3
+Justiz,Bundesverwaltungsgerichts,15,0,2023,0,4
+Außenpolitik,Ukraine,123,0,2023,0,0
+Außenpolitik,Russland,31,0,2023,0,1
+Außenpolitik,Türkei,22,0,2023,0,2
+Außenpolitik,Israel,22,0,2023,0,3
+Außenpolitik,Mandatsobergrenze,20,0,2023,0,4
+Wohnungsbau,Zusatzausgaben,20,0,2023,0,0
+Wohnungsbau,Wärmenetze,18,0,2023,0,1
+Wohnungsbau,Flüchtlinge,17,0,2023,0,2
+Wohnungsbau,Stadtentwicklung,17,0,2023,0,3
+Wohnungsbau,Bauwesen,16,0,2023,0,4
+Wirtschaft,Wirtschaft,64,0,2023,0,0
+Wirtschaft,Industrie,17,0,2023,0,1
+Wirtschaft,Inflation,15,0,2023,0,2
+Wirtschaft,Dekarbonisierung,14,0,2023,0,3
+Wirtschaft,Gewinnverlagerung,14,0,2023,0,4
+Gesundheit,Gesundheit,25,0,2023,0,0
+Gesundheit,Pflege,19,0,2023,0,1
+Gesundheit,Mobilität,16,0,2023,0,2
+Gesundheit,Verbraucherschutz,16,0,2023,0,3
+Gesundheit,Leben,16,0,2023,0,4
+Verteidigung,Bundeswehr,66,0,2023,0,0
+Verteidigung,Streitkräfte,36,0,2023,0,1
+Verteidigung,Soldaten,20,0,2023,0,2
+Verteidigung,Afghanistan,20,0,2023,0,3
+Verteidigung,Munition,11,0,2023,0,4
+Finanzen,Sondervermögen,21,0,2023,0,0
+Finanzen,Finanzen,18,0,2023,0,1
+Finanzen,Verpflichtungsermächtigungen,12,0,2023,0,2
+Finanzen,Haushalt,10,0,2023,0,3
+Finanzen,Haushaltsführung,9,0,2023,0,4
+Innenpolitik,Versicherungspflicht,13,0,2023,0,0
+Innenpolitik,Asylrecht,9,0,2023,0,1
+Innenpolitik,Wahlen,9,0,2023,0,2
+Innenpolitik,Antisemitismus,7,0,2023,0,3
+Innenpolitik,Beitragsrecht,7,0,2023,0,4
+Umwelt,Klimaschutz,52,0,2023,0,0
+Umwelt,Energien,24,0,2023,0,1
+Umwelt,Energie,23,0,2023,0,2
+Umwelt,Verbraucher,16,0,2023,0,3
+Umwelt,Vereinten,14,0,2023,0,4
+Familie,Heimat,30,0,2023,0,0
+Familie,Kinder,19,0,2023,0,1
+Familie,Aufenthalt,13,0,2023,0,2
+Familie,Partnerschaft,12,0,2023,0,3
+Familie,Kindern,8,0,2023,0,4
+Bildung und Forschung,Bildung,40,0,2023,0,0
+Bildung und Forschung,Digitales,29,0,2023,0,1
+Bildung und Forschung,Wärmeplanung,23,0,2023,0,2
+Bildung und Forschung,Wasserstoff,15,0,2023,0,3
+Bildung und Forschung,Jugend,14,0,2023,0,4
+Entwicklung,Absicherung,6,6,2020,0,1
+Entwicklung,Anschluss,6,6,2020,0,2
+Entwicklung,Stabilisierung,5,6,2020,0,3
+Entwicklung,Wasserstoffstrategie,5,6,2020,0,4
+Wirtschaft,Wirtschaft,7,6,2020,0,0
+Entwicklung,Überschreitung,4,12,2023,0,0
+Entwicklung,Regelgrenze,4,12,2023,0,1
+Entwicklung,Rückführung,4,12,2023,0,2
+Entwicklung,Sprache,4,12,2023,0,3
+Entwicklung,Anwendungen,4,12,2023,0,4
+Landwirtschaft,Subventionspolitik,4,12,2023,0,0
+Landwirtschaft,Haftpflichtversicherung,3,12,2023,0,1
+Landwirtschaft,Landwirtschaft,3,12,2023,0,2
+Landwirtschaft,Agrarpolitik,3,12,2023,0,3
+Landwirtschaft,Energieerzeugung,2,12,2023,0,4
+Arbeit,Rückkehr,3,12,2023,0,0
+Arbeit,Arbeitnehmer,3,12,2023,0,1
+Arbeit,Bundesaufnahmeprogramm,3,12,2023,0,2
+Arbeit,Härten,2,12,2023,0,3
+Arbeit,Zuwendungen,2,12,2023,0,4
+Verkehr und Digitalisierung,Kraftfahrzeuge,6,12,2023,0,0
+Verkehr und Digitalisierung,Datenaustausch,5,12,2023,0,1
+Verkehr und Digitalisierung,Kraftfahrzeuganhänger,4,12,2023,0,2
+Verkehr und Digitalisierung,Einvernehmens,4,12,2023,0,3
+Verkehr und Digitalisierung,Erdgaslieferstopp,2,12,2023,0,4
+Justiz,Bundesverfassungsgerichts,8,12,2023,0,0
+Justiz,Gesetze,5,12,2023,0,1
+Justiz,Justiz,5,12,2023,0,2
+Justiz,Geldwäsche,4,12,2023,0,3
+Justiz,Zentralstelle,4,12,2023,0,4
+Außenpolitik,Ukraine,12,12,2023,0,0
+Verkehr und Digitalisierung,Internet,3,11,2023,0,4
+Außenpolitik,Moldau,7,12,2023,0,1
+Außenpolitik,Beitrittsverhandlungen,5,12,2023,0,2
+Außenpolitik,Russland,5,12,2023,0,3
+Außenpolitik,Israel,3,12,2023,0,4
+Wohnungsbau,Transformationsfonds,5,12,2023,0,0
+Wohnungsbau,Haushaltsfinanzierungsgesetz,4,12,2023,0,1
+Wohnungsbau,Rentenversicherung,4,12,2023,0,2
+Wohnungsbau,Haushaltsjahren,4,12,2023,0,3
+Wohnungsbau,Nettokreditaufnahme,4,12,2023,0,4
+Wirtschaft,Gesundheitswesens,3,12,2023,0,0
+Wirtschaft,Mikroelektronik,2,12,2023,0,1
+Wirtschaft,Energiepreise,2,12,2023,0,2
+Wirtschaft,Gesellschaft,2,12,2023,0,3
+Wirtschaft,Kreditkäufer,2,12,2023,0,4
+Gesundheit,Gesundheit,6,12,2023,0,0
+Gesundheit,Verletzung,3,12,2023,0,1
+Gesundheit,Barrierefreiheit,3,12,2023,0,2
+Gesundheit,Gesundheitsanwendungen,2,12,2023,0,3
+Gesundheit,Krankenkassen,2,12,2023,0,4
+Verteidigung,Bundeswehr,10,12,2023,0,0
+Verteidigung,Bosnien,4,12,2023,0,1
+Verteidigung,Soldaten,3,12,2023,0,2
+Verteidigung,Luftfahrt,2,12,2023,0,3
+Verteidigung,Disagien,2,12,2023,0,4
+Finanzen,Sondervermögen,10,12,2023,0,0
+Finanzen,Kreditaufnahme,4,12,2023,0,1
+Finanzen,Kredite,4,12,2023,0,2
+Finanzen,Vorauszahlungen,3,12,2023,0,3
+Finanzen,Bundeshaushaltsplan,2,12,2023,0,4
+Innenpolitik,Nachtragshaushaltsgesetz,5,12,2023,0,0
+Innenpolitik,Haushaltsgesetz,4,12,2023,0,1
+Innenpolitik,Schuldenbremse,3,12,2023,0,2
+Innenpolitik,Nachtragshaushaltsgesetzes,3,12,2023,0,3
+Innenpolitik,Versicherungspflicht,3,12,2023,0,4
+Umwelt,Energie,6,12,2023,0,0
+Umwelt,Chemikalien,2,12,2023,0,1
+Umwelt,Umwelt,2,12,2023,0,2
+Umwelt,Eiskristall,2,12,2023,0,3
+Umwelt,Nachhaltigkeitsdimensionen,1,12,2023,0,4
+Familie,Heimat,5,12,2023,0,0
+Familie,Notsituation,4,12,2023,0,1
+Familie,Fans,2,12,2023,0,2
+Familie,Bewohner,1,12,2023,0,3
+Familie,Mindestversicherungssumme,1,12,2023,0,4
+Bildung und Forschung,Meldepflichten,3,12,2023,0,0
+Bildung und Forschung,Medizinprodukte,2,12,2023,0,1
+Bildung und Forschung,Telekonsilien,2,12,2023,0,2
+Bildung und Forschung,Informationsmodelle,2,12,2023,0,3
+Bildung und Forschung,Forschungszwecken,2,12,2023,0,4
+Entwicklung,Projekte,6,11,2023,0,0
+Entwicklung,Bekanntmachungserlaubnis,5,11,2023,0,1
+Entwicklung,Übergang,5,11,2023,0,2
+Entwicklung,Datum,5,11,2023,0,3
+Entwicklung,Überwachung,4,11,2023,0,4
+Entwicklung,Digitalisierung,8,1,2024,0,0
+Entwicklung,Techniken,5,1,2024,0,1
+Entwicklung,Harmonisierung,4,1,2024,0,2
+Entwicklung,Eintritt,3,1,2024,0,3
+Entwicklung,Ladeschnittstellen,3,1,2024,0,4
+Justiz,Justiz,3,1,2024,0,0
+Justiz,Rechnungshofs,2,1,2024,0,1
+Justiz,Rechtsstaatlichkeit,2,1,2024,0,2
+Justiz,Gesetze,2,1,2024,0,3
+Justiz,Bürokratieentlastungsgesetz,2,1,2024,0,4
+Verteidigung,Gaza,3,1,2024,0,0
+Verteidigung,Wehrbeauftragten,2,1,2024,0,1
+Verteidigung,Bundeswehrbeständen,2,1,2024,0,2
+Verteidigung,Marine,2,1,2024,0,3
+Verteidigung,Prabowo,2,1,2024,0,4
+Finanzen,Satzungsänderungen,3,1,2024,0,0
+Finanzen,Spending,1,1,2024,0,1
+Finanzen,Eigenmittel,1,1,2024,0,2
+Finanzen,Haushaltsführung,1,1,2024,0,3
+Finanzen,Halbjahresbericht,1,1,2024,0,4
+Umwelt,Umwelt,2,1,2024,0,0
+Umwelt,Klimaschutz,2,1,2024,0,1
+Umwelt,Stakeholder,2,1,2024,0,2
+Umwelt,Nachhaltigkeitswoche,1,1,2024,0,3
+Umwelt,Vereinten,1,1,2024,0,4
+Außenpolitik,Ukraine,8,1,2024,0,0
+Außenpolitik,Auswärtigen,7,1,2024,0,1
+Außenpolitik,Israel,5,1,2024,0,2
+Außenpolitik,Legislaturperiode,4,1,2024,0,3
+Außenpolitik,Israels,4,1,2024,0,4
+Wirtschaft,Germany,4,1,2024,0,0
+Wirtschaft,Industrie,2,1,2024,0,1
+Wirtschaft,Markt,2,1,2024,0,2
+Wirtschaft,Energiewende,2,1,2024,0,3
+Wirtschaft,Binnenmarkt,2,1,2024,0,4
+Innenpolitik,Reformvorschläge,2,1,2024,0,0
+Innenpolitik,Sozialstaat,1,1,2024,0,1
+Innenpolitik,Strukturreformen,1,1,2024,0,2
+Innenpolitik,Stabilitätsprogramm,1,1,2024,0,3
+Innenpolitik,Verfahrensfragen,1,1,2024,0,4
+Wohnungsbau,Büros,3,1,2024,0,0
+Wohnungsbau,Bürgergeld,2,1,2024,0,1
+Wohnungsbau,Bürokratieabbau,2,1,2024,0,2
+Wohnungsbau,Rentnerinnen,2,1,2024,0,3
+Wohnungsbau,Rentner,2,1,2024,0,4
+Familie,Kindern,3,1,2024,0,0
+Familie,Partnerschaft,3,1,2024,0,1
+Familie,Heimat,3,1,2024,0,2
+Familie,Angehörige,2,1,2024,0,3
+Familie,Warenhauskette,2,1,2024,0,4
+Landwirtschaft,Landwirtschaft,5,1,2024,0,0
+Landwirtschaft,Ostafrikanischen,2,1,2024,0,1
+Landwirtschaft,Erzeugnisse,2,1,2024,0,2
+Landwirtschaft,Industrieemissionen,2,1,2024,0,3
+Landwirtschaft,Heizung,1,1,2024,0,4
+Bildung und Forschung,Arbeitsbericht,3,1,2024,0,0
+Bildung und Forschung,Innovation,2,1,2024,0,1
+Bildung und Forschung,Committee,2,1,2024,0,2
+Bildung und Forschung,Entwicklungszusammenarbeit,2,1,2024,0,3
+Bildung und Forschung,Impfstoffe,2,1,2024,0,4
+Verkehr und Digitalisierung,Funkanlagen,3,1,2024,0,0
+Verkehr und Digitalisierung,Luftverkehrsteuer,2,1,2024,0,1
+Verkehr und Digitalisierung,Nummern,2,1,2024,0,2
+Verkehr und Digitalisierung,Anhang,1,1,2024,0,3
+Verkehr und Digitalisierung,Kraftfahrzeuge,1,1,2024,0,4
+Arbeit,Dialog,2,1,2024,0,0
+Arbeit,Mitgliedschaft,2,1,2024,0,1
+Arbeit,Verweigerung,2,1,2024,0,2
+Arbeit,Absicht,2,1,2024,0,3
+Arbeit,Studierenden,2,1,2024,0,4
+Gesundheit,Gefahr,2,1,2024,0,0
+Gesundheit,Natürlicher,2,1,2024,0,1
+Gesundheit,Gesundheitshandwerke,2,1,2024,0,2
+Gesundheit,Wohlbefinden,1,1,2024,0,3
+Gesundheit,Freizügigkeit,1,1,2024,0,4
+Entwicklung,Inwieweit,8,1,2020,0,0
+Entwicklung,Tötung,7,1,2020,0,1
+Entwicklung,Infrastruktur,6,1,2020,0,2
+Entwicklung,Anspruchs,5,1,2020,0,3
+Entwicklung,Sinne,5,1,2020,0,4
+Arbeit,Ehrenamt,4,1,2020,0,0
+Arbeit,Sitzung,4,1,2020,0,1
+Arbeit,Wartezeit,4,1,2020,0,2
+Arbeit,Zahlungen,3,1,2020,0,3
+Arbeit,Maßnahmengesetze,3,1,2020,0,4
+Wirtschaft,Kultur,5,1,2020,0,0
+Wirtschaft,Wirtschaft,5,1,2020,0,1
+Wirtschaft,Wechselkurs,3,1,2020,0,2
+Wirtschaft,Gesellschaft,2,1,2020,0,3
+Wirtschaft,Jahreswirtschaftsbericht,2,1,2020,0,4
+Verteidigung,Soldaten,7,1,2020,0,0
+Verteidigung,Ramstein,6,1,2020,0,1
+Verteidigung,Streitkräfte,5,1,2020,0,2
+Verteidigung,Libyen,5,1,2020,0,3
+Verteidigung,Soleimani,5,1,2020,0,4
+Außenpolitik,Auswärtigen,6,1,2020,0,0
+Außenpolitik,Türkei,5,1,2020,0,1
+Außenpolitik,Visastellen,4,1,2020,0,2
+Außenpolitik,Staatssekretär,4,1,2020,0,3
+Außenpolitik,Bundespressekonferenz,4,1,2020,0,4
+Umwelt,Energien,5,1,2020,0,0
+Umwelt,Klimaschutzprogramm,4,1,2020,0,1
+Umwelt,Energie,3,1,2020,0,2
+Umwelt,Naturschutz,3,1,2020,0,3
+Umwelt,Klimaschutz,2,1,2020,0,4
+Justiz,Gesichtserkennung,5,1,2020,0,0
+Justiz,Urteil,5,1,2020,0,1
+Justiz,Bundespolizei,4,1,2020,0,2
+Justiz,Behörde,4,1,2020,0,3
+Justiz,Justiz,3,1,2020,0,4
+Wohnungsbau,Menschenrecht,11,1,2020,0,0
+Wohnungsbau,Einzelmaßnahmen,7,1,2020,0,1
+Wohnungsbau,Familiennachzug,5,1,2020,0,2
+Wohnungsbau,Gigawatt,5,1,2020,0,3
+Wohnungsbau,Strukturwandel,4,1,2020,0,4
+Landwirtschaft,Landwirtschaft,5,1,2020,0,0
+Landwirtschaft,Kreta,4,1,2020,0,1
+Landwirtschaft,Grünen,3,1,2020,0,2
+Landwirtschaft,Energieerzeugungskapazitäten,3,1,2020,0,3
+Landwirtschaft,Verkehrsversorgung,2,1,2020,0,4
+Gesundheit,Barrierefreiheit,8,1,2020,0,0
+Gesundheit,Freiheit,3,1,2020,0,1
+Gesundheit,Leben,3,1,2020,0,2
+Gesundheit,Gesundheit,3,1,2020,0,3
+Gesundheit,Ernährung,2,1,2020,0,4
+Verkehr und Digitalisierung,Bahn,8,1,2020,0,0
+Verkehr und Digitalisierung,Verkehr,8,1,2020,0,1
+Verkehr und Digitalisierung,Öffentlichkeitsbeteiligung,3,1,2020,0,2
+Verkehr und Digitalisierung,Raum,3,1,2020,0,3
+Verkehr und Digitalisierung,Serviceangeboten,3,1,2020,0,4
+Bildung und Forschung,Zweck,7,1,2020,0,0
+Bildung und Forschung,Soleimanis,4,1,2020,0,1
+Bildung und Forschung,Bildungspolitik,3,1,2020,0,2
+Bildung und Forschung,Europe,3,1,2020,0,3
+Bildung und Forschung,Standpunkt,3,1,2020,0,4
+Familie,Heimat,4,1,2020,0,0
+Familie,Nachkommen,3,1,2020,0,1
+Familie,Kindern,3,1,2020,0,2
+Familie,Partner,2,1,2020,0,3
+Familie,Angehörigen,2,1,2020,0,4
+Innenpolitik,Schuldenbremse,3,1,2020,0,0
+Innenpolitik,Grundgesetz,2,1,2020,0,1
+Innenpolitik,Extremismus,2,1,2020,0,2
+Innenpolitik,URENCO,2,1,2020,0,3
+Innenpolitik,Silvesternacht,2,1,2020,0,4
+Finanzen,Finanzmittel,2,1,2020,0,0
+Finanzen,Visa,2,1,2020,0,1
+Finanzen,Papiere,2,1,2020,0,2
+Finanzen,Gesamthaushaltsplan,2,1,2020,0,3
+Finanzen,Kreditspielräume,1,1,2020,0,4
+Entwicklung,Einbringung,5,2,2020,0,0
+Entwicklung,Wirksamkeit,3,2,2020,0,1
+Entwicklung,Abweichung,3,2,2020,0,2
+Entwicklung,Richtung,3,2,2020,0,3
+Entwicklung,Strukturen,3,2,2020,0,4
+Verkehr und Digitalisierung,Bahn,5,2,2020,0,0
+Verkehr und Digitalisierung,Verkehr,5,2,2020,0,1
+Verkehr und Digitalisierung,Burkert,3,2,2020,0,2
+Verkehr und Digitalisierung,Eisenbahnstrecken,2,2,2020,0,3
+Verkehr und Digitalisierung,Rechnungszuschlag,2,2,2020,0,4
+Landwirtschaft,Gebieten,3,2,2020,0,0
+Landwirtschaft,Rumänien,3,2,2020,0,1
+Landwirtschaft,Kraftstoffe,3,2,2020,0,2
+Landwirtschaft,Handelsketten,2,2,2020,0,3
+Landwirtschaft,Schienenverkehrsmärkten,1,2,2020,0,4
+Bildung und Forschung,Entwicklungszusammenarbeit,5,2,2020,0,0
+Bildung und Forschung,Petitionensausschusses,5,2,2020,0,1
+Bildung und Forschung,Medizinische,2,2,2020,0,2
+Bildung und Forschung,Pauschale,2,2,2020,0,3
+Bildung und Forschung,Wissenschaftlichen,2,2,2020,0,4
+Arbeit,Beiträge,3,2,2020,0,0
+Arbeit,Entschädigung,3,2,2020,0,1
+Arbeit,Versammlung,3,2,2020,0,2
+Arbeit,Zahlungen,2,2,2020,0,3
+Arbeit,Beauftragung,2,2,2020,0,4
+Außenpolitik,Nachbarstaaten,3,2,2020,0,0
+Außenpolitik,Freihandelsabkommens,2,2,2020,0,1
+Außenpolitik,Friedensmission,2,2,2020,0,2
+Außenpolitik,Friedensförderung,2,2,2020,0,3
+Außenpolitik,Beziehungen,2,2,2020,0,4
+Wirtschaft,Schweiz,3,2,2020,0,0
+Wirtschaft,Vertretern,3,2,2020,0,1
+Wirtschaft,Europäischer,2,2,2020,0,2
+Wirtschaft,Staatssekretärin,2,2,2020,0,3
+Wirtschaft,Ukrsalisnyzja,2,2,2020,0,4
+Wohnungsbau,Mietpreisbremse,5,2,2020,0,0
+Wohnungsbau,Entwicklungsfonds,5,2,2020,0,1
+Wohnungsbau,Berliner,4,2,2020,0,2
+Wohnungsbau,Wohnungsmärkten,3,2,2020,0,3
+Wohnungsbau,Mietanstiegs,2,2,2020,0,4
+Gesundheit,Gesundheit,3,2,2020,0,0
+Gesundheit,Kindes,3,2,2020,0,1
+Gesundheit,Krankenkassen,3,2,2020,0,2
+Gesundheit,Versicherten,3,2,2020,0,3
+Gesundheit,Barrierefreiheit,2,2,2020,0,4
+Umwelt,Atomkraftwerken,2,2,2020,0,0
+Umwelt,Entsorgungssystemen,1,2,2020,0,1
+Umwelt,Nachhaltigkeitszielen,1,2,2020,0,2
+Umwelt,Nachhaltigkeit,1,2,2020,0,3
+Umwelt,Schülerinnen,1,2,2020,0,4
+Justiz,Assange,7,2,2020,0,0
+Justiz,Gesetzbuch,3,2,2020,0,1
+Justiz,Einführungsgesetz,3,2,2020,0,2
+Justiz,Bundesverfassungsgerichts,3,2,2020,0,3
+Justiz,Stiefkindadoption,3,2,2020,0,4
+Familie,Lebensgemeinschaft,3,2,2020,0,0
+Familie,Bela,3,2,2020,0,1
+Familie,Bach,3,2,2020,0,2
+Familie,Haushaltsziel,2,2,2020,0,3
+Familie,Aufenthalt,2,2,2020,0,4
+Finanzen,Finanzinformationen,2,2,2020,0,0
+Finanzen,Versicherung,2,2,2020,0,1
+Finanzen,Darlehens,1,2,2020,0,2
+Finanzen,Betrags,1,2,2020,0,3
+Finanzen,Jahresbeiträge,1,2,2020,0,4
+Innenpolitik,Ungarn,3,2,2020,0,0
+Innenpolitik,Aufenthaltsgesetzes,2,2,2020,0,1
+Innenpolitik,Islamismus,1,2,2020,0,2
+Innenpolitik,Extremismus,1,2,2020,0,3
+Innenpolitik,Insolvenzabsicherungspflicht,1,2,2020,0,4
+Verteidigung,Streitkräfte,7,2,2020,0,0
+Verteidigung,Sudan,4,2,2020,0,1
+Verteidigung,Schweizer,3,2,2020,0,2
+Verteidigung,Königreich,3,2,2020,0,3
+Verteidigung,Großbritannien,3,2,2020,0,4
+Verkehr und Digitalisierung,Bahn,7,3,2020,0,0
+Verkehr und Digitalisierung,Grenze,5,3,2020,0,1
+Verkehr und Digitalisierung,Bundesfernstraßen,4,3,2020,0,2
+Verkehr und Digitalisierung,Brücken,4,3,2020,0,3
+Verkehr und Digitalisierung,Verkehr,4,3,2020,0,4
+Arbeit,Dienste,6,3,2020,0,0
+Arbeit,Sitzung,6,3,2020,0,1
+Arbeit,Beschäftigte,6,3,2020,0,2
+Arbeit,Zeit,5,3,2020,0,3
+Arbeit,Beschäftigten,4,3,2020,0,4
+Finanzen,Kredite,4,3,2020,0,0
+Finanzen,Insolvenzantragspflicht,2,3,2020,0,1
+Finanzen,Finanzrahmen,2,3,2020,0,2
+Finanzen,Eigenkapital,2,3,2020,0,3
+Finanzen,Pauschalbeträge,1,3,2020,0,4
+Wohnungsbau,Zusatzausgaben,8,3,2020,0,0
+Wohnungsbau,Flüchtlinge,5,3,2020,0,1
+Wohnungsbau,Migranten,4,3,2020,0,2
+Wohnungsbau,Building,3,3,2020,0,3
+Wohnungsbau,Finanzhilfen,3,3,2020,0,4
+Entwicklung,Voraussetzungen,7,3,2020,0,0
+Entwicklung,Überarbeitung,6,3,2020,0,1
+Entwicklung,Digitalisierung,6,3,2020,0,2
+Entwicklung,Reduktion,6,3,2020,0,3
+Entwicklung,Betreuung,5,3,2020,0,4
+Bildung und Forschung,Coronavirus,7,3,2020,0,0
+Bildung und Forschung,Gender,5,3,2020,0,1
+Bildung und Forschung,Wissenschaft,5,3,2020,0,2
+Bildung und Forschung,Moratorium,4,3,2020,0,3
+Bildung und Forschung,Studien,4,3,2020,0,4
+Landwirtschaft,Thüringen,5,3,2020,0,0
+Landwirtschaft,Betriebe,4,3,2020,0,1
+Landwirtschaft,Gemischten,4,3,2020,0,2
+Landwirtschaft,Ausgleichszahlungen,3,3,2020,0,3
+Landwirtschaft,Düngeverordnung,3,3,2020,0,4
+Außenpolitik,Türkei,11,3,2020,0,0
+Außenpolitik,Mandatsobergrenze,7,3,2020,0,1
+Außenpolitik,Abkommens,5,3,2020,0,2
+Außenpolitik,Nationen,5,3,2020,0,3
+Außenpolitik,Botschaft,5,3,2020,0,4
+Gesundheit,Funktionsfähigkeit,4,3,2020,0,0
+Gesundheit,Patienten,3,3,2020,0,1
+Gesundheit,Gesundheit,3,3,2020,0,2
+Gesundheit,Verbraucherschutz,3,3,2020,0,3
+Gesundheit,Infektionsschutzgesetz,2,3,2020,0,4
+Umwelt,Vereinten,5,3,2020,0,0
+Umwelt,Schutzstatus,3,3,2020,0,1
+Umwelt,Ressourcen,2,3,2020,0,2
+Umwelt,Entsorgung,2,3,2020,0,3
+Umwelt,Plastikmüll,2,3,2020,0,4
+Justiz,Verfassungsschutz,6,3,2020,0,0
+Justiz,Grundrechten,3,3,2020,0,1
+Justiz,Rechtsgrundlage,3,3,2020,0,2
+Justiz,Auskunftssperre,3,3,2020,0,3
+Justiz,Beamten,3,3,2020,0,4
+Wirtschaft,Griechenland,10,3,2020,0,0
+Wirtschaft,Wirtschaft,6,3,2020,0,1
+Wirtschaft,Vertreter,5,3,2020,0,2
+Wirtschaft,Maritimen,4,3,2020,0,3
+Wirtschaft,Krise,3,3,2020,0,4
+Innenpolitik,Rechtsextremismus,3,3,2020,0,0
+Innenpolitik,Ministerpräsidenten,3,3,2020,0,1
+Innenpolitik,Sozialleistungen,2,3,2020,0,2
+Innenpolitik,URENCO,2,3,2020,0,3
+Innenpolitik,Asylanträge,2,3,2020,0,4
+Familie,Kinder,8,3,2020,0,0
+Familie,Heimat,7,3,2020,0,1
+Familie,Angela,4,3,2020,0,2
+Familie,Eltern,3,3,2020,0,3
+Familie,Oswin,3,3,2020,0,4
+Verteidigung,Streitkräfte,10,3,2020,0,0
+Verteidigung,Irak,5,3,2020,0,1
+Verteidigung,Kanada,5,3,2020,0,2
+Verteidigung,Waffenschmuggel,4,3,2020,0,3
+Verteidigung,KrWaffKontrG,4,3,2020,0,4
+Entwicklung,Öffnung,11,4,2020,0,0
+Entwicklung,Absicherung,8,4,2020,0,1
+Entwicklung,Eindämmung,8,4,2020,0,2
+Entwicklung,Sinne,6,4,2020,0,3
+Entwicklung,Anbieter,5,4,2020,0,4
+Arbeit,Hilfen,4,4,2020,0,0
+Arbeit,Ersetzen,4,4,2020,0,1
+Arbeit,Hilfe,3,4,2020,0,2
+Arbeit,Beschäftigte,3,4,2020,0,3
+Arbeit,Begegnung,3,4,2020,0,4
+Außenpolitik,Demokratie,5,4,2020,0,0
+Außenpolitik,Abgeordnetenentschädigung,3,4,2020,0,1
+Außenpolitik,Generalversammlungen,3,4,2020,0,2
+Außenpolitik,Sanktionen,3,4,2020,0,3
+Außenpolitik,Umsatzsteuergesetz,2,4,2020,0,4
+Umwelt,Green,2,4,2020,0,0
+Umwelt,Gewässer,2,4,2020,0,1
+Umwelt,Atomkraft,1,4,2020,0,2
+Umwelt,Klimaschutz,1,4,2020,0,3
+Umwelt,Tschernobyl,1,4,2020,0,4
+Bildung und Forschung,Instrumente,4,4,2020,0,0
+Bildung und Forschung,Ausbildungsförderung,4,4,2020,0,1
+Bildung und Forschung,Coronavirus,4,4,2020,0,2
+Bildung und Forschung,Sommersemesters,4,4,2020,0,3
+Bildung und Forschung,Förderinstrumente,3,4,2020,0,4
+Landwirtschaft,Landesaufnahme,3,4,2020,0,0
+Landwirtschaft,Genossenschaften,3,4,2020,0,1
+Landwirtschaft,Hangneigung,2,4,2020,0,2
+Landwirtschaft,Geologischen,2,4,2020,0,3
+Landwirtschaft,Ausgleichszahlungen,2,4,2020,0,4
+Verkehr und Digitalisierung,Fahrkostenzuschuss,3,4,2020,0,0
+Verkehr und Digitalisierung,Grenze,3,4,2020,0,1
+Verkehr und Digitalisierung,Bahn,3,4,2020,0,2
+Verkehr und Digitalisierung,Handel,2,4,2020,0,3
+Verkehr und Digitalisierung,Internet,2,4,2020,0,4
+Wirtschaft,Kurzarbeitergeld,7,4,2020,0,0
+Wirtschaft,Europäischer,6,4,2020,0,1
+Wirtschaft,Kurzarbeitergeldes,6,4,2020,0,2
+Wirtschaft,Sachsen,4,4,2020,0,3
+Wirtschaft,Krise,3,4,2020,0,4
+Justiz,Straftaten,5,4,2020,0,0
+Justiz,Staatsanwaltschaft,3,4,2020,0,1
+Justiz,Grundrechten,3,4,2020,0,2
+Justiz,Einführungsgesetz,2,4,2020,0,3
+Justiz,Haftpflichtversicherer,2,4,2020,0,4
+Innenpolitik,Grenzkontrollen,5,4,2020,0,0
+Innenpolitik,Arbeitslosenversicherung,3,4,2020,0,1
+Innenpolitik,Arbeitslosengeld,3,4,2020,0,2
+Innenpolitik,Asylprüfung,3,4,2020,0,3
+Innenpolitik,Rettungsschirm,2,4,2020,0,4
+Gesundheit,Soforthilfe,3,4,2020,0,0
+Gesundheit,Ältere,3,4,2020,0,1
+Gesundheit,Gefährdung,2,4,2020,0,2
+Gesundheit,Krankenkassen,2,4,2020,0,3
+Gesundheit,Pflege,2,4,2020,0,4
+Wohnungsbau,Soforthilfen,4,4,2020,0,0
+Wohnungsbau,Rechtsanspruch,4,4,2020,0,1
+Wohnungsbau,Zuschüsse,4,4,2020,0,2
+Wohnungsbau,Zuschuss,4,4,2020,0,3
+Wohnungsbau,Krankenhäuser,4,4,2020,0,4
+Finanzen,Vermögensabgabe,4,4,2020,0,0
+Finanzen,Bundeszuschusses,2,4,2020,0,1
+Finanzen,Verträge,1,4,2020,0,2
+Finanzen,Haushalt,1,4,2020,0,3
+Finanzen,Unternehmensanteile,1,4,2020,0,4
+Verteidigung,Frontex,3,4,2020,0,0
+Verteidigung,Einheiten,2,4,2020,0,1
+Verteidigung,Flüchtlingscamp,2,4,2020,0,2
+Verteidigung,Frankreich,2,4,2020,0,3
+Verteidigung,Thryve,2,4,2020,0,4
+Familie,Eltern,6,4,2020,0,0
+Familie,Kinder,4,4,2020,0,1
+Familie,Angehörige,2,4,2020,0,2
+Familie,Erwachsene,2,4,2020,0,3
+Familie,Kindern,2,4,2020,0,4
+Entwicklung,Ausbildung,16,5,2020,0,0
+Entwicklung,Stabilisierung,12,5,2020,0,1
+Entwicklung,Herstellung,11,5,2020,0,2
+Entwicklung,Absicherung,10,5,2020,0,3
+Entwicklung,Erarbeitung,10,5,2020,0,4
+Bildung und Forschung,Coronavirus,10,5,2020,0,0
+Bildung und Forschung,Entwicklungszusammenarbeit,6,5,2020,0,1
+Bildung und Forschung,Operationstechnischen,6,5,2020,0,2
+Bildung und Forschung,Studierender,5,5,2020,0,3
+Bildung und Forschung,Veranstaltungen,5,5,2020,0,4
+Umwelt,Klimaschutz,7,5,2020,0,0
+Umwelt,Energieeffizienz,4,5,2020,0,1
+Umwelt,Wasser,4,5,2020,0,2
+Umwelt,Energie,4,5,2020,0,3
+Umwelt,Gewässer,2,5,2020,0,4
+Finanzen,Verwalters,6,5,2020,0,0
+Finanzen,Rettungsfonds,4,5,2020,0,1
+Finanzen,Haushaltsführung,4,5,2020,0,2
+Finanzen,Gewährleistungen,3,5,2020,0,3
+Finanzen,Visa,3,5,2020,0,4
+Außenpolitik,Mandatsobergrenze,9,5,2020,0,0
+Außenpolitik,Einkommensteuergesetz,9,5,2020,0,1
+Außenpolitik,Regierung,8,5,2020,0,2
+Außenpolitik,Mandats,6,5,2020,0,3
+Außenpolitik,Abkommen,6,5,2020,0,4
+Arbeit,Beschäftigte,12,5,2020,0,0
+Arbeit,Hilfe,8,5,2020,0,1
+Arbeit,Mitarbeiter,8,5,2020,0,2
+Arbeit,Hilfsmaßnahmen,8,5,2020,0,3
+Arbeit,Selbstständigen,7,5,2020,0,4
+Wirtschaft,Kurzarbeitergeld,10,5,2020,0,0
+Wirtschaft,München,10,5,2020,0,1
+Wirtschaft,Kurzarbeitergeldes,8,5,2020,0,2
+Wirtschaft,Wirtschaft,6,5,2020,0,3
+Wirtschaft,Europäischer,6,5,2020,0,4
+Verkehr und Digitalisierung,Bahn,11,5,2020,0,0
+Verkehr und Digitalisierung,Haftungshöchstbeträge,6,5,2020,0,1
+Verkehr und Digitalisierung,Öffentlichkeitsbeteiligung,6,5,2020,0,2
+Verkehr und Digitalisierung,Flugverbindung,6,5,2020,0,3
+Verkehr und Digitalisierung,Elektrofahrzeuge,5,5,2020,0,4
+Landwirtschaft,Entwicklungsländern,5,5,2020,0,0
+Landwirtschaft,Steuerbefreiung,5,5,2020,0,1
+Landwirtschaft,Hebammen,5,5,2020,0,2
+Landwirtschaft,Grundrente,4,5,2020,0,3
+Landwirtschaft,Landwirtschaft,4,5,2020,0,4
+Gesundheit,Pflege,11,5,2020,0,0
+Gesundheit,Gesundheit,9,5,2020,0,1
+Gesundheit,Soforthilfe,7,5,2020,0,2
+Gesundheit,Leistungserbringer,6,5,2020,0,3
+Gesundheit,Gesundheitsanwendungen,5,5,2020,0,4
+Wohnungsbau,Zusatzausgaben,9,5,2020,0,0
+Wohnungsbau,Grundsicherung,9,5,2020,0,1
+Wohnungsbau,Soforthilfen,7,5,2020,0,2
+Wohnungsbau,Schulen,6,5,2020,0,3
+Wohnungsbau,Zuschüsse,6,5,2020,0,4
+Innenpolitik,Arbeitslosengeld,5,5,2020,0,0
+Innenpolitik,Grundgesetz,4,5,2020,0,1
+Innenpolitik,Rückkehrrecht,3,5,2020,0,2
+Innenpolitik,Grundrechtseinschränkungen,3,5,2020,0,3
+Innenpolitik,Sozialleistungen,3,5,2020,0,4
+Justiz,Justiz,7,5,2020,0,0
+Justiz,Bundesverfassungsgerichts,7,5,2020,0,1
+Justiz,Verfassungsschutz,7,5,2020,0,2
+Justiz,Nürnberg,7,5,2020,0,3
+Justiz,Einführungsgesetz,6,5,2020,0,4
+Verteidigung,Streitkräfte,14,5,2020,0,0
+Verteidigung,Bundeswehr,9,5,2020,0,1
+Verteidigung,Mali,4,5,2020,0,2
+Verteidigung,Drohnen,4,5,2020,0,3
+Verteidigung,Corona,4,5,2020,0,4
+Familie,Familien,12,5,2020,0,0
+Familie,Eltern,8,5,2020,0,1
+Familie,Kinder,7,5,2020,0,2
+Familie,Angehörige,7,5,2020,0,3
+Familie,Bezieherinnen,5,5,2020,0,4
+Wirtschaft,Gesellschaft,6,6,2020,0,1
+Wirtschaft,Kurzarbeitergeld,3,6,2020,0,2
+Wirtschaft,Trifft,3,6,2020,0,3
+Wirtschaft,Einkommensteuer,2,6,2020,0,4
+Innenpolitik,Progressionsvorbehalt,5,6,2020,0,0
+Innenpolitik,Rechtsextremismus,4,6,2020,0,1
+Innenpolitik,Steuererklärungspflicht,3,6,2020,0,2
+Innenpolitik,Nachtragshaushaltsgesetz,3,6,2020,0,3
+Innenpolitik,Arbeitslosengeld,3,6,2020,0,4
+Justiz,Urteil,5,6,2020,0,0
+Justiz,Bundesverfassungsgerichts,4,6,2020,0,1
+Justiz,Verurteilung,4,6,2020,0,2
+Justiz,Straftaten,4,6,2020,0,3
+Justiz,Auskunftssperre,4,6,2020,0,4
+Wohnungsbau,Einzelmaßnahmen,10,6,2020,0,0
+Wohnungsbau,Kinderbonus,8,6,2020,0,1
+Wohnungsbau,Arbeitslosigkeitsrisiken,5,6,2020,0,2
+Wohnungsbau,Konjunkturpaketes,3,6,2020,0,3
+Wohnungsbau,Finanzhilfen,3,6,2020,0,4
+Bildung und Forschung,Langtitels,4,6,2020,0,0
+Bildung und Forschung,Entwicklungszusammenarbeit,3,6,2020,0,1
+Bildung und Forschung,Bildung,3,6,2020,0,2
+Bildung und Forschung,Ergänzendes,3,6,2020,0,3
+Bildung und Forschung,Sofortzuschüsse,2,6,2020,0,4
+Gesundheit,Zustand,4,6,2020,0,0
+Gesundheit,Soforthilfe,3,6,2020,0,1
+Gesundheit,Gesundheitsschutz,3,6,2020,0,2
+Gesundheit,Beschwerden,3,6,2020,0,3
+Gesundheit,Wohlstand,2,6,2020,0,4
+Verkehr und Digitalisierung,Handel,4,6,2020,0,0
+Verkehr und Digitalisierung,Brücken,4,6,2020,0,1
+Verkehr und Digitalisierung,Internet,3,6,2020,0,2
+Verkehr und Digitalisierung,Zwischenfall,3,6,2020,0,3
+Verkehr und Digitalisierung,Verkehrsaufkommen,2,6,2020,0,4
+Familie,Familien,3,6,2020,0,0
+Familie,Kinder,3,6,2020,0,1
+Familie,Geschlechtsangabe,2,6,2020,0,2
+Familie,Kindern,2,6,2020,0,3
+Familie,Gruppe,2,6,2020,0,4
+Finanzen,Gewährleistungen,5,6,2020,0,0
+Finanzen,Einkommensteuererklärungen,2,6,2020,0,1
+Finanzen,Gesamthaushalts,2,6,2020,0,2
+Finanzen,Wirtschaftsplans,2,6,2020,0,3
+Finanzen,Beträge,2,6,2020,0,4
+Landwirtschaft,Rumänien,3,6,2020,0,0
+Landwirtschaft,Steuerbefreiungen,2,6,2020,0,1
+Landwirtschaft,Entwicklungsländern,2,6,2020,0,2
+Landwirtschaft,Energieeinsparungsverordnung,2,6,2020,0,3
+Landwirtschaft,Windenergieanlagen,2,6,2020,0,4
+Umwelt,Energien,5,6,2020,0,0
+Umwelt,Klimaschutz,4,6,2020,0,1
+Umwelt,Green,3,6,2020,0,2
+Umwelt,Natur,3,6,2020,0,3
+Umwelt,Ermäßigungsfaktors,2,6,2020,0,4
+Außenpolitik,Regierung,11,6,2020,0,0
+Außenpolitik,Demokratie,5,6,2020,0,1
+Außenpolitik,Syrien,4,6,2020,0,2
+Außenpolitik,Atomwaffen,4,6,2020,0,3
+Außenpolitik,Mittelmeer,4,6,2020,0,4
+Verteidigung,Libyen,3,6,2020,0,0
+Verteidigung,Bundeswehr,2,6,2020,0,1
+Verteidigung,Schutzausrüstung,2,6,2020,0,2
+Verteidigung,Männern,2,6,2020,0,3
+Verteidigung,Nordsyrien,2,6,2020,0,4
+Landwirtschaft,Kohleregionen,5,7,2020,0,0
+Landwirtschaft,Kohleverstromung,5,7,2020,0,1
+Landwirtschaft,Gemeinden,4,7,2020,0,2
+Landwirtschaft,Grundrente,4,7,2020,0,3
+Landwirtschaft,Nutztierhaltung,3,7,2020,0,4
+Wohnungsbau,Einzelmaßnahmen,6,7,2020,0,0
+Wohnungsbau,Rentenversicherung,6,7,2020,0,1
+Wohnungsbau,Hamburg,5,7,2020,0,2
+Wohnungsbau,Finanzhilfen,4,7,2020,0,3
+Wohnungsbau,Nettokreditaufnahme,4,7,2020,0,4
+Entwicklung,Austritt,7,7,2020,0,0
+Entwicklung,Empfehlungen,6,7,2020,0,1
+Entwicklung,Zukunft,6,7,2020,0,2
+Entwicklung,Herstellung,6,7,2020,0,3
+Entwicklung,Lösung,5,7,2020,0,4
+Finanzen,Gesamthaushalts,4,7,2020,0,0
+Finanzen,Wirtschaftsplans,4,7,2020,0,1
+Finanzen,Kredite,3,7,2020,0,2
+Finanzen,Sozialversicherungsbeiträge,2,7,2020,0,3
+Finanzen,Finanzielle,2,7,2020,0,4
+Arbeit,Bildaufnahmen,7,7,2020,0,0
+Arbeit,Hilfen,4,7,2020,0,1
+Arbeit,Beschäftigung,3,7,2020,0,2
+Arbeit,Unverzügliche,3,7,2020,0,3
+Arbeit,Dienste,3,7,2020,0,4
+Bildung und Forschung,Konferenz,5,7,2020,0,0
+Bildung und Forschung,Entwicklungszusammenarbeit,5,7,2020,0,1
+Bildung und Forschung,Pandemien,3,7,2020,0,2
+Bildung und Forschung,Mediendienste,3,7,2020,0,3
+Bildung und Forschung,Rehabilitationsstärkungsgesetz,3,7,2020,0,4
+Wirtschaft,Wirecard,5,7,2020,0,0
+Wirtschaft,Gesellschaft,4,7,2020,0,1
+Wirtschaft,Krise,3,7,2020,0,2
+Wirtschaft,Zentralbank,3,7,2020,0,3
+Wirtschaft,Kurzarbeitergeld,3,7,2020,0,4
+Gesundheit,Rehabilitation,4,7,2020,0,0
+Gesundheit,Diabetes,3,7,2020,0,1
+Gesundheit,Gefahr,3,7,2020,0,2
+Gesundheit,Gesundheit,3,7,2020,0,3
+Gesundheit,Krankenversicherung,3,7,2020,0,4
+Verkehr und Digitalisierung,Puttgarden,4,7,2020,0,0
+Verkehr und Digitalisierung,Verstößen,3,7,2020,0,1
+Verkehr und Digitalisierung,Luftverkehrs,3,7,2020,0,2
+Verkehr und Digitalisierung,Waren,2,7,2020,0,3
+Verkehr und Digitalisierung,Netz,2,7,2020,0,4
+Justiz,Gesetze,5,7,2020,0,0
+Justiz,Nordirland,5,7,2020,0,1
+Justiz,Behörde,3,7,2020,0,2
+Justiz,Rechtsstaatlichkeit,3,7,2020,0,3
+Justiz,Strafgesetzbuch,3,7,2020,0,4
+Außenpolitik,Regierung,8,7,2020,0,0
+Außenpolitik,Königreichs,7,7,2020,0,1
+Außenpolitik,Israel,7,7,2020,0,2
+Außenpolitik,Atomgemeinschaft,6,7,2020,0,3
+Außenpolitik,Abkommens,4,7,2020,0,4
+Innenpolitik,Überhangmandaten,2,7,2020,0,0
+Innenpolitik,Ungarn,2,7,2020,0,1
+Innenpolitik,Kreditobergrenze,2,7,2020,0,2
+Innenpolitik,Haushaltsgesetz,2,7,2020,0,3
+Innenpolitik,Arbeitslosengeld,2,7,2020,0,4
+Verteidigung,Großbritannien,5,7,2020,0,0
+Verteidigung,Königreich,3,7,2020,0,1
+Verteidigung,Seenotrettung,2,7,2020,0,2
+Verteidigung,Bundeswehr,2,7,2020,0,3
+Verteidigung,Apotheker,1,7,2020,0,4
+Umwelt,Klimaschutz,4,7,2020,0,0
+Umwelt,Lübeck,4,7,2020,0,1
+Umwelt,Energien,3,7,2020,0,2
+Umwelt,Kohlekraftwerke,2,7,2020,0,3
+Umwelt,Lieferketten,2,7,2020,0,4
+Familie,Partnerschaft,6,7,2020,0,0
+Familie,Kirche,4,7,2020,0,1
+Familie,Unterkunft,3,7,2020,0,2
+Familie,Kinder,2,7,2020,0,3
+Familie,Horst,2,7,2020,0,4
+Finanzen,Finanzielle,6,9,2020,0,0
+Finanzen,Finanzlage,4,9,2020,0,1
+Finanzen,Finanzkraft,4,9,2020,0,2
+Finanzen,Verwalters,3,9,2020,0,3
+Finanzen,Urkunden,3,9,2020,0,4
+Außenpolitik,Regierung,6,9,2020,0,0
+Außenpolitik,Agenda,5,9,2020,0,1
+Außenpolitik,Bundesrates,5,9,2020,0,2
+Außenpolitik,Menschenrechten,5,9,2020,0,3
+Außenpolitik,Königreichs,4,9,2020,0,4
+Wohnungsbau,Moria,8,9,2020,0,0
+Wohnungsbau,Gewerbesteuermindereinnahmen,8,9,2020,0,1
+Wohnungsbau,Krankenhäuser,7,9,2020,0,2
+Wohnungsbau,Einzelmaßnahmen,6,9,2020,0,3
+Wohnungsbau,Nord,5,9,2020,0,4
+Entwicklung,Digitalisierung,14,9,2020,0,0
+Entwicklung,Intelligenz,7,9,2020,0,1
+Entwicklung,Überschreitung,6,9,2020,0,2
+Entwicklung,Untersuchung,6,9,2020,0,3
+Entwicklung,Ausstattung,6,9,2020,0,4
+Innenpolitik,Grundgesetzänderung,4,9,2020,0,0
+Innenpolitik,Haushaltsgesetz,2,9,2020,0,1
+Innenpolitik,Grundgesetz,2,9,2020,0,2
+Innenpolitik,Atomgesetzes,2,9,2020,0,3
+Innenpolitik,Steuertarif,2,9,2020,0,4
+Familie,Unterkunft,13,9,2020,0,0
+Familie,Kindern,7,9,2020,0,1
+Familie,Alexej,5,9,2020,0,2
+Familie,Aufenthalt,3,9,2020,0,3
+Familie,Allianz,3,9,2020,0,4
+Arbeit,Gesetzentwürfen,7,9,2020,0,0
+Arbeit,Hilfe,6,9,2020,0,1
+Arbeit,Beitrag,5,9,2020,0,2
+Arbeit,Aktivitäten,5,9,2020,0,3
+Arbeit,Satz,5,9,2020,0,4
+Verteidigung,Bundeswehr,4,9,2020,0,0
+Verteidigung,Mali,4,9,2020,0,1
+Verteidigung,Lager,3,9,2020,0,2
+Verteidigung,Streitkräfte,3,9,2020,0,3
+Verteidigung,Ägypten,2,9,2020,0,4
+Verkehr und Digitalisierung,Inseln,5,9,2020,0,0
+Verkehr und Digitalisierung,Stream,5,9,2020,0,1
+Verkehr und Digitalisierung,Elektrofahrzeuge,5,9,2020,0,2
+Verkehr und Digitalisierung,Verstößen,4,9,2020,0,3
+Verkehr und Digitalisierung,Infrastrukturabgabe,4,9,2020,0,4
+Justiz,Rechtsstaatlichkeit,7,9,2020,0,0
+Justiz,Abgabenordnung,4,9,2020,0,1
+Justiz,Nawalny,4,9,2020,0,2
+Justiz,Presse,4,9,2020,0,3
+Justiz,Bundespolizei,4,9,2020,0,4
+Bildung und Forschung,Bildung,15,9,2020,0,0
+Bildung und Forschung,Innovation,7,9,2020,0,1
+Bildung und Forschung,Innovationen,6,9,2020,0,2
+Bildung und Forschung,Wasserstoff,6,9,2020,0,3
+Bildung und Forschung,Weiterbildung,5,9,2020,0,4
+Wirtschaft,Ausland,7,9,2020,0,0
+Wirtschaft,Zentralbank,5,9,2020,0,1
+Wirtschaft,Energiewende,4,9,2020,0,2
+Wirtschaft,Gewerbesteuerausfälle,4,9,2020,0,3
+Wirtschaft,Sektoren,4,9,2020,0,4
+Gesundheit,Gesundheit,5,9,2020,0,0
+Gesundheit,Apotheken,4,9,2020,0,1
+Gesundheit,Gefahr,3,9,2020,0,2
+Gesundheit,Wohlstand,3,9,2020,0,3
+Gesundheit,Künstliche,3,9,2020,0,4
+Landwirtschaft,Gemeinden,8,9,2020,0,0
+Landwirtschaft,Heizung,8,9,2020,0,1
+Landwirtschaft,Windenergieanlagen,3,9,2020,0,2
+Landwirtschaft,Entwicklungsländern,3,9,2020,0,3
+Landwirtschaft,Betriebe,3,9,2020,0,4
+Umwelt,Nachhaltigkeit,8,9,2020,0,0
+Umwelt,Umwelt,6,9,2020,0,1
+Umwelt,Energie,5,9,2020,0,2
+Umwelt,Klimaschutz,5,9,2020,0,3
+Umwelt,Energien,4,9,2020,0,4
+Entwicklung,Vertrags,27,10,2020,0,0
+Entwicklung,Einsetzung,8,10,2020,0,1
+Entwicklung,Beschaffung,8,10,2020,0,2
+Entwicklung,Zuge,7,10,2020,0,3
+Entwicklung,Möglichkeiten,7,10,2020,0,4
+Arbeit,Begleitung,5,10,2020,0,0
+Arbeit,Hilfe,5,10,2020,0,1
+Arbeit,Einreise,5,10,2020,0,2
+Arbeit,Beitrag,4,10,2020,0,3
+Arbeit,Mitarbeiter,4,10,2020,0,4
+Bildung und Forschung,Bildung,8,10,2020,0,0
+Bildung und Forschung,Studie,7,10,2020,0,1
+Bildung und Forschung,Coronavirus,6,10,2020,0,2
+Bildung und Forschung,Weiterbildung,4,10,2020,0,3
+Bildung und Forschung,Ausschusses,4,10,2020,0,4
+Außenpolitik,Abkommen,26,10,2020,0,0
+Außenpolitik,Türkei,15,10,2020,0,1
+Außenpolitik,Assoziationsrat,11,10,2020,0,2
+Außenpolitik,Regierung,10,10,2020,0,3
+Außenpolitik,Assoziierungsabkommen,9,10,2020,0,4
+Verkehr und Digitalisierung,Arzneimitteln,4,10,2020,0,0
+Verkehr und Digitalisierung,Wettbewerb,3,10,2020,0,1
+Verkehr und Digitalisierung,Cannabis,3,10,2020,0,2
+Verkehr und Digitalisierung,Bundesautobahnen,3,10,2020,0,3
+Verkehr und Digitalisierung,Bahn,3,10,2020,0,4
+Justiz,Polizei,7,10,2020,0,0
+Justiz,Abgabenordnung,7,10,2020,0,1
+Justiz,Grundrechten,6,10,2020,0,2
+Justiz,Einführungsgesetz,6,10,2020,0,3
+Justiz,Befugnisse,5,10,2020,0,4
+Wirtschaft,Verwaltung,5,10,2020,0,0
+Wirtschaft,Wirtschaft,4,10,2020,0,1
+Wirtschaft,China,4,10,2020,0,2
+Wirtschaft,Aserbaidschan,4,10,2020,0,3
+Wirtschaft,Luxemburg,3,10,2020,0,4
+Innenpolitik,Wettbewerbsrecht,5,10,2020,0,0
+Innenpolitik,Reformkommission,4,10,2020,0,1
+Innenpolitik,Seehofer,4,10,2020,0,2
+Innenpolitik,Niederlande,3,10,2020,0,3
+Innenpolitik,Ungarn,3,10,2020,0,4
+Wohnungsbau,Berlin,8,10,2020,0,0
+Wohnungsbau,Haushaltsjahr,6,10,2020,0,1
+Wohnungsbau,Flüchtlinge,5,10,2020,0,2
+Wohnungsbau,Sozialcharta,5,10,2020,0,3
+Wohnungsbau,Einzelmaßnahmen,4,10,2020,0,4
+Gesundheit,Prävention,5,10,2020,0,0
+Gesundheit,Apotheken,5,10,2020,0,1
+Gesundheit,Freiheit,4,10,2020,0,2
+Gesundheit,Unverletzlichkeit,4,10,2020,0,3
+Gesundheit,Ernährung,4,10,2020,0,4
+Familie,Kindern,6,10,2020,0,0
+Familie,Horst,6,10,2020,0,1
+Familie,Kinder,5,10,2020,0,2
+Familie,Eltern,4,10,2020,0,3
+Familie,Heimat,4,10,2020,0,4
+Verteidigung,Libyen,5,10,2020,0,0
+Verteidigung,Afghanistan,5,10,2020,0,1
+Verteidigung,Königreich,4,10,2020,0,2
+Verteidigung,Soldaten,4,10,2020,0,3
+Verteidigung,Streitkräfte,4,10,2020,0,4
+Finanzen,Visa,3,10,2020,0,0
+Finanzen,Gesamthaushaltsplan,2,10,2020,0,1
+Finanzen,Haushalt,2,10,2020,0,2
+Finanzen,Bundeshaushaltsplan,2,10,2020,0,3
+Finanzen,Sozialversicherungsbeiträge,2,10,2020,0,4
+Landwirtschaft,Gemeinschaften,8,10,2020,0,0
+Landwirtschaft,Landwirtschaft,7,10,2020,0,1
+Landwirtschaft,Gemischten,5,10,2020,0,2
+Landwirtschaft,Niedersachsen,5,10,2020,0,3
+Landwirtschaft,Windenergieanlagen,4,10,2020,0,4
+Umwelt,Energien,6,10,2020,0,0
+Umwelt,Handeln,3,10,2020,0,1
+Umwelt,Ausgangsstoffen,3,10,2020,0,2
+Umwelt,Vereinten,3,10,2020,0,3
+Umwelt,Kulturgut,2,10,2020,0,4
+Außenpolitik,Regierung,13,11,2020,0,0
+Außenpolitik,Türkei,9,11,2020,0,1
+Außenpolitik,Menschenrechte,7,11,2020,0,2
+Außenpolitik,Beziehungen,6,11,2020,0,3
+Außenpolitik,Ukraine,6,11,2020,0,4
+Wohnungsbau,Arbeitslosigkeitsrisiken,17,11,2020,0,0
+Wohnungsbau,Elterngeld,6,11,2020,0,1
+Wohnungsbau,Berlin,6,11,2020,0,2
+Wohnungsbau,Verordnungsermächtigungen,5,11,2020,0,3
+Wohnungsbau,Einzelmaßnahmen,4,11,2020,0,4
+Entwicklung,Kriterien,12,11,2020,0,0
+Entwicklung,Voraussetzungen,11,11,2020,0,1
+Entwicklung,Verkürzung,10,11,2020,0,2
+Entwicklung,Digitalisierung,9,11,2020,0,3
+Entwicklung,Erarbeitung,9,11,2020,0,4
+Justiz,Gerichtshofs,7,11,2020,0,0
+Justiz,Justiz,7,11,2020,0,1
+Justiz,Bundespolizei,7,11,2020,0,2
+Justiz,Bremer,6,11,2020,0,3
+Justiz,Menschenrechtsverletzungen,5,11,2020,0,4
+Finanzen,Ermächtigungen,5,11,2020,0,0
+Finanzen,Insolvenzantragspflicht,4,11,2020,0,1
+Finanzen,Gesetzliche,3,11,2020,0,2
+Finanzen,Sozialversicherungsbeiträge,3,11,2020,0,3
+Finanzen,Budget,3,11,2020,0,4
+Bildung und Forschung,Bildung,7,11,2020,0,0
+Bildung und Forschung,Standpunkt,6,11,2020,0,1
+Bildung und Forschung,Lambrecht,5,11,2020,0,2
+Bildung und Forschung,Videokonferenz,5,11,2020,0,3
+Bildung und Forschung,Ausschusses,4,11,2020,0,4
+Arbeit,Hilfe,10,11,2020,0,0
+Arbeit,Vergütung,7,11,2020,0,1
+Arbeit,Sitzung,6,11,2020,0,2
+Arbeit,Kurzarbeit,6,11,2020,0,3
+Arbeit,Beschäftigung,6,11,2020,0,4
+Umwelt,Energie,5,11,2020,0,0
+Umwelt,Schutzstatus,4,11,2020,0,1
+Umwelt,Klimawandel,3,11,2020,0,2
+Umwelt,Atomkraftwerks,3,11,2020,0,3
+Umwelt,Ausgangsstoffen,3,11,2020,0,4
+Gesundheit,Gesundheit,8,11,2020,0,0
+Gesundheit,Verbraucherschutz,8,11,2020,0,1
+Gesundheit,Krankenversicherung,6,11,2020,0,2
+Gesundheit,Infektionsschutzgesetzes,6,11,2020,0,3
+Gesundheit,Gesundheitsdienst,5,11,2020,0,4
+Verkehr und Digitalisierung,Öffentlichen,9,11,2020,0,0
+Verkehr und Digitalisierung,Bahn,7,11,2020,0,1
+Verkehr und Digitalisierung,Himmel,4,11,2020,0,2
+Verkehr und Digitalisierung,Flughäfen,4,11,2020,0,3
+Verkehr und Digitalisierung,Fahrzeuge,4,11,2020,0,4
+Familie,Heimat,8,11,2020,0,0
+Familie,Angela,6,11,2020,0,1
+Familie,Kinder,6,11,2020,0,2
+Familie,Familienangehörigen,4,11,2020,0,3
+Familie,Hassan,4,11,2020,0,4
+Innenpolitik,Vormundschaftsrechts,3,11,2020,0,0
+Innenpolitik,Zeitung,3,11,2020,0,1
+Innenpolitik,Seehofer,3,11,2020,0,2
+Innenpolitik,Sozialversicherungswahlen,3,11,2020,0,3
+Innenpolitik,Neuwahlen,3,11,2020,0,4
+Wirtschaft,Wirtschaft,12,11,2020,0,0
+Wirtschaft,Ausland,6,11,2020,0,1
+Wirtschaft,Belarus,6,11,2020,0,2
+Wirtschaft,Zivilgesellschaft,5,11,2020,0,3
+Wirtschaft,Verwaltung,5,11,2020,0,4
+Landwirtschaft,Landwirtschaft,4,11,2020,0,0
+Landwirtschaft,Alterssicherung,4,11,2020,0,1
+Landwirtschaft,Infektionsgeschehen,3,11,2020,0,2
+Landwirtschaft,Ausgleichszahlungen,3,11,2020,0,3
+Landwirtschaft,Niedersachsen,3,11,2020,0,4
+Verteidigung,Bundeswehr,11,11,2020,0,0
+Verteidigung,Rüstungsgüter,5,11,2020,0,1
+Verteidigung,Königreich,5,11,2020,0,2
+Verteidigung,Wurde,4,11,2020,0,3
+Verteidigung,Drohnen,4,11,2020,0,4
+Gesundheit,Freiheit,4,12,2020,0,0
+Gesundheit,Gesundheit,4,12,2020,0,1
+Gesundheit,Zusatzleistungen,2,12,2020,0,2
+Gesundheit,Unverletzlichkeit,2,12,2020,0,3
+Gesundheit,Mobilität,2,12,2020,0,4
+Familie,Heimat,7,12,2020,0,0
+Familie,Kindern,4,12,2020,0,1
+Familie,LUNA,4,12,2020,0,2
+Familie,Nähe,3,12,2020,0,3
+Familie,Erblassers,2,12,2020,0,4
+Entwicklung,Überschreitung,7,12,2020,0,0
+Entwicklung,Beschaffung,6,12,2020,0,1
+Entwicklung,Restrukturierung,6,12,2020,0,2
+Entwicklung,Verkürzung,5,12,2020,0,3
+Entwicklung,Erfüllung,4,12,2020,0,4
+Landwirtschaft,Windenergieanlagen,4,12,2020,0,0
+Landwirtschaft,Ackerlandstatus,3,12,2020,0,1
+Landwirtschaft,Lohnsteuerabzugsverfahren,2,12,2020,0,2
+Landwirtschaft,Wildtieren,2,12,2020,0,3
+Landwirtschaft,Betriebe,2,12,2020,0,4
+Außenpolitik,Menschenrechte,11,12,2020,0,0
+Außenpolitik,Beziehungen,5,12,2020,0,1
+Außenpolitik,Türkei,4,12,2020,0,2
+Außenpolitik,Krisenbewältigung,4,12,2020,0,3
+Außenpolitik,Finanzbeziehungen,4,12,2020,0,4
+Bildung und Forschung,Arbeitsgruppe,3,12,2020,0,0
+Bildung und Forschung,Wasserstoff,3,12,2020,0,1
+Bildung und Forschung,Wissenschaft,2,12,2020,0,2
+Bildung und Forschung,Fachlich,2,12,2020,0,3
+Bildung und Forschung,Arbeitsgebern,2,12,2020,0,4
+Justiz,Einführungsgesetz,4,12,2020,0,0
+Justiz,Familiensachen,4,12,2020,0,1
+Justiz,Finanzverwaltung,4,12,2020,0,2
+Justiz,Grundrechten,3,12,2020,0,3
+Justiz,Gesetze,3,12,2020,0,4
+Arbeit,Kurzarbeit,5,12,2020,0,0
+Arbeit,Tätigkeitsverbote,4,12,2020,0,1
+Arbeit,Fernverkäufe,4,12,2020,0,2
+Arbeit,Vergütung,3,12,2020,0,3
+Arbeit,Projekt,3,12,2020,0,4
+Finanzen,Bundeshaushaltsplans,14,12,2020,0,0
+Finanzen,Einzelplan,6,12,2020,0,1
+Finanzen,Wirtschaftsplans,4,12,2020,0,2
+Finanzen,Gesamthaushalts,4,12,2020,0,3
+Finanzen,Finanzplan,4,12,2020,0,4
+Wohnungsbau,Haushaltsjahr,10,12,2020,0,0
+Wohnungsbau,Nettokreditaufnahme,8,12,2020,0,1
+Wohnungsbau,Flüchtlinge,4,12,2020,0,2
+Wohnungsbau,Entschuldungsverfahren,3,12,2020,0,3
+Wohnungsbau,Jahressteuergesetz,3,12,2020,0,4
+Innenpolitik,Aufenthaltsgesetzes,3,12,2020,0,0
+Innenpolitik,Steuererstattungsansprüche,2,12,2020,0,1
+Innenpolitik,Religionsfreiheit,2,12,2020,0,2
+Innenpolitik,Arbeitnehmerrechten,2,12,2020,0,3
+Innenpolitik,Arbeitsstättenverordnung,2,12,2020,0,4
+Umwelt,Energien,8,12,2020,0,0
+Umwelt,Energie,4,12,2020,0,1
+Umwelt,Schutzziele,2,12,2020,0,2
+Umwelt,Atomstrom,2,12,2020,0,3
+Umwelt,Atomkraft,2,12,2020,0,4
+Wirtschaft,Wirtschaft,5,12,2020,0,0
+Wirtschaft,Unternehmensstatistiken,4,12,2020,0,1
+Wirtschaft,Insolvenz,4,12,2020,0,2
+Wirtschaft,Gesamtwirtschaftliche,4,12,2020,0,3
+Wirtschaft,Vereinen,3,12,2020,0,4
+Verteidigung,Drohnen,8,12,2020,0,0
+Verteidigung,Chalid,7,12,2020,0,1
+Verteidigung,Bundeswehr,6,12,2020,0,2
+Verteidigung,Wehrsoldempfänger,2,12,2020,0,3
+Verteidigung,Soldatenversorgungsgesetz,2,12,2020,0,4
+Verkehr und Digitalisierung,Bahn,7,12,2020,0,0
+Verkehr und Digitalisierung,Gegenständen,6,12,2020,0,1
+Verkehr und Digitalisierung,Empfänger,5,12,2020,0,2
+Verkehr und Digitalisierung,Handel,4,12,2020,0,3
+Verkehr und Digitalisierung,Abbiegeassistenten,3,12,2020,0,4
+Gesundheit,Gesundheit,43,0,2020,0,0
+Gesundheit,Freiheit,22,0,2020,0,1
+Gesundheit,Verbraucherschutz,19,0,2020,0,2
+Gesundheit,Pflege,18,0,2020,0,3
+Gesundheit,Infektionsschutzgesetz,17,0,2020,0,4
+Familie,Kinder,39,0,2020,0,0
+Familie,Heimat,39,0,2020,0,1
+Familie,Kindern,32,0,2020,0,2
+Familie,Eltern,28,0,2020,0,3
+Familie,Familien,23,0,2020,0,4
+Entwicklung,Digitalisierung,51,0,2020,0,0
+Entwicklung,Voraussetzungen,45,0,2020,0,1
+Entwicklung,Beschaffung,42,0,2020,0,2
+Entwicklung,Kriterien,39,0,2020,0,3
+Entwicklung,Erarbeitung,38,0,2020,0,4
+Landwirtschaft,Landwirtschaft,27,0,2020,0,0
+Landwirtschaft,Windenergieanlagen,19,0,2020,0,1
+Landwirtschaft,Gemeinden,19,0,2020,0,2
+Landwirtschaft,Betriebe,18,0,2020,0,3
+Landwirtschaft,Niedersachsen,14,0,2020,0,4
+Außenpolitik,Regierung,67,0,2020,0,0
+Außenpolitik,Türkei,48,0,2020,0,1
+Außenpolitik,Abkommen,44,0,2020,0,2
+Außenpolitik,Menschenrechte,37,0,2020,0,3
+Außenpolitik,Abkommens,32,0,2020,0,4
+Bildung und Forschung,Bildung,47,0,2020,0,0
+Bildung und Forschung,Coronavirus,28,0,2020,0,1
+Bildung und Forschung,Entwicklungszusammenarbeit,27,0,2020,0,2
+Bildung und Forschung,Studie,21,0,2020,0,3
+Bildung und Forschung,Weiterbildung,21,0,2020,0,4
+Justiz,Einführungsgesetz,32,0,2020,0,0
+Justiz,Grundrechten,29,0,2020,0,1
+Justiz,Justiz,29,0,2020,0,2
+Justiz,Bundespolizei,28,0,2020,0,3
+Justiz,Urteil,25,0,2020,0,4
+Arbeit,Hilfe,40,0,2020,0,0
+Arbeit,Sitzung,33,0,2020,0,1
+Arbeit,Vergütung,27,0,2020,0,2
+Arbeit,Gesetzentwürfen,27,0,2020,0,3
+Arbeit,Beschäftigte,26,0,2020,0,4
+Finanzen,Bundeshaushaltsplans,18,0,2020,0,0
+Finanzen,Kredite,18,0,2020,0,1
+Finanzen,Gesamthaushalts,16,0,2020,0,2
+Finanzen,Wirtschaftsplans,14,0,2020,0,3
+Finanzen,Finanzielle,14,0,2020,0,4
+Wohnungsbau,Einzelmaßnahmen,48,0,2020,0,0
+Wohnungsbau,Berlin,31,0,2020,0,1
+Wohnungsbau,Flüchtlinge,26,0,2020,0,2
+Wohnungsbau,Arbeitslosigkeitsrisiken,26,0,2020,0,3
+Wohnungsbau,Nettokreditaufnahme,24,0,2020,0,4
+Innenpolitik,Arbeitslosengeld,17,0,2020,0,0
+Innenpolitik,Rechtsextremismus,16,0,2020,0,1
+Innenpolitik,Seehofer,13,0,2020,0,2
+Innenpolitik,Ungarn,11,0,2020,0,3
+Innenpolitik,Grundgesetz,11,0,2020,0,4
+Umwelt,Energien,36,0,2020,0,0
+Umwelt,Klimaschutz,26,0,2020,0,1
+Umwelt,Energie,26,0,2020,0,2
+Umwelt,Umwelt,15,0,2020,0,3
+Umwelt,Klimaschutzprogramm,14,0,2020,0,4
+Wirtschaft,Wirtschaft,53,0,2020,0,0
+Wirtschaft,Kurzarbeitergeld,29,0,2020,0,1
+Wirtschaft,Gesellschaft,26,0,2020,0,2
+Wirtschaft,Ausland,25,0,2020,0,3
+Wirtschaft,Kurzarbeitergeldes,25,0,2020,0,4
+Verteidigung,Streitkräfte,46,0,2020,0,0
+Verteidigung,Bundeswehr,45,0,2020,0,1
+Verteidigung,Drohnen,23,0,2020,0,2
+Verteidigung,Libyen,22,0,2020,0,3
+Verteidigung,Königreich,19,0,2020,0,4
+Verkehr und Digitalisierung,Bahn,57,0,2020,0,0
+Verkehr und Digitalisierung,Verkehr,26,0,2020,0,1
+Verkehr und Digitalisierung,Handel,22,0,2020,0,2
+Verkehr und Digitalisierung,Öffentlichen,14,0,2020,0,3
+Verkehr und Digitalisierung,Öffentlichkeitsbeteiligung,14,0,2020,0,4
+Entwicklung,Dark,12,1,2021,0,0
+Entwicklung,Zukunft,8,1,2021,0,1
+Entwicklung,Ratifizierung,8,1,2021,0,2
+Entwicklung,Voraussetzungen,6,1,2021,0,3
+Entwicklung,Jahres,6,1,2021,0,4
+Verkehr und Digitalisierung,Light,12,1,2021,0,0
+Verkehr und Digitalisierung,Bahn,7,1,2021,0,1
+Verkehr und Digitalisierung,Verkehr,4,1,2021,0,2
+Verkehr und Digitalisierung,Alkohol,4,1,2021,0,3
+Verkehr und Digitalisierung,Kontrollen,4,1,2021,0,4
+Umwelt,Natur,3,1,2021,0,0
+Umwelt,Vereinten,3,1,2021,0,1
+Umwelt,Umweltprüfungen,3,1,2021,0,2
+Umwelt,Atomkraft,3,1,2021,0,3
+Umwelt,Nachhaltigkeit,2,1,2021,0,4
+Arbeit,Masken,7,1,2021,0,0
+Arbeit,Text,7,1,2021,0,1
+Arbeit,Karenzzeit,6,1,2021,0,2
+Arbeit,Hilfen,5,1,2021,0,3
+Arbeit,Gespräche,5,1,2021,0,4
+Wirtschaft,Unternehmensstatistiken,8,1,2021,0,0
+Wirtschaft,Bundeswirtschaftsministerium,6,1,2021,0,1
+Wirtschaft,Wirtschaft,4,1,2021,0,2
+Wirtschaft,Ausland,3,1,2021,0,3
+Wirtschaft,Sachsen,3,1,2021,0,4
+Justiz,Bundesverfassungsgerichts,6,1,2021,0,0
+Justiz,Bundesnetzagentur,5,1,2021,0,1
+Justiz,Bestandsdaten,5,1,2021,0,2
+Justiz,Bestandsdatenauskunft,5,1,2021,0,3
+Justiz,Rechtsgrundlagen,4,1,2021,0,4
+Außenpolitik,Türkei,14,1,2021,0,0
+Außenpolitik,Handelspraktiken,4,1,2021,0,1
+Außenpolitik,Regierung,4,1,2021,0,2
+Außenpolitik,Zypern,4,1,2021,0,3
+Außenpolitik,Wahlperiode,4,1,2021,0,4
+Wohnungsbau,Schulen,6,1,2021,0,0
+Wohnungsbau,Elterngeld,5,1,2021,0,1
+Wohnungsbau,Familiennachzug,5,1,2021,0,2
+Wohnungsbau,Netzausbaubeschleunigungsgesetz,3,1,2021,0,3
+Wohnungsbau,Giffey,3,1,2021,0,4
+Familie,Eltern,11,1,2021,0,0
+Familie,Kinder,4,1,2021,0,1
+Familie,Sorte,3,1,2021,0,2
+Familie,Angehörige,3,1,2021,0,3
+Familie,Lipa,3,1,2021,0,4
+Gesundheit,Ernährung,8,1,2021,0,0
+Gesundheit,Gesundheit,4,1,2021,0,1
+Gesundheit,Risikogruppen,3,1,2021,0,2
+Gesundheit,Krankenversicherung,2,1,2021,0,3
+Gesundheit,Zustand,2,1,2021,0,4
+Finanzen,Columns,5,1,2021,0,0
+Finanzen,Insolvenzantragspflicht,3,1,2021,0,1
+Finanzen,Vermögen,3,1,2021,0,2
+Finanzen,Trading,3,1,2021,0,3
+Finanzen,Wechseln,2,1,2021,0,4
+Bildung und Forschung,Coronavirus,4,1,2021,0,0
+Bildung und Forschung,Technologie,4,1,2021,0,1
+Bildung und Forschung,Bildung,4,1,2021,0,2
+Bildung und Forschung,Coronapandemie,4,1,2021,0,3
+Bildung und Forschung,Milliarden,4,1,2021,0,4
+Verteidigung,Bullet,4,1,2021,0,0
+Verteidigung,Kriegswaffen,3,1,2021,0,1
+Verteidigung,Lockdown,3,1,2021,0,2
+Verteidigung,Lager,3,1,2021,0,3
+Verteidigung,Rüstungsgüter,2,1,2021,0,4
+Landwirtschaft,Landwirtschaft,7,1,2021,0,0
+Landwirtschaft,Lebensmitteln,5,1,2021,0,1
+Landwirtschaft,Agroforstwirtschaft,5,1,2021,0,2
+Landwirtschaft,Landwirte,4,1,2021,0,3
+Landwirtschaft,Niedersachsen,3,1,2021,0,4
+Innenpolitik,Zeitung,4,1,2021,0,0
+Innenpolitik,Wettbewerbsrecht,4,1,2021,0,1
+Innenpolitik,Bundestagswahl,3,1,2021,0,2
+Innenpolitik,Rückkehrpflicht,2,1,2021,0,3
+Innenpolitik,Elternzeitgesetz,2,1,2021,0,4
+Entwicklung,Aufarbeitung,6,2,2021,0,0
+Entwicklung,Transparenz,5,2,2021,0,1
+Entwicklung,Abzug,5,2,2021,0,2
+Entwicklung,Unterbindung,4,2,2021,0,3
+Entwicklung,Fortführung,4,2,2021,0,4
+Umwelt,Energie,6,2,2021,0,0
+Umwelt,Verbraucher,5,2,2021,0,1
+Umwelt,Verbraucherinnen,4,2,2021,0,2
+Umwelt,Naturschutz,3,2,2021,0,3
+Umwelt,Energien,3,2,2021,0,4
+Landwirtschaft,Niedersachsen,6,2,2021,0,0
+Landwirtschaft,Afrika,3,2,2021,0,1
+Landwirtschaft,Brauereigaststätten,3,2,2021,0,2
+Landwirtschaft,Nutzhanf,3,2,2021,0,3
+Landwirtschaft,Verpachtung,3,2,2021,0,4
+Wirtschaft,Führungspositionen,6,2,2021,0,0
+Wirtschaft,Leistungsträger,4,2,2021,0,1
+Wirtschaft,Privatwirtschaft,4,2,2021,0,2
+Wirtschaft,Wirtschaft,4,2,2021,0,3
+Wirtschaft,Medien,4,2,2021,0,4
+Finanzen,Haushaltsführung,4,2,2021,0,0
+Finanzen,Verpflichtungsermächtigungen,4,2,2021,0,1
+Finanzen,Haushaltsjahres,4,2,2021,0,2
+Finanzen,Vorstände,2,2,2021,0,3
+Finanzen,Bargeld,2,2,2021,0,4
+Gesundheit,Gesundheit,5,2,2021,0,0
+Gesundheit,Pflege,3,2,2021,0,1
+Gesundheit,Gefahr,3,2,2021,0,2
+Gesundheit,Freiheit,3,2,2021,0,3
+Gesundheit,Pflegepersonen,3,2,2021,0,4
+Justiz,Bundespolizei,6,2,2021,0,0
+Justiz,Einführungsgesetz,4,2,2021,0,1
+Justiz,Gesetzgebungsverfahren,4,2,2021,0,2
+Justiz,Menschenrechtsverletzungen,3,2,2021,0,3
+Justiz,Grundrechten,3,2,2021,0,4
+Verkehr und Digitalisierung,Wettbewerb,5,2,2021,0,0
+Verkehr und Digitalisierung,Verkehr,4,2,2021,0,1
+Verkehr und Digitalisierung,Bahn,4,2,2021,0,2
+Verkehr und Digitalisierung,Anhang,3,2,2021,0,3
+Verkehr und Digitalisierung,Arzneimitteln,3,2,2021,0,4
+Wohnungsbau,Krankenhäuser,7,2,2021,0,0
+Wohnungsbau,Verordnungsermächtigungen,3,2,2021,0,1
+Wohnungsbau,Obdachlose,3,2,2021,0,2
+Wohnungsbau,Berlin,3,2,2021,0,3
+Wohnungsbau,Telekommunikationsmodernisierungsgesetz,3,2,2021,0,4
+Außenpolitik,Regierung,6,2,2021,0,0
+Außenpolitik,Türkei,5,2,2021,0,1
+Außenpolitik,Demokratie,4,2,2021,0,2
+Außenpolitik,Polen,4,2,2021,0,3
+Außenpolitik,Abrüstung,3,2,2021,0,4
+Arbeit,Satz,5,2,2021,0,0
+Arbeit,Beachtung,4,2,2021,0,1
+Arbeit,Hilfsmaßnahmen,4,2,2021,0,2
+Arbeit,Kommunikation,4,2,2021,0,3
+Arbeit,Aktivitäten,4,2,2021,0,4
+Bildung und Forschung,Standpunkt,5,2,2021,0,0
+Bildung und Forschung,Mittagsverpflegung,4,2,2021,0,1
+Bildung und Forschung,Impfstoffen,3,2,2021,0,2
+Bildung und Forschung,Brennelementen,3,2,2021,0,3
+Bildung und Forschung,Wissenschaft,3,2,2021,0,4
+Familie,Kinderzuschlag,2,2,2021,0,0
+Familie,Eltern,2,2,2021,0,1
+Familie,Frau,2,2,2021,0,2
+Familie,Familie,2,2,2021,0,3
+Familie,Firma,2,2,2021,0,4
+Innenpolitik,Länderparlamente,2,2,2021,0,0
+Innenpolitik,Arbeitslosengeld,2,2,2021,0,1
+Innenpolitik,Rechtsbereinigung,2,2,2021,0,2
+Innenpolitik,Ungarn,2,2,2021,0,3
+Innenpolitik,Schuldenbremse,2,2,2021,0,4
+Verteidigung,Bundeswehr,14,2,2021,0,0
+Verteidigung,Männern,6,2,2021,0,1
+Verteidigung,Königreich,4,2,2021,0,2
+Verteidigung,Drohnen,4,2,2021,0,3
+Verteidigung,Afghanistan,3,2,2021,0,4
+Entwicklung,Ausbildung,9,3,2021,0,0
+Entwicklung,Gestaltung,8,3,2021,0,1
+Entwicklung,Zukunft,7,3,2021,0,2
+Entwicklung,Korrekturen,7,3,2021,0,3
+Entwicklung,Koordinierung,7,3,2021,0,4
+Landwirtschaft,Lebensmittel,5,3,2021,0,0
+Landwirtschaft,Agrarpolitik,4,3,2021,0,1
+Landwirtschaft,Tierquälerei,3,3,2021,0,2
+Landwirtschaft,Windenergieanlagen,3,3,2021,0,3
+Landwirtschaft,Kraftstoffe,3,3,2021,0,4
+Wohnungsbau,Zusatzausgaben,7,3,2021,0,0
+Wohnungsbau,Finanzrahmens,6,3,2021,0,1
+Wohnungsbau,Innenstädte,5,3,2021,0,2
+Wohnungsbau,Einzelmaßnahmen,4,3,2021,0,3
+Wohnungsbau,Anzeigetatbestände,4,3,2021,0,4
+Gesundheit,Verletzung,5,3,2021,0,0
+Gesundheit,Freiheit,5,3,2021,0,1
+Gesundheit,Unverletzlichkeit,5,3,2021,0,2
+Gesundheit,Erholung,4,3,2021,0,3
+Gesundheit,Anzeigepflicht,3,3,2021,0,4
+Arbeit,Ausübung,6,3,2021,0,0
+Arbeit,Beförderung,6,3,2021,0,1
+Arbeit,Begleitung,5,3,2021,0,2
+Arbeit,Inhalte,5,3,2021,0,3
+Arbeit,Werbung,5,3,2021,0,4
+Familie,Angela,12,6,2021,0,0
+Bildung und Forschung,Bildung,12,3,2021,0,0
+Bildung und Forschung,Praxis,7,3,2021,0,1
+Bildung und Forschung,Anwendungsbereich,4,3,2021,0,2
+Bildung und Forschung,Qualitätssicherung,4,3,2021,0,3
+Bildung und Forschung,Kooperationsabkommen,4,3,2021,0,4
+Justiz,Einführungsgesetz,11,3,2021,0,0
+Justiz,Grundrechten,8,3,2021,0,1
+Justiz,Familiensachen,8,3,2021,0,2
+Justiz,Bundesverfassungsgerichts,7,3,2021,0,3
+Justiz,Gerichtshofs,7,3,2021,0,4
+Finanzen,Gebühren,4,3,2021,0,0
+Finanzen,Zuständigkeiten,3,3,2021,0,1
+Finanzen,Wertpapiere,3,3,2021,0,2
+Finanzen,Schuldverschreibungen,3,3,2021,0,3
+Finanzen,Verträge,2,3,2021,0,4
+Familie,Kindern,9,3,2021,0,0
+Familie,Kinder,8,3,2021,0,1
+Familie,Angela,3,3,2021,0,2
+Familie,Assistenzhunden,2,3,2021,0,3
+Familie,Regina,2,3,2021,0,4
+Verkehr und Digitalisierung,Anhang,9,3,2021,0,0
+Verkehr und Digitalisierung,Bahn,4,3,2021,0,1
+Verkehr und Digitalisierung,Wettbewerb,3,3,2021,0,2
+Verkehr und Digitalisierung,Internet,3,3,2021,0,3
+Verkehr und Digitalisierung,Fahrzeugen,3,3,2021,0,4
+Innenpolitik,Rückkehrpflicht,4,3,2021,0,0
+Innenpolitik,Strukturreform,3,3,2021,0,1
+Innenpolitik,Vormundschaftsrechts,3,3,2021,0,2
+Innenpolitik,Rechtsbereinigung,2,3,2021,0,3
+Innenpolitik,Ordnungsruf,2,3,2021,0,4
+Verteidigung,Soldaten,8,3,2021,0,0
+Verteidigung,Streitkräfte,8,3,2021,0,1
+Verteidigung,Königreich,5,3,2021,0,2
+Verteidigung,Afghanistan,5,3,2021,0,3
+Verteidigung,Großbritannien,4,3,2021,0,4
+Außenpolitik,Mandatsobergrenze,6,3,2021,0,0
+Außenpolitik,Türkei,5,3,2021,0,1
+Außenpolitik,Fortgeltung,5,3,2021,0,2
+Außenpolitik,Atomgesetz,4,3,2021,0,3
+Außenpolitik,Atomgemeinschaft,4,3,2021,0,4
+Wirtschaft,Verwaltung,7,3,2021,0,0
+Wirtschaft,Verbrauchern,5,3,2021,0,1
+Wirtschaft,Wirtschaft,4,3,2021,0,2
+Wirtschaft,Gesellschaft,4,3,2021,0,3
+Wirtschaft,Krise,4,3,2021,0,4
+Umwelt,Stoffe,5,3,2021,0,0
+Umwelt,Strahlung,5,3,2021,0,1
+Umwelt,Radon,4,3,2021,0,2
+Umwelt,Abfallvermeidung,2,3,2021,0,3
+Umwelt,Energie,2,3,2021,0,4
+Verkehr und Digitalisierung,Verkehr,9,4,2021,0,0
+Verkehr und Digitalisierung,Handel,5,4,2021,0,1
+Verkehr und Digitalisierung,Verstößen,5,4,2021,0,2
+Verkehr und Digitalisierung,Bundesstraßen,5,4,2021,0,3
+Verkehr und Digitalisierung,Autobahn,5,4,2021,0,4
+Arbeit,Verpflichtungen,7,4,2021,0,0
+Arbeit,Dokumente,5,4,2021,0,1
+Arbeit,Dienstleistungen,5,4,2021,0,2
+Arbeit,Ausübung,5,4,2021,0,3
+Arbeit,Beschäftigung,5,4,2021,0,4
+Außenpolitik,Türkei,9,4,2021,0,0
+Außenpolitik,Abkommens,6,4,2021,0,1
+Außenpolitik,Regierung,6,4,2021,0,2
+Außenpolitik,Ukraine,6,4,2021,0,3
+Außenpolitik,Außenwirtschaftsgesetz,5,4,2021,0,4
+Wirtschaft,Wirtschaft,8,4,2021,0,0
+Wirtschaft,Gewinnverlagerung,5,4,2021,0,1
+Wirtschaft,Ausland,5,4,2021,0,2
+Wirtschaft,Finanzsystems,5,4,2021,0,3
+Wirtschaft,Führungspositionen,5,4,2021,0,4
+Entwicklung,Ausbildung,12,4,2021,0,0
+Entwicklung,Marktüberwachung,11,4,2021,0,1
+Entwicklung,Verarbeitung,10,4,2021,0,2
+Entwicklung,Ausschluss,9,4,2021,0,3
+Entwicklung,Erfüllung,8,4,2021,0,4
+Wohnungsbau,Berlin,6,4,2021,0,0
+Wohnungsbau,Rentenversicherung,5,4,2021,0,1
+Wohnungsbau,Zusatzausgaben,4,4,2021,0,2
+Wohnungsbau,Insektenschutz,4,4,2021,0,3
+Wohnungsbau,Rechtsanspruch,3,4,2021,0,4
+Verteidigung,Bundeswehr,11,4,2021,0,0
+Verteidigung,Großbritannien,8,4,2021,0,1
+Verteidigung,Männern,6,4,2021,0,2
+Verteidigung,Streitkräfte,4,4,2021,0,3
+Verteidigung,Königreich,4,4,2021,0,4
+Bildung und Forschung,Coronavirus,6,4,2021,0,0
+Bildung und Forschung,Jugendliche,5,4,2021,0,1
+Bildung und Forschung,Entwicklungszusammenarbeit,5,4,2021,0,2
+Bildung und Forschung,Untersuchungen,5,4,2021,0,3
+Bildung und Forschung,Bildung,4,4,2021,0,4
+Innenpolitik,Haushaltsgesetz,5,4,2021,0,0
+Innenpolitik,Asyl,5,4,2021,0,1
+Innenpolitik,Rechtsvorschriften,3,4,2021,0,2
+Innenpolitik,Bundestagsabgeordnete,3,4,2021,0,3
+Innenpolitik,Strukturreform,3,4,2021,0,4
+Finanzen,Zuständigkeiten,6,4,2021,0,0
+Finanzen,Kreditaufnahme,3,4,2021,0,1
+Finanzen,Gebühren,3,4,2021,0,2
+Finanzen,Gesetzliche,3,4,2021,0,3
+Finanzen,Verträge,3,4,2021,0,4
+Justiz,Einführungsgesetz,11,4,2021,0,0
+Justiz,Justiz,7,4,2021,0,1
+Justiz,Geldwäsche,7,4,2021,0,2
+Justiz,Grundrechten,6,4,2021,0,3
+Justiz,Strafgesetzbuches,5,4,2021,0,4
+Gesundheit,Gesundheit,10,4,2021,0,0
+Gesundheit,Sorgfaltspflichten,4,4,2021,0,1
+Gesundheit,Unverletzlichkeit,4,4,2021,0,2
+Gesundheit,Leben,4,4,2021,0,3
+Gesundheit,Gefahren,3,4,2021,0,4
+Umwelt,Energie,5,4,2021,0,0
+Umwelt,Treibhausgasemissionen,4,4,2021,0,1
+Umwelt,Genf,3,4,2021,0,2
+Umwelt,Entsorgung,3,4,2021,0,3
+Umwelt,Umweltschutz,3,4,2021,0,4
+Familie,Kindern,9,4,2021,0,0
+Familie,Kinder,6,4,2021,0,1
+Familie,Familien,3,4,2021,0,2
+Familie,Pflegefamilien,3,4,2021,0,3
+Familie,Angehörigen,3,4,2021,0,4
+Landwirtschaft,Tierarzneimittel,4,4,2021,0,0
+Landwirtschaft,Durchführungsverordnung,4,4,2021,0,1
+Landwirtschaft,Luftfahrzeugsysteme,4,4,2021,0,2
+Landwirtschaft,Erzeugnissen,3,4,2021,0,3
+Landwirtschaft,Pflanzengesundheit,3,4,2021,0,4
+Entwicklung,Marktüberwachung,15,5,2021,0,0
+Entwicklung,Option,14,5,2021,0,1
+Entwicklung,Bekanntmachungserlaubnis,11,5,2021,0,2
+Entwicklung,Produkte,11,5,2021,0,3
+Entwicklung,Besteuerung,10,5,2021,0,4
+Wohnungsbau,Wahlrecht,7,5,2021,0,0
+Wohnungsbau,Schulen,7,5,2021,0,1
+Wohnungsbau,Investitionsprogramm,5,5,2021,0,2
+Wohnungsbau,Zusatzausgaben,5,5,2021,0,3
+Wohnungsbau,Mitbestimmungsrechte,5,5,2021,0,4
+Arbeit,Betriebsrates,12,5,2021,0,0
+Arbeit,Dienstleistungen,12,5,2021,0,1
+Arbeit,Verpflichtungen,7,5,2021,0,2
+Arbeit,Entschädigung,7,5,2021,0,3
+Arbeit,Beauftragung,6,5,2021,0,4
+Familie,Angehörigen,5,5,2021,0,0
+Familie,Kinder,4,5,2021,0,1
+Familie,Geschlechtsangabe,4,5,2021,0,2
+Familie,Kind,3,5,2021,0,3
+Familie,Heimat,3,5,2021,0,4
+Landwirtschaft,Gemeinden,5,5,2021,0,0
+Landwirtschaft,Betrieben,5,5,2021,0,1
+Landwirtschaft,Durchführungsverordnung,5,5,2021,0,2
+Landwirtschaft,Landwirtschaft,4,5,2021,0,3
+Landwirtschaft,Agrarpolitik,4,5,2021,0,4
+Finanzen,Zuständigkeiten,8,5,2021,0,0
+Finanzen,Rechnungen,4,5,2021,0,1
+Finanzen,Gesetzliche,3,5,2021,0,2
+Finanzen,Wirtschaftsprüfung,3,5,2021,0,3
+Finanzen,Syndikatsgebühren,3,5,2021,0,4
+Außenpolitik,Regierung,14,5,2021,0,0
+Außenpolitik,Atomgemeinschaft,10,5,2021,0,1
+Außenpolitik,Abkommens,9,5,2021,0,2
+Außenpolitik,Demokratie,8,5,2021,0,3
+Außenpolitik,Ukraine,8,5,2021,0,4
+Innenpolitik,Wahlverfahren,4,5,2021,0,0
+Innenpolitik,Bundeswahlgesetz,4,5,2021,0,1
+Innenpolitik,Strukturreform,4,5,2021,0,2
+Innenpolitik,Grundgesetz,3,5,2021,0,3
+Innenpolitik,Rechtsvorschriften,3,5,2021,0,4
+Gesundheit,Gesundheit,6,5,2021,0,0
+Gesundheit,Freiheit,6,5,2021,0,1
+Gesundheit,Privatsphäre,5,5,2021,0,2
+Gesundheit,Zustand,4,5,2021,0,3
+Gesundheit,Barrierefreiheit,4,5,2021,0,4
+Bildung und Forschung,Bildung,9,5,2021,0,0
+Bildung und Forschung,Studie,7,5,2021,0,1
+Bildung und Forschung,Weiterbildung,6,5,2021,0,2
+Bildung und Forschung,Anwendungsbereich,5,5,2021,0,3
+Bildung und Forschung,Ausnahmeregelungen,5,5,2021,0,4
+Verkehr und Digitalisierung,Fahrzeugen,9,5,2021,0,0
+Verkehr und Digitalisierung,Verkehr,9,5,2021,0,1
+Verkehr und Digitalisierung,Straßenverkehrsgesetz,5,5,2021,0,2
+Verkehr und Digitalisierung,Straßenverkehr,5,5,2021,0,3
+Verkehr und Digitalisierung,Bahn,5,5,2021,0,4
+Justiz,Nordirland,13,5,2021,0,0
+Justiz,Gesetze,8,5,2021,0,1
+Justiz,Bundesverfassungsgerichts,7,5,2021,0,2
+Justiz,Gerichtshofs,7,5,2021,0,3
+Justiz,Vollstreckung,6,5,2021,0,4
+Wirtschaft,Wirtschaft,10,5,2021,0,0
+Wirtschaft,Medien,6,5,2021,0,1
+Wirtschaft,Betriebsrat,5,5,2021,0,2
+Wirtschaft,Hochschulen,5,5,2021,0,3
+Wirtschaft,Verwaltung,5,5,2021,0,4
+Verteidigung,Großbritannien,13,5,2021,0,0
+Verteidigung,Königreich,11,5,2021,0,1
+Verteidigung,Soldaten,11,5,2021,0,2
+Verteidigung,Bundeswehr,10,5,2021,0,3
+Verteidigung,Streitkräfte,9,5,2021,0,4
+Umwelt,Klimaschutz,8,5,2021,0,0
+Umwelt,Naturschutz,8,5,2021,0,1
+Umwelt,Treibhausgasemissionen,7,5,2021,0,2
+Umwelt,Umwelt,5,5,2021,0,3
+Umwelt,Energie,5,5,2021,0,4
+Entwicklung,Digitalisierung,17,6,2021,0,0
+Entwicklung,Einstellung,14,6,2021,0,1
+Entwicklung,Zukunft,14,6,2021,0,2
+Entwicklung,Ausschluss,12,6,2021,0,3
+Entwicklung,Ausrichtung,12,6,2021,0,4
+Landwirtschaft,Agrarpolitik,12,6,2021,0,0
+Landwirtschaft,Tierarzneimittel,8,6,2021,0,1
+Landwirtschaft,Gemeinden,6,6,2021,0,2
+Landwirtschaft,Windenergieanlagen,6,6,2021,0,3
+Landwirtschaft,Landwirtschaft,6,6,2021,0,4
+Innenpolitik,Grundgesetz,8,6,2021,0,0
+Innenpolitik,Bundeskanzleramt,5,6,2021,0,1
+Innenpolitik,Schuldenbremse,4,6,2021,0,2
+Innenpolitik,Reformpaket,4,6,2021,0,3
+Innenpolitik,Atomausstieg,4,6,2021,0,4
+Familie,Kinder,11,6,2021,0,1
+Familie,Angehörige,6,6,2021,0,2
+Familie,Heimat,6,6,2021,0,3
+Familie,Eltern,5,6,2021,0,4
+Justiz,Einführungsgesetz,17,6,2021,0,0
+Justiz,Bundespolizei,12,6,2021,0,1
+Justiz,Gesetzbuch,11,6,2021,0,2
+Justiz,Strafgesetzbuch,11,6,2021,0,3
+Justiz,Justiz,10,6,2021,0,4
+Wohnungsbau,Flächen,10,6,2021,0,0
+Wohnungsbau,Investitionsprogramm,9,6,2021,0,1
+Wohnungsbau,Ganztagsbetreuung,9,6,2021,0,2
+Wohnungsbau,Finanzhilfen,9,6,2021,0,3
+Wohnungsbau,Armut,7,6,2021,0,4
+Außenpolitik,Regierung,22,6,2021,0,0
+Außenpolitik,Menschenrechte,14,6,2021,0,1
+Außenpolitik,Sanktionen,11,6,2021,0,2
+Außenpolitik,Merkel,10,6,2021,0,3
+Außenpolitik,Demokratie,9,6,2021,0,4
+Arbeit,Beschäftigung,11,6,2021,0,0
+Arbeit,Zeit,10,6,2021,0,1
+Arbeit,Kommunikation,8,6,2021,0,2
+Arbeit,Begleitung,7,6,2021,0,3
+Arbeit,Stunden,6,6,2021,0,4
+Bildung und Forschung,Entwicklungszusammenarbeit,21,6,2021,0,0
+Bildung und Forschung,Bildung,18,6,2021,0,1
+Bildung und Forschung,Innovation,14,6,2021,0,2
+Bildung und Forschung,Wissenschaft,12,6,2021,0,3
+Bildung und Forschung,Ausschusses,7,6,2021,0,4
+Wirtschaft,Wirtschaft,13,6,2021,0,0
+Wirtschaft,Gesellschaft,7,6,2021,0,1
+Wirtschaft,Kultur,7,6,2021,0,2
+Wirtschaft,Führungspositionen,6,6,2021,0,3
+Wirtschaft,Zivilgesellschaft,5,6,2021,0,4
+Verteidigung,Bundeswehr,12,6,2021,0,0
+Verteidigung,Königreich,6,6,2021,0,1
+Verteidigung,Männern,6,6,2021,0,2
+Verteidigung,Soldaten,5,6,2021,0,3
+Verteidigung,Bevölkerungsschutz,5,6,2021,0,4
+Gesundheit,Gesundheit,11,6,2021,0,0
+Gesundheit,Leben,11,6,2021,0,1
+Gesundheit,Mobilität,9,6,2021,0,2
+Gesundheit,Pflege,9,6,2021,0,3
+Gesundheit,Freiheit,8,6,2021,0,4
+Finanzen,Verpflichtungsermächtigungen,5,6,2021,0,0
+Finanzen,Gebühren,4,6,2021,0,1
+Finanzen,Haushaltsführung,4,6,2021,0,2
+Finanzen,Haushaltsjahres,4,6,2021,0,3
+Finanzen,Gesamtbetrag,4,6,2021,0,4
+Umwelt,Klimaschutz,9,6,2021,0,0
+Umwelt,Umwelt,8,6,2021,0,1
+Umwelt,Klima,5,6,2021,0,2
+Umwelt,Entsorgung,5,6,2021,0,3
+Umwelt,Green,5,6,2021,0,4
+Verkehr und Digitalisierung,Verkehr,9,6,2021,0,0
+Verkehr und Digitalisierung,Wettbewerb,6,6,2021,0,1
+Verkehr und Digitalisierung,Raum,5,6,2021,0,2
+Verkehr und Digitalisierung,Öffentlichen,4,6,2021,0,3
+Verkehr und Digitalisierung,Internet,4,6,2021,0,4
+Gesundheit,Garantie,1,8,2021,0,0
+Gesundheit,Infektionsschutzgesetz,1,8,2021,0,1
+Gesundheit,Impfung,1,8,2021,0,2
+Gesundheit,Sicherheitsrisiken,1,8,2021,0,3
+Gesundheit,Haftungsbeschränkungen,1,8,2021,0,4
+Wohnungsbau,Wiederaufbau,2,8,2021,0,0
+Wohnungsbau,Präsenzunterricht,1,8,2021,0,1
+Wohnungsbau,Solidaritätsfonds,1,8,2021,0,2
+Wohnungsbau,Förderzeiträume,1,8,2021,0,3
+Wohnungsbau,Soforthilfen,1,8,2021,0,4
+Familie,Kindern,2,8,2021,0,0
+Familie,Gökhan,1,8,2021,0,1
+Familie,Kurt,1,8,2021,0,2
+Familie,Angela,1,8,2021,0,3
+Entwicklung,Eintritt,3,8,2021,0,0
+Entwicklung,Tragweite,3,8,2021,0,1
+Entwicklung,Evakuierung,3,8,2021,0,2
+Entwicklung,Einstellung,2,8,2021,0,3
+Entwicklung,Evakuierungsoperation,2,8,2021,0,4
+Bildung und Forschung,Bildung,3,8,2021,0,0
+Bildung und Forschung,Meldepflichten,1,8,2021,0,1
+Bildung und Forschung,Entwicklungszusammenarbeit,1,8,2021,0,2
+Bildung und Forschung,Geimpftenrechte,1,8,2021,0,3
+Bildung und Forschung,Hochschulbereich,1,8,2021,0,4
+Arbeit,Nachruf,4,8,2021,0,0
+Arbeit,Hilfen,1,8,2021,0,1
+Arbeit,Erleichterungen,1,8,2021,0,2
+Arbeit,Kommunikation,1,8,2021,0,3
+Arbeit,Testnachweise,1,8,2021,0,4
+Finanzen,Insolvenzantragspflicht,2,8,2021,0,0
+Finanzen,Zuständigkeiten,2,8,2021,0,1
+Finanzen,Raten,1,8,2021,0,2
+Finanzen,Auszahlungen,1,8,2021,0,3
+Finanzen,Vermögen,1,8,2021,0,4
+Wirtschaft,Zahlungsunfähigkeit,1,8,2021,0,0
+Wirtschaft,Erneuerbare,1,8,2021,0,1
+Wirtschaft,Verwaltung,1,8,2021,0,2
+Wirtschaft,Wetterich,1,8,2021,0,3
+Wirtschaft,Biedenkopf,1,8,2021,0,4
+Umwelt,Klimaschutz,2,8,2021,0,0
+Umwelt,Katastrophenwarnungen,1,8,2021,0,1
+Umwelt,Naturkatstrophen,1,8,2021,0,2
+Umwelt,Naturkatastrophen,1,8,2021,0,3
+Umwelt,Ressourcen,1,8,2021,0,4
+Verkehr und Digitalisierung,Hochwasser,2,8,2021,0,0
+Verkehr und Digitalisierung,Eisenbahnbrücken,1,8,2021,0,1
+Verkehr und Digitalisierung,Starkregenfällen,1,8,2021,0,2
+Verkehr und Digitalisierung,Hochwassern,1,8,2021,0,3
+Verkehr und Digitalisierung,Eisenbahnbetriebsanlagen,1,8,2021,0,4
+Justiz,Grundrechten,3,8,2021,0,0
+Justiz,Einführungsgesetz,2,8,2021,0,1
+Justiz,Stiftungsrechts,2,8,2021,0,2
+Justiz,Einreisende,1,8,2021,0,3
+Justiz,Gesetze,1,8,2021,0,4
+Landwirtschaft,Hochwasserkatastrophe,1,8,2021,0,0
+Landwirtschaft,Flutopfer,1,8,2021,0,1
+Landwirtschaft,Geoinformationssystems,1,8,2021,0,2
+Landwirtschaft,Extremwetterereignisse,1,8,2021,0,3
+Landwirtschaft,Subventionen,1,8,2021,0,4
+Verteidigung,Afghanistan,7,8,2021,0,0
+Verteidigung,Taliban,2,8,2021,0,1
+Verteidigung,Katastrophenhilfe,1,8,2021,0,2
+Verteidigung,Bevölkerungsschutz,1,8,2021,0,3
+Verteidigung,Rüstungsgütern,1,8,2021,0,4
+Außenpolitik,Ortskräfte,3,8,2021,0,0
+Außenpolitik,Klimaschutzpolitik,2,8,2021,0,1
+Außenpolitik,Machtübernahme,2,8,2021,0,2
+Außenpolitik,Auslandseinsätze,2,8,2021,0,3
+Außenpolitik,Exportgenehmigungen,1,8,2021,0,4
+Innenpolitik,Ministerpräsidenten,1,8,2021,0,0
+Innenpolitik,Grundrechtseinschränkungen,1,8,2021,0,1
+Arbeit,Hilfen,1,9,2021,0,0
+Arbeit,Erleichterungen,1,9,2021,0,1
+Arbeit,Kommunikation,1,9,2021,0,2
+Arbeit,Testnachweise,1,9,2021,0,3
+Arbeit,Stunden,1,9,2021,0,4
+Entwicklung,Förderfähigkeit,3,9,2021,0,0
+Entwicklung,Rechtsanspruchs,2,9,2021,0,1
+Entwicklung,Anrechnung,2,9,2021,0,2
+Entwicklung,Grundschulalter,2,9,2021,0,3
+Entwicklung,AufbhG,2,9,2021,0,4
+Wohnungsbau,Ganztagsbetreuung,3,9,2021,0,0
+Wohnungsbau,Finanzhilfen,3,9,2021,0,1
+Wohnungsbau,Ganztagsschulen,2,9,2021,0,2
+Wohnungsbau,Investitionsprogramm,2,9,2021,0,3
+Wohnungsbau,Betriebskosten,2,9,2021,0,4
+Finanzen,Insolvenzantragspflicht,4,9,2021,0,0
+Finanzen,Zuständigkeiten,2,9,2021,0,1
+Finanzen,Gemeindeverbände,1,9,2021,0,2
+Finanzen,Betriebsausgaben,1,9,2021,0,3
+Finanzen,Eigenmittel,1,9,2021,0,4
+Wirtschaft,Zahlungsunfähigkeit,1,9,2021,0,0
+Wirtschaft,Zentralbank,1,9,2021,0,1
+Wirtschaft,Weltbank,1,9,2021,0,2
+Wirtschaft,Erneuerbare,1,9,2021,0,3
+Wirtschaft,Verwaltung,1,9,2021,0,4
+Umwelt,Katastrophenwarnungen,1,9,2021,0,0
+Umwelt,Naturkatstrophen,1,9,2021,0,1
+Umwelt,Naturkatastrophen,1,9,2021,0,2
+Umwelt,Klimaschutz,1,9,2021,0,3
+Umwelt,Ressourcen,1,9,2021,0,4
+Verkehr und Digitalisierung,Starkregenfällen,3,9,2021,0,0
+Verkehr und Digitalisierung,Hochwassern,3,9,2021,0,1
+Verkehr und Digitalisierung,Eisenbahnbrücken,1,9,2021,0,2
+Verkehr und Digitalisierung,Eisenbahnbetriebsanlagen,1,9,2021,0,3
+Verkehr und Digitalisierung,Minderbelastungen,1,9,2021,0,4
+Justiz,Gesetze,3,9,2021,0,0
+Justiz,Einreisende,1,9,2021,0,1
+Justiz,Grundrechten,1,9,2021,0,2
+Justiz,Europarates,1,9,2021,0,3
+Justiz,Staatsbürger,1,9,2021,0,4
+Familie,Kinder,2,9,2021,0,0
+Landwirtschaft,Gemeinden,1,9,2021,0,0
+Landwirtschaft,Bergholz,1,9,2021,0,1
+Landwirtschaft,Hochwasserkatastrophe,1,9,2021,0,2
+Landwirtschaft,Flutopfer,1,9,2021,0,3
+Landwirtschaft,Geoinformationssystems,1,9,2021,0,4
+Außenpolitik,Umsatzsteuerverteilung,2,9,2021,0,0
+Außenpolitik,Nachbarstaaten,1,9,2021,0,1
+Außenpolitik,Ortskräfte,1,9,2021,0,2
+Außenpolitik,Sondergipfels,1,9,2021,0,3
+Außenpolitik,Regierungschefs,1,9,2021,0,4
+Innenpolitik,Regierungskoalition,1,9,2021,0,0
+Innenpolitik,Ganztagsfinanzhilfegesetz,1,9,2021,0,1
+Gesundheit,Wohlstand,1,9,2021,0,0
+Bildung und Forschung,Bonusmittel,1,9,2021,0,0
+Bildung und Forschung,Meldepflichten,1,9,2021,0,1
+Verteidigung,Hilfsorganisationen,1,9,2021,0,0
+Verteidigung,Zivilbevölkerung,1,9,2021,0,1
+Verteidigung,Afghanistan,1,9,2021,0,2
+Verteidigung,Bundeswehr,1,9,2021,0,3
+Verteidigung,Katastrophenhilfe,1,9,2021,0,4
+Arbeit,Sitzung,3,10,2021,0,0
+Arbeit,Vorschlagsrechts,1,10,2021,0,1
+Entwicklung,Fortschreibung,1,10,2021,0,0
+Außenpolitik,Abwehr,3,11,2021,0,0
+Außenpolitik,Umsatzsteuergesetz,2,11,2021,0,1
+Außenpolitik,Massenmigration,1,11,2021,0,2
+Außenpolitik,Polen,1,11,2021,0,3
+Außenpolitik,Abwehrmaßnahmen,1,11,2021,0,4
+Entwicklung,Verarbeitung,4,11,2021,0,0
+Entwicklung,Tragweite,3,11,2021,0,1
+Entwicklung,Umsatzsteuerentlastung,2,11,2021,0,2
+Entwicklung,Phase,2,11,2021,0,3
+Entwicklung,Neuregelungen,2,11,2021,0,4
+Wohnungsbau,Jahressteuergesetz,2,11,2021,0,0
+Wohnungsbau,Maßnahmenkatalog,2,11,2021,0,1
+Wohnungsbau,Versorgungsaufschlag,2,11,2021,0,2
+Wohnungsbau,Schulschließungen,1,11,2021,0,3
+Wohnungsbau,Ganztagsinfrastrukturausbau,1,11,2021,0,4
+Verkehr und Digitalisierung,Einfuhren,2,11,2021,0,0
+Verkehr und Digitalisierung,Tempo,1,11,2021,0,1
+Verkehr und Digitalisierung,Blackout,1,11,2021,0,2
+Familie,Gruppen,2,11,2021,0,0
+Familie,Kinder,1,11,2021,0,1
+Familie,Wohnung,1,11,2021,0,2
+Familie,Familien,1,11,2021,0,3
+Bildung und Forschung,Befreiungen,2,11,2021,0,0
+Bildung und Forschung,Täterprivilegierungen,2,11,2021,0,1
+Bildung und Forschung,Fälschungen,2,11,2021,0,2
+Bildung und Forschung,Impfnachweisen,2,11,2021,0,3
+Bildung und Forschung,Jugendliche,1,11,2021,0,4
+Wirtschaft,Unionsrechtlich,2,11,2021,0,0
+Wirtschaft,Umsatzsteuerrecht,1,11,2021,0,1
+Wirtschaft,Energiewende,1,11,2021,0,2
+Wirtschaft,Wirtschaft,1,11,2021,0,3
+Wirtschaft,Haushalte,1,11,2021,0,4
+Landwirtschaft,Pauschallandwirte,2,11,2021,0,0
+Landwirtschaft,Steuerbefreiung,2,11,2021,0,1
+Landwirtschaft,Pandemiebekämpfung,2,11,2021,0,2
+Landwirtschaft,Energieversorgung,2,11,2021,0,3
+Arbeit,Lieferungen,2,11,2021,0,0
+Arbeit,Beschäftigtendaten,2,11,2021,0,1
+Arbeit,Härten,2,11,2021,0,2
+Arbeit,Vergütungen,2,11,2021,0,3
+Arbeit,Dienstleistungen,2,11,2021,0,4
+Innenpolitik,Ganztagsfinanzierungsgesetz,1,11,2021,0,0
+Justiz,Gesetze,4,11,2021,0,0
+Justiz,Sonderrecht,2,11,2021,0,1
+Justiz,Entschädigungszahlungen,2,11,2021,0,2
+Justiz,Strafbarkeit,2,11,2021,0,3
+Justiz,Grundrechten,2,11,2021,0,4
+Gesundheit,Infektionsschutz,2,11,2021,0,0
+Gesundheit,Arbeitsschutz,2,11,2021,0,1
+Gesundheit,Gesundheit,2,11,2021,0,2
+Gesundheit,Pflege,2,11,2021,0,3
+Gesundheit,Rehabilitationseinrichtungen,2,11,2021,0,4
+Finanzen,Bundeszuschusses,1,11,2021,0,0
+Finanzen,Gesundheitsfonds,1,11,2021,0,1
+Umwelt,Kernenergie,1,11,2021,0,0
+Umwelt,Warme,1,11,2021,0,1
+Umwelt,Kälte,1,11,2021,0,2
+Umwelt,Energie,1,11,2021,0,3
+Verteidigung,Brownout,1,11,2021,0,0
+Gesundheit,Impfung,5,12,2021,0,0
+Gesundheit,Impfpflicht,4,12,2021,0,1
+Gesundheit,Genesung,4,12,2021,0,2
+Gesundheit,Resilienz,3,12,2021,0,3
+Gesundheit,Integrität,3,12,2021,0,4
+Arbeit,Agentur,4,12,2021,0,0
+Arbeit,Verausgabung,3,12,2021,0,1
+Arbeit,Assoziation,3,12,2021,0,2
+Arbeit,Sitzung,2,12,2021,0,3
+Arbeit,Kampf,2,12,2021,0,4
+Umwelt,Klimaneutralität,2,12,2021,0,0
+Umwelt,CSDP,2,12,2021,0,1
+Umwelt,Klimaschutz,1,12,2021,0,2
+Umwelt,Atomkraft,1,12,2021,0,3
+Umwelt,Regions,1,12,2021,0,4
+Finanzen,Vollmacht,2,12,2021,0,0
+Finanzen,Anhänge,2,12,2021,0,1
+Finanzen,Gesamthaushalts,1,12,2021,0,2
+Finanzen,Wirtschaftsplans,1,12,2021,0,3
+Finanzen,Haushaltstitel,1,12,2021,0,4
+Entwicklung,Operation,6,12,2021,0,0
+Entwicklung,Sprache,5,12,2021,0,1
+Entwicklung,Rahmens,4,12,2021,0,2
+Entwicklung,Aufbewahrung,4,12,2021,0,3
+Entwicklung,Wirksamkeit,4,12,2021,0,4
+Innenpolitik,Ganztagsfinanzierungsgesetz,3,12,2021,0,0
+Innenpolitik,Stabilisierungsfondsgesetz,2,12,2021,0,1
+Innenpolitik,Wirtschaftsstabilisierungsbeschleunigungsgesetz,2,12,2021,0,2
+Innenpolitik,Haushaltsgesetz,1,12,2021,0,3
+Innenpolitik,Mindestsicherung,1,12,2021,0,4
+Wohnungsbau,Notariatsunterlagen,4,12,2021,0,0
+Wohnungsbau,Infrastrukturausbau,3,12,2021,0,1
+Wohnungsbau,Ganztagsbetreuung,3,12,2021,0,2
+Wohnungsbau,Grundschulkinder,2,12,2021,0,3
+Wohnungsbau,Wirtschaftsstabilisierungsfonds,2,12,2021,0,4
+Bildung und Forschung,Tests,3,12,2021,0,0
+Bildung und Forschung,Bonusmitteln,2,12,2021,0,1
+Bildung und Forschung,Geimpftenrechte,2,12,2021,0,2
+Bildung und Forschung,Notfallversorgung,2,12,2021,0,3
+Bildung und Forschung,Mittagsverpflegung,2,12,2021,0,4
+Wirtschaft,Wirtschaft,4,12,2021,0,0
+Wirtschaft,Königsteiner,2,12,2021,0,1
+Wirtschaft,Inflation,2,12,2021,0,2
+Wirtschaft,Kreises,2,12,2021,0,3
+Wirtschaft,Zertifikate,2,12,2021,0,4
+Landwirtschaft,Beihilfen,2,12,2021,0,0
+Landwirtschaft,Tierärzte,2,12,2021,0,1
+Landwirtschaft,Ausgleichszahlungen,2,12,2021,0,2
+Landwirtschaft,EUAM,2,12,2021,0,3
+Landwirtschaft,Gemischten,2,12,2021,0,4
+Außenpolitik,Ukraine,6,12,2021,0,0
+Außenpolitik,Russland,5,12,2021,0,1
+Außenpolitik,Abkommens,5,12,2021,0,2
+Außenpolitik,Syrien,4,12,2021,0,3
+Außenpolitik,Mittelmeer,4,12,2021,0,4
+Justiz,Grundrechten,6,12,2021,0,0
+Justiz,Grundrechte,4,12,2021,0,1
+Justiz,Marokko,4,12,2021,0,2
+Justiz,Urkundensammlung,2,12,2021,0,3
+Justiz,Beurkundungsgesetz,2,12,2021,0,4
+Verkehr und Digitalisierung,Kontakt,2,12,2021,0,0
+Verkehr und Digitalisierung,Testnachweisen,2,12,2021,0,1
+Verkehr und Digitalisierung,Kontrollen,2,12,2021,0,2
+Verkehr und Digitalisierung,Güterverkehr,2,12,2021,0,3
+Verkehr und Digitalisierung,Horizontales,2,12,2021,0,4
+Familie,Partnerschaft,5,12,2021,0,0
+Familie,SOPHIA,3,12,2021,0,1
+Familie,Personengruppen,2,12,2021,0,2
+Familie,Familien,1,12,2021,0,3
+Familie,Minderheit,1,12,2021,0,4
+Verteidigung,Königreich,5,12,2021,0,0
+Verteidigung,Libyen,2,12,2021,0,1
+Verteidigung,Somalia,2,12,2021,0,2
+Verteidigung,Venezuela,2,12,2021,0,3
+Verteidigung,Nicaragua,2,12,2021,0,4
+Gesundheit,Gesundheit,40,0,2021,0,0
+Gesundheit,Freiheit,29,0,2021,0,1
+Gesundheit,Pflege,23,0,2021,0,2
+Gesundheit,Leben,21,0,2021,0,3
+Gesundheit,Unverletzlichkeit,20,0,2021,0,4
+Arbeit,Kommunikation,27,0,2021,0,0
+Arbeit,Sitzung,25,0,2021,0,1
+Arbeit,Beschäftigung,25,0,2021,0,2
+Arbeit,Dienstleistungen,24,0,2021,0,3
+Arbeit,Verpflichtungen,23,0,2021,0,4
+Umwelt,Klimaschutz,25,0,2021,0,0
+Umwelt,Energie,23,0,2021,0,1
+Umwelt,Energien,17,0,2021,0,2
+Umwelt,Naturschutz,17,0,2021,0,3
+Umwelt,Umwelt,16,0,2021,0,4
+Finanzen,Zuständigkeiten,25,0,2021,0,0
+Finanzen,Gebühren,13,0,2021,0,1
+Finanzen,Insolvenzantragspflicht,10,0,2021,0,2
+Finanzen,Vermögen,10,0,2021,0,3
+Finanzen,Verträge,10,0,2021,0,4
+Entwicklung,Zukunft,45,0,2021,0,0
+Entwicklung,Digitalisierung,42,0,2021,0,1
+Entwicklung,Ausbildung,42,0,2021,0,2
+Entwicklung,Verarbeitung,37,0,2021,0,3
+Entwicklung,Ausschluss,34,0,2021,0,4
+Innenpolitik,Grundgesetz,15,0,2021,0,0
+Innenpolitik,Strukturreform,10,0,2021,0,1
+Innenpolitik,Asyl,9,0,2021,0,2
+Innenpolitik,Rechtsvorschriften,8,0,2021,0,3
+Innenpolitik,Haushaltsgesetz,7,0,2021,0,4
+Wohnungsbau,Zusatzausgaben,21,0,2021,0,0
+Wohnungsbau,Schulen,20,0,2021,0,1
+Wohnungsbau,Ganztagsbetreuung,19,0,2021,0,2
+Wohnungsbau,Einzelmaßnahmen,19,0,2021,0,3
+Wohnungsbau,Berlin,19,0,2021,0,4
+Bildung und Forschung,Bildung,51,0,2021,0,0
+Bildung und Forschung,Entwicklungszusammenarbeit,38,0,2021,0,1
+Bildung und Forschung,Wissenschaft,23,0,2021,0,2
+Bildung und Forschung,Innovation,22,0,2021,0,3
+Bildung und Forschung,Studie,20,0,2021,0,4
+Wirtschaft,Wirtschaft,48,0,2021,0,0
+Wirtschaft,Gesellschaft,23,0,2021,0,1
+Wirtschaft,Verwaltung,21,0,2021,0,2
+Wirtschaft,Führungspositionen,18,0,2021,0,3
+Wirtschaft,Verbrauchern,18,0,2021,0,4
+Landwirtschaft,Agrarpolitik,23,0,2021,0,0
+Landwirtschaft,Landwirtschaft,21,0,2021,0,1
+Landwirtschaft,Niedersachsen,19,0,2021,0,2
+Landwirtschaft,Gemeinden,16,0,2021,0,3
+Landwirtschaft,Windenergieanlagen,13,0,2021,0,4
+Außenpolitik,Regierung,58,0,2021,0,0
+Außenpolitik,Türkei,45,0,2021,0,1
+Außenpolitik,Demokratie,26,0,2021,0,2
+Außenpolitik,Menschenrechte,26,0,2021,0,3
+Außenpolitik,Ukraine,25,0,2021,0,4
+Justiz,Einführungsgesetz,52,0,2021,0,0
+Justiz,Grundrechten,44,0,2021,0,1
+Justiz,Gesetze,31,0,2021,0,2
+Justiz,Bundesverfassungsgerichts,30,0,2021,0,3
+Justiz,Justiz,28,0,2021,0,4
+Verkehr und Digitalisierung,Verkehr,38,0,2021,0,0
+Verkehr und Digitalisierung,Bahn,23,0,2021,0,1
+Verkehr und Digitalisierung,Wettbewerb,19,0,2021,0,2
+Verkehr und Digitalisierung,Fahrzeugen,16,0,2021,0,3
+Verkehr und Digitalisierung,Kontrollen,15,0,2021,0,4
+Familie,Kinder,36,0,2021,0,0
+Familie,Kindern,28,0,2021,0,1
+Familie,Eltern,23,0,2021,0,2
+Familie,Angela,18,0,2021,0,3
+Familie,Angehörige,16,0,2021,0,4
+Verteidigung,Bundeswehr,52,0,2021,0,0
+Verteidigung,Königreich,36,0,2021,0,1
+Verteidigung,Soldaten,30,0,2021,0,2
+Verteidigung,Streitkräfte,29,0,2021,0,3
+Verteidigung,Großbritannien,27,0,2021,0,4
+Entwicklung,Genesenenstatus,5,1,2022,0,0
+Entwicklung,Stabilisierung,2,1,2022,0,1
+Entwicklung,Operation,2,1,2022,0,2
+Entwicklung,Fähigkeitsaufbau,2,1,2022,0,3
+Entwicklung,Fähigkeiten,2,1,2022,0,4
+Landwirtschaft,Energieversorgung,2,1,2022,0,0
+Landwirtschaft,Lebensmittel,1,1,2022,0,1
+Landwirtschaft,Agrarexporte,1,1,2022,0,2
+Landwirtschaft,Wirtschaftsweise,1,1,2022,0,3
+Landwirtschaft,Rohstoffe,1,1,2022,0,4
+Umwelt,Klimaschutz,6,1,2022,0,0
+Umwelt,Energie,2,1,2022,0,1
+Umwelt,Europäisches,1,1,2022,0,2
+Umwelt,Greenwashing,1,1,2022,0,3
+Umwelt,Atomkraft,1,1,2022,0,4
+Bildung und Forschung,Studie,3,1,2022,0,0
+Bildung und Forschung,Technologie,2,1,2022,0,1
+Bildung und Forschung,Virologen,2,1,2022,0,2
+Bildung und Forschung,Halbleiterfertigung,1,1,2022,0,3
+Bildung und Forschung,Wissenschaftsplattform,1,1,2022,0,4
+Wirtschaft,Wirtschaft,6,1,2022,0,0
+Wirtschaft,Energiepreisen,2,1,2022,0,1
+Wirtschaft,Frankfurt,2,1,2022,0,2
+Wirtschaft,Kurzarbeitergeld,2,1,2022,0,3
+Wirtschaft,Energieversorger,2,1,2022,0,4
+Wohnungsbau,Gebäude,3,1,2022,0,0
+Wohnungsbau,Haushaltsjahr,3,1,2022,0,1
+Wohnungsbau,Zusatzausgaben,2,1,2022,0,2
+Wohnungsbau,Vorkaufsrechts,2,1,2022,0,3
+Wohnungsbau,BauGB,2,1,2022,0,4
+Verteidigung,Streitkräfte,2,1,2022,0,0
+Verteidigung,Iraq,2,1,2022,0,1
+Verteidigung,Luftraumüberwachungsradar,2,1,2022,0,2
+Verteidigung,Wehrbeauftragen,1,1,2022,0,3
+Verteidigung,Gefangenenlager,1,1,2022,0,4
+Justiz,BAMF,3,1,2022,0,0
+Justiz,Organstreitverfahren,2,1,2022,0,1
+Justiz,Prozessvertretung,2,1,2022,0,2
+Justiz,Steuerzahler,2,1,2022,0,3
+Justiz,Asylsuchende,2,1,2022,0,4
+Arbeit,Beiträge,2,1,2022,0,0
+Arbeit,Kampf,2,1,2022,0,1
+Arbeit,Gedenken,2,1,2022,0,2
+Arbeit,Zeit,2,1,2022,0,3
+Arbeit,Nichterbringung,2,1,2022,0,4
+Außenpolitik,NATO,4,1,2022,0,0
+Außenpolitik,Ukraine,4,1,2022,0,1
+Außenpolitik,Polen,4,1,2022,0,2
+Außenpolitik,Resolve,2,1,2022,0,3
+Außenpolitik,Iraks,2,1,2022,0,4
+Verkehr und Digitalisierung,Zugriff,1,1,2022,0,0
+Verkehr und Digitalisierung,Geltungsbereich,1,1,2022,0,1
+Verkehr und Digitalisierung,Verstoß,1,1,2022,0,2
+Verkehr und Digitalisierung,Wortprotokoll,1,1,2022,0,3
+Verkehr und Digitalisierung,Bundesgebiet,1,1,2022,0,4
+Finanzen,Wirtschaftsplans,3,1,2022,0,0
+Finanzen,Bundeshaushaltsplan,3,1,2022,0,1
+Finanzen,Haushaltsführung,2,1,2022,0,2
+Finanzen,Gesamthaushalts,1,1,2022,0,3
+Finanzen,Haushaltstitel,1,1,2022,0,4
+Innenpolitik,Nachtragshaushaltsgesetz,4,1,2022,0,0
+Innenpolitik,Restrukturierungsfondsgesetz,1,1,2022,0,1
+Innenpolitik,Haushaltsgesetz,1,1,2022,0,2
+Innenpolitik,Koali,1,1,2022,0,3
+Innenpolitik,Parlamentsdebatte,1,1,2022,0,4
+Gesundheit,Impfpflicht,4,1,2022,0,0
+Gesundheit,Gesundheit,2,1,2022,0,1
+Gesundheit,Impfnebenwirkungen,2,1,2022,0,2
+Gesundheit,Saunaanlagen,2,1,2022,0,3
+Gesundheit,Kureinrichtungen,2,1,2022,0,4
+Familie,Heimat,4,1,2022,0,0
+Familie,Recep,1,1,2022,0,1
+Familie,Tayyip,1,1,2022,0,2
+Familie,Soma,1,1,2022,0,3
+Familie,Angehörige,1,1,2022,0,4
+Arbeit,Beschäftigung,5,2,2022,0,0
+Arbeit,Gedenken,2,2,2022,0,1
+Arbeit,Zugangserleichterungen,2,2,2022,0,2
+Arbeit,Kurzarbeit,2,2,2022,0,3
+Arbeit,Beruf,2,2,2022,0,4
+Außenpolitik,Ukraine,8,2,2022,0,0
+Außenpolitik,Regierungserklärung,4,2,2022,0,1
+Außenpolitik,Russland,3,2,2022,0,2
+Außenpolitik,Sanktionen,3,2,2022,0,3
+Außenpolitik,Deutschlandbezug,3,2,2022,0,4
+Verteidigung,Afghanistan,8,2,2022,0,0
+Verteidigung,Bundeswehr,5,2,2022,0,1
+Verteidigung,Beabsichtigt,4,2,2022,0,2
+Verteidigung,Waffen,3,2,2022,0,3
+Verteidigung,Streitkräfte,2,2,2022,0,4
+Entwicklung,Angriff,3,2,2022,0,0
+Entwicklung,Infektionsgeschehens,3,2,2022,0,1
+Entwicklung,Bezugsdauer,2,2,2022,0,2
+Entwicklung,Anrechnungsfreiheit,2,2,2022,0,3
+Entwicklung,Nichtabruf,2,2,2022,0,4
+Wirtschaft,Wirtschaft,3,2,2022,0,0
+Wirtschaft,Kurzarbeitergeld,3,2,2022,0,1
+Wirtschaft,Brüssel,3,2,2022,0,2
+Wirtschaft,Kurzarbeitergeldes,2,2,2022,0,3
+Wirtschaft,Landes,2,2,2022,0,4
+Landwirtschaft,Landwirtschaft,4,2,2022,0,0
+Landwirtschaft,Betriebe,2,2,2022,0,1
+Landwirtschaft,Energieversorgung,1,2,2022,0,2
+Landwirtschaft,Importabhängigkeit,1,2,2022,0,3
+Landwirtschaft,Offenhaltung,1,2,2022,0,4
+Wohnungsbau,Planungssicherheit,3,2,2022,0,0
+Wohnungsbau,Heizkostenzuschusses,2,2,2022,0,1
+Wohnungsbau,Pflegeanwendungen,2,2,2022,0,2
+Wohnungsbau,Zusatzausgaben,2,2,2022,0,3
+Wohnungsbau,Berlin,2,2,2022,0,4
+Innenpolitik,Mindestlohns,2,2,2022,0,0
+Innenpolitik,Spähsoftware,1,2,2022,0,1
+Innenpolitik,Cyberabwehr,1,2,2022,0,2
+Innenpolitik,Restrukturierungsfondsgesetz,1,2,2022,0,3
+Innenpolitik,Aufenthaltsgesetzes,1,2,2022,0,4
+Familie,Kinder,4,2,2022,0,0
+Familie,Angehörige,2,2,2022,0,1
+Familie,Familien,2,2,2022,0,2
+Familie,Kindern,2,2,2022,0,3
+Familie,Heimat,2,2,2022,0,4
+Justiz,Bundesverwaltungsgerichts,2,2,2022,0,0
+Justiz,Gruppenvergewaltigungen,2,2,2022,0,1
+Justiz,Entkriminalisierung,2,2,2022,0,2
+Justiz,Ordnungsgeld,2,2,2022,0,3
+Justiz,Beihilfe,1,2,2022,0,4
+Finanzen,Einkommens,2,2,2022,0,0
+Finanzen,Wirtschaftsplans,2,2,2022,0,1
+Finanzen,Zinsregeln,1,2,2022,0,2
+Finanzen,Bundeshaushaltsordnung,1,2,2022,0,3
+Finanzen,Haushaltsausgaben,1,2,2022,0,4
+Bildung und Forschung,Akuthilfen,2,2,2022,0,0
+Bildung und Forschung,Quellen,1,2,2022,0,1
+Bildung und Forschung,Bildung,1,2,2022,0,2
+Bildung und Forschung,Lehrkräfte,1,2,2022,0,3
+Bildung und Forschung,Erzieher,1,2,2022,0,4
+Gesundheit,Impfpflicht,5,2,2022,0,0
+Gesundheit,Soziales,4,2,2022,0,1
+Gesundheit,Ernährung,3,2,2022,0,2
+Gesundheit,Pflege,2,2,2022,0,3
+Gesundheit,Mobilität,1,2,2022,0,4
+Verkehr und Digitalisierung,Einvernehmen,3,2,2022,0,0
+Verkehr und Digitalisierung,Cannabis,3,2,2022,0,1
+Verkehr und Digitalisierung,Zugverbindungen,2,2,2022,0,2
+Verkehr und Digitalisierung,Kraftstoffpreise,1,2,2022,0,3
+Verkehr und Digitalisierung,Limit,1,2,2022,0,4
+Umwelt,Energie,3,2,2022,0,0
+Umwelt,Verbraucherinnen,1,2,2022,0,1
+Umwelt,Verbraucher,1,2,2022,0,2
+Umwelt,Treibhausgasemissionen,1,2,2022,0,3
+Umwelt,Klimaschutzmaßnahmen,1,2,2022,0,4
+Finanzen,Gesamthaushalts,8,3,2022,0,0
+Finanzen,Bundeshaushaltsplans,4,3,2022,0,1
+Finanzen,Wirtschaftsplans,4,3,2022,0,2
+Finanzen,Finanzplan,4,3,2022,0,3
+Finanzen,Mindestfüllständen,2,3,2022,0,4
+Entwicklung,Schutzmaßnahmen,6,3,2022,0,0
+Entwicklung,Maskenpflicht,6,3,2022,0,1
+Entwicklung,Einsetzung,5,3,2022,0,2
+Entwicklung,Stabilisierung,4,3,2022,0,3
+Entwicklung,Überschreitung,4,3,2022,0,4
+Wohnungsbau,Nettokreditaufnahme,8,3,2022,0,0
+Wohnungsbau,Kinderkrankengeld,4,3,2022,0,1
+Wohnungsbau,Entschädigungsanspruch,4,3,2022,0,2
+Wohnungsbau,Heizkostenzuschusses,4,3,2022,0,3
+Wohnungsbau,Bundesprogramm,4,3,2022,0,4
+Außenpolitik,Ukraine,11,3,2022,0,0
+Außenpolitik,Angriffskrieges,4,3,2022,0,1
+Außenpolitik,Finanzbeziehungen,4,3,2022,0,2
+Außenpolitik,Beziehungen,3,3,2022,0,3
+Außenpolitik,Drittländer,2,3,2022,0,4
+Wirtschaft,Bürgern,4,3,2022,0,0
+Wirtschaft,Gesamtwirtschaftliche,4,3,2022,0,1
+Wirtschaft,Wettbewerbsfähigkeit,2,3,2022,0,2
+Wirtschaft,Gebietskörperschaften,2,3,2022,0,3
+Wirtschaft,Föderation,2,3,2022,0,4
+Umwelt,Energiekosten,6,3,2022,0,0
+Umwelt,Nachhaltige,2,3,2022,0,1
+Umwelt,Europäisches,1,3,2022,0,2
+Umwelt,Klimaschutzziele,1,3,2022,0,3
+Umwelt,Umweltprotesten,1,3,2022,0,4
+Arbeit,Stelleneinsparungen,4,3,2022,0,0
+Arbeit,Einkommensausfälle,4,3,2022,0,1
+Arbeit,Aktivitäten,4,3,2022,0,2
+Arbeit,Gespräche,3,3,2022,0,3
+Arbeit,Prüfungen,3,3,2022,0,4
+Gesundheit,Impfpflicht,5,3,2022,0,0
+Gesundheit,Erkrankung,4,3,2022,0,1
+Gesundheit,Kindes,4,3,2022,0,2
+Gesundheit,Infektionsschutzgesetz,4,3,2022,0,3
+Gesundheit,Versorgungssicherheit,3,3,2022,0,4
+Landwirtschaft,Marktgebietsverantwortlichen,4,3,2022,0,0
+Landwirtschaft,Landwirtschaft,3,3,2022,0,1
+Landwirtschaft,Erdgasspeichern,2,3,2022,0,2
+Landwirtschaft,Energiewirtschaftsgesetzes,2,3,2022,0,3
+Landwirtschaft,Ernährungssicherheit,2,3,2022,0,4
+Bildung und Forschung,Sonderausschreibungen,2,3,2022,0,0
+Bildung und Forschung,Medizinischen,2,3,2022,0,1
+Bildung und Forschung,Coronabedingte,2,3,2022,0,2
+Bildung und Forschung,Impfprävention,2,3,2022,0,3
+Bildung und Forschung,Ausnahmeregelungen,2,3,2022,0,4
+Justiz,Grundrechten,6,3,2022,0,0
+Justiz,Kindeswohl,2,3,2022,0,1
+Justiz,Hafteinrichtungen,2,3,2022,0,2
+Justiz,Internetveröffentlichungen,2,3,2022,0,3
+Justiz,Einreisende,2,3,2022,0,4
+Familie,Kinder,4,3,2022,0,0
+Familie,Eltern,3,3,2022,0,1
+Familie,Kindern,3,3,2022,0,2
+Familie,Vertreterin,2,3,2022,0,3
+Familie,García,2,3,2022,0,4
+Verkehr und Digitalisierung,Raum,3,3,2022,0,0
+Verkehr und Digitalisierung,Personenfernverkehr,2,3,2022,0,1
+Verkehr und Digitalisierung,Sperrung,2,3,2022,0,2
+Verkehr und Digitalisierung,Verkehr,2,3,2022,0,3
+Verkehr und Digitalisierung,Hafen,2,3,2022,0,4
+Verteidigung,Beabsichtigt,3,3,2022,0,0
+Verteidigung,Luftwaffenstützpunkt,3,3,2022,0,1
+Verteidigung,Streitkräfte,2,3,2022,0,2
+Verteidigung,Russischen,2,3,2022,0,3
+Verteidigung,Krieg,2,3,2022,0,4
+Innenpolitik,Ehegattennachzug,4,3,2022,0,0
+Innenpolitik,Elternzeitgesetz,2,3,2022,0,1
+Innenpolitik,Arbeitnehmerüberlassungsgesetz,2,3,2022,0,2
+Innenpolitik,Islamismus,2,3,2022,0,3
+Innenpolitik,Rechtsvorschriften,1,3,2022,0,4
+Bildung und Forschung,Leitlinien,3,4,2022,0,0
+Bildung und Forschung,Entwicklungszusammenarbeit,3,4,2022,0,1
+Bildung und Forschung,Impfprävention,3,4,2022,0,2
+Bildung und Forschung,Anwendungsbereich,2,4,2022,0,3
+Bildung und Forschung,Berufsbildung,2,4,2022,0,4
+Verteidigung,Bundeswehr,10,4,2022,0,0
+Verteidigung,Küstenwache,5,4,2022,0,1
+Verteidigung,Männern,4,4,2022,0,2
+Verteidigung,Streitkräfte,3,4,2022,0,3
+Verteidigung,Libyen,3,4,2022,0,4
+Außenpolitik,Ukraine,21,4,2022,0,0
+Außenpolitik,Moldau,7,4,2022,0,1
+Außenpolitik,Verteidigungsfähigkeit,3,4,2022,0,2
+Außenpolitik,EUNAVFOR,2,4,2022,0,3
+Finanzen,Finanzen,4,7,2022,0,3
+Außenpolitik,Seeraumüberwachung,2,4,2022,0,4
+Finanzen,Verpflichtungsermächtigungen,5,4,2022,0,0
+Finanzen,Haushaltsführung,4,4,2022,0,1
+Finanzen,Haushaltsjahres,4,4,2022,0,2
+Finanzen,IRINI,2,4,2022,0,3
+Finanzen,Versicherung,2,4,2022,0,4
+Entwicklung,Einmalzahlung,9,4,2022,0,0
+Entwicklung,Digitalisierung,7,4,2022,0,1
+Entwicklung,Gleichbehandlung,5,4,2022,0,2
+Entwicklung,Unabhängigkeit,4,4,2022,0,3
+Entwicklung,Verwirklichung,4,4,2022,0,4
+Wohnungsbau,Vertriebenen,6,4,2022,0,0
+Wohnungsbau,Massenzustroms,5,4,2022,0,1
+Wohnungsbau,Mindestsicherungssysteme,4,4,2022,0,2
+Wohnungsbau,Flüchtlingen,4,4,2022,0,3
+Wohnungsbau,Kindergrundsicherung,3,4,2022,0,4
+Arbeit,Arbeitnehmer,8,4,2022,0,0
+Arbeit,Leistungsberechtigte,4,4,2022,0,1
+Arbeit,Arbeitsbedingungen,4,4,2022,0,2
+Arbeit,Agentur,3,4,2022,0,3
+Arbeit,Leistungsbeziehern,3,4,2022,0,4
+Justiz,Akten,4,4,2022,0,0
+Justiz,Antidiskriminierungsstelle,4,4,2022,0,1
+Justiz,Rechnungshofs,3,4,2022,0,2
+Justiz,Vereidigung,3,4,2022,0,3
+Justiz,Behörde,3,4,2022,0,4
+Familie,Kinder,6,4,2022,0,0
+Familie,Familie,3,4,2022,0,1
+Familie,Erwachsene,2,4,2022,0,2
+Familie,Assistenzhunde,2,4,2022,0,3
+Familie,Sorte,2,4,2022,0,4
+Innenpolitik,Mindestlohns,5,4,2022,0,0
+Innenpolitik,Arbeitslosengeld,3,4,2022,0,1
+Innenpolitik,Rechtsextremismus,2,4,2022,0,2
+Innenpolitik,NetzDG,2,4,2022,0,3
+Innenpolitik,Krisenvorsorge,1,4,2022,0,4
+Umwelt,Umwelt,4,4,2022,0,0
+Umwelt,Natur,3,4,2022,0,1
+Umwelt,Klimaschutz,2,4,2022,0,2
+Umwelt,Klimaschutzes,2,4,2022,0,3
+Umwelt,Kernkraftwerken,2,4,2022,0,4
+Wirtschaft,Globalisierung,8,4,2022,0,0
+Wirtschaft,Wirtschaft,6,4,2022,0,1
+Wirtschaft,Inflation,4,4,2022,0,2
+Wirtschaft,Ausland,3,4,2022,0,3
+Wirtschaft,Föderation,2,4,2022,0,4
+Verkehr und Digitalisierung,Gütern,3,4,2022,0,0
+Verkehr und Digitalisierung,Inverkehrbringens,2,4,2022,0,1
+Verkehr und Digitalisierung,Waren,2,4,2022,0,2
+Verkehr und Digitalisierung,Preiserhöhungen,2,4,2022,0,3
+Verkehr und Digitalisierung,Fernpendler,2,4,2022,0,4
+Gesundheit,Impfpflicht,6,4,2022,0,0
+Gesundheit,Gesundheit,3,4,2022,0,1
+Gesundheit,Freiheit,2,4,2022,0,2
+Gesundheit,Versorgungssicherheit,2,4,2022,0,3
+Gesundheit,Impfkampagne,2,4,2022,0,4
+Landwirtschaft,Kraftstoffe,4,4,2022,0,0
+Landwirtschaft,Fischerei,2,4,2022,0,1
+Landwirtschaft,Raps,1,4,2022,0,2
+Landwirtschaft,Baumwolle,1,4,2022,0,3
+Landwirtschaft,Garantiefonds,1,4,2022,0,4
+Wirtschaft,Wirtschaft,13,5,2022,0,0
+Wirtschaft,Energielieferanten,4,5,2022,0,1
+Wirtschaft,Haushaltskunden,4,5,2022,0,2
+Wirtschaft,Bürgern,4,5,2022,0,3
+Wirtschaft,Gesellschaft,3,5,2022,0,4
+Entwicklung,Einmalzahlung,8,5,2022,0,0
+Entwicklung,Überwachung,6,5,2022,0,1
+Entwicklung,Herstellung,5,5,2022,0,2
+Entwicklung,Unabhängigkeit,5,5,2022,0,3
+Entwicklung,Ausbildung,5,5,2022,0,4
+Außenpolitik,Ukraine,25,5,2022,0,0
+Außenpolitik,Russlands,8,5,2022,0,1
+Außenpolitik,Treibhausgasneutralität,5,5,2022,0,2
+Außenpolitik,Mandatsobergrenze,5,5,2022,0,3
+Außenpolitik,Sanktionen,5,5,2022,0,4
+Verkehr und Digitalisierung,Personennahverkehrs,4,5,2022,0,0
+Verkehr und Digitalisierung,Datenaustausch,3,5,2022,0,1
+Verkehr und Digitalisierung,Straßenverkehr,3,5,2022,0,2
+Verkehr und Digitalisierung,Strom,3,5,2022,0,3
+Verkehr und Digitalisierung,Elektromobilität,2,5,2022,0,4
+Wohnungsbau,Geflüchtete,6,5,2022,0,0
+Wohnungsbau,Haushaltsjahr,5,5,2022,0,1
+Wohnungsbau,Zusatzausgaben,5,5,2022,0,2
+Wohnungsbau,Gebäude,5,5,2022,0,3
+Wohnungsbau,Grundsicherung,5,5,2022,0,4
+Justiz,Bundesnetzagentur,6,5,2022,0,0
+Justiz,Rechtsfolgen,4,5,2022,0,1
+Justiz,Strafgesetzbuches,4,5,2022,0,2
+Justiz,Bundesverfassungsgerichts,4,5,2022,0,3
+Justiz,Einführungsgesetz,4,5,2022,0,4
+Arbeit,Beitrag,5,5,2022,0,0
+Arbeit,Verpflichtungen,4,5,2022,0,1
+Arbeit,Entschädigung,4,5,2022,0,2
+Arbeit,Arbeitsbedingungen,4,5,2022,0,3
+Arbeit,Pflichten,3,5,2022,0,4
+Umwelt,Energien,9,5,2022,0,0
+Umwelt,Klimaschutz,7,5,2022,0,1
+Umwelt,Organismen,3,5,2022,0,2
+Umwelt,Energie,3,5,2022,0,3
+Umwelt,Global,3,5,2022,0,4
+Landwirtschaft,Alterssicherung,6,5,2022,0,0
+Landwirtschaft,Kraftstoffe,5,5,2022,0,1
+Landwirtschaft,Energieversorgung,5,5,2022,0,2
+Landwirtschaft,Windenergie,4,5,2022,0,3
+Landwirtschaft,Heizung,3,5,2022,0,4
+Bildung und Forschung,Bildung,12,5,2022,0,0
+Bildung und Forschung,Special,5,5,2022,0,1
+Bildung und Forschung,Jugendliche,4,5,2022,0,2
+Bildung und Forschung,Universitäten,4,5,2022,0,3
+Bildung und Forschung,Innovation,3,5,2022,0,4
+Innenpolitik,Mindestlohns,3,5,2022,0,0
+Innenpolitik,Aufenthaltsgesetzes,3,5,2022,0,1
+Innenpolitik,Rentenniveau,2,5,2022,0,2
+Innenpolitik,Arbeitslosengeld,2,5,2022,0,3
+Innenpolitik,Regierungskoalition,2,5,2022,0,4
+Finanzen,Bundeshaushaltsplans,3,5,2022,0,0
+Finanzen,Zuständigkeiten,3,5,2022,0,1
+Finanzen,Wertpapieren,3,5,2022,0,2
+Finanzen,Renten,2,5,2022,0,3
+Finanzen,Gesamthaushalts,2,5,2022,0,4
+Gesundheit,Verbraucherschutz,5,5,2022,0,0
+Gesundheit,Künstliche,3,5,2022,0,1
+Gesundheit,Todes,2,5,2022,0,2
+Gesundheit,Langzeitpflege,2,5,2022,0,3
+Gesundheit,Versorgungssicherheit,2,5,2022,0,4
+Familie,Kinder,6,5,2022,0,0
+Familie,Heimat,4,5,2022,0,1
+Familie,Gruppe,3,5,2022,0,2
+Familie,Freibeträge,3,5,2022,0,3
+Familie,Eigentümers,2,5,2022,0,4
+Verteidigung,Streitkräfte,7,5,2022,0,0
+Verteidigung,Soldaten,6,5,2022,0,1
+Verteidigung,Afghanistan,5,5,2022,0,2
+Verteidigung,Soldatinnen,4,5,2022,0,3
+Verteidigung,Bundeswehr,3,5,2022,0,4
+Justiz,Abgabenordnung,7,6,2022,0,0
+Justiz,Bundesverfassungsgerichts,5,6,2022,0,1
+Justiz,Behörde,4,6,2022,0,2
+Justiz,Bundesnetzagentur,3,6,2022,0,3
+Justiz,Einführungsgesetz,3,6,2022,0,4
+Arbeit,Arbeitsbedingungen,7,6,2022,0,0
+Arbeit,Hilfe,6,6,2022,0,1
+Arbeit,Verpflichtungen,5,6,2022,0,2
+Arbeit,Werbung,4,6,2022,0,3
+Arbeit,Anpassungsbeihilfe,4,6,2022,0,4
+Entwicklung,Entwurfs,8,6,2022,0,0
+Entwicklung,Jahres,7,6,2022,0,1
+Entwicklung,Ausbildung,6,6,2022,0,2
+Entwicklung,Erreichung,4,6,2022,0,3
+Entwicklung,Ausschluss,4,6,2022,0,4
+Bildung und Forschung,Wasserstoff,5,6,2022,0,0
+Bildung und Forschung,Videokommunikation,4,6,2022,0,1
+Bildung und Forschung,Schüler,3,6,2022,0,2
+Bildung und Forschung,Ausnahmeregelung,2,6,2022,0,3
+Bildung und Forschung,Heilmittelwerbegesetz,2,6,2022,0,4
+Gesundheit,Sterben,5,6,2022,0,0
+Gesundheit,Selbsttötung,2,6,2022,0,1
+Gesundheit,Leben,2,6,2022,0,2
+Gesundheit,Schwangerschaftsabbrüche,2,6,2022,0,3
+Gesundheit,Freiheit,2,6,2022,0,4
+Außenpolitik,Ukraine,13,6,2022,0,0
+Außenpolitik,Angriffskrieges,4,6,2022,0,1
+Außenpolitik,Treibhausgasneutralität,3,6,2022,0,2
+Außenpolitik,Mandatsobergrenze,3,6,2022,0,3
+Außenpolitik,Haushaltsausschusses,3,6,2022,0,4
+Verkehr und Digitalisierung,Einvernehmen,4,6,2022,0,0
+Verkehr und Digitalisierung,Betäubungsmitteln,3,6,2022,0,1
+Verkehr und Digitalisierung,Abstand,2,6,2022,0,2
+Verkehr und Digitalisierung,Kraftwerken,2,6,2022,0,3
+Verkehr und Digitalisierung,Vergabeverfahren,2,6,2022,0,4
+Umwelt,Vereinten,4,6,2022,0,0
+Umwelt,Energien,3,6,2022,0,1
+Umwelt,Klimaschutz,3,6,2022,0,2
+Umwelt,Energiekosten,3,6,2022,0,3
+Umwelt,Flächenbeitragswerte,2,6,2022,0,4
+Familie,Freibeträge,6,6,2022,0,0
+Familie,Haager,3,6,2022,0,1
+Familie,Gesellschafters,2,6,2022,0,2
+Familie,Unternehmers,2,6,2022,0,3
+Familie,Bevölkerungsschichten,2,6,2022,0,4
+Wirtschaft,Wirtschaft,8,6,2022,0,0
+Wirtschaft,Studierende,4,6,2022,0,1
+Wirtschaft,Gesellschaft,3,6,2022,0,2
+Wirtschaft,Kultur,3,6,2022,0,3
+Wirtschaft,Bürgern,3,6,2022,0,4
+Wohnungsbau,Haushaltsjahr,17,6,2022,0,0
+Wohnungsbau,Nettokreditaufnahme,6,6,2022,0,1
+Wohnungsbau,BAföG,5,6,2022,0,2
+Wohnungsbau,Bundesausbildungsförderungsgesetz,5,6,2022,0,3
+Wohnungsbau,Mindestlohn,5,6,2022,0,4
+Verteidigung,Bundeswehr,11,6,2022,0,0
+Verteidigung,Streitkräfte,8,6,2022,0,1
+Verteidigung,Afghanistan,5,6,2022,0,2
+Verteidigung,Ortskräften,2,6,2022,0,3
+Verteidigung,Kampfhandlungen,2,6,2022,0,4
+Landwirtschaft,Windenergieanlagen,5,6,2022,0,0
+Landwirtschaft,Erdgas,4,6,2022,0,1
+Landwirtschaft,Erzeuger,4,6,2022,0,2
+Landwirtschaft,Betriebe,4,6,2022,0,3
+Landwirtschaft,Stromerzeugung,3,6,2022,0,4
+Finanzen,Bundeshaushaltsplans,19,6,2022,0,0
+Finanzen,Gesamthaushalts,6,6,2022,0,1
+Finanzen,Sondervermögen,4,6,2022,0,2
+Finanzen,Verwaltungsrat,3,6,2022,0,3
+Finanzen,Wirtschaftsplans,3,6,2022,0,4
+Innenpolitik,Nachtragshaushaltsgesetz,4,6,2022,0,0
+Innenpolitik,Mindestlohns,4,6,2022,0,1
+Innenpolitik,Rathenaus,1,6,2022,0,2
+Innenpolitik,Haushaltsgesetzes,1,6,2022,0,3
+Innenpolitik,Parliament,1,6,2022,0,4
+Finanzen,Haushaltsführung,5,7,2022,0,0
+Finanzen,Verpflichtungsermächtigungen,4,7,2022,0,1
+Finanzen,Haushaltsjahres,4,7,2022,0,2
+Finanzen,Regulations,2,7,2022,0,4
+Landwirtschaft,Windenergieanlagen,6,7,2022,0,0
+Landwirtschaft,Stromerzeugung,4,7,2022,0,1
+Landwirtschaft,Windenergie,4,7,2022,0,2
+Landwirtschaft,Treibhausgasemissionszertifikaten,3,7,2022,0,3
+Landwirtschaft,Erdgas,3,7,2022,0,4
+Entwicklung,Resilienzplans,24,7,2022,0,0
+Entwicklung,Migration,5,7,2022,0,1
+Entwicklung,Digitalisierung,5,7,2022,0,2
+Entwicklung,Beitritt,4,7,2022,0,3
+Entwicklung,Integration,4,7,2022,0,4
+Verkehr und Digitalisierung,Stromsektor,4,7,2022,0,0
+Verkehr und Digitalisierung,Handel,3,7,2022,0,1
+Verkehr und Digitalisierung,Kroatien,3,7,2022,0,2
+Verkehr und Digitalisierung,Liegen,3,7,2022,0,3
+Verkehr und Digitalisierung,Straßengüterverkehr,2,7,2022,0,4
+Wohnungsbau,Stadtentwicklung,5,7,2022,0,0
+Wohnungsbau,Wohnungen,5,7,2022,0,1
+Wohnungsbau,Council,4,7,2022,0,2
+Wohnungsbau,Verordnungsermächtigungen,4,7,2022,0,3
+Wohnungsbau,Flächen,4,7,2022,0,4
+Gesundheit,Gesundheit,3,7,2022,0,0
+Gesundheit,Gefährdung,2,7,2022,0,1
+Gesundheit,Freiheit,2,7,2022,0,2
+Gesundheit,Pflege,2,7,2022,0,3
+Gesundheit,Funktionsfähigkeit,2,7,2022,0,4
+Verteidigung,Bundeswehr,10,7,2022,0,0
+Verteidigung,Afghanistan,5,7,2022,0,1
+Verteidigung,Finnland,4,7,2022,0,2
+Verteidigung,Streitkräfte,3,7,2022,0,3
+Verteidigung,Soldaten,3,7,2022,0,4
+Justiz,Kroatiens,2,7,2022,0,0
+Justiz,Rechtsstaatlichkeit,2,7,2022,0,1
+Justiz,Drittstaatsangehörige,2,7,2022,0,2
+Justiz,Rechnungshofs,2,7,2022,0,3
+Justiz,Menschenrechtsverletzungen,2,7,2022,0,4
+Arbeit,Versammlung,3,7,2022,0,0
+Arbeit,Engagements,2,7,2022,0,1
+Arbeit,Einladung,2,7,2022,0,2
+Arbeit,Beitrag,2,7,2022,0,3
+Arbeit,Arbeitsplatz,2,7,2022,0,4
+Bildung und Forschung,Bildung,3,7,2022,0,0
+Bildung und Forschung,Studie,3,7,2022,0,1
+Bildung und Forschung,Ausbildungsförderung,2,7,2022,0,2
+Bildung und Forschung,Stiftungsrat,2,7,2022,0,3
+Bildung und Forschung,Antworten,2,7,2022,0,4
+Umwelt,Energien,4,7,2022,0,0
+Umwelt,Handeln,3,7,2022,0,1
+Umwelt,Klima,2,7,2022,0,2
+Umwelt,Flächenbeitragswerte,2,7,2022,0,3
+Umwelt,Naturschutz,2,7,2022,0,4
+Wirtschaft,Krise,4,7,2022,0,0
+Wirtschaft,Vertreter,4,7,2022,0,1
+Wirtschaft,Brüssel,3,7,2022,0,2
+Wirtschaft,System,3,7,2022,0,3
+Wirtschaft,Verwaltung,3,7,2022,0,4
+Außenpolitik,Ukraine,9,7,2022,0,0
+Außenpolitik,Polen,5,7,2022,0,1
+Außenpolitik,Russland,5,7,2022,0,2
+Außenpolitik,Treibhausgasneutralität,4,7,2022,0,3
+Außenpolitik,Türkei,3,7,2022,0,4
+Innenpolitik,Parliament,4,7,2022,0,0
+Innenpolitik,Asyl,2,7,2022,0,1
+Innenpolitik,Schuldenbremse,2,7,2022,0,2
+Innenpolitik,Schwedens,1,7,2022,0,3
+Innenpolitik,Finanzpolitik,1,7,2022,0,4
+Familie,Flucht,3,7,2022,0,0
+Familie,Heimat,2,7,2022,0,1
+Familie,Aufenthalt,1,7,2022,0,2
+Familie,Angehörigen,1,7,2022,0,3
+Familie,Besitz,1,7,2022,0,4
+Verkehr und Digitalisierung,Marktzugang,3,9,2022,0,0
+Verkehr und Digitalisierung,Handel,3,9,2022,0,1
+Verkehr und Digitalisierung,Verstößen,3,9,2022,0,2
+Verkehr und Digitalisierung,Gasverbrauchs,2,9,2022,0,3
+Verkehr und Digitalisierung,Transportkapazitäten,2,9,2022,0,4
+Entwicklung,Stelleneinsparung,8,9,2022,0,0
+Entwicklung,Vorschlags,6,9,2022,0,1
+Entwicklung,Verringerung,5,9,2022,0,2
+Entwicklung,Kapiteln,5,9,2022,0,3
+Entwicklung,Umstellung,4,9,2022,0,4
+Umwelt,Klimaschutz,5,9,2022,0,0
+Umwelt,Kohlendioxidausstoßes,3,9,2022,0,1
+Umwelt,Sächsische,3,9,2022,0,2
+Umwelt,Energieversorgungssicherheit,2,9,2022,0,3
+Umwelt,Nachhaltigkeit,2,9,2022,0,4
+Landwirtschaft,Gasumlage,6,9,2022,0,0
+Landwirtschaft,Wachstumsförderung,4,9,2022,0,1
+Landwirtschaft,Handelsbeschränkungen,3,9,2022,0,2
+Landwirtschaft,Pflanzenschutzmitteln,3,9,2022,0,3
+Landwirtschaft,Photovoltaik,2,9,2022,0,4
+Arbeit,Kurzarbeit,6,9,2022,0,0
+Arbeit,Arbeitgeber,5,9,2022,0,1
+Arbeit,Sitzungen,5,9,2022,0,2
+Arbeit,Beschäftigte,5,9,2022,0,3
+Arbeit,Verfahrenserleichterungen,4,9,2022,0,4
+Wohnungsbau,Nettokreditaufnahme,8,9,2022,0,0
+Wohnungsbau,Solaranlagen,4,9,2022,0,1
+Wohnungsbau,Investorenschutz,3,9,2022,0,2
+Wohnungsbau,Gasbeschaffungsumlage,3,9,2022,0,3
+Wohnungsbau,BAföG,3,9,2022,0,4
+Justiz,Vollstreckung,5,9,2022,0,0
+Justiz,Streitbeilegung,3,9,2022,0,1
+Justiz,Staatsangehörige,3,9,2022,0,2
+Justiz,Finanzbehörden,3,9,2022,0,3
+Justiz,Gesetze,3,9,2022,0,4
+Bildung und Forschung,Zukunftsinvestitionen,4,9,2022,0,0
+Bildung und Forschung,Herkunftsangaben,3,9,2022,0,1
+Bildung und Forschung,Auslandsaufenthalte,3,9,2022,0,2
+Bildung und Forschung,Katalog,3,9,2022,0,3
+Bildung und Forschung,Jugendliche,3,9,2022,0,4
+Verteidigung,Russischen,4,9,2022,0,0
+Verteidigung,Königreich,3,9,2022,0,1
+Verteidigung,Waffen,3,9,2022,0,2
+Verteidigung,Großbritannien,2,9,2022,0,3
+Verteidigung,Achtundzwanzigsten,2,9,2022,0,4
+Innenpolitik,Arbeitslosengeld,4,9,2022,0,0
+Innenpolitik,Hinweisgeberschutzgesetz,2,9,2022,0,1
+Innenpolitik,Spielautomaten,2,9,2022,0,2
+Innenpolitik,Zeitung,2,9,2022,0,3
+Innenpolitik,Bundeskanzleramtes,2,9,2022,0,4
+Außenpolitik,Ukraine,15,9,2022,0,0
+Außenpolitik,Russland,8,9,2022,0,1
+Außenpolitik,Beziehungen,4,9,2022,0,2
+Außenpolitik,Energiesicherungsgesetzes,4,9,2022,0,3
+Außenpolitik,Angriffskriegs,4,9,2022,0,4
+Wirtschaft,Wirtschaft,8,9,2022,0,0
+Wirtschaft,Uniper,8,9,2022,0,1
+Wirtschaft,Kurzarbeitergeld,4,9,2022,0,2
+Wirtschaft,Inflation,4,9,2022,0,3
+Wirtschaft,Gesamtwirtschaftliche,4,9,2022,0,4
+Finanzen,Wirtschaftsplans,10,9,2022,0,0
+Finanzen,Steuern,5,9,2022,0,1
+Finanzen,Bundeshaushaltsplans,4,9,2022,0,2
+Finanzen,Gesamthaushalts,4,9,2022,0,3
+Finanzen,Finanzplan,4,9,2022,0,4
+Gesundheit,Resilienz,6,9,2022,0,0
+Gesundheit,Pflege,5,9,2022,0,1
+Gesundheit,Mitteilungspflicht,4,9,2022,0,2
+Gesundheit,Arzneimittelversorgung,4,9,2022,0,3
+Gesundheit,Arzneimittel,3,9,2022,0,4
+Familie,Minderheit,4,9,2022,0,0
+Familie,Kinder,3,9,2022,0,1
+Familie,Gruppen,3,9,2022,0,2
+Familie,Haager,3,9,2022,0,3
+Familie,Ursula,3,9,2022,0,4
+Wirtschaft,Inflation,9,10,2022,0,0
+Wirtschaft,Energiepreise,7,10,2022,0,1
+Wirtschaft,Energiepreispauschale,6,10,2022,0,2
+Wirtschaft,Haushalte,6,10,2022,0,3
+Wirtschaft,Protelion,6,10,2022,0,4
+Landwirtschaft,Energieversorgung,4,10,2022,0,0
+Landwirtschaft,Brennstoffe,4,10,2022,0,1
+Landwirtschaft,Versorgungsempfängerinnen,2,10,2022,0,2
+Landwirtschaft,Alterssicherung,2,10,2022,0,3
+Landwirtschaft,Landwirte,2,10,2022,0,4
+Außenpolitik,Ukraine,15,10,2022,0,0
+Außenpolitik,Neuverhandlungen,6,10,2022,0,1
+Außenpolitik,Russland,6,10,2022,0,2
+Außenpolitik,Sanktionen,5,10,2022,0,3
+Außenpolitik,Türkei,4,10,2022,0,4
+Entwicklung,Abfederung,8,10,2022,0,0
+Entwicklung,Inwieweit,7,10,2022,0,1
+Entwicklung,Infrastruktur,6,10,2022,0,2
+Entwicklung,Formen,5,10,2022,0,3
+Entwicklung,Stabilisierung,5,10,2022,0,4
+Arbeit,Beschäftigten,7,10,2022,0,0
+Arbeit,Ausstellung,5,10,2022,0,1
+Arbeit,Verstöße,5,10,2022,0,2
+Arbeit,Arbeitnehmer,4,10,2022,0,3
+Arbeit,Leistungsberechtigung,4,10,2022,0,4
+Wohnungsbau,Flüchtlinge,7,10,2022,0,0
+Wohnungsbau,Wirtschaftsstabilisierungsfonds,5,10,2022,0,1
+Wohnungsbau,Krankenhäuser,5,10,2022,0,2
+Wohnungsbau,Rassismus,4,10,2022,0,3
+Wohnungsbau,Zuschuss,4,10,2022,0,4
+Verkehr und Digitalisierung,Arzneimitteln,6,10,2022,0,0
+Verkehr und Digitalisierung,Netz,4,10,2022,0,1
+Verkehr und Digitalisierung,Verstößen,3,10,2022,0,2
+Verkehr und Digitalisierung,Winter,3,10,2022,0,3
+Verkehr und Digitalisierung,Strom,3,10,2022,0,4
+Bildung und Forschung,BMWK,4,10,2022,0,0
+Bildung und Forschung,Patientenorganisationen,4,10,2022,0,1
+Bildung und Forschung,Technologieverluste,2,10,2022,0,2
+Bildung und Forschung,Statistik,2,10,2022,0,3
+Bildung und Forschung,Ausschusses,2,10,2022,0,4
+Finanzen,Finanzen,4,10,2022,0,0
+Finanzen,Kreditaufnahme,3,10,2022,0,1
+Finanzen,Beitragssätze,3,10,2022,0,2
+Finanzen,Vermögenswerte,3,10,2022,0,3
+Finanzen,Haushaltsvermerks,2,10,2022,0,4
+Verteidigung,Großbritannien,5,10,2022,0,0
+Verteidigung,Streitkräfte,3,10,2022,0,1
+Verteidigung,Königreich,3,10,2022,0,2
+Verteidigung,Abwehrschirm,2,10,2022,0,3
+Verteidigung,Energiesicherungsgesetz,2,10,2022,0,4
+Innenpolitik,Islamismus,5,10,2022,0,0
+Innenpolitik,Gesetzgebungskompetenz,2,10,2022,0,1
+Innenpolitik,Schuldenbremse,2,10,2022,0,2
+Innenpolitik,Europawahlgesetzes,2,10,2022,0,3
+Innenpolitik,Fremdenfeindlichkeit,2,10,2022,0,4
+Justiz,Unionsrecht,5,10,2022,0,0
+Justiz,Bundesverfassungsgerichts,5,10,2022,0,1
+Justiz,Bagatellgrenze,4,10,2022,0,2
+Justiz,Befugnisse,3,10,2022,0,3
+Justiz,Grundrechte,3,10,2022,0,4
+Familie,Heimat,8,10,2022,0,0
+Familie,Eltern,5,10,2022,0,1
+Familie,Angehörige,5,10,2022,0,2
+Familie,Haushaltsgröße,3,10,2022,0,3
+Familie,Arne,3,10,2022,0,4
+Gesundheit,Krankenkassen,8,10,2022,0,0
+Gesundheit,Arzneimittel,4,10,2022,0,1
+Gesundheit,Krankenversicherung,4,10,2022,0,2
+Gesundheit,Schaden,3,10,2022,0,3
+Gesundheit,Arzneimittelversorgung,3,10,2022,0,4
+Umwelt,Klimaschutz,4,10,2022,0,0
+Umwelt,Wärme,4,10,2022,0,1
+Umwelt,Wasser,4,10,2022,0,2
+Umwelt,Energien,3,10,2022,0,3
+Umwelt,Energiekosten,3,10,2022,0,4
+Entwicklung,Leistungsminderungen,9,11,2022,0,0
+Entwicklung,Stelleneinsparung,8,11,2022,0,1
+Entwicklung,Infrastruktur,7,11,2022,0,2
+Entwicklung,Strukturelle,6,11,2022,0,3
+Entwicklung,Frist,6,11,2022,0,4
+Innenpolitik,Landesebene,3,11,2022,0,0
+Innenpolitik,Arbeitslosengeld,3,11,2022,0,1
+Innenpolitik,Krisenvorsorge,3,11,2022,0,2
+Innenpolitik,Solidaritätszuschlaggesetz,3,11,2022,0,3
+Innenpolitik,Strompreisbremse,2,11,2022,0,4
+Außenpolitik,Iran,8,11,2022,0,0
+Außenpolitik,Auswärtige,8,11,2022,0,1
+Außenpolitik,Mitgliedstaat,8,11,2022,0,2
+Außenpolitik,Türkei,6,11,2022,0,3
+Außenpolitik,Auswärtigen,5,11,2022,0,4
+Justiz,Bundesverfassungsgerichts,7,11,2022,0,0
+Justiz,Justiz,5,11,2022,0,1
+Justiz,Rechtsprechung,5,11,2022,0,2
+Justiz,Bagatellgrenze,5,11,2022,0,3
+Justiz,Zentralstelle,4,11,2022,0,4
+Finanzen,Wirtschaftsplans,11,11,2022,0,0
+Finanzen,Bundeshaushaltsplans,10,11,2022,0,1
+Finanzen,Vermögen,6,11,2022,0,2
+Finanzen,Gesamthaushalts,4,11,2022,0,3
+Finanzen,Altersvorsorge,4,11,2022,0,4
+Wohnungsbau,Nettokreditaufnahme,8,11,2022,0,0
+Wohnungsbau,Sozialen,7,11,2022,0,1
+Wohnungsbau,Haushaltsjahr,6,11,2022,0,2
+Wohnungsbau,Wohneigentum,6,11,2022,0,3
+Wohnungsbau,Grundsicherung,5,11,2022,0,4
+Gesundheit,Resilienz,4,11,2022,0,0
+Gesundheit,Mitteilungspflicht,3,11,2022,0,1
+Gesundheit,Gesundheit,3,11,2022,0,2
+Gesundheit,Geschlecht,3,11,2022,0,3
+Gesundheit,Rehabilitation,3,11,2022,0,4
+Verkehr und Digitalisierung,Winter,5,11,2022,0,0
+Verkehr und Digitalisierung,Nutzfahrzeuge,4,11,2022,0,1
+Verkehr und Digitalisierung,Weiterbetrieb,4,11,2022,0,2
+Verkehr und Digitalisierung,Barzahlungsverbot,3,11,2022,0,3
+Verkehr und Digitalisierung,Erdgasleitungen,3,11,2022,0,4
+Bildung und Forschung,Religion,4,11,2022,0,0
+Bildung und Forschung,Zukunftsinvestitionen,4,11,2022,0,1
+Bildung und Forschung,Kontrollstrukturübersichten,3,11,2022,0,2
+Bildung und Forschung,Quellen,3,11,2022,0,3
+Bildung und Forschung,Regelinstrument,3,11,2022,0,4
+Arbeit,Karenzzeit,12,11,2022,0,0
+Arbeit,Leistungsbezugs,6,11,2022,0,1
+Arbeit,Zeitplan,4,11,2022,0,2
+Arbeit,Außenprüfungen,4,11,2022,0,3
+Arbeit,Belastung,4,11,2022,0,4
+Verteidigung,Afghanistan,7,11,2022,0,0
+Verteidigung,Energiesicherungsgesetz,6,11,2022,0,1
+Verteidigung,Mali,3,11,2022,0,2
+Verteidigung,Kurdistans,2,11,2022,0,3
+Verteidigung,Rüstungsgütern,2,11,2022,0,4
+Wirtschaft,Mehrwertsteuer,6,11,2022,0,0
+Wirtschaft,Bürgergeldes,4,11,2022,0,1
+Wirtschaft,Gesamtwirtschaftliche,4,11,2022,0,2
+Wirtschaft,Wirtschaft,3,11,2022,0,3
+Wirtschaft,Energiepreise,3,11,2022,0,4
+Landwirtschaft,Wachstumsförderung,4,11,2022,0,0
+Landwirtschaft,Energieversorgung,4,11,2022,0,1
+Landwirtschaft,Namibia,4,11,2022,0,2
+Landwirtschaft,Erdgasspeichern,3,11,2022,0,3
+Landwirtschaft,Landwirte,2,11,2022,0,4
+Familie,Heimat,6,11,2022,0,0
+Familie,Steuerpflichtige,6,11,2022,0,1
+Familie,Neurath,4,11,2022,0,2
+Familie,Pflegefamilien,4,11,2022,0,3
+Familie,Wohnung,3,11,2022,0,4
+Umwelt,Energien,6,11,2022,0,0
+Umwelt,Wärme,5,11,2022,0,1
+Umwelt,Klimaschutz,4,11,2022,0,2
+Umwelt,Betriebsstoffe,3,11,2022,0,3
+Umwelt,Kälte,3,11,2022,0,4
+Umwelt,Wärme,14,12,2022,0,0
+Umwelt,Kilowattstunde,12,12,2022,0,1
+Umwelt,Energien,7,12,2022,0,2
+Umwelt,Energiekosten,6,12,2022,0,3
+Umwelt,Raumordnung,4,12,2022,0,4
+Verkehr und Digitalisierung,Netzbezuges,6,12,2022,0,0
+Verkehr und Digitalisierung,Verstößen,5,12,2022,0,1
+Verkehr und Digitalisierung,Preisbremsen,4,12,2022,0,2
+Verkehr und Digitalisierung,Handel,3,12,2022,0,3
+Verkehr und Digitalisierung,Entlastungsbeträgen,3,12,2022,0,4
+Entwicklung,Verwaltungsvereinbarung,12,12,2022,0,0
+Entwicklung,Abschöpfung,6,12,2022,0,1
+Entwicklung,Berichts,6,12,2022,0,2
+Entwicklung,Wirkung,6,12,2022,0,3
+Entwicklung,Basiskontingents,6,12,2022,0,4
+Justiz,Bundesnetzagentur,4,12,2022,0,0
+Justiz,Bundespolizei,3,12,2022,0,1
+Justiz,Missbrauch,3,12,2022,0,2
+Justiz,Präsidentin,3,12,2022,0,3
+Justiz,Bundesverfassungsgerichts,3,12,2022,0,4
+Gesundheit,Preis,9,12,2022,0,0
+Gesundheit,Mitteilungspflicht,3,12,2022,0,1
+Gesundheit,Funktionsfähigkeit,3,12,2022,0,2
+Gesundheit,Apotheken,3,12,2022,0,3
+Gesundheit,Soziales,3,12,2022,0,4
+Außenpolitik,Basispreiskontingents,6,12,2022,0,0
+Außenpolitik,Mitgliedstaat,5,12,2022,0,1
+Außenpolitik,Beziehungen,4,12,2022,0,2
+Außenpolitik,Ukraine,3,12,2022,0,3
+Außenpolitik,Meldekanäle,2,12,2022,0,4
+Arbeit,Ausstellung,5,12,2022,0,0
+Arbeit,Agentur,5,12,2022,0,1
+Arbeit,Arbeitnehmer,4,12,2022,0,2
+Arbeit,Beschäftigten,4,12,2022,0,3
+Arbeit,Sicherheitszuschlags,3,12,2022,0,4
+Bildung und Forschung,Arbeitsbericht,7,12,2022,0,0
+Bildung und Forschung,Committee,4,12,2022,0,1
+Bildung und Forschung,Ausschusses,3,12,2022,0,2
+Bildung und Forschung,Höchstwerte,3,12,2022,0,3
+Bildung und Forschung,Expertenkommission,3,12,2022,0,4
+Wirtschaft,Energiepreise,4,12,2022,0,0
+Wirtschaft,Rheinischen,4,12,2022,0,1
+Wirtschaft,Mehrwertsteuer,4,12,2022,0,2
+Wirtschaft,Arbeitnehmern,3,12,2022,0,3
+Wirtschaft,Haushalte,3,12,2022,0,4
+Landwirtschaft,Erdgas,7,12,2022,0,0
+Landwirtschaft,Brennstoffen,6,12,2022,0,1
+Landwirtschaft,Landwirtschaft,4,12,2022,0,2
+Landwirtschaft,Schwedt,4,12,2022,0,3
+Landwirtschaft,Raffinerie,3,12,2022,0,4
+Finanzen,Kundendaten,6,12,2022,0,0
+Finanzen,Mitgliederversammlungen,4,12,2022,0,1
+Finanzen,Boni,3,12,2022,0,2
+Finanzen,Dividenden,3,12,2022,0,3
+Finanzen,Betriebskostenabrechnung,3,12,2022,0,4
+Innenpolitik,Strompreisbremse,5,12,2022,0,0
+Innenpolitik,Hinweisgeberschutzgesetz,2,12,2022,0,1
+Innenpolitik,Arbeitnehmerüberlassungsgesetzes,2,12,2022,0,2
+Innenpolitik,Landesebene,2,12,2022,0,3
+Innenpolitik,Kettenbefristungen,1,12,2022,0,4
+Familie,Revier,4,12,2022,0,0
+Familie,Neurath,4,12,2022,0,1
+Familie,Familien,3,12,2022,0,2
+Familie,Friends,3,12,2022,0,3
+Familie,Steuerpflichtige,3,12,2022,0,4
+Wohnungsbau,Privathaushalte,9,12,2022,0,0
+Wohnungsbau,Immobilienaufgaben,8,12,2022,0,1
+Wohnungsbau,Härtefallfonds,7,12,2022,0,2
+Wohnungsbau,Bauwesen,7,12,2022,0,3
+Wohnungsbau,Büros,7,12,2022,0,4
+Verteidigung,Xinjiang,2,12,2022,0,0
+Verteidigung,Bundesnachrichtendienst,2,12,2022,0,1
+Verteidigung,Wurde,2,12,2022,0,2
+Verteidigung,Krankenhaus,2,12,2022,0,3
+Verteidigung,Kanada,2,12,2022,0,4
+Umwelt,Energien,36,0,2022,0,0
+Umwelt,Klimaschutz,33,0,2022,0,1
+Umwelt,Energiekosten,25,0,2022,0,2
+Umwelt,Wärme,24,0,2022,0,3
+Umwelt,Energie,15,0,2022,0,4
+Verkehr und Digitalisierung,Winter,14,0,2022,0,0
+Verkehr und Digitalisierung,Verstößen,12,0,2022,0,1
+Verkehr und Digitalisierung,Öffentlichen,11,0,2022,0,2
+Verkehr und Digitalisierung,Strom,11,0,2022,0,3
+Verkehr und Digitalisierung,Arzneimitteln,11,0,2022,0,4
+Entwicklung,Digitalisierung,28,0,2022,0,0
+Entwicklung,Abfederung,25,0,2022,0,1
+Entwicklung,Einmalzahlung,25,0,2022,0,2
+Entwicklung,Resilienzplans,25,0,2022,0,3
+Entwicklung,Stabilisierung,21,0,2022,0,4
+Justiz,Bundesverfassungsgerichts,24,0,2022,0,0
+Justiz,Bundesnetzagentur,19,0,2022,0,1
+Justiz,Einführungsgesetz,16,0,2022,0,2
+Justiz,Abgabenordnung,16,0,2022,0,3
+Justiz,Behörde,15,0,2022,0,4
+Gesundheit,Impfpflicht,23,0,2022,0,0
+Gesundheit,Gesundheit,22,0,2022,0,1
+Gesundheit,Krankenkassen,14,0,2022,0,2
+Gesundheit,Versorgungssicherheit,13,0,2022,0,3
+Gesundheit,Soziales,11,0,2022,0,4
+Außenpolitik,Ukraine,127,0,2022,0,0
+Außenpolitik,Russland,35,0,2022,0,1
+Außenpolitik,Sanktionen,25,0,2022,0,2
+Außenpolitik,Türkei,23,0,2022,0,3
+Außenpolitik,Angriffskrieges,22,0,2022,0,4
+Arbeit,Arbeitnehmer,21,0,2022,0,0
+Arbeit,Arbeitsbedingungen,18,0,2022,0,1
+Arbeit,Ausstellung,17,0,2022,0,2
+Arbeit,Beitrag,17,0,2022,0,3
+Arbeit,Karenzzeit,16,0,2022,0,4
+Bildung und Forschung,Bildung,28,0,2022,0,0
+Bildung und Forschung,Wasserstoff,11,0,2022,0,1
+Bildung und Forschung,Studie,11,0,2022,0,2
+Bildung und Forschung,Schüler,11,0,2022,0,3
+Bildung und Forschung,Arbeitsbericht,10,0,2022,0,4
+Wirtschaft,Wirtschaft,57,0,2022,0,0
+Wirtschaft,Inflation,23,0,2022,0,1
+Wirtschaft,Mehrwertsteuer,22,0,2022,0,2
+Wirtschaft,Energiepreise,16,0,2022,0,3
+Wirtschaft,Gesamtwirtschaftliche,16,0,2022,0,4
+Landwirtschaft,Energieversorgung,24,0,2022,0,0
+Landwirtschaft,Erdgas,18,0,2022,0,1
+Landwirtschaft,Landwirtschaft,17,0,2022,0,2
+Landwirtschaft,Windenergieanlagen,16,0,2022,0,3
+Landwirtschaft,Windenergie,13,0,2022,0,4
+Finanzen,Bundeshaushaltsplans,40,0,2022,0,0
+Finanzen,Wirtschaftsplans,34,0,2022,0,1
+Finanzen,Gesamthaushalts,25,0,2022,0,2
+Finanzen,Steuern,18,0,2022,0,3
+Finanzen,Finanzplan,16,0,2022,0,4
+Innenpolitik,Arbeitslosengeld,15,0,2022,0,0
+Innenpolitik,Mindestlohns,14,0,2022,0,1
+Innenpolitik,Aufenthaltsgesetzes,11,0,2022,0,2
+Innenpolitik,Nachtragshaushaltsgesetz,10,0,2022,0,3
+Innenpolitik,Zeitung,8,0,2022,0,4
+Familie,Heimat,31,0,2022,0,0
+Familie,Kinder,26,0,2022,0,1
+Familie,Angehörige,16,0,2022,0,2
+Familie,Eltern,14,0,2022,0,3
+Familie,Familien,13,0,2022,0,4
+Wohnungsbau,Haushaltsjahr,35,0,2022,0,0
+Wohnungsbau,Nettokreditaufnahme,34,0,2022,0,1
+Wohnungsbau,Flüchtlinge,22,0,2022,0,2
+Wohnungsbau,Zusatzausgaben,20,0,2022,0,3
+Wohnungsbau,Bauwesen,19,0,2022,0,4
+Verteidigung,Bundeswehr,40,0,2022,0,0
+Verteidigung,Afghanistan,35,0,2022,0,1
+Verteidigung,Streitkräfte,31,0,2022,0,2
+Verteidigung,Beabsichtigt,12,0,2022,0,3
+Verteidigung,Energiesicherungsgesetz,12,0,2022,0,4
