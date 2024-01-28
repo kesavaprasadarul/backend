@@ -247,6 +247,4 @@ if __name__ == '__main__':
     configure_logging()
     from datetime import date, timedelta
 
-    import_bt_abstimmungen(
-        date_start=date(2023, 1, 1), date_end=(date.today() + timedelta(weeks=1)), full=True
-    )
+    import_bt_abstimmungen(date_end=(date.today() + timedelta(weeks=1)), full=True)

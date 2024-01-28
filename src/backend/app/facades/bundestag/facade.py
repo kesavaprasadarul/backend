@@ -361,7 +361,9 @@ class BundestagFacade(HttpFacade):
                             function=redner_function,
                             video_id=video_id,
                             video_url=self.base_url + video_url,
-                            image_url=self.base_url + redner_image_link,
+                            image_url=self.base_url + redner_image_link
+                            if not redner_image_link.startswith('http')
+                            else redner_image_link,
                         )
                     )
             else:
