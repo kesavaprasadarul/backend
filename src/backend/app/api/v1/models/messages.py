@@ -87,10 +87,19 @@ class BundestagAbstimmung(BaseModel):
         from_attributes = True
 
 
-class BundestagAbstimmungReden(BaseModel):
-    bt_video_id: int
+class BundestagRede(BaseModel):
+    bt_video_id: str
     video_url: str
     text: str
+
+
+class BundestagAbstimmungRedner(BaseModel):
+    id: int
+    abstimmung_id: int
+    full_name: str
+    function: str
+    image_url: Optional[str]
+    reden: list[BundestagRede]
 
 
 class BundestagEinzelpersonAbstimmung(BaseModel):

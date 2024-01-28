@@ -18,7 +18,6 @@ from backend.app.facades.deutscher_bundestag.model_plenarprotokoll_vorgangsbezug
 from backend.app.facades.deutscher_bundestag.parameter_model import PlenarprotokollParameter
 from backend.app.models.api.top_topics_model import TopTopics
 from backend.app.core.bundestag_ressorts import BUNDESTAG_RESSORT
-import pandas as pd
 
 _logger = logging.getLogger(__name__)
 
@@ -28,7 +27,6 @@ def create_bundestag_top_topics(
     year: Optional[int] = None,
     election_period: Optional[int] = None,
     to_db=True,
-    output_file_path: Optional[str] = None,
 ):
     """Create top topics of bundestag from plenarprotkoll for given timerange and store to database table top_topics.
 
@@ -90,24 +88,6 @@ def create_bundestag_top_topics(
     word_analyser = WordCounter(plenarprotokoll_vorgangsbezuege_abstract_split)
     topics_by_ressort = word_analyser.make_word_cloud()
 
-    if output_file_path:
-        # store to csv
-        df = pd.DataFrame(
-            [
-                {
-                    "month": month,
-                    "year": year,
-                    "election_period": election_period,
-                    "ressort": key,
-                    "word": word_and_value[0],
-                    "value": word_and_value[1],
-                }
-                for key in topics_by_ressort
-                for word_and_value in topics_by_ressort[key]
-            ]
-        )
-        df.to_csv(output_file_path, index=False)
-
     # return
     top_topics_by_ressort: dict[BUNDESTAG_RESSORT, list[tuple[str, int]]] = {}
     for key in topics_by_ressort.keys():
@@ -137,6 +117,6 @@ def create_bundestag_top_topics(
 
 if __name__ == "__main__":
     start = time.time()
-    create_bundestag_top_topics(year=2023, month=11, to_db=False, output_file_path="test.csv")
+    create_bundestag_top_topics(year=2023, month=11, to_db=False)
     end = time.time()
     print("Time needed:", end - start)
