@@ -29,9 +29,12 @@ async def lifespan(app: FastAPI):
     if importer:
         init_schedules()
 
-    yield
+        yield
 
-    shutdown_scheduler()
+        shutdown_scheduler()
+
+    else:
+        yield
 
 
 origins = [
