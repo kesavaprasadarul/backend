@@ -76,10 +76,7 @@ class DIPBundestagDrucksacheTextImporter(
         )
 
         dip_drucksache_text = (
-            DIPDrucksacheText(
-                drucksache_id=data.id,
-                text=data.text,
-            )
+            DIPDrucksacheText(drucksache_id=data.id, text=data.text.replace('\x00', ''))
             if data.text
             else None
         )
@@ -133,16 +130,14 @@ class DIPBundestagDrucksacheTextImporter(
 
 
 def import_dip_bundestag():
-    importer = DIPBundestagDrucksacheTextImporter()
+    importer = DIPBundestagDrucksacheTextImporter(import_vorgangspositionen=False)
 
     params = DrucksacheParameter(
-        aktualisiert_start=datetime(2021, 1, 1, tzinfo=timezone.utc).astimezone(),
+        aktualisiert_start=datetime(2015, 1, 1, tzinfo=timezone.utc).astimezone(),
     )
 
     importer.import_data(
         params=params,
-        response_limit=1,
-        proxy_list=ProxyList.from_url(Settings().PROXY_LIST_SOCKS4_URL),
     )
 
 

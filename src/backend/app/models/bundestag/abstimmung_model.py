@@ -8,6 +8,7 @@ from sqlalchemy.orm import Mapped, Session, mapped_column, object_session, relat
 from backend.app.db.database import Base
 from backend.app.facades.bundestag.model import Vote
 from backend.app.models.common import BTSchema, TimestampMixin
+from backend.app.models.dip.drucksache_model import DIPDrucksache
 
 
 class BTAbstimmung(Base, TimestampMixin, BTSchema):
@@ -111,11 +112,19 @@ class BTAbstimmungDrucksache(Base, TimestampMixin, BTSchema):
 
     drucksache_name: Mapped[str] = mapped_column(nullable=False)
 
+    dip_drucksache_id: Mapped[int] = mapped_column(
+        ForeignKey("dip.drucksache.id", onupdate="CASCADE", ondelete="SET NULL"), nullable=True
+    )
+
     abstimmung_id: Mapped[int] = mapped_column(ForeignKey("bt.abstimmung.id"), nullable=False)
 
     abstimmung: Mapped["BTAbstimmung"] = relationship(
         "BTAbstimmung",
         back_populates="drucksachen",
+    )
+
+    dip_drucksache: Mapped["DIPDrucksache"] = relationship(
+        "DIPDrucksache", cascade="merge, save-update"
     )
 
 

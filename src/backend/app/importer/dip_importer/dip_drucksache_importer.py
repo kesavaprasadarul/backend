@@ -146,14 +146,16 @@ class DIPBundestagDrucksacheImporter(DIPImporter[Drucksache, DrucksacheParameter
 
 
 def import_dip_bundestag():
-    importer = DIPBundestagDrucksacheImporter()
-
-    params = DrucksacheParameter(
-        aktualisiert_start=datetime(2023, 1, 1, tzinfo=pytz.UTC).astimezone(),
-        aktualisiert_end=datetime(2023, 12, 31, tzinfo=pytz.UTC).astimezone(),
+    importer = DIPBundestagDrucksacheImporter(
+        import_vorgaenge=True, import_vorgangspositionen=False
     )
 
-    importer.import_data(params=params, response_limit=1000, upsert_batch_size=30)
+    params = DrucksacheParameter(
+        aktualisiert_start=datetime(2015, 1, 1, tzinfo=pytz.UTC).astimezone(),
+        aktualisiert_end=datetime(2024, 1, 31, tzinfo=pytz.UTC).astimezone(),
+    )
+
+    importer.import_data(params=params, upsert_batch_size=30)
 
 
 if __name__ == '__main__':

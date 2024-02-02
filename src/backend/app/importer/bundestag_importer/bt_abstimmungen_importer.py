@@ -23,7 +23,9 @@ from backend.app.facades.bundestag.parameter_model import (
 from backend.app.facades.deutscher_bundestag.parameter_model import DrucksacheParameter
 from backend.app.facades.util import ProxyList
 from backend.app.importer.bundestag_importer.bt_importer import BTImporter
-from backend.app.importer.dip_importer.dip_drucksache_importer import DIPBundestagDrucksacheImporter
+from backend.app.importer.dip_importer.dip_drucksache_text_importer import (
+    DIPBundestagDrucksacheTextImporter,
+)
 from backend.app.models.bundestag.abstimmung_model import (
     BTAbstimmung,
     BTAbstimmungDrucksache,
@@ -35,6 +37,8 @@ from backend.app.models.bundestag.abstimmung_model import (
 )
 from typing import Any, Generic, Iterator, MutableMapping, Optional, TypeVar
 
+from backend.app.models.dip.drucksache_model import DIPDrucksache, DIPDrucksacheText
+
 _logger = logging.getLogger(__name__)
 
 
@@ -45,7 +49,7 @@ class BTAbstimmungenImporter(
         super().__init__(crud=CRUD_BUNDESTAG_ABSTIMMUNG)
 
         if import_drucksache:
-            self.drucksache_import = DIPBundestagDrucksacheImporter(
+            self.drucksache_import = DIPBundestagDrucksacheTextImporter(
                 import_vorgaenge=True, import_vorgangspositionen=False
             )
 
@@ -84,7 +88,9 @@ class BTAbstimmungenImporter(
 
         _logger.debug(f'Imported {self.imported_count} {self.crud.model.__tablename__}.')
 
-    def transform_model(self, data: BundestagAbstimmung) -> BTAbstimmung:
+    def transform_model(
+        self, data: BundestagAbstimmung, dip_drucksachen: list[DIPDrucksache] = []
+    ) -> BTAbstimmung:
         bt_einzelabstimmungen = []
 
         bt_fraktionen = {}
@@ -163,10 +169,17 @@ class BTAbstimmungenImporter(
 
         bt_abstimmung_drucksachen = []
         for drucksache in data.drucksachen:
+            dip_drucksache_rel = None
+            for dip_drucksache in dip_drucksachen:
+                if drucksache.drucksache_name == dip_drucksache.dokumentnummer:
+                    dip_drucksache_rel = dip_drucksache
+                    break
+
             bt_abstimmung_drucksachen.append(
                 BTAbstimmungDrucksache(
                     drucksache_url=drucksache.url.unicode_string(),
                     drucksache_name=drucksache.drucksache_name,
+                    dip_drucksache=dip_drucksache_rel,
                 )
             )
 
@@ -230,15 +243,21 @@ class BTAbstimmungenImporter(
                     )
                     redner.text = bt_abstimmung_rede_text
 
+            dip_drucksachen = []
             if self.drucksache_import and len(bt_abstimmung.drucksachen) > 0:
                 drucksache_params = DrucksacheParameter(
                     dokumentnummer=[
                         drucksache.drucksache_name for drucksache in bt_abstimmung.drucksachen
                     ]
                 )
-                self.drucksache_import.import_data(params=drucksache_params)
+                dip_drucksachen = [
+                    dip_drucksache
+                    for dip_drucksache in self.drucksache_import.fetch_data(
+                        params=drucksache_params
+                    )
+                ]
 
-            yield self.transform_model(bt_abstimmung)
+            yield self.transform_model(bt_abstimmung, dip_drucksachen=dip_drucksachen)
 
 
 def import_bt_abstimmungen(date_start: datetime.date, date_end: datetime.date, full: bool = False):
