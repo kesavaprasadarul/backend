@@ -7,6 +7,50 @@ from backend.app.facades.bundestag.model import Vote
 from pydantic import BaseModel
 
 
+class Verkuendung(BaseModel):
+    """Eine Verkündung."""
+
+    id: int
+    fundstelle: str
+    pdf_url: Optional[str]
+    typ: Optional[str]
+
+    class Config:
+        from_attributes = True
+
+
+class Vorgang(BaseModel):
+    """Ein Vorgang."""
+
+    vorgang_id: int
+    vorgangstyp: str
+    titel: str
+    abstract: Optional[str]
+    sachgebiet: list[str]
+    verkuendungen: list[Verkuendung]
+    deskriptoren: list[str]
+
+    class Config:
+        from_attributes = True
+
+
+class Drucksache(BaseModel):
+    """Eine Drucksache."""
+
+    id: int
+    drucksachetyp: str
+    drucksache_name: str
+    pdf_url: str
+    titel: str
+    datum: date
+    ressorts: list[str]
+
+    vorgaenge: list[Vorgang]
+
+    class Config:
+        from_attributes = True
+
+
 class Beschlussfassung(BaseModel):
     """Eine Beschlussfassung."""
 
@@ -46,6 +90,7 @@ class BundestagAbstimmungDrucksache(BaseModel):
 
     drucksache_name: str
     drucksache_url: str
+    drucksache_id: int
 
     class Config:
         from_attributes = True

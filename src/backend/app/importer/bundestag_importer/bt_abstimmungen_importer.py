@@ -2,9 +2,6 @@ import datetime
 import logging
 from datetime import date
 from typing import Iterator
-
-from sympy import im
-
 from backend.app.core.config import settings
 from backend.app.core.logging import configure_logging
 from backend.app.crud.CRUDBundestag.crud_abstimmung import CRUD_BUNDESTAG_ABSTIMMUNG
