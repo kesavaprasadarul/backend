@@ -8,6 +8,7 @@ from backend.app.api.v1.routers import (
     abstimmung,
     einzelperson_abstimmung,
     abstimmung_redner,
+    drucksache,
 )
 
 api_router = APIRouter()
@@ -18,3 +19,4 @@ api_router.include_router(bundestag_top_topics.router)
 api_router.include_router(abstimmung.router)
 api_router.include_router(abstimmung_redner.router)
 api_router.include_router(einzelperson_abstimmung.router)
+api_router.include_router(drucksache.router)
