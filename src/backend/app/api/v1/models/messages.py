@@ -24,6 +24,7 @@ class Vorgang(BaseModel):
 
     vorgang_id: int
     vorgangstyp: str
+    beratungsstand: Optional[str]
     titel: str
     abstract: Optional[str]
     sachgebiet: list[str]

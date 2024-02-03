@@ -32,6 +32,7 @@ class DrucksacheService:
                     Vorgang(
                         vorgang_id=v.id,
                         vorgangstyp=v.vorgangstyp,
+                        beratungsstand=v.beratungsstand,
                         titel=v.titel,
                         abstract=v.abstract,
                         sachgebiet=v.sachgebiet if v.sachgebiet else [],
@@ -114,6 +115,7 @@ class DrucksacheService:
                     Vorgang(
                         vorgang_id=v.id,
                         vorgangstyp=v.vorgangstyp,
+                        beratungsstand=v.beratungsstand,
                         titel=v.titel,
                         abstract=v.abstract,
                         sachgebiet=v.sachgebiet if v.sachgebiet else [],

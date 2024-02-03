@@ -2,7 +2,7 @@
 import logging
 from datetime import date, datetime
 
-from fastapi import APIRouter, Depends, Query
+from fastapi import APIRouter, Depends, Query, HTTPException
 from backend.app.api.v1.models.messages import Drucksache
 from backend.app.api.v1.models.queries import DateRange, DatetimeRange
 from backend.app.services.drucksache.service import DrucksacheService
@@ -28,6 +28,9 @@ async def read_drucksachen(
     drucksache_ids: Annotated[list[int], Query(..., alias="drucksache_ids")] = [],
     service: DrucksacheService = Depends(DrucksacheService),
 ):
+    if limit > 200:
+        raise HTTPException(status_code=400, detail="Limit cannot exceed 200")
+
     drucksachen = (
         service.query(
             limit=limit,
