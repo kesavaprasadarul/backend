@@ -24,12 +24,14 @@ class Vorgang(BaseModel):
 
     vorgang_id: int
     vorgangstyp: str
+    datum: date
     beratungsstand: Optional[str]
     titel: str
     abstract: Optional[str]
     sachgebiet: list[str]
     verkuendungen: list[Verkuendung]
     deskriptoren: list[str]
+    initiatoren: list[str]
 
     class Config:
         from_attributes = True
