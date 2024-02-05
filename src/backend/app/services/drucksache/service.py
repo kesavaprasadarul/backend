@@ -32,6 +32,7 @@ class DrucksacheService:
                     Vorgang(
                         vorgang_id=v.id,
                         vorgangstyp=v.vorgangstyp,
+                        datum=v.datum,
                         beratungsstand=v.beratungsstand,
                         titel=v.titel,
                         abstract=v.abstract,
@@ -46,6 +47,7 @@ class DrucksacheService:
                             for ve in v.verkuendung
                         ],
                         deskriptoren=[d.name for d in v.deskriptor],
+                        initiatoren=v.initiative if v.initiative else [],
                     )
                     for v in result.vorgaenge
                 ],
@@ -115,6 +117,7 @@ class DrucksacheService:
                     Vorgang(
                         vorgang_id=v.id,
                         vorgangstyp=v.vorgangstyp,
+                        datum=v.datum,
                         beratungsstand=v.beratungsstand,
                         titel=v.titel,
                         abstract=v.abstract,
@@ -129,6 +132,7 @@ class DrucksacheService:
                             for ve in v.verkuendung
                         ],
                         deskriptoren=[d.name for d in v.deskriptor],
+                        initiatoren=v.initiative if v.initiative else [],
                     )
                     for v in result.vorgaenge
                 ],

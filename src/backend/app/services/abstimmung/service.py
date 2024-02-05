@@ -38,6 +38,7 @@ class AbstimmungService:
                     BundestagAbstimmungDrucksache(
                         drucksache_url=drucksache.drucksache_url,
                         drucksache_name=drucksache.drucksache_name,
+                        drucksache_id=drucksache.dip_drucksache_id,
                     )
                     for drucksache in result.drucksachen
                 ],
@@ -110,6 +111,7 @@ class AbstimmungService:
                     BundestagAbstimmungDrucksache(
                         drucksache_url=drucksache.drucksache_url,
                         drucksache_name=drucksache.drucksache_name,
+                        drucksache_id=drucksache.dip_drucksache_id,
                     )
                     for drucksache in r.drucksachen
                 ],
