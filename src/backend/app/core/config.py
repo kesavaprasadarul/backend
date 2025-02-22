@@ -19,7 +19,7 @@ class Settings(BaseSettings):
 
     # Deutscher Bundestag
     DIP_BUNDESTAG_API_KEY: str = pyd.Field(
-        default="rgsaY4U.oZRQKUHdJhF9qguHMkwCGIoLaqEcaHjYLF"
+        default="I9FKdCn.hbfefNWCY336dL6x62vfwNKpoN2RZ1gp21"
     )  # api key valid till end of may 2024
     DIP_BUNDESTAG_BASE_URL: str = pyd.Field(default="https://search.dip.bundestag.de")
 

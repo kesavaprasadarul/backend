@@ -22,7 +22,7 @@ ARG PORTAL_PYTHON=python3.11
 # create image based on ubuntu base image
 FROM python:3.11 as system
 
-RUN pip install poetry
+RUN pip install poetry==1.8.5
 
 ARG PORTAL_HOME
 ARG PORTAL_PYTHON
