@@ -190,7 +190,7 @@ class BundestagFacade(HttpFacade):
                 href = a_link['href']
 
                 match_abstimmung_id = re.match(
-                    r'/parlament/plenum/abstimmung/abstimmung\?id=(\d+)', href
+                    r'/parlament/plenum/abstimmung/abstimmung\?id={(\d+)}', href
                 )
 
                 if match_abstimmung_id is None:
