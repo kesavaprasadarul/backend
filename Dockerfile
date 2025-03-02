@@ -61,7 +61,9 @@ COPY src/backend/app/ ${PORTAL_HOME}/backend/app/
 ENV PATH="${PORTAL_HOME}/bin:$PATH"
 COPY backup_20240602 /tmp/
 COPY scripts/run_restore.sh /tmp/
+RUN chmod +x /tmp/run_restore.sh
 COPY scripts/wait_db_start.sh /tmp/
+RUN chmod +x /tmp/wait_db_start.sh
 #set working directory to backend
 WORKDIR ${PORTAL_HOME}
 
