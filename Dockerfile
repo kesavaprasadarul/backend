@@ -1,58 +1,71 @@
-####################################################################################################
-#
-# Multi-stage build for backend docker containers
-# ==================================================
-#
-# STAGE 1: system
-#   python system, install all packages, install poetry, copy stuff
-#
-# STAGE 2: fastapi-app
-#   Final, poetry tooling installed, current poetry cache available. Used to _build_ backend and run
-#   code checkers.
-#
-####################################################################################################
+FROM ubuntu:noble AS system
+# Set environment variables (adjust as needed)
+ARG POSTGRES_USER
+ARG POSTGRES_PASSWORD
+ARG POSTGRES_DB
 
-# globally shared vars:
+# **Explicitly set ENV variables BEFORE starting PostgreSQL**
+ENV POSTGRES_USER=admin
+ENV POSTGRES_PASSWORD=password
+ENV POSTGRES_DB=fastapi
+ENV POSTGRES_SERVER=db
+
 ARG PORTAL_HOME=/opt/backend
-ARG PORTAL_PYTHON=python3.11
+ARG PYTHON_PATH=${PORTAL_HOME}/bin
 
-# -------------------------------------
-# Stage 1: system
-# -------------------------------------
-# create image based on ubuntu base image
-FROM python:3.11 as system
+COPY scripts/install-python.sh /tmp/
 
-RUN pip install poetry==1.8.5
-
-ARG PORTAL_HOME
-ARG PORTAL_PYTHON
-
+# Install Python
+RUN chmod +x /tmp/install-python.sh && /tmp/install-python.sh
 WORKDIR ${PORTAL_HOME}
+COPY requirements.txt ${PORTAL_HOME}/
 
-COPY poetry.toml poetry.lock pyproject.toml ${PORTAL_HOME}/
+# Create a virtual environment
+RUN python3.11 -m venv ${PYTHON_PATH}
+ENV PATH="${PYTHON_PATH}:$PATH"
 
-# create portal run environment:
-RUN poetry export > requirements.txt && \
-    $PORTAL_PYTHON -m venv $PORTAL_HOME && \
-    $PORTAL_HOME/bin/pip install -U setuptools pip wheel && \
-    $PORTAL_HOME/bin/pip install --no-cache-dir --upgrade -r requirements.txt
+FROM system AS base
 
+# # Install PIP dependencies with the environment activated
+RUN . ${PYTHON_PATH}/bin/activate && pip install --no-cache-dir --upgrade pip && pip install -r requirements.txt
 
-# -------------------------------------
-# Stage 2: fastapi-app (FINAL)
-# -------------------------------------
-FROM system as fastapi-app
+# # Install PIP dependencies, no environment is created
+# RUN pip install --no-cache-dir --upgrade -r requirements.txt --break-system-packages
 
-ARG PORTAL_HOME
+FROM base AS fastapi-app
 
-# set workdir to backend package
+ARG PORTAL_HOME=/opt/backend
+ARG PYTHON_PATH=${PORTAL_HOME}/bin
+ENV PATH="${PYTHON_PATH}:$PATH"
+
+# Set environment variables (adjust as needed)
+ARG POSTGRES_USER
+ARG POSTGRES_PASSWORD
+ARG POSTGRES_DB
+
+# **Explicitly set ENV variables BEFORE starting PostgreSQL**
+ENV POSTGRES_USER=admin
+ENV POSTGRES_PASSWORD=password
+ENV POSTGRES_DB=fastapi
+ENV POSTGRES_SERVER=db
+
+# set workdir toseri backend package
 WORKDIR ${PORTAL_HOME}
-
-# copy venv from stage 3 "build"
-COPY --from=system ${PORTAL_HOME} ${PORTAL_HOME}
 
 # copy source code of the app:
 COPY src/ ${PORTAL_HOME}/
 
 # add venv binaries to path:
 ENV PATH="${PORTAL_HOME}/bin:$PATH"
+COPY backup_20240602 /tmp/
+COPY scripts/run_restore.sh /tmp/
+COPY scripts/wait_db_start.sh /tmp/
+#set working directory to backend
+WORKDIR ${PORTAL_HOME}
+
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
+
+# CMD alembic upgrade head && /tmp/run_restore.sh && uvicorn main:app --host
+CMD /tmp/run_restore.sh && uvicorn backend.app.main:app --reload --host 0.0.0.0 --port 80 --workers 4

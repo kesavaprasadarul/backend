@@ -1,16 +1,16 @@
 version: "3.8"
 services:
   db:
-    image: postgres:16
+    image: postgres:latest
     tty: true
     ports:
       - "5432:5432"
     volumes:
-      - db-postgres-data:/var/lib/postgresql/data/pgdata
+      - db-postgres-data:/var/lib/postgresql@17/data:rw
     env_file:
       - .env
     environment:
-      - PGDATA=/var/lib/postgresql/data/pgdata
+      - PGDATA=/var/lib/postgresql@17/data:rw
 
   backend:
     # set volume to have changes made locally available in uvicorn localhost:8000/docs (run in container)
@@ -25,11 +25,10 @@ services:
       - POSTGRES_SERVER=${POSTGRES_SERVER}
     depends_on:
       - db
+    env_file:
+      - .env
     ports:
       - "8000:80"
-    # overrides CMD in Dockerfile to have uvicorn reload functionality for developing at localhost:8000/docs available
-    command: >
-      sh -c "alembic upgrade head && uvicorn backend.app.main:app --reload --host 0.0.0.0 --port 80 --workers 4"
-
+      
 volumes:
   db-postgres-data:
