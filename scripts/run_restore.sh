@@ -20,7 +20,7 @@ if ! psql -d "postgresql://$POSTGRES_USER:$POSTGRES_PASSWORD@$POSTGRES_SERVER/$P
 fi; \
 >&2 echo "psql connection test successful";
 >&2 echo "Restoring database using pg_restore..."; \
-pg_restore -d "postgresql://$POSTGRES_USER:$POSTGRES_PASSWORD@$POSTGRES_SERVER/$POSTGRES_DB" /tmp/backup_20240602; \
+pg_restore --clean --if-exists -d "postgresql://$POSTGRES_USER:$POSTGRES_PASSWORD@$POSTGRES_SERVER/$POSTGRES_DB" /tmp/backup_20240602; \
 >&2 echo "Database restore complete."; \
 \
 >&2 echo "Build-time pg_restore process finished."

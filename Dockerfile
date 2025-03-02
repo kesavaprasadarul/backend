@@ -54,6 +54,8 @@ WORKDIR ${PORTAL_HOME}
 
 # copy source code of the app:
 COPY src/ ${PORTAL_HOME}/
+COPY src/backend/ ${PORTAL_HOME}/backend/
+COPY src/backend/app/ ${PORTAL_HOME}/backend/app/
 
 # add venv binaries to path:
 ENV PATH="${PORTAL_HOME}/bin:$PATH"
@@ -63,7 +65,7 @@ COPY scripts/wait_db_start.sh /tmp/
 #set working directory to backend
 WORKDIR ${PORTAL_HOME}
 
-COPY entrypoint.sh /entrypoint.sh
+COPY scripts/entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 

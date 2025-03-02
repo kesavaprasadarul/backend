@@ -13,11 +13,6 @@ services:
       - PGDATA=/var/lib/postgresql@17/data:rw
 
   backend:
-    # set volume to have changes made locally available in uvicorn localhost:8000/docs (run in container)
-    volumes:
-      - ./src/backend/app:/opt/backend/backend/app
-      - ./src/backend/logs:/opt/backend/backend/logs
-      - ./data/models:/opt/backend/backend/data/models
     image: kesava89/bundestag-backend:latest
     environment:
       - POSTGRES_SERVER=${POSTGRES_SERVER}
